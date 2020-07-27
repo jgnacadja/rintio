@@ -1,12 +1,12 @@
 <template>
   <div>
-    <TheMegamenu />
+    <Mainmenu />
     <transition name="fade" appear>
       <main>
         <slot />
       </main>
     </transition>
-    <TheFooter />
+    <Footer />
   </div>
 </template>
 
