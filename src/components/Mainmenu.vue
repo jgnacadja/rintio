@@ -116,6 +116,11 @@ export default {
   color: #fff;
 }
 
+.button.is-info:focus:not(:active),
+.button.is-info.is-focused:not(:active) {
+  box-shadow: 0 0 0 0.125em transparent;
+}
+
 .is-info {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -138,9 +143,9 @@ export default {
   color: #134a7f !important;
 }
 
-.brand-icon-item {
+/* .brand-icon-item {
   border-radius: 30px;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
   .navbar,
