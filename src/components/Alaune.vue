@@ -7,7 +7,7 @@
         <div class="column is-multiline is-full-mobile is-full-tablet is-half-desktop is-half-widescreen is-half-fullhd">
             <div class="column is-full">
                 <figure class="image is-480x600">
-                    <g-image src={{}}></g-image>
+                    <g-image src="~/assets/alaune/01.jpg"></g-image>
                 </figure>
             </div>
             <div class="column is-full">SG Maroc imagine la banque du future avec l’IA<br>
@@ -153,11 +153,3 @@ Ce programme initié en 2017 vise à former et renforcer les capacités d’envi
     </div>
 </template>
 
-<script>
-
-    <static-query>
-    query{
-
-    }
-    </static-query>
-</script>
