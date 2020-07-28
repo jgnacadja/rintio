@@ -5,7 +5,10 @@
       <main>
         <slot />
       </main>
+    
     </transition>
+    <NosExperts />
+
     <Footer />
   </div>
 </template>
@@ -13,11 +16,13 @@
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
 import Footer from "~/components/Footer.vue";
+import NosExperts from "~/components/Experts.vue"
 
 export default {
   components: {
     Mainmenu,
-    Footer
+    Footer,
+    NosExperts
   }
 };
 </script>
