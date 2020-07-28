@@ -91,6 +91,12 @@ a {
   }
 } */
 
+@media only screen and (max-width: 1023px) {
+  .footer-menu-columns {
+    padding-left: 10%;
+  }
+}
+
 .content {
   font-size: 14px;
   background-color: #003255;
