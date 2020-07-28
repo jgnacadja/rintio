@@ -125,11 +125,6 @@ export default {
   box-shadow: 0 0 0 0.125em transparent;
 }
 
-.is-info:focus:not(:active),
-.is-info.is-focused:not(:active) {
-  box-shadow: 0 0 0 0.125em transparent;
-}
-
 .is-info {
   padding-top: 20px;
   padding-bottom: 20px;
