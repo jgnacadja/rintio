@@ -12,12 +12,12 @@
 
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
-import Footer from "~/components/Footer.vue";
+import Nosoffres from "~/components/Nosoffres.vue";
 
 export default {
   components: {
     Mainmenu,
-    Footer
+    Nosoffres,
   }
 };
 </script>
