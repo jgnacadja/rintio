@@ -1,13 +1,14 @@
 <template>
-    <div class="box"> 
-        <div class="is-hidden-desktop has-text-centered is-size-7 ">
-            <div class="section" >
-        <h2 class="title is-size-3 has-text-primary "> Nos experts</h2>
+    <div class=""> 
+        <div class="is-hidden-desktop is-size-7 titre">
+        <h2 class="title is-size-3 has-text-primary" style="text-align: left"> Nos experts</h2>
+            <div class="" >
             <div class="columns is-mobile Mobile">
                 <div class="column  is-variable">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Mike.jpg"   class = "rounded-circle "/>
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Mike.jpg"   class = " "/>
                         <figcaption> <b> Mike</b>
+                            <ul>
                             <li>PhD Informatique</li>
                             <li> Data Scientist , Project Manager</li>
                             <li> +10 Ans d’Expériences : AXA, Amadeus, Orange</li></ul>
@@ -15,8 +16,8 @@
                     </figure>
                 </div>
                 <div class="column">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Carlyna.jpg" alt=""  class = "rounded-circle " />
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Carlyna.jpg" alt=""  class = " " />
                         <figcaption> 
                             <b>Carlyna</b>
                             <ul> 
@@ -31,11 +32,11 @@
         </div>
 
 
-        <div class="section ">
+        <div class=" ">
             <div class="columns is-mobile Mobile">
                 <div class="column">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Habib.jpg" alt="" class = "rounded-circle " />
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Habib.jpg" alt="" class = " " />
                         <figcaption> 
                             <b>Habib</b>
                             <ul> 
@@ -48,8 +49,8 @@
                     </figure>
                 </div>
                 <div class="column">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Talla.jpg" alt="" class = "rounded-circle " />
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Talla.jpg" alt="" class = " " />
                         <figcaption> 
                             <b>Talla</b>
                             <ul> 
@@ -63,11 +64,11 @@
             </div>
         </div>
         
-        <div class="section ">
+        <div class=" ">
             <div class="columns is-mobile">
                 <div class="column">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Julien.jpg"   class = "rounded-circle "/>
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Julien.jpg"   class = " "/>
                         <figcaption> 
                             <b>Julien</b> 
                             <ul> 
@@ -80,8 +81,8 @@
                 </div>
             
             <div class="column">
-                <figure class=""> 
-                        <g-image src="~/assets/experts/Fiacre.jpg" alt="" class = "rounded-circle " />
+                <figure class="is-family-primary"> 
+                        <g-image src="~/assets/experts/Fiacre.jpg" alt="" class = " " />
                         <figcaption> 
                             <b>Fiacre</b>
                             <ul> 
@@ -97,8 +98,8 @@
         <div class="section ">
             <div class="columns is-mobile">
                 <div class="column">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Michel.jpg" alt="" class = "rounded-circle " />
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Michel.jpg" alt="" class = " " />
                         <figcaption> 
                             <b>Michel</b>
                             <ul> 
@@ -110,8 +111,8 @@
                     </figure>
                 </div>
                 <div class="column">
-                    <figure class="">
-                        <g-image src="~/assets/experts/Nicaise.jpg" alt="" class = "rounded-circle " />
+                    <figure class="is-family-primary">
+                        <g-image src="~/assets/experts/Nicaise.jpg" alt="" class = " " />
                         <figcaption>  <b>Nicaise</b>
                             <ul> 
                             <li>PhD Informatique </li>
@@ -128,7 +129,7 @@
         <div class="is-hidden-touch ">
         <h2 class="title is-size-3 has-text-primary has-text-justify"> Nos experts</h2>
             <div class="section">
-                <div class="columns content ">
+                <div class="columns  ">
                 <div class="column"> 
                     <figure>
                         <g-image src="~/assets/experts/Mike.jpg"/>
@@ -142,7 +143,7 @@
                 </div>
                 <div class="column">
                     <figure>
-                        <g-image src="~/assets/experts/Carlyna.jpg" alt=""  class = "rounded-circle" />
+                        <g-image src="~/assets/experts/Carlyna.jpg" alt=""  class = "" />
                         <figcaption> 
                             <b>Carlyna</b>
                             <ul> 
@@ -155,7 +156,7 @@
                 </div>
                 <div class="column">
                     <figure class="is-inline-mobile">
-                        <g-image src="~/assets/experts/Habib.jpg" alt="" class = "rounded-circle" />
+                        <g-image src="~/assets/experts/Habib.jpg" alt="" class = "" />
                         <figcaption> 
                             <b>Habib</b>
                             <ul> 
@@ -169,7 +170,7 @@
                 </div>
                 <div class="column">
                     <figure>
-                        <g-image src="~/assets/experts/Talla.jpg" alt="" class = "rounded-circle" />
+                        <g-image src="~/assets/experts/Talla.jpg" alt="" class = "" />
                         <figcaption> 
                             <b>Talla</b>
                             <ul> 
@@ -183,7 +184,7 @@
             </div>
       </div>
       <div class="section">
-          <div class="columns content">
+          <div class="columns">
               <div class="column">
                 <figure class="is-inline-mobile">
                     <g-image src="~/assets/experts/Julien.jpg"/>
@@ -199,7 +200,7 @@
               </div>
               <div class="column">
                     <figure> 
-                        <g-image src="~/assets/experts/Fiacre.jpg" alt="" class = "rounded-circle" />
+                        <g-image src="~/assets/experts/Fiacre.jpg" alt="" class = "" />
                         <figcaption> 
                             <b>Fiacre</b>
                             <ul> 
@@ -212,7 +213,7 @@
               </div>
               <div class="column">
                     <figure>
-                        <g-image src="~/assets/experts/Michel.jpg" alt="" class = "rounded-circle" />
+                        <g-image src="~/assets/experts/Michel.jpg" alt="" class = "" />
                         <figcaption> 
                             <b>Michel</b>
                             <ul> 
@@ -225,7 +226,7 @@
               </div>
               <div class="column">
                     <figure>
-                        <g-image src="~/assets/experts/Nicaise.jpg" alt="" class = "rounded-circle" />
+                        <g-image src="~/assets/experts/Nicaise.jpg" alt="" class = "" />
                         <figcaption>  <b>Nicaise</b>
                             <ul> 
                             <li>PhD Informatique </li>
@@ -246,10 +247,13 @@
 
         list-style: inside;
     }
-.Mobile {
-    
-}
 
-    
+    figure{
+        text-align: center;
+    }
+    .titre{
+        margin-right: 0px;
+    }
+
     
 </style>
