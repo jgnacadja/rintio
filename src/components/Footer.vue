@@ -59,8 +59,8 @@
             </div>
           </div>
         </div>
-      <div class="content has-text-centered">
-    <p class="has-text-weight-bold">
+      <div class=" sub-footer has-text-centered " >
+    <p class="has-text-weight-bold" >
       Rintio 2020 © Tous droits réservés
     </p>
   </div>
@@ -102,6 +102,9 @@ a:hover {
       position: absolute;
     bottom: 0px;
     width: 100%;
+}
+.sub-footer{
+  background-color: #003255;
 }
 
 a {

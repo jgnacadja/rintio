@@ -6,7 +6,7 @@
       >
         <div class="column is-narrow">
           <g-link to="/">
-            <figure class="image">}
+            <figure class="image">
 
               <g-image src="~/assets/logo.png" fit="inside" />
             </figure>
