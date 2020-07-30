@@ -7,7 +7,6 @@
         <div class="column is-narrow">
           <g-link to="/">
             <figure class="image">
-
               <g-image src="~/assets/logo.png" fit="inside" />
             </figure>
           </g-link>
@@ -49,13 +48,16 @@
 
     <template slot="end">
       <div class="buttons brand-icon">
-        <a class="button is-info brand-icon-item">
+        <a
+          class="button is-info brand-icon-item"
+          href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+        >
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a class="button is-info brand-icon-item">
+        <a class="button is-info brand-icon-item" href="https://www.linkedin.com/company/rintio/">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a class="button is-info brand-icon-item">
+        <a class="button is-info brand-icon-item" href="https://twitter.com/RintioGroup/">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
@@ -84,6 +86,11 @@ export default {
   }
 }
 
+.button {
+  background-color: white !important;
+  color: black !important;
+}
+
 .brand {
   max-width: 100%;
   margin-left: 55px;
@@ -109,6 +116,11 @@ export default {
   color: #fff;
 }
 
+.button.is-info:focus:not(:active),
+.button.is-info.is-focused:not(:active) {
+  box-shadow: 0 0 0 0.125em transparent;
+}
+
 .is-info {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -116,25 +128,24 @@ export default {
 
 .is-info:hover {
   padding-top: 20px;
-  background-color: #134a7f;
-  color: #fff;
+  background-color: white;
+  color: #134a7f !important;
 }
 
 .image-logo {
-  width: 120px;
+  width: 150px;
   padding-left: 10%;
 }
 
-
 .is-info:focus {
   padding-top: 20px;
-  background-color: #134a7f;
-  color: #fff;
+  background-color: white;
+  color: #134a7f !important;
 }
 
-.brand-icon-item {
+/* .brand-icon-item {
   border-radius: 30px;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
   .navbar,
@@ -146,6 +157,11 @@ export default {
 @media only screen and (max-width: 1023px) {
   .navbar-brand {
     box-shadow: 0 4px 2px -3px grey !important;
+  }
+
+  .brand-icon {
+    justify-content: space-between;
+    padding: 0 20% 0 20%;
   }
 }
 </style>

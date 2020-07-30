@@ -1,5 +1,5 @@
 <template>
-    <div class=""> 
+    <div class="container section is-fluid"> 
         <div class="is-hidden-desktop is-size-7 titre">
         <h2 class="title is-size-3 has-text-primary" style="text-align: left"> Nos experts</h2>
             <div class="" >

@@ -20,10 +20,9 @@ $sucess: $green-rintio;
 $scheme-main: $white;
 
 // Typography
-$family-sans-serif: century-gothic, sans-serif;
-$family-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-"Helvetica Neue", Arial, sans-serif;
-$body-family: $family-secondary;
+$family-sans-serif: Montserrat, sans-serif;
+$family-secondary: Roboto, sans-serif;
+$body-family: $family-sans-serif;
 
 $variable-columns: false;
 

@@ -5,24 +5,22 @@
       <main>
         <slot />
       </main>
-    
     </transition>
-    <NosExperts />
-
     <Footer />
   </div>
 </template>
 
+<style lang="css" scoped>
+</style>
+
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
 import Footer from "~/components/Footer.vue";
-import NosExperts from "~/components/Experts.vue"
 
 export default {
   components: {
     Mainmenu,
-    Footer,
-    NosExperts
-  }
+    Footer
+  },
 };
 </script>
