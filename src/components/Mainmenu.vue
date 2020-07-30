@@ -27,12 +27,11 @@
 
     <template slot="start" wrapper-class="column is-12">
       <div class="is-hidden-desktop">
-        <b-navbar-item href="/about" to="/about/" class="is-info">A propos</b-navbar-item>
+        <b-navbar-item href="/about" to="/about/" class="is-info apropos-top">A propos</b-navbar-item>
         <b-navbar-item href="#" class="is-info" @click="isCardModalActive = true">Offres</b-navbar-item>
         <b-navbar-item href="#" class="is-info">DataLab</b-navbar-item>
         <b-navbar-item href="#" class="is-info">Publications</b-navbar-item>
         <b-navbar-item href="#" class="is-info">Contact</b-navbar-item>
-        <!-- filaile && account -->
       </div>
 
       <a class="navbar-item item-menu is-hidden-touch" href="/about" to="/about/">A propos</a>
@@ -84,6 +83,11 @@ export default {
     margin-bottom: 0;
     padding: 0.375rem 1rem;
   }
+}
+
+.apropos-top {
+  box-shadow: 0px -1px 2px grey;
+  margin-top: -2%;
 }
 
 .button {

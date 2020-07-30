@@ -14,8 +14,8 @@ Rintio est une entreprise de services du numérique. Nous sommes spécialisés d
 <script>
 export default {
   metaInfo: {
-    title: "Rintio",
-  },
+    title: "We involve for a better life"
+  }
 };
 </script>
 
