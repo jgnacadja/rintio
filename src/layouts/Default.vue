@@ -20,7 +20,7 @@ import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Mainmenu,
-    Footer,
+    Footer
   },
 };
 </script>

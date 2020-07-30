@@ -113,7 +113,6 @@ a {
   }
 
   #footer {
-    position: absolute !important;
     bottom: 0;
     width: 100%;
     padding-top: 2% !important;
@@ -122,9 +121,15 @@ a {
   .content {
     font-size: 18px;
     background-color: #003255;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
+    margin-top: 3%;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-menu-columns {
+    padding-left: 2%;
   }
 }
 </style>
