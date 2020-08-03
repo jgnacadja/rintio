@@ -1,5 +1,5 @@
 ---
-title: SG Maroc imagine la banque du future avec l’IA
+title: iDermato, IA et Dermatologie
 published: true
 categories: ["A la Une / Rintio Stories"]
 date: 2020-07-28
