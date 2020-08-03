@@ -1,15 +1,9 @@
 ---
-title: API : l'ouverture des SI dans un monde de micro services
+title: API, l'ouverture des SI dans un monde de micro services
 published: true
 categories: ["A la Une / Rintio Stories"]
 date: 2020-07-28
 coverImage: /img/articles/programmers_concept_with_flat_.png
-
-![alt text](sSOA-Fig1-Swagger-102315_mobile.png)
-![alt text](sSOA-Fig2-DefinedPaths-102315_mobile.png)
-![alt text](sSOA-Fig3-MediaDef-102315_mobile.png)
-![alt text](sSOA-Fig4-AutoGenDoc-102315_mobile.png)
-![alt text](sSOA-Fig5-GenServ-102315_mobile.png)
 ---
 # API : l'ouverture des SI dans un monde de micro services
 

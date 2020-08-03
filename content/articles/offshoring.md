@@ -1,7 +1,7 @@
 ---
 title: offshoring
 published: true
-categories: ["NOs offres"]
+categories: ["Nos offres"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3110.png
 ---
