@@ -1,9 +1,13 @@
 <template>
-  <Layout></Layout>
+  <Layout>
+    <alaUneEngagements/>
+  </Layout>
 </template>
 
 <script>
+import alaUneEngagements  from "~/components/alaune-engagements.vue";
 export default {
+  components: {alaUneEngagements,},
   metaInfo: {
     title: "We involve for a better life"
   }
