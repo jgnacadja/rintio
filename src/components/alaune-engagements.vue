@@ -1,11 +1,13 @@
 <template>
   <div>
-      s
+    <div v-for="edge in $static.articles.edges" :key="edge.node.id">
+      <h2>{{ edge.node.title }}</h2>
+    </div>
   </div>
 </template>
 
-<page-query>
-query {
+<static-query>
+query AlauneEngagement{
   articles: allArticle {
     edges {
       node {
@@ -16,16 +18,13 @@ query {
     }
   }
 }
-</page-query>
+</static-query>
 
 
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>
