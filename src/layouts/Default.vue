@@ -3,21 +3,21 @@
     <Mainmenu />
     <transition name="fade" appear>
       <main>
+            <Alaune/>
+
         <slot />
       </main>
     </transition>
-    <Footer />
   </div>
 </template>
 
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
-import Footer from "~/components/Footer.vue";
-
+import Alaune from "~/components/Alaune.vue";
 export default {
   components: {
     Mainmenu,
-    Footer
+    Alaune
   }
 };
 </script>

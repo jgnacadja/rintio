@@ -15,6 +15,7 @@
     "gridsome": "^0.7.0",
     "npm": "^6.14.5",
     "start": "^5.1.0",
+    "vercel": "^19.2.0",
     "vue-breadcrumbs": "^1.2.0",
     "vue-clickaway": "^2.2.2"
   },
