@@ -1,20 +1,21 @@
 ---
-title:  
+title: DevOps
 published: true
 categories: ["Nos publications"]
 date: 2020-07-28
 coverImage: /img/articles/ID1_xSQc0BM_OFg7Jm4lie9UnQ.jpg
 ---
-# DevOps
 
-DevOps est un ensemble de pratiques qui automatisent les processus entre les équipes de développement et IT afin de leur permettre de développer, tester et livrer des logiciels plus rapidement et avec plus de fiabilité. 
+## DevOps
+
+DevOps est un ensemble de pratiques qui automatisent les processus entre les équipes de développement et IT afin de leur permettre de développer, tester et livrer des logiciels plus rapidement et avec plus de fiabilité.
 Le concept de DevOps repose sur la mise en place d’une culture de la collaboration entre les équipes qui étaient, historiquement, cloisonnées. Parmi les avantages assurés, le gain de confiance, l’accélération des livraisons, la capacité à résoudre les tickets plus rapidement ou encore la gestion plus efficace des tâches non planifiées.
 
 # À la base, DevOps est une culture, un courant de pensée, une philosophie.
 
-C’est une poignée de main ferme entre les équipes de développement et opérationnelles. 
-L’accent est mis sur le changement de mentalité, la collaboration accrue et l’intégration plus poussée. 
-DevOps associe la méthodologie Agile, l’automatisation, la livraison continue et bien plus encore pour aider les équipes de développement et opérationnelles à gagner en efficacité, à innover plus rapidement et à offrir plus de valeur ajoutée aux business et aux clients. 
+C’est une poignée de main ferme entre les équipes de développement et opérationnelles.
+L’accent est mis sur le changement de mentalité, la collaboration accrue et l’intégration plus poussée.
+DevOps associe la méthodologie Agile, l’automatisation, la livraison continue et bien plus encore pour aider les équipes de développement et opérationnelles à gagner en efficacité, à innover plus rapidement et à offrir plus de valeur ajoutée aux business et aux clients.
 Rintio utilise cette technologie pour le développement et l’intégration de ses applications, ce qui permet à ses développeurs de gagner en temps et en gestion efficace des tâches a exécutées.
 
 # L’histoire de DevOps
@@ -38,10 +39,11 @@ La mauvaise nouvelle ? DevOps n’est pas la panacée, et les transformations ne
 « DevOps nous a aidés à Rintio d’ accélérer les livraisons et nous a donné un avantage en termes de délai de commercialisation. Nous sommes maintenant capables de livrer chaque jour, contre une fois tous les 6 mois, et de pusher les correctifs vers nos clients en l’espace de quelques heures. »
 
 # Collaboration et confiance
+
 La culture est le principal facteur de réussite d’une initiative DevOps. Instaurer une culture de la responsabilité partagée, de la transparence et du feedback accéléré est incontournable pour chaque équipe DevOps ultra performante.
 
-Les équipes cloisonnées n’adhèrent souvent pas à la « pensée systémique » de DevOps. 
-Penser de façon systémique signifie être sensible à l’impact de vos actions sur votre équipe, mais aussi sur toutes les autres équipes impliquées dans le processus de livraison. Le manque de visibilité et les objectifs partagés impliquent un manque de planification des dépendances, un mauvais alignement des priorités, une mentalité où les autres sont pointés du doigt et où l’on affirme que ce n’est pas notre problème. 
+Les équipes cloisonnées n’adhèrent souvent pas à la « pensée systémique » de DevOps.
+Penser de façon systémique signifie être sensible à l’impact de vos actions sur votre équipe, mais aussi sur toutes les autres équipes impliquées dans le processus de livraison. Le manque de visibilité et les objectifs partagés impliquent un manque de planification des dépendances, un mauvais alignement des priorités, une mentalité où les autres sont pointés du doigt et où l’on affirme que ce n’est pas notre problème.
 La vélocité et la qualité sont alors affectées. DevOps impose un changement d’état d’esprit, qui vise à observer le processus de développement de façon holistique et à éliminer les cloisons entre les équipes de développement et opérationnelles.
 
 # Livrez plus rapidement et travaillez plus intelligemment
@@ -64,9 +66,6 @@ Le transfert et la priorisation des tâches non planifiées entre les différent
 
 # Qui adopte DevOps
 
-Des dizaines de milliers de développeurs utilisent Chef pour tester, automatiser et gérer les infrastructures. À l’avant-garde du mouvement DevOps, la société  livre des produits  et proposer de nouvelles méthodes de développement et de livraison de logiciels et d’applications.
+Des dizaines de milliers de développeurs utilisent Chef pour tester, automatiser et gérer les infrastructures. À l’avant-garde du mouvement DevOps, la société livre des produits et proposer de nouvelles méthodes de développement et de livraison de logiciels et d’applications.
 
-Les équipes qui adoptent DevOps déploient 30 fois plus souvent, déplorent 60 fois moins de défaillances et constatent des délais de récupération 160 fois plus rapides: Nos développeurs  à Rintio l’ont essayés puis adoptés  et nous en sommes satisfait.
-
-
-
+Les équipes qui adoptent DevOps déploient 30 fois plus souvent, déplorent 60 fois moins de défaillances et constatent des délais de récupération 160 fois plus rapides: Nos développeurs à Rintio l’ont essayés puis adoptés et nous en sommes satisfait.

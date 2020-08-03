@@ -1,22 +1,24 @@
 ---
-title: Formation
+title: Formations
 published: true
 categories: ["A la Une / Rintio Stories"]
 date: 2020-07-28
 coverImage: /img/articles/african_american_businessman_l.png
 ---
 
-Rintio vous propose des formations de qualité sur  le Big Data, l’ Intelligence artificielle,  Java, Python, API & Micro-service.
+## Formations
 
-# Devenez un expert en Big data 
+Rintio vous propose des formations de qualité sur le Big Data, l’ Intelligence artificielle, Java, Python, API & Micro-service.
 
-Le big data, littéralement « grosses données », ou mégadonnées (recommandé), parfois appelées données massives, désigne des ensembles de données devenus si volumineux qu’ils dépassent l’intuition et les capacités humaines d’analyse et même celles des outils informatiques classiques de gestion de base de données .La  science des données (en anglais data science) est une discipline qui s’appuie sur des outils mathématiques,et statistiques pour la visualisation des données.Elle est l’extraction de connaissance d’ensembles de données.
+# Devenez un expert en Big data
+
+Le big data, littéralement « grosses données », ou mégadonnées (recommandé), parfois appelées données massives, désigne des ensembles de données devenus si volumineux qu’ils dépassent l’intuition et les capacités humaines d’analyse et même celles des outils informatiques classiques de gestion de base de données .La science des données (en anglais data science) est une discipline qui s’appuie sur des outils mathématiques,et statistiques pour la visualisation des données.Elle est l’extraction de connaissance d’ensembles de données.
 
 # Devenez un expert en Intelligence artificielle
 
 L’intelligence artificielle est « l’ensemble des théories et des techniques mises en œuvre en vue de réaliser des machines capables de simuler l’intelligence ». Elle correspond donc à un ensemble de concepts et de technologies plus qu’à une discipline autonome constituée.
 
-# Devenez un expert en développement  Java
+# Devenez un expert en développement Java
 
 Java est un langage de programmation orienté objet créé par James Gosling et Patrick Naughton, employés de Sun Microsystems, avec le soutien de Bill Joy, présenté officiellement le 23 mai 1995 au SunWorld. La société Sun a été ensuite rachetée en 2009 par la société Oracle qui détient et maintient désormais Java.
 
