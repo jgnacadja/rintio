@@ -1,5 +1,5 @@
 ---
-title: (Big) Data & Analytics
+title: Conseil
 published: true
 categories: ["Nos offres"]
 date: 2020-07-28
