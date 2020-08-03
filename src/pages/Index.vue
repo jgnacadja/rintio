@@ -13,8 +13,8 @@ export default {
     Alaune,
   },
   metaInfo: {
-    title: "Rintio",
-  },
+    title: "We involve for a better life"
+  }
 };
 </script>
 
