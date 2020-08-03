@@ -16,11 +16,6 @@ module.exports = {
         typeName: "Article",
         path: "content/articles/*.md",
         refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: "Tag",
-            create: true
-          },
           // Creates a GraphQL collection from 'categories' in front-matter and adds a reference.
           categories: {
             typeName: "Category",
