@@ -4,16 +4,15 @@ published: true
 categories: ["Nos offres"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3265.png
------
+---
 
-# Les avantages de la formation et du développement à Rintio
+## Les avantages de la formation et du développement à Rintio
 
 # Amélioration des performances
 
 La formation du personnel est directement liée à de meilleures performances car elle aide les employés à devenir plus compétents, plus confiants et mieux informés sur leur secteur d’activité.
 
 # Plus grande satisfaction professionnelle et motivation
-
 
 La formation et le développement continus permettent aux employés de se sentir plus valorisés, ce qui les incite à se donner à 100 %.
 
