@@ -1,9 +1,6 @@
 <template>
   <div>
-      <div v-for="edge in $page.articles.edges" :key="edge.node.id">
-         <p>{{edge.node.title}}</p>
-
-      </div>
+      s
   </div>
 </template>
 
