@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Rintio',
   siteDescription: "We involve for a better life",
-
+  icon: './src/assets/rintio_favicon.png',
   plugins: [
     {
       // Create posts from markdown files
