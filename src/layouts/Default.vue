@@ -6,7 +6,7 @@
         <slot />
       </main>
     </transition>
-    <Footer />
+      <!--Footer /-->
   </div>
 </template>
 
@@ -16,7 +16,6 @@
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
 import Footer from "~/components/Footer.vue";
-
 export default {
   components: {
     Mainmenu,

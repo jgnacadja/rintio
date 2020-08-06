@@ -10,15 +10,19 @@
         prestations en Offshoring (Coding, Admin Infrastructure & Cloud, DevOps) pour nos clients en Europe et aux Etats Unis.
       </div>
     </div>
+    <alaUneEngagements />
     <NosExperts />
   </Layout>
 </template>
 
 <script>
 import NosExperts from "~/components/Experts.vue";
+import alaUneEngagements  from "~/components/alaune-engagements.vue";
+
 export default {
   components: {
     NosExperts,
+    alaUneEngagements
   },
   metaInfo: {
     title: "We involve for a better life",
