@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <h2 class="has-text-primary is-size-2">Nos Engagements</h2>
+    <div class="container section is-fluid"> 
+    <h2 class="title is-size-3 has-text-primary">Nos Engagements</h2>
     <!--div v-for="edge in $static.articles.belongsTo.edges" :key="edge.node.id">
         <div class="column is-mobile">
             <div class="column">

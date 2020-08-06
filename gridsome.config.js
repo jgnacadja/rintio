@@ -28,6 +28,5 @@ module.exports = {
   templates: {
     Article: "/article/:title",
     Category: "/category/:title",
-    Tag: "/tag/:title"
   }
 }
