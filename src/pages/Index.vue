@@ -1,6 +1,7 @@
 <template>
   <Layout>
-    <alaUneEngagements/>
+    <alaUneEngagements :alaUne="true"/>
+    <alaUneEngagements :NosEngagement="true"/>
   </Layout>
 </template>
 
