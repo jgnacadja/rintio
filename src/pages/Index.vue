@@ -1,39 +1,25 @@
 <template>
   <Layout>
-    <ClientOnly>
-      <carousel
-        id="slider"
-        :perPage="3"
-        :autoplay="true"
-        :autoplayTimeout="3000"
-        :speed="500"
-        :loop="true"
-        :centerMode="true"
-        :paginationEnabled="false"
-      >
-        <slide>
-          <g-image src="~/assets/logo.png"></g-image>
-        </slide>
-        <slide>carousel
-          <g-image src="~/assets/logo.png"></g-image>
-        </slide>
-        <slide>
-          <g-image src="~/assets/logo.png"></g-image>
-        </slide>
-        <slide>
-          <g-image src="~/assets/logo.png"></g-image>
-        </slide>
-        <slide>
-          <g-image src="~/assets/logo.png"></g-image>
-        </slide>
-        <slide>
-          <g-image src="~/assets/logo.png"></g-image>
-        </slide>
-      </carousel>
-    </ClientOnly>
+    <div class="container section is-fluid">
+      <h1 class="title is-size-1 has-text-primary" style="text-align : left">Ils nous font confiance</h1><br><br>
+        <ClientOnly >
+           <div class="columns bg">
+             <div class="column">
+                <i class='fas fa-angle-left fa-3x has-text-primary prev'></i>
+             </div>
+             <div class="column">
+                        <g-image src="~/assets/logo-carousel/societe_generale_logo.png"></g-image>
+
+             </div>
+             <div class="column"> 
+                <i class='fas fa-angle-right fa-3x has-text-primary is-pulled-right'></i>
+             </div>
+
+           </div>
+        </ClientOnly>
+       </div>
   </Layout>
 </template>
-
 <script>
 import $ from "jquery";
 export default {
@@ -54,4 +40,14 @@ export default {
 </script>
 
 <style>
+
+.bg {
+  background-color: grey;
+  height:150px;
+}
+.prev
+{
+  top: 25px;
+}
+
 </style>
