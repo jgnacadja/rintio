@@ -106,14 +106,15 @@ a {
 @media only screen and (min-width: 1024px) {
   .footer-menu-columns {
     padding-left: 15%;
+    padding-top: 1%;
+    padding-bottom: 5%
   }
 
-  #footer {
-    height: 300px;
-  }
+  /* #footer {
+    //height: 300px;
+  } */
 
   #footer {
-    position: absolute !important;
     bottom: 0;
     width: 100%;
     padding-top: 2% !important;
@@ -122,9 +123,14 @@ a {
   .content {
     font-size: 18px;
     background-color: #003255;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-menu-columns {
+    padding-left: 2%;
   }
 }
 </style>

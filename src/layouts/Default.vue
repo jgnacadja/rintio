@@ -9,6 +9,9 @@
   </div>
 </template>
 
+<style lang="css" scoped>
+</style>
+
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
 //import Footer from "~/components/Footer.vue";
