@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section is-paddingless">
     <div class="" v-if="NosEngagement">
       <h2 class="has-text-primary is-size-2">Nos Engagements</h2>
       <div class="is-hidden-mobile ">
@@ -19,7 +19,6 @@
                     "
                     class="space"
                   ></p>
-                  <arrowicon />
                 </figcaption>
               </figure>
             </div>
@@ -98,7 +97,6 @@
                         "
                         class="space"
                       ></p>
-                      <arrowicon />
                     </figcaption>
                   </figure>
                 </div>
@@ -123,31 +121,28 @@
                         "
                         class="space"
                       ></p>
-                      <arrowicon />
                     </figcaption>
                   </figure>
                 </div>
               </div>
             </div>
           </div>
-          <div class="columns">
-            <div class="column">
+         <div class="columns" style="padding-top: 0px">
+            <div class="column is-half"><arrowicon /></div>
+            <div class="column" ><arrowicon /></div>
+            <div class="column" ><arrowicon /></div>
+          </div>
+          <div class="columns" style="padding-top:10px">
+            
+            <div class="column is-half">
               <figure>
                 <div class="zoom">
                   <g-image
-                    :src="$static.feature.belongsTo.edges[0].node.coverImage" style="height:300px"
+                    :src="$static.feature.belongsTo.edges[0].node.coverImage"
+                    class="is-full"
                   />
                 </div>
-                <figcaption>
-                  <b v-html="$static.feature.belongsTo.edges[0].node.title"></b>
-                  <p
-                    v-html="
-                      $static.feature.belongsTo.edges[0].node.metaDescription
-                    "
-                    class="space"
-                  ></p>
-                  <arrowicon />
-                </figcaption>
+                <figcaption></figcaption>
               </figure>
             </div>
             <div class="column is-marginless is-paddindless">
@@ -157,14 +152,7 @@
                     :src="$static.new.belongsTo.edges[0].node.coverImage"
                   />
                 </div>
-                <figcaption>
-                  <b v-html="$static.new.belongsTo.edges[0].node.title"></b>
-                  <p
-                    v-html="$static.new.belongsTo.edges[0].node.metaDescription"
-                    class="space"
-                  ></p>
-                  <arrowicon />
-                </figcaption>
+                <figcaption></figcaption>
               </figure>
             </div>
             <div class="column is-marginless is-paddindless">
@@ -174,16 +162,37 @@
                     :src="$static.new.belongsTo.edges[1].node.coverImage"
                   />
                 </div>
-                <figcaption>
-                  <b v-html="$static.new.belongsTo.edges[1].node.title"></b>
-                  <p
-                    v-html="$static.new.belongsTo.edges[1].node.metaDescription"
-                    class="space"
-                  ></p>
-                  <arrowicon />
-                </figcaption>
+                <figcaption></figcaption>
               </figure>
             </div>
+          </div>
+          <div class="columns">
+            <div class="column is-half">
+              <b v-html="$static.feature.belongsTo.edges[0].node.title"></b>
+              <p
+                v-html="$static.feature.belongsTo.edges[0].node.metaDescription"
+                class="space"
+              ></p>
+            </div>
+            <div class="column">
+              <b v-html="$static.new.belongsTo.edges[0].node.title"></b>
+              <p
+                v-html="$static.new.belongsTo.edges[0].node.metaDescription"
+                class="space"
+              ></p>
+            </div>
+            <div class="column">
+              <b v-html="$static.new.belongsTo.edges[1].node.title"></b>
+              <p
+                v-html="$static.new.belongsTo.edges[1].node.metaDescription"
+                class="space"
+              ></p>
+            </div>
+          </div>
+          <div class="columns" style="padding-top: 0px">
+            <div class="column is-half"><arrowicon /></div>
+            <div class="column"><arrowicon /></div>
+            <div class="column"><arrowicon /></div>
           </div>
         </div>
       </div>
@@ -263,7 +272,6 @@
                 "
                 class="space"
               ></p>
-              <arrowicon />
             </figcaption>
           </figure>
         </div>
@@ -308,8 +316,6 @@
               </figure>
             </div>
 
-            <div class="columns"></div>
-
             <div class="column is-half mb-0">
               <figure>
                 <g-image
@@ -324,7 +330,6 @@
                     "
                     class="space"
                   ></p>
-                  <arrowicon />
                 </figcaption>
               </figure>
             </div>
@@ -343,14 +348,18 @@
                     "
                     class="space"
                   ></p>
-                  <arrowicon />
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
       </div>
-      <div class="columns is-1">
+     <div class="columns" style="padding-top: 0px">
+            <div class="column is-half"><arrowicon /></div>
+            <div class="column"><arrowicon /></div>
+            <div class="column"><arrowicon /></div>
+          </div>
+      <div class="columns is-1" style="padding-top:20px">
         <div class="column">
           <figure>
             <g-image

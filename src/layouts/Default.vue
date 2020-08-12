@@ -6,9 +6,12 @@
         <slot />
       </main>
     </transition>
-      <!--Footer /-->
+      <Footer />
   </div>
 </template>
+
+<style lang="css" scoped>
+</style>
 
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
