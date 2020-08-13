@@ -6,7 +6,8 @@
       >
         <div class="column is-narrow">
           <g-link to="/">
-            <figure class="image">
+            <figure class="image">}
+
               <g-image src="~/assets/logo.png" fit="inside" />
             </figure>
           </g-link>
@@ -17,7 +18,7 @@
       >
         <div class="column is-narrow">
           <g-link to="/">
-            <figure class="image">
+            <figure class="image image-logo">
               <g-image src="~/assets/logo.png" fit="inside" />
             </figure>
           </g-link>
@@ -118,6 +119,12 @@ export default {
   background-color: #134a7f;
   color: #fff;
 }
+
+.image-logo {
+  width: 120px;
+  padding-left: 10%;
+}
+
 
 .is-info:focus {
   padding-top: 20px;
