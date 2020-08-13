@@ -5,6 +5,8 @@
       <div>
         <h1 class="title is-size-2 has-text-primary">A propos</h1>
       </div>
+        
+
       <div class="content-14 content-16 has-text-justified content-14-top ">
         Rintio est une entreprise de services du numérique. Nous sommes
         spécialisés dans le développement et l’intégration de solution
@@ -12,6 +14,7 @@
         l’Intelligence Artificielle. Nous proposons entre autres: des
         prestations en Offshoring (Coding, Admin Infrastructure & Cloud, DevOps)
         pour nos clients en Europe et aux Etats Unis. 
+        
       </div>
       <div class="columns">
         <div class="column is-offset-10">
@@ -19,7 +22,7 @@
         </div>
       </div>
     </div> 
-    <alaUneEngagements :alaUne="true" />
+    <alaUneEngagements :alaUne="false" />
     <alaUneEngagements :NosEngagement="true" />
     <NosExperts />
     </div>

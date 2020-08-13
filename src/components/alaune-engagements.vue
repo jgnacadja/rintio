@@ -1,16 +1,27 @@
 <template>
   <div class="section is-paddingless">
     <div class="" v-if="NosEngagement">
-      <h2 class="has-text-primary is-size-2">Nos Engagements</h2>
+      
       <div class="is-hidden-mobile ">
+        <h2 class="has-text-primary is-size-2 title">Nos Engagements</h2>
         <div class="section">
           <div class="columns">
             <div class="column is-6">
               <figure>
-                <g-image
-                  :src="$static.feature.belongsTo.edges[1].node.coverImage"
-                  class=""
-                />
+                <div class="zoom">
+                  <span
+                    class="is-white is-small tag has-text-primary realisationWS"
+                    style=""
+                    ><b>Nos réalisations</b></span
+                  >
+                  <g-image
+                    :src="$static.feature.belongsTo.edges[1].node.coverImage"
+                    class=""
+                  />
+                  <span class="tag  is-primary is-large inscrireWSF"
+                    ><b>S'inscrire</b></span
+                  >
+                </div>
                 <figcaption>
                   <b v-html="$static.feature.belongsTo.edges[1].node.title"></b>
                   <p
@@ -27,11 +38,19 @@
                 <div class="column is-half">
                   <figure>
                     <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos réalisations</b></span
+                      >
                       <g-image
                         :src="
                           $static.articles.belongsTo.edges[0].node.coverImage
                         "
                       />
+                      <span class="tag  is-primary is-medium inscrireWS"
+                        ><b>S'inscrire</b></span
+                      >
                     </div>
                     <figcaption class="">
                       <b
@@ -53,11 +72,19 @@
                 <div class="column is-half">
                   <figure>
                     <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos réalisations</b></span
+                      >
                       <g-image
                         :src="
                           $static.articles.belongsTo.edges[1].node.coverImage
                         "
                       />
+                      <span class="tag  is-primary is-small inscrireWS"
+                        ><b>En savoir plus</b></span
+                      >
                     </div>
                     <figcaption class="">
                       <b
@@ -80,19 +107,27 @@
                 <div class="column is-half mb-0">
                   <figure>
                     <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos réalisations</b></span
+                      >
                       <g-image
                         :src="
                           $static.articles.belongsTo.edges[2].node.coverImage
                         "
                       />
+                      <span class="tag  is-primary is-small inscrireWS"
+                        ><b>En savoir plus</b></span
+                      >
                     </div>
                     <figcaption>
                       <b
-                        v-html="$static.feature.belongsTo.edges[1].node.title"
+                        v-html="$static.articles.belongsTo.edges[2].node.title"
                       ></b>
                       <p
                         v-html="
-                          $static.feature.belongsTo.edges[1].node
+                          $static.articles.belongsTo.edges[2].node
                             .metaDescription
                         "
                         class="space"
@@ -104,11 +139,19 @@
                 <div class="column is-half mb-0">
                   <figure>
                     <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos réalisations</b></span
+                      >
                       <g-image
                         :src="
                           $static.articles.belongsTo.edges[3].node.coverImage
                         "
                       />
+                      <span class="tag  is-primary is-small inscrireWS"
+                        ><b>En savoir plus</b></span
+                      >
                     </div>
                     <figcaption class="">
                       <b
@@ -127,20 +170,27 @@
               </div>
             </div>
           </div>
-         <div class="columns" style="padding-top: 0px">
+          <div class="columns" style="padding-top: 0px">
             <div class="column is-half"><arrowicon /></div>
-            <div class="column" ><arrowicon /></div>
-            <div class="column" ><arrowicon /></div>
+            <div class="column"><arrowicon /></div>
+            <div class="column"><arrowicon /></div>
           </div>
           <div class="columns" style="padding-top:10px">
-            
             <div class="column is-half">
               <figure>
                 <div class="zoom">
+                  <span
+                    class="is-white is-small tag has-text-primary realisationWS"
+                    style=""
+                    ><b>Nos réalisations</b></span
+                  >
                   <g-image
                     :src="$static.feature.belongsTo.edges[0].node.coverImage"
                     class="is-full"
                   />
+                  <span class="tag  is-primary is-medium inscrireWSF "
+                    >En savoir plus</span
+                  >
                 </div>
                 <figcaption></figcaption>
               </figure>
@@ -148,9 +198,17 @@
             <div class="column is-marginless is-paddindless">
               <figure>
                 <div class="zoom">
+                  <span
+                    class="is-white is-small tag has-text-primary realisationWS"
+                    style=""
+                    ><b>Nos réalisations</b></span
+                  >
                   <g-image
                     :src="$static.new.belongsTo.edges[0].node.coverImage"
                   />
+                  <span class="tag  is-primary is-small inscrireWS"
+                    ><b>En savoir plus</b></span
+                  >
                 </div>
                 <figcaption></figcaption>
               </figure>
@@ -158,9 +216,17 @@
             <div class="column is-marginless is-paddindless">
               <figure>
                 <div class="zoom">
+                  <span
+                    class="is-white is-small tag has-text-primary realisationWS"
+                    style=""
+                    >Nos réalisations</span
+                  >
                   <g-image
                     :src="$static.new.belongsTo.edges[1].node.coverImage"
                   />
+                  <span class="tag  is-primary is-small inscrireWS"
+                    >S'inscrire</span
+                  >
                 </div>
                 <figcaption></figcaption>
               </figure>
@@ -196,14 +262,15 @@
           </div>
         </div>
       </div>
-      <div class="is-hidden-tablet has-text-centered ">
+      <div class="is-hidden-tablet" style="padding-top:60px">
+        <h2 class="has-text-primary is-size-4 title">Nos Engagements</h2>
         <div class="">
           <figure>
-            <button class="has-text-primary" id="bouton1mob">
+            <button class="has-text-primary" id="" style="position: absolute; left: 30px;">
               Nos Engagements
             </button>
             <g-image
-              :src="$static.feature.belongsTo.edges[1].node.coverImage"
+              :src="$static.feature.belongsTo.edges[1].node.coverImage" 
               class="zoom"
             />
             <span class="tag is-link" id="bouton2mob">S'inscrire</span>
@@ -212,19 +279,19 @@
               <p
                 v-html="$static.feature.belongsTo.edges[1].node.metaDescription"
               ></p>
-              <arrowicon />
+              <div ><arrowicon /></div>
             </figcaption>
           </figure>
         </div>
         <div
           v-for="article in $static.articles.belongsTo.edges"
-          :key="article.node.id"
+          :key="article.node.id" 
         >
-          <figure class="">
-            <button class="has-text-primary" id="bouton1mob">
+          <figure class="zoom">
+            <button class="has-text-primary is-small" id="" style="position: relative; top:110px; right: -150px">
               Nos Engagements
             </button>
-            <g-image :src="article.node.coverImage" class="zoom" />
+            <g-image :src="article.node.coverImage" class="" style="padding-top: 40px" />
             <span class="tag is-link" id="bouton2mob">S'inscrire</span>
             <figcaption>
               <b v-html="article.node.title"></b>
@@ -237,15 +304,15 @@
           v-for="article in $static.new.belongsTo.edges"
           :key="article.node.id"
         >
-          <figure class="">
-            <button class="has-text-primary" id="bouton1mob">
+          <figure class="zoom">
+            <button class="has-text-primary" id="" style="position: relative; top:110px; right: -150px">
               Nos Engagements
             </button>
-            <g-image :src="article.node.coverImage" class="zoom" />
+            <g-image :src="article.node.coverImage" class="" style="padding-top: 40px"  />
             <span class="tag is-link" id="bouton2mob">En savoir plus</span>
             <figcaption>
               <b v-html="article.node.title"></b>
-              <p v-html="article.node.metaDescription"></p>
+              <p v-html="article.node.metaDescription" ></p>
               <arrowicon />
             </figcaption>
           </figure>
@@ -254,7 +321,9 @@
     </div>
 
     <div v-if="alaUne">
-      <h2 class="has-text-primary is-size-2">A la Une / Rintio Stories</h2>
+      <h2 class="has-text-primary is-size-2 title">
+        A la Une / Rintio Stories
+      </h2>
       <div class="columns" style="padding-top:30px">
         <div class="column is-6">
           <figure>
@@ -282,8 +351,15 @@
               <figure>
                 <g-image
                   :src="$static.alaUne.belongsTo.edges[0].node.coverImage"
+                  style="position:relative z-index:0"
                   class="zoom"
                 />
+                <button
+                  class="tag  is-primary is-large is-fullwidth"
+                  style="position: relative; z-index:1; top:-50%"
+                >
+                  S'inscrire
+                </button>
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[0].node.title"></b>
                   <p
@@ -354,11 +430,11 @@
           </div>
         </div>
       </div>
-     <div class="columns" style="padding-top: 0px">
-            <div class="column is-half"><arrowicon /></div>
-            <div class="column"><arrowicon /></div>
-            <div class="column"><arrowicon /></div>
-          </div>
+      <div class="columns" style="padding-top: 0px">
+        <div class="column is-half"><arrowicon /></div>
+        <div class="column"><arrowicon /></div>
+        <div class="column"><arrowicon /></div>
+      </div>
       <div class="columns is-1" style="padding-top:20px">
         <div class="column">
           <figure>
@@ -604,5 +680,19 @@ export default {
 }
 .space {
   padding-top: 10px;
+}
+.inscrireWSF {
+  position: relative;
+  top: -70px;
+  left: 300px;
+}
+.inscrireWS {
+  position: relative;
+  top: -70px;
+  left: 120px;
+}
+.realisationWS {
+  position: relative;
+  bottom: -50px;
 }
 </style>
