@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Rintio',
   siteDescription: "We involve for a better life",
-
+  icon: './src/assets/rintio_favicon.png',
   plugins: [
     {
       // Create posts from markdown files
@@ -16,11 +16,6 @@ module.exports = {
         typeName: "Article",
         path: "content/articles/*.md",
         refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: "Tag",
-            create: true
-          },
           // Creates a GraphQL collection from 'categories' in front-matter and adds a reference.
           categories: {
             typeName: "Category",
@@ -33,6 +28,5 @@ module.exports = {
   templates: {
     Article: "/article/:title",
     Category: "/category/:title",
-    Tag: "/tag/:title"
   }
 }
