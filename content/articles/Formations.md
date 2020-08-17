@@ -4,6 +4,7 @@ published: true
 categories: ["A la Une / Rintio Stories"]
 date: 2020-07-28
 coverImage: /img/articles/african_american_businessman_l.png
+metaDescription: Rintio vous propose des formations de qualité sur le Big Data, l’ Intelligence artificielle, Java, Python, API & Micro-service.
 ---
 
 ## Formations

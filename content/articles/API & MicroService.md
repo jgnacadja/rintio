@@ -1,9 +1,10 @@
 ---
 title: API MicroService
 published: true
-categories: ["Nos offres"]
+categories: ["Nos offres"] 
 date: 2020-07-28
 coverImage: /img/articles/ID4H1A1937.png
+metaDescription: Exposez vos produits, vos services, et vos données via des API Monétisez vos API 
 ---
 
 ## API & MicroService

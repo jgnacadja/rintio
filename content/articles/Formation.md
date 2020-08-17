@@ -1,7 +1,7 @@
 ---
 title: Formation
 published: true
-categories: ["Nos offres"]
+categories: ["Nos offres feature"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3265.png
 ---

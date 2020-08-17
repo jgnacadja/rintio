@@ -5,7 +5,7 @@ categories: ["Nos offres"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3262.png
 ---
-
+ 
 ## Data Lab
 
 Vous disposez de données de localisation, de fichiers journaux Web, de données provenant de capteurs, de données météorologiques, de flux de circulation et bien plus encore. Toutes ces données ont une valeur cachée, mais vous n’êtes pas sûr de ce que c’est. C’est là qu’intervient le laboratoire de données.

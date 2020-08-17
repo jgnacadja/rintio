@@ -1,10 +1,10 @@
 ---
 title: Développement & Intégration d’applications
 published: true
-categories: ["Nos offres"]
+categories: ["Nos offres feature"]
 date: 2020-07-28
 coverImage: /img/articles/team_ux_designer_creative_grap.png
----
+--- 
 
 ## Développement d’applications complètes et solutions d’intégration.
 
