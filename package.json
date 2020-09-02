@@ -13,6 +13,7 @@
     "bulma": "^0.8.2",
     "fs": "0.0.1-security",
     "gridsome": "^0.7.0",
+    "jquery": "^3.5.1",
     "npm": "^6.14.5",
     "start": "^5.1.0",
     "vue-breadcrumbs": "^1.2.0",

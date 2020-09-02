@@ -6,18 +6,17 @@
         <slot />
       </main>
     </transition>
-    <Footer />
   </div>
 </template>
 
-<script>
-import Mainmenu from "~/components/Mainmenu.vue";
-import Footer from "~/components/Footer.vue";
+<style lang="css" scoped>
+</style>
 
+<script>
+import nos_implantations from "~/components/nos_implantations.vue";
 export default {
   components: {
-    Mainmenu,
-    Footer
+    nos_implantations
   }
 };
 </script>
