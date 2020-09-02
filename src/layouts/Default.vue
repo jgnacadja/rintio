@@ -20,8 +20,8 @@ import Rintiodatalab from "~/components/Rintiodatalab.vue";
 export default {
   components: {
     Mainmenu,
-    Rintiodatalab
+    Rintiodatalab,
     //Footer
-  }
+  },
 };
 </script>
