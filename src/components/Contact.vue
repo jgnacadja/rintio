@@ -4,9 +4,9 @@
     <section>
       <div id="app">
         <form class="vue-form" @submit.prevent="submit">
-          <div class="error-message">
+          <!--<div class="error-message">
             <p v-show="!email.valid">Oh, please enter a valid email address.</p>
-          </div>
+          </div>-->
           <fieldset>
             <div>
               <label class="label" for="name">Nom</label>
