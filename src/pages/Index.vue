@@ -12,17 +12,20 @@
     </div>
     <alaUneEngagements />
     <NosExperts />
+    <Nosimplantations />
   </Layout>
 </template>
 
 <script>
 import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements  from "~/components/alaune-engagements.vue";
+import Nosimplantations from "~/components/Nosimplantations.vue";
 
 export default {
   components: {
     NosExperts,
-    alaUneEngagements
+    alaUneEngagements,
+    Nosimplantations
   },
   metaInfo: {
     title: "We involve for a better life",

@@ -25,7 +25,7 @@ export default function (Vue, { router, head, isClient }) {
     rel: "stylesheet",
     href: "https://use.typekit.net/bur4tax.css",
   });
-
+  
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
@@ -42,3 +42,5 @@ export default function (Vue, { router, head, isClient }) {
     })
 
 }
+
+
