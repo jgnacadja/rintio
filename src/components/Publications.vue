@@ -16,6 +16,9 @@
                                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.content"></b> <br />
                                     </div>
                                     <div class="column is-3">
+                                          <arrowicon/>
+                                    </div>
+                                    <div class="column is-3">
                                         <span><i class="fal fa-eye fa-2x"></i></span>
                                     </div>
                                     </figcaption>
@@ -107,6 +110,18 @@ query{
     } 
 }
 </static-query>
+
+<script>
+import { arrowicon } from "~/components/arrow-icon.vue";
+export default {
+  components: {
+    arrowicon,
+  },
+ 
+};
+</script>
+
+
 
 <style>
 .pub-tag{

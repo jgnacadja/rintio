@@ -34,7 +34,7 @@ import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
-import Rintiodatalab from "~/components/RintioDatalabE.vue";
+import Rintiodatalab from "~/components/RintioDatalab.vue";
 import Publications  from "~/components/Publications";
 
 
