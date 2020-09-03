@@ -4,7 +4,11 @@ published: true
 categories: ["Nos offres features"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3110.png
-metaDescription: concentrez vous sur votre coeur d'activité Dev Python Php Java
+metaDescription: concentrez vous sur votre coeur d'activité
+subMetaDescriptionLeft: .Dev.Python Java PHP
+subMetaDescriptionRigth: .Migration Cloud
+subMetaDescriptionLeftDown: .Admin.cloud & Infra
+subMetaDescriptionRigthDown: .DevOps
 ---
 
 ## Offshoring

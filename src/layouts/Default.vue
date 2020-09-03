@@ -15,21 +15,15 @@
 
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
-<<<<<<< HEAD
 import Nosoffres from "~/components/Nosoffres.vue";
+import Footer from "~/components/Footer.vue";
 
 export default {
   components: {
     Mainmenu,
     Nosoffres,
   }
-=======
-import Footer from "~/components/Footer.vue";
-export default {
-  components: {
-    Mainmenu,
-    Footer
-  },
->>>>>>> alaune/engagements
+
+
 };
 </script>
