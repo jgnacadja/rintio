@@ -24,6 +24,7 @@
     <alaUneEngagements :NosEngagement="true" />
     <NosExperts />
     <Rintiodatalab />
+    <Ilsnousfontconfiance />
     <Nosimplantations />
   </Layout>
 </template>
@@ -32,6 +33,7 @@
 import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
+import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
 import Rintiodatalab from "~/components/RintioDatalab.vue";
 
@@ -41,6 +43,7 @@ export default {
     alaUneEngagements,
     arrowicon,
     Rintiodatalab,
+    Ilsnousfontconfiance,
     Nosimplantations,
   },
   metaInfo: {
