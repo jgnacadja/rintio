@@ -176,6 +176,7 @@ export default {
   position: relative;
   margin: auto;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 .image_nosimplantations .image_contenu {
   max-width: 100%;
