@@ -13,10 +13,8 @@
 </style>
 
 <script>
-import nos_implantations from "~/components/nos_implantations.vue";
 export default {
   components: {
-    nos_implantations
   }
 };
 </script>

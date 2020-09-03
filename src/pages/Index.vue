@@ -1,14 +1,14 @@
 <template>
   <Layout>
-    <nos_implantations/>
+    <Nosimplantations />
   </Layout>
 </template>
 
 <script>
-import nos_implantations from "~/components/nos_implantations.vue";
+import Nosimplantations from "~/components/Nosimplantations.vue";
 export default {
    components : {
-     nos_implantations
+     Nosimplantations
    },
    metaInfo : {
      title : "We involve for a better life"
