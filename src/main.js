@@ -22,7 +22,7 @@ export default function(Vue, { router, head, isClient }) {
     rel: "stylesheet",
     href: "https://use.typekit.net/bur4tax.css",
   });
-
+  
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
@@ -41,17 +41,5 @@ export default function(Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href: 'slick/slick.css',
-  });
-
-  head.link.push({
-    rel: "stylesheet",
-    // Add the new slick-theme.css if you want the default styling
-    href: 'slick/slick-theme.css',
-  });
-
-  head.script.push({
-    rel: "stylesheet",
-    // Add the new slick-theme.css if you want the default styling
-    href: 'slick/slick.min.js',
   });
 }
