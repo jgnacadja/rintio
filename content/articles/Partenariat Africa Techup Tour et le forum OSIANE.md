@@ -1,5 +1,5 @@
 ---
-title: Partenariat Africa TechUp
+title: Partenariat Africa TechUp et le forum <a href="#"> OSIANE </a>
 published: true
 categories: ["Nos Engagements feature"]
 date: 2020-07-28
