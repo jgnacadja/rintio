@@ -1,14 +1,21 @@
 <template>
-  <Layout></Layout>
+  <Layout>
+    <Contact />
+  </Layout>
 </template>
 
 <script>
+import Contact from "~/components/Contact.vue";
 export default {
-  metaInfo: {
-    title: "Rintio"
-  }
-};
+   components : {
+     Contact
+   },
+   metaInfo : {
+     title : "We involve for a better life"
+   }
+}
 </script>
 
 <style>
+
 </style>

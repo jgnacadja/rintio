@@ -1,23 +1,19 @@
 <template>
   <div>
-    <Mainmenu />
     <transition name="fade" appear>
       <main>
         <slot />
       </main>
     </transition>
-    <Footer />
   </div>
 </template>
 
-<script>
-import Mainmenu from "~/components/Mainmenu.vue";
-import Footer from "~/components/Footer.vue";
+<style lang="css" scoped>
+</style>
 
+<script>
 export default {
   components: {
-    Mainmenu,
-    Footer
   }
 };
 </script>
