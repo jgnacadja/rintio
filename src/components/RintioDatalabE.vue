@@ -52,23 +52,6 @@
                                             <b v-html="$static.dataLab.id"></b>
                                             <p class="has-text-justify">Une offre basée sur la valorisation de vos Data</p>
                                         </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="is-pulled-left">
-                                                <ul class="enumeration-mobile">
-                                                    <li>Prototypage</li>
-                                                    <li>R&D </li>
-                                                </ul>
-                                            </div>
-                                            <div class="is-pulled-right">
-                                                <ul class="enumeration-mobile">
-                                                    <li>Stratégie Data & IA</li>
-                                                    <li>Gouvernance Data & IA</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                     <div class="columns">
                                         <div class="column is-half-desktop is-2-mobile">
