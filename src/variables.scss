@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+// You can input your own styles here before you import Bulma
+// See [this page](https://bulma.io/documentation/customize/with-node-sass/#6-add-your-own-bulma-styles)
+// Also, for a list of customizable variables, reference [this page](https://bulma.io/documentation/customize/variables/)
+
+// Colors
+$blue-rintio: #134a7f;
+$green-rintio: #5cb77d;
+$red-rintio: #b83955;
+$black-rintio: #282828;
+$white: #fff;
+
+$primary: $blue-rintio;
+
+$light: hsl(0, 0%, 96%);
+$sucess: $green-rintio;
+
+// General colors
+$scheme-main: $white;
+
+// Typography
+$family-sans-serif: century-gothic, sans-serif;
+$family-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+"Helvetica Neue", Arial, sans-serif;
+$body-family: $family-secondary;
+
+$variable-columns: false;
+
+.column {
+  padding: 0.75rem !important;
+}
+h1,
+.page-title {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.button {
+  background-color: #134a7f !important;
+  color: white;
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.html {
+  background-color: white !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.page-title,
+.section-title,
+.title-14,
+.navbar-item,
+.fig-title,
+.title {
+  font-family: $family-sans-serif;
+}
+
+h1,
+h2 {
+  font-family: $family-sans-serif;
+}
+h2,
+.subtitle {
+  font-size: 1.6em;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+h3,
+.section-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.6em;
+  font-weight: 12px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 10px;
+}
+
+section.container {
+  margin: auto;
+}
+
+.signature {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+
+.page-title {
+  font-family: $family-sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 5.4rem;
+}
+
+.section-title {
+  font-family: $family-sans-serif;
+  font-weight: 700;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+.title-14 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  line-height: 1.4rem;
+}
+
+.subtitle {
+  //  font-family: Domus, sans-serif;
+  font-weight: 300;
+  line-height: 2.06rem;
+  text-align: center;
+  margin: auto;
+}
+
+.is-bordered {
+  border: solid;
+}
+
+.padding {
+  padding: 50px !important;
+}
+
+.content-24 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.063em;
+}
+
+.content-20 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75em;
+}
+
+.content-16 {
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.content-14 {
+  font-size: 1.3em;
+  font-weight: 200;
+  line-height: 20px;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 1em;
+  }
+  h1,
+  .page-title {
+    font-size: 1.6em;
+  }
+  h2,
+  .section-title {
+    font-size: 1.4em;
+  }
+  .subtitle {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  .content-16,
+  .content-14 {
+    font-size: 1em;
+  }
+
+  .content-24 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+}
