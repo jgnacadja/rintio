@@ -13,6 +13,7 @@
     <alaUneEngagements />
     <NosExperts />
     <Rintiodatalab />
+    <Publications /> 
     <Nosimplantations />
   </Layout>
 </template>
@@ -22,6 +23,8 @@ import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements  from "~/components/alaune-engagements.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
 import Rintiodatalab from "~/components/RintioDatalabE.vue";
+import Publications  from "~/components/Publications";
+
 
 export default {
   components: {
@@ -29,6 +32,7 @@ export default {
     alaUneEngagements,
     Rintiodatalab,
     Nosimplantations,
+    Publications,
   },
   metaInfo: {
     title: "We involve for a better life",
