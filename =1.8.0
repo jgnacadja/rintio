@@ -1,0 +1,44 @@
+
+> sharp@0.23.4 install /home/rintiopc1/Documents/rintio/node_modules/sharp
+> (node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)
+
+
+> node-sass@4.14.1 install /home/rintiopc1/Documents/rintio/node_modules/node-sass
+> node scripts/install.js
+
+Cached binary found at /home/rintiopc1/.npm/node-sass/4.14.1/linux-x64-72_binding.node
+
+> core-js@3.6.5 postinstall /home/rintiopc1/Documents/rintio/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> cwebp-bin@5.1.0 postinstall /home/rintiopc1/Documents/rintio/node_modules/cwebp-bin
+> node lib/install.js
+
+
+> mozjpeg@6.0.1 postinstall /home/rintiopc1/Documents/rintio/node_modules/mozjpeg
+> node lib/install.js
+
+
+> pngquant-bin@5.0.2 postinstall /home/rintiopc1/Documents/rintio/node_modules/pngquant-bin
+> node lib/install.js
+
+
+> node-sass@4.14.1 postinstall /home/rintiopc1/Documents/rintio/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /home/rintiopc1/Documents/rintio/node_modules/node-sass/vendor/linux-x64-72/binding.node
+Testing binary
+Binary is fine
++ jquery@3.5.1
+added 301 packages from 111 contributors, removed 377 packages, updated 1665 packages and audited 1970 packages in 200.8s
+found 347 vulnerabilities (343 low, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
