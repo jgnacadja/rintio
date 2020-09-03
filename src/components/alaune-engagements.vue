@@ -1,27 +1,27 @@
 <template>
   <div class="section is-paddingless">
+    <br/>
     <div class="" v-if="NosEngagement">
       
       <div class="is-hidden-mobile ">
         <h2 class="has-text-primary is-size-2 title">Nos Engagements</h2>
         <div class="section">
           <div class="columns">
-            <div class="column is-6">
+            <div class="column is-6"> 
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style=""
-                    ><b>Nos réalisations</b></span
-                  >
+                  <span class="is-white is-small tag has-text-primary realisationWS"
+                    style="margin-left:20px">
+                    <b>Nos réalisations</b></span>
                   <g-image
                     :src="$static.feature.belongsTo.edges[1].node.coverImage"
-                    class=""
-                  />
-                  <span class="tag  is-primary is-large inscrireWSF"
-                    ><b>S'inscrire</b></span
-                  >
+                    />
+
+                  <span class="tag  is-primary is-large inscrireWSF" style="position:relative;left:240px">
+                    <b>S'inscrire</b></span>
+                  
                 </div>
+
                 <figcaption>
                   <b v-html="$static.feature.belongsTo.edges[1].node.title"></b>
                   <p
@@ -266,7 +266,7 @@
         <h2 class="has-text-primary is-size-4 title">Nos Engagements</h2>
         <div class="">
           <figure>
-            <button class="has-text-primary" id="" style="position: absolute; left: 30px;">
+            <button class="has-text-primary" id="" style="position: absolute; left: 30px;margin-top:20px;">
               Nos Engagements
             </button>
             <g-image
@@ -305,7 +305,7 @@
           :key="article.node.id"
         >
           <figure class="zoom">
-            <button class="has-text-primary" id="" style="position: relative; top:110px; right: -150px">
+            <button class="has-text-primary" id="" style="position: relative; top:110px; ">
               Nos Engagements
             </button>
             <g-image :src="article.node.coverImage" class="" style="padding-top: 40px"  />

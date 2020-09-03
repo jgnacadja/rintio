@@ -2,8 +2,11 @@
 title: Intelligence artificielle
 published: true
 categories: ["Nos offres"]
-date: 2020-07-28
+date: 2020-08-29
 coverImage: /img/articles/download.png
+metaDescription: Meilleur connaissance client, Expérience client unique, Produits et services augmentés
+subDescription: 
+
 ---
  
 ## Intelligence artificielle

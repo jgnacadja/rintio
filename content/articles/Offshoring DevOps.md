@@ -2,8 +2,11 @@
 title: Offshoring DevOps
 published: true
 categories: ["Nos offres"]
-date: 2020-07-28
+date: 2020-08-28
 coverImage: /img/articles/ID11558400.png
+metaDescription: Optimisez vos processus de developpement et livrez rapidement vos produits et vos services.
+subDescription: 
+
 ---
 
 ## Offshoring DevOps

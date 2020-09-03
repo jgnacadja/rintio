@@ -4,6 +4,9 @@ published: true
 categories: ["Nos offres feature"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3265.png
+descriptionUp: Java,Phython,Big DAta (Handoop, Spark, ELK,MangoBD,
+descriptionDown: Kafka), IA (Marchine Learning,Deep Learning, NPL).
+
 ---
 
 ## Les avantages de la formation et du développement à Rintio

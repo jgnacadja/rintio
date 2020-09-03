@@ -1,8 +1,5 @@
 <template>
   <Layout>
-<<<<<<< HEAD
-    <Nosoffres/>
-=======
     <div style="padding-left:2%; padding-right:2%">
       <div class="section section is-fluid" style="padding:0px">
       <div>
@@ -25,31 +22,27 @@
         </div>
       </div>
     </div> 
+    <Nosoffres />
     <alaUneEngagements :alaUne="false" />
     <alaUneEngagements :NosEngagement="true" />
     <NosExperts />
     </div>
->>>>>>> alaune/engagements
   </Layout>
 </template>
 
 <script>
-<<<<<<< HEAD
-import Nosoffres from "~/components/Nosoffres.vue";
-export default {
-  components: {Nosoffres, }, 
-=======
 import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
+import Nosoffres from "~/components/Nosoffres.vue";
 
 export default {
   components: {
     NosExperts,
     alaUneEngagements,
     arrowicon,
+    Nosoffres,
   },
->>>>>>> alaune/engagements
   metaInfo: {
     title: "We involve for a better life",
   },
