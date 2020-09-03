@@ -12,6 +12,7 @@
     </div>
     <alaUneEngagements />
     <NosExperts />
+    <Rintiodatalab />
     <Nosimplantations />
   </Layout>
 </template>
@@ -20,12 +21,14 @@
 import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements  from "~/components/alaune-engagements.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
+import Rintiodatalab from "~/components/RintioDatalabE.vue";
 
 export default {
   components: {
     NosExperts,
     alaUneEngagements,
-    Nosimplantations
+    Rintiodatalab,
+    Nosimplantations,
   },
   metaInfo: {
     title: "We involve for a better life",
@@ -34,24 +37,5 @@ export default {
 </script>
 
 <style>
-.content-14-top {
-  padding-top: 2%;
-  margin-left: 1%;
-}
-@media only screen and (max-width: 415px) {
-  .content-14 {
-    font-size: 14px;
-  }
 
-  .content-14-top {
-    padding-top: 5%;
-    margin-left: 5% !important;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .content-16 {
-    font-size: 16px;
-  }
-}
 </style>

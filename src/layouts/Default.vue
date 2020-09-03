@@ -6,7 +6,6 @@
         <slot />
       </main>
     </transition>
-      <Footer />
   </div>
 </template>
 
@@ -15,11 +14,14 @@
 
 <script>
 import Mainmenu from "~/components/Mainmenu.vue";
-import Footer from "~/components/Footer.vue";
+import Rintiodatalab from "~/components/Rintiodatalab.vue";
+//import Footer from "~/components/Footer.vue";
+
 export default {
   components: {
     Mainmenu,
-    Footer
+    Rintiodatalab,
+    //Footer
   },
 };
 </script>

@@ -5,19 +5,16 @@ import DefaultLayout from "~/layouts/Default.vue";
 
 import Buefy from "buefy";
 import "~/main.scss";
-import axios from 'axios'
-import '~/assets/font-awesome/all.js'
+import axios from "axios";
 
-
-export default function (Vue, { router, head, isClient }) {
-
+export default function(Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
-  head.htmlAttrs = { lang: 'fr' }
+  head.htmlAttrs = { lang: "fr" };
 
   // import vue meta
   head.meta.push({
     name: "viewport",
-    content: "width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    content: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
   });
 
   // Import Adobe Fonts
@@ -32,15 +29,17 @@ export default function (Vue, { router, head, isClient }) {
   // Register our Bulma component library
   Vue.use(Buefy);
 
-    //http requests via axios
-    Vue.use({
-      install(Vue) {
-        Vue.prototype.$api = axios.create({
-          baseURL: 'https://api.sendgrid.com/v3/mail'
-        })
-      }
-    })
+  //http requests via axios
+  Vue.use({
+    install(Vue) {
+      Vue.prototype.$api = axios.create({
+        baseURL: "https://api.sendgrid.com/v3/mail",
+      });
+    },
+  });
 
+  head.link.push({
+    rel: "stylesheet",
+    href: 'slick/slick.css',
+  });
 }
-
-
