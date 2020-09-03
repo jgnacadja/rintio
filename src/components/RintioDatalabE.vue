@@ -28,7 +28,31 @@
                                             <b v-html="$static.dataLab.id"></b>
                                             <p class="has-text-justify">Une offre basée sur la valorisation de vos Data</p>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="is-pulled-left">
+                                                    <ul class="enumeration-mobile">
+                                                        <li>Prototypage</li>
+                                                        <li>R&D </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="is-pulled-right">
+                                                    <ul class="enumeration-mobile">
+                                                        <li>Stratégie Data & IA</li>
+                                                        <li>Gouvernance Data & IA</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="card-content is-overlay is-fluid is-half-desktop is-hidden-mobile description-image1">
+                                    <div class="columns is-half-desktop is-6-mobile is-one-two-tablet">
+                                        <div class="column is-one-two">
+                                            <b v-html="$static.dataLab.id"></b>
+                                            <p class="has-text-justify">Une offre basée sur la valorisation de vos Data</p>
+                                        </div>
+
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="is-pulled-left">
@@ -45,13 +69,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-content is-overlay is-fluid is-half-desktop is-hidden-mobile description-image1">
-                                    <div class="columns is-half-desktop is-6-mobile is-one-two-tablet">
-                                        <div class="column is-one-two">
-                                            <b v-html="$static.dataLab.id"></b>
-                                            <p class="has-text-justify">Une offre basée sur la valorisation de vos Data</p>
-                                        </div>
                                     </div>
                                     <div class="columns">
                                         <div class="column is-half-desktop is-2-mobile">
@@ -270,7 +287,7 @@ export default {};
 
     .description-image1-mobile{
         background-color: #474444bd;
-        margin: 30% 5% 30% 5%;
+        margin: 40% 5% 30% 5%;
         color: #fff;
     }
 
