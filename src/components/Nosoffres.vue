@@ -712,5 +712,6 @@ export default {
 }
 .card-overlay-4-content{
   font-size : 25px;
-}
+} 
+ 
 </style>
