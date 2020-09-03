@@ -1,7 +1,7 @@
 <template>
   <section class="container is-fluid">
     <h2
-      class="title is-size-3-mobile is-size-2-tablet has-text-primary newclass_nosimplantations"
+      class="title is-size-4-mobile is-size-2-tablet has-text-primary newclass_nosimplantations"
     >Nos implantations</h2>
     <section class="newclass_nosimplantations">
       <article class="columns" id="implantation.implantation_names">
