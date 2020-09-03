@@ -9,6 +9,7 @@
           <div class="columns">
             <div class="column is-6"> 
               <figure>
+<<<<<<< HEAD
                 <div class="card zoom">
                   <div class="card-image">
                      <span class="is-white is-small tag has-text-primary realisationWS"
@@ -35,6 +36,21 @@
                   <span class="tag  is-primary is-large inscrireWSF" style="position:relative;left:240px;height:25px">
                     <b style="font-size:15px;">S'inscrire</b></span>   
             </div>
+=======
+                <div class="zoom">
+                  <span class="is-white is-small tag has-text-primary realisationWS"
+                    style="margin-left:20px">
+                    <b>Nos réalisations</b></span>
+                  <g-image
+                    :src="$static.feature.belongsTo.edges[1].node.coverImage"
+                    />
+
+                  <span class="tag  is-primary is-large inscrireWSF" style="position:relative;left:240px">
+                    <b>S'inscrire</b></span>
+                  
+                </div>
+
+>>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 <figcaption>
                   <b v-html="$static.feature.belongsTo.edges[1].node.title"></b>
                   <p
