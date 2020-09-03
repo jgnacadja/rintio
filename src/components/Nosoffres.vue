@@ -13,15 +13,9 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-            <div class="row shadow_1">
-                          <div class=" is-primary ">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
             <div class="row shadow_1">
               <div class=" is-primary ">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
               
               <b>{{ $static.features.belongsTo.edges[0].node.title }}</b> <br />
               {{ $static.features.belongsTo.edges[0].node.metaDescription }} <br /> 
@@ -44,8 +38,6 @@
                   <arrowicon :colore="true" :no_colore ="true" />
                 </div>
               </div>           
-<<<<<<< HEAD
-=======
             </div>
           
 
@@ -77,7 +69,6 @@
                 </div>
               </div>     
             </div>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             </div>
             </div>
 
@@ -96,16 +87,6 @@
                   />
                 </figure>
               </div>
-<<<<<<< HEAD
-              <div class="card-content is-overlay is-fluid">
-                
-                <div class=" is-primary shadow_2">
-                  <b>{{ $static.articles.belongsTo.edges[0].node.title }}</b> <br />
-                  <div class="shadow_3">
-                    
-                  {{ $static.articles.belongsTo.edges[0].node.metaDescription }}
-                  {{ $static.articles.belongsTo.edges[0].node.subDescription }}
-=======
               <div class="card-content is-overlay is-hidden-mobile is-fluid">
                 
                 <div class=" is-primary shadow_2">
@@ -131,16 +112,11 @@
 
                   <div style="font-size : 30px" class="shadow_3">
                     {{ $static.articles.belongsTo.edges[0].node.subDescription }}
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                   </div>
                   
                 </div> 
                 <div class="buttons are-medium" style="margin-top:10px;margin-left:22%;">
-<<<<<<< HEAD
-                  <button class="button is-link" style="width:150px; color: white;height:30px; border-radius:0px; font-size:12px;">Profitez de l'offre</button>
-=======
                   <button class="button is-link" style="width:400px; color: white;height:100px; border-radius:0px; font-size:30px; font-weight : 900 ;">Profitez de l'offre</button>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 </div>
               </div>
             </div>
@@ -154,11 +130,7 @@
                   />
                 </figure>
               </div>
-<<<<<<< HEAD
-              <div class="card-content is-overlay is-fluid"> 
-=======
               <div class="card-content is-overlay is-hidden-mobile is-fluid"> 
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[1].node.title }}</b> <br/>
                   <div class="columns is-mobile shadow_3">
@@ -171,8 +143,6 @@
                       </div>
                   </div>
                   
-<<<<<<< HEAD
-=======
                 </div>
               </div>
               <div class="card-content is-overlay is-hidden-desktop is-fluid card-mobile-3"> 
@@ -188,7 +158,6 @@
                       </div>
                   </div>
                   
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 </div>
               </div>
             </div>
@@ -204,11 +173,7 @@
                   />
                 </figure>
               </div>
-<<<<<<< HEAD
-              <div class="card-content is-overlay is-fluid">
-=======
               <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[2].node.title }}</b> <br />
                   <div class="shadow_3">
@@ -220,8 +185,6 @@
                 </div>
                 <div class="buttons are-medium" style="margin-top:10px;margin-left:22%;">
                   <button class="button is-link" style="width:150px; color: white;height:30px; border-radius:0px; font-size:12px;">Profitez de l'offre</button>
-<<<<<<< HEAD
-=======
                 </div>
               </div>
               <div class="card-content is-overlay is-hidden-desktop is-fluid">
@@ -236,7 +199,6 @@
                 </div>
                 <div class="buttons are-medium has-text-centered" style="margin-top:10px;margin-left:22%;">
                   <button class="button is-link" style="width:400px; color: white;height:100px; border-radius:0px; font-size:30px; font-weight : 900">Profitez de l'offre</button>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 </div>
               </div>
             </div>
@@ -250,11 +212,7 @@
                   />
                 </figure>
               </div>
-<<<<<<< HEAD
-              <div class="card-content is-overlay is-fluid">
-=======
               <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
                 <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[3].node.title }}</b> <br/>
                   <div class="columns is-mobile">
@@ -269,9 +227,7 @@
                   
                 </div>
                
-<<<<<<< HEAD
-=======
-              </div>
+              
               <div style="margin-top : 35%" class="card-content is-overlay is-hidden-desktop is-fluid card-mobile-3">
                 <div class=" is-primary shadow_2">
                   <b style="font-size : 40px">{{ $static.articles.belongsTo.edges[3].node.title }}</b> <br/>
@@ -287,7 +243,6 @@
                   
                 </div>
                
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
               </div>
             </div>
           </div>
@@ -305,11 +260,7 @@
             </figure>
           </div>
 
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class="is-primary shadow">
               <b> {{ $static.feature.belongsTo.edges[0].node.title }}</b> <br/>
                
@@ -322,8 +273,6 @@
                     <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
           <div class="card-content is-overlay is-hidden-desktop is-fluid card-overlay-4">
@@ -339,7 +288,6 @@
                     <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
                 </div>
               </div>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             </div>
           </div>
         </div>
@@ -353,11 +301,7 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[4].node.title }}</b> <br/>
                   <div class="columns is-mobile">
@@ -371,9 +315,6 @@
                   </div>
                   
                 </div>
-<<<<<<< HEAD
-            
-=======
           </div>
           <div class="card-content is-overlay is-hidden-desktop is-fluid card-overlay-5-mobile">
             <div class=" is-primary shadow_2">
@@ -389,7 +330,6 @@
                   </div>
                   
                 </div>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
           </div>
         </div>
       </div>
@@ -402,9 +342,6 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
             <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[5].node.title }}</b> <br/>
@@ -422,7 +359,6 @@
                
           </div>
           <div class="card-content is-overlay is-hidden-desktop is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[5].node.title }}</b> <br/>
                   <div class="columns is-mobile">
@@ -451,11 +387,7 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class="is-primary shadow">
               <b> {{ $static.feature.belongsTo.edges[1].node.title }}</b> <br/>
                 
@@ -468,8 +400,6 @@
                     <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
           <div class="card-content is-overlay is-hidden-desktop is-fluid card-overlay-6-mobile">
@@ -485,7 +415,6 @@
                     <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
                 </div>
               </div>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             </div>
           </div>
         </div>
@@ -499,11 +428,7 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[6].node.title }}</b> <br/>
                   <div class="columns is-mobile">
@@ -518,8 +443,6 @@
                   
                 </div>
                
-<<<<<<< HEAD
-=======
           </div>
           <div style="margin-top : 30%" class="card-content is-overlay is-hidden-desktop is-fluid">
             <div class=" is-primary shadow_2">
@@ -536,7 +459,6 @@
                   
                 </div>
                
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
           </div>
         </div>
       </div>
@@ -549,11 +471,7 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class=" is-primary shadow_2">
                   <b>{{ $static.articles.belongsTo.edges[7].node.title }}</b> <br/>
                   <div class="columns is-mobile">
@@ -569,9 +487,6 @@
                   </div>
                   
                 </div>
-<<<<<<< HEAD
-               
-=======
           </div>
           <div style="margin-top : 15%" class="card-content is-overlay is-hidden-desktop is-fluid">
             <div class=" is-primary shadow_2">
@@ -589,7 +504,6 @@
                   </div>
                   
                 </div>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
           </div>
         </div>
       </div>
@@ -605,11 +519,7 @@
               />
             </figure>
           </div>
-<<<<<<< HEAD
-          <div class="card-content is-overlay is-fluid">
-=======
           <div class="card-content is-overlay is-hidden-mobile is-fluid">
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             <div class="is-primary shadow">
               <b> {{ $static.feature.belongsTo.edges[2].node.title }}</b> <br/>
              
@@ -624,8 +534,6 @@
                     <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
           <div style="margin-top : -10%" class="card-content is-overlay is-hidden-desktop is-fluid">
@@ -643,7 +551,6 @@
                     <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
                 </div>
               </div>
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
             </div>
           </div>
         </div>
@@ -739,11 +646,6 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
-
-.shadow_1{
-  background-color: grey;
-=======
 .shadow_1-mobile{
     background-color: #808080d9;
   opacity: 1;
@@ -754,31 +656,21 @@ export default {
 }
 .shadow_1{
   background-color: #808080d9;
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
   opacity: 1;
   color: white;
   position: relative;
   bottom: -70%;
 }
-<<<<<<< HEAD
-.shadow {
-  background-color: grey;
-=======
 
 .card-mobile-3{
   margin-top: 30%;
 }
 .shadow {
   background-color: #808080d9;
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
   opacity: 1;
   color: white;
   margin-top: 20%;
 }
-<<<<<<< HEAD
-.shadow_2{
-  background-color: grey;
-=======
 .card-overlay-description{
   font-size : 30px ;
 }
@@ -796,7 +688,6 @@ export default {
 }
 .shadow_2{
   background-color: #808080d9;
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
   opacity: 0.9;
   font-weight: 900;
   color: white;
@@ -807,8 +698,6 @@ export default {
 }
 .shadow_4{
   font-size: 12px;
-<<<<<<< HEAD
-=======
 }
 
 .card-overlay-4{
@@ -822,7 +711,6 @@ export default {
 
 .card-overlay-6-mobile{
   margin-top: -15%;
->>>>>>> 4a8b677efd470c8518d89ae0aa50c71c3cf84deb
 }
 .card-overlay-4-content{
   font-size : 25px;
