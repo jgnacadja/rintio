@@ -1,11 +1,11 @@
 ---
-title: Offshoring  cloud
+title: Offshoring  Cloud
 published: true
 categories: ["Nos offres"]
 date: 2020-08-26
 coverImage: /img/articles/CLoud1.png
-metaDescription: Migration dans le cloud
-subDescription: Gagnez en elasticité et en souplesse avec le cloud
+metaDescription: Migration dans le Cloud
+subDescription: Gagnez en elasticité et en souplesse avec le Cloud
 ---
 
 ## Migration dans le Cloud
