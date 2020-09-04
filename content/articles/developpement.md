@@ -1,10 +1,13 @@
 ---
 title: Développement & Intégration d’applications
 published: true
-categories: ["Nos offres"]
-date: 2020-07-28
+categories: ["Nos offres feature"]
+date: 2020-07-29
 coverImage: /img/articles/team_ux_designer_creative_grap.png
----
+descriptionUp: Accelérez le développement de vos projets.
+descriptionDown: .#Phython,#Java,#Php,#Hadoop,#Spark,#Kafka,#ELK.
+
+--- 
 
 ## Développement d’applications complètes et solutions d’intégration.
 
