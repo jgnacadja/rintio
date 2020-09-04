@@ -1,5 +1,5 @@
 ---
-title: Africa TechUp Tour 
+title: Africa TechUp Tour 2020
 published: true
 categories: ["Nos Engagements"]
 date: 2020-O8-04
