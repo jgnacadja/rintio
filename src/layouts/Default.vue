@@ -2,7 +2,9 @@
   <div>
     <transition name="fade" appear>
       <main>
+        <Mainmenu />
         <slot />
+        <Footer />
       </main>
     </transition>
   </div>
@@ -18,9 +20,7 @@ import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Mainmenu,
-    Nosoffres,
-  }
-
-
+    Footer,
+  },
 };
 </script>

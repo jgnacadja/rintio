@@ -40,6 +40,7 @@ import arrowicon from "~/components/arrow-icon.vue";
 import Nosoffres from "~/components/Nosoffres.vue";
 import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
+import Publications from "~/components/Publications.vue";
 import Rintiodatalab from "~/components/RintioDatalab.vue";
 import Contact from "~/components/Contact.vue";
 
@@ -52,6 +53,7 @@ export default {
     Rintiodatalab,
     Ilsnousfontconfiance,
     Nosimplantations,
+    Publications
   },
   metaInfo: {
     title: "We involve for a better life",
