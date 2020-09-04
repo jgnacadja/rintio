@@ -623,6 +623,9 @@
       <div class="columns" style="padding-top:30px">
         <div class="column is-6">
           <figure>
+            <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Nos Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne_feature.belongsTo.edges[0].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne_feature.belongsTo.edges[0].node.title"></b>
@@ -640,15 +643,15 @@
           <div class="columns is-multiline is-12">
             <div class="column is-half">
               <figure>
+                            <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Nos Engagements</b>
+                      </span>
                 <g-image
                   :src="$static.alaUne.belongsTo.edges[0].node.coverImage"
                   style="position:relative z-index:0"
                   class="zoom"
                 />
-                <button
-                  class="tag is-primary is-large is-fullwidth"
-                  style="position: relative; z-index:1; top:-50%"
-                >S'inscrire</button>
+              
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[0].node.title"></b>
                   <p
@@ -664,6 +667,9 @@
 
             <div class="column is-half">
               <figure>
+                                           <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Nos Engagements</b>
+                      </span>
                 <g-image :src="$static.alaUne.belongsTo.edges[1].node.coverImage" class="zoom" />
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[1].node.title"></b>
@@ -680,6 +686,9 @@
 
             <div class="column is-half mb-0">
               <figure>
+                                           <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Rintio Factory</b>
+                      </span>
                 <g-image :src="$static.alaUne.belongsTo.edges[4].node.coverImage" class="zoom" />
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[4].node.title"></b>
@@ -695,6 +704,9 @@
 
             <div class="column is-half mb-0">
               <figure>
+                                                           <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Rintio Factorie</b>
+                      </span>
                 <g-image :src="$static.alaUne.belongsTo.edges[3].node.coverImage" class="zoom" />
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[3].node.title"></b>
@@ -724,6 +736,9 @@
       <div class="columns is-1" style="padding-top:20px">
         <div class="column">
           <figure>
+                                                       <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Rintio Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[2].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[2].node.title"></b>
@@ -734,6 +749,9 @@
         </div>
         <div class="column">
           <figure>
+                                                                   <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Rintio Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[5].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[5].node.title"></b>
@@ -744,6 +762,9 @@
         </div>
         <div class="column">
           <figure>
+            <span class="is-white is-small tag has-text-primary realisationWS" style>
+               <b>Rintio Réalisations</b>
+             </span>
             <g-image :src="$static.alaUne.belongsTo.edges[6].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[6].node.title"></b>
@@ -756,6 +777,9 @@
       <div class="columns is-1">
         <div class="column">
           <figure>
+           <span class="is-white is-small tag has-text-primary realisationWS" style>
+                <b>Rintio Réalisations</b>
+             </span>
             <g-image :src="$static.alaUne.belongsTo.edges[7].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[7].node.title"></b>
@@ -766,6 +790,9 @@
         </div>
         <div class="column">
           <figure>
+                                                                   <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Rintio Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[8].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[8].node.title"></b>
@@ -776,6 +803,9 @@
         </div>
         <div class="column">
           <figure>
+                                                                   <span class="is-white is-small tag has-text-primary realisationWS" style>
+                        <b>Rintio Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[9].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[9].node.title"></b>
