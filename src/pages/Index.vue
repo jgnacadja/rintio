@@ -27,6 +27,7 @@
     <alaUneEngagements :NosEngagement="true" />
     <NosExperts />
     <Rintiodatalab />
+    <Publications /> 
     <Ilsnousfontconfiance />
     <Nosimplantations />
   </Layout>

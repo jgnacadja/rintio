@@ -22,9 +22,7 @@ export default {
 </script>
 
 <style>
-
 .fa-arrow-circle-right {
   margin-right: 6%;
 }
-
 </style>

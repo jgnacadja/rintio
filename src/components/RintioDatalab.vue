@@ -9,7 +9,13 @@
                                 <figure>
                                     <g-image :src="$static.dataLab.belongsTo.edges[3].node.coverImage" class />
                                     <figcaption class="is-hidden-desktop">
-                                        <p v-html="$static.dataLab.belongsTo.edges[3].node.content"></p>
+                                        <p class="" v-html="$static.dataLab.belongsTo.edges[3].node.content"></p>
+                                        <ul class="is-pulled-right enum-img1">
+                                            <li>Diversifier votre activité</li>
+                                            <li>Pilotez votre activité en temps réel</li>
+                                            <li>Maîtrisez vos coûts opérationnels</li>
+                                            <li>Optimisiez vos processus métier</li>
+                                        </ul> 
                                     </figcaption>
                                     <div class="column is-hidden-desktop has-text-centered">
                                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
@@ -26,7 +32,7 @@
                                     <div class="columns">
                                         <div class="column is-2">
                                             <b v-html="$static.dataLab.id"></b>
-                                            <p class="has-text-justify">Une offre basée sur la valorisation de vos Data</p>
+                                            <p class="has-text-justify">Une offre centrée sur la valorisation de vos Data</p>
                                         </div>
                                         <div class="row">
                                             <div class="col-lg-12">
@@ -50,7 +56,7 @@
                                     <div class="columns is-half-desktop is-6-mobile is-one-two-tablet">
                                         <div class="column is-one-two">
                                             <b v-html="$static.dataLab.id"></b>
-                                            <p class="has-text-justify">Une offre basée sur la valorisation de vos Data</p>
+                                            <p class="has-text-justify">Une offre centrée sur la valorisation de vos Data</p>
                                         </div>
                                     </div>
                                     <div class="columns">
@@ -76,7 +82,7 @@
                                 <figure>
                                     <g-image :src="$static.dataLab.belongsTo.edges[2].node.coverImage" class />
                                     <figcaption class="is-hidden-desktop">
-                                        <p v-html="$static.dataLab.belongsTo.edges[2].node.content"></p>
+                                        <p class="is-pulled-left" v-html="$static.dataLab.belongsTo.edges[2].node.content"></p>
                                     </figcaption>
                                     <div class="column is-hidden-desktop has-text-centered">
                                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
@@ -92,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-3-desktop is-full-mobile">
+                    <div class="column is-3-desktop is-hidden-mobile is-full-mobile">
                         <div class="card">
                             <div class="card-image">
                                 <figure>
@@ -114,12 +120,44 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-6 is-hidden-desktop">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure>
+                                    <g-image :src="$static.dataLab.belongsTo.edges[0].node.coverImage" class />
+                                </figure>
+                                <figcaption class="is-hidden-desktop">
+                                    <p v-html="$static.dataLab.belongsTo.edges[0].node.content"></p>
+                                </figcaption>
+                                <div class="column is-hidden-desktop has-text-centered">
+                                    <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                </div>
+                            </div>
+                            <div class="card-content is-overlay is-fluid ">
+                                <div class="columns">
+                                    <div class="column is-one-two">
+                                        <b class="article-title text-center has-text-primary" v-html="$static.dataLab.id"></b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row is-hidden-mobile">
                 <div class="columns">
                     <div class="column is-6">
-                        <p v-html="$static.dataLab.belongsTo.edges[3].node.content"></p>
+                        <div class="is-pulled-left">
+                             <p class="is-pullled-left" v-html="$static.dataLab.belongsTo.edges[3].node.content"></p>
+                        </div>
+                        <div class="is-pulled-right">
+                            <ul class="enum-right">
+                                <li>Diverisifiez votre activité</li>
+                                <li>Pilotez votre activité en teps réel</li>
+                                <li>Maîtrisez vos coûts opérationels</li>
+                                <li>Optimisez vos processus métier</li>
+                            </ul>  
+                        </div>
                     </div>
                     <div class="column is-3">
                         <p v-html="$static.dataLab.belongsTo.edges[2].node.content"></p>
@@ -166,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-6">
+                    <div class="column is-6 is-hidden-mobile">
                         <div class="card">
                             <div class="card-image">
                                 <figure>
@@ -174,6 +212,28 @@
                                 </figure>
                                 <figcaption class="is-hidden-desktop">
                                     <p v-html="$static.dataLab.belongsTo.edges[0].node.content"></p>
+                                </figcaption>
+                                <div class="column is-hidden-desktop has-text-centered">
+                                    <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                </div>
+                            </div>
+                            <div class="card-content is-overlay is-fluid ">
+                                <div class="columns">
+                                    <div class="column is-one-two">
+                                        <b class="article-title text-center has-text-primary" v-html="$static.dataLab.id"></b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-hidden-desktop is-full-mobile">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure>
+                                    <g-image :src="$static.dataLab.belongsTo.edges[4].node.coverImage" class />
+                                </figure>
+                                <figcaption class="is-hidden-desktop">
+                                        <p v-html="$static.dataLab.belongsTo.edges[4].node.content"></p>
                                 </figcaption>
                                 <div class="column is-hidden-desktop has-text-centered">
                                     <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
@@ -270,7 +330,7 @@ export default {};
 
     .description-image1-mobile{
         background-color: #474444bd;
-        margin: 40% 5% 30% 5%;
+        margin: 30% 5% 40% 5%;
         color: #fff;
     }
 
@@ -281,5 +341,14 @@ export default {};
    }
     .card{
         box-shadow: none;
+    }
+
+    .enum-img1{
+        margin-top: -20%;
+        list-style-type: disc;
+    }
+    .enum-right{
+        margin-top: 10%;
+        list-style-type: disc;
     }
 </style>
