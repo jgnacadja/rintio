@@ -20,7 +20,7 @@
                         :src="$static.feature.belongsTo.edges[1].node.coverImage"
                         />
 
-                  </div>
+                    </div>
 
                     <span class="is-white is-small card-content is-overlay"> 
                        <div class="row shadow_1">
@@ -34,7 +34,7 @@
                     </span>
                   <span class="tag  is-primary is-large inscrireWSF" style="position:relative;left:240px;height:25px">
                     <b style="font-size:15px;">S'inscrire</b></span>   
-            </div>
+                </div>
                 <figcaption>
                   <b v-html="$static.feature.belongsTo.edges[1].node.title"></b>
                   <p
@@ -277,27 +277,53 @@
         <h2 class="has-text-primary is-size-4 title">Nos Engagements</h2>
         <div class="">
           <figure>
+
             <button class="has-text-primary" id="" style="position: absolute; left: 30px;margin-top:20px;">
               Nos Engagements
-            </button>
-            <g-image
-              :src="$static.feature.belongsTo.edges[1].node.coverImage" 
-              class="zoom"
-            />
-            <span class="tag is-link" id="bouton2mob">S'inscrire</span>
-            <figcaption>
-              <b v-html="$static.feature.belongsTo.edges[1].node.title"></b>
-              <p
-                v-html="$static.feature.belongsTo.edges[1].node.metaDescription"
-              ></p>
-              <div ><arrowicon /></div>
-            </figcaption>
+            </button>               
+            <div class="card zoom">
+                  <div class="card-image">
+                     <span class="is-white is-small tag has-text-primary realisationWS"
+                        style="margin-left:20px">
+                        <b>Nos réalisations</b>
+                        </span>
+                        
+                      <g-image
+                        :src="$static.feature.belongsTo.edges[1].node.coverImage"
+                        />
+
+                  </div>
+
+                    <span class="is-white is-small card-content is-overlay"> 
+                       <div class="row shadow_1MOBILE">
+                         <div class=" is-primary ">
+                           <b>{{ $static.feature.belongsTo.edges[1].node.subDescription }}</b><br/>
+                            <span v-html=" $static.feature.belongsTo.edges[1].node.subDescriptionDown "></span> <br/>
+                            <span v-html=" $static.feature.belongsTo.edges[1].node.DescriptionDown "></span>  
+
+                         </div>
+                       </div>
+                    </span>
+                  <span class="tag  is-primary is-large" style="height: 25px;position: relative;bottom: 40px;left: 35%;">
+                    <b style="font-size:15px;">S'inscrire</b></span>   
+            </div>
+             <div class="row"><b v-html="$static.feature.belongsTo.edges[1].node.title"></b>
+                     <div class="columns is-mobile">
+                        <figcaption class="column is-11">
+                      
+                      <p
+                        v-html="$static.feature.belongsTo.edges[1].node.metaDescription"
+                        class="space"
+                      ></p>
+                      </figcaption>
+                     <div class="column" style="margin-top:75px;font-size:16.5px;margin-left:-25px;"><arrowicon /></div>
+
+                      </div>
+                    </div>
           </figure>
         </div>
-        <div
-          v-for="article in $static.articles.belongsTo.edges"
-          :key="article.node.id" 
-        >
+        <!-- CE AUI EST AU MILIEUX -->
+        <!-- <div v-for="article in $static.articles.belongsTo.edges" :key="article.node.id">
           <figure class="zoom">
             <button class="has-text-primary is-small" id="" style="position: relative; top:110px; right: -150px">
               Nos Engagements
@@ -310,24 +336,287 @@
               <arrowicon />
             </figcaption>
           </figure>
-        </div>
-        <div
-          v-for="article in $static.new.belongsTo.edges"
-          :key="article.node.id"
-        >
-          <figure class="zoom">
-            <button class="has-text-primary" id="" style="position: relative; top:110px; ">
-              Nos Engagements
-            </button>
-            <g-image :src="article.node.coverImage" class="" style="padding-top: 40px"  />
-            <span class="tag is-link" id="bouton2mob">En savoir plus</span>
-            <figcaption>
-              <b v-html="article.node.title"></b>
-              <p v-html="article.node.metaDescription" ></p>
-              <arrowicon />
-            </figcaption>
-          </figure>
-        </div>
+        </div> -->
+
+             <div class="column is-6">
+              <div class="columns is-multiline is-12">
+                <div class="column is-half">
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos Engagements</b></span
+                      >
+                      <g-image
+                        :src="
+                          $static.articles.belongsTo.edges[2].node.coverImage
+                        "
+                      />
+                      <span class="tag  is-primary is-medium inscrireWS"
+                        ><b>En savoir plus</b></span
+                      >
+                    </div>
+                    <div class="row"><b
+                        v-html="$static.articles.belongsTo.edges[2].node.title"
+                      ></b>
+                     <div class="columns is-mobile">
+                        <figcaption class="column is-11">
+                      
+                      <p
+                        v-html="
+                          $static.articles.belongsTo.edges[2].node
+                            .metaDescription
+                        "
+                        class="space"
+                      ></p>
+                      </figcaption>
+                     <div class="column" style="margin-top:80px;font-size:16.5px;margin-left:-15px;"><arrowicon /></div>
+
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+
+                <div class="column is-half">
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos Engagements</b></span
+                      >
+                      <g-image
+                        :src="
+                          $static.articles.belongsTo.edges[0].node.coverImage
+                        "
+                      />
+                      <span class="tag  is-primary is-small inscrireWS"
+                        ><b>S'inscrire</b></span
+                      >
+                    </div>
+                    <div class="row"><b
+                        v-html="$static.articles.belongsTo.edges[0].node.title"
+                      ></b>
+                     <div class="columns is-mobile">
+                        <figcaption class="column is-11">
+                      
+                      <p
+                        v-html="
+                          $static.articles.belongsTo.edges[0].node
+                            .metaDescription
+                        "
+                        class="space"
+                      ></p>
+                      </figcaption>
+                     <div class="column" style="margin-top:20px;font-size:16.5px;margin-left:-15px;"><arrowicon /></div>
+
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+
+                <div class="columns"></div>
+
+                <div class="column is-half mb-0">
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos Engagements</b></span
+                      >
+                      <g-image
+                        :src="
+                          $static.articles.belongsTo.edges[1].node.coverImage
+                        "
+                      />
+                      <span class="tag  is-primary is-small inscrireWS"
+                        ><b>En savoir plus</b></span
+                      >
+                    </div>
+                    <div class="row"><b
+                        v-html="$static.articles.belongsTo.edges[1].node.title"
+                      ></b>
+                     <div class="columns is-mobile">
+                        <figcaption class="column is-11">
+                      
+                      <p
+                        v-html="
+                          $static.articles.belongsTo.edges[1].node
+                            .metaDescription
+                        "
+                        class="space"
+                      ></p>
+                      </figcaption>
+                     <div class="column" style="margin-top:20px;font-size:16.5px;margin-left:-15px;"><arrowicon /></div>
+
+                      </div>
+                    </div>
+
+                  </figure>
+                </div>
+
+                <div class="column is-half mb-0">
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos Engagements</b></span>
+                                        <div style="width: 100%; margin: 0 auto;"><div style="position: relative; padding-bottom: 62.50%; padding-top: 25px;margin-bottom:28px; height: 0;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/kKSC5LcqLlE"></iframe></div></div>
+                                      
+                      <!-- <g-image
+                        :src="
+                          $static.articles.belongsTo.edges[3].node.coverImage
+                        "
+                      /> -->
+
+                    </div>
+                    <b v-html="$static.articles.belongsTo.edges[3].node.title"></b>
+                    <div class="row">
+                      <div class="columns is-mobile">
+                        <figcaption class="column is-10">
+                          
+                          <p v-html=" $static.articles.belongsTo.edges[3].node.metaDescription
+                              " class="space" >
+                          </p>
+                                            
+                        </figcaption>
+                        <div class="column" style="margin-top:18px;font-size:16.5px;"><arrowicon /></div>      
+
+                      </div>
+                    </div>
+        
+                  </figure>
+
+                </div>
+              </div>
+         </div>
+             <div class="column is-6">
+              <div class="columns is-multiline is-12">
+                <div class="column is-half">
+                                  <div class="column is-half mb-0">
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos Engagements</b></span>
+                                        <div style="width: 100%; margin: 0 auto;"><div style="position: relative; padding-bottom: 62.50%; padding-top: 25px;margin-bottom:28px; height: 0;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/iPuAzztSkOE"></iframe></div></div>
+                                      
+                      <!-- <g-image
+                        :src="
+                          $static.articles.belongsTo.edges[3].node.coverImage
+                        "
+                      /> -->
+
+                    </div>
+                    <b v-html="$static.articles.belongsTo.edges[3].node.title"></b>
+                    <div class="row">
+                      <div class="columns is-mobile">
+                        <figcaption class="column is-10">
+                          
+                          <p v-html=" $static.articles.belongsTo.edges[3].node.metaDescription
+                              " class="space" >
+                          </p>
+                                            
+                        </figcaption>
+                        <div class="column" style="margin-top:18px;font-size:16.5px;"><arrowicon /></div>      
+
+                      </div>
+                    </div>
+        
+                  </figure>
+
+                </div>
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style="left:15px; bottom:-35px"
+                        ><b>Nos Engagements</b></span
+                      >
+                      <g-image
+                        
+                          :src="$static.feature.belongsTo.edges[0].node.coverImage" style="height:150px"
+                      />
+                    </div>
+                    <div class="row"><b
+                        v-html="$static.feature.belongsTo.edges[0].node.title"
+                      ></b>
+                     <div class="columns is-mobile">
+                        <figcaption class="column is-11">
+                      
+                      <p
+                        v-html="
+                          $static.feature.belongsTo.edges[0].node
+                            .metaDescription
+                        "
+                        class="space"
+                      ></p>
+                      
+                      </figcaption>
+                     <div class="column" style="font-size:16.5px;margin-left:-15px;"><arrowicon /></div>
+
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+
+                <div class="column is-half">
+                  <figure>
+                    <div class="zoom">
+                      <span
+                        class="is-white is-small tag has-text-primary realisationWS"
+                        style=""
+                        ><b>Nos Engagements</b></span
+                      >
+                      <g-image
+                        :src="
+                          $static.new.belongsTo.edges[0].node.coverImage
+                        "
+                      />
+                      <span class="tag  is-primary is-small inscrireWS"
+                        styel="
+    left: 95px;
+    border-radius: 0px;
+    width: 150px;
+    height: 30px;
+"><b>En savoir plus</b></span
+                      >
+                    </div>
+                    <div class="row"><b
+                        v-html="$static.new.belongsTo.edges[0].node.title"
+                      ></b>
+                     <div class="columns is-mobile">
+                        <figcaption class="column is-11">
+                      
+                      <p
+                        v-html="
+                          $static.new.belongsTo.edges[0].node
+                            .metaDescription
+                        "
+                        class="space"
+                      ></p>
+                      </figcaption>
+                     <div class="column" style="font-size:16.5px;margin-left:-15px;"><arrowicon /></div>
+
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+
+
+
+
+              </div>
+         </div>
+        
+
+
+
+        <!-- <DHJJJJJJJJJJJ> -->
       </div>
     </div>
 
@@ -733,5 +1022,15 @@ position: relative;
   position: relative;
   bottom:-75%;
   
+}
+.shadow_1MOBILE {
+    background-color: grey;
+    opacity: 0.9;
+    color: white;
+    width: 100%;
+    padding-left: 1.5%;
+    font-size: 14px;
+    position: relative;
+    bottom: -60%;
 }
 </style>

@@ -1,5 +1,5 @@
 ---
-title: Vivr Africa TechUp Tour Abidjan 2019
+title: Retrospectives Africa TechUp Tour Abidjan 2019
 published: true
 categories: ["Nos Engagements feature"]
 date: 2020-O8-03

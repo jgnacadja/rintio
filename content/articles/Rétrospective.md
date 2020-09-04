@@ -1,5 +1,5 @@
 ---
-title: Rétrospective Africa TechUp Tour Abidjan 2019
+title: Rétrospective Africa TechUp Tour (Abidjan 2019)
 published: true
 categories: ["Nos Engagements"]
 date: 2020-O8-02
