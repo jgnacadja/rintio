@@ -324,7 +324,6 @@ query{
 
 <script>
 import { arrowicon } from "~/components/arrow-icon.vue";
-import VueTinySlider from 'vue-tiny-slider';
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
@@ -333,7 +332,6 @@ export default {
     
   components: {
     arrowicon,
-    VueTinySlider ,
     VueSlickCarousel
   },
  
@@ -352,7 +350,7 @@ export default {
     font-weight: 800;
 }
 
-.heart-icon:{
+.heart-icon{
     color :red ;
 }
 .icon-tag-mobile{
