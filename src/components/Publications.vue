@@ -80,7 +80,7 @@
             </div>
             <div class="row is-hidden-mobile">
                 <div class="columns">
-                    <div class="column is-5">
+                    <div class="column is-6">
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.title"></b> <br />
                         <div class="columns">
                             <div class="column">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-4">
+                    <div class="column is-3">
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.title"></b> <br />
                           <div class="columns">
                             <div class="column">
@@ -161,15 +161,7 @@
                 </div>
             </div>
             <div class="row is-hidden-desktop">
-                <tiny-slider :mouse-drag="true" :loop="false" items="1" gutter="20">
-                    <post-resume v-for="post in $static.publication.belongsTo.edges"
-                                :key="post.node.id"
-                                :title="post.node.title"
-                                :media="post.node.media"
-                                :path="post.node.path"
-                                :excerpt="post.node.excerpt">
-                    </post-resume>
-                </tiny-slider>
+
             </div>
         </div>
     </section>
