@@ -22,6 +22,7 @@
         </div>
       </div>
     </div> 
+  </div>
     <Nosoffres />
     <alaUneEngagements :alaUne="false" />
     <alaUneEngagements :NosEngagement="true" />
@@ -38,6 +39,7 @@ import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
 import Nosoffres from "~/components/Nosoffres.vue";
+import Publications from "~/components/Publications.vue";
 import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
 import Rintiodatalab from "~/components/RintioDatalab.vue";
@@ -49,6 +51,7 @@ export default {
     arrowicon,
     Nosoffres,
     Rintiodatalab,
+    Publications,
     Ilsnousfontconfiance,
     Nosimplantations,
   },

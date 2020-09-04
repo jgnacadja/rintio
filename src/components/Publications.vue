@@ -80,7 +80,7 @@
             </div>
             <div class="row is-hidden-mobile">
                 <div class="columns">
-                    <div class="column is-6">
+                    <div class="column is-5">
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.title"></b> <br />
                         <div class="columns">
                             <div class="column">
@@ -93,20 +93,20 @@
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.content"></b> <br />
                         <div class="columns">
                             <div class="column is-1">
-                                 <font-awesome-icon class="has-text-danger" icon="heart" />
+                                <a href="#"><i class="fal fa-heart fa-2x has-text-danger"></i></a>
                             </div>
                             <div class="column is-1">
-                                <font-awesome-icon class="has-text-primary" icon="comment" />
+                                <a href="#"><i class="fal fa-comment fa-2x has-text-primary is-pulled-left"></i></a>
                             </div>
                             <div class="column is-1">
-                                <font-awesome-icon class="has-text-primary" icon="long-arrow-alt-right" />
+                                <a href="#"><i class="fal fa-share fa-2x has-text-primary is-pulled-left"></i></a>                                
                             </div>
                             <div class="column card-image-box">
-                                <font-awesome-icon class="has-text-primary" icon="arrow-circle-right" />
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-2x has-text-primary is-pulled-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="column is-3">
+                    <div class="column is-4">
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.title"></b> <br />
                           <div class="columns">
                             <div class="column">
@@ -118,17 +118,17 @@
                         </div>
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.content"></b> <br />
                         <div class="columns">
-                            <div class="column is-1">
-                                <font-awesome-icon class="has-text-danger" icon="heart" />
+                            <div class="column is-2">
+                                <a href="#"><i class="fal fa-heart fa-2x has-text-danger"></i></a>
+                            </div>
+                            <div class="column is-2">
+                                <a href="#"><i class="fal fa-comment fa-2x has-text-primary is-pulled-left"></i></a>
                             </div>
                             <div class="column is-1">
-                                <font-awesome-icon class="has-text-primary" icon="comment" />
+                                <a href="#"><i class="fal fa-share fa-2x has-text-primary is-pulled-left"></i></a>                                
                             </div>
-                            <div class="column is-1">
-                                <font-awesome-icon class="has-text-primary" icon="long-arrow-alt-right" />
-                            </div>
-                            <div class="column is-1 card-image-box">
-                                <font-awesome-icon class="has-text-primary" icon="arrow-circle-right" />
+                            <div class="column card-image-box">
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-2x has-text-primary is-pulled-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -143,18 +143,18 @@
                             </div>
                         </div>
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[2].node.content"></b> <br />
-                            <div class="columns">
-                            <div class="column is-1">
-                                 <font-awesome-icon class="has-text-danger" icon="heart" />
+                        <div class="columns">
+                            <div class="column is-2">
+                                <a href="#"><i class="fal fa-heart fa-2x has-text-danger"></i></a>
+                            </div>
+                            <div class="column is-2">
+                                <a href="#"><i class="fal fa-comment fa-2x has-text-primary"></i></a>
                             </div>
                             <div class="column is-1">
-                                <font-awesome-icon class="has-text-primary" icon="comment" />
-                            </div>
-                            <div class="column is-1">
-                                <font-awesome-icon class="has-text-primary" icon="long-arrow-alt-right" />
+                                <a href="#"><i class="fal fa-share fa-2x has-text-primary is-pulled-left"></i></a>                                
                             </div>
                             <div class="column card-image-box">
-                                <font-awesome-icon class="has-text-primary" icon="arrow-circle-right" />
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-2x has-text-primary is-pulled-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -236,6 +236,12 @@ export default {
     font-weight: 800;
 }
 
+.heart-icon:{
+    color :red ;
+}
+.content-icon{
+    margin-left: 5%;
+}
 .card-image-box{
     margin-left: 40%;
 }
