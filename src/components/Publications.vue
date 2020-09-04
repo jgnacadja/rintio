@@ -10,15 +10,10 @@
                                 <figure>
                                     <g-image :src="$static.publication.belongsTo.edges[0].node.coverImage" />
                                     <figcaption class="is-hidden-desktop">
-                                    <div class="column is-6">
-                                        <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.title"></b> <br />
-                                        <b class="image-titile has-text-primary" v-html="$static.publication.belongsTo.edges[0].node.date"></b> <br />
-                                        <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.content"></b> <br />
-                                    </div>
                                     <div class="column is-3">
                                     </div>
                                     <div class="column is-3">
-                                        <span><i class="fal fa-eye fa-2x"></i></span>
+                                        <span><i class="fal fa-eye fa-1x"></i></span>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="col-lg-2 is-pulled-left">
@@ -93,42 +88,64 @@
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.content"></b> <br />
                         <div class="columns">
                             <div class="column is-1">
-                                <a href="#"><i class="fal fa-heart fa-2x has-text-danger"></i></a>
+                                <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>
+                            </div>
+                            <div class="column is-1 icon-tag">
+                                <a class="has-text-black" href="#">247</a>
                             </div>
                             <div class="column is-1">
-                                <a href="#"><i class="fal fa-comment fa-2x has-text-primary is-pulled-left"></i></a>
+                                <a href="#"><i class="fal fa-comment fa-1x has-text-primary is-pulled-left"></i></a>
                             </div>
-                            <div class="column is-1">
-                                <a href="#"><i class="fal fa-share fa-2x has-text-primary is-pulled-left"></i></a>                                
+
+                            <div class="column is-1 icon-tag">
+                                <a class="has-text-black" href="#">57</a>
+                            </div>
+                            <div class="column is-1 ">
+                                <a href="#"><i class="fal fa-share fa-1x has-text-primary is-pulled-left"></i></a>                                
+                            </div>
+
+                            <div class="column is-1 icon-tag">
+                                <a class="has-text-black" href="#">33</a>
                             </div>
                             <div class="column card-image-box">
-                                    <a href="#"><i class="fal fa-arrow-circle-right fa-2x has-text-primary is-pulled-right"></i></a>
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary is-pulled-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="column is-3">
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.title"></b> <br />
-                          <div class="columns">
-                            <div class="column">
-                                <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[1].node.date"></b> <br />
+                            <div class="columns">
+                                <div class="column">
+                                    <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[1].node.date"></b> <br />
+                                </div>
+                                <div class="column">
+                                    <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[1].node.publie"></b> <br />
+                                </div>
                             </div>
-                            <div class="column">
-                                <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[1].node.publie"></b> <br />
-                            </div>
-                        </div>
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.content"></b> <br />
                         <div class="columns">
-                            <div class="column is-2">
-                                <a href="#"><i class="fal fa-heart fa-2x has-text-danger"></i></a>
+                            <div class="column is-1">
+                                <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>
                             </div>
-                            <div class="column is-2">
-                                <a href="#"><i class="fal fa-comment fa-2x has-text-primary is-pulled-left"></i></a>
+                            <div class="column is-2 icon-tag-next-box">
+                                <a class="has-text-black" href="#">247</a>
                             </div>
                             <div class="column is-1">
-                                <a href="#"><i class="fal fa-share fa-2x has-text-primary is-pulled-left"></i></a>                                
+                                <a href="#"><i class="fal fa-comment fa-1x has-text-primary is-pulled-left"></i></a>
                             </div>
-                            <div class="column card-image-box">
-                                    <a href="#"><i class="fal fa-arrow-circle-right fa-2x has-text-primary is-pulled-right"></i></a>
+
+                            <div class="column is-2 icon-tag-next-box">
+                                <a class="has-text-black" href="#">57</a>
+                            </div>
+                            <div class="column is-1 ">
+                                <a href="#"><i class="fal fa-share fa-1x has-text-primary is-pulled-left"></i></a>                                
+                            </div>
+
+                            <div class="column is-1 icon-tag-next-box">
+                                <a class="has-text-black" href="#">33</a>
+                            </div>
+                            <div  class="column card-image-box">
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary is-pulled-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -144,24 +161,138 @@
                         </div>
                         <b class="image-titile" v-html="$static.publication.belongsTo.edges[2].node.content"></b> <br />
                         <div class="columns">
-                            <div class="column is-2">
-                                <a href="#"><i class="fal fa-heart fa-2x has-text-danger"></i></a>
+                            <div class="column is-1">
+                                <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>
                             </div>
-                            <div class="column is-2">
-                                <a href="#"><i class="fal fa-comment fa-2x has-text-primary"></i></a>
+                            <div class="column is-2 icon-tag-next-box">
+                                <a class="has-text-black" href="#">247</a>
                             </div>
                             <div class="column is-1">
-                                <a href="#"><i class="fal fa-share fa-2x has-text-primary is-pulled-left"></i></a>                                
+                                <a href="#"><i class="fal fa-comment fa-1x has-text-primary is-pulled-left"></i></a>
                             </div>
-                            <div class="column card-image-box">
-                                    <a href="#"><i class="fal fa-arrow-circle-right fa-2x has-text-primary is-pulled-right"></i></a>
+
+                            <div class="column is-2 icon-tag-next-box">
+                                <a class="has-text-black" href="#">57</a>
+                            </div>
+                            <div class="column is-1 ">
+                                <a href="#"><i class="fal fa-share fa-1x has-text-primary is-pulled-left"></i></a>                                
+                            </div>
+
+                            <div class="column is-1 icon-tag-next-box">
+                                <a class="has-text-black" href="#">33</a>
+                            </div>
+                            <div  class="column card-image-box">
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary is-pulled-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row is-hidden-desktop">
-
+            <div class="row is-hidden-desktop is-hidden-tablet">
+                <VueSlickCarousel :arrows="true">
+                    <div>
+                        <figure>
+                            <g-image :src="$static.publication.belongsTo.edges[0].node.coverImage"/>
+                        </figure>
+                        <figcaption>
+                            <div class="column is-6">
+                                <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.title"></b> <br />
+                                <div class="columns">
+                                    <div class="column is-1 is-pulled-left">
+                                        <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[0].node.date"></b> <br />
+                                    </div>
+                                    <div class="column is-1">
+                                        <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[0].node.publie"></b> <br />
+                                    </div>
+                                </div>
+                                <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.content"></b> <br />
+                                <div class="is-pulled-left">  
+                                    <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>     
+                                    <a class="has-text-black" href="#">247</a>
+                                </div>
+                                <div class="is-pulled-left icon-tag-mobile">  
+                                    <a href="#"><i class="fal fa-comment fa-1x has-text-primary"></i></a>     
+                                    <a class="has-text-black" href="#">57</a>
+                                </div>
+                                <div class="is-pulled-left icon-tag-mobile">  
+                                    <a href="#"><i class="fal fa-share fa-1x has-text-primary"></i></a>     
+                                    <a class="has-text-black" href="#">33</a>
+                                </div>
+                                <div class="is-pulled-right">  
+                                    <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                </div>
+                            </div>
+                        </figcaption>
+                    </div>
+                     <div>
+                        <figure>
+                            <g-image :src="$static.publication.belongsTo.edges[1].node.coverImage"/>
+                            <figcaption>
+                                <div class="column is-6">
+                                    <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.title"></b> <br />
+                                    <div class="columns">
+                                        <div class="column is-1 is-pulled-left">
+                                            <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[1].node.date"></b> <br />
+                                        </div>
+                                        <div class="column is-1">
+                                            <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[1].node.publie"></b> <br />
+                                        </div>
+                                    </div>
+                                    <b class="image-titile" v-html="$static.publication.belongsTo.edges[1].node.content"></b> <br />
+                                                                    <div class="is-pulled-left">  
+                                    <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>     
+                                    <a class="has-text-black" href="#">247</a>
+                                    </div>
+                                    <div class="is-pulled-left icon-tag-mobile">  
+                                        <a href="#"><i class="fal fa-comment fa-1x has-text-primary"></i></a>     
+                                        <a class="has-text-black" href="#">57</a>
+                                    </div>
+                                    <div class="is-pulled-left icon-tag-mobile">  
+                                        <a href="#"><i class="fal fa-share fa-1x has-text-primary"></i></a>     
+                                        <a class="has-text-black" href="#">33</a>
+                                    </div>
+                                    <div class="is-pulled-right">  
+                                        <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <g-image class="" :src="$static.publication.belongsTo.edges[2].node.coverImage"/>
+                            <figcaption>
+                                <div class="column is-6">
+                                    <b class="image-titile" v-html="$static.publication.belongsTo.edges[2].node.title"></b> <br />
+                                    <div class="columns">
+                                        <div class="column is-1 is-pulled-left">
+                                            <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[2].node.date"></b> <br />
+                                        </div>
+                                        <div class="column is-1">
+                                            <b class="image-titile has-text-primary is-pulled-left" v-html="$static.publication.belongsTo.edges[2].node.publie"></b> <br />
+                                        </div>
+                                    </div>
+                                    <b class="image-titile" v-html="$static.publication.belongsTo.edges[2].node.content"></b> <br />
+                                                                    <div class="is-pulled-left">  
+                                    <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>     
+                                    <a class="has-text-black" href="#">247</a>
+                                    </div>
+                                    <div class="is-pulled-left icon-tag-mobile">  
+                                        <a href="#"><i class="fal fa-comment fa-1x has-text-primary"></i></a>     
+                                        <a class="has-text-black" href="#">57</a>
+                                    </div>
+                                    <div class="is-pulled-left icon-tag-mobile">  
+                                        <a href="#"><i class="fal fa-share fa-1x has-text-primary"></i></a>     
+                                        <a class="has-text-black" href="#">33</a>
+                                    </div>
+                                    <div class="is-pulled-right">  
+                                        <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </VueSlickCarousel>
             </div>
         </div>
     </section>
@@ -193,24 +324,17 @@ query{
 
 <script>
 import { arrowicon } from "~/components/arrow-icon.vue";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faComment , faHeart, faLongArrowAltRight , faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import Vue from 'vue'
 import VueTinySlider from 'vue-tiny-slider';
-
-library.add(faComment , faHeart, faLongArrowAltRight, faArrowCircleRight)
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-
-Vue.config.productionTip = false
-
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
     
   components: {
     arrowicon,
-    VueTinySlider
+    VueTinySlider ,
+    VueSlickCarousel
   },
  
 };
@@ -231,10 +355,22 @@ export default {
 .heart-icon:{
     color :red ;
 }
+.icon-tag-mobile{
+    margin-left: 2%;
+}
+.icon-tag{
+    margin-left: -5%;
+}
+
+.icon-tag-next-box{
+    margin-left: -2%;
+}
+
 .content-icon{
     margin-left: 5%;
 }
 .card-image-box{
-    margin-left: 40%;
+    margin-left: 20%;
 }
+
 </style>
