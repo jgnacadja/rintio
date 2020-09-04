@@ -26,6 +26,7 @@
     "vue-carousel": "^0.18.0",
     "vue-clickaway": "^2.2.2",
     "vue-slick": "^1.1.15",
+    "vue-slick-carousel": "^1.0.6",
     "vue-tiny-slider": "^0.1.39"
   },
   "devDependencies": {
