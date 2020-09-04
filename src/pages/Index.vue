@@ -2,25 +2,6 @@
   <Layout>
     <div style="padding-left:2%; padding-right:2%">
       <div class="section section is-fluid" style="padding:0px">
-        <div>
-          <h1 class="title is-size-2 has-text-primary">A propos</h1>
-        </div>
-        <div class="content-14 content-16 has-text-justified content-14-top">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisés dans le développement et l’intégration de solution
-          informatique, le traitement de données, les technologies Big Data et
-          l’Intelligence Artificielle. Nous proposons entre autres: des
-          prestations en Offshoring (Coding, Admin Infrastructure & Cloud, DevOps)
-          pour nos clients en Europe et aux Etats Unis.
-        </div>
-        <div class="columns">
-          <div class="column is-offset-10">
-            <arrowicon />
-          </div>
-        </div>
-      </div>
-    </div>
-    <alaUneEngagements :alaUne="true" />
       <div>
         <h1 class="title is-size-2 has-text-primary">A propos</h1>
       </div>
@@ -56,23 +37,20 @@
 import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
+import Nosoffres from "~/components/Nosoffres.vue";
 import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
 import Rintiodatalab from "~/components/RintioDatalab.vue";
-import Publications  from "~/components/Publications";
-
-import Nosoffres from "~/components/Nosoffres.vue";
 
 export default {
   components: {
     NosExperts,
     alaUneEngagements,
     arrowicon,
+    Nosoffres,
     Rintiodatalab,
     Ilsnousfontconfiance,
     Nosimplantations,
-    Publications,
-    Nosoffres,
   },
   metaInfo: {
     title: "We involve for a better life",
