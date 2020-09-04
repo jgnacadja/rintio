@@ -162,7 +162,7 @@
             </div>
             <div class="row is-hidden-desktop">
                 <tiny-slider :mouse-drag="true" :loop="false" items="1" gutter="20">
-                    <post-resume v-for="post in $page.allPost.edges"
+                    <post-resume v-for="post in $static.publication.belongsTo.edges"
                                 :key="post.node.id"
                                 :title="post.node.title"
                                 :media="post.node.media"
