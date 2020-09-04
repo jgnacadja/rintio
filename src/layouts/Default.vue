@@ -1,12 +1,10 @@
 <template>
   <div>
-    <Mainmenu />
     <transition name="fade" appear>
       <main>
         <slot />
       </main>
     </transition>
-    <Footer />
   </div>
 </template>
 
@@ -14,6 +12,7 @@
 </style>
 
 <script>
+<<<<<<< HEAD
 import Mainmenu from "~/components/Mainmenu.vue";
 import Nosoffres from "~/components/Nosoffres.vue";
 import Footer from "~/components/Footer.vue";
@@ -25,5 +24,10 @@ export default {
   }
 
 
+=======
+export default {
+  components: {
+  }
+>>>>>>> contact
 };
 </script>
