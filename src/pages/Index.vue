@@ -26,7 +26,9 @@
     <alaUneEngagements :alaUne="false" />
     <alaUneEngagements :NosEngagement="true" />
     <NosExperts />
-    </div>
+    <Rintiodatalab />
+    <Ilsnousfontconfiance />
+    <Nosimplantations />
   </Layout>
 </template>
 
@@ -35,6 +37,9 @@ import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
 import Nosoffres from "~/components/Nosoffres.vue";
+import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
+import Nosimplantations from "~/components/Nosimplantations.vue";
+import Rintiodatalab from "~/components/RintioDatalab.vue";
 
 export default {
   components: {
@@ -42,6 +47,9 @@ export default {
     alaUneEngagements,
     arrowicon,
     Nosoffres,
+    Rintiodatalab,
+    Ilsnousfontconfiance,
+    Nosimplantations,
   },
   metaInfo: {
     title: "We involve for a better life",
@@ -51,7 +59,7 @@ export default {
 
 <style>
 body {
-font-family: 'Montserrat,sans-serif';
+  font-family: "Montserrat,sans-serif";
 }
 .content-14-top {
   padding-top: 2%;
@@ -60,17 +68,6 @@ font-family: 'Montserrat,sans-serif';
 @media only screen and (max-width: 415px) {
   .content-14 {
     font-size: 14px;
-  }
-
-  .content-14-top {
-    padding-top: 5%;
-    margin-left: 5% !important;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .content-16 {
-    font-size: 16px;
   }
 }
 </style>
