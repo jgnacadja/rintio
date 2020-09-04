@@ -35,7 +35,8 @@
                 
                 </div>
                 <div class="column">
-                  <arrowicon :colore="true" :no_colore ="true" />
+                  <arrowicon :colore="true" :no_colore ="true" style="    position: relative;
+    bottom: -30px;left:5px; font-size:12px"/>
                 </div>
               </div>           
             </div>
@@ -88,9 +89,9 @@
                       <div class="column is-10">
                             {{ $static.articles.belongsTo.edges[1].node.metaDescription }}
                       </div>
-                      <div class="column">
+                      <div class="column" >
                         <br/>
-                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
+                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -30px;"/>
                       </div>
                   </div>
                   
@@ -143,7 +144,7 @@
                       </div>
                       <div class="column">
                         <br/>
-                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: 1px;"/>
+                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -10px;left:10px;"/>
                       </div>
                   </div>
                   
@@ -178,7 +179,7 @@
                   {{ $static.feature.belongsTo.edges[0].node.descriptionDown }} <br/>
                 </div>
                 <div class="column">
-                    <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
+                    <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -35px;left:62px;"/>
                 </div>
               </div>
             </div>
@@ -203,7 +204,7 @@
                       </div>
                       <div class="column">
                         
-                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -30px;"/>
+                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -52px;left:10px;"/>
                       </div>
                   </div>
                   
@@ -230,7 +231,7 @@
                       </div>
                       <div class="column">
                         <br/>
-                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
+                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -30px;left:11px;"/>
                       </div>
                   </div>
                   
@@ -262,7 +263,7 @@
                   {{ $static.feature.belongsTo.edges[1].node.descriptionDown }}
                 </div>
                 <div class="column">
-                    <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
+                    <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -35px;left:62px;"/>
                 </div>
               </div>
             </div>
@@ -289,7 +290,7 @@
                       </div>
                       <div class="column">
                         <br/>
-                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: 0px;"/>
+                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -30px;left:10px;"/>
                       </div>
                   </div>
                   
@@ -318,7 +319,7 @@
                       </div>
                       <div class="column">
                         <br/>
-                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: 0px;"/>
+                        <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -30px;left:10px;"/>
                       </div>
                   </div>
                   
@@ -351,7 +352,7 @@
                   </ul>
                 </div>
                 <div class="column">
-                    <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -20px;"/>
+                    <arrowicon :colore="true" :no_colore="true" class="icon is-small" style="position: relative;bottom: -35px;left:60px"/>
                 </div>
               </div>
             </div>

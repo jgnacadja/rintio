@@ -1,5 +1,5 @@
 ---
-title: SG Maroc imagine la banque du future avec l’IA
+title: <a href="">SG Maroc</a> imagine la banque du future avec l’IA
 published: true
 categories: ["A la Une / Rintio Stories feature"]
 date: 2020-07-28
