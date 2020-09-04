@@ -38,9 +38,9 @@ import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
 import Nosoffres from "~/components/Nosoffres.vue";
+import Publications from "~/components/Publications.vue";
 import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
-import Publications from "~/components/Publications.vue";
 import Rintiodatalab from "~/components/RintioDatalab.vue";
 import Contact from "~/components/Contact.vue";
 
@@ -51,9 +51,10 @@ export default {
     arrowicon,
     Nosoffres,
     Rintiodatalab,
+    Publications,
     Ilsnousfontconfiance,
     Nosimplantations,
-    Publications
+    Contact
   },
   metaInfo: {
     title: "We involve for a better life",
