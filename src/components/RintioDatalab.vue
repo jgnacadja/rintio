@@ -19,6 +19,9 @@
                                     </figcaption>
                                     <div class="column is-hidden-desktop has-text-centered">
                                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                        <div class="is-pulled-right">  
+                                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                        </div>
                                     </div>
                                 </figure>
                                 <div class="card-content is-overlay is-fluid">
@@ -75,6 +78,7 @@
                                     </div>
                                 </div>
                             </div>
+
                     </div> 
                     <div class="column is-3-desktop is-full-mobile">
                         <div class="card">
@@ -86,6 +90,9 @@
                                     </figcaption>
                                     <div class="column is-hidden-desktop has-text-centered">
                                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                        <div class="is-pulled-right">  
+                                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -109,6 +116,9 @@
                                 </figcaption>
                                 <div class="column is-hidden-desktop has-text-centered">
                                     <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                     <div class="is-pulled-right">  
+                                        <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-content is-overlay is-fluid ">
@@ -131,6 +141,9 @@
                                 </figcaption>
                                 <div class="column is-hidden-desktop has-text-centered">
                                     <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                     <div class="is-pulled-right">  
+                                        <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-content is-overlay is-fluid ">
@@ -171,12 +184,21 @@
                 <div class="columns">
                     <div class="column is-6">
                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                        <div class="is-pulled-right">  
+                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                        </div>
                     </div>
                     <div class="column is-3">
                         <button class="btn-profiter">Profiter de l'offre</button>
+                        <div class="is-pulled-right">  
+                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                        </div>
                     </div>
                     <div class="column is-3">
                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                        <div class="is-pulled-right">  
+                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,6 +214,9 @@
                                     </figcaption>
                                     <div class="column is-hidden-desktop has-text-centered">
                                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                        <div class="is-pulled-right">  
+                                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -215,6 +240,9 @@
                                 </figcaption>
                                 <div class="column is-hidden-desktop has-text-centered">
                                     <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                    <div class="is-pulled-right">  
+                                        <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-content is-overlay is-fluid ">
@@ -237,6 +265,9 @@
                                 </figcaption>
                                 <div class="column is-hidden-desktop has-text-centered">
                                     <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                                    <div class="is-pulled-right">  
+                                        <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-content is-overlay is-fluid ">
@@ -254,6 +285,7 @@
                 <div class="columns">
                     <div class="column is-6">
                         <p v-html="$static.dataLab.belongsTo.edges[1].node.content"></p>
+                        
                     </div>
                     <div class="column is-6">
                         <p v-html="$static.dataLab.belongsTo.edges[0].node.content"></p>
@@ -264,9 +296,15 @@
                 <div class="columns">
                     <div class="column is-6">
                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                        <div class="is-pulled-right">  
+                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                        </div>
                     </div>
                     <div class="column is-6">
                         <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
+                        <div class="is-pulled-right">  
+                            <a href="#"><i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i></a>     
+                        </div>
                     </div>
                 </div>
             </div>
