@@ -216,11 +216,9 @@
             <div class="column is-marginless is-paddindless">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style=""
-                    >Nos réalisations</span
-                  >
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="">
+                    Nos réalisations
+                  </span>
                   <g-image
                     :src="$static.new.belongsTo.edges[1].node.coverImage"
                   />
@@ -354,12 +352,6 @@
                   style="position:relative z-index:0"
                   class="zoom"
                 />
-                <button
-                  class="tag  is-primary is-large is-fullwidth"
-                  style="position: relative; z-index:1; top:-50%"
-                >
-                  S'inscrire
-                </button>
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[0].node.title"></b>
                   <p
@@ -448,7 +440,30 @@
                 v-html="$static.alaUne.belongsTo.edges[2].node.metaDescription"
                 class="space"
               ></p>
+              <div style="mzrgin-top : 1% " class="columns is-pulled-left">
+                <div class="column is-1">
+                    <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>
+                </div>
+                <div style="margin-left: -2%" class="column is-2">
+                    <a class="has-text-black" href="#">247</a>
+                </div>
+                <div class="column is-1">
+                    <a href="#"><i class="fal fa-comment fa-1x has-text-primary is-pulled-left"></i></a>
+                </div>
+
+                <div style="margin-left: -2%" class="column is-2 icon-tag">
+                    <a class="has-text-black" href="#">57</a>
+                </div>
+                <div class="column is-1 ">
+                    <a href="#"><i class="fal fa-share fa-1x has-text-primary is-pulled-left"></i></a>                                
+                </div>
+
+                <div style="margin-left: -2%" class="column is-1 icon-tag">
+                    <a class="has-text-black" href="#">33</a>
+                </div>
+              </div>
               <arrowicon />
+              
             </figcaption>
           </figure>
         </div>
@@ -464,6 +479,28 @@
                 v-html="$static.alaUne.belongsTo.edges[5].node.metaDescription"
                 class="space"
               ></p>
+                <div style="margin-top : 1%" class="columns is-pulled-left">
+                <div class="column is-1">
+                    <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>
+                </div>
+                <div style="margin-left: -2%" class="column is-2">
+                    <a class="has-text-black" href="#">247</a>
+                </div>
+                <div class="column is-1">
+                    <a href="#"><i class="fal fa-comment fa-1x has-text-primary is-pulled-left"></i></a>
+                </div>
+
+                <div style="margin-left: -2%" class="column is-2 icon-tag">
+                    <a class="has-text-black" href="#">57</a>
+                </div>
+                <div class="column is-1 ">
+                    <a href="#"><i class="fal fa-share fa-1x has-text-primary is-pulled-left"></i></a>                                
+                </div>
+
+                <div style="margin-left: -2%" class="column is-1 icon-tag">
+                    <a class="has-text-black" href="#">33</a>
+                </div>
+              </div>
               <arrowicon />
             </figcaption>
           </figure>
@@ -480,6 +517,28 @@
                 v-html="$static.alaUne.belongsTo.edges[6].node.metaDescription"
                 class="space"
               ></p>
+              <div style="mzrgin-top : 1% " class="columns is-pulled-left">
+                <div class="column is-1">
+                    <a href="#"><i class="fal fa-heart fa-1x has-text-danger"></i></a>
+                </div>
+                <div style="margin-left: -2%" class="column is-2">
+                    <a class="has-text-black" href="#">247</a>
+                </div>
+                <div class="column is-1">
+                    <a href="#"><i class="fal fa-comment fa-1x has-text-primary is-pulled-left"></i></a>
+                </div>
+
+                <div style="margin-left: -2%" class="column is-2 icon-tag">
+                    <a class="has-text-black" href="#">57</a>
+                </div>
+                <div class="column is-1 ">
+                    <a href="#"><i class="fal fa-share fa-1x has-text-primary is-pulled-left"></i></a>                                
+                </div>
+
+                <div style="margin-left: -2%" class="column is-1 icon-tag">
+                    <a class="has-text-black" href="#">33</a>
+                </div>
+              </div>
               <arrowicon />
             </figcaption>
           </figure>
@@ -488,6 +547,7 @@
       <div class="columns is-1">
         <div class="column">
           <figure>
+            
             <g-image
               :src="$static.alaUne.belongsTo.edges[7].node.coverImage"
               class="zoom"
@@ -695,4 +755,13 @@ export default {
   position: relative;
   bottom: -50px;
 }
+
+.icon-tag{
+    margin-left: 10%;
+}
+
+.icon-tag-next-box{
+    margin-left: 2%;
+}
+
 </style>
