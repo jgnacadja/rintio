@@ -7,14 +7,14 @@
       <div class="column is-half">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-4by3">
+            <figure class="image is-4by3" style="height:453.5px;">
               <g-image
                 :src="$static.features.belongsTo.edges[0].node.coverImage"
               />
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class="row shadow_1">
+            <div class="row shadow_11">
                           <div class=" is-primary ">
               
               <b>{{ $static.features.belongsTo.edges[0].node.title }}</b> <br />
@@ -57,11 +57,11 @@
               </div>
               <div class="card-content is-overlay is-fluid">
                 
-                <div class=" is-primary shadow_2">
+                <div class=" is-primary shadow_21">
                   <b>{{ $static.articles.belongsTo.edges[0].node.title }}</b> <br />
                   <div class="shadow_3">
                     
-                  {{ $static.articles.belongsTo.edges[0].node.metaDescription }}
+                  <b style="font-weight:bolder">{{ $static.articles.belongsTo.edges[0].node.metaDescription }}</b>
                   {{ $static.articles.belongsTo.edges[0].node.subDescription }}
                   </div>
                   
@@ -82,7 +82,7 @@
                 </figure>
               </div>
               <div class="card-content is-overlay is-fluid"> 
-                <div class=" is-primary shadow_2">
+                <div class=" is-primary shadow_22">
                   <b>{{ $static.articles.belongsTo.edges[1].node.title }}</b> <br/>
                   <div class="columns is-mobile shadow_3">
                       <div class="column is-10">
@@ -110,7 +110,7 @@
                 </figure>
               </div>
               <div class="card-content is-overlay is-fluid">
-                <div class=" is-primary shadow_2">
+                <div class=" is-primary shadow_23">
                   <b>{{ $static.articles.belongsTo.edges[2].node.title }}</b> <br />
                   <div class="shadow_3">
                     {{ $static.articles.belongsTo.edges[2].node.metaDescription }}<br />
@@ -135,7 +135,7 @@
                 </figure>
               </div>
               <div class="card-content is-overlay is-fluid">
-                <div class=" is-primary shadow_2">
+                <div class=" is-primary shadow_24">
                   <b>{{ $static.articles.belongsTo.edges[3].node.title }}</b> <br/>
                   <div class="columns is-mobile">
                       <div class="column is-10 shadow_3">
@@ -161,13 +161,15 @@
           <div class="card-image">
             <figure class="image is-3by3">
               <g-image
-                :src="$static.feature.belongsTo.edges[0].node.coverImage"
+                :src="$static.feature.belongsTo.edges[0].node.coverImage" style="
+    height: 215px;
+"
               />
             </figure>
           </div>
 
           <div class="card-content is-overlay is-fluid">
-            <div class="is-primary shadow">
+            <div class="is-primary shadow1">
               <b> {{ $static.feature.belongsTo.edges[0].node.title }}</b> <br/>
                
               <div class="columns is-mobile">
@@ -193,7 +195,7 @@
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class=" is-primary shadow_2">
+            <div class=" is-primary shadow_25">
                   <b>{{ $static.articles.belongsTo.edges[4].node.title }}</b> <br/>
                   <div class="columns is-mobile">
                       <div class="column is-10 shadow_3">
@@ -220,7 +222,7 @@
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class=" is-primary shadow_2">
+            <div class=" is-primary shadow_26">
                   <b>{{ $static.articles.belongsTo.edges[5].node.title }}</b> <br/>
                   <div class="columns is-mobile">
                       <div class="column is-10 shadow_3">
@@ -244,12 +246,14 @@
           <div class="card-image">
             <figure class="image is-3by3">
               <g-image
-                :src="$static.feature.belongsTo.edges[1].node.coverImage"
+                :src="$static.feature.belongsTo.edges[1].node.coverImage" style="
+    height: 204px;
+"
               />
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class="is-primary shadow">
+            <div class="is-primary shadow2">
               <b> {{ $static.feature.belongsTo.edges[1].node.title }}</b> <br/>
                 
               <div class=" columns is-mobile">
@@ -275,11 +279,13 @@
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class=" is-primary shadow_2">
+            <div class=" is-primary shadow_27">
                   <b>{{ $static.articles.belongsTo.edges[6].node.title }}</b> <br/>
                   <div class="columns is-mobile">
                       <div class="column is-10 shadow_3">
-                            {{ $static.articles.belongsTo.edges[6].node.metaDescription }}
+                            {{ $static.articles.belongsTo.edges[6].node.metaDescription }}<br/>
+                            {{ $static.articles.belongsTo.edges[6].node.subDescription }}
+                            
                       </div>
                       <div class="column">
                         <br/>
@@ -302,11 +308,11 @@
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class=" is-primary shadow_2">
+            <div class=" is-primary shadow_28">
                   <b>{{ $static.articles.belongsTo.edges[7].node.title }}</b> <br/>
                   <div class="columns is-mobile">
                       <div class="column is-10 shadow_3">
-                            {{ $static.articles.belongsTo.edges[7].node.metaDescription }}<br/><br/>
+                            {{ $static.articles.belongsTo.edges[7].node.metaDescription }}<br/>
                             {{ $static.articles.belongsTo.edges[7].node.subDescription }}
                             
                       </div>
@@ -334,7 +340,7 @@
             </figure>
           </div>
           <div class="card-content is-overlay is-fluid">
-            <div class="is-primary shadow">
+            <div class="is-primary shadow3">
               <b> {{ $static.feature.belongsTo.edges[2].node.title }}</b> <br/>
              
               <div class="columns is-mobile">
@@ -444,25 +450,105 @@ export default {
 
 <style>
 
-.shadow_1{
+.shadow_11{
   background-color: grey;
   opacity: 1;
   color: white;
   position: relative;
-  bottom: -70%;
+  bottom: -77.5%;
 }
-.shadow {
+.shadow1 {
   background-color: grey;
   opacity: 1;
   color: white;
-  margin-top: 20%;
+  position: relative;
+  bottom: -67%;
 }
+.shadow2{
+  background-color: grey;
+  opacity: 1;
+  color: white;
+  position: relative;
+  bottom: -65%;
+
+}
+.shadow3{
+  background-color: grey;
+  opacity: 1;
+  color: white;
+  position: relative;
+  bottom: -65%;
+}
+
 .shadow_2{
   background-color: grey;
   opacity: 0.9;
   font-weight: 900;
   color: white;
   margin-top: 15%;
+}
+.shadow_21{
+    background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  margin-top: 28%;
+}
+.shadow_22{
+  background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: -56%;
+}
+.shadow_23{
+      background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  margin-top: 36%;
+
+}
+.shadow_24{
+    background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: -68%;
+}
+.shadow_25{
+      background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: -56%;
+}
+.shadow_26{
+      background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: -56%;
+}
+.shadow_27{
+        background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: -53%;
+}
+.shadow_28{
+        background-color: grey;
+  opacity: 0.9;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: -53%;
 }
 .shadow_3{
   font-size: 12px;
