@@ -6,6 +6,7 @@ import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
 import "~/main.scss";
 import axios from "axios";
+import '~/assets/font-awesome/all.js'
 
 export default function(Vue, { router, head, isClient }) {
   // Add attributes to HTML tag

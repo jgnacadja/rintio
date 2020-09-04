@@ -47,6 +47,7 @@
     <NosExperts />
     <Rintiodatalab />
     <Publications /> 
+    <Ilsnousfontconfiance />
     <Nosimplantations />
   </Layout>
 </template>
@@ -55,6 +56,7 @@
 import NosExperts from "~/components/Experts.vue";
 import alaUneEngagements from "~/components/alaune-engagements.vue";
 import arrowicon from "~/components/arrow-icon.vue";
+import Ilsnousfontconfiance from "~/components/Ilsnousfontconfiance.vue";
 import Nosimplantations from "~/components/Nosimplantations.vue";
 import Rintiodatalab from "~/components/RintioDatalab.vue";
 import Publications  from "~/components/Publications";
@@ -67,6 +69,7 @@ export default {
     alaUneEngagements,
     arrowicon,
     Rintiodatalab,
+    Ilsnousfontconfiance,
     Nosimplantations,
     Publications,
     Nosoffres,
