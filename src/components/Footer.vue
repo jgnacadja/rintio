@@ -107,7 +107,7 @@ a {
   .footer-menu-columns {
     padding-left: 15%;
     padding-top: 1%;
-    padding-bottom: 5%
+    padding-bottom: 5%;
   }
 
   /* #footer {

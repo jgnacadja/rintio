@@ -1,6 +1,8 @@
 <template>
   <section class="container is-fluid">
-    <h2 class="title is-size-3-mobile is-size-2-tablet has-text-primary newclass_nosimplantations">Contactez-nous</h2>
+    <h2
+      class="title is-size-3-mobile is-size-2-tablet has-text-primary newclass_nosimplantations"
+    >Contactez-nous</h2>
     <section>
       <div id="app">
         <form class="vue-form" @submit.prevent="submit">
@@ -14,7 +16,13 @@
             </div>
             <div>
               <label class="label" for="email">Email</label>
-              <input type="email" name="email" id="email" required :class="{ email , error: !email.valid }" v-model="email.value"
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                :class="{ email , error: !email.valid }"
+                v-model="email.value"
               />
             </div>
 
@@ -25,7 +33,14 @@
 
             <div>
               <label class="label" for="textarea">Message</label>
-              <textarea class="message" name="textarea" id="textarea" required v-model="message.text" :maxlength="message.maxlength"></textarea>
+              <textarea
+                class="message"
+                name="textarea"
+                id="textarea"
+                required
+                v-model="message.text"
+                :maxlength="message.maxlength"
+              ></textarea>
               <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
             </div>
             <div>
@@ -188,7 +203,7 @@ body,
 }
 .vue-form input[type="text"]:focus,
 .vue-form input[type="email"]:focus,
-.vue-form textarea:focus{
+.vue-form textarea:focus {
   outline: none;
   border-color: #2c3e50;
   box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
