@@ -63,4 +63,16 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: "Montserrat,sans-serif";
+}
+.content-14-top {
+  padding-top: 2%;
+  margin-left: 1%;
+}
+@media only screen and (max-width: 415px) {
+  .content-14 {
+    font-size: 14px;
+  }
+}
 </style>

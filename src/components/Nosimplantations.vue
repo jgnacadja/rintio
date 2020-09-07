@@ -7,7 +7,7 @@
       <article class="columns" id="implantation.implantation_names">
         <ul
           class="column mt-4 is-size-7-touch is-size-3-mobile"
-          v-for="implantation in implementations"
+          v-for="implantation in implantations"
           :key="implantation.id"
         >
           <li>
@@ -37,15 +37,15 @@ function findTrueDate(country) {
   var offset_country;
   var thegmt;
   //alert(now.getUTCHours());
-  if (country == "cotonou_benin") {
+  if (country == "implantation_cotonou_benin") {
     offset_country = 1;
     thegmt = "GMT+1";
   }
-  if (country == "abidjan_cote_d_ivoire") {
+  if (country == "implantation_abidjan_cote_d_ivoire") {
     offset_country = 0;
     thegmt = "GMT+1";
   }
-  if (country == "paris_france") {
+  if (country == "implantation_paris_france") {
     var day = now.getUTCDate();
     var month = now.getMonth() + 1;
     var year = now.getFullYear();
@@ -117,9 +117,9 @@ export default {
     return {
       isImageModalActive: "ADIO",
       counter: 0,
-      implementations: {
+      implantations: {
         cotonou_benin: {
-          name: "cotonou_benin",
+          name: "implantation_cotonou_benin",
           localisation: "Cotonou, Bénin",
           horaire: findTrueDate("cotonou_benin"),
           //horaire: 6,
@@ -131,7 +131,7 @@ export default {
           height: "334",
         },
         abidjan_cote_d_ivoire: {
-          name: "abidjan_cote_d_ivoire",
+          name: "implantation_abidjan_cote_d_ivoire",
           localisation: "Abidjan, Côte d'ivoire",
           horaire: findTrueDate("abidjan_cote_d_ivoire"),
           // horaire: 6,
@@ -143,7 +143,7 @@ export default {
           height: "334",
         },
         paris_france: {
-          name: "paris_france",
+          name: "implantation_paris_france",
           localisation: "Paris, France",
           horaire: findTrueDate("paris_france"),
           //horaire: 6,
