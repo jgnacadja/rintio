@@ -1,5 +1,5 @@
 <template>
-  <div class="section is-paddingless">
+  <div class="container is-fluid">
     <br />
     <div class v-if="NosEngagement">
       <div class="is-hidden-mobile">
@@ -13,18 +13,16 @@
                 <div class="card zoom">
                   <div class="card-image">
                     <span
-                      class="is-white is-small tag has-text-primary realisationWS"
+                      class="is-white is-small tag has-text-primary realisationWS" 
                       style="margin-left:20px;border-radius: 0px;"
+
                     >
                       <b>Nos Engagements</b>
                     </span>
 
-                    <g-image
-                      :src="$static.feature.belongsTo.edges[1].node.coverImage"
-                      style="
+                    <g-image :src="$static.feature.belongsTo.edges[1].node.coverImage" style="
     height: 630px;
-"
-                    />
+"/>
                   </div>
 
                   <span class="is-white is-small card-content is-overlay">
@@ -61,12 +59,9 @@
                 <div class="column is-half">
                   <figure>
                     <div class="zoom">
-                      <span
-                        class="is-white is-small tag has-text-primary realisationWS"
-                        style="
+                      <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                      >
+">
                         <b>Nos Engagements</b>
                       </span>
                       <g-image
@@ -95,12 +90,9 @@
                 <div class="column is-half">
                   <figure>
                     <div class="zoom">
-                      <span
-                        class="is-white is-small tag has-text-primary realisationWS"
-                        style="
+                      <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                      >
+">
                         <b>Nos Engagements</b>
                       </span>
                       <g-image
@@ -131,12 +123,9 @@
                 <div class="column is-half mb-0">
                   <figure>
                     <div class="zoom">
-                      <span
-                        class="is-white is-small tag has-text-primary realisationWS"
-                        style="
+                      <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                      >
+">
                         <b>Nos Engagements</b>
                       </span>
                       <g-image
@@ -164,12 +153,9 @@
                 <div class="column is-half mb-0">
                   <figure>
                     <div class="zoom">
-                      <span
-                        class="is-white is-small tag has-text-primary realisationWS"
-                        style="
+                      <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                      >
+">
                         <b>Nos Engagements</b>
                       </span>
                       <div style="width: 100%; margin: 0 auto;">
@@ -219,12 +205,9 @@
             <div class="column is-half">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos réalisations</b>
                   </span>
                   <g-image
@@ -239,12 +222,9 @@
             <div class="column is-marginless is-paddindless">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos réalisations</b>
                   </span>
                   <g-image :src="$static.new.belongsTo.edges[1].node.coverImage" />
@@ -382,12 +362,9 @@
             <div class="column is-half">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos Engagements</b>
                   </span>
                   <g-image
@@ -422,12 +399,9 @@
             <div class="column is-half">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos Engagements</b>
                   </span>
                   <g-image
@@ -464,12 +438,9 @@
             <div class="column is-half mb-0">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos Engagements</b>
                   </span>
                   <g-image
@@ -504,12 +475,9 @@
             <div class="column is-half mb-0">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos Engagements</b>
                   </span>
                   <div style="width: 100%; margin: 0 auto;">
@@ -554,18 +522,17 @@
               <div class="column is-half mb-0">
                 <figure>
                   <div class="zoom">
+
                     <div style="width: 100%; margin: 0 auto;">
-                      <span
-                        class="is-white is-small tag has-text-primary realisationWS"
-                        style="
+                                          <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                      >
-                        <b>Nos Engagements</b>
-                      </span>
+" >
+                      <b>Nos Engagements</b>
+                    </span>
                       <div
                         style="position: relative; padding-bottom: 62.50%; padding-top: 25px;margin-bottom:28px; height: 0;"
                       >
+                      
                         <iframe
                           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
                           src="https://www.youtube.com/embed/iPuAzztSkOE"
@@ -632,12 +599,9 @@
             <div class="column is-half">
               <figure>
                 <div class="zoom">
-                  <span
-                    class="is-white is-small tag has-text-primary realisationWS"
-                    style="
+                  <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                  >
+">
                     <b>Nos Engagements</b>
                   </span>
                   <g-image
@@ -688,14 +652,11 @@
       <div class="columns" style="padding-top:30px">
         <div class="column is-6">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+            <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Réalisations</b>
-            </span>
+">
+                        <b>Nos Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne_feature.belongsTo.edges[0].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne_feature.belongsTo.edges[0].node.title"></b>
@@ -713,19 +674,17 @@
           <div class="columns is-multiline is-12">
             <div class="column is-half">
               <figure>
-                <span
-                  class="is-white is-small tag has-text-primary realisationWS"
-                  style="
+                            <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                >
-                  <b>Nos Engagements</b>
-                </span>
+">
+                        <b>Nos Engagements</b>
+                      </span>
                 <g-image
                   :src="$static.alaUne.belongsTo.edges[0].node.coverImage"
                   style="position:relative z-index:0 height: 598px;"
                   class="zoom"
                 />
+              
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[0].node.title"></b>
                   <p
@@ -741,19 +700,13 @@
 
             <div class="column is-half">
               <figure>
-                <span
-                  class="is-white is-small tag has-text-primary realisationWS"
-                  style="
+                                           <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                >
-                  <b>Nos Engagements</b>
-                  <button
-                    class="button is-link is-hidden-tablet"
-                    style="position:relative ;bottom:-180px;border-radius:0px;width:120px;height:30px;"
-                  >S'inscrire</button>
-                </span>
-
+">
+                        <b>Nos Engagements</b>
+                        <button class="button is-link is-hidden-tablet" style="position:relative ;bottom:-180px;border-radius:0px;width:120px;height:30px;"> S'inscrire</button>
+                      </span>
+                      
                 <g-image :src="$static.alaUne.belongsTo.edges[1].node.coverImage" class="zoom" />
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[1].node.title"></b>
@@ -770,14 +723,11 @@
 
             <div class="column is-half mb-0">
               <figure>
-                <span
-                  class="is-white is-small tag has-text-primary realisationWS"
-                  style="
+                                           <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                >
-                  <b>Rintio Factory</b>
-                </span>
+">
+                        <b>Rintio Factory</b>
+                      </span>
                 <g-image :src="$static.alaUne.belongsTo.edges[2].node.coverImage" class="zoom" />
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[2].node.title"></b>
@@ -787,21 +737,18 @@
                     "
                     class="space"
                   ></p>
-                  <arrowicon class="is-hidden-tablet" />
+                   <arrowicon class="is-hidden-tablet"/>
                 </figcaption>
               </figure>
             </div>
 
             <div class="column is-half mb-0">
               <figure>
-                <span
-                  class="is-white is-small tag has-text-primary realisationWS"
-                  style="
+                                                           <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-                >
-                  <b>Rintio Factorie</b>
-                </span>
+">
+                        <b>Rintio Factorie</b>
+                      </span>
                 <g-image :src="$static.alaUne.belongsTo.edges[3].node.coverImage" class="zoom" />
                 <figcaption>
                   <b v-html="$static.alaUne.belongsTo.edges[3].node.title"></b>
@@ -811,7 +758,7 @@
                     "
                     class="space"
                   ></p>
-                  <arrowicon class="is-hidden-tablet" />
+                   <arrowicon class="is-hidden-tablet"/>
                 </figcaption>
               </figure>
             </div>
@@ -832,106 +779,94 @@
       <div class="columns is-1" style="padding-top:20px">
         <div class="column">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+                     <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Réalisations</b>
-            </span>
+">
+                        <b>Nos Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[4].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[4].node.title"></b>
               <p v-html="$static.alaUne.belongsTo.edges[4].node.metaDescription" class="space"></p>
+              
             </figcaption>
           </figure>
         </div>
         <div class="column">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+                                                                   <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Réalisations</b>
-            </span>
+">
+                        <b>Nos Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[5].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[5].node.title"></b>
               <p v-html="$static.alaUne.belongsTo.edges[5].node.metaDescription" class="space"></p>
+              
             </figcaption>
           </figure>
         </div>
         <div class="column">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+            <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Réalisations</b>
-            </span>
+">
+               <b>Nos Réalisations</b>
+             </span>
             <g-image :src="$static.alaUne.belongsTo.edges[6].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[6].node.title"></b>
               <p v-html="$static.alaUne.belongsTo.edges[6].node.metaDescription" class="space"></p>
+              
             </figcaption>
           </figure>
         </div>
       </div>
 
-      <div class="columns is-1">
+       <div class="columns is-1">
         <div class="column">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+           <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Réalisations</b>
-            </span>
+">
+                <b>Nos Réalisations</b>
+             </span>
             <g-image :src="$static.alaUne.belongsTo.edges[7].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[7].node.title"></b>
               <p v-html="$static.alaUne.belongsTo.edges[7].node.metaDescription" class="space"></p>
+              
             </figcaption>
           </figure>
         </div>
         <div class="column">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+                                                                   <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Réalisations</b>
-            </span>
+">
+                        <b>Nos Réalisations</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[8].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[8].node.title"></b>
               <p v-html="$static.alaUne.belongsTo.edges[8].node.metaDescription" class="space"></p>
+            
             </figcaption>
           </figure>
         </div>
         <div class="column">
           <figure>
-            <span
-              class="is-white is-small tag has-text-primary realisationWS"
-              style="
+             <span class="is-white is-small tag has-text-primary realisationWS" style="
     border-radius: 0px;
-"
-            >
-              <b>Nos Publications</b>
-            </span>
+">
+                        <b>Nos Publications</b>
+                      </span>
             <g-image :src="$static.alaUne.belongsTo.edges[9].node.coverImage" class="zoom" />
             <figcaption>
               <b v-html="$static.alaUne.belongsTo.edges[9].node.title"></b>
               <p v-html="$static.alaUne.belongsTo.edges[9].node.metaDescription" class="space"></p>
+            
             </figcaption>
           </figure>
         </div>
@@ -1108,9 +1043,9 @@ export default {
 .realisationWS {
   position: relative;
   bottom: -50px;
-  left: 20px;
+  left:20px;
   z-index: 1;
-  border-radius: 0px;
+  border-radius:0px;
 }
 .card {
   box-shadow: none;
@@ -1135,13 +1070,5 @@ export default {
   font-size: 14px;
   position: relative;
   bottom: -60%;
-}
-
-.icon-tag {
-  margin-left: 10%;
-}
-
-.icon-tag-next-box {
-  margin-left: 2%;
 }
 </style>
