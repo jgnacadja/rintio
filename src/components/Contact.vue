@@ -1,7 +1,7 @@
 <template>
   <section class="container is-fluid">
     <h2
-      class="title is-size-3-mobile is-size-2-tablet has-text-primary newclass_nosimplantations"
+      class="title is-size-2 has-text-primary  is-size-3-mobile is-size-2-tablet newclass_nosimplantations"
     >Contactez-nous</h2>
     <section>
       <div id="app">

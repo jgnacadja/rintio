@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-paddingless">
       <h2 class="title is-2-desktop is-6-mobile is-3-tablet has-text-primary">Rintio Data Lab</h2>
       <div class="row">
         <div class="columns">
@@ -235,7 +235,7 @@
         </div>
       </div>
       <div style="margin-top : 30px" class="row">
-        <div class="columns">
+        <div class="columns is-maringless">
           <div class="column is-6">
             <div class="card">
               <div class="card-image">

@@ -1,7 +1,7 @@
 <template>
   <section class="newclass_ilsnousfontconfiance" @resize="listedelement()">
     <h2
-      class=" is-fluid title is-size-4-mobile is-size-2-tablet has-text-primary newclass_nostestimonials"
+      class="is-fluid title is-size-2 has-text-primary is-size-4-mobile is-size-2-tablet newclass_nostestimonials"
     >Ils nous font confiance</h2>
     <section id="wrap" class="columns is-mobile is-vcentered has-text-centered">
       <span class="column has-text-right" @click="roll('prev')">
@@ -257,9 +257,9 @@ export default {
 };
 </script>
 <style>
-.newclass_ilsnousfontconfiance{
-  margin-left: 35px;
-  margin-top: 35px;
+.newclass_ilsnousfontconfiance h2{
+  margin-left:35px;
+  margin-top:35px;
 }
 #wrap {
   margin: 0;
