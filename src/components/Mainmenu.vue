@@ -15,7 +15,7 @@
       <div
         class="has-background-white columns is-marginless is-paddingless is-variable is-mobile is-vcentered is-centered is-hidden-touch"
       >
-       <div class="column is-narrow">
+        <div class="column is-narrow">
           <g-link to="/">
             <figure class="image image-logo">
               <g-image src="~/assets/logo.png" fit="inside" />

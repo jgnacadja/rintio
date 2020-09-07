@@ -1,9 +1,14 @@
 ---
 title: Offshoring
 published: true
-categories: ["Nos offres"]
+categories: ["Nos offres features"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3110.png
+metaDescription: Concentrez vous sur votre coeur d'activité
+subMetaDescriptionLeft: .Dev.Python Java PHP
+subMetaDescriptionRigth: .Migration Cloud
+subMetaDescriptionLeftDown: .Admin.cloud & Infra
+subMetaDescriptionRigthDown: .DevOps
 ---
 
 ## Offshoring

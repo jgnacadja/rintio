@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Mainmenu />
     <transition name="fade" appear>
       <main>
+        <Mainmenu />
         <slot />
+        <Footer />
       </main>
     </transition>
-    <Footer />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Mainmenu,
-    Footer
+    Footer,
   },
 };
 </script>

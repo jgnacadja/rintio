@@ -1,11 +1,14 @@
 ---
 title: Conseil
 published: true
-categories: ["Nos offres"]
-date: 2020-07-28
+categories: ["Nos offres feature"]
+date: 2020-07-26
 coverImage: /img/articles/ID2GLBDTYq_4x.png
----
+descriptionUp: .Strategie Data & IA
+descriptionDown: .Strategie de transformation numériques.
 
+---
+ 
 ## DONNÉES
 
 Fournir des informations à partir des données recueillies

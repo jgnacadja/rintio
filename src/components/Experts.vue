@@ -1,16 +1,14 @@
 <template>
   <div class="container section is-fluid">
     <div class="is-hidden-desktop is-size-7 titre">
-      <h2 class="title is-size-2 has-text-primary" style="text-align: left">
-        Nos experts
-      </h2>
-      <div class="">
+      <h2 class="title is-size-2 has-text-primary" style="text-align: left">Nos experts</h2>
+      <div class>
         <div class="columns is-mobile Mobile">
-          <div class="column  is-variable">
+          <div class="column is-variable">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Mike.jpg" class=" " />
+              <g-image src="~/assets/experts/Mike.jpg" class />
               <figcaption>
-                <b> Mike</b>
+                <b>Mike</b>
                 <ul>
                   <li>PhD Informatique</li>
                   <li>Data Scientist , Project Manager</li>
@@ -21,7 +19,7 @@
           </div>
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Carlyna.jpg" alt="" class=" " />
+              <g-image src="~/assets/experts/Carlyna.jpg" alt class />
               <figcaption>
                 <b>Carlyna</b>
                 <ul>
@@ -35,11 +33,11 @@
         </div>
       </div>
 
-      <div class=" ">
+      <div class>
         <div class="columns is-mobile Mobile">
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Habib.jpg" alt="" class=" " />
+              <g-image src="~/assets/experts/Habib.jpg" alt class />
               <figcaption>
                 <b>Habib</b>
                 <ul>
@@ -53,15 +51,13 @@
           </div>
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Talla.jpg" alt="" class=" " />
+              <g-image src="~/assets/experts/Talla.jpg" alt class />
               <figcaption>
                 <b>Talla</b>
                 <ul>
                   <li>Ingénieur Informatique</li>
                   <li>BI & Big Data Engineer, Project Manager</li>
-                  <li>
-                    +6 Ans d’Expériences : Orange, Oracle, Société Générale
-                  </li>
+                  <li>+6 Ans d’Expériences : Orange, Oracle, Société Générale</li>
                 </ul>
               </figcaption>
             </figure>
@@ -69,11 +65,11 @@
         </div>
       </div>
 
-      <div class=" ">
+      <div class>
         <div class="columns is-mobile">
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Julien.jpg" class=" " />
+              <g-image src="~/assets/experts/Julien.jpg" class />
               <figcaption>
                 <b>Julien</b>
                 <ul>
@@ -87,7 +83,7 @@
 
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Fiacre.jpg" alt="" class=" " />
+              <g-image src="~/assets/experts/Fiacre.jpg" alt class />
               <figcaption>
                 <b>Fiacre</b>
                 <ul>
@@ -100,11 +96,11 @@
           </div>
         </div>
       </div>
-      <div class="section ">
+      <div class="section">
         <div class="columns is-mobile">
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Michel.jpg" alt="" class=" " />
+              <g-image src="~/assets/experts/Michel.jpg" alt class />
               <figcaption>
                 <b>Michel</b>
                 <ul>
@@ -120,7 +116,7 @@
           </div>
           <div class="column">
             <figure class="is-family-primary">
-              <g-image src="~/assets/experts/Nicaise.jpg" alt="" class=" " />
+              <g-image src="~/assets/experts/Nicaise.jpg" alt class />
               <figcaption>
                 <b>Nicaise</b>
                 <ul>
@@ -135,12 +131,10 @@
       </div>
     </div>
 
-    <div class="is-hidden-touch ">
-      <h2 class="title is-size-2 has-text-primary has-text-justify">
-        Nos experts
-      </h2>
+    <div class="is-hidden-touch">
+      <h2 class="title is-size-2 has-text-primary has-text-justify">Nos experts</h2>
       <div class="section">
-        <div class="columns  ">
+        <div class="columns">
           <div class="column">
             <figure>
               <g-image src="~/assets/experts/Mike.jpg" />
@@ -156,7 +150,7 @@
           </div>
           <div class="column">
             <figure>
-              <g-image src="~/assets/experts/Carlyna.jpg" alt="" class="" />
+              <g-image src="~/assets/experts/Carlyna.jpg" alt class />
               <figcaption>
                 <b>Carlyna</b>
                 <ul>
@@ -169,7 +163,7 @@
           </div>
           <div class="column">
             <figure class="is-inline-mobile">
-              <g-image src="~/assets/experts/Habib.jpg" alt="" class="" />
+              <g-image src="~/assets/experts/Habib.jpg" alt class />
               <figcaption>
                 <b>Habib</b>
                 <ul>
@@ -183,15 +177,13 @@
           </div>
           <div class="column">
             <figure>
-              <g-image src="~/assets/experts/Talla.jpg" alt="" class="" />
+              <g-image src="~/assets/experts/Talla.jpg" alt class />
               <figcaption>
                 <b>Talla</b>
                 <ul>
                   <li>Ingénieur Informatique</li>
                   <li>BI & Big Data Engineer, Project Manager</li>
-                  <li>
-                    +6 Ans d’Expériences : Orange, Oracle, Société Générale
-                  </li>
+                  <li>+6 Ans d’Expériences : Orange, Oracle, Société Générale</li>
                 </ul>
               </figcaption>
             </figure>
@@ -215,7 +207,7 @@
           </div>
           <div class="column">
             <figure>
-              <g-image src="~/assets/experts/Fiacre.jpg" alt="" class="" />
+              <g-image src="~/assets/experts/Fiacre.jpg" alt class />
               <figcaption>
                 <b>Fiacre</b>
                 <ul>
@@ -228,7 +220,7 @@
           </div>
           <div class="column">
             <figure>
-              <g-image src="~/assets/experts/Michel.jpg" alt="" class="" />
+              <g-image src="~/assets/experts/Michel.jpg" alt class />
               <figcaption>
                 <b>Michel</b>
                 <ul>
@@ -244,7 +236,7 @@
           </div>
           <div class="column">
             <figure>
-              <g-image src="~/assets/experts/Nicaise.jpg" alt="" class="" />
+              <g-image src="~/assets/experts/Nicaise.jpg" alt class />
               <figcaption>
                 <b>Nicaise</b>
                 <ul>
@@ -263,14 +255,13 @@
 
 <style lang="css" scoped>
 ul {
-
-    list-style: inside;
+  list-style: inside;
 }
 
-figure{
-    text-align: center;
+figure {
+  text-align: center;
 }
-.titre{
-    margin-right: 0px;
+.titre {
+  margin-right: 0px;
 }
 </style>
