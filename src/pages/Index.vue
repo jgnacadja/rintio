@@ -21,7 +21,6 @@
         </div>
       </div>
     </div>
-
     <div class="wrapper_container wrapper_container-plus">
       <div class="section section is-fluid" style="padding:0px">
         <div>
@@ -32,7 +31,15 @@
       </div>
     </div>
     <Ilsnousfontconfiance />
-    <div class="wrapper_container wrapper_container-less">
+    <div class="wrapper_container wrapper_container-unless">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Publications</h1>
+        </div>
+      </div>
+    </div>
+    <Publications />
+    <div class="wrapper_container wrapper_container-unless">
       <div class="section section is-fluid" style="padding:0px">
         <div>
           <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Implantations</h1>
@@ -90,8 +97,8 @@ body {
 }
 
 .wrapper_container {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .wrapper_container-plus {
@@ -101,6 +108,10 @@ body {
 
 .wrapper_container-less {
   padding-top: 10%;
+}
+
+.wrapper_container-unless {
+  padding-top: 5%;
 }
 
 @media only screen and (max-width: 415px) {
