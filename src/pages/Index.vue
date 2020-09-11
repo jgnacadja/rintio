@@ -31,7 +31,7 @@
       </div>
     </div>
     <Ilsnousfontconfiance />
-    <div class="wrapper_container wrapper_container-unless">
+    <div class="wrapper_container wrapper_container-plus-unless">
       <div class="section section is-fluid" style="padding:0px">
         <div>
           <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Publications</h1>
@@ -97,12 +97,17 @@ body {
 }
 
 .wrapper_container {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .wrapper_container-plus {
   padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+.wrapper_container-plus-unless {
+  padding-top: 5%;
   padding-bottom: 3%;
 }
 
@@ -117,6 +122,11 @@ body {
 @media only screen and (max-width: 415px) {
   .content-14 {
     font-size: 14px;
+  }
+
+  .wrapper_container {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 </style>

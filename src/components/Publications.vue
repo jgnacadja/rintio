@@ -119,7 +119,7 @@
       </div>
 
       <div class="row is-hidden-desktop is-hidden-tablet">
-        <b-carousel arrow="true" arrow-hover="true" pause-hover="true" dot>
+        <b-carousel :arrow="true" :arrow-hover="true" :pause-hover="true">
           <b-carousel-item
             v-for="edge in $static.allPublications.belongsTo.edges"
             :key="edge.node.id"
