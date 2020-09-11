@@ -40,6 +40,14 @@
       </div>
     </div>
     <Nosimplantations />
+    <div class="wrapper_container">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Contactez-nous</h1>
+        </div>
+      </div>
+    </div>
+    <Contact />
   </Layout>
 </template>
 
