@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <div style="padding-left:2%; padding-right:2%">
+    <div class="wrapper_container">
       <div class="section section is-fluid" style="padding:0px">
         <div>
-          <h1 class="title is-size-2 has-text-primary">A propos</h1>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">A propos</h1>
         </div>
 
         <div class="content-14 content-16 has-text-justified content-14-top">
@@ -21,15 +21,25 @@
         </div>
       </div>
     </div>
-    <Nosoffres />
-    <alaUneEngagements :alaUne="true" />
-    <alaUneEngagements :NosEngagement="true" />
-    <NosExperts />
-    <Rintiodatalab />
-    <Publications />
+
+    <div class="wrapper_container wrapper_container-plus">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1
+            class="title is-size-2-tablet is-size-4-mobile has-text-primary"
+          >Ils nous font confiance</h1>
+        </div>
+      </div>
+    </div>
     <Ilsnousfontconfiance />
+    <div class="wrapper_container wrapper_container-less">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Implantations</h1>
+        </div>
+      </div>
+    </div>
     <Nosimplantations />
-    <Contact />
   </Layout>
 </template>
 
@@ -54,7 +64,7 @@ export default {
     Publications,
     Ilsnousfontconfiance,
     Nosimplantations,
-    Contact
+    Contact,
   },
   metaInfo: {
     title: "We involve for a better life",
@@ -70,6 +80,21 @@ body {
   padding-top: 2%;
   margin-left: 1%;
 }
+
+.wrapper_container {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.wrapper_container-plus {
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+.wrapper_container-less {
+  padding-top: 10%;
+}
+
 @media only screen and (max-width: 415px) {
   .content-14 {
     font-size: 14px;

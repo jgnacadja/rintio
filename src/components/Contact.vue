@@ -4,7 +4,7 @@
       class="title is-size-2 has-text-primary  is-size-3-mobile is-size-2-tablet newclass_nosimplantations"
     >Contactez-nous</h2>
     <section>
-      <div id="app">
+      <div class=columns id="app">
         <form class="vue-form" @submit.prevent="submit">
           <!--<div class="error-message">
             <p v-show="!email.valid">Oh, please enter a valid email address.</p>

@@ -2,79 +2,8 @@
   <section>
     <div class="container is-fluid">
       <h2 class="title is-size-4-mobile is-size-2-tablet has-text-primary">Nos Publications</h2>
-      <div class="row is-hidden-mobile">
-        <div class="columns">
-          <div class="column is-half">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.publication.belongsTo.edges[0].node.coverImage" />
-                  <figcaption class="is-hidden-desktop">
-                    <div class="column is-3"></div>
-                    <div class="column is-3">
-                      <span>
-                        <i class="fal fa-eye fa-1x"></i>
-                      </span>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="col-lg-2 is-pulled-left">
-                        <font-awesome-icon class="has-text-danger" icon="heart" />
-                      </div>
-                      <div class="col-lg-2 is-pulled-left">
-                        <font-awesome-icon class="has-text-primary" icon="comment" />
-                      </div>
-                      <div class="col-lg-2 is-pulled-left">
-                        <font-awesome-icon class="has-text-primary" icon="long-arrow-alt-right" />
-                      </div>
-                      <div class="column is-pulled-right">
-                        <font-awesome-icon class="has-text-primary" icon="arrow-circle-right" />
-                      </div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-3 pub-tag">
-                    <b v-html="$static.publication.id" class="has-text-primary has-text-centered"></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3 is-hidden-mobile">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.publication.belongsTo.edges[1].node.coverImage" />
-                </figure>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-6 pub-tag">
-                    <b v-html="$static.publication.id" class="has-text-primary has-text-centered"></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3 is-hidden-mobile">
-            <div class="card">
-              <div class="card-image">
-                <g-image :src="$static.publication.belongsTo.edges[2].node.coverImage" />
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-6 pub-tag">
-                    <b v-html="$static.publication.id" class="has-text-primary has-text-centered"></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row is-hidden-mobile">
+    
+<!--       <div class="row is-hidden-mobile">
         <div class="columns">
           <div class="column is-6">
             <b class="image-titile" v-html="$static.publication.belongsTo.edges[0].node.title"></b>
@@ -417,7 +346,7 @@
             </figure>
           </div>
         </VueSlickCarousel>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

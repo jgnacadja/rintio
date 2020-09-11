@@ -1,9 +1,6 @@
 <template>
   <section class="newclass_ilsnousfontconfiance" @resize="listedelement()">
-    <h2
-      class="is-fluid title is-size-2 has-text-primary is-size-4-mobile is-size-2-tablet newclass_nostestimonials"
-    >Ils nous font confiance</h2>
-    <section id="wrap" class="columns is-mobile is-vcentered has-text-centered">
+    <div id="wrap" class="columns is-mobile is-vcentered has-text-centered is-marginless">
       <span class="column has-text-right" @click="roll('prev')">
         <g-image
           :src="fleche.left.src"
@@ -16,9 +13,9 @@
         />
       </span>
       <figure class="column is-four-fifths fig_ilsnousfontconfiance">
-        <ul class="container_testimonials_ilsnousfontconfiance animationdroitegauche" id="animation" >
+        <ul class="container_testimonials_ilsnousfontconfiance" :class="_animation" id="animation">
           <li
-            class="displaynone "
+            class="displaynone"
             v-for="(banner, index) in bannerList"
             :key="index"
             :class="{ on: index === currentIndex }"
@@ -37,10 +34,7 @@
                 <g-image v-if="showit(3)" :src="listed_element[currentIndex*indiclole()+2]" />
               </li>
               <li class="column" v-if="indiclole(3)==4 && showit(4)">
-                <g-image
-                  
-                  :src="listed_element[currentIndex*indiclole()+3]"
-                />
+                <g-image :src="listed_element[currentIndex*indiclole()+3]" />
               </li>
             </ul>
           </li>
@@ -57,19 +51,20 @@
           class="ilsnousfontconfiance_fleche_"
         />
       </figure>
-    </section>
+    </div>
   </section>
 </template>
 <script>
 let timer = null;
 const AUTO_INTERVAL = 2000;
+
 export default {
   data() {
     return {
       playing: true,
       mobile: false,
-      lscreen: screen.width,
-      direction:"",
+      lscreen: "",
+      direction: "",
       show: true,
       fleche: {
         left: {
@@ -127,12 +122,20 @@ export default {
         },
       },
       currentIndex: 0,
+      _animation: "animationdroitegauche",
     };
+  },
+  mounted() {
+    //console.log(this.playing);
   },
   created() {
     //console.log(this.playing);
+    if (typeof window !== "undefined") {
+      this.lscreen = window.innerWidth;
+    }
     this.play();
     this.listedelement();
+    this.roll("next");
   },
   methods: {
     showit(position) {
@@ -159,33 +162,35 @@ export default {
     },
     setAutoRoll() {
       //console.log(this.playing);
-      let direction=this.direction;
-      let element=document.getElementById('animation');
+      let direction = this.direction;
 
-      if(this.direction=="next"){
-        element.classList.replace("animationgauchedroite","animationdroitegauche");
-        this.direction="";
+      if (this.direction == "next") {
+        this._animation = "animationdroitegauche";
+
+        this.direction = "";
       }
-      if(this.direction=="prev"){
-        element.classList.replace("animationdroitegauche","animationgauchedroite");
-        this.direction="next";
+      if (this.direction == "prev") {
+        this._animation = "animationgauchedroite";
+
+        this.direction = "next";
       }
-     // alert(this.direction);
+      // alert(this.direction);
       timer = setInterval(this.monsieursetinterval, 5000);
       //timer=null;
     },
     addIndex() {
       let newIndex = this.currentIndex + 1;
-      let direction=this.direction;
-      let element=document.getElementById('animation');
+      let direction = this.direction;
 
-      if(this.direction=="next"){
-        element.classList.replace("animationgauchedroite","animationdroitegauche");
-        this.direction="";
+      if (this.direction == "next") {
+        this._animation = "animationdroitegauche";
+
+        this.direction = "";
       }
-      if(this.direction=="prev"){
-        element.classList.replace("animationdroitegauche","animationgauchedroite");
-        this.direction="next";
+      if (this.direction == "prev") {
+        this._animation = "animationgauchedroite";
+
+        this.direction = "next";
       }
       this.currentIndex = newIndex === this.bannerList.length ? 0 : newIndex;
       //alert("ouaip");
@@ -193,7 +198,7 @@ export default {
     roll(direction) {
       let diff = direction === "prev" ? -1 : 1;
       this.currentIndex = this.getTargetIndex(diff);
-      this.direction=direction;
+      this.direction = direction;
       if (this.playing) {
         clearInterval(timer);
         this.setAutoRoll();
@@ -257,9 +262,9 @@ export default {
 };
 </script>
 <style>
-.newclass_ilsnousfontconfiance h2{
-  margin-left:35px;
-  margin-top:35px;
+.newclass_ilsnousfontconfiance h2 {
+  margin-left: 35px;
+  margin-top: 35px;
 }
 #wrap {
   margin: 0;
@@ -272,8 +277,8 @@ export default {
 .ilsnousfontconfiance_fleche_ {
   height: 20px;
 }
-#wrap .container_testimonials_ilsnousfontconfiance{
-  height:65px;
+#wrap .container_testimonials_ilsnousfontconfiance {
+  height: 65px;
 }
 #wrap figure ul li img {
   max-height: 50px;
@@ -292,10 +297,10 @@ export default {
   position: relative;
   /*animation: animateleft 0.4s;*/
 }
-.animationgauchedroite li.on{
+.animationgauchedroite li.on {
   animation: animateleft 0.4s;
 }
-.animationdroitegauche li.on{
+.animationdroitegauche li.on {
   animation: animateright 0.4s;
 }
 @keyframes animateright {

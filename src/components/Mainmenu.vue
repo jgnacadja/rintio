@@ -1,10 +1,10 @@
 <template>
-  <b-navbar :type="typeNavbar" class="navbar-style">
+  <b-navbar class="navbar-style">
     <template slot="brand">
       <div
         class="has-background-white columns is-marginless is-paddingless is-variable is-mobile is-vcentered is-centered is-hidden-desktop"
       >
-        <div class="column is-narrow">
+        <div classI="column is-narrow">
           <g-link to="/">
             <figure class="image">
               <g-image src="~/assets/logo.png" fit="inside" />
