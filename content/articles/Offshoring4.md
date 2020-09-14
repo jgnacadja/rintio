@@ -10,4 +10,4 @@ metaDescription: Rintio Accompagne <a href="">ISCI</a> dans le développement de
 
 ## Offshoring 
 
-Rintio Accompagne ISCI dans le développement de ses solutions Comptables.
+Rintio Accompagne ISCI dans le développement de ses solutions digitales.

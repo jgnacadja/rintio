@@ -9,4 +9,4 @@ metaDescription: Le coordinateur de Africa TechuUp Tour invité sur le plateau d
 
 ## Rétrospective Africa TechUp Tour Abidjan 2019
 
-Le Coordonnateur de Africa TechUp Tour invité sur le plateau de C’Midi.
+Le coordonnateur de Africa TechUp Tour invité sur le plateau de C’Midi.

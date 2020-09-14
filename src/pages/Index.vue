@@ -21,6 +21,16 @@
         </div>
       </div>
     </div>
+    <div class="wrapper_container wrapper_container-less">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1
+            class="title is-size-2-tablet is-size-4-mobile has-text-primary"
+          >A la une / Rintio Stories</h1>
+        </div>
+      </div>
+    </div>
+    <alaUneEngagements :alaUne="true" />
     <div class="wrapper_container wrapper_container-plus">
       <div class="section section is-fluid" style="padding:0px">
         <div>
