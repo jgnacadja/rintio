@@ -2,10 +2,10 @@
 title: (Big) Data & Analytics
 published: true
 categories: ["Nos offres"]
-date: 2020-08-30 
+date: 2020-08-30
 coverImage: /img/articles/Fotolia_257957753_Subscription.png
 metaDescription: Captez, nettoyer, stockez, diffusez et exploitez vos données
-subDescription: 
+subDescription:
 ---
 
 ## (Big) Data & Analytics

@@ -1,7 +1,6 @@
 <template>
   <div class="container section is-fluid">
     <div class="is-hidden-desktop is-size-7 titre">
-      <h2 class="title is-size-2 has-text-primary" style="text-align: left">Nos experts</h2>
       <div class>
         <div class="columns is-mobile Mobile">
           <div class="column is-variable">
@@ -132,7 +131,6 @@
     </div>
 
     <div class="is-hidden-touch">
-      <h2 class="title is-size-2 has-text-primary has-text-justify">Nos experts</h2>
       <div class="section">
         <div class="columns">
           <div class="column">

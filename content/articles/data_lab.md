@@ -5,7 +5,7 @@ categories: ["Nos offres"]
 date: 2020-09-01
 coverImage: /img/articles/IMG_3262.png
 metaDescription: Accélérez votre connaissance en exploitant pleinement le potentiel de vos données.
-subDescription: 
+subDescription:
 ---
  
 ## Data Lab

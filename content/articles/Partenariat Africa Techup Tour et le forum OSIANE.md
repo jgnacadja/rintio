@@ -8,6 +8,8 @@ metaDescription: Africa TechUp Tour signe un accord de partenariat pour organise
 subDescription:  Africa TechUp Tour Brazaville 2020
 subDescriptionDown: La campagne 2020, déjà lancée. Etudiants, mathématiciens, 
 DescriptionDown: Statisticiens, incrivez vous <a href="#" style="color:white;">ici</a>
+button: S'inscrire
+path:
 ---
 
 ## Partenariat Africa TechUp Tour et le forum OSIANE
