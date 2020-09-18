@@ -227,9 +227,7 @@
                 <figure>
                   <span
                     class="is-white is-small tag has-text-primary realisationWS"
-                    style="
-    border-radius: 0px;
-"
+                    style="border-radius: 0px"
                   >
                     <b>Nos Engagements</b>
                   </span>
@@ -274,9 +272,7 @@
                   <figure>
                     <span
                       class="is-white is-small tag has-text-primary realisationWS"
-                      style="
-    border-radius: 0px;
-"
+                      style="border-radius: 0px"
                     >
                       <b>Nos Engagements</b>
                     </span>
@@ -368,7 +364,7 @@
           </figure>
         </div>
       </div>
-            <div class="columns is-hidden-mobile" style="padding-top: 0px">
+      <div class="columns is-hidden-mobile" style="padding-top: 0px">
         <div class="column is-half">
           <arrowicon />
         </div>

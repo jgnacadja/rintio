@@ -1,374 +1,138 @@
 <template>
-  <section class="section">
-    <div class="container is-fluid is-paddingless">
-      <h2 class="title is-2-desktop is-6-mobile is-3-tablet has-text-primary">Rintio Data Lab</h2>
+  <div class="container is-fluid">
+    <div class="row">
+      <div class="columns">
+        <div
+          class="column is-6"
+          v-for="edge in $static.dataLab_feature.belongsTo.edges"
+          :key="edge.node.id"
+        >
+          <figure>
+            <span
+              class="is-white is-small tag has-text-primary realisationWS"
+              style="border-radius: 0px"
+            >
+              <b>Rintio Data Lab</b>
+            </span>
+            <g-image :src="edge.node.coverImage" class="zoom" />
+            <p v-html="edge.node.content" class="is-mobile"></p>
+            <figcaption>
+              <p
+                v-html="
+                  edge.node.metaDescription
+                "
+                class="space"
+              ></p>
+            </figcaption>
+          </figure>
+        </div>
+        <div
+          class="column is-3"
+          v-for="edge in $static.dataLab.belongsTo.edges"
+          :key="edge.node.id"
+        >
+          <figure>
+            <span
+              class="is-white is-small tag has-text-primary realisationWS"
+              style="border-radius: 0px"
+            >
+              <b>Rintio Data Lab</b>
+            </span>
+            <g-image :src="edge.node.coverImage" class="zoom" />
+
+            <figcaption>
+              <p v-html="
+                  edge.node.content
+                " class="space"></p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="columns is-hidden-mobile" style="padding-top: 0px">
+            <div
+              class="column is-6"
+              v-for="edge in $static.dataLab_feature.belongsTo.edges"
+              :key="edge.node.id"
+            >
+              <div class="columns">
+                <div class="column button-container-center" v-if="edge.node.button">
+                  <a class="button is-primary button-link-half">{{ edge.node.button }}</a>
+                </div>
+                <arrowicon class="arrow-pulled" />
+              </div>
+            </div>
+            <div
+              class="column is-3"
+              v-for="edge in $static.dataLab.belongsTo.edges"
+              :key="edge.node.id"
+            >
+              <div class="columns">
+                <div class="column button-container-center" v-if="edge.node.button">
+                  <a class="button is-primary button-link-half-d">{{ edge.node.button }}</a>
+                </div>
+                <arrowicon class="arrow-pulled" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="columns">
-          <div class="colum is-6-desktop is-6-mobile">
-            <div class="card-image">
-              <figure>
-                <g-image :src="$static.dataLab.belongsTo.edges[3].node.coverImage" class />
-                <figcaption class="is-hidden-desktop">
-                  <p class v-html="$static.dataLab.belongsTo.edges[3].node.content"></p>
-                  <ul class="is-pulled-right enum-img1">
-                    <li>Diversifier votre activité</li>
-                    <li>Pilotez votre activité en temps réel</li>
-                    <li>Maîtrisez vos coûts opérationnels</li>
-                    <li>Optimisiez vos processus métier</li>
-                  </ul>
-                </figcaption>
-                <div class="column is-hidden-desktop has-text-centered">
-                  <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                  <div class="is-pulled-right">
-                    <a href="#">
-                      <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-              </figure>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card-content is-overlay is-fluid is-hidden-desktop description-image1-mobile"
+          <div
+            class="column is-6"
+            v-for="edge in $static.dataLabRow.belongsTo.edges"
+            :key="edge.node.id"
+          >
+            <figure>
+              <span
+                class="is-white is-small tag has-text-primary realisationWS"
+                style="border-radius: 0px"
               >
-                <div class="columns">
-                  <div class="column is-2">
-                    <b v-html="$static.dataLab.id"></b>
-                    <p class="has-text-justify">Une offre centrée sur la valorisation de vos Data</p>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="is-pulled-left">
-                        <ul class="enumeration-mobile">
-                          <li>Prototypage</li>
-                          <li>R&D</li>
-                        </ul>
-                      </div>
-                      <div class="is-pulled-right">
-                        <ul class="enumeration-mobile">
-                          <li>Stratégie Data & IA</li>
-                          <li>Gouvernance Data & IA</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card-content is-overlay is-fluid is-half-desktop is-hidden-mobile description-image1"
-              >
-                <div class="columns is-half-desktop is-6-mobile is-one-two-tablet">
-                  <div class="column is-one-two">
-                    <b v-html="$static.dataLab.id"></b>
-                    <p class="has-text-justify">Une offre centrée sur la valorisation de vos Data</p>
-                  </div>
-                </div>
-                <div class="columns">
-                  <div class="column is-half-desktop is-2-mobile">
-                    <ul class="enumeration-desktop">
-                      <li>Prototypage</li>
-                      <li>R&D</li>
-                    </ul>
-                  </div>
-                  <div class="column is-half-desktop is-2-mobile">
-                    <ul class="enumeration-desktop">
-                      <li>Stratégie Data & IA</li>
-                      <li>Gouvernance Data & IA</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3-desktop is-full-mobile">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.dataLab.belongsTo.edges[2].node.coverImage" class />
-                  <figcaption class="is-hidden-desktop">
-                    <p
-                      class="is-pulled-left"
-                      v-html="$static.dataLab.belongsTo.edges[2].node.content"
-                    ></p>
-                  </figcaption>
-                  <div class="column is-hidden-desktop has-text-centered">
-                    <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                    <div class="is-pulled-right">
-                      <a href="#">
-                        <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                      </a>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3-desktop is-hidden-mobile is-full-mobile">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.dataLab.belongsTo.edges[4].node.coverImage" class />
-                </figure>
-                <figcaption class="is-hidden-desktop">
-                  <p v-html="$static.dataLab.belongsTo.edges[4].node.content"></p>
-                </figcaption>
-                <div class="column is-hidden-desktop has-text-centered">
-                  <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                  <div class="is-pulled-right">
-                    <a href="#">
-                      <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-6 is-hidden-desktop">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.dataLab.belongsTo.edges[0].node.coverImage" class />
-                </figure>
-                <figcaption class="is-hidden-desktop">
-                  <p v-html="$static.dataLab.belongsTo.edges[0].node.content"></p>
-                </figcaption>
-                <div class="column is-hidden-desktop has-text-centered">
-                  <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                  <div class="is-pulled-right">
-                    <a href="#">
-                      <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <b>Rintio Data Lab</b>
+              </span>
+              <g-image :src="edge.node.coverImage" class="zoom" />
+              <p v-html="edge.node.content" class="is-mobile"></p>
+              <figcaption>
+                <p
+                  v-html="
+                  edge.node.metaDescription
+                "
+                  class="space"
+                ></p>
+              </figcaption>
+            </figure>
           </div>
         </div>
-      </div>
-      <div class="row is-hidden-mobile">
-        <div class="columns">
-          <div class="column is-6">
-            <div class="is-pulled-left">
-              <p class="is-pullled-left" v-html="$static.dataLab.belongsTo.edges[3].node.content"></p>
-            </div>
-            <div class="is-pulled-right">
-              <ul class="enum-right">
-                <li>Diverisifiez votre activité</li>
-                <li>Pilotez votre activité en teps réel</li>
-                <li>Maîtrisez vos coûts opérationels</li>
-                <li>Optimisez vos processus métier</li>
-              </ul>
-            </div>
-          </div>
-          <div class="column is-3">
-            <p v-html="$static.dataLab.belongsTo.edges[2].node.content"></p>
-          </div>
-          <div class="column is-3">
-            <p v-html="$static.dataLab.belongsTo.edges[4].node.content"></p>
-          </div>
-        </div>
-      </div>
-      <div class="row has-text-centered is-hidden-mobile">
-        <div class="columns">
-          <div class="column is-6">
-            <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-            <div class="is-pulled-right">
-              <a href="#">
-                <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-              </a>
-            </div>
-          </div>
-          <div class="column is-3">
-            <button class="btn-profiter">Profiter de l'offre</button>
-            <div class="is-pulled-right">
-              <a href="#">
-                <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-              </a>
-            </div>
-          </div>
-          <div class="column is-3">
-            <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-            <div class="is-pulled-right">
-              <a href="#">
-                <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top : 30px" class="row">
-        <div class="columns is-maringless">
-          <div class="column is-6">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.dataLab.belongsTo.edges[1].node.coverImage" class />
-                  <figcaption class="is-hidden-desktop">
-                    <p v-html="$static.dataLab.belongsTo.edges[1].node.content"></p>
-                  </figcaption>
-                  <div class="column is-hidden-desktop has-text-centered">
-                    <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                    <div class="is-pulled-right">
-                      <a href="#">
-                        <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                      </a>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
+        <div class="row">
+          <div class="columns is-hidden-mobile" style="padding-top: 0px">
+            <div
+              class="column is-6"
+              v-for="edge in $static.dataLabRow.belongsTo.edges"
+              :key="edge.node.id"
+            >
+              <div class="columns">
+                <div class="column button-container-center" v-if="edge.node.button">
+                  <a class="button is-primary button-link-half">{{ edge.node.button }}</a>
                 </div>
+                <arrowicon class="arrow-pulled" />
               </div>
-            </div>
-          </div>
-          <div class="column is-6 is-hidden-mobile">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.dataLab.belongsTo.edges[0].node.coverImage" class />
-                </figure>
-                <figcaption class="is-hidden-desktop">
-                  <p v-html="$static.dataLab.belongsTo.edges[0].node.content"></p>
-                </figcaption>
-                <div class="column is-hidden-desktop has-text-centered">
-                  <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                  <div class="is-pulled-right">
-                    <a href="#">
-                      <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-hidden-desktop is-full-mobile">
-            <div class="card">
-              <div class="card-image">
-                <figure>
-                  <g-image :src="$static.dataLab.belongsTo.edges[4].node.coverImage" class />
-                </figure>
-                <figcaption class="is-hidden-desktop">
-                  <p v-html="$static.dataLab.belongsTo.edges[4].node.content"></p>
-                </figcaption>
-                <div class="column is-hidden-desktop has-text-centered">
-                  <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-                  <div class="is-pulled-right">
-                    <a href="#">
-                      <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content is-overlay is-fluid">
-                <div class="columns">
-                  <div class="column is-one-two">
-                    <b
-                      class="article-title text-center has-text-primary"
-                      v-html="$static.dataLab.id"
-                    ></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row is-hidden-mobile">
-        <div class="columns">
-          <div class="column is-6">
-            <p v-html="$static.dataLab.belongsTo.edges[1].node.content"></p>
-          </div>
-          <div class="column is-6">
-            <p v-html="$static.dataLab.belongsTo.edges[0].node.content"></p>
-          </div>
-        </div>
-      </div>
-      <div class="row has-text-centered is-hidden-mobile">
-        <div class="columns">
-          <div class="column is-6">
-            <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-            <div class="is-pulled-right">
-              <a href="#">
-                <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-              </a>
-            </div>
-          </div>
-          <div class="column is-6">
-            <button class="btn-profiter has-text-centered">Profiter de l'offre</button>
-            <div class="is-pulled-right">
-              <a href="#">
-                <i class="fal fa-arrow-circle-right fa-1x has-text-primary"></i>
-              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <static-query>
 query {
- dataLab: category(id: "Rintio Data Lab") {
+  dataLab_feature: category(id: "Rintio Data Lab") {
     id
     title
     path
-    belongsTo {
+    belongsTo(limit: 1) {
       edges {
         node {
           ... on Article {
@@ -378,64 +142,228 @@ query {
             path
             content
             metaDescription
+            button
+            path
           }
         }
       }
     }
   }
-  
+
+  dataLab: category(id: "Rintio Data Lab") {
+    id
+    title
+    path
+    belongsTo(skip: 1, limit: 2) {
+      edges {
+        node {
+          ... on Article {
+            id
+            title
+            coverImage
+            path
+            content
+            metaDescription
+            button
+            path
+          }
+        }
+      }
+    }
+  }
+
+  dataLabRow: category(id: "Rintio Data Lab") {
+    id
+    title
+    path
+    belongsTo(skip: 3, limit: 2) {
+      edges {
+        node {
+          ... on Article {
+            id
+            title
+            coverImage
+            path
+            content
+            metaDescription
+            button
+            path
+          }
+        }
+      }
+    }
+  }
 }
-
-
 </static-query>
 
 <script>
-export default {};
+import arrowicon from "~/components/arrow-icon.vue";
+
+export default {
+  components: { arrowicon },
+};
 </script>
 
-<style>
-.article-title {
-  padding: 10px;
-  background-color: #fff;
-  font-size: 10px;
+<style scoped>
+.zoom {
+  transition: transform 0.5s; /* Animation */
 }
-.enumeration-mobile {
-  list-style-type: disc;
-  margin-left: 5%;
+.zoom:hover {
+  transform: scale(
+    0.98
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-
-.enumeration-desktop {
-  list-style-type: disc;
-  margin-left: 10px;
+#bouton1mob {
+  position: absolute;
+  left: 30px;
 }
-.btn-profiter {
-  background-color: #134a7f;
-  color: #fff;
-  border: none;
-  height: 30px;
+#bouton2mob {
+  position: relative;
+  top: -40px;
+  left: -160px;
 }
-
-.description-image1-mobile {
-  background-color: #474444bd;
-  margin: 30% 5% 40% 5%;
-  color: #fff;
+#bouton3mob {
+  position: relative;
+  top: -40px;
+  left: 10px;
 }
 
-.description-image1 {
-  margin: 30% 5% 5% 5%;
-  background-color: #474444bd;
-  color: #fff;
+#bouton22mob {
+  position: relative;
+  top: -60px;
+}
+.space {
+  padding-top: 10px;
+}
+.inscrireWSFF {
+  border-color: transparent !important;
+  font-size: 16px !important;
+}
+.inscrireWSFF {
+  position: relative;
+  bottom: 80px;
+  left: 250px;
+}
+.inscrireWSF {
+  position: relative;
+  bottom: 70px;
+  left: 300px;
+}
+.inscrireFeature {
+  position: relative;
+  bottom: 130px;
+}
+.inscrireWS {
+  position: relative;
+  top: -70px;
+  left: 90px;
+}
+.realisationWS {
+  position: relative;
+  bottom: -50px;
+  left: 20px;
+  z-index: 1;
+  border-radius: 0px;
 }
 .card {
   box-shadow: none;
 }
-
-.enum-img1 {
+.shadow_1 {
+  background-color: #54514db8;
+  opacity: 0.9;
+  color: white;
+  padding-left: 1.5%;
+  font-size: 14px;
+  position: relative;
+  bottom: -75%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
   margin-top: -20%;
-  list-style-type: disc;
 }
-.enum-right {
-  margin-top: 10%;
-  list-style-type: disc;
+
+.button-link {
+  font-size: 12px;
+  padding-left: 6%;
+  padding-right: 6%;
+  margin-bottom: 5%;
+}
+
+.button-link-half {
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 12px;
+  margin-bottom: 5%;
+}
+
+.button-link-half-d {
+  padding-left: 17%;
+  padding-right: 17%;
+  font-size: 12px;
+  margin-bottom: 5%;
+}
+
+.button-container-center {
+  text-align: center;
+}
+
+.button-container {
+  margin-top: -8%;
+  margin-bottom: 4%;
+}
+
+.button-container-fluid {
+  margin-top: -18%;
+  margin-bottom: 4%;
+}
+
+.button-container-fluid-large {
+  margin-top: -10%;
+}
+
+.arrow-wrapper {
+  margin-top: -9%;
+}
+
+.arrow-pulled {
+  margin-top: 0%;
+  margin-right: 2em;
+  margin-left: 0em;
+}
+
+@media only screen and (max-width: 415px) {
+  .content-14 {
+    font-size: 14px;
+  }
+
+  .wrapper_container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .shadow_1 {
+    background-color: #54514db8;
+    opacity: 0.9;
+    color: white;
+    padding-left: 1.5%;
+    font-size: 14px;
+    position: relative;
+    bottom: -75%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    margin-top: -40%;
+  }
+
+  .button-container-fluid-large {
+    margin-top: -15%;
+  }
+
+  .button-link {
+    font-size: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5%;
+  }
 }
 </style>

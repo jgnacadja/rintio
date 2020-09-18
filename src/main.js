@@ -6,7 +6,8 @@ import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
 import "~/main.scss";
 import axios from "axios";
-import '~/assets/font-awesome/all.js'
+import "~/assets/font-awesome/all.js";
+import { VLazyImagePlugin } from "v-lazy-image";
 
 export default function(Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
@@ -23,7 +24,7 @@ export default function(Vue, { router, head, isClient }) {
     rel: "stylesheet",
     href: "https://use.typekit.net/bur4tax.css",
   });
-  
+
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
@@ -41,6 +42,8 @@ export default function(Vue, { router, head, isClient }) {
 
   head.link.push({
     rel: "stylesheet",
-    href: 'slick/slick.css',
+    href: "slick/slick.css",
   });
+
+  Vue.use(VLazyImagePlugin);
 }

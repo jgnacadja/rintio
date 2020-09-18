@@ -4,8 +4,8 @@ published: true
 categories: ["Nos offres feature"]
 date: 2020-07-26
 coverImage: /img/articles/ID2GLBDTYq_4x.png
-descriptionUp: .Strategie Data & IA
-descriptionDown: .Strategie de transformation numériques.
+descriptionUp: • Strategie Data & IA
+descriptionDown: • Strategie de transformation numériques.
 
 ---
  

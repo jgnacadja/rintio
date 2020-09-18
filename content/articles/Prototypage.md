@@ -1,9 +1,11 @@
 ---
-title: Prototypaged
+title: Prototypage & généralisation
 published: true
 categories: ["Rintio Data Lab"]
-date: 2020-07-28
+date: 2020-07-31
 coverImage: /img/articles/ID700226d13b56ab5f2f0330a17a7e.png
+button: Profiter de l'offre
+path:
 ---
 
 **Prototypage & Généralisation**  

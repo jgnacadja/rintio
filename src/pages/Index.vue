@@ -21,6 +21,14 @@
         </div>
       </div>
     </div>
+    <div class="wrapper_container wrapper_container-plus-less">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Offres</h1>
+        </div>
+      </div>
+    </div>
+    <Nosoffres />
     <div class="wrapper_container wrapper_container-less">
       <div class="section section is-fluid" style="padding:0px">
         <div>
@@ -39,6 +47,14 @@
       </div>
     </div>
     <NosExperts />
+    <div class="wrapper_container wrapper_container-plus-less">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Rintio Data Lab</h1>
+        </div>
+      </div>
+    </div>
+    <Rintiodatalab />
     <div class="wrapper_container">
       <div class="section section is-fluid" style="padding:0px">
         <div>
@@ -117,7 +133,7 @@ body {
 }
 
 .wrapper_container {
-  padding-left: 5%;
+  padding-left: 2%;
   padding-right: 5%;
 }
 
