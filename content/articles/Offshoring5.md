@@ -10,4 +10,4 @@ metaDescription: Rintio Accompagne <a href=""> Finense </a> dans le développeme
 
 ## Offshoring 
 
-Rintio Accompagne Finense dans le développement de ses solutions Comptables.
+Rintio Accompagne Finense dans le développement de ses solutions FinTech.

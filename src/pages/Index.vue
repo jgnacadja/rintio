@@ -75,7 +75,15 @@
       </div>
     </div>
     <Ilsnousfontconfiance />
-    <div class="wrapper_container wrapper_container-less">
+    <div class="wrapper_container wrapper_container-plus-unless">
+      <div class="section section is-fluid" style="padding:0px">
+        <div>
+          <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Publications</h1>
+        </div>
+      </div>
+    </div>
+    <Publications />
+    <div class="wrapper_container wrapper_container-unless">
       <div class="section section is-fluid" style="padding:0px">
         <div>
           <h1 class="title is-size-2-tablet is-size-4-mobile has-text-primary">Nos Implantations</h1>
