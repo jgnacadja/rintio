@@ -8,14 +8,14 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        'primary': '#f0fff4',
-        'secondary': '#c6f6d5',
+        'primary': '#014A7F',
+        'secondary': '#FF0C0B',
         'danger': '#e3342f',
       },
       backgroundColor: theme => ({
         ...theme('colors'),
-        'primary': '#f0fff4',
-        'secondary': '#c6f6d5',
+        'primary': '#014A7F',
+        'secondary': '#FF0C0B',
         'danger': '#e3342f',
        }),
       fontFamily: {
