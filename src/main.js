@@ -9,41 +9,60 @@ import axios from "axios";
 import "~/assets/font-awesome/all.js";
 import { VLazyImagePlugin } from "v-lazy-image";
 
-export default function(Vue, { router, head, isClient }) {
-  // Add attributes to HTML tag
-  head.htmlAttrs = { lang: "fr" };
+import VueScrollTo from 'vue-scrollto'
 
-  // import vue meta
-  head.meta.push({
-    name: "viewport",
-    content: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
-  });
+import Typography from 'typography'
 
-  // Import Adobe Fonts
-  head.link.push({
-    rel: "stylesheet",
-    href: "https://use.typekit.net/bur4tax.css",
-  });
+const typography = new Typography({
+    baseFontSize: '18px',
+    baseLineHeight: 1.6,
+    scaleRatio: 1.9,
+    headerFontFamily: ['Open Sans', 'sans-serif'],
+    bodyFontFamily: ['Roboto', 'sans-serif'],
+})
 
-  // Set default layout as a global component
-  Vue.component("Layout", DefaultLayout);
+export default function (Vue, { router, head, isClient }) {
+    // Add attributes to HTML tag
+    head.htmlAttrs = { lang: "fr" };
 
-  // Register our Bulma component library
-  Vue.use(Buefy);
+    // import vue meta
+    head.meta.push({
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
+    });
 
-  //http requests via axios
-  Vue.use({
-    install(Vue) {
-      Vue.prototype.$api = axios.create({
-        baseURL: "https://api.sendgrid.com/v3/mail",
-      });
-    },
-  });
+    // Import Adobe Fonts
+    head.link.push({
+        rel: "stylesheet",
+        href: "https://use.typekit.net/bur4tax.css",
+    });
 
-  head.link.push({
-    rel: "stylesheet",
-    href: "slick/slick.css",
-  });
+    // Set default layout as a global component
+    Vue.component("Layout", DefaultLayout);
 
-  Vue.use(VLazyImagePlugin);
+    // Register our Bulma component library
+    Vue.use(Buefy);
+
+    //http requests via axios
+    Vue.use({
+        install(Vue) {
+            Vue.prototype.$api = axios.create({
+                baseURL: "https://api.sendgrid.com/v3/mail",
+            });
+        },
+    });
+
+    head.link.push({
+        rel: "stylesheet",
+        href: "slick/slick.css",
+    });
+
+    Vue.use(VLazyImagePlugin);
+
+    Vue.use(VueScrollTo);
+
+    head.style.push({
+        type: 'text/css',
+        cssText: typography.toString()
+    });
 }
