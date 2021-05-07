@@ -10,3 +10,6 @@ dist
 .history
 
 .vercel
+
+package-lock.json
+yarn.lock

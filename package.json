@@ -11,8 +11,6 @@
     "@gridsome/transformer-remark": "^0.6.2",
     "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
-    "buefy": "^0.8.20",
-    "bulma": "^0.8.2",
     "fs": "0.0.1-security",
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-youtube": "^1.0.1",
@@ -32,6 +30,11 @@
   },
   "devDependencies": {
     "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

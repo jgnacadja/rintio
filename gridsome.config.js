@@ -4,10 +4,19 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const tailwindcss = require("tailwindcss");
+
 module.exports = {
-  siteName: 'Rintio',
+  siteName: "Rintio",
   siteDescription: "We involve for a better life",
-  icon: './src/assets/rintio_favicon.png',
+  icon: "./src/assets/rintio_favicon.png",
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [tailwindcss],
+      },
+    },
+  },
   plugins: [
     {
       // Create posts from markdown files
@@ -19,14 +28,25 @@ module.exports = {
           // Creates a GraphQL collection from 'categories' in front-matter and adds a reference.
           categories: {
             typeName: "Category",
-            create: true
-          }
-        }
-      }
+            create: true,
+          },
+        },
+      },
+    },
+    {
+      use: "gridsome-plugin-tailwindcss",
+
+      // these options are optional, as they are copies of the default values...
+      options: {
+        tailwindConfig: "./tailwind.config.js",
+        presetEnvConfig: {},
+        shouldImport: false,
+        shouldTimeTravel: false,
+      },
     },
   ],
   templates: {
     Article: "/article/:title",
     Category: "/category/:title",
-  }
-}
+  },
+};

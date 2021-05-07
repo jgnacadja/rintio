@@ -2,9 +2,9 @@
   <div>
     <transition name="fade" appear>
       <main>
-        <Mainmenu />
+        <!-- <Mainmenu />
         <slot />
-        <Footer />
+        <Footer /> -->
       </main>
     </transition>
   </div>
@@ -14,13 +14,13 @@
 </style>
 
 <script>
-import Mainmenu from "~/components/Mainmenu.vue";
-import Footer from "~/components/Footer.vue";
+//import Mainmenu from "~/components/Mainmenu.vue";
+//import Footer from "~/components/Footer.vue";
 
 export default {
   components: {
-    Mainmenu,
-    Footer,
+    //Mainmenu,
+    //Footer,
   },
 };
 </script>
