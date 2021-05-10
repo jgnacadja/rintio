@@ -45,6 +45,33 @@ module.exports = {
       },
     },
   ],
+
+  chainWebpack(config, { isServer }) {
+    config.module.rules.delete("svg");
+    config.module
+      .rule("svg")
+      .test(/\.svg$/)
+      .use("vue")
+      .loader("vue-loader")
+      .end()
+      .use("svg-to-vue-component")
+      .loader("svg-to-vue-component/loader");
+
+    if (isServer) {
+      config.externals(
+        nodeExternals({
+          whitelist: [
+            /\.css$/,
+            /\?vue&type=style/,
+            /vue-instantsearch/,
+            /instantsearch.js/,
+            /typeface-league-spartan/,
+          ],
+        })
+      );
+    }
+  },
+
   templates: {
     Article: "/article/:title",
     Category: "/category/:title",

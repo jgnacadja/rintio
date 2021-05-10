@@ -1,16 +1,26 @@
 <template>
-  <footer class="bg-gray-700">
-    <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
+  <footer class="bg-primary">
+    <div class="max-w-6xl m-auto text-white flex flex-wrap justify-left">
       <!-- Col-1 -->
+      <div class="p-5 w-full sm:w-4/12 md:w-3/12">
+        <Logo />
+      </div>
     </div>
 
     <!-- Copyright Bar -->
-    <div class="bg-gray-600">
-      <div
-        class="flex px-3 m-auto py-2 bg-gray-900 text-gray-400 text-sm flex-col md:flex-row max-w-6xl text-center sm:text-left"
-      >
+    <div class="bg-secondary">
+      <div class="px-3 m-auto py-4 font-bold text-white text-center">
         Rintio 2019 © Tous droits réservés
       </div>
     </div>
   </footer>
 </template>
+
+<script>
+import Logo from "./Logo";
+export default {
+  components: {
+    Logo,
+  },
+};
+</script>

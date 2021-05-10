@@ -2,8 +2,8 @@
   <div>
     <transition name="fade" appear>
       <main>
-        <Nav />
-        <slot />
+<!--         <Nav />
+ -->        <slot />
         <Footer />
       </main>
     </transition>
@@ -14,12 +14,12 @@
 </style>
 
 <script>
-import Nav from "./partials/Nav.vue";
+//import Nav from "./partials/Nav.vue";
 import Footer from "./partials/Footer.vue";
 
 export default {
   components: {
-    Nav,
+    //Nav,
     Footer,
   },
 };
