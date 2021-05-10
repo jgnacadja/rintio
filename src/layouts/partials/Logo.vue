@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <g-link to="/" title="Back to home">
-      <Logo alt="Rintio.com" />
+      <Logo class="w-44" alt="Rintio.com" />
     </g-link>
   </div>
 </template>
