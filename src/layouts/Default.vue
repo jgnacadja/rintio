@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="fade" appear>
-      <main>
+      <main class="main-bg">
         <div class="flex justify-between">
           <Logo class="mx-12 my-6" />
           <Nav />
@@ -26,3 +26,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.main-bg {
+  background-color: #fbfbfb;
+}
+</style>

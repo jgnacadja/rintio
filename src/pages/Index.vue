@@ -1,13 +1,10 @@
 <template>
-  <Layout>
-  </Layout>
+  <Layout> </Layout>
 </template>
 
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
   metaInfo: {
     title: "We involve for a better life",
   },
@@ -16,4 +13,3 @@ export default {
 
 <style
 </style>
-
