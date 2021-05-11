@@ -18,6 +18,12 @@ module.exports = {
         'secondary': '#FF0C0B',
         'danger': '#e3342f',
        }),
+       borderColor: theme => ({
+        ...theme('colors'),
+        'primary': '#014A7F',
+        'secondary': '#FF0C0B',
+        'danger': '#e3342f',
+       }),
       fontFamily: {
         openSans: ['Open Sans', 'sans-serif'],
         roboto: ['Roboto', 'serif'],
@@ -25,7 +31,9 @@ module.exports = {
     },
   },
   variants: {
-    fontWeight: ['hover'],
+    fontWeight:   ['hover'],
+    borderWidth:  ['hover'],
+    borderStyle:  ['hover'],
   },
   plugins: [],
 };

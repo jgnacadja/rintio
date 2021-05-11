@@ -2,24 +2,26 @@
   <div>
     <transition name="fade" appear>
       <main>
-<!--         <Nav />
- -->        <slot />
+        <div class="flex justify-between">
+          <Logo class="mx-12 my-6" />
+          <Nav />
+        </div>
+        <slot />
         <Footer />
       </main>
     </transition>
   </div>
 </template>
 
-<style lang="css" scoped>
-</style>
-
 <script>
-//import Nav from "./partials/Nav.vue";
+import Logo from "~/assets/images/rintio-logo-small.svg";
+import Nav from "./partials/Nav.vue";
 import Footer from "./partials/Footer.vue";
 
 export default {
   components: {
-    //Nav,
+    Logo,
+    Nav,
     Footer,
   },
 };
