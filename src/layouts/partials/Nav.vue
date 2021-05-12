@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex px-10 h-24">
+  <nav class="flex px-10 h-24 hidden md:flex">
     <div class="mx-auto text-center w-40 border-b-8 border-secondary">
       <div class="h-full pt-10">
         <g-link to="/">
