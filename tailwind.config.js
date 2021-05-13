@@ -24,6 +24,9 @@ module.exports = {
         'secondary': '#FF0C0B',
         'danger': '#e3342f',
        }),
+       backgroundImage: theme => ({
+        'map': "url('/src/assets/images/home/map.png')",
+       }),
       fontFamily: {
         openSans: ['Open Sans', 'sans-serif'],
         roboto: ['Roboto', 'serif'],
@@ -34,6 +37,9 @@ module.exports = {
     fontWeight:   ['hover'],
     borderWidth:  ['hover'],
     borderStyle:  ['hover'],
+    animation: ["responsive", "motion-safe", "motion-reduce", "hover"],
+    translate: ["active", "hover", "group-hover"],
+
   },
   plugins: [],
 };
