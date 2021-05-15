@@ -1,6 +1,10 @@
 <template>
   <Layout>
     <LazyHydrate when-visible>
+      <Blog />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
       <Map />
     </LazyHydrate>
   </Layout>
@@ -8,11 +12,13 @@
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
+import Blog from "~/components/home/Blog.vue";
 import Map from "~/components/home/Map.vue";
 
 export default {
   components: {
     LazyHydrate,
+    Blog,
     Map,
   },
   metaInfo: {

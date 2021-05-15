@@ -98,12 +98,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  components: {},
-};
-</script>
-
 <style scoped>
 .bg-map {
   background-image: url("./../../../static/images/home/map.png");
