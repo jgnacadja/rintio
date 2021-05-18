@@ -86,7 +86,7 @@
           >
             <g-image
               alt="iot"
-              src="~/assets/images/home/story/atut2020.png"
+              src="~/assets/images/home/story/sgmaroc.png"
               class="object-cover w-full h-52 mb-0"
             />
 
@@ -105,7 +105,7 @@
           >
             <g-image
               alt="iot"
-              src="~/assets/images/home/story/atut2020.png"
+              src="~/assets/images/home/story/idermato.png"
               class="object-cover w-full h-52 mb-0"
             />
 
