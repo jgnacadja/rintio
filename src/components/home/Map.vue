@@ -104,14 +104,14 @@
 }
 
 .bg-map-cotonou {
-  background-image: url("./../../../static/images/home/cotonou.png");
+  background-image: url("./../../../static/images/home/map/cotonou.png");
 }
 
 .bg-map-paris {
-  background-image: url("./../../../static/images/home/paris.png");
+  background-image: url("./../../../static/images/home/map/paris.png");
 }
 
 .bg-map-abidjan {
-  background-image: url("./../../../static/images/home/abidjan.png");
+  background-image: url("./../../../static/images/home/map/abidjan.png");
 }
 </style>

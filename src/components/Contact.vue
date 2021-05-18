@@ -24,7 +24,7 @@
 
             <div class="mx-4 md:mx-0 pt-6">
               <h1
-                class="my-3 text-xl md:text-7xl font-extrabold text-primary capitalize"
+                class="my-3 text-xl md:text-5xl font-extrabold text-primary capitalize"
               >
                 Pour plus d'<span class="text-secondary">informations</span>
               </h1>
