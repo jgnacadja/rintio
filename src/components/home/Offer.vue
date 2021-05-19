@@ -95,7 +95,7 @@
                 <div
                   class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
                 >
-                  Offshoring Un développeur à partir de 50€ / Jour
+                  Un développeur à partir de 50€ / Jour
                 </div>
 
                 <div

@@ -20,18 +20,18 @@
     <div class="md:flex container mx-auto space-x-0 md:space-x-6 w-full">
       <!-- main story -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white h-full"
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
       >
         <g-image
           alt="iot"
           src="~/assets/images/home/story/coraq.png"
-          class="object-cover w-full max-h-24px mb-0"
+          class="object-cover w-full mb-0"
         />
 
         <p class="text-primary font-bold my-4 leading-tight text-xl mx-4">
           CHMP Coraq-lab
         </p>
-        <p class="text-gray-600 mb-4 mx-4 text-base md:pb-24">
+        <p class="text-gray-600 mb-4 mx-4 text-base">
           Lancement de la
         </p>
       </div>
