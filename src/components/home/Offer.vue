@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-offer md:px-16 flex w-full justify-center py-6 md:py-24">
-    <div class="md:w-1/4">
+  <div class="bg-offer md:px-16 md:flex w-full justify-center py-6 md:py-24">
+    <div class="w-full md:w-1/4 mb-8 md:mb-0">
       <div class="mx-4 md:mx-0">
         <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
           Nos offres
@@ -40,14 +40,14 @@
       </div>
     </div>
 
-    <div class="w-3/4 flex-row flex-wrap hidden md:flex">
-      <div class="w-full md:flex space-x-6">
+    <div class="w-full md:w-3/4 flex-row flex-wrap flex">
+      <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
         <div class="w-full md:w-2/3">
           <div
-            class="shadow-lg group container bg-white w-full bg-center bg-cover bg-no-repeat bg-offshoring h-full"
+            class="shadow-lg group container bg-white w-full bg-center bg-cover bg-no-repeat bg-offshoring h-full xs:mx-auto sm:mx-auto"
           >
             <div class="w-full overflow-hidden">
-              <div class="w-full h-96"></div>
+              <div class="w-full h-40 md:h-96"></div>
               <div class="w-full relative px-4 pb-4 pt-8">
                 <div
                   class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
