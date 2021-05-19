@@ -40,10 +40,96 @@
       </div>
     </div>
 
-    <div
-      class="w-3/4 flex-row justify-center items-start flex-wrap mx-auto hidden md:flex"
-    >
-      <div class="bgmap">1</div>
+    <div class="w-3/4 flex-row flex-wrap hidden md:flex">
+      <div class="w-full md:flex space-x-6">
+        <div class="w-full md:w-2/3">
+          <div
+            class="shadow-lg group container bg-white w-full bg-center bg-cover bg-no-repeat bg-offshoring h-full"
+          >
+            <div class="w-full overflow-hidden">
+              <div class="w-full h-96"></div>
+              <div class="w-full relative px-4 pb-4 pt-8">
+                <div
+                  class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                >
+                  Offshoring
+                </div>
+
+                <div
+                  class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
+                >
+                  Concentrez vous sur votre cœur d’activité.
+                </div>
+
+                <div
+                  class="text-white tracking-wider leading-relaxed font-sans text-xs flex flex-row justify-between"
+                >
+                  <div>
+                    • Dev. Python Java Php <br />
+                    • Admin. cloud & Infra
+                  </div>
+
+                  <div>
+                    • Migration Cloud <br />
+                    • DevOps
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/3 space-y-6">
+          <div
+            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
+          >
+            <div class="w-full overflow-hidden">
+              <div class="w-full h-40"></div>
+              <div class="w-full relative px-4 pb-4">
+                <div
+                  class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                >
+                  Offshoring
+                </div>
+
+                <div
+                  class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
+                >
+                  Offshoring Un développeur à partir de 50€ / Jour
+                </div>
+
+                <div
+                  class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                >
+                  #Python #Java #Php. 1 mois offert.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+          >
+            <div class="w-full overflow-hidden">
+              <div class="w-full h-40"></div>
+              <div class="w-full relative px-4 pb-4">
+                <div
+                  class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                >
+                  Data Lab
+                </div>
+
+                <div
+                  class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                >
+                  Accélérez votre croissance en exploitant pleinement
+                  lepotentiel de vos données.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -51,5 +137,17 @@
 <style scoped>
 .bg-offer {
   background-image: url("./../../../static/images/home/offer.png");
+}
+
+.bg-offshoring {
+  background-image: url("./../../../static/images/home/offer/offshoring.png");
+}
+
+.bg-offshoring_2 {
+  background-image: url("./../../../static/images/home/offer/offshoring2.png");
+}
+
+.bg-datalab {
+  background-image: url("./../../../static/images/home/offer/datalab.png");
 }
 </style>
