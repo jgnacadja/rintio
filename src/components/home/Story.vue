@@ -124,18 +124,18 @@
   </div>
 </template>
 
-<script>
-import Arrow from "~/assets/images/icons/arrow.svg";
-import Like from "~/assets/images/icons/like.svg";
-import Comment from "~/assets/images/icons/comment.svg";
-import Share from "~/assets/images/icons/share.svg";
+  <script>
+  import Arrow from "~/assets/images/icons/arrow.svg";
+  import Like from "~/assets/images/icons/like.svg";
+  import Comment from "~/assets/images/icons/comment.svg";
+  import Share from "~/assets/images/icons/share.svg";
 
-export default {
-  components: {
-    Arrow,
-    Like,
-    Comment,
-    Share,
-  },
-};
-</script>
+  export default {
+    components: {
+      Arrow,
+      Like,
+      Comment,
+      Share,
+    },
+  };
+  </script>

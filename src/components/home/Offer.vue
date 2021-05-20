@@ -21,7 +21,7 @@
           class="my-3 text-xl md:text-5xl font-extrabold capitalize text-primary"
         >
           Prestation<br />
-          <span class="text-secondary">Client</span>
+          <span class="text-secondary capitalize">client</span>
         </h1>
 
         <p class="my-3 text-sm">
@@ -32,7 +32,7 @@
         <div class="mt-4 text-center">
           <button
             type="submit"
-            class="px-3 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm focus:bg-secondary focus:outline-none uppercase"
+            class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm focus:bg-secondary focus:outline-none uppercase"
           >
             Tout consulter
           </button>

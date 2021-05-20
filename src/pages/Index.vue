@@ -1,6 +1,10 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
+      <About />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
       <Offer />
     </LazyHydrate>
 
@@ -24,6 +28,7 @@
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
+import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue";
 import Story from "~/components/home/Story.vue";
 import Partner from "~/components/home/Partner.vue";
@@ -33,6 +38,7 @@ import Map from "~/components/home/Map.vue";
 export default {
   components: {
     LazyHydrate,
+    About,
     Offer,
     Story,
     Partner,
