@@ -46,9 +46,9 @@
           <div
             class="shadow-lg group container bg-white w-full bg-center bg-cover bg-no-repeat bg-offshoring h-full xs:mx-auto sm:mx-auto"
           >
-            <div class="w-full overflow-hidden">
-              <div class="w-full h-40 md:h-96"></div>
-              <div class="w-full relative px-4 pb-4 pt-8">
+            <div class="w-full overflow-hidden md:h-full">
+              <div class="w-full h-40 md:h-full"></div>
+              <div class="w-full relative px-4 pb-4 md:-mt-24 md:h-full">
                 <div
                   class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
                 >

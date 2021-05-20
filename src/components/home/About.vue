@@ -1,9 +1,22 @@
 <template>
   <div
-    class="bg-offer md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6"
+    class="bg-offer md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6 mt-20 md:mt-0"
   >
-    <div class="w-full md:w-1/2 flex-row flex-wrap flex">
-      <Circle />
+    <div class="w-full md:w-1/2 items-center justify-center mx-auto hidden md:block">
+      <div class="relative">
+        <g-image
+          class="absolute -top-12 left-0"
+          src="~/assets/images/home/about/about.png"
+          alt="Workplace"
+          width="600"
+        />
+
+        <g-image
+          class="absolute -top-12 p-20"
+          src="~/assets/images/home/about/team.png"
+          width="600"
+        />
+      </div>
     </div>
 
     <div class="w-full md:w-1/2 mb-8 md:mb-0">
@@ -59,29 +72,11 @@
 </template>
 
 <style scoped>
-.bg-offer {
-  background-image: url("./../../../static/images/home/offer.png");
+.bg-about {
+  background-image: url("./../../../static/images/home/about/about.png");
 }
 
-.bg-offshoring {
-  background-image: url("./../../../static/images/home/offer/offshoring.png");
-}
-
-.bg-offshoring_2 {
-  background-image: url("./../../../static/images/home/offer/offshoring2.png");
-}
-
-.bg-datalab {
-  background-image: url("./../../../static/images/home/offer/datalab.png");
+.bg-about-team {
+  background-image: url("./../../../static/images/home/about/team.png");
 }
 </style>
-
-<script>
-import Circle from "~/assets/images/home/about/circle.svg";
-
-export default {
-  components: {
-    Circle,
-  },
-};
-</script>

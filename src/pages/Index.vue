@@ -1,6 +1,10 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
+      <Homeslider />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
       <About />
     </LazyHydrate>
 
@@ -28,6 +32,7 @@
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
+import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue";
 import Story from "~/components/home/Story.vue";
@@ -38,6 +43,7 @@ import Map from "~/components/home/Map.vue";
 export default {
   components: {
     LazyHydrate,
+    Homeslider,
     About,
     Offer,
     Story,

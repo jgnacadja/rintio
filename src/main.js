@@ -11,6 +11,7 @@ import { VLazyImagePlugin } from "v-lazy-image";
 import VueScrollTo from 'vue-scrollto'
 
 import Typography from 'typography'
+import $ from 'jquery';
 
 const typography = new Typography({
     baseFontSize: '18px',
