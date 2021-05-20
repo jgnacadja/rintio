@@ -218,7 +218,7 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:pl-0">
+    <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
       <button
         href="#"
         class="py-8 mt-2 flex md:text-lg font-medium hover:text-secondary w-auto"

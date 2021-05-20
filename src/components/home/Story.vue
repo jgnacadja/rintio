@@ -1,5 +1,5 @@
 <template>
-  <div class="items-center w-full justify-center py-6 md:py-24">
+  <div class="items-center w-full justify-center py-6 md:py-24 md:px-20">
     <div class="text-center">
       <h1
         class="my-3 text-xl md:text-5xl font-extrabold text-primary uppercase"
@@ -31,9 +31,7 @@
         <p class="text-primary font-bold my-4 leading-tight text-xl mx-4">
           CHMP Coraq-lab
         </p>
-        <p class="text-gray-600 mb-4 mx-4 text-base">
-          Lancement de la
-        </p>
+        <p class="text-gray-600 mb-4 mx-4 text-base">Lancement de la</p>
       </div>
 
       <!-- sub-main story -->
@@ -125,17 +123,17 @@
 </template>
 
   <script>
-  import Arrow from "~/assets/images/icons/arrow.svg";
-  import Like from "~/assets/images/icons/like.svg";
-  import Comment from "~/assets/images/icons/comment.svg";
-  import Share from "~/assets/images/icons/share.svg";
+import Arrow from "~/assets/images/icons/arrow.svg";
+import Like from "~/assets/images/icons/like.svg";
+import Comment from "~/assets/images/icons/comment.svg";
+import Share from "~/assets/images/icons/share.svg";
 
-  export default {
-    components: {
-      Arrow,
-      Like,
-      Comment,
-      Share,
-    },
-  };
-  </script>
+export default {
+  components: {
+    Arrow,
+    Like,
+    Comment,
+    Share,
+  },
+};
+</script>
