@@ -29,11 +29,9 @@
       class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
     >
       <div class="h-full pt-10">
-        <g-link to="/offres">
-          <span class="font-bold uppercase font-openSans my-auto"
-            >Nos offres</span
-          >
-        </g-link>
+        <span class="font-bold uppercase font-openSans my-auto"
+          >Nos offres</span
+        >
       </div>
     </div>
 
@@ -42,9 +40,7 @@
       class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
     >
       <div class="h-full pt-10">
-        <g-link to="/blog">
-          <span class="font-bold uppercase font-openSans my-auto">Blog</span>
-        </g-link>
+        <span class="font-bold uppercase font-openSans my-auto">Blog</span>
       </div>
     </div>
   </nav>
