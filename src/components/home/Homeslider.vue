@@ -2,7 +2,7 @@
   <div class="sliderAx">
     <div id="slider-1">
       <div
-        class="bg-cover bg-center md:h-slide text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-1"
+        class="bg-cover bg-center md:h-screen text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-1"
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -29,7 +29,7 @@
 
     <div id="slider-2">
       <div
-        class="bg-cover bg-center md:h-slide text-black py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-2"
+        class="bg-cover bg-center md:h-screen text-black py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-2"
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -54,7 +54,7 @@
 
     <div id="slider-3">
       <div
-        class="bg-cover bg-center md:h-slide text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3"
+        class="bg-cover bg-center md:h-screen text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3"
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -99,7 +99,6 @@
 
 <script>
 export default {
-  name: "Index",
   data() {
     return {
       counter: 0,

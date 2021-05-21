@@ -5,6 +5,8 @@ const tailwindcss = require("tailwindcss");
 module.exports = {
   siteName: "Rintio",
   siteDescription: "We involve for a better life",
+  siteUrl: `https://rintio.com`,
+  titleTemplate: "Rintio - %s",
   icon: "./src/assets/rintio_favicon.png",
   css: {
     loaderOptions: {

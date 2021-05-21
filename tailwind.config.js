@@ -31,9 +31,6 @@ module.exports = {
         openSans: ['Open Sans', 'sans-serif'],
         roboto: ['Roboto', 'serif'],
       },
-      height: theme => ({
-        "slide": "35em",
-      }),
     },
   },
   variants: {
