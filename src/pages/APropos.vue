@@ -16,7 +16,7 @@
       <Experts />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-idle>
       <Stats />
     </LazyHydrate>
 

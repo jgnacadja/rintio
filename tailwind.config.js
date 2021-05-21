@@ -17,6 +17,7 @@ module.exports = {
         'primary': '#014A7F',
         'secondary': '#FF0C0B',
         'danger': '#e3342f',
+        'colorblind': '#FFD80B',
        }),
        borderColor: theme => ({
         ...theme('colors'),
