@@ -58,7 +58,7 @@ module.exports = {
     if (isServer) {
       config.externals(
         nodeExternals({
-          whitelist: [
+          allowlist: [
             /\.css$/,
             /\?vue&type=style/,
             /vue-instantsearch/,

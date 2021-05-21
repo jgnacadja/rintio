@@ -6,12 +6,10 @@ import DefaultLayout from "~/layouts/Default.vue";
 import "~/main.scss";
 import axios from "axios";
 import "~/assets/font-awesome/all.js";
-import { VLazyImagePlugin } from "v-lazy-image";
 
 import VueScrollTo from 'vue-scrollto'
 
 import Typography from 'typography'
-import $ from 'jquery';
 
 const typography = new Typography({
     baseFontSize: '18px',
@@ -33,8 +31,6 @@ export default function (Vue, { router, head, isClient }) {
 
     // Set default layout as a global component
     Vue.component("Layout", DefaultLayout);
-
-    Vue.use(VLazyImagePlugin);
 
     Vue.use(VueScrollTo);
 
