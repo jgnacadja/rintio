@@ -48,7 +48,7 @@
           >
             <div class="w-full overflow-hidden md:h-full">
               <div class="w-full h-40 md:h-full"></div>
-              <div class="w-full relative px-4 pb-4 md:-mt-24 md:h-full">
+              <div class="w-full relative px-4 pb-4 md:-mt-24">
                 <div
                   class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
                 >
