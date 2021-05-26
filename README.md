@@ -1,3 +1,44 @@
+**tailwind integration and project structure review**
+
+### Features
+
+- TailwindCss Support
+- Typography config
+- Update Project Structure
+- Load Svg as component
+- Refactor Templates In Partials
+- LazyHydrate for defer loader
+- VLazyImage for defer image loader
+
+[Test Deployment Vercel Preview](https://rintio-x-visioncode.vercel.app/)
+
+Revue
+
+- [ ] Mobile Menu
+
+- [ ] Nav Menu Responsivity
+
+- [x] Layouts
+     - [x] Default
+     - [x] Partials
+          - [x] Footer
+          - [x] Logo
+          - [x] Nav
+
+- [x] Components
+     - [x] Contact
+     - [x] Breadcrumb
+     - [x] Home Components
+          - [x] About
+          - [x] Blog
+          - [x] Homeslider
+          - [x] Map
+          - [x] Offer
+          - [x] Partner
+          - [x] Story
+              
+> Build by Lohnsonok
+
 # Default starter for Gridsome
 
 This is the project you get when you run `gridsome create new-project`.
