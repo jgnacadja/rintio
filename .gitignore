@@ -8,5 +8,10 @@ dist
 #.env.*
 .now
 .history
+.vscode
+.idea
 
 .vercel
+
+package-lock.json
+yarn.lock

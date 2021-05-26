@@ -1,272 +1,174 @@
 <template>
-  <section class="container is-fluid">
-    <section>
-      <div class="columns bottom-footer" id="app">
-        <form class="column vue-form is-6-tablet is-12-mobile" @submit.prevent="submit">
-          <!--<div class="error-message">
-            <p v-show="!email.valid">Oh, please enter a valid email address.</p>
-          </div>-->
-          <fieldset>
-            <div>
-              <label class="label" for="name">Nom</label>
-              <input type="text" name="name" id="name" required v-model="name" />
+  <div class="md:flex container">
+    <div class="w-full md:w-1/2">
+      <div class="flex">
+        <div class="mx-auto">
+          <div class="max-w-lg mx-auto my-10">
+            <div class="mx-4 md:mx-0 pt-6">
+              <h1 class="my-3 text-sm font-semibold text-primary uppercase">
+                Contactez-nous
+              </h1>
+              <!-- Title Dot -->
+              <div class="-mt-3">
+                <span
+                  class="inline-block w-20 h-2 rounded-full bg-secondary"
+                ></span>
+                <span
+                  class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
+                ></span>
+                <span
+                  class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
+                ></span>
+              </div>
             </div>
-            <div>
-              <label class="label" for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                :class="{ email , error: !email.valid }"
-                v-model="email.value"
-              />
+
+            <div class="mx-4 md:mx-0 pt-6">
+              <h1
+                class="my-3 text-xl md:text-5xl font-extrabold text-primary capitalize"
+              >
+                Pour plus d'<span class="text-secondary">informations</span>
+              </h1>
+
+              Pour avoir plus d’informations, veuillez contacter notre service
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
 
             <div>
-              <label class="label" for="object">Objet</label>
-              <input type="text" name="object" id="object" required :v-model="object" />
-            </div>
+              <div class="flex p-4 items-center">
+                <div class="w-2/12 text-center">
+                  <button
+                    class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+                  >
+                    <Phone />
+                  </button>
+                </div>
+                <div class="w-10/12 px-4 md:px-0">
+                  <div>+33 6 25 18 40 11</div>
+                  <div>+225 01 07 07 77</div>
+                  <div>+229 97 11 94 79</div>
+                </div>
+              </div>
 
-            <div>
-              <label class="label" for="textarea">Message</label>
-              <textarea
-                class="message"
-                name="textarea"
-                id="textarea"
-                required
-                v-model="message.text"
-                :maxlength="message.maxlength"
-              ></textarea>
-              <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
+              <div class="flex p-4 items-center">
+                <div class="w-2/12 text-center">
+                  <button
+                    class="uppercase p-3 flex items-center bg-secondary text-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+                  >
+                    <Mail />
+                  </button>
+                </div>
+                <div class="w-10/12 px-4 md:px-0">
+                  <div>contact@rintio.com</div>
+                </div>
+              </div>
+
+              <div class="flex p-4 items-center">
+                <div class="w-2/12 text-center">
+                  <button
+                    class="uppercase p-3 flex items-center bg-secondary text-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+                  >
+                    <Location />
+                  </button>
+                </div>
+                <div class="w-10/12 px-4 md:px-0">
+                  <div>
+                    17 Rue Creval Duval, Ruel Malmaison Region Paris/ île de
+                    France.
+                  </div>
+                  <div>Abidjan.</div>
+                  <div>
+                    Carrefour Zogbo, face BOA Bénin imeuble LNB, 1er étage,
+                    Cotonou
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <input type="submit" value="Envoyer" />
-            </div>
-          </fieldset>
-        </form>
+          </div>
+        </div>
       </div>
-    </section>
-  </section>
+    </div>
+    <div class="w-full md:w-1/2">
+      <!-- Contact Form -->
+      <div class="flex items-center">
+        <div class="container mx-auto">
+          <div
+            class="max-w-lg mx-auto my-10 bg-white p-5 rounded-sm shadow-md md:shadow-xl min-h-screen"
+          >
+            <div class="mx-4 md:m-7">
+              <h1 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
+                Envoyer nous un message
+              </h1>
+            </div>
+            <div class="mx-4 md:m-7">
+              <form id="form">
+                <div class="mb-6">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Nom complet"
+                    required
+                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                  />
+                </div>
+                <div class="mb-6">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                  />
+                </div>
+                <div class="mb-6">
+                  <input
+                    type="text"
+                    name="object"
+                    id="object"
+                    placeholder="Objet"
+                    required
+                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                  />
+                </div>
+                <div class="mb-6">
+                  <textarea
+                    rows="5"
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-6">
+                  <button
+                    type="submit"
+                    class="w-full px-3 py-2 md:py-4 text-white text-base md:text-xl bg-secondary rounded-sm focus:bg-secondary focus:outline-none"
+                  >
+                    Envoyer
+                  </button>
+                </div>
+                <p class="text-base text-center text-gray-400" id="result"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
 <script>
-//var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+import Phone from "~/assets/images/icons/phone.svg";
+import Mail from "~/assets/images/icons/envelope.svg";
+import Location from "~/assets/images/icons/maps-and-flags.svg";
+
 export default {
-  data: function () {
-    return {
-      name: "",
-      email: {
-        value: "",
-        valid: true,
-      },
-      object: {
-        value: "",
-      },
-      message: {
-        text: ``,
-        maxlength: 255,
-      },
-      submitted: false,
-    };
-    /*methods: { 
-                // submit form handler
-                submit: function() {
-                this.submitted = true;
-                },
-                // validate by type and value
-                validate: function(type, value) {
-                if (type === "email") {
-                    this.email.valid = this.isEmail(value) ? true : false;
-                }
-                },
-                // check for valid email adress
-                isEmail: function(value) {
-                return emailRegExp.test(value);
-                },
-            },
-            watch: {
-                // watching nested property
-                "email.value": function(value) {
-                this.validate("email", value);
-                }
-                },*/
+  components: {
+    Phone,
+    Mail,
+    Location,
   },
 };
 </script>
-<style>
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400");
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html,
-body,
-.container {
-  min-height: 50vh;
-}
-
-#app {
-  display: flex;
-}
-
-.vue-form {
-  font-size: 16px;
-  padding: 15px 30px;
-  border-radius: 4px;
-  margin-left: 1%;
-}
-
-.vue-form div {
-  position: relative;
-  margin: 20px 0;
-}
-.vue-form h4,
-.vue-form .label {
-  color: #94aab0;
-  margin-bottom: 10px;
-}
-.vue-form .label {
-  display: block;
-}
-.vue-form input,
-.vue-form textarea,
-.vue-form label {
-  color: #2b3e51;
-}
-.vue-form input[type="text"],
-.vue-form input[type="email"],
-.vue-form textarea {
-  display: block;
-  width: 100%;
-  appearance: none;
-}
-.vue-form input[type="text"],
-.vue-form input[type="email"],
-.vue-form textarea {
-  padding: 12px;
-  border: 1px solid #cfd9db;
-  background-color: #ffffff;
-  border-radius: 0.25em;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-.vue-form input[type="text"]:focus,
-.vue-form input[type="email"]:focus,
-.vue-form textarea:focus {
-  outline: none;
-  border-color: #2c3e50;
-  box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
-}
-
-.vue-form .vue-form-list {
-  margin-top: 16px;
-}
-.vue-form .vue-form-list::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.vue-form .vue-form-list li {
-  display: inline-block;
-  position: relative;
-  user-select: none;
-  margin: 0 26px 16px 0;
-  float: left;
-}
-
-.vue-form textarea {
-  min-height: 120px;
-  resize: vertical;
-  overflow: auto;
-}
-.vue-form input[type="submit"] {
-  border: none;
-  background: #2c3e50;
-  border-radius: 0.25em;
-  padding: 12px 20px;
-  color: #ffffff;
-  font-weight: bold;
-  float: right;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  appearance: none;
-}
-.no-touch .vue-form input[type="submit"]:hover {
-  background: #42a2e1;
-}
-.vue-form input[type="submit"]:focus {
-  outline: none;
-  background: #2b3e51;
-}
-.vue-form input[type="submit"]:active {
-  transform: scale(0.9);
-}
-.vue-form .error-message {
-  height: 35px;
-  margin: 0px;
-}
-.vue-form .error-message p {
-  background: #e94b35;
-  color: #ffffff;
-  font-size: 1.4rem;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border-radius: 0.25em;
-  padding: 16px;
-}
-.vue-form .error {
-  border-color: #e94b35 !important;
-}
-.vue-form .counter {
-  background-color: #ecf0f1;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  font-size: 10px;
-  padding: 4px;
-}
-
-@-webkit-keyframes cd-bounce {
-  0%,
-  100% {
-    -webkit-transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.8);
-  }
-}
-@-moz-keyframes cd-bounce {
-  0%,
-  100% {
-    -moz-transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(0.8);
-  }
-}
-@keyframes cd-bounce {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-}
-
-.bottom-footer {
-  padding-bottom: 5%;
-}
-</style>

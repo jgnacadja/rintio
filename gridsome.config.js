@@ -1,13 +1,20 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
+const nodeExternals = require("webpack-node-externals");
 
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwindcss = require("tailwindcss");
 
 module.exports = {
-  siteName: 'Rintio',
+  siteName: "Rintio",
   siteDescription: "We involve for a better life",
-  icon: './src/assets/rintio_favicon.png',
+  siteUrl: `https://rintio.com`,
+  titleTemplate: "Rintio - %s",
+  icon: "./src/assets/rintio_favicon.png",
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [tailwindcss],
+      },
+    },
+  },
   plugins: [
     {
       // Create posts from markdown files
@@ -19,14 +26,52 @@ module.exports = {
           // Creates a GraphQL collection from 'categories' in front-matter and adds a reference.
           categories: {
             typeName: "Category",
-            create: true
-          }
-        }
-      }
+            create: true,
+          },
+        },
+      },
+    },
+    {
+      use: "gridsome-plugin-tailwindcss",
+
+      // these options are optional, as they are copies of the default values...
+      options: {
+        tailwindConfig: "./tailwind.config.js",
+        presetEnvConfig: {},
+        shouldImport: false,
+        shouldTimeTravel: false,
+      },
     },
   ],
+
+  chainWebpack(config, { isServer }) {
+    config.module.rules.delete("svg");
+    config.module
+      .rule("svg")
+      .test(/\.svg$/)
+      .use("vue")
+      .loader("vue-loader")
+      .end()
+      .use("svg-to-vue-component")
+      .loader("svg-to-vue-component/loader");
+
+    if (isServer) {
+      config.externals(
+        nodeExternals({
+          allowlist: [
+            /\.css$/,
+            /\?vue&type=style/,
+            /vue-instantsearch/,
+            /instantsearch.js/,
+            /typeface-league-spartan/,
+          ],
+        })
+      );
+    }
+  },
+
   templates: {
     Article: "/article/:title",
     Category: "/category/:title",
-  }
-}
+  },
+};

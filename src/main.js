@@ -3,13 +3,25 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 
-import Buefy from "buefy";
 import "~/main.scss";
 import axios from "axios";
 import "~/assets/font-awesome/all.js";
-import { VLazyImagePlugin } from "v-lazy-image";
 
-export default function(Vue, { router, head, isClient }) {
+import VueScrollTo from "vue-scrollto";
+
+import Typography from "typography";
+
+import VueObserveVisibility from "vue-observe-visibility";
+
+const typography = new Typography({
+  baseFontSize: "18px",
+  baseLineHeight: 1.6,
+  scaleRatio: 1.9,
+  headerFontFamily: ["Open Sans", "sans-serif"],
+  bodyFontFamily: ["Roboto", "sans-serif"],
+});
+
+export default function (Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: "fr" };
 
@@ -19,31 +31,15 @@ export default function(Vue, { router, head, isClient }) {
     content: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
   });
 
-  // Import Adobe Fonts
-  head.link.push({
-    rel: "stylesheet",
-    href: "https://use.typekit.net/bur4tax.css",
-  });
-
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
-  // Register our Bulma component library
-  Vue.use(Buefy);
+  Vue.use(VueScrollTo);
 
-  //http requests via axios
-  Vue.use({
-    install(Vue) {
-      Vue.prototype.$api = axios.create({
-        baseURL: "https://api.sendgrid.com/v3/mail",
-      });
-    },
+  head.style.push({
+    type: "text/css",
+    cssText: typography.toString(),
   });
 
-  head.link.push({
-    rel: "stylesheet",
-    href: "slick/slick.css",
-  });
-
-  Vue.use(VLazyImagePlugin);
+  Vue.use(VueObserveVisibility);
 }
