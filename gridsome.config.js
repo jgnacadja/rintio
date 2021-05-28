@@ -1,6 +1,8 @@
 const nodeExternals = require("webpack-node-externals");
 
 const tailwindcss = require("tailwindcss");
+const contentful = require("./plugins/plugin.confentful");
+const tailwind = require("./plugins/plugin.tailwind");
 
 module.exports = {
   siteName: "Rintio",
@@ -15,34 +17,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    {
-      // Create posts from markdown files
-      use: "@gridsome/source-filesystem",
-      options: {
-        typeName: "Article",
-        path: "content/articles/*.md",
-        refs: {
-          // Creates a GraphQL collection from 'categories' in front-matter and adds a reference.
-          categories: {
-            typeName: "Category",
-            create: true,
-          },
-        },
-      },
-    },
-    {
-      use: "gridsome-plugin-tailwindcss",
-
-      // these options are optional, as they are copies of the default values...
-      options: {
-        tailwindConfig: "./tailwind.config.js",
-        presetEnvConfig: {},
-        shouldImport: false,
-        shouldTimeTravel: false,
-      },
-    },
-  ],
+  plugins: [contentful, tailwind],
 
   chainWebpack(config, { isServer }) {
     config.module.rules.delete("svg");
@@ -71,7 +46,8 @@ module.exports = {
   },
 
   templates: {
-    Article: "/article/:title",
-    Category: "/category/:title",
+    ContentfulPost: "/article/:title",
+    ContentfulCategory: "/category/:title",
+    ContentfulTag: "/tag/:title",
   },
 };

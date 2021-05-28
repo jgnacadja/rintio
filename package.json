@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "@gridsome/plugin-google-analytics": "^0.1.2",
+        "@gridsome/source-contentful": "^0.6.0",
         "axios": "^0.21.1",
         "gridsome": "^0.7.23",
         "gridsome-plugin-remark-youtube": "^1.0.1",
