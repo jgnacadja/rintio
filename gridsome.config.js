@@ -1,7 +1,7 @@
 const nodeExternals = require("webpack-node-externals");
 
 const tailwindcss = require("tailwindcss");
-const contentful = require("./plugins/plugin.confentful");
+const contentful = require("./plugins/plugin.contentful");
 const tailwind = require("./plugins/plugin.tailwind");
 
 module.exports = {
@@ -46,8 +46,8 @@ module.exports = {
   },
 
   templates: {
-    ContentfulPost: "/article/:title",
-    ContentfulCategory: "/category/:title",
-    ContentfulTag: "/tag/:title",
+    //ContentfulPost: "/article/:title",
+    //ContentfulCategory: "/category/:title",
+    //ContentfulTag: "/tag/:title",
   },
 };
