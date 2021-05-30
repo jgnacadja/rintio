@@ -149,7 +149,7 @@
                     Envoyer
                   </button>
                 </div>
-                <p class="text-base text-center text-gray-400" id="result"></p>
+                <p class="text-base text-center text-gray-400" id="result" ></p>
               </form>
             </div>
           </div>

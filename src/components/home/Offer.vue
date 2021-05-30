@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-offer md:px-16 md:flex w-full justify-center py-6 md:py-24">
-    <div class="w-full md:w-1/4 mb-8 md:mb-0">
+  <div class="bg-offer md:px-24 md:flex w-full justify-center md:py-24">
+    <div class="w-full md:w-1/4 mb-8 md:mb-0" >
       <div class="mx-4 md:mx-0">
         <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
           Nos offres
@@ -24,7 +24,7 @@
           <span class="text-secondary capitalize">client</span>
         </h1>
 
-        <p class="my-3 text-sm">
+        <p class="my-3 text-2xl">
           Les solutions que nous proposons à nos précieux clients. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut.
@@ -32,7 +32,7 @@
         <div class="mt-4 text-center">
           <button
             type="submit"
-            class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm focus:bg-secondary focus:outline-none uppercase"
+            class="px-6 py-2 md:py-4 flex text-white text-sm bg-secondary rounded-sm focus:bg-secondary focus:outline-none uppercase"
           >
             Tout consulter
           </button>
