@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
     <div class="mx-4 md:mx-0 md:text-center mb-4 md:mb-10">
       <h1 class="text-xl md:text-7xl font-extrabold text-primary capitalize">
