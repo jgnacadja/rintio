@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-offer md:px-24 md:flex w-full justify-center md:py-24">
+  <div class="bg-offer md:px-20 md:flex w-full justify-center md:py-24">
     <div class="w-full md:w-1/4 mb-8 md:mb-0" >
       <div class="mx-4 md:mx-0">
         <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
