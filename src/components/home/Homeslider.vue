@@ -54,7 +54,7 @@
 
     <div id="slider-3">
       <div
-        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3"
+        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3 items-center"
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">

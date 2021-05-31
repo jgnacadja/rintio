@@ -2,7 +2,7 @@
   <div
     class="md:px-16 flex w-full justify-center py-6 md:py-24 bg-primary text-white"
   >
-    <div class="md:w-1/4 mr-16 ml-16">
+    <div class="md:w-1/4">
       <div class="mx-4 md:mx-0">
         <h1 class="mb-3 text-sm font-semibold uppercase">Nos partenaires</h1>
         <!-- Title Dot -->
