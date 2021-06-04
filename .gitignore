@@ -11,7 +11,5 @@ dist
 .vscode
 .idea
 
-.vercel
-
 package-lock.json
 yarn.lock
