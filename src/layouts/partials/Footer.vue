@@ -4,10 +4,10 @@
 
     <footer class="bg-primary">
       <div
-        class="max-w-6xl py-10 m-auto text-white flex flex-wrap justify-left items-center"
+        class="text-white md:flex w-full mx-4 md:mx-0 md:text-left"
       >
         <!-- Col-1 -->
-        <div class="p-5 w-full sm:w-4/12 md:w-3/12">
+        <div class="md:px-20 p-5 w-full sm:w-4/12 md:w-3/12">
           <div class="w-10">
             <Logo />
           </div>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Col-2 -->
-        <div class="p-5 w-full sm:w-4/12 md:w-3/12">
+        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <!-- Col Title -->
           <div class="uppercase text-white font-extrabold mb-6 font-openSans">
             Liens utiles
@@ -91,7 +91,7 @@
         </div>
 
         <!-- Col-3 -->
-        <div class="p-5 w-full sm:w-4/12 md:w-3/12">
+        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <!-- Col Title -->
           <div class="uppercase text-white font-extrabold mb-6 font-openSans">
             Liens utiles
@@ -137,7 +137,7 @@
         </div>
 
         <!-- Col-4 -->
-        <div class="p-5 w-full sm:w-4/12 md:w-3/12">
+        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <div class="px-3 py-4 bg-white text-primary w-full h-full my-auto">
             <p class="uppercase font-bold mb-3">Newsletter</p>
             <form>

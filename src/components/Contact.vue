@@ -1,6 +1,6 @@
 <template>
-  <div class="md:flex container">
-    <div class="w-full md:w-1/2">
+  <div class="md:flex w-full mx-4 md:mx-0 md:text-left">
+    <div class=" md:px-20 md:w-1/2">
       <div class="flex">
         <div class="mx-auto">
           <div class="max-w-lg mx-auto my-10">
@@ -87,12 +87,12 @@
         </div>
       </div>
     </div>
-    <div class="w-full md:w-1/2">
+    <div class="md:px-32 md:w-1/2">
       <!-- Contact Form -->
       <div class="flex items-center">
         <div class="container mx-auto">
           <div
-            class="max-w-lg mx-auto my-10 bg-white p-5 rounded-sm shadow-md md:shadow-xl min-h-screen"
+            class="max-w-lg mx-auto my-10 bg-white p-5 rounded-sm shadow-md md:shadow-xl min-h-0	"
           >
             <div class="mx-4 md:m-7">
               <h1 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
@@ -149,7 +149,7 @@
                     Envoyer
                   </button>
                 </div>
-                <p class="text-base text-center text-gray-400" id="result"></p>
+                <p class="text-base text-center text-gray-400" id="result" ></p>
               </form>
             </div>
           </div>
