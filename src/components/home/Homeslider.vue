@@ -35,7 +35,7 @@
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
             Rintio Formation
           </p>
-          <p class="text-5xl font-extrabold font-openSans">
+          <p class="text-5xl font-extrabold text-primary font-openSans">
             Africa <br />TechUp Tour
           </p>
           <p class="text-2xl mb-10 leading-8">
@@ -54,7 +54,7 @@
 
     <div id="slider-3">
       <div
-        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3"
+        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3 items-center"
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -194,11 +194,11 @@ export default {
 };
 </script><style scoped>
 .bg-homeslider-1 {
-  background-image: url("./../../../static/images/home/slider/1.png");
+  background-image: url("./../../../static/images/home/slider/ia.png");
 }
 
 .bg-homeslider-2 {
-  background-image: url("./../../../static/images/home/slider/2.png");
+  background-image: url("./../../../static/images/home/slider/atut.png");
 }
 
 .bg-homeslider-3 {
