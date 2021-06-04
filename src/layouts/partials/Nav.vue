@@ -42,7 +42,9 @@
       class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
     >
       <div class="h-full pt-10">
-        <span class="font-bold uppercase font-openSans my-auto">Blog</span>
+        <g-link to="/blog">
+          <span class="font-bold uppercase font-openSans my-auto">Blog</span>
+        </g-link>
       </div>
     </div>
   </nav>

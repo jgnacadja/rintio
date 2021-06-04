@@ -4,7 +4,9 @@
   >
     <div>{{ path }}</div>
     <div>
-      {{ home }} /
+      <g-link to="/">
+        {{ home }}
+        </g-link> /
       <span v-bind:class="{ 'text-primary font-bold': !article }">{{ path }}</span>
       <span v-if="article">/ {{ article }}</span>
     </div>
