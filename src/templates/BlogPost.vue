@@ -9,7 +9,7 @@
 
 
 <page-query>
-query query($path:String) {
+query query($path:String = "") {
     post: blogPost(path:$path) {
     id
     title
