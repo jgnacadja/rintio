@@ -6,6 +6,7 @@
     <div
       class="md:flex container mx-auto md:px-16 mt-20 space-x-0 md:space-x-6 w-full"
     >
+      
       <div id="home" class="container px-4 text-center w-3/4">
         <div class="space-y-6">
           <!-- main post -->
@@ -39,14 +40,16 @@
             <div class="flex space-x-8 mx-4">
               <p class="flex space-x-2">
                 <Like /> <span class="text-xs">24k</span>
-              </p>
-              <p class="flex space-x-2">
-                <Comment /> <span class="text-xs">247</span>
-              </p>
-              <p class="flex space-x-2">
-                <Share /> <span class="text-xs">24</span>
-              </p>
-            </div>
+              
+                </p>
+                <p class="flex space-x-2">
+                  <Comment /> <span class="text-xs">247</span>
+                </p>
+                <p class="flex space-x-2">
+                  <Share /> <span class="text-xs">24</span>
+                </p>
+              </div>
+            </g-link>
           </div>
 
           <!-- paginator -->
