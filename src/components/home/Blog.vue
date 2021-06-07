@@ -1,7 +1,7 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
     <div class="text-center">
-      <p class="font-extrabold text-primary uppercase">Nos publications</p>
+      <p class="font-extrabold text-primary uppercase">Rintio blog</p>
     </div>
 
     <div class="text-center">
@@ -29,7 +29,20 @@
           class="object-cover w-full h-64 mb-0"
         />
         <span
-          class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
+          class="
+            relative
+            text-white
+            bg-secondary
+            p-4
+            text-sm
+            hidden
+            md:block
+            ml-4
+            -mt-7
+            capitalize
+            w-24
+            text-center
+          "
         >
           Big data
         </span>
@@ -60,7 +73,18 @@
       <!-- main post 1-->
 
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white md:hidden"
+        class="
+          mb-4
+          lg:mb-0
+          p-4
+          lg:p-0
+          w-full
+          md:w-1/2
+          relative
+          block
+          bg-white
+          md:hidden
+        "
       >
         <g-image
           alt="iot"
@@ -68,7 +92,20 @@
           class="object-cover w-full h-64 mb-0"
         />
         <span
-          class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
+          class="
+            relative
+            text-white
+            bg-secondary
+            p-4
+            text-sm
+            hidden
+            md:block
+            ml-4
+            -mt-7
+            capitalize
+            w-24
+            text-center
+          "
         >
           Big data
         </span>
@@ -99,7 +136,18 @@
       <!-- main post 2 -->
 
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white md:hidden"
+        class="
+          mb-4
+          lg:mb-0
+          p-4
+          lg:p-0
+          w-full
+          md:w-1/2
+          relative
+          block
+          bg-white
+          md:hidden
+        "
       >
         <g-image
           alt="iot"
@@ -107,7 +155,20 @@
           class="object-cover w-full h-64 mb-0"
         />
         <span
-          class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
+          class="
+            relative
+            text-white
+            bg-secondary
+            p-4
+            text-sm
+            hidden
+            md:block
+            ml-4
+            -mt-7
+            capitalize
+            w-24
+            text-center
+          "
         >
           Big data
         </span>
@@ -146,7 +207,20 @@
               class="block md:hidden lg:block h-64 md:h-full m-4 md:m-0 w-full"
             />
             <span
-              class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
+              class="
+                relative
+                text-white
+                bg-secondary
+                p-4
+                text-sm
+                hidden
+                md:block
+                ml-4
+                -mt-7
+                capitalize
+                w-24
+                text-center
+              "
             >
               Big data
             </span>
@@ -186,7 +260,20 @@
               class="block md:hidden lg:block h-64 md:h-full m-4 md:m-0 w-full"
             />
             <span
-              class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
+              class="
+                relative
+                text-white
+                bg-secondary
+                p-4
+                text-sm
+                hidden
+                md:block
+                ml-4
+                -mt-7
+                capitalize
+                w-24
+                text-center
+              "
             >
               Big data
             </span>
@@ -221,7 +308,15 @@
     <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
       <button
         href="#"
-        class="py-8 mt-2 flex md:text-lg font-medium hover:text-secondary w-auto"
+        class="
+          py-8
+          mt-2
+          flex
+          md:text-lg
+          font-medium
+          hover:text-secondary
+          w-auto
+        "
       >
         Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
       </button>

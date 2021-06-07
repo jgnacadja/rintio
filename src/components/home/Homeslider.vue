@@ -2,23 +2,43 @@
   <div class="sliderAx">
     <div id="slider-1">
       <div
-        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-1"
+        class="
+          bg-cover bg-center
+          height
+          text-white
+          py-2
+          md:py-32
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-1
+        "
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
-            Technologie
+            Rintio Prestation
           </p>
           <p class="text-5xl font-extrabold font-openSans">
-            DataScience & <br />Intelligence Artificielle
+            Nous accélérons votre transformation digital
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Notre processus qui s'appuie sur des méthodes et des techniques pour
-            prendre des données brutes - l'extraction d'informations et des
-            années d'expérience vous aideront à devenir le leader du secteur.
+            Rintio vous accompagne dans la mise en place de vos solution
+            digitale en mettant a votre disposition une équipe hautement
+            qualifiée.
           </p>
           <a
             href="#"
-            class="bg-secondary py-4 px-8 text-white font-bold uppercase text-xs hover:bg-gray-200 hover:text-gray-800"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
             >En savoir plus</a
           >
         </div>
@@ -29,21 +49,43 @@
 
     <div id="slider-2">
       <div
-        class="bg-cover bg-center height text-black py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-2"
+        class="
+          bg-cover bg-center
+          height
+          text-blacks
+          py-2
+          md:py-32
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-2
+        "
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
-            Rintio Formation
+            Rintio Prestation
           </p>
-          <p class="text-5xl font-extrabold text-primary font-openSans">
-            Africa <br />TechUp Tour
+          <p class="text-5xl font-extrabold font-openSans">
+            Nous accélérons votre transformation digital
           </p>
           <p class="text-2xl mb-10 leading-8">
-            En Afrique, promesses et mirages du numérique.
+            Rintio vous accompagne dans la mise en place de vos solution
+            digitale en mettant a votre disposition une équipe hautement
+            qualifiée.
           </p>
           <a
             href="#"
-            class="bg-secondary py-4 px-8 text-white font-bold uppercase text-xs hover:bg-gray-200 hover:text-gray-800"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
             >En savoir plus</a
           >
         </div>
@@ -54,7 +96,63 @@
 
     <div id="slider-3">
       <div
-        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3 items-center"
+        class="
+          bg-cover bg-center
+          height
+          text-black
+          py-2
+          md:py-32
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-3
+        "
+      >
+        <div class="md:w-1/2">
+          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+            Rintio Formation
+          </p>
+          <p class="text-5xl font-extrabold text-primary font-openSans">
+            Africa <br />TechUp Tour
+          </p>
+          <p class="text-2xl mb-10 leading-8">
+            Restez leader en donnant de la voix a vos données grâces à nos
+            solutions de datavisualisation et nos modèles prédictions.
+          </p>
+          <a
+            href="#"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+      <!-- container -->
+      <br />
+    </div>
+
+    <div id="slider-4">
+      <div
+        class="
+          bg-cover bg-center
+          height
+          text-black
+          py-2
+          md:py-32
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-4
+        "
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -64,11 +162,22 @@
             CHMP & <br />Coraq-lab
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Lancement de la plateforme elearning dévélopée par Rintio.
+            Parcourez le monde avec nous dans notre quête continue de partage de
+            connaissance.
           </p>
           <a
             href="#"
-            class="bg-secondary py-4 px-8 text-white font-bold uppercase text-xs hover:bg-gray-200 hover:text-gray-800"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
             >En savoir plus</a
           >
         </div>
@@ -77,7 +186,7 @@
       <br />
     </div>
 
-    <div class="flex justify-between w-16 mx-auto -mt-20 space-x-2">
+    <div class="flex justify-between w-24 mx-auto -mt-20 space-x-2">
       <button
         id="sButton1"
         @click="sliderButton1()"
@@ -91,6 +200,11 @@
       <button
         id="sButton3"
         @click="sliderButton3()"
+        class="bg-gray-400 rounded-full w-4 p-2 focus:outline-none"
+      ></button>
+      <button
+        id="sButton4"
+        @click="sliderButton4()"
         class="bg-gray-400 rounded-full w-4 p-2 focus:outline-none"
       ></button>
     </div>
@@ -111,6 +225,7 @@ export default {
 
     $("#slider-2").hide();
     $("#slider-3").hide();
+    $("#slider-4").hide();
     $("#sButton1").addClass("bg-secondary");
 
     this.loopSlider();
@@ -141,8 +256,18 @@ export default {
           }
           case 2: {
             $("#slider-3").fadeOut(400);
-            $("#slider-1").delay(400).fadeIn(400);
+            $("#slider-4").delay(400).fadeIn(400);
             $("#sButton3").removeClass("bg-secondary");
+            $("#sButton4").addClass("bg-secondary");
+
+            el.counter = 2;
+
+            break;
+          }
+          case 3: {
+            $("#slider-4").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton4").removeClass("bg-secondary");
             $("#sButton1").addClass("bg-secondary");
 
             el.counter = 0;
@@ -161,9 +286,11 @@ export default {
     sliderButton1: function () {
       $("#slider-2").fadeOut(400);
       $("#slider-3").fadeOut(400);
+      $("#slider-4").fadeOut(400);
       $("#slider-1").delay(400).fadeIn(400);
       $("#sButton2").removeClass("bg-secondary");
       $("#sButton3").removeClass("bg-secondary");
+      $("#sButton4").removeClass("bg-secondary");
       $("#sButton1").addClass("bg-secondary");
       this.reinitLoop(4000);
       this.counter = 0;
@@ -172,9 +299,11 @@ export default {
     sliderButton2: function () {
       $("#slider-1").fadeOut(400);
       $("#slider-3").fadeOut(400);
+      $("#slider-4").fadeOut(400);
       $("#slider-2").delay(400).fadeIn(400);
       $("#sButton1").removeClass("bg-secondary");
       $("#sButton3").removeClass("bg-secondary");
+      $("#sButton4").removeClass("bg-secondary");
       $("#sButton2").addClass("bg-secondary");
       this.reinitLoop(4000);
       this.counter = 1;
@@ -183,29 +312,50 @@ export default {
     sliderButton3: function () {
       $("#slider-1").fadeOut(400);
       $("#slider-2").fadeOut(400);
+      $("#slider-4").fadeOut(400);
       $("#slider-3").delay(400).fadeIn(400);
       $("#sButton1").removeClass("bg-secondary");
       $("#sButton2").removeClass("bg-secondary");
+      $("#sButton4").removeClass("bg-secondary");
       $("#sButton3").addClass("bg-secondary");
       this.reinitLoop(4000);
-      this.counter = 1;
+      this.counter = 2;
+    },
+
+    sliderButton4: function () {
+      $("#slider-1").fadeOut(400);
+      $("#slider-2").fadeOut(400);
+      $("#slider-3").fadeOut(400);
+      $("#slider-4").delay(400).fadeIn(400);
+      $("#sButton1").removeClass("bg-secondary");
+      $("#sButton2").removeClass("bg-secondary");
+      $("#sButton3").removeClass("bg-secondary");
+      $("#sButton4").addClass("bg-secondary");
+      this.reinitLoop(4000);
+      this.counter = 3;
     },
   },
 };
-</script><style scoped>
+</script>
+
+<style scoped>
 .bg-homeslider-1 {
-  background-image: url("./../../../static/images/home/slider/ia.png");
+  background-image: url("./../../../static/images/home/slider/IA-1.png");
 }
 
 .bg-homeslider-2 {
-  background-image: url("./../../../static/images/home/slider/atut.png");
+  background-image: url("./../../../static/images/home/slider/IA-1.png");
 }
 
 .bg-homeslider-3 {
-  background-image: url("./../../../static/images/home/slider/3.png");
+  background-image: url("./../../../static/images/home/slider/atut.png");
+}
+
+.bg-homeslider-4 {
+  background-image: url("./../../../static/images/home/slider/coraq-slider-web-100x.png");
 }
 
 .height {
-  height: calc(100vh - 108px);
+  height: calc(100vh - 96px);
 }
 </style>
