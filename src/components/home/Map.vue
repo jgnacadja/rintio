@@ -17,120 +17,136 @@
 
     <div class="hidden md:flex justify-center items-center w-3/4 mx-auto">
       <div class="py-4 mx-4 w-full md:w-1/3">
-        <div
-          class="
-            shadow-lg
-            group
-            container
-            bg-white
-            max-w-sm
-            mx-auto
-            bg-center bg-cover bg-no-repeat bg-map-cotonou
-          "
+        <a
+          href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div class="w-full overflow-hidden">
-            <div class="w-full h-40"></div>
-            <div
-              class="
-                w-full
-                relative
-                left-6
-                transform
-                transition
-                duration-500
-                translate-y-16
-                group-hover:-translate-y-4
-              "
-            >
-              <span
+          <div
+            class="
+              shadow-lg
+              group
+              container
+              bg-white
+              max-w-sm
+              mx-auto
+              bg-center bg-cover bg-no-repeat bg-map-cotonou
+            "
+          >
+            <div class="w-full overflow-hidden">
+              <div class="w-full h-40"></div>
+              <div
                 class="
-                  font-extrabold
-                  text-white
-                  tracking-wider
-                  leading-relaxed
-                  font-sans
+                  w-full
+                  relative
+                  left-6
+                  transform
+                  transition
+                  duration-500
+                  translate-y-16
+                  group-hover:-translate-y-4
                 "
-                >Cotonou, Bénin
-              </span>
-            </div>
-            <div
-              class="
-                py-6
-                px-6
-                bg-white
-                transform
-                transition
-                duration-500
-                translate-y-28
-                group-hover:translate-y-0
-              "
-            >
-              <span class="block text-gray-600 text-sm"> 18:00, GMT+1 </span>
+              >
+                <span
+                  class="
+                    font-extrabold
+                    text-white
+                    tracking-wider
+                    leading-relaxed
+                    font-sans
+                  "
+                  >Cotonou, Bénin
+                </span>
+              </div>
+              <div
+                class="
+                  py-6
+                  px-6
+                  bg-white
+                  transform
+                  transition
+                  duration-500
+                  translate-y-28
+                  group-hover:translate-y-0
+                "
+              >
+                <span class="block text-gray-600 text-sm">
+                  {{ hour }}:{{ minute }}:{{ second }}
+                </span>
 
-              <span class="block text-gray-600 text-sm">
-                contact@rintio.com , +229 97 11 94 79
-              </span>
+                <span class="block text-gray-600 text-sm">
+                  contact@rintio.com , +229 97 11 94 79
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="py-4 mx-4 w-full md:w-1/3">
-        <div
-          class="
-            shadow-lg
-            group
-            container
-            bg-white
-            max-w-sm
-            mx-auto
-            bg-center bg-cover bg-no-repeat bg-map-paris
-          "
+        <a
+          href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div class="w-full overflow-hidden">
-            <div class="w-full h-40"></div>
-            <div
-              class="
-                w-full
-                relative
-                left-6
-                transform
-                transition
-                duration-500
-                translate-y-16
-                group-hover:-translate-y-4
-              "
-            >
-              <span
+          <div
+            class="
+              shadow-lg
+              group
+              container
+              bg-white
+              max-w-sm
+              mx-auto
+              bg-center bg-cover bg-no-repeat bg-map-paris
+            "
+          >
+            <div class="w-full overflow-hidden">
+              <div class="w-full h-40"></div>
+              <div
                 class="
-                  font-extrabold
-                  text-white
-                  tracking-wider
-                  leading-relaxed
-                  font-sans
+                  w-full
+                  relative
+                  left-6
+                  transform
+                  transition
+                  duration-500
+                  translate-y-16
+                  group-hover:-translate-y-4
                 "
-                >Paris, France
-              </span>
-            </div>
-            <div
-              class="
-                py-6
-                px-6
-                bg-white
-                transform
-                transition
-                duration-500
-                translate-y-28
-                group-hover:translate-y-0
-              "
-            >
-              <span class="block text-gray-600 text-sm"> 18:00, GMT+1 </span>
+              >
+                <span
+                  class="
+                    font-extrabold
+                    text-white
+                    tracking-wider
+                    leading-relaxed
+                    font-sans
+                  "
+                  >Paris, France
+                </span>
+              </div>
+              <div
+                class="
+                  py-6
+                  px-6
+                  bg-white
+                  transform
+                  transition
+                  duration-500
+                  translate-y-28
+                  group-hover:translate-y-0
+                "
+              >
+                <span class="block text-gray-600 text-sm">
+                  {{ hour + 1 }}:{{ minute }}:{{ second }}
+                </span>
 
-              <span class="block text-gray-600 text-sm">
-                contact@rintio.com , +33 6 25 18 40 11
-              </span>
+                <span class="block text-gray-600 text-sm">
+                  contact@rintio.com , +33 6 25 18 40 11
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="py-4 mx-4 w-full md:w-1/3">
         <div
@@ -181,7 +197,9 @@
                 group-hover:translate-y-0
               "
             >
-              <span class="block text-gray-600 text-sm"> 18:00, GMT+1 </span>
+              <span class="block text-gray-600 text-sm">
+                {{ hour - 1 }}:{{ minute }}:{{ second }}
+              </span>
 
               <span class="block text-gray-600 text-sm">
                 contact@rintio.com , +225 58 08 74 21
@@ -193,6 +211,44 @@
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      hour: "",
+      minute: "",
+      second: "",
+    };
+  },
+  created() {
+    setInterval(this.getTime, 1000);
+  },
+  methods: {
+    getTime: function () {
+      var now = new Date();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      var second = now.getSeconds();
+      if (hour.toString().length == 1) {
+        hour = "0" + hour;
+      }
+      if (minute.toString().length == 1) {
+        minute = "0" + minute;
+      }
+      if (second.toString().length == 1) {
+        second = "0" + second;
+      }
+
+      this.hour = hour;
+      this.minute = minute;
+      this.second = second;
+    },
+  },
+};
+</script>
+
 
 <style scoped>
 .bg-map {
