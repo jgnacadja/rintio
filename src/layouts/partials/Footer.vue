@@ -32,7 +32,7 @@
 
           <!-- Links -->
           <a
-            href="#"
+            href="https://coraq.formation.chmp.org"
             class="
               w-full
               my-3
