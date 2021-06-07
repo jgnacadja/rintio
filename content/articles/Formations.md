@@ -1,7 +1,8 @@
 ---
 title: Offshoring Studely
 published: true
-categories: ["A la Une / Rintio Stories"]
+categories: Rintio Stories
+keywords : []
 date: 2020-09-04
 coverImage: /img/articles/woman-wearing-red-and-black-checkered-blouse-using-macbook-1181472.jpg
 metaDescription: Rintio accompagne <a href=""> Studely </a> dans le développement de ses solitions EdTech.

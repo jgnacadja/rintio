@@ -1,7 +1,8 @@
 ---
 title: Rintio Data Lab
 published: true
-categories: ["Rintio Data Lab"]
+categories: Rintio Data Lab
+keywords : []
 date: 2020-08-18
 coverImage: /img/articles/dominodatalab_4.png
 button: Profiter de l'offre
