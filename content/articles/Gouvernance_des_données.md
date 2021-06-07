@@ -1,7 +1,8 @@
 ---
 title: Gouvernance des données
 published: true
-categories: ["Rintio Data Lab"]
+categories: Rintio Data Lab
+keywords : []
 date: 2020-07-30
 coverImage: /img/articles/data_governance_gouvernance_de.png
 button: Profiter de l'offre

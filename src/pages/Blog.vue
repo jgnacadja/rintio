@@ -4,7 +4,7 @@
       <Breadcrumb :path="path" />
     </LazyHydrate>
     <div
-      class="md:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
+      class="md:flex container mx-auto md:px-16 mt-20 space-x-0 md:space-x-6 w-full"
     >
       
       <div id="home" class="container px-4 text-center w-3/4">
@@ -15,33 +15,32 @@
             v-for="edge in $page.posts.edges"
             :key="edge.node.id"
           >
-            <g-link :to=edge.node.path>
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/iot.png"
-                class="object-cover w-full h-64 mb-0"
-              />
-              <span
-                class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
-              >
-                Big data
-              </span>
-              <p
-                class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4"
-              >
-                {{ edge.node.title }}
-              </p>
-              <p class="text-primary text-xs space-x-8 mx-4">
-                <span>10 Jan 2020</span>
-                <span>Publié par : xxxxxxxxxxxxx</span>
-              </p>
-              <p class="text-gray-600 mb-4 mx-4">
-                Lorem Ipsum est simplement du faux texte employé dans la
-                composition et la mise en page avant impression...
-              </p>
-              <div class="flex space-x-8 mx-4">
-                <p class="flex space-x-2">
-                  <Like /> <span class="text-xs">24k</span>
+            <g-image
+              alt="iot"
+              :src="  edge.node.coverImage"
+              class="object-cover w-full h-64 mb-0"
+            />
+            <span
+              class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-64 text-center"
+            >
+              {{ edge.node.categories.id}}
+            </span>
+            <p
+              class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4"
+            >
+              {{ edge.node.title }}
+            </p>
+            <p class="text-primary text-xs space-x-8 mx-4">
+              <span>{{ edge.node.date }}</span>
+              <span>Publié par : xxxxxxxxxxxxx</span>
+            </p>
+            <p class="text-gray-600 mb-4 mx-4">
+              {{ edge.node.metaDescription }}
+            </p>
+            <div class="flex space-x-8 mx-4">
+              <p class="flex space-x-2">
+                <Like /> <span class="text-xs">24k</span>
+              
                 </p>
                 <p class="flex space-x-2">
                   <Comment /> <span class="text-xs">247</span>
@@ -66,7 +65,12 @@
 
       <div class="w-1/4">
         <h3>Recherche</h3>
-        <input type="text" />
+        <input type="text" class="h-14 w-full border-2 rounded-md border-gray-200 pl-8 "/>
+        <h3>Articles populaires</h3>
+        <h3>Catégories</h3>
+        <h3>Mots clés populaires</h3> 
+
+
       </div>
     </div>
   </Layout>
@@ -81,6 +85,12 @@ query {
         id
         title
         path
+        categories{
+          id
+        }
+        date
+        metaDescription
+        coverImage
       }
     }
   }

@@ -1,7 +1,8 @@
 ---
 title: Scrum
 published: true
-categories: ["Nos Publications"]
+categories: Nos Publications
+keywords : []
 date: 2020-09-03
 publie: Publié par ...
 coverImage: /img/articles/images.png

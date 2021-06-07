@@ -1,7 +1,8 @@
 ---
 title: Offshoring  Cloud
 published: true
-categories: ["Nos offres"]
+categories: Nos offres
+keywords : []
 date: 2020-08-26
 coverImage: /img/articles/CLoud1.png
 metaDescription: Migration dans le Cloud

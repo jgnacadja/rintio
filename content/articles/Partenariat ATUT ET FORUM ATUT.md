@@ -1,7 +1,8 @@
 ---
 title: Partenariat Africa TechUp Tour et le forum <a href="#"> AfricUp </a>
 published: true
-categories: ["Nos Engagements"]
+categories: Nos Engagements
+keywords : []
 date: 2020-O8-04
 coverImage: /img/articles/thumbnail2.png
 metaDescription: Le forum Afric’Up renouvelle sa confiance à Africa TehcUp pour 2020. Le forum accueillera les meilleurs projets de startup issus de AfricaTechUp Tour.

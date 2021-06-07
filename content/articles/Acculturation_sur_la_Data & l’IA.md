@@ -1,7 +1,8 @@
 ---
 title: Acculturation sur la Data & l’IA
 published: true
-categories: ["Rintio Data Lab"]
+categories: Rintio Data Lab
+keywords : []
 date: 2020-07-28
 coverImage: /img/articles/environnement_numerique.png
 button: Profiter de l'offre

@@ -1,7 +1,8 @@
 ---
 title: Rétrospective Africa TechUp Tour Lomé 2019
 published: true
-categories: ["Nos Engagements"]
+categories: Nos Engagements
+keywords : []
 date: 2020-O8-01
 coverImage: /img/articles/IMG_3590.png
 metaDescription: Le Bootcamp et le Hackathon en image.

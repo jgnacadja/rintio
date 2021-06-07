@@ -1,7 +1,8 @@
 ---
 title: API, l'ouverture des SI dans un monde de micro services
 published: true
-categories: ["A la Une / Rintio Stories"]
+categories: A la Une / Rintio Stories
+keywords : []
 date: 2020-07-28
 coverImage: /img/articles/programmers_concept_with_flat_.png
 metaDescription: Parce qu’elles interconnectent les systèmes dans un monde de plus en plus ouvert et décloisonné, les APIs, ces interfaces...
