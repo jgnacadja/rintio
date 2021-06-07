@@ -15,9 +15,10 @@
             v-for="edge in $page.posts.edges"
             :key="edge.node.id"
           >
+            <g-link :to="edge.node.path">
             <g-image
               alt="iot"
-              :src="  edge.node.coverImage"
+              :src="edge.node.coverImage"
               class="object-cover w-full h-64 mb-0"
             />
             <span
