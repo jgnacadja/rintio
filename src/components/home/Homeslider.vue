@@ -7,7 +7,7 @@
           height
           text-white
           py-2
-          md:py-24
+          md:py-32
           px-2
           md:px-20
           object-fill
@@ -54,7 +54,7 @@
           height
           text-black
           py-2
-          md:py-24
+          md:py-32
           px-2
           md:px-20
           object-fill
@@ -100,7 +100,7 @@
           height
           text-white
           py-2
-          md:py-24
+          md:py-32
           px-2
           md:px-20
           object-fill
@@ -269,6 +269,6 @@ export default {
 }
 
 .height {
-  height: calc(100vh - 108px);
+  height: calc(100vh - 96px);
 }
 </style>
