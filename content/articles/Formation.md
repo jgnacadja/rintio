@@ -1,7 +1,8 @@
 ---
 title: Formation
 published: true
-categories: ["Nos offres feature"]
+categories: Nos offres feature
+keywords : []
 date: 2020-07-28
 coverImage: /img/articles/IMG_3265.png
 descriptionUp: Java,Phython,Big DAta (Handoop, Spark, ELK,MangoBD,

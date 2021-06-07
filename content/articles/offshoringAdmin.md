@@ -1,7 +1,8 @@
 ---
 title:   Offshoring Admin
 published: true
-categories: ["Nos offres"]
+categories: Nos offres
+keywords : []
 date: 2020-08-31
 coverImage: /img/articles/MON1178047@2x.png
 metaDescription: Administration cloud et infrastructure

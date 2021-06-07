@@ -1,7 +1,8 @@
 ---
 title: Conseil
 published: true
-categories: ["Nos offres feature"]
+categories: Nos offres feature
+keywords : []
 date: 2020-07-26
 coverImage: /img/articles/ID2GLBDTYq_4x.png
 descriptionUp: • Strategie Data & IA

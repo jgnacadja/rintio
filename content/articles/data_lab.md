@@ -1,7 +1,8 @@
 ---
 title: Data Lab
 published: true
-categories: ["Nos offres"]
+categories: Nos offres
+keywords : []
 date: 2020-09-01
 coverImage: /img/articles/IMG_3262.png
 metaDescription: Accélérez votre connaissance en exploitant pleinement le potentiel de vos données.
