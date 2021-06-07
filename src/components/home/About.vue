@@ -1,8 +1,29 @@
 <template>
   <div
-    class="bg-offer md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6 mt-20 md:mt-0"
+    class="
+      bg-offer
+      md:px-16
+      md:flex
+      w-full
+      justify-center
+      py-6
+      md:py-24
+      md:space-x-6
+      mt-20
+      md:mt-0
+    "
   >
-    <div class="w-full md:w-1/2 items-center justify-center mx-auto hidden md:block">
+    <div
+      class="
+        w-full
+        md:w-1/2
+        items-center
+        justify-center
+        mx-auto
+        hidden
+        md:block
+      "
+    >
       <div class="relative">
         <g-image
           class="absolute -top-12 left-0"
@@ -37,7 +58,14 @@
       </div>
       <div class="mx-4 md:mx-0 pt-6">
         <h1
-          class="my-3 text-xl md:text-5xl font-extrabold capitalize text-primary"
+          class="
+            my-3
+            text-xl
+            md:text-5xl
+            font-extrabold
+            capitalize
+            text-primary
+          "
         >
           Entreprise de <br class="hidden md:block" />
           services du
@@ -56,12 +84,22 @@
           >. Nous proposons, entre autres, des prestations en Offshoring (<span
             class="font-bold"
             >Coding, Admin Infrastructure & Cloud, DevOps</span
-          >) pour nos clients en Europe et aux Etats Unis.
+          >) pour nos clients en afrique et dans le monde.
         </p>
         <div class="mt-4">
           <button
             type="submit"
-            class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm focus:bg-secondary focus:outline-none uppercase"
+            class="
+              px-6
+              py-2
+              md:py-4
+              text-white text-sm
+              bg-secondary
+              rounded-sm
+              focus:bg-secondary
+              focus:outline-none
+              uppercase
+            "
           >
             En savoir plus
           </button>

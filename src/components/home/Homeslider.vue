@@ -2,23 +2,43 @@
   <div class="sliderAx">
     <div id="slider-1">
       <div
-        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-1"
+        class="
+          bg-cover bg-center
+          height
+          text-white
+          py-2
+          md:py-24
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-1
+        "
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
-            Technologie
+            Rintio Prestation
           </p>
           <p class="text-5xl font-extrabold font-openSans">
-            DataScience & <br />Intelligence Artificielle
+            Nous accélérons votre transformation digital
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Notre processus qui s'appuie sur des méthodes et des techniques pour
-            prendre des données brutes - l'extraction d'informations et des
-            années d'expérience vous aideront à devenir le leader du secteur.
+            Rintio vous accompagne dans la mise en place de vos solution
+            digitale en mettant a votre disposition une équipe hautement
+            qualifiée.
           </p>
           <a
             href="#"
-            class="bg-secondary py-4 px-8 text-white font-bold uppercase text-xs hover:bg-gray-200 hover:text-gray-800"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
             >En savoir plus</a
           >
         </div>
@@ -29,7 +49,17 @@
 
     <div id="slider-2">
       <div
-        class="bg-cover bg-center height text-black py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-2"
+        class="
+          bg-cover bg-center
+          height
+          text-black
+          py-2
+          md:py-24
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-2
+        "
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -39,11 +69,22 @@
             Africa <br />TechUp Tour
           </p>
           <p class="text-2xl mb-10 leading-8">
-            En Afrique, promesses et mirages du numérique.
+            Restez leader en donnant de la voix a vos données grâces à nos
+            solutions de datavisualisation et nos modèles prédictions.
           </p>
           <a
             href="#"
-            class="bg-secondary py-4 px-8 text-white font-bold uppercase text-xs hover:bg-gray-200 hover:text-gray-800"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
             >En savoir plus</a
           >
         </div>
@@ -54,7 +95,18 @@
 
     <div id="slider-3">
       <div
-        class="bg-cover bg-center height text-white py-2 md:py-24 px-2 md:px-20 object-fill bg-homeslider-3 items-center"
+        class="
+          bg-cover bg-center
+          height
+          text-white
+          py-2
+          md:py-24
+          px-2
+          md:px-20
+          object-fill
+          bg-homeslider-3
+          items-center
+        "
       >
         <div class="md:w-1/2">
           <p class="font-bold text-sm uppercase text-secondary font-openSans">
@@ -64,11 +116,22 @@
             CHMP & <br />Coraq-lab
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Lancement de la plateforme elearning dévélopée par Rintio.
+            Parcourez le monde avec nous dans notre quête continue de partage de
+            connaissance.
           </p>
           <a
             href="#"
-            class="bg-secondary py-4 px-8 text-white font-bold uppercase text-xs hover:bg-gray-200 hover:text-gray-800"
+            class="
+              bg-secondary
+              py-4
+              px-8
+              text-white
+              font-bold
+              uppercase
+              text-xs
+              hover:bg-gray-200
+              hover:text-gray-800
+            "
             >En savoir plus</a
           >
         </div>

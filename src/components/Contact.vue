@@ -1,6 +1,6 @@
 <template>
   <div class="md:flex w-full mx-4 md:mx-0 md:text-left">
-    <div class=" md:px-20 md:w-1/2">
+    <div class="md:px-20 md:w-1/2">
       <div class="flex">
         <div class="mx-auto">
           <div class="max-w-lg mx-auto my-10">
@@ -24,20 +24,40 @@
 
             <div class="mx-4 md:mx-0 pt-6">
               <h1
-                class="my-3 text-xl md:text-5xl font-extrabold text-primary capitalize"
+                class="
+                  my-3
+                  text-xl
+                  md:text-5xl
+                  font-extrabold
+                  text-primary
+                  capitalize
+                "
               >
-                Pour plus d'<span class="text-secondary">informations</span>
+                Besoin d'échanger sur
+                <span class="text-secondary">votre besoin ?</span>
               </h1>
 
-              Pour avoir plus d’informations, veuillez contacter notre service
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Toutes nos équipes au BENIN et et à l'international se tiennent à
+              votre disposition !
             </div>
 
             <div>
               <div class="flex p-4 items-center">
                 <div class="w-2/12 text-center">
                   <button
-                    class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+                    class="
+                      uppercase
+                      p-3
+                      flex
+                      items-center
+                      bg-secondary
+                      max-w-max
+                      bg-opacity-10
+                      rounded-full
+                      w-12
+                      h-12
+                      pointer-events-none
+                    "
                   >
                     <Phone />
                   </button>
@@ -52,7 +72,20 @@
               <div class="flex p-4 items-center">
                 <div class="w-2/12 text-center">
                   <button
-                    class="uppercase p-3 flex items-center bg-secondary text-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+                    class="
+                      uppercase
+                      p-3
+                      flex
+                      items-center
+                      bg-secondary
+                      text-secondary
+                      max-w-max
+                      bg-opacity-10
+                      rounded-full
+                      w-12
+                      h-12
+                      pointer-events-none
+                    "
                   >
                     <Mail />
                   </button>
@@ -65,7 +98,20 @@
               <div class="flex p-4 items-center">
                 <div class="w-2/12 text-center">
                   <button
-                    class="uppercase p-3 flex items-center bg-secondary text-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+                    class="
+                      uppercase
+                      p-3
+                      flex
+                      items-center
+                      bg-secondary
+                      text-secondary
+                      max-w-max
+                      bg-opacity-10
+                      rounded-full
+                      w-12
+                      h-12
+                      pointer-events-none
+                    "
                   >
                     <Location />
                   </button>
@@ -92,7 +138,17 @@
       <div class="flex items-center">
         <div class="container mx-auto">
           <div
-            class="max-w-lg mx-auto my-10 bg-white p-5 rounded-sm shadow-md md:shadow-xl min-h-0	"
+            class="
+              max-w-lg
+              mx-auto
+              my-10
+              bg-white
+              p-5
+              rounded-sm
+              shadow-md
+              md:shadow-xl
+              min-h-0
+            "
           >
             <div class="mx-4 md:m-7">
               <h1 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
@@ -108,7 +164,17 @@
                     id="name"
                     placeholder="Nom complet"
                     required
-                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    class="
+                      w-full
+                      px-3
+                      py-2
+                      placeholder-gray-300
+                      border border-gray-300
+                      rounded-sm
+                      focus:outline-none
+                      focus:ring focus:ring-indigo-100
+                      focus:border-indigo-300
+                    "
                   />
                 </div>
                 <div class="mb-6">
@@ -118,7 +184,17 @@
                     id="email"
                     placeholder="Email"
                     required
-                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    class="
+                      w-full
+                      px-3
+                      py-2
+                      placeholder-gray-300
+                      border border-gray-300
+                      rounded-sm
+                      focus:outline-none
+                      focus:ring focus:ring-indigo-100
+                      focus:border-indigo-300
+                    "
                   />
                 </div>
                 <div class="mb-6">
@@ -128,7 +204,17 @@
                     id="object"
                     placeholder="Objet"
                     required
-                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    class="
+                      w-full
+                      px-3
+                      py-2
+                      placeholder-gray-300
+                      border border-gray-300
+                      rounded-sm
+                      focus:outline-none
+                      focus:ring focus:ring-indigo-100
+                      focus:border-indigo-300
+                    "
                   />
                 </div>
                 <div class="mb-6">
@@ -137,19 +223,40 @@
                     name="message"
                     id="message"
                     placeholder="Message"
-                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                    class="
+                      w-full
+                      px-3
+                      py-2
+                      placeholder-gray-300
+                      border border-gray-300
+                      rounded-sm
+                      focus:outline-none
+                      focus:ring focus:ring-indigo-100
+                      focus:border-indigo-300
+                    "
                     required
                   ></textarea>
                 </div>
                 <div class="mb-6">
                   <button
                     type="submit"
-                    class="w-full px-3 py-2 md:py-4 text-white text-base md:text-xl bg-secondary rounded-sm focus:bg-secondary focus:outline-none"
+                    class="
+                      w-full
+                      px-3
+                      py-2
+                      md:py-4
+                      text-white text-base
+                      md:text-xl
+                      bg-secondary
+                      rounded-sm
+                      focus:bg-secondary
+                      focus:outline-none
+                    "
                   >
                     Envoyer
                   </button>
                 </div>
-                <p class="text-base text-center text-gray-400" id="result" ></p>
+                <p class="text-base text-center text-gray-400" id="result"></p>
               </form>
             </div>
           </div>

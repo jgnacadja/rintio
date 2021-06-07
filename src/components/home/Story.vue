@@ -4,16 +4,14 @@
       <h1
         class="my-3 text-xl md:text-5xl font-extrabold text-primary uppercase"
       >
-        à la une / Rintio<span class="text-secondary font-openSans">
-          Story</span
-        >
+        Rintio<span class="text-secondary font-openSans"> Story</span>
       </h1>
       <p class="md:w-1/2 mx-auto py-4">
-        Rintio est une entreprise de services du numérique. Nous sommes
-        spécialisées dans le
-        <span class="font-bold"
-          >développement et l’intégration de solutions informatiques..</span
+        Vivez
+        <span class="font-bold">
+          notre parcours dans l'écosystème technologique</span
         >
+        à travers nos actions.
       </p>
     </div>
 
@@ -39,7 +37,17 @@
         <div class="md:flex md:space-x-6">
           <!-- story 1 -->
           <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              md:w-1/2
+              relative
+              block
+              bg-white
+            "
           >
             <g-image
               alt="iot"
@@ -58,7 +66,17 @@
 
           <!-- story 2 -->
           <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              md:w-1/2
+              relative
+              block
+              bg-white
+            "
           >
             <g-image
               alt="iot"
@@ -80,7 +98,17 @@
         <div class="md:flex md:space-x-6">
           <!-- story 3 -->
           <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              md:w-1/2
+              relative
+              block
+              bg-white
+            "
           >
             <g-image
               alt="iot"
@@ -99,7 +127,17 @@
 
           <!-- story 4 -->
           <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              md:w-1/2
+              relative
+              block
+              bg-white
+            "
           >
             <g-image
               alt="iot"

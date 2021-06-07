@@ -1,8 +1,8 @@
   <template>
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
     <div class="mx-4 md:mx-0 md:text-center mb-4 md:mb-10">
-      <h1 class="text-xl md:text-7xl font-extrabold text-primary capitalize">
-        Nos implantations
+      <h1 class="text-xl md:text-5xl font-extrabold text-primary capitalize">
+        Notre Présence dans le monde
       </h1>
     </div>
     <div class="text-center">
@@ -18,20 +18,52 @@
     <div class="hidden md:flex justify-center items-center w-3/4 mx-auto">
       <div class="py-4 mx-4 w-full md:w-1/3">
         <div
-          class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
+          class="
+            shadow-lg
+            group
+            container
+            bg-white
+            max-w-sm
+            mx-auto
+            bg-center bg-cover bg-no-repeat bg-map-cotonou
+          "
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
-              class="w-full relative left-6 transform transition duration-500 translate-y-16 group-hover:-translate-y-4"
+              class="
+                w-full
+                relative
+                left-6
+                transform
+                transition
+                duration-500
+                translate-y-16
+                group-hover:-translate-y-4
+              "
             >
               <span
-                class="font-extrabold text-white tracking-wider leading-relaxed font-sans"
+                class="
+                  font-extrabold
+                  text-white
+                  tracking-wider
+                  leading-relaxed
+                  font-sans
+                "
                 >Cotonou, Bénin
               </span>
             </div>
             <div
-              class="py-6 px-6 bg-white transform transition duration-500 translate-y-28 group-hover:translate-y-0"
+              class="
+                py-6
+                px-6
+                bg-white
+                transform
+                transition
+                duration-500
+                translate-y-28
+                group-hover:translate-y-0
+              "
             >
               <span class="block text-gray-600 text-sm"> 18:00, GMT+1 </span>
 
@@ -44,20 +76,52 @@
       </div>
       <div class="py-4 mx-4 w-full md:w-1/3">
         <div
-          class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
+          class="
+            shadow-lg
+            group
+            container
+            bg-white
+            max-w-sm
+            mx-auto
+            bg-center bg-cover bg-no-repeat bg-map-paris
+          "
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
-              class="w-full relative left-6 transform transition duration-500 translate-y-16 group-hover:-translate-y-4"
+              class="
+                w-full
+                relative
+                left-6
+                transform
+                transition
+                duration-500
+                translate-y-16
+                group-hover:-translate-y-4
+              "
             >
               <span
-                class="font-extrabold text-white tracking-wider leading-relaxed font-sans"
+                class="
+                  font-extrabold
+                  text-white
+                  tracking-wider
+                  leading-relaxed
+                  font-sans
+                "
                 >Paris, France
               </span>
             </div>
             <div
-              class="py-6 px-6 bg-white transform transition duration-500 translate-y-28 group-hover:translate-y-0"
+              class="
+                py-6
+                px-6
+                bg-white
+                transform
+                transition
+                duration-500
+                translate-y-28
+                group-hover:translate-y-0
+              "
             >
               <span class="block text-gray-600 text-sm"> 18:00, GMT+1 </span>
 
@@ -70,20 +134,52 @@
       </div>
       <div class="py-4 mx-4 w-full md:w-1/3">
         <div
-          class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-abidjan"
+          class="
+            shadow-lg
+            group
+            container
+            bg-white
+            max-w-sm
+            mx-auto
+            bg-center bg-cover bg-no-repeat bg-map-abidjan
+          "
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
-              class="w-full relative left-6 transform transition duration-500 translate-y-16 group-hover:-translate-y-4"
+              class="
+                w-full
+                relative
+                left-6
+                transform
+                transition
+                duration-500
+                translate-y-16
+                group-hover:-translate-y-4
+              "
             >
               <span
-                class="font-extrabold text-white tracking-wider leading-relaxed font-sans"
+                class="
+                  font-extrabold
+                  text-white
+                  tracking-wider
+                  leading-relaxed
+                  font-sans
+                "
                 >Abidjan, Cote d’Ivoire
               </span>
             </div>
             <div
-              class="py-6 px-6 bg-white transform transition duration-500 translate-y-28 group-hover:translate-y-0"
+              class="
+                py-6
+                px-6
+                bg-white
+                transform
+                transition
+                duration-500
+                translate-y-28
+                group-hover:translate-y-0
+              "
             >
               <span class="block text-gray-600 text-sm"> 18:00, GMT+1 </span>
 

@@ -14,7 +14,7 @@ import Typography from "typography";
 import VueObserveVisibility from "vue-observe-visibility";
 
 const typography = new Typography({
-  baseFontSize: "14px",
+  baseFontSize: "16px",
   baseLineHeight: 1.6,
   scaleRatio: 1.9,
   headerFontFamily: ["Open Sans", "sans-serif"],
