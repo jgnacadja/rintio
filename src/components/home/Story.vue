@@ -27,9 +27,16 @@
         />
 
         <p class="text-primary font-bold my-4 leading-tight text-xl mx-4">
-          CHMP Coraq-lab
+          RINTIO renforce sa stratégie d’appui des formations en ligne en
+          mettant en production la plateforme E-learrning Coraq Lab
         </p>
-        <p class="text-gray-600 mb-4 mx-4 text-base">Lancement de la</p>
+        <p class="text-gray-600 mb-4 mx-4 text-base">
+          Dans la vision d’ apporter des solutions innovantes aux Entreprises et
+          Institutions en communiant les technologies du numérique aux grands
+          enjeux de nos sociétés, RINTIO vient de mettre en production la
+          plateforme Coraq-Lab :Cela constitue pour RINTIO un grand pas en avant
+          dans sa stratégie d’appui des formations en ligne.
+        </p>
       </div>
 
       <!-- sub-main story -->

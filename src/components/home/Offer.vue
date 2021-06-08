@@ -1,5 +1,17 @@
 <template>
-  <div class="bg-offer md:px-20 md:flex w-full justify-center md:py-24">
+  <div
+    class="
+      bg-offer
+      mt-0
+      md:mt-14
+      md:px-20
+      md:flex
+      w-full
+      justify-center
+      md:py-24
+      md:space-x-4
+    "
+  >
     <div class="w-full md:w-1/4 mb-8 md:mb-0">
       <div class="mx-4 md:mx-0">
         <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
@@ -36,23 +48,24 @@
           offres qui accélérons certainement votre productivité.
         </p>
         <div class="mt-4 text-center">
-          <button
-            type="submit"
-            class="
-              px-6
-              py-2
-              md:py-4
-              flex
-              text-white text-sm
-              bg-secondary
-              rounded-sm
-              focus:bg-secondary
-              focus:outline-none
-              uppercase
-            "
-          >
-            Tout consulter
-          </button>
+          <g-link to="/offres">
+            <button
+              type="submit"
+              class="
+                px-6
+                py-2
+                md:py-4
+                flex
+                text-white text-sm
+                bg-secondary
+                rounded-sm
+                hover:bg-primary
+                uppercase
+              "
+            >
+              Tout consulter
+            </button>
+          </g-link>
         </div>
       </div>
     </div>

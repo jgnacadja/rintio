@@ -13,6 +13,20 @@
   </div>
 </template>
 
+<static-query>
+  query {
+    metadata {
+      siteName
+      siteDescription
+      siteUrl
+      twitter {
+        site
+        creator
+      }
+    }
+  }
+</static-query>
+
 <script>
 import Logo from "~/assets/images/rintio-logo-small.svg";
 import Nav from "./partials/Nav.vue";
@@ -23,6 +37,27 @@ export default {
     Logo,
     Nav,
     Footer,
+  },
+  metaInfo() {
+    return {
+      meta: [
+        {
+          key: "author",
+          name: "author",
+          content: this.$static.metadata.author,
+        },
+        {
+          key: "twitter:site",
+          name: "twitter:site",
+          content: this.$static.metadata.twitter.site,
+        },
+        {
+          key: "twitter:creator",
+          name: "twitter:creator",
+          content: this.$static.metadata.twitter.creator,
+        },
+      ],
+    };
   },
 };
 </script>

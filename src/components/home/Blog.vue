@@ -21,7 +21,18 @@
     >
       <!-- main post -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
+        class="
+          mb-4
+          lg:mb-0
+          p-4
+          lg:p-0
+          w-full
+          md:w-1/2
+          relative
+          block
+          bg-white
+          h-full
+        "
       >
         <g-image
           alt="iot"
@@ -57,7 +68,7 @@
           Lorem Ipsum est simplement du faux texte employé dans la composition
           et la mise en page avant impression...
         </p>
-        <div class="flex space-x-8 mx-4">
+        <div class="flex space-x-8 mx-4 mb-1">
           <p class="flex space-x-2">
             <Like /> <span class="text-xs">24k</span>
           </p>
@@ -204,7 +215,7 @@
             <g-image
               alt="iot"
               src="~/assets/images/home/blog/ia.png"
-              class="block md:hidden lg:block h-64 md:h-full m-4 md:m-0 w-full"
+              class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
             />
             <span
               class="
@@ -257,7 +268,7 @@
             <g-image
               alt="iot"
               src="~/assets/images/home/blog/connect.png"
-              class="block md:hidden lg:block h-64 md:h-full m-4 md:m-0 w-full"
+              class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
             />
             <span
               class="
@@ -308,15 +319,7 @@
     <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
       <button
         href="#"
-        class="
-          py-8
-          mt-2
-          flex
-          md:text-lg
-          font-medium
-          hover:text-secondary
-          w-auto
-        "
+        class="flex md:text-lg font-medium hover:text-secondary w-auto"
       >
         Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
       </button>

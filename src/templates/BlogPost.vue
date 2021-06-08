@@ -540,6 +540,8 @@ query query($path:String) {
 </page-query>
 
 <script>
+import PostSeo from "../mixins/SEO";
+
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import User from "~/assets/images/icons/user.svg";
@@ -551,6 +553,7 @@ import Linkedin from "~/assets/images/icons/linkedin.svg";
 import Twitter from "~/assets/images/icons/twitter.svg";
 
 export default {
+  mixins: [PostSeo],
   components: {
     LazyHydrate,
     Breadcrumb,

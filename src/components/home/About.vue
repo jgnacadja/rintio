@@ -87,27 +87,43 @@
           >) pour nos clients en afrique et dans le monde.
         </p>
         <div class="mt-4">
-          <button
-            type="submit"
-            class="
-              px-6
-              py-2
-              md:py-4
-              text-white text-sm
-              bg-secondary
-              rounded-sm
-              focus:bg-secondary
-              focus:outline-none
-              uppercase
-            "
-          >
-            En savoir plus
-          </button>
+          <g-link to="/a-propos">
+            <button
+              v-if="!about"
+              type="submit"
+              class="
+                px-6
+                py-2
+                md:py-4
+                text-white text-sm
+                bg-secondary
+                rounded-sm
+                hover:bg-primary
+                focus:outline-none
+                uppercase
+              "
+            >
+              En savoir plus
+            </button>
+          </g-link>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      about: "",
+    };
+  },
+  mounted() {
+    this.about = this.$router.currentRoute.path.includes("a-propos");
+  },
+};
+</script>
 
 <style scoped>
 .bg-about {

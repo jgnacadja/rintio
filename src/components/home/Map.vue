@@ -137,7 +137,7 @@
                 "
               >
                 <span class="block text-gray-600 text-sm">
-                  {{ hour + 1 }}:{{ minute }}:{{ second }}
+                  {{ hourFr }}:{{ minute }}:{{ second }}
                 </span>
 
                 <span class="block text-gray-600 text-sm">
@@ -198,7 +198,7 @@
               "
             >
               <span class="block text-gray-600 text-sm">
-                {{ hour - 1 }}:{{ minute }}:{{ second }}
+                {{ hourCi }}:{{ minute }}:{{ second }}
               </span>
 
               <span class="block text-gray-600 text-sm">
@@ -217,6 +217,8 @@
 export default {
   data() {
     return {
+      hourFr: "",
+      hourCi: "",
       hour: "",
       minute: "",
       second: "",
@@ -242,6 +244,19 @@ export default {
       }
 
       this.hour = hour;
+      this.hourFr = Number(hour) + 1;
+      this.hourCi = Number(hour) - 1;
+
+      if (this.hour.toString().length == 1) this.hour = "0" + this.hour;
+
+      if (this.hourFr.toString().length == 1) this.hourFr = "0" + this.hourFr;
+
+      if (this.hourCi.toString().length == 1) this.hourCi = "0" + this.hourCi;
+
+      if (minute.toString().length == 1) minute = "0" + minute;
+
+      if (second.toString().length == 1) second = "0" + second;
+
       this.minute = minute;
       this.second = second;
     },
