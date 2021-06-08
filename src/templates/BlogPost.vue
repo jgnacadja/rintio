@@ -565,9 +565,6 @@ export default {
     Linkedin,
     Twitter,
   },
-  metaInfo: {
-    title: "Blog",
-  },
   data() {
     return {
       path: "",
