@@ -25,6 +25,12 @@ export default function (Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: "fr" };
 
+  // Import Crisp
+  head.script.push({
+    src: "crisp.js",
+    body: true,
+  });
+
   // import vue meta
   head.meta.push({
     name: "viewport",

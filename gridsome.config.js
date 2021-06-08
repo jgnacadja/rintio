@@ -47,7 +47,7 @@ module.exports = {
     },
 
     templates: {
-        BlogPost: "/article/:title",
+        BlogPost: "/blog/article/:title",
         //Category: "/category/:title",
         //Tag: "/tag/:title",
         //ContentfulPost: "/article/:title",

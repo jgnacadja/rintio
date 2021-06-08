@@ -5,7 +5,16 @@
     </LazyHydrate>
 
     <div
-      class="md:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full mt-24"
+      class="
+        md:flex
+        container
+        mx-auto
+        md:px-16
+        space-x-0
+        md:space-x-6
+        w-full
+        mt-24
+      "
     >
       <div id="home" class="container px-4 w-3/4">
         <div class="space-y-6">
@@ -49,9 +58,8 @@
                   text-xl
                   mx-4
                 "
-              >
-                {{ edge.node.title }}
-              </p>
+                v-html="edge.node.title"
+              ></p>
               <p class="text-primary text-xs space-x-8 mx-4">
                 <span>{{ edge.node.date }}</span>
                 <span>Publié par : xxxxxxxxxxxxx</span>

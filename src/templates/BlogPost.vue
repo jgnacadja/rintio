@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
-      <Breadcrumb :path="path" />
+      <Breadcrumb :path="path" :article="$page.post.title" />
     </LazyHydrate>
 
     <div
@@ -571,7 +571,7 @@ export default {
     };
   },
   mounted() {
-    this.path = this.$router.currentRoute.path.slice(1).replace("-", " ");
+    this.path = this.$router.currentRoute.path.split("/")[1];
   },
 };
 </script>
