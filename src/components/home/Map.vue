@@ -71,11 +71,7 @@
                 "
               >
                 <span class="block text-gray-600 text-sm">
-                  {{ hour }}:{{ minute }}:{{ second }}
-                </span>
-
-                <span class="block text-gray-600 text-sm">
-                  contact@rintio.com , +229 97 11 94 79
+                  {{ hour }}h:{{ minute }}m:{{ second }}s
                 </span>
               </div>
             </div>
@@ -137,11 +133,7 @@
                 "
               >
                 <span class="block text-gray-600 text-sm">
-                  {{ hourFr }}:{{ minute }}:{{ second }}
-                </span>
-
-                <span class="block text-gray-600 text-sm">
-                  contact@rintio.com , +33 6 25 18 40 11
+                  {{ hourFr }}h:{{ minute }}m:{{ second }}s
                 </span>
               </div>
             </div>
@@ -198,12 +190,12 @@
               "
             >
               <span class="block text-gray-600 text-sm">
-                {{ hourCi }}:{{ minute }}:{{ second }}
+                {{ hourCi }}h:{{ minute }}m:{{ second }}s
               </span>
 
-              <span class="block text-gray-600 text-sm">
+              <!--      <span class="block text-gray-600 text-sm">
                 contact@rintio.com , +225 58 08 74 21
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
