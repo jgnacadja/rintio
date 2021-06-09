@@ -1,7 +1,7 @@
 ---
 title: Offshoring DevOps
 published: true
-categories: ["Offres"]
+categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-28
 coverImage: /img/articles/ID11558400.png

@@ -1,7 +1,7 @@
 ---
 title: Offshoring Dev                
 published: true
-categories: ["Offres"]
+categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-02
 coverImage: /img/articles/ID282940ca_067c_40c4_90f7_4458.png

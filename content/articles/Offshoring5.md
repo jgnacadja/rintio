@@ -1,7 +1,7 @@
 ---
 title: Offshoring Finense
 published: true
-categories: ["Stories"]
+categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-02
 coverImage: /img/articles/fnense.png

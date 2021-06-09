@@ -1,7 +1,7 @@
 ---
 title: Acculturation sur la Data & l’IA
 published: true
-categories: ["Datalab"]
+categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/environnement_numerique.png

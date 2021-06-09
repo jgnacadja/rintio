@@ -1,7 +1,7 @@
 ---
 title: DevOps
 published: true
-categories: ["Blog"]
+categories: Blog
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-27
 publie: Publié par ...

@@ -1,7 +1,7 @@
 ---
 title: Formation
 published: true
-categories: ["Offres"]
+categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3265.png

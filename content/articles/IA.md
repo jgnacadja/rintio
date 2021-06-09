@@ -1,7 +1,7 @@
 ---
 title: Intelligence artificielle
 published: true
-categories: ["Offres"]
+categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-29
 coverImage: /img/articles/download.png

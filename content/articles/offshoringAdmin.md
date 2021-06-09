@@ -1,7 +1,7 @@
 ---
 title:   Offshoring Admin
 published: true
-categories: ["Offres"]
+categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-31
 coverImage: /img/articles/MON1178047@2x.png

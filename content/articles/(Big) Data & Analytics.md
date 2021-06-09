@@ -1,7 +1,7 @@
 ---
 title: (Big) Data & Analytics
 published: true
-categories: ["Offres"]
+categories: Offres
 keywords: []
 date: 2020-08-30
 coverImage: /img/articles/Fotolia_257957753_Subscription.png

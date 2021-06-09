@@ -1,7 +1,7 @@
 ---
 title: Retrospectives Africa TechUp Tour Abidjan 2019
 published: true
-categories: ["Stories"]
+categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-O8-03
 coverImage: /img/articles/ID1_signed.png

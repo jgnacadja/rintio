@@ -1,7 +1,7 @@
 ---
 title: <a href="">SG Maroc</a> imagine la banque du future avec l’IA
 published: true
-categories: ["Stories"]
+categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/WhatsApp_Image_2019_03_13_at_0.png

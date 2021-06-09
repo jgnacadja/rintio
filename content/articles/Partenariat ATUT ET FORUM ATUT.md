@@ -1,7 +1,7 @@
 ---
 title: Partenariat Africa TechUp Tour et le forum <a href="#"> AfricUp </a>
 published: true
-categories: ["Stories"]
+categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-O8-04
 coverImage: /img/articles/thumbnail2.png

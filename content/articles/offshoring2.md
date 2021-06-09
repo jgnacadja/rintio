@@ -1,7 +1,7 @@
 ---
 title: Offshoring GlobalOptim
 published: true
-categories: ["Stories"]
+categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-30
 coverImage: /img/articles/devops_agile_development_optim.png

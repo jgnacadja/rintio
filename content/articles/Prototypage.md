@@ -1,7 +1,7 @@
 ---
 title: Prototypage & généralisation
 published: true
-categories: ["Datalab"]
+categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-31
 coverImage: /img/articles/ID700226d13b56ab5f2f0330a17a7e.png

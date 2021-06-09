@@ -42,11 +42,11 @@
                   ml-4
                   -mt-7
                   capitalize
-                  w-64
+                  w-32
                   text-center
                 "
               >
-                {{ edge.node.categories.id }}
+                {{ edge.node.categories.title }}
               </span>
               <p
                 class="
@@ -58,8 +58,9 @@
                   text-xl
                   mx-4
                 "
-                v-html="edge.node.title"
-              ></p>
+              >
+                {{ edge.node.title }}
+              </p>
               <p class="text-primary text-xs space-x-8 mx-4">
                 <span>{{ edge.node.date }}</span>
                 <span>Publié par : xxxxxxxxxxxxx</span>
@@ -83,76 +84,8 @@
           </div>
 
           <!-- paginator -->
-          <ul
-            class="
-              flex
-              list-reset
-              border border-grey-light
-              rounded
-              w-auto
-              font-sans
-            "
-          >
-            <li>
-              <a
-                class="
-                  block
-                  hover:text-white
-                  hover:bg-blue
-                  text-blue
-                  border-r border-grey-light
-                  px-3
-                  py-2
-                "
-                href="#"
-                >Previous</a
-              >
-            </li>
-            <li>
-              <a
-                class="
-                  block
-                  hover:text-white
-                  hover:bg-blue
-                  text-blue
-                  border-r border-grey-light
-                  px-3
-                  py-2
-                "
-                href="#"
-                >1</a
-              >
-            </li>
-            <li>
-              <a
-                class="
-                  block
-                  hover:text-white
-                  hover:bg-blue
-                  text-blue
-                  border-r border-grey-light
-                  px-3
-                  py-2
-                "
-                href="#"
-                >2</a
-              >
-            </li>
-            <li>
-              <a
-                class="block text-white bg-blue border-r border-blue px-3 py-2"
-                href="#"
-                >3</a
-              >
-            </li>
-            <li>
-              <a
-                class="block hover:text-white hover:bg-blue text-blue px-3 py-2"
-                href="#"
-                >Next</a
-              >
-            </li>
-          </ul>
+         
+          <Pager class="pager" :info="$page.posts.pageInfo"/>
         </div>
       </div>
 
@@ -323,26 +256,12 @@
         </div>
         <div>
           <ul class="list-outside list-disc ml-6 font-bold">
-            <li class="text-secondary">
-              <div class="text-gray-700">Intelligence Artificielle</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Big Data</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Data Science & Data Analytics</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Cloud</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">DevOps</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Dataviz</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">API & Microservice</div>
+            <li
+              v-for="edge in $page.category.edges"
+              :key="edge.node.id"
+              class="text-secondary"
+            >
+              <div class="text-gray-700">{{ edge.node.id }}</div>
             </li>
           </ul>
         </div>
@@ -358,6 +277,8 @@
         </div>
         <div>
           <span
+            v-for="edge in $page.tags.edges"
+            :key="edge.node.id"
             class="
               inline-flex
               items-center
@@ -372,93 +293,8 @@
               hover:text-white
               hover:bg-secondary
             "
-            >Scrum</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Méthode agile</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Intelligence Artificielle</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >API</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Formation</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >DevOps</span
-          >
+            >{{ edge.node.id }}
+          </span>
         </div>
       </div>
     </div>
@@ -469,34 +305,56 @@
 
 
 <page-query>
-query {
-  posts: allBlogPost {
+query($page: Int) {
+  posts:  allBlogPost(perPage: 5, page: $page) @paginate {
+    pageInfo {
+      currentPage
+      perPage: perPage
+      totalPages
+    }
     edges {
       node {
         id
         title
         path
-        categories{
+        categories {
           id
+          title
         }
         date
         metaDescription
         coverImage
+        tags {
+          id
+        }
       }
     }
   }
+  tags: allTag {
+    edges {
+      node{id}
+    }
+  }
+  category: allCategory {
+    edges {
+      node{id}
+    }
+  }
 }
+
 </page-query>
 
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
+import { Pager } from "gridsome";
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
+    Pager,
   },
   metaInfo: {
     title: "Blog",
@@ -511,3 +369,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+
+
+
+</style>

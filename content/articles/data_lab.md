@@ -1,7 +1,7 @@
 ---
 title: Data Lab
 published: true
-categories: ["Offres"]
+categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-01
 coverImage: /img/articles/IMG_3262.png

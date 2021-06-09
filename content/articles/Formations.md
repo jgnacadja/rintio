@@ -1,7 +1,7 @@
 ---
 title: Offshoring Studely
 published: true
-categories: ["Stories"]
+categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-04
 coverImage: /img/articles/woman-wearing-red-and-black-checkered-blouse-using-macbook-1181472.jpg

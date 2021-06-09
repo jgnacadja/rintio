@@ -1,7 +1,7 @@
 ---
 title: Scrum
 published: true
-categories: ["Blog"]
+categories: Blog
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-03
 publie: Publié par ...
