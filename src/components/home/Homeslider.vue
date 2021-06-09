@@ -19,11 +19,11 @@
             Rintio Prestation
           </p>
           <p class="text-5xl font-extrabold text-primary font-openSans">
-            Nous accélérons votre transformation digital
+            Nous accélérons votre transformation digitale
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Rintio vous accompagne dans la mise en place de vos solution
-            digitale en mettant a votre disposition une équipe hautement
+            Rintio vous accompagne dans la mise en place de vos solutions
+            digitales en mettant à votre disposition une équipe hautement
             qualifiée.
           </p>
           <a
@@ -68,8 +68,8 @@
             DataScience et Intelligence Artificielle
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Restez leader en donnant de la voix a vos données grâces à nos
-            solutions de datavisualisation et nos modèles prédictions.
+            Restez leader en donnant de la voix à vos données grâce à nos
+            solutions de data visualisation et nos modèles prédictions.
           </p>
           <a
             href="#"
@@ -159,7 +159,7 @@
           </p>
           <p class="text-2xl mb-10 leading-8">
             Lancement de la plateforme e-learning Coraq Lab en partenariat avec
-            CHMP et Initiave 5%, financé par Expertise France.
+            CHMP et Initiative 5%, financé par Expertise France.
           </p>
           <a
             href="#"
