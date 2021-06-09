@@ -1,8 +1,8 @@
 ---
 title: Offshoring Compta360
 published: true
-categories: Rintio Stories
-keywords : []
+categories: ["Stories"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-08-29
 coverImage: /img/articles/T_MOIGNAGES_2.png
 metaDescription: Rintio Accompagne <a href=""> Compta360 </a> dans le développement de ses solutions Comptables.

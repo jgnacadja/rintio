@@ -1,8 +1,8 @@
 ---
 title: Offshoring  Cloud
 published: true
-categories: Nos offres
-keywords : []
+categories: ["Offres"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-08-26
 coverImage: /img/articles/CLoud1.png
 metaDescription: Migration dans le Cloud

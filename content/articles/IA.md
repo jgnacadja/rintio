@@ -1,8 +1,8 @@
 ---
 title: Intelligence artificielle
 published: true
-categories: Nos offres
-keywords : []
+categories: ["Offres"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-08-29
 coverImage: /img/articles/download.png
 metaDescription: Meilleur connaissance client, Expérience client unique, Produits et services augmentés

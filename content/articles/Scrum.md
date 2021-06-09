@@ -1,8 +1,8 @@
 ---
 title: Scrum
 published: true
-categories: Nos Publications
-keywords : []
+categories: ["Blog"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-09-03
 publie: Publié par ...
 coverImage: /img/articles/images.png

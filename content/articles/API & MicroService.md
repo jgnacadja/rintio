@@ -1,8 +1,8 @@
 ---
 title: API MicroService
 published: true
-categories: Nos offres
-keywords : []
+categories: ["Offres"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-08-27
 coverImage: /img/articles/ID4H1A1937.png
 metaDescription: .Exposez vos produits, vos services, et vos données via des API 

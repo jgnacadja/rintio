@@ -1,8 +1,8 @@
 ---
 title: Rintio Bootcamp
 published: true
-categories: Rintio Stories
-keywords : []
+categories: ["Stories"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/mobile_app_development_backgro.png
 metaDescription: Ce programme initié en 2017 vise à former et renforcer les capacités d’environs 5000 jeunes en Afrique à l’horizon 2022.

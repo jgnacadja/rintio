@@ -1,8 +1,8 @@
 ---
 title: Offshoring ISCI
 published: true
-categories: Rintio Stories
-keywords : []
+categories: ["Stories"]
+tags: ["frontend", "design", "scrum"]
 date: 2020-09-03
 coverImage: /img/articles/ISCI.png
 metaDescription: Rintio Accompagne <a href="">ISCI</a> dans le développement de ses solutions Comptables.
