@@ -100,7 +100,7 @@
               </h1>
             </div>
             <div class="mx-4 md:m-7">
-              <form id="form" @submit.prevent="sendEmail">
+              <form id="form" name="form" @submit.prevent="sendEmail">
                 <div class="mb-6">
                   <input
                     type="text"
@@ -108,7 +108,7 @@
                     name="name"
                     id="name"
                     placeholder="Nom complet"
-                    required
+                    requiredmethods
                     class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
                   />
                 </div>
@@ -153,18 +153,7 @@
                     Envoyer
                   </button>
                 </div>
-                <div id="popup" class="bg-white w-2/4 border-solid border-4 border-blue-800 p-3 ml-52 hidden">
-                  Message envoyé
-                  <div class="">
-                  <button
-                    type=""
-                    class="w-1/4 text-white text-base md:text-xl bg-primary rounded-sm ml-32"
-                  >
-                    OK
-                  </button>
-                </div>
-                </div>
-                <p class="text-base text-center text-gray-400" id="result" ></p>
+                <p class="text-base text-center" id="result"></p>
               </form>
             </div>
           </div>
@@ -192,30 +181,56 @@ export default {
       name: null,
       email: null,
       object: null,
-      message: null,
+      message: null
     }
   },
-  methods: {
-    sendEmail(e) {
-      try {
-        emailjs.sendForm('service_kcg1fpl', 'template_q2ewdb3', e.target, 'user_Y2KIJGmvuqmYVVqo9JBO8',
-        {
-          name: this.name,
-          email: this.email,
-          object: this.object,
-          message: this.message
-        })
-      document.getElementById("popup").style.display="block"
+  // methods: {
+  //   sendEmail(e) {
+  //     try {
+  //       emailjs.sendForm('service_kcg1fpl', 'template_q2ewdb3', e.target, 'user_Y2KIJGmvuqmYVVqo9JBO8',
+  //       {
+  //         name: this.name,
+  //         email: this.email,
+  //         object: this.object,
+  //         message: this.message
+  //       })
+  //     // document.getElementById("popup").style.display="block"
 
-      } catch(error) {
-          console.log({error})
-      }
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.object = ''
-      this.message = ''
-    },
+  //     } catch(error) {
+  //         console.log({error})
+  //     }
+  //     // Reset form field
+  //     this.name = ''
+  //     this.email = ''
+  //     this.object = ''
+  //     this.message = ''
+  //   },
+  // }
+
+  methods: {
+    sendEmail: (e) => {
+      emailjs.sendForm('service_kcg1fpl', 'template_q2ewdb3', e.target, 'user_Y2KIJGmvuqmYVVqo9JBO8')
+        .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+            document.getElementById("result").innerHTML="<span style='color:green'>Votre message a été envoyé.</span>"
+            // innerHTML="Votre message a été envoyé.";
+            // Reset form field
+            document.getElementById("form").reset();
+            
+            // document.forms["form"]["name"].value="";
+            // document.forms["form"]["email"].value="";
+            // document.forms["form"]["object"].value="";
+            // document.forms["form"]["message"].value="";
+
+          // this.name = ''
+          // this.email = ''
+          // this.object = ''
+          // this.message = ''
+        }, (error) => {
+            console.log('FAILED...', error);
+            document.getElementById("result").innerHTML="<span style='color:red'>Problème de connection, vérifiez votre connexion.</span>"
+        });
+    }
   }
 }
 </script>
