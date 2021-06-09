@@ -48,12 +48,12 @@ export default {
         {
           key: "og:image:width",
           property: "og:image:width",
-          content: (image && image.size.width) || "",
+          content: (image) || "",
         },
         {
           key: "og:image:height",
           property: "og:image:height",
-          content: (image && image.size.height) || "",
+          content: (image) || "",
         },
         {
           key: "twitter:description",
