@@ -110,7 +110,7 @@
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
-                  href="https://www.linkedin.com/company/rintio/"
+                  :href="`https://twitter.com/intent/tweet?url=${fullPath}&text=${$page.post.title}&via=@rintioGroup&hashtags={hash_tags}`"
                   target="_blank"
                 >
                   <Linkedin />
@@ -119,7 +119,7 @@
                   <Twitter />
                 </a>
                 <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+                  :href="`https://www.facebook.com/sharer.php?u=${fullPath}&href=${fullPath}&quote=${$page.post.metaDescription}`"
                   target="_blank"
                 >
                   <Facebook />
@@ -568,10 +568,12 @@ export default {
   data() {
     return {
       path: "",
+      fullPath: "",
     };
   },
   mounted() {
     this.path = this.$router.currentRoute.path.split("/")[1];
+    this.fullPath = this.$router.currentRoute.path;
   },
 };
 </script>
