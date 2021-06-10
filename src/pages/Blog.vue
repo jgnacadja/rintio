@@ -19,76 +19,86 @@
       <div id="home" class="container px-4 w-3/4">
         <div class="space-y-6">
           <!-- main post -->
-          <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full relative block bg-white"
-            v-for="edge in $page.posts.edges"
-            :key="edge.node.id"
-          >
-            <g-link :to="edge.node.path">
-              <g-image
-                alt="iot"
-                :src="edge.node.coverImage"
-                class="object-cover w-full h-96 mb-0"
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-32
-                  text-center
-                "
-              >
-                {{ edge.node.categories.title }}
-              </span>
-              <p
-                class="
-                  text-gray-800
-                  font-bold
-                  mt-2
-                  mb-2
-                  leading-tight
-                  text-xl
-                  mx-4
-                "
-              >
-                {{ edge.node.title }}
-              </p>
-              <p class="text-primary text-xs space-x-8 mx-4">
-                <span>{{ edge.node.date }}</span>
-                <span>Publié par : xxxxxxxxxxxxx</span>
-              </p>
-              <p
-                class="text-gray-600 mb-4 mx-4"
-                v-html="edge.node.metaDescription"
-              ></p>
-              <div class="flex space-x-8 mx-4">
-                <p class="flex space-x-2">
-                  <Like /> <span class="text-xs">24k</span>
+          <div v-if="searchResults.length > 0">
+            <div
+              class="mb-4 lg:mb-0 p-4 lg:p-0 w-full relative block bg-white"
+              v-for="post in searchResults"
+              :key="post.node.id"
+            >
+              <g-link :to="post.node.path">
+                <g-image
+                  alt="iot"
+                  :src="post.node.coverImage"
+                  class="object-cover w-full h-96 mb-0"
+                />
+                <span
+                  class="
+                    relative
+                    text-white
+                    bg-secondary
+                    p-4
+                    text-sm
+                    hidden
+                    md:block
+                    ml-4
+                    -mt-7
+                    capitalize
+                    w-32
+                    text-center
+                  "
+                >
+                  {{ post.node.categories.title }}
+                </span>
+                <p
+                  class="
+                    text-gray-800
+                    font-bold
+                    mt-2
+                    mb-2
+                    leading-tight
+                    text-xl
+                    mx-4
+                  "
+                >
+                  {{ post.node.title }}
                 </p>
-                <p class="flex space-x-2">
-                  <Comment /> <span class="text-xs">247</span>
+                <p class="text-primary text-xs space-x-8 mx-4">
+                  <span>{{ post.node.date }}</span>
+                  <span>Publié par : xxxxxxxxxxxxx</span>
                 </p>
-                <p class="flex space-x-2">
-                  <Share /> <span class="text-xs">24</span>
-                </p>
-              </div>
-            </g-link>
+                <p
+                  class="text-gray-600 mb-4 mx-4"
+                  v-html="post.node.metaDescription"
+                ></p>
+                <div class="flex space-x-8 mx-4">
+                  <p class="flex space-x-2">
+                    <Like /> <span class="text-xs">24k</span>
+                  </p>
+                  <p class="flex space-x-2">
+                    <Comment /> <span class="text-xs">247</span>
+                  </p>
+                  <p class="flex space-x-2">
+                    <Share /> <span class="text-xs">24</span>
+                  </p>
+                </div>
+              </g-link>
+            </div>
+
+            <!-- paginator -->
+
+            <Pager
+              class="flex justify-center pager p-2"
+              :info="$page.posts.pageInfo"
+            />
           </div>
 
-          <!-- paginator -->
-
-          <Pager
-            class="flex justify-center pager p-2"
-            :info="$page.posts.pageInfo"
-          />
+          <div v-else>
+            <div class="shadow-md w-full p-24 h-full text-center">
+              <seo class="h-96 w-full"/>
+              <h3>Aucun résultat correspondant à votre recherche</h3>
+              <p>Veuillez essayer d'ajuster vos mots-clés de recherche ou vos filtres.</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -117,6 +127,7 @@
             type="search"
             name="search"
             placeholder=""
+            v-model="search"
           />
           <button
             type="submit"
@@ -205,7 +216,6 @@
               </g-link>
             </div>
           </div>
-          
         </div>
 
         <div class="md:mx-0">
@@ -334,12 +344,15 @@ query($page: Int) {
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
+import Seo from "~/assets/images/Illustrations/seo.svg";
+
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
     Pager,
+    Seo,
   },
   metaInfo: {
     title: "Blog",
@@ -347,10 +360,22 @@ export default {
   data() {
     return {
       path: "",
+      search: "",
     };
   },
   mounted() {
     this.path = this.$router.currentRoute.path.slice(1).replace("-", " ");
+  },
+
+  computed: {
+    searchResults() {
+      return this.$page.posts.edges.filter((post) => {
+        
+        return post.node.title
+          .toLowerCase()
+          .includes(this.search.toLowerCase().trim());
+      });
+    },
   },
 };
 </script>
