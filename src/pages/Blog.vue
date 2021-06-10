@@ -19,73 +19,86 @@
       <div id="home" class="container px-4 w-3/4">
         <div class="space-y-6">
           <!-- main post -->
-          <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full relative block bg-white"
-            v-for="edge in $page.posts.edges"
-            :key="edge.node.id"
-          >
-            <g-link :to="edge.node.path">
-              <g-image
-                alt="iot"
-                :src="edge.node.coverImage"
-                class="object-cover w-full h-96 mb-0"
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-32
-                  text-center
-                "
-              >
-                {{ edge.node.categories.title }}
-              </span>
-              <p
-                class="
-                  text-gray-800
-                  font-bold
-                  mt-2
-                  mb-2
-                  leading-tight
-                  text-xl
-                  mx-4
-                "
-              >
-                {{ edge.node.title }}
-              </p>
-              <p class="text-primary text-xs space-x-8 mx-4">
-                <span>{{ edge.node.date }}</span>
-                <span>Publié par : xxxxxxxxxxxxx</span>
-              </p>
-              <p
-                class="text-gray-600 mb-4 mx-4"
-                v-html="edge.node.metaDescription"
-              ></p>
-              <div class="flex space-x-8 mx-4">
-                <p class="flex space-x-2">
-                  <Like /> <span class="text-xs">24k</span>
+          <div v-if="searchResults.length > 0">
+            <div
+              class="mb-4 lg:mb-0 p-4 lg:p-0 w-full relative block bg-white"
+              v-for="post in searchResults"
+              :key="post.node.id"
+            >
+              <g-link :to="post.node.path">
+                <g-image
+                  alt="iot"
+                  :src="post.node.coverImage"
+                  class="object-cover w-full h-96 mb-0"
+                />
+                <span
+                  class="
+                    relative
+                    text-white
+                    bg-secondary
+                    p-4
+                    text-sm
+                    hidden
+                    md:block
+                    ml-4
+                    -mt-7
+                    capitalize
+                    w-32
+                    text-center
+                  "
+                >
+                  {{ post.node.categories.title }}
+                </span>
+                <p
+                  class="
+                    text-gray-800
+                    font-bold
+                    mt-2
+                    mb-2
+                    leading-tight
+                    text-xl
+                    mx-4
+                  "
+                >
+                  {{ post.node.title }}
                 </p>
-                <p class="flex space-x-2">
-                  <Comment /> <span class="text-xs">247</span>
+                <p class="text-primary text-xs space-x-8 mx-4">
+                  <span>{{ post.node.date }}</span>
+                  <span>Publié par : xxxxxxxxxxxxx</span>
                 </p>
-                <p class="flex space-x-2">
-                  <Share /> <span class="text-xs">24</span>
-                </p>
-              </div>
-            </g-link>
+                <p
+                  class="text-gray-600 mb-4 mx-4"
+                  v-html="post.node.metaDescription"
+                ></p>
+                <div class="flex space-x-8 mx-4">
+                  <p class="flex space-x-2">
+                    <Like /> <span class="text-xs">24k</span>
+                  </p>
+                  <p class="flex space-x-2">
+                    <Comment /> <span class="text-xs">247</span>
+                  </p>
+                  <p class="flex space-x-2">
+                    <Share /> <span class="text-xs">24</span>
+                  </p>
+                </div>
+              </g-link>
+            </div>
+
+            <!-- paginator -->
+
+            <Pager
+              class="flex justify-center pager p-2"
+              :info="$page.posts.pageInfo"
+            />
           </div>
 
-          <!-- paginator -->
-         
-          <Pager class="pager" :info="$page.posts.pageInfo"/>
+          <div v-else>
+            <div class="shadow-md w-full p-24 h-full text-center">
+              <seo class="h-96 w-full"/>
+              <h3>Aucun résultat correspondant à votre recherche</h3>
+              <p>Veuillez essayer d'ajuster vos mots-clés de recherche ou vos filtres.</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -114,6 +127,7 @@
             type="search"
             name="search"
             placeholder=""
+            v-model="search"
           />
           <button
             type="submit"
@@ -141,7 +155,7 @@
         </div>
 
         <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Articles Populaires</h1>
+          <h1 class="text-lg md:text-xl font-bold mb-0">Articles à la une</h1>
           <div class="mb-4 -mt-3">
             <span class="inline-block w-1/3 border border-secondary"></span>
             <span class="inline-block w-2/3 border border-grey-300"></span>
@@ -150,99 +164,56 @@
 
         <div class="w-full hidden md:block">
           <!-- post 1 -->
-          <div class="w-full flex flex-col md:flex-row mb-5">
+          <div
+            class="w-full flex flex-col md:flex-row mb-5"
+            v-for="edge in $page.onlinePost.edges"
+            :key="edge.node.id"
+          >
             <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/ia.png"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
-              >
-                Big data
-              </span>
+              <g-link :to="edge.node.path">
+                <g-image
+                  alt="iot"
+                  :src="edge.node.coverImage"
+                  class="
+                    block
+                    md:hidden
+                    lg:block
+                    h-32
+                    md:h-32
+                    m-4
+                    md:m-0
+                    w-full
+                  "
+                />
+                <span
+                  class="
+                    relative
+                    text-white
+                    bg-secondary
+                    p-4
+                    text-sm
+                    hidden
+                    md:block
+                    ml-4
+                    -mt-7
+                    capitalize
+                    w-24
+                    text-center
+                  "
+                >
+                  {{ edge.node.categories.title }}
+                </span>
+              </g-link>
             </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>10 Jan 2020</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-                Article 2
-              </p>
-              <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-                Lorem Ipsum est simplement du faux texte employé dans...
-              </p>
-            </div>
-          </div>
-
-          <div class="w-full flex flex-col md:flex-row">
-            <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/ia.png"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
-              >
-                Big data
-              </span>
-            </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>10 Jan 2020</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-                Article 2
-              </p>
-              <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-                Lorem Ipsum est simplement du faux texte employé dans...
-              </p>
+            <div class="bg-white px-4 w-3/5 h-32">
+              <g-link :to="edge.node.path">
+                <p class="text-primary text-xs mt-4">
+                  <span>{{ edge.node.date }}</span>
+                </p>
+                <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-base">
+                  {{ edge.node.title }}
+                </p>
+              </g-link>
             </div>
           </div>
         </div>
@@ -304,6 +275,7 @@
 
 
 
+
 <page-query>
 query($page: Int) {
   posts:  allBlogPost(perPage: 5, page: $page) @paginate {
@@ -340,6 +312,29 @@ query($page: Int) {
       node{id}
     }
   }
+  
+  onlinePost : allBlogPost(
+    perPage: 3
+    page: 1
+    filter: { categories: { in: "Blog" } }
+    limit: 3
+    order: DESC
+  ) @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+      }
+    }
+  }
+
 }
 
 </page-query>
@@ -349,12 +344,15 @@ query($page: Int) {
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
+import Seo from "~/assets/images/Illustrations/seo.svg";
+
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
     Pager,
+    Seo,
   },
   metaInfo: {
     title: "Blog",
@@ -362,16 +360,62 @@ export default {
   data() {
     return {
       path: "",
+      search: "",
     };
   },
   mounted() {
     this.path = this.$router.currentRoute.path.slice(1).replace("-", " ");
   },
+
+  computed: {
+    searchResults() {
+      return this.$page.posts.edges.filter((post) => {
+        
+        return post.node.title
+          .toLowerCase()
+          .includes(this.search.toLowerCase().trim());
+      });
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../variables.scss";
 
+.pager {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
 
+  &__link {
+    color: red;
+    text-align: center;
+    text-decoration: none;
 
+    &:hover:not(.active) {
+      background-color: blue;
+      color: #fff !important;
+    }
+  }
+}
+
+.pager a {
+  width: 2rem;
+  padding: 1rem;
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.pager a:hover {
+  background-color: $red-rintio;
+  color: #fff !important;
+}
+
+.active {
+  background-color: $red-rintio;
+  color: #fff !important;
+  padding: 1rem;
+  border: 1px solid $red-rintio;
+}
 </style>
