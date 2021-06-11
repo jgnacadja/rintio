@@ -1,5 +1,5 @@
 ---
-title: Partenariat Africa TechUp et le forum <a href="#"> OSIANE </a>
+title: Partenariat Africa TechUp et le forum OSIANE
 published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]

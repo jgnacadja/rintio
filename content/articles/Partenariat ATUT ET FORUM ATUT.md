@@ -1,5 +1,5 @@
 ---
-title: Partenariat Africa TechUp Tour et le forum <a href="#"> AfricUp </a>
+title: Partenariat Africa TechUp Tour et le forum AfricUp
 published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]

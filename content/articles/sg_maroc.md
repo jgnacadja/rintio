@@ -1,5 +1,5 @@
 ---
-title: <a href="">SG Maroc</a> imagine la banque du future avec l’IA
+title: SG Maroc imagine la banque du future avec l’IA
 published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]
