@@ -94,9 +94,12 @@
 
           <div v-else>
             <div class="shadow-md w-full p-24 h-full text-center">
-              <seo class="h-96 w-full"/>
+              <seo class="h-96 w-full" />
               <h3>Aucun résultat correspondant à votre recherche</h3>
-              <p>Veuillez essayer d'ajuster vos mots-clés de recherche ou vos filtres.</p>
+              <p>
+                Veuillez essayer d'ajuster vos mots-clés de recherche ou vos
+                filtres.
+              </p>
             </div>
           </div>
         </div>
@@ -232,7 +235,7 @@
               :key="edge.node.id"
               class="text-secondary"
             >
-              <div class="text-gray-700">{{ edge.node.id }}</div>
+              <div class="text-gray-700">{{ edge.node.title }}</div>
             </li>
           </ul>
         </div>
@@ -264,7 +267,7 @@
               hover:text-white
               hover:bg-secondary
             "
-            >{{ edge.node.id }}
+            >{{ edge.node.title }}
           </span>
         </div>
       </div>
@@ -298,18 +301,25 @@ query($page: Int) {
         coverImage
         tags {
           id
+          title
         }
       }
     }
   }
   tags: allTag {
     edges {
-      node{id}
+      node{
+        id
+        title
+      }
     }
   }
   category: allCategory {
     edges {
-      node{id}
+      node{
+        id
+        title
+      }
     }
   }
   
@@ -346,7 +356,6 @@ import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 
-
 export default {
   components: {
     LazyHydrate,
@@ -370,7 +379,6 @@ export default {
   computed: {
     searchResults() {
       return this.$page.posts.edges.filter((post) => {
-        
         return post.node.title
           .toLowerCase()
           .includes(this.search.toLowerCase().trim());
