@@ -21,7 +21,14 @@
       </div>
       <div class="mx-4 md:mx-0 pt-6">
         <h1
-          class="my-3 text-xl md:text-5xl text-primary font-extrabold capitalize"
+          class="
+            my-3
+            text-xl
+            md:text-5xl
+            text-primary
+            font-extrabold
+            capitalize
+          "
         >
           Ils nous<br />
           font <br />
@@ -29,17 +36,28 @@
         </h1>
 
         <p class="my-3 text- xl">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le
+          Il serait long et fastidieux de présenter la 
           <span class="font-bold"
-            >développement et l’intégration de solutions informatiques..</span
-          >
+            > liste exhaustive de nos
+          clients.</span
+          > Mais voici quelques exemples de collaborations qui illustrent
+          une partie de notre savoir-faire.
         </p>
       </div>
     </div>
 
     <div
-      class="w-3/4 flex-row justify-center items-start flex-wrap mx-auto hidden md:flex space-x-4"
+      class="
+        w-3/4
+        flex-row
+        justify-center
+        items-start
+        flex-wrap
+        mx-auto
+        hidden
+        md:flex
+        space-x-4
+      "
     >
       <div class="1/3 space-y-4">
         <div

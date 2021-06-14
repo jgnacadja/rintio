@@ -33,11 +33,12 @@
                   capitalize
                 "
               >
-                Pour plus d'<span class="text-secondary">informations</span>
+                Besoin d'échanger sur
+                <span class="text-secondary">votre besoin ?</span>
               </h1>
 
-              Pour avoir plus d’informations, veuillez contacter notre service
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Toutes nos équipes au Bénin et et à l'international se tiennent à
+              votre disposition !
             </div>
 
             <div>
