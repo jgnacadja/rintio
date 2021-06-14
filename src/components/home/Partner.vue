@@ -21,7 +21,14 @@
       </div>
       <div class="mx-4 md:mx-0 pt-6">
         <h1
-          class="my-3 text-xl md:text-5xl text-primary font-extrabold capitalize"
+          class="
+            my-3
+            text-xl
+            md:text-5xl
+            text-primary
+            font-extrabold
+            capitalize
+          "
         >
           Ils nous<br />
           font <br />
@@ -29,49 +36,143 @@
         </h1>
 
         <p class="my-3 text- xl">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le
+          Il serait long et fastidieux de présenter la 
           <span class="font-bold"
-            >développement et l’intégration de solutions informatiques..</span
-          >
+            > liste exhaustive de nos
+          clients.</span
+          > Mais voici quelques exemples de collaborations qui illustrent
+          une partie de notre savoir-faire.
         </p>
       </div>
     </div>
 
     <div
-      class="w-3/4 flex-row justify-center items-start flex-wrap mx-auto hidden md:flex space-x-4"
+      class="
+        w-3/4
+        flex-row
+        justify-center
+        items-start
+        flex-wrap
+        mx-auto
+        hidden
+        md:flex
+        space-x-4
+      "
     >
       <div class="1/3 space-y-4">
         <div
-          class="rounded-3xl p-2 m-2 bg-white text-gray-100 w-72 h-72 flex items-center justify-center text-xl font-bold"
+          class="
+            rounded-3xl
+            p-2
+            m-2
+            bg-white
+            text-gray-100
+            w-72
+            h-72
+            flex
+            items-center
+            justify-center
+            text-xl
+            font-bold
+          "
         >
           <Studely />
         </div>
         <div
-          class="rounded-3xl ml-auto p-2 m-2 bg-white text-yellow-100 w-40 h-40 flex items-center justify-center text-xl font-bold"
+          class="
+            rounded-3xl
+            ml-auto
+            p-2
+            m-2
+            bg-white
+            text-yellow-100
+            w-40
+            h-40
+            flex
+            items-center
+            justify-center
+            text-xl
+            font-bold
+          "
         >
           <Hacklab />
         </div>
       </div>
       <div class="1/3 space-y-4">
         <div
-          class="rounded-3xl ml-auto p-2 m-2 bg-white text-indigo-100 w-64 h-64 flex items-center justify-center text-xl font-bold"
+          class="
+            rounded-3xl
+            ml-auto
+            p-2
+            m-2
+            bg-white
+            text-indigo-100
+            w-64
+            h-64
+            flex
+            items-center
+            justify-center
+            text-xl
+            font-bold
+          "
         >
           <Bnpparibas />
         </div>
         <div
-          class="rounded-3xl ml-auto p-2 m-2 bg-white text-green-100 w-60 h-60 flex items-center justify-center text-xl font-bold"
+          class="
+            rounded-3xl
+            ml-auto
+            p-2
+            m-2
+            bg-white
+            text-green-100
+            w-60
+            h-60
+            flex
+            items-center
+            justify-center
+            text-xl
+            font-bold
+          "
         >
           <CiviTime />
         </div>
         <div class="flex">
           <div
-            class="rounded-3xl ml-auto p-2 m-2 bg-white text-purple-100 w-24 h-24 flex items-center justify-center text-xl font-bold"
+            class="
+              rounded-3xl
+              ml-auto
+              p-2
+              m-2
+              bg-white
+              text-purple-100
+              w-24
+              h-24
+              flex
+              items-center
+              justify-center
+              text-xl
+              font-bold
+            "
           >
             <Isci />
           </div>
           <div
-            class="rounded-3xl ml-auto p-2 m-2 bg-white text-red-100 w-24 h-24 flex items-center justify-center text-xl font-bold"
+            class="
+              rounded-3xl
+              ml-auto
+              p-2
+              m-2
+              bg-white
+              text-red-100
+              w-24
+              h-24
+              flex
+              items-center
+              justify-center
+              text-xl
+              font-bold
+            "
           >
             <Initiative5 />
           </div>
@@ -79,24 +180,79 @@
       </div>
       <div class="1/3 space-y-4">
         <div
-          class="rounded-3xl ml-auto p-2 m-2 bg-white text-pink-100 w-full h-72 flex items-center justify-center text-xl font-bold"
+          class="
+            rounded-3xl
+            ml-auto
+            p-2
+            m-2
+            bg-white
+            text-pink-100
+            w-full
+            h-72
+            flex
+            items-center
+            justify-center
+            text-xl
+            font-bold
+          "
         >
           <Societegeneral />
         </div>
         <div class="flex">
           <div
-            class="rounded-3xl p-2 m-2 bg-white text-blue-100 w-32 h-32 flex items-center justify-center text-xl font-bold"
+            class="
+              rounded-3xl
+              p-2
+              m-2
+              bg-white
+              text-blue-100
+              w-32
+              h-32
+              flex
+              items-center
+              justify-center
+              text-xl
+              font-bold
+            "
           >
             <Actudata />
           </div>
           <div
-            class="rounded-3xl p-2 m-2 ml-auto bg-white text-orange-100 w-32 h-32 flex items-center justify-center text-xl font-bold"
+            class="
+              rounded-3xl
+              p-2
+              m-2
+              ml-auto
+              bg-white
+              text-orange-100
+              w-32
+              h-32
+              flex
+              items-center
+              justify-center
+              text-xl
+              font-bold
+            "
           >
             <Compta360 />
           </div>
         </div>
         <div
-          class="rounded-3xl p-2 m-2 ml-auto bg-white text-teal-100 w-64 h-64 flex items-center justify-center text-xl font-bold"
+          class="
+            rounded-3xl
+            p-2
+            m-2
+            ml-auto
+            bg-white
+            text-teal-100
+            w-64
+            h-64
+            flex
+            items-center
+            justify-center
+            text-xl
+            font-bold
+          "
         >
           <ExpertiseFrance />
         </div>
