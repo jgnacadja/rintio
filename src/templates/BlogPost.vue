@@ -127,12 +127,6 @@
                 >
                   <Facebook />
                 </a>
-                <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <Instagram />
-                </a>
               </div>
             </div>
           </div>
@@ -201,12 +195,6 @@
                   target="_blank"
                 >
                   <Facebook />
-                </a>
-                <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <Instagram />
                 </a>
               </div>
             </div>

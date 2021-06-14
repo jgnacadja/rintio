@@ -31,18 +31,7 @@
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
-              <div
-                class="
-                  w-full
-                  relative
-                  left-6
-                  transform
-                  transition
-                  duration-500
-                  translate-y-16
-                  group-hover:-translate-y-4
-                "
-              >
+              <div class="w-full relative justify-between flex px-4 py-6">
                 <span
                   class="
                     font-extrabold
@@ -53,20 +42,22 @@
                   "
                   >Cotonou, Bénin
                 </span>
-              </div>
-              <div
-                class="
-                  py-6
-                  px-6
-                  bg-white
-                  transform
-                  transition
-                  duration-500
-                  translate-y-28
-                  group-hover:translate-y-0
-                "
-              >
-                <span class="block text-gray-600 text-sm">
+
+                <span class="flex items-center text-white text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
                   {{ hour }}h:{{ minute }}m:{{ second }}s
                 </span>
               </div>
@@ -93,18 +84,7 @@
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
-              <div
-                class="
-                  w-full
-                  relative
-                  left-6
-                  transform
-                  transition
-                  duration-500
-                  translate-y-16
-                  group-hover:-translate-y-4
-                "
-              >
+              <div class="w-full relative justify-between flex px-4 py-6">
                 <span
                   class="
                     font-extrabold
@@ -115,20 +95,22 @@
                   "
                   >Paris, France
                 </span>
-              </div>
-              <div
-                class="
-                  py-6
-                  px-6
-                  bg-white
-                  transform
-                  transition
-                  duration-500
-                  translate-y-28
-                  group-hover:translate-y-0
-                "
-              >
-                <span class="block text-gray-600 text-sm">
+
+                <span class="flex items-center text-white text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
                   {{ hourFr }}h:{{ minute }}m:{{ second }}s
                 </span>
               </div>
@@ -150,18 +132,7 @@
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
-            <div
-              class="
-                w-full
-                relative
-                left-6
-                transform
-                transition
-                duration-500
-                translate-y-16
-                group-hover:-translate-y-4
-              "
-            >
+            <div class="w-full relative justify-between flex px-4 py-6">
               <span
                 class="
                   font-extrabold
@@ -170,28 +141,27 @@
                   leading-relaxed
                   font-sans
                 "
-                >Abidjan, Cote d’Ivoire
-              </span>
-            </div>
-            <div
-              class="
-                py-6
-                px-6
-                bg-white
-                transform
-                transition
-                duration-500
-                translate-y-28
-                group-hover:translate-y-0
-              "
-            >
-              <span class="block text-gray-600 text-sm">
-                {{ hourCi }}h:{{ minute }}m:{{ second }}s
+              >
+                Abidjan, Cote d’Ivoire
               </span>
 
-              <!--      <span class="block text-gray-600 text-sm">
-                contact@rintio.com , +225 58 08 74 21
-              </span> -->
+              <span class="flex items-center text-white text-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                {{ hourCi }}h:{{ minute }}m:{{ second }}s
+              </span>
             </div>
           </div>
         </div>

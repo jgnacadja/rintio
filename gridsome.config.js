@@ -6,6 +6,8 @@ const robot = require("./plugins/plugin.robot");
 const sitemap = require("./plugins/plugin.sitemap");
 const sourceFilesystem = require("./plugins/plugin.sourceFilesystem");
 const tailwind = require("./plugins/plugin.tailwind");
+const googleAnalytics = require("./plugins/plugin.googleAnalytics");
+const googleTM = require("./plugins/plugin.googleTM");
 
 module.exports = {
   siteName: "Rintio",
@@ -26,7 +28,14 @@ module.exports = {
       },
     },
   },
-  plugins: [robot, sitemap, sourceFilesystem, tailwind],
+  plugins: [
+    googleAnalytics,
+    googleTM,
+    robot,
+    sitemap,
+    sourceFilesystem,
+    tailwind,
+  ],
 
   chainWebpack(config, { isServer }) {
     config.module.rules.delete("svg");

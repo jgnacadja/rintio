@@ -63,9 +63,21 @@
                   </button>
                 </div>
                 <div class="w-10/12 px-4 md:px-0">
-                  <div>+33 6 25 18 40 11</div>
-                  <div>+225 01 07 07 77</div>
-                  <div>+229 97 11 94 79</div>
+                  <div>
+                    <a class="hover:text-secondary" href="tel:+33 6 25 18 40 11"
+                      >+33 6 25 18 40 11</a
+                    >
+                  </div>
+                  <div>
+                    <a class="hover:text-secondary" href="tel:+225 01 07 07 77"
+                      >+225 01 07 07 77</a
+                    >
+                  </div>
+                  <div>
+                    <a class="hover:text-secondary" href="tel:+229 97 11 94 79"
+                      >+229 97 11 94 79</a
+                    >
+                  </div>
                 </div>
               </div>
 
@@ -91,30 +103,15 @@
                   </button>
                 </div>
                 <div class="w-10/12 px-4 md:px-0">
-                  <div>contact@rintio.com</div>
+                  <div>
+                    <a
+                      class="hover:text-secondary"
+                      href="mailto:contact@rintio.com"
+                      >contact@rintio.com</a
+                    >
+                  </div>
                 </div>
               </div>
-
-              <!-- <div class="flex p-4 items-center">
-                <div class="w-2/12 text-center">
-                  <button
-                    class="uppercase p-3 flex items-center bg-secondary text-secondary max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
-                  >
-                    <Location />
-                  </button>
-                </div>
-                <div class="w-10/12 px-4 md:px-0">
-                  <div>
-                    17 Rue Creval Duval, Ruel Malmaison Region Paris/ île de
-                    France.
-                  </div>
-                  <div>Abidjan.</div>
-                  <div>
-                    Carrefour Zogbo, face BOA Bénin imeuble LNB, 1er étage,
-                    Cotonou
-                  </div>
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
