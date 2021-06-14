@@ -162,6 +162,8 @@
                   text-grey-dark text-sm
                   h-auto
                   rounded-l-sm
+                  text-gray-700
+                  focus:outline-none
                 "
                 placeholder="Votre adresse"
               />
@@ -177,6 +179,7 @@
                   px-3
                   py-2
                   font-semibold
+                  focus:outline-none
                 "
               >
                 Je m'abonne

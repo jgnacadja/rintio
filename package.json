@@ -13,6 +13,7 @@
         "axios": "^0.21.1",
         "emailjs-com": "^2.6.4",
         "gridsome": "^0.7.23",
+        "gridsome-plugin-gtm": "^0.1.1",
         "gridsome-plugin-remark-youtube": "^1.0.1",
         "gridsome-plugin-robots-txt": "^1.0.2",
         "jquery": "^3.6.0",
