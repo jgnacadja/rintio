@@ -5,7 +5,7 @@ categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-04
 coverImage: /img/articles/woman-wearing-red-and-black-checkered-blouse-using-macbook-1181472.jpg
-metaDescription: Rintio accompagne <a href=""> Studely </a> dans le développement de ses solitions EdTech.
+metaDescription: Rintio accompagne Studely dans le développement de ses solitions EdTech.
 ---
 
 ## Formations

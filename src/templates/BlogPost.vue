@@ -110,16 +110,19 @@
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
-                  href="https://www.linkedin.com/company/rintio/"
+                  :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://twitter.com/RintioGroup/" target="_blank">
+                <a
+                  :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
+                  target="_blank"
+                >
                   <Twitter />
                 </a>
                 <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+                  :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
                   target="_blank"
                 >
                   <Facebook />
@@ -182,16 +185,19 @@
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
-                  href="https://www.linkedin.com/company/rintio/"
+                  :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://twitter.com/RintioGroup/" target="_blank">
+                <a
+                  :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
+                  target="_blank"
+                >
                   <Twitter />
                 </a>
                 <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+                  :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
                   target="_blank"
                 >
                   <Facebook />
@@ -528,6 +534,10 @@ query query($path:String) {
       id
       title
     }
+    tags {
+      id
+      title
+    }
     date
     coverImage
     metaDescription
@@ -568,10 +578,20 @@ export default {
   data() {
     return {
       path: "",
+      fullPath: "",
+      tags: "",
     };
   },
   mounted() {
     this.path = this.$router.currentRoute.path.split("/")[1];
+    this.fullPath = this.$router.currentRoute.path;
+  },
+  created() {
+    this.$page.post.tags.forEach((tag) => {
+      this.tags !== ""
+        ? (this.tags = `${this.tags},${tag.title}`)
+        : (this.tags = `${tag.title}`);
+    });
   },
 };
 </script>

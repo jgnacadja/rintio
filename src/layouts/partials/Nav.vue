@@ -2,7 +2,15 @@
   <nav class="px-10 h-24 hidden md:flex">
     <div
       id="home"
-      class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
+      class="
+        mx-auto
+        text-center
+        w-40
+        border-b-2 border-transparent
+        transition
+        duration-300
+        hover:border-secondary
+      "
     >
       <div class="h-full pt-10">
         <g-link to="/">
@@ -13,7 +21,15 @@
 
     <div
       id="about"
-      class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
+      class="
+        mx-auto
+        text-center
+        w-40
+        border-b-2 border-transparent
+        transition
+        duration-300
+        hover:border-secondary
+      "
     >
       <div class="h-full pt-10">
         <g-link to="/a-propos">
@@ -26,7 +42,15 @@
 
     <div
       id="offer"
-      class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
+      class="
+        mx-auto
+        text-center
+        w-40
+        border-b-2 border-transparent
+        transition
+        duration-300
+        hover:border-secondary
+      "
     >
       <div class="h-full pt-10">
         <g-link to="/offres">
@@ -39,7 +63,15 @@
 
     <div
       id="blog"
-      class="mx-auto text-center w-40 hover:border-b-8 border-secondary"
+      class="
+        mx-auto
+        text-center
+        w-40
+        border-b-2 border-transparent
+        transition
+        duration-300
+        hover:border-secondary
+      "
     >
       <div class="h-full pt-10">
         <g-link to="/blog">
@@ -61,28 +93,28 @@ export default {
     setActive: function (route) {
       switch (route) {
         case "":
-          $("#home").addClass("border-b-8");
-          $("#about").removeClass("border-b-8");
-          $("#offer").removeClass("border-b-8");
-          $("#blog").removeClass("border-b-8");
+          $("#home").addClass("border-secondary text-secondary");
+          $("#about").removeClass("border-secondary text-secondary");
+          $("#offer").removeClass("border-secondary text-secondary");
+          $("#blog").removeClass("border-secondary text-secondary");
           break;
         case "a-propos":
-          $("#home").removeClass("border-b-8");
-          $("#about").addClass("border-b-8");
-          $("#offer").removeClass("border-b-8");
-          $("#blog").removeClass("border-b-8");
+          $("#home").removeClass("border-secondary text-secondary");
+          $("#about").addClass("border-secondary text-secondary");
+          $("#offer").removeClass("border-secondary text-secondary");
+          $("#blog").removeClass("border-secondary text-secondary");
           break;
         case "offres":
-          $("#home").removeClass("border-b-8");
-          $("#about").removeClass("border-b-8");
-          $("#offer").addClass("border-b-8");
-          $("#blog").removeClass("border-b-8");
+          $("#home").removeClass("border-secondary text-secondary");
+          $("#about").removeClass("border-secondary text-secondary");
+          $("#offer").addClass("border-secondary text-secondary");
+          $("#blog").removeClass("border-secondary text-secondary");
           break;
         case "blog":
-          $("#home").removeClass("border-b-8");
-          $("#about").removeClass("border-b-8");
-          $("#offer").removeClass("border-b-8");
-          $("#blog").addClass("border-b-8");
+          $("#home").removeClass("border-secondary text-secondary");
+          $("#about").removeClass("border-secondary text-secondary");
+          $("#offer").removeClass("border-secondary text-secondary");
+          $("#blog").addClass("border-secondary text-secondary");
           break;
       }
     },
