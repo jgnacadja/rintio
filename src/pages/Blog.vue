@@ -17,10 +17,23 @@
       "
     >
       <div id="home" class="container px-4 w-3/4">
-        <div v-if="searchResults.length > 0" class="space-y-6">
+        <div
+          v-if="searchResults.length > 0 && search !== null"
+          class="space-y-6"
+        >
           <!-- main post -->
           <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full relative block bg-white"
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              relative
+              block
+              bg-white
+              shadow-sm
+            "
             v-for="post in searchResults"
             :key="post.node.id"
           >
@@ -74,13 +87,125 @@
           <!-- paginator -->
 
           <Pager
+            v-if="search === ''"
             class="flex justify-center pager p-2"
             :info="$page.posts.pageInfo"
           />
+
+          <div
+            class="
+              px-5
+              py-5
+              flex flex-col
+              xs:flex-row
+              items-center
+              xs:justify-between
+            "
+            v-if="search !== ''"
+          >
+            <div>
+              <nav
+                class="relative z-0 inline-flex rounded-md shadow-sm"
+                aria-label="Pagination"
+              >
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  «
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = index - 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  ‹
+                </a>
+                <a
+                  v-for="index in numberOfPages"
+                  :key="index"
+                  @click="page = index"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  {{ index }}
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = index + 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  ›
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = numberOfPages"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  »
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
 
         <div v-else>
-          <div class="shadow-md w-full p-24 h-full text-center">
+          <div class="shadow w-full p-24 h-full text-center">
             <seo class="h-96 w-full" />
             <h3>Aucun résultat correspondant à votre recherche</h3>
             <p>
@@ -343,6 +468,8 @@ export default {
     return {
       path: "",
       search: "",
+      page: 1,
+      numberOfPages: 1,
     };
   },
   mounted() {
@@ -350,11 +477,26 @@ export default {
   },
   computed: {
     searchResults() {
-      return this.$page.posts.edges.filter((post) => {
-        return post.node.title
-          .toLowerCase()
-          .includes(this.search.toLowerCase().trim());
-      });
+      if (this.search) {
+        let filteredPosts = this.$page.posts.edges.filter((post) => {
+          return post.node.title
+            .toLowerCase()
+            .includes(this.search.toLowerCase().trim());
+        });
+        this.numberOfPages = Math.ceil(filteredPosts.length / 5);
+        return this.paginate(filteredPosts, 5, this.page);
+      } else {
+        return this.$page.posts.edges;
+      }
+    },
+  },
+  methods: {
+    paginate(array, page_size, page_number) {
+      // human-readable page numbers usually start with 1, so we reduce 1 in the first argument
+      return array.slice(
+        (page_number - 1) * page_size,
+        page_number * page_size
+      );
     },
   },
   filters: {
@@ -378,32 +520,33 @@ export default {
   padding: 1rem;
 
   &__link {
-    color: red;
+    color: #e5e7eb;
     text-align: center;
     text-decoration: none;
 
     &:hover:not(.active) {
-      background-color: blue;
-      color: #fff !important;
+      background-color: #9ca3af;
+      color: #000 !important;
     }
   }
 }
 
 .pager a {
+  background-color: #fff;
   width: 2rem;
   padding: 1rem;
   border: 1px solid rgb(223, 223, 223);
 }
 
 .pager a:hover {
-  background-color: $red-rintio;
-  color: #fff !important;
+  background-color: #f9fafb;
+  color: #000 !important;
 }
 
 .active {
-  background-color: $red-rintio;
-  color: #fff !important;
+  background-color: #e5e7eb !important;
+  color: #000 !important;
   padding: 1rem;
-  border: 1px solid $red-rintio;
+  border: 1px solid #3b82f6 !important;
 }
 </style>
