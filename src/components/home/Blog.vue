@@ -33,10 +33,12 @@
           bg-white
           h-full
         "
+        v-for="edge in $static.post.edges"
+        :key="edge.node.id"
       >
         <g-image
           alt="iot"
-          src="~/assets/images/home/blog/iot.png"
+          :src="edge.node.coverImage"
           class="object-cover w-full h-64 mb-0"
         />
         <span
@@ -55,29 +57,20 @@
             text-center
           "
         >
-          Big data
+          {{ edge.node.categories.title }}
         </span>
         <p class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4">
-          Article 1
+          {{ edge.node.title }}
         </p>
         <p class="text-primary text-xs space-x-8 mx-4">
-          <span>10 Jan 2020</span>
+          <span>{{ edge.node.date }}</span>
           <span>Publié par : xxxxxxxxxxxxx</span>
         </p>
         <p class="text-gray-600 mb-4 mx-4">
-          Lorem Ipsum est simplement du faux texte employé dans la composition
-          et la mise en page avant impression...
+          {{ edge.node.metaDescription }}
         </p>
         <div class="flex space-x-8 mx-4 mb-1">
-          <p class="flex space-x-2">
-            <Like /> <span class="text-xs">24k</span>
-          </p>
-          <p class="flex space-x-2">
-            <Comment /> <span class="text-xs">247</span>
-          </p>
-          <p class="flex space-x-2">
-            <Share /> <span class="text-xs">24</span>
-          </p>
+         
         </div>
       </div>
 
@@ -210,11 +203,15 @@
       <!-- sub-main posts -->
       <div class="w-full md:w-1/2 hidden md:block">
         <!-- post 1 -->
-        <div class="w-full flex flex-col md:flex-row mb-10">
+        <div
+          class="w-full flex flex-col md:flex-row mb-10"
+          v-for="edge in $static.otherPost.edges"
+          :key="edge.node.id"
+        >
           <div class="w-2/5 h-full">
             <g-image
               alt="iot"
-              src="~/assets/images/home/blog/ia.png"
+              :src="edge.node.coverImage"
               class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
             />
             <span
@@ -233,99 +230,94 @@
                 text-center
               "
             >
-              Big data
+              {{ edge.node.categories.title }}
             </span>
           </div>
           <div class="bg-white px-4 w-3/5 h-full">
             <p class="text-primary text-xs mt-4 space-x-8">
-              <span>10 Jan 2020</span>
+              <span>{{ edge.node.date }}</span>
               <span>Publié par : xxxxxxxxxxxxx</span>
             </p>
             <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-              Article 2
+              {{ edge.node.title }}
             </p>
-            <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-              Lorem Ipsum est simplement du faux texte employé dans la
-              composition et la mise en page avant impression...
+            <p class="block p-2 pl-0 pt-1 text-sm text-gray-600 overflow-clip overflow-hidden ..." >
+              {{ edge.node.metaDescription }}
             </p>
             <div class="flex space-x-8">
-              <p class="flex space-x-2 mb-5">
-                <Like /> <span class="text-xs">24k</span>
-              </p>
-              <p class="flex space-x-2 mb-0">
-                <Comment /> <span class="text-xs">247</span>
-              </p>
-              <p class="flex space-x-2 mb-0">
-                <Share /> <span class="text-xs">24</span>
-              </p>
+              
             </div>
           </div>
         </div>
 
-        <!-- post 2 -->
-        <div class="w-full flex flex-col md:flex-row mb-10">
-          <div class="w-2/5 h-full">
-            <g-image
-              alt="iot"
-              src="~/assets/images/home/blog/connect.png"
-              class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
-            />
-            <span
-              class="
-                relative
-                text-white
-                bg-secondary
-                p-4
-                text-sm
-                hidden
-                md:block
-                ml-4
-                -mt-7
-                capitalize
-                w-24
-                text-center
-              "
-            >
-              Big data
-            </span>
-          </div>
-          <div class="bg-white px-4 w-3/5 h-full">
-            <p class="text-primary text-xs mt-4 space-x-8">
-              <span>10 Jan 2020</span>
-              <span>Publié par : xxxxxxxxxxxxx</span>
-            </p>
-            <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-              Article 2
-            </p>
-            <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-              Lorem Ipsum est simplement du faux texte employé dans la
-              composition et la mise en page avant impression...
-            </p>
-            <div class="flex space-x-8">
-              <p class="flex space-x-2 mb-5">
-                <Like /> <span class="text-xs">24k</span>
-              </p>
-              <p class="flex space-x-2 mb-0">
-                <Comment /> <span class="text-xs">247</span>
-              </p>
-              <p class="flex space-x-2 mb-0">
-                <Share /> <span class="text-xs">24</span>
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
-      <button
+      <g-link to="/blog">
+        <button
         href="#"
-        class="flex md:text-lg font-medium hover:text-secondary w-auto"
+        class="flex md:text-lg font-medium hover:text-secondary w-auto focus:outline-none"
       >
         Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
       </button>
+      </g-link>
     </div>
   </div>
 </template>
+
+<static-query>
+query {
+  
+  post : allBlogPost(
+    perPage: 1
+    page: 1
+    filter: { categories: { in: "Blog" } }
+    limit: 1
+    order: DESC
+  ) @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+        metaDescription
+      }
+    }
+  }
+
+  otherPost : allBlogPost(
+    perPage: 2
+    page: 1
+    filter: { categories: { in: "Blog" } }
+    skip: 1
+    limit: 2
+    order: DESC
+  ) @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        metaDescription
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+      }
+    }
+  }
+
+}
+
+</static-query>
 
 <script>
 import Arrow from "~/assets/images/icons/arrow.svg";
