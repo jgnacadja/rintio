@@ -364,12 +364,34 @@
               m-1
               text-xs
               leading-none
-              bg-gray-200
-              text-gray-700
               hover:text-white
               hover:bg-secondary
+              cursor-pointer
             "
-            >{{ edge.node.title }}
+            v-bind:class="{
+              'bg-secondary text-white':
+                pinnedTabs.indexOf(edge.node.id) !== -1,
+              'bg-gray-200 text-gray-700':
+                pinnedTabs.indexOf(edge.node.id) === -1,
+            }"
+            @click="pinTag(edge.node.id)"
+          >
+            {{ edge.node.title }}
+            <svg
+              v-if="pinnedTabs.indexOf(edge.node.id) !== -1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </span>
         </div>
       </div>
@@ -453,6 +475,7 @@ import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
+import RemoveTag from "~/assets/images/icons/remove.svg";
 
 export default {
   components: {
@@ -460,6 +483,7 @@ export default {
     Breadcrumb,
     Pager,
     Seo,
+    RemoveTag,
   },
   metaInfo: {
     title: "Blog",
@@ -468,8 +492,10 @@ export default {
     return {
       path: "",
       search: "",
+      searchByTag: "",
       page: 1,
       numberOfPages: 1,
+      pinnedTabs: [],
     };
   },
   mounted() {
@@ -497,6 +523,13 @@ export default {
         (page_number - 1) * page_size,
         page_number * page_size
       );
+    },
+    pinTag(tag) {
+      if (this.pinnedTabs.indexOf(tag) !== -1) {
+        this.pinnedTabs = this.pinnedTabs.filter((tagged) => tagged != tag);
+      } else {
+        this.pinnedTabs.push(tag);
+      }
     },
   },
   filters: {
