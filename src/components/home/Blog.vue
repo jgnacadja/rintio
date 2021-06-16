@@ -36,42 +36,44 @@
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
-        <g-image
-          alt="iot"
-          :src="edge.node.coverImage"
-          class="object-cover w-full h-64 mb-0"
-        />
-        <span
-          class="
-            relative
-            text-white
-            bg-secondary
-            p-4
-            text-sm
-            hidden
-            md:block
-            ml-4
-            -mt-7
-            capitalize
-            w-24
-            text-center
-          "
-        >
-          {{ edge.node.categories.title }}
-        </span>
-        <p class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4">
-          {{ edge.node.title }}
-        </p>
-        <p class="text-primary text-xs space-x-8 mx-4">
-          <span>{{ edge.node.date }}</span>
-          <span>Publié par : xxxxxxxxxxxxx</span>
-        </p>
-        <p class="text-gray-600 mb-4 mx-4">
-          {{ edge.node.metaDescription }}
-        </p>
-        <div class="flex space-x-8 mx-4 mb-1">
-         
-        </div>
+        <g-link :to="edge.node.path">
+          <g-image
+            alt="iot"
+            :src="edge.node.coverImage"
+            class="object-cover w-full h-64 mb-0"
+          />
+          <span
+            class="
+              relative
+              text-white
+              bg-secondary
+              p-4
+              text-sm
+              hidden
+              md:block
+              ml-4
+              -mt-7
+              capitalize
+              w-24
+              text-center
+            "
+          >
+            {{ edge.node.categories.title }}
+          </span>
+          <p
+            class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4"
+          >
+            {{ edge.node.title }}
+          </p>
+          <p class="text-primary text-xs space-x-8 mx-4">
+            <span>{{ edge.node.date | FormatDate}}</span>
+            <span>Publié par : xxxxxxxxxxxxx</span>
+          </p>
+          <p class="text-gray-600 mb-4 mx-4">
+            {{ edge.node.metaDescription }}
+          </p>
+          <div class="flex space-x-8 mx-4 mb-1"></div>
+        </g-link>
       </div>
 
       <!-- main post 1-->
@@ -118,7 +120,6 @@
         </p>
         <p class="text-primary text-xs space-x-8 mx-4">
           <span>10 Jan 2020</span>
-          <span>Publié par : xxxxxxxxxxxxx</span>
         </p>
         <p class="text-gray-600 mb-4 mx-4">
           Lorem Ipsum est simplement du faux texte employé dans la composition
@@ -209,57 +210,74 @@
           :key="edge.node.id"
         >
           <div class="w-2/5 h-full">
-            <g-image
-              alt="iot"
-              :src="edge.node.coverImage"
-              class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
-            />
-            <span
-              class="
-                relative
-                text-white
-                bg-secondary
-                p-4
-                text-sm
-                hidden
-                md:block
-                ml-4
-                -mt-7
-                capitalize
-                w-24
-                text-center
-              "
-            >
-              {{ edge.node.categories.title }}
-            </span>
+            <g-link :to="edge.node.path">
+              <g-image
+                alt="iot"
+                :src="edge.node.coverImage"
+                class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
+              />
+              <span
+                class="
+                  relative
+                  text-white
+                  bg-secondary
+                  p-4
+                  text-sm
+                  hidden
+                  md:block
+                  ml-4
+                  -mt-7
+                  capitalize
+                  w-24
+                  text-center
+                "
+              >
+                {{ edge.node.categories.title }}
+              </span>
+            </g-link>
           </div>
           <div class="bg-white px-4 w-3/5 h-full">
-            <p class="text-primary text-xs mt-4 space-x-8">
-              <span>{{ edge.node.date }}</span>
-              <span>Publié par : xxxxxxxxxxxxx</span>
-            </p>
-            <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-              {{ edge.node.title }}
-            </p>
-            <p class="block p-2 pl-0 pt-1 text-sm text-gray-600 overflow-clip overflow-hidden ..." >
-              {{ edge.node.metaDescription }}
-            </p>
-            <div class="flex space-x-8">
-              
-            </div>
+            <g-link :to="edge.node.path">
+              <p class="text-primary text-xs mt-4 space-x-8">
+                <span>{{ edge.node.date | FormatDate }}</span>
+              </p>
+              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
+                {{ edge.node.title }}
+              </p>
+              <p
+                class="
+                  block
+                  p-2
+                  pl-0
+                  pt-1
+                  text-sm text-gray-600
+                  overflow-clip overflow-hidden
+                  ...
+                "
+              >
+                {{ edge.node.metaDescription }}
+              </p>
+              <div class="flex space-x-8"></div>
+            </g-link>
           </div>
         </div>
-
       </div>
     </div>
     <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
       <g-link to="/blog">
         <button
-        href="#"
-        class="flex md:text-lg font-medium hover:text-secondary w-auto focus:outline-none"
-      >
-        Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
-      </button>
+          href="#"
+          class="
+            flex
+            md:text-lg
+            font-medium
+            hover:text-secondary
+            w-auto
+            focus:outline-none
+          "
+        >
+          Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
+        </button>
       </g-link>
     </div>
   </div>
@@ -324,6 +342,7 @@ import Arrow from "~/assets/images/icons/arrow.svg";
 import Like from "~/assets/images/icons/like.svg";
 import Comment from "~/assets/images/icons/comment.svg";
 import Share from "~/assets/images/icons/share.svg";
+import moment from "moment";
 
 export default {
   components: {
@@ -331,6 +350,14 @@ export default {
     Like,
     Comment,
     Share,
+  },
+  filters: {
+    // Filter definitions
+    FormatDate(value) {
+      if (value) {
+        return moment(String(value)).format("MM/DD/YYYY");
+      }
+    },
   },
 };
 </script>
