@@ -86,12 +86,6 @@
 
           <!-- paginator -->
 
-          <Pager
-            v-if="search === ''"
-            class="flex justify-center pager p-2"
-            :info="$page.posts.pageInfo"
-          />
-
           <div
             class="
               px-5
@@ -100,9 +94,7 @@
               xs:flex-row
               items-center
               xs:justify-between
-            "
-            v-if="search !== ''"
-          >
+            "          >
             <div>
               <nav
                 class="relative z-0 inline-flex rounded-md shadow-sm"
@@ -400,13 +392,8 @@
 </template>
 
 <page-query>
-query($page: Int) {
-  posts:  allBlogPost(perPage: 5, page: $page) @paginate {
-    pageInfo {
-      currentPage
-      perPage: perPage
-      totalPages
-    }
+query {
+  posts:  allBlogPost {
     edges {
       node {
         id
@@ -444,12 +431,10 @@ query($page: Int) {
   }
   
   onlinePost : allBlogPost(
-    perPage: 3
-    page: 1
     filter: { categories: { in: "Blog" } }
     limit: 3
     order: DESC
-  ) @paginate {
+  ) {
     edges {
       node {
         id
@@ -504,6 +489,7 @@ export default {
   computed: {
     searchResults() {
       if (this.search) {
+        this.pinnedTabs = [];
         let filteredPosts = this.$page.posts.edges.filter((post) => {
           return post.node.title
             .toLowerCase()
@@ -512,8 +498,8 @@ export default {
         this.numberOfPages = Math.ceil(filteredPosts.length / 5);
         return this.paginate(filteredPosts, 5, this.page);
       } else {
-        return this.$page.posts.edges;
-      }
+        return this.paginate(this.$page.posts.edges, 5, this.page);
+        }
     },
   },
   methods: {
@@ -528,6 +514,7 @@ export default {
       if (this.pinnedTabs.indexOf(tag) !== -1) {
         this.pinnedTabs = this.pinnedTabs.filter((tagged) => tagged != tag);
       } else {
+        this.search = "";
         this.pinnedTabs.push(tag);
       }
     },

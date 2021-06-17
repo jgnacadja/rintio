@@ -224,7 +224,7 @@
         </div> -->
 
         <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Articles à la une</h1>
+          <h1 class="text-lg md:text-xl font-bold mb-0">Articles relatifs</h1>
           <div class="mb-4 -mt-3">
             <span class="inline-block w-1/3 border border-secondary"></span>
             <span class="inline-block w-2/3 border border-grey-300"></span>
@@ -281,11 +281,11 @@
               </p>
             </div>
           </div>
-          <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
+          <div class="mr-auto">
             <g-link to="/blog">
               <button
                 href="#"
-                class="flex md:text-lg font-medium hover:text-secondary w-auto focus:outline-none"
+                class="flex text-sm md:text-base font-medium hover:text-secondary focus:outline-none"
               >
                 Voir toutes les publications <span class="pl-2 pt-1"><Arrow /></span>
               </button>
@@ -401,7 +401,7 @@ export default {
     // Filter definitions
     FormatDate(value) {
       if (value) {
-        return moment(String(value)).format("MM/DD/YYYY");
+        return moment(String(value)).format("DD/MM/YYYY");
       }
     },
   },
