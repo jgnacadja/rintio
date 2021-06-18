@@ -61,7 +61,7 @@
                   >
                 </div>
                 <div class="text-primary font-bold">
-                  {{ format_date($page.post.date) }}
+                  {{ $page.post.date }}
                 </div>
               </div>
             </div>
@@ -147,6 +147,49 @@
           </div>
         </div>
 
+        <!-- popular posts -->
+        <div
+          class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-md mx-auto items-center justify-between"
+        >
+          <h2 class="font-bold text-3xl">Vous pouvez aussi lire</h2>
+          <g-link
+            to="/blog"
+            class="bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
+          >
+            Voir toutes les publications
+          </g-link>
+        </div>
+        <div
+          class="block space-x-0 lg:flex max-w-screen-md mx-auto lg:space-x-6"
+        >
+          <div
+            class="rounded w-full md:w-1/2 lg:w-1/3 p-4 lg:p-0"
+            v-for="edge in $page.onlinePost.edges"
+            :key="edge.node.id"
+          >
+            <g-image
+              alt="iot"
+              :src="edge.node.coverImage"
+              class="rounded h-64"
+            />
+            <div class="p-4 pl-0">
+              <h2 class="font-bold text-lg text-gray-800">
+                {{ edge.node.title }}
+              </h2>
+              <p class="text-gray-700 mt-2">
+                {{ edge.node.metaDescription }}
+              </p>
+
+              <g-link
+                :to="edge.node.path"
+                class="inline-block py-2 rounded text-primary mt-2 ml-auto"
+              >
+                Lire plus
+              </g-link>
+            </div>
+          </div>
+        </div>
+        <!-- end popular posts -->
       </div>
     </div>
   </Layout>
@@ -168,7 +211,7 @@ query query($path:String) {
       id
       title
     }
-    date
+    date (format: "DD MMMM YYYY", locale: "fr")
     coverImage
     metaDescription
     subDescription
@@ -260,12 +303,5 @@ export default {
         : (this.tags = `${tag.title}`);
     });
   },
-  methods: {
-    format_date(value) {
-      if (value) {
-        return moment(String(value)).format("DD MMMM YYYY");
-      }
-    },
-  }
 };
 </script>
