@@ -94,7 +94,8 @@
               xs:flex-row
               items-center
               xs:justify-between
-            "          >
+            "
+          >
             <div>
               <nav
                 class="relative z-0 inline-flex rounded-md shadow-sm"
@@ -403,6 +404,10 @@ query {
           id
           title
         }
+      tags {
+          id
+          title
+        }
         date
         metaDescription
         coverImage
@@ -498,8 +503,25 @@ export default {
         this.numberOfPages = Math.ceil(filteredPosts.length / 5);
         return this.paginate(filteredPosts, 5, this.page);
       } else {
-        return this.paginate(this.$page.posts.edges, 5, this.page);
+        console.log(this.$page.posts.edges);
+        if (this.pinnedTabs.length !== 0) {
+          console.log(this.pinnedTabs);
+
+          /* // Get all the required ids
+          var ids = filter.map(function (f) {
+            return f.id;
+          });
+          var filtered = array.filter(function (a) {
+            // Check if both source and target are present in list of ids
+            return ids.indexOf(a.source) !== -1 && ids.indexOf(a.target) !== -1;
+          }); */
+          
+          console.log(filtered);
+          return [];
+        } else {
+          return this.paginate(this.$page.posts.edges, 5, this.page);
         }
+      }
     },
   },
   methods: {

@@ -31,19 +31,14 @@
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
-              <div class="w-full relative justify-between flex px-4 py-6">
-                <span
-                  class="
-                    font-extrabold
-                    text-white
-                    tracking-wider
-                    leading-relaxed
-                    font-sans
-                  "
+              <div
+                class="w-full relative justify-between flex px-4 py-4 bg-white"
+              >
+                <span class="tracking-wider leading-relaxed font-sans"
                   >Cotonou, Bénin
                 </span>
 
-                <span class="flex items-center text-white text-sm">
+                <span class="flex items-center text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -84,19 +79,14 @@
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
-              <div class="w-full relative justify-between flex px-4 py-6">
-                <span
-                  class="
-                    font-extrabold
-                    text-white
-                    tracking-wider
-                    leading-relaxed
-                    font-sans
-                  "
+              <div
+                class="w-full relative justify-between flex px-4 py-4 bg-white"
+              >
+                <span class="tracking-wider leading-relaxed font-sans"
                   >Paris, France
                 </span>
 
-                <span class="flex items-center text-white text-sm">
+                <span class="flex items-center text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -132,20 +122,14 @@
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
-            <div class="w-full relative justify-between flex px-4 py-6">
-              <span
-                class="
-                  font-extrabold
-                  text-white
-                  tracking-wider
-                  leading-relaxed
-                  font-sans
-                "
-              >
+            <div
+              class="w-full relative justify-between flex px-4 py-4 bg-white"
+            >
+              <span class="tracking-wider leading-relaxed font-sans">
                 Abidjan, Cote d’Ivoire
               </span>
 
-              <span class="flex items-center text-white text-sm">
+              <span class="flex items-center text-sm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"

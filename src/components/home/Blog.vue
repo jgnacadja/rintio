@@ -263,7 +263,7 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto md:px-16 space-x-0 md:space-x-6 pl-4 md:ml-6">
+    <div class="md:flex container mx-auto md:px-16 w-full">
       <g-link to="/blog">
         <button
           href="#"
