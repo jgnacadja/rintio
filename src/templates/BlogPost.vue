@@ -96,7 +96,7 @@
         <div
           class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
         >
-          <vue-markdown class="content">{{
+          <vue-markdown>{{
             $page.post.content
           }}</vue-markdown>
         </div>
@@ -170,21 +170,35 @@
             <g-image
               alt="iot"
               :src="edge.node.coverImage"
-              class="rounded h-64"
+              class="rounded h-32 w-full"
             />
-            <div class="p-4 pl-0">
-              <h2 class="font-bold text-lg text-gray-800">
+            <div class="px-4 pl-0">
+              <h2 class="font-bold text-lg text-gray-800 mb-px">
                 {{ edge.node.title }}
               </h2>
-              <p class="text-gray-700 mt-2">
-                {{ edge.node.metaDescription }}
+              <p class="text-gray-700 mb-px">
+                {{ edge.node.metaDescription | truncate}}
               </p>
 
               <g-link
                 :to="edge.node.path"
-                class="inline-block py-2 rounded text-primary mt-2 ml-auto"
+                class="flex rounded text-primary py-2"
               >
                 Lire plus
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 px-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
               </g-link>
             </div>
           </div>
@@ -233,7 +247,7 @@ query query($path:String) {
   onlinePost : allBlogPost(
     perPage: 3
     page: 1
-    filter: { categories: { in: "Blog" } }
+    filter: { path: { nin: [$path] } }
     limit: 3
     order: DESC
   ) @paginate {
@@ -249,6 +263,11 @@ query query($path:String) {
         }
         date
         coverImage
+        metaDescription
+        subDescription
+        descriptionUp
+        descriptionDown
+        content
       }
     }
   }
@@ -256,7 +275,6 @@ query query($path:String) {
 </page-query>
 
 <script>
-import moment from "moment";
 import VueMarkdown from "vue-markdown";
 
 import PostSeo from "../mixins/SEO";
@@ -302,6 +320,11 @@ export default {
         ? (this.tags = `${this.tags},${tag.title}`)
         : (this.tags = `${tag.title}`);
     });
+  },
+  filters: {
+    truncate(value) {
+         return value.substr(0, 50) + "...";
+    },
   },
 };
 </script>
