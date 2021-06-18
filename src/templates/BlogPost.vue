@@ -4,109 +4,70 @@
       <Breadcrumb :path="path" :article="$page.post.title" />
     </LazyHydrate>
 
-    <div
-      class="
-        md:flex
-        container
-        mx-auto
-        md:px-16
-        space-x-0
-        md:space-x-6
-        w-full
-        mt-24
-      "
-    >
-      <div id="home" class="container px-4 w-3/4">
-        <span
-          class="
-            relative
-            text-white
-            bg-secondary
-            p-4
-            text-sm
-            hiddenx
-            md:block
-            ml-4
-            mt-7
-            -mb-7
-            capitalize
-            w-24
-            text-center
-          "
+    <!-- component -->
+    <div class="max-w-screen-xl mx-auto">
+      <div class="mt-10">
+        <div
+          class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative"
+          style="height: 24em"
         >
-          Big data
-        </span>
-        <g-image
-          alt="iot"
-          :src="$page.post.coverImage"
-          class="object-cover w-full h-96 mb-0"
-        />
+          <div
+            class="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-black opacity-70"
+          ></div>
+          <g-image
+            alt="iot"
+            :src="$page.post.coverImage"
+            class="absolute left-0 top-0 w-full h-full z-0 object-cover"
+          />
+          <div class="p-4 absolute bottom-0 left-0 z-20">
+            <a
+              href="#"
+              class="px-4 py-1 bg-secondary text-gray-200 inline-flex items-center justify-center mb-2"
+              >{{$page.post.categories.title}}</a
+            >
+            <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+              {{$page.post.title}}
+            </h2>
+          </div>
+        </div>
 
         <div
-          class="
-            md:flex
-            bg-white
-            py-4
-            rounded-sm
-            shadow-sm
-            md:shadow-sm
-            min-h-0
-            mt-4
-            px-16
-          "
+          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
         >
           <div class="flex py-2 space-x-16 items-center">
             <div class="flex space-x-4">
               <button
-                class="
-                  uppercase
-                  p-3
-                  flex
-                  items-center
-                  bg-secondary
-                  max-w-max
-                  bg-opacity-10
-                  rounded-full
-                  w-12
-                  h-12
-                  pointer-events-none
-                "
+                class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
               >
                 <User />
               </button>
 
-              <div class="px-1 md:px-0 text-left text-gray-400">
-                <div class="text-sm">Vues</div>
+              <div class="px-1 md:px-0 text-left text-sm text-gray-800">
+                <div>Vues</div>
                 <div class="text-primary font-bold">813,454</div>
               </div>
             </div>
             <div class="flex space-x-4">
               <button
-                class="
-                  uppercase
-                  p-3
-                  flex
-                  items-center
-                  bg-secondary
-                  max-w-max
-                  bg-opacity-10
-                  rounded-full
-                  w-12
-                  h-12
-                  pointer-events-none
-                "
+                class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
               >
                 <Calendar />
               </button>
-              <div class="px-1 md:px-0 text-left text-gray-400">
-                <div class="text-sm">Dernière Modification</div>
-                <div class="text-primary font-bold">25/10/2021</div>
+              <div class="px-1 md:px-0 text-left text-sm text-gray-800">
+                <div>
+                  <span v-if="!$page.post.author">Par Rintio</span>
+                  <span v-if="$page.post.author"
+                    >Par {{$page.post.author}}</span
+                  >
+                </div>
+                <div class="text-primary font-bold">
+                  {{ format_date($page.post.date) }}
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="flex p-2 ml-auto space-x-2 items-center">
-            <div class="text-xl items-center font-bold mt-1">Partager:</div>
+          <div class="flex p-2 ml-auto items-center">
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
@@ -132,36 +93,20 @@
           </div>
         </div>
 
-        <p class="py-12" v-html="$page.post.content"></p>
+        <div
+          class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
+        >
+          <vue-markdown class="content">{{
+            $page.post.content
+          }}</vue-markdown>
+        </div>
 
         <div
-          class="
-            md:flex
-            bg-white
-            py-4
-            rounded-sm
-            shadow-sm
-            md:shadow-sm
-            min-h-0
-            mt-4
-            px-16
-          "
+          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
         >
           <div class="flex py-2 items-center">
             <button
-              class="
-                uppercase
-                p-3
-                flex
-                items-center
-                bg-white
-                max-w-max
-                bg-opacity-10
-                rounded-full
-                w-12
-                h-12
-                pointer-events-none
-              "
+              class="uppercase p-3 flex items-center bg-white max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
             >
               <Tag />
             </button>
@@ -170,24 +115,13 @@
               <span
                 v-for="edge in $page.tags.edges"
                 :key="edge.node.id"
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  px-2
-                  py-2
-                  m-1
-                  text-xs
-                  capitalize         
-                "
+                class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize"
                 >{{ edge.node.title }}
               </span>
             </div>
-
           </div>
 
-          <div class="flex p-2 ml-auto space-x-2 items-center">
-            <div class="text-xl items-center font-bold mt-1">Partager:</div>
+          <div class="flex p-2 ml-auto items-center">
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
@@ -212,87 +146,95 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="home" class="container px-4 w-1/4">
-        <!-- <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-extrabold mb-0">Recherche</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div> -->
-
-        <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Articles relatifs</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-
-        <div class="w-full hidden md:block">
-          <!-- post 1 -->
-          <div
-            class="w-full flex flex-col md:flex-row mb-5"
-            v-for="edge in $page.onlinePost.edges"
-            :key="edge.node.id"
+        <!-- popular posts -->
+        <div class="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
+          <h2 class="font-bold text-3xl">Vous pouvez aussi</h2>
+          <a
+            class="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1 rounded cursor-pointer"
           >
-            <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                :src="edge.node.coverImage"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
+            View all
+          </a>
+        </div>
+        <div class="block space-x-0 lg:flex lg:space-x-6">
+          <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+            <img
+              src="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+              class="rounded"
+              alt="technology"
+            />
+            <div class="p-4 pl-0">
+              <h2 class="font-bold text-2xl text-gray-800">
+                Put all speaking her delicate recurred possible.
+              </h2>
+              <p class="text-gray-700 mt-2">
+                Set indulgence inquietude discretion insensible bed why
+                announcing. Middleton fat two satisfied additions. So continued
+                he or commanded household smallness delivered. Door poor on do
+                walk in half. Roof his head the what.
+              </p>
+
+              <a
+                href="#"
+                class="inline-block py-2 rounded text-green-900 mt-2 ml-auto"
               >
-                {{ edge.node.categories.title }}
-              </span>
-            </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>{{ edge.node.date | FormatDate }}</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-sm">
-                {{ edge.node.title }}
-              </p>
+                Read more
+              </a>
             </div>
           </div>
-          <div class="mr-auto">
-            <g-link to="/blog">
-              <button
+
+          <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+            <img
+              src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+              class="rounded"
+              alt="technology"
+            />
+            <div class="p-4 pl-0">
+              <h2 class="font-bold text-2xl text-gray-800">
+                Is at purse tried jokes china ready decay an.
+              </h2>
+              <p class="text-gray-700 mt-2">
+                Small its shy way had woody downs power. To denoting admitted
+                speaking learning my exercise so in. Procured shutters mr it
+                feelings. To or three offer house begin taken am at.
+              </p>
+
+              <a
                 href="#"
-                class="flex text-sm md:text-base font-medium hover:text-secondary focus:outline-none"
+                class="inline-block py-2 rounded text-green-900 mt-2 ml-auto"
               >
-                Voir toutes les publications <span class="pl-2 pt-1"><Arrow /></span>
-              </button>
-            </g-link>
+                Read more
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+            <img
+              src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+              class="rounded"
+              alt="technology"
+            />
+            <div class="p-4 pl-0">
+              <h2 class="font-bold text-2xl text-gray-800">
+                As dissuade cheerful overcame so of friendly he indulged
+                unpacked.
+              </h2>
+              <p class="text-gray-700 mt-2">
+                Alteration connection to so as collecting me. Difficult in
+                delivered extensive at direction allowance. Alteration put use
+                diminution can considered sentiments interested discretion.
+              </p>
+
+              <a
+                href="#"
+                class="inline-block py-2 rounded text-green-900 mt-2 ml-auto"
+              >
+                Read more
+              </a>
+            </div>
           </div>
         </div>
-
+        <!-- end popular posts -->
       </div>
     </div>
   </Layout>
@@ -359,6 +301,9 @@ query query($path:String) {
 </page-query>
 
 <script>
+import moment from "moment";
+import VueMarkdown from "vue-markdown";
+
 import PostSeo from "../mixins/SEO";
 import moment from "moment";
 
@@ -377,6 +322,7 @@ export default {
   components: {
     LazyHydrate,
     Breadcrumb,
+    VueMarkdown,
     User,
     Calendar,
     Tag,
@@ -396,15 +342,6 @@ export default {
     this.path = this.$router.currentRoute.path.split("/")[1];
     this.fullPath = this.$router.currentRoute.path;
   },
-
-  filters: {
-    // Filter definitions
-    FormatDate(value) {
-      if (value) {
-        return moment(String(value)).format("DD/MM/YYYY");
-      }
-    },
-  },
   created() {
     this.$page.post.tags.forEach((tag) => {
       this.tags !== ""
@@ -412,5 +349,12 @@ export default {
         : (this.tags = `${tag.title}`);
     });
   },
+  methods: {
+    format_date(value) {
+      if (value) {
+        return moment(String(value)).format("DD MMMM YYYY");
+      }
+    },
+  }
 };
 </script>

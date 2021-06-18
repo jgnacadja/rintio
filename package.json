@@ -20,6 +20,7 @@
         "marked": "^2.0.4",
         "typography": "^0.16.21",
         "vue-lazy-hydration": "^2.0.0-beta.4",
+        "vue-markdown": "^2.2.4",
         "vue-observe-visibility": "^1.0.0",
         "vue-popover": "^1.6.2",
         "vue-scrollto": "^2.20.0"
