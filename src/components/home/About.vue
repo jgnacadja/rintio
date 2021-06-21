@@ -63,13 +63,12 @@
             text-xl
             md:text-5xl
             font-extrabold
-            capitalize
             text-primary
           "
         >
           Entreprise de <br class="hidden md:block" />
           services du
-          <span class="text-secondary capitalize">numérique</span>
+          <span class="text-secondary">numérique</span>
         </h1>
 
         <p class="my-3 text-justify leading-8">

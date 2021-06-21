@@ -30,7 +30,6 @@
                   md:text-5xl
                   font-extrabold
                   text-primary
-                  capitalize
                 "
               >
                 Besoin d'échanger sur

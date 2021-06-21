@@ -35,12 +35,11 @@
             text-xl
             md:text-5xl
             font-extrabold
-            capitalize
             text-primary
           "
         >
           Prestation<br />
-          <span class="text-secondary capitalize">client</span>
+          <span class="text-secondary">client</span>
         </h1>
 
         <p class="my-3">
