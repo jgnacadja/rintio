@@ -6,9 +6,9 @@
 
     <div class="text-center">
       <h1
-        class="my-3 text-xl md:text-5xl font-extrabold text-secondary uppercase"
+        class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
-        Articles<span class="text-primary"> à la une</span>
+        Articles<span class="text-secondary"> à la une</span>
       </h1>
       <p class="md:w-1/2 mx-auto py-4">
         Nous créons ensemble des outils créatifs depuis plus de dix ans et nous

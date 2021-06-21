@@ -2,9 +2,9 @@
   <div class="items-center w-full justify-center py-6 md:py-24 md:px-20">
     <div class="text-center">
       <h1
-        class="my-3 text-xl md:text-5xl font-extrabold text-primary uppercase"
+        class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
-        Rintio<span class="text-secondary font-openSans"> Story</span>
+        Rintio<span class="text-secondary font-openSans"> story</span>
       </h1>
       <p class="md:w-1/2 mx-auto py-4">
         Vivez

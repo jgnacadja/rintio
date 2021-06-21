@@ -27,7 +27,6 @@
             md:text-5xl
             text-primary
             font-extrabold
-            capitalize
           "
         >
           Ils nous<br />
