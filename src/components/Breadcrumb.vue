@@ -12,7 +12,8 @@
       font-openSans
     "
   >
-    <div>{{ path }}</div>
+    <div v-if="!article">{{ path }}</div>
+    <div v-if="article">{{ article }}</div>
     <div>
       <g-link to="/">
         {{ home }}

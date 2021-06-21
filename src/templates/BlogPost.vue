@@ -1,14 +1,9 @@
 <template>
   <Layout>
-    <LazyHydrate when-idle>
-      <Breadcrumb :path="path" :article="$page.post.title" />
-    </LazyHydrate>
-
     <!-- component -->
-    <div class="max-w-screen-xl mx-auto">
-      <div class="mt-10">
+    <div class="mx-auto">
         <div
-          class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative"
+          class="mb-4 md:mb-0 w-full mx-auto relative"
           style="height: 24em"
         >
           <div
@@ -19,20 +14,18 @@
             :src="$page.post.coverImage"
             class="absolute left-0 top-0 w-full h-full z-0 object-cover"
           />
-          <div class="p-4 absolute bottom-0 left-0 z-20">
+          <div class="p-4 absolute bottom-0 left-0 z-20 px-20">
             <a
               href="#"
               class="px-4 py-1 bg-secondary text-gray-200 inline-flex items-center justify-center mb-2"
               >{{$page.post.categories.title}}</a
             >
-            <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
-              {{$page.post.title}}
-            </h2>
           </div>
         </div>
+      <Breadcrumb :path="path" :article="$page.post.title" />
 
         <div
-          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
+          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
         >
           <div class="flex py-2 space-x-16 items-center">
             <div class="flex space-x-4">
@@ -94,7 +87,7 @@
         </div>
 
         <div
-          class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
+          class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
         >
           <vue-markdown>{{
             $page.post.content
@@ -102,7 +95,7 @@
         </div>
 
         <div
-          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
+          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
         >
           <div class="flex py-2 items-center">
             <button
@@ -149,7 +142,7 @@
 
         <!-- popular posts -->
         <div
-          class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-md mx-auto items-center justify-between"
+          class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-xl mx-auto items-center justify-between"
         >
           <h2 class="font-bold text-3xl">Vous pouvez aussi lire</h2>
           <g-link
@@ -160,7 +153,7 @@
           </g-link>
         </div>
         <div
-          class="block space-x-0 lg:flex max-w-screen-md mx-auto lg:space-x-6"
+          class="block space-x-0 lg:flex max-w-screen-xl mx-auto lg:space-x-6"
         >
           <div
             class="rounded w-full md:w-1/2 lg:w-1/3 p-4 lg:p-0"
@@ -170,7 +163,7 @@
             <g-image
               alt="iot"
               :src="edge.node.coverImage"
-              class="rounded h-32 w-full"
+              class="rounded h-64 w-full"
             />
             <div class="px-4 pl-0">
               <h2 class="font-bold text-lg text-gray-800 mb-px">
@@ -205,7 +198,6 @@
         </div>
         <!-- end popular posts -->
       </div>
-    </div>
   </Layout>
 </template>
 

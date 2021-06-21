@@ -14,21 +14,21 @@ import Typography from "typography";
 import VueObserveVisibility from "vue-observe-visibility";
 
 const typography = new Typography({
-  baseFontSize: "16px",
+  baseFontSize: '16px',
   baseLineHeight: 1.6,
   scaleRatio: 2.6,
   googleFonts: [
     {
-      name: "Open Sans",
-      styles: ["300", "400", "600", "700", "800"],
+      name: 'Open Sans',
+      styles: ['300', '400', '600', '700', '800'],
     },
     {
       name: "Roboto",
-      styles: ["100", "300", "400", "500", "700", "900"],
+      styles: ['100', '300', '400', '500', '700', '900'],
     },
   ],
-  headerFontFamily: ["Open Sans", "sans-serif"],
-  bodyFontFamily: ["Roboto", "sans-serif"],
+  headerFontFamily: ['Open Sans', 'sans-serif'],
+  bodyFontFamily: ['Roboto', 'sans-serif'],
 });
 
 export default function (Vue, { router, head, isClient }) {
