@@ -2,12 +2,12 @@
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
     <div class="mx-4 md:mx-0 md:text-center mb-4 md:mb-10">
       <h1 class="text-xl md:text-5xl font-extrabold text-primary capitalize">
-        Nos implantations
+        Nos <span class="text-secondary lowercase">implantations</span>
       </h1>
     </div>
     <div class="text-center">
       <p class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto">
-        Notre Présence dans le monde.
+        Notre présence dans le monde.
       </p>
     </div>
 
@@ -34,7 +34,7 @@
               <div
                 class="w-full relative justify-between flex px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed font-sans"
+                <span class="tracking-wider leading-relaxed"
                   >Cotonou, Bénin
                 </span>
 
@@ -82,7 +82,7 @@
               <div
                 class="w-full relative justify-between flex px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed font-sans"
+                <span class="tracking-wider leading-relaxed"
                   >Paris, France
                 </span>
 
@@ -125,7 +125,7 @@
             <div
               class="w-full relative justify-between flex px-4 py-4 bg-white"
             >
-              <span class="tracking-wider leading-relaxed font-sans">
+              <span class="tracking-wider leading-relaxed">
                 Abidjan, Cote d’Ivoire
               </span>
 
