@@ -1,5 +1,14 @@
 <template>
-  <nav class="px-10 h-24 hidden md:flex">
+<div class="self-center">
+  	<div class="md:hidden">
+			<button class="navbar-burger flex items-center text-gray-600 p-3">
+				<svg class="block h-5 w-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+   <nav class="px-10 h-24 hidden md:flex">
     <div
       id="home"
       class="
@@ -80,6 +89,8 @@
       </div>
     </div>
   </nav>
+</div>
+ 
 </template>
 
 <script>

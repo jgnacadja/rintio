@@ -4,7 +4,7 @@
       <h1
         class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
-        Rintio<span class="text-secondary font-openSans"> story</span>
+        Rintio<span class="text-secondary font-Roboto"> story</span>
       </h1>
       <p class="md:w-1/2 mx-auto py-4">
         Vivez

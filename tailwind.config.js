@@ -29,8 +29,8 @@ module.exports = {
         'map': "url('/src/assets/images/home/map.png')",
        }),
       fontFamily: {
-        openSans: ['Open Sans', 'sans-serif'],
-        roboto: ['Roboto', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },

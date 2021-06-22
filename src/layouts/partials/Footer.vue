@@ -14,7 +14,7 @@
         <!-- Col-2 -->
         <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <!-- Col Title -->
-          <div class="uppercase text-white font-extrabold mb-6 font-openSans">
+          <div class="uppercase text-white font-extrabold mb-6 font-Roboto">
             Produits
           </div>
           <!-- Title Dot -->
@@ -76,7 +76,7 @@
         <!-- Col-3 -->
         <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <!-- Col Title -->
-          <div class="uppercase text-white font-extrabold mb-6 font-openSans">
+          <div class="uppercase text-white font-extrabold mb-6 font-Roboto">
             Liens utiles
           </div>
           <!-- Title Dot -->
