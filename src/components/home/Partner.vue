@@ -5,9 +5,9 @@
   >
     <div class="md:w-1/4">
       <div class="mx-4 md:mx-0">
-        <h1 class="mb-3 text-sm text-primary font-semibold uppercase">
+        <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
           Nos partenaires
-        </h1>
+        </h3>
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="mx-4 md:mx-0 pt-6">
-        <h1
+        <h2
           class="
             my-3
             text-xl
@@ -32,7 +32,7 @@
           Ils nous<br />
           font <br />
           <span class="text-secondary">confiance</span>
-        </h1>
+        </h2>
 
         <p class="my-3 text- xl">
           Il serait long et fastidieux de présenter la 

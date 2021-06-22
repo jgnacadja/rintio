@@ -15,12 +15,12 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
             Rintio Prestation
-          </p>
-          <p class="text-5xl font-extrabold text-primary font-openSans">
+          </h3>
+          <h1 class="text-5xl font-extrabold text-primary font-openSans">
             Nous accélérons votre transformation digitale
-          </p>
+          </h1>
           <p class="text-2xl mb-10 leading-8">
             Rintio vous accompagne dans la mise en place de vos solutions
             digitales en mettant à votre disposition une équipe hautement
@@ -61,12 +61,12 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
             Technologie
-          </p>
-          <p class="text-5xl font-extrabold text-primary font-openSans">
+          </h3>
+          <h1 class="text-5xl font-extrabold text-primary font-openSans">
             DataScience et Intelligence Artificielle
-          </p>
+          </h1>
           <p class="text-2xl mb-10 leading-8">
             Restez leader en donnant de la voix à vos données grâce à nos
             solutions de data visualisation et nos modèles prédictions.
@@ -106,12 +106,12 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
             Rintio Formation
-          </p>
-          <p class="text-5xl font-extrabold text-primary font-openSans">
+          </h3>
+          <h1 class="text-5xl font-extrabold text-primary font-openSans">
             Africa TechUp Tour
-          </p>
+          </h1>
           <p class="text-2xl mb-10 leading-8">
             Parcourez le monde avec nous dans notre quête continue de partage de
             connaissance.
@@ -151,12 +151,12 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
             Rintio Story
-          </p>
-          <p class="text-5xl font-extrabold text-primary font-openSans">
+          </h3>
+          <h1 class="text-5xl font-extrabold text-primary font-openSans">
             CHMP & Coraq Lab
-          </p>
+          </h1>
           <p class="text-2xl mb-10 leading-8">
             Lancement de la plateforme e-learning Coraq Lab en partenariat avec
             CHMP et Initiative 5%, financé par Expertise France.

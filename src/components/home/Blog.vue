@@ -1,15 +1,15 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
     <div class="text-center">
-      <p class="font-extrabold text-primary uppercase">Rintio blog</p>
+      <h4 class="font-extrabold text-primary uppercase">Rintio blog</h4>
     </div>
 
     <div class="text-center">
-      <h1
+      <h2
         class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
         Articles<span class="text-secondary"> à la une</span>
-      </h1>
+      </h2>
       <p class="md:w-1/2 mx-auto py-4">
         Nous créons ensemble des outils créatifs depuis plus de dix ans et nous
         avons une connaissance approfondie des applications logicielles.

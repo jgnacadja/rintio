@@ -1,9 +1,9 @@
   <template>
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
     <div class="mx-4 md:mx-0 md:text-center mb-4 md:mb-10">
-      <h1 class="text-xl md:text-5xl font-extrabold text-primary capitalize">
+      <h2 class="text-xl md:text-5xl font-extrabold text-primary capitalize">
         Nos <span class="text-secondary lowercase">implantations</span>
-      </h1>
+      </h2>
     </div>
     <div class="text-center">
       <p class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto">

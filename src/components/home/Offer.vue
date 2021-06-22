@@ -14,9 +14,9 @@
   >
     <div class="w-full md:w-1/4 mb-8 md:mb-0">
       <div class="mx-4 md:mx-0">
-        <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
+        <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
           Nos offres
-        </h1>
+        </h3>
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="mx-4 md:mx-0 pt-6">
-        <h1
+        <h2
           class="
             my-3
             text-xl
@@ -40,7 +40,7 @@
         >
           Prestation<br />
           <span class="text-secondary">client</span>
-        </h1>
+        </h2>
 
         <p class="my-3">
           Les solutions que nous proposons à nos précieux clients. Découvrez nos
