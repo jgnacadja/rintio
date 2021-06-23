@@ -102,7 +102,7 @@
                       font-extrabold
                       tracking-wider
                       leading-relaxed
-                      font-sans
+                      font-roboto
                     "
                   >
                     Offshoring
@@ -114,7 +114,7 @@
                       font-bold
                       tracking-wider
                       leading-relaxed
-                      font-sans
+                      font-roboto
                       text-xs
                     "
                   >
@@ -126,7 +126,6 @@
                       text-white
                       tracking-wider
                       leading-relaxed
-                      font-sans
                       text-xs
                       flex flex-row
                       justify-between
@@ -172,7 +171,7 @@
                       font-extrabold
                       tracking-wider
                       leading-relaxed
-                      font-sans
+                      font-roboto
                     "
                   >
                     Offshoring
@@ -184,7 +183,7 @@
                       font-bold
                       tracking-wider
                       leading-relaxed
-                      font-sans
+                      font-roboto
                       text-xs
                     "
                   >
@@ -196,7 +195,6 @@
                       text-white
                       tracking-wider
                       leading-relaxed
-                      font-sans
                       text-xs
                     "
                   >
@@ -229,7 +227,7 @@
                       font-extrabold
                       tracking-wider
                       leading-relaxed
-                      font-sans
+                      font-roboto
                     "
                   >
                     Data Lab
@@ -240,7 +238,6 @@
                       text-white
                       tracking-wider
                       leading-relaxed
-                      font-sans
                       text-xs
                     "
                   >

@@ -1,5 +1,5 @@
 <template>
-  <div class="md:flex w-full mx-4 md:mx-0 md:text-left">
+  <div class="md:flex w-full px-4 md:px-0 md:text-left">
     <div class="md:px-20 md:w-1/2">
       <div class="flex">
         <div class="mx-auto">

@@ -15,10 +15,10 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-Roboto">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Prestation
           </p>
-          <p class="text-5xl font-extrabold text-primary font-Roboto">
+          <p class="text-5xl font-extrabold text-primary font-roboto">
             Nous accélérons votre transformation digitale
           </p>
           <p class="text-2xl mb-10 leading-8">
@@ -61,10 +61,10 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-Roboto">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Technologie
           </p>
-          <p class="text-5xl font-extrabold text-primary font-Roboto">
+          <p class="text-5xl font-extrabold text-primary font-roboto">
             DataScience et Intelligence Artificielle
           </p>
           <p class="text-2xl mb-10 leading-8">
@@ -106,10 +106,10 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-Roboto">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Formation
           </p>
-          <p class="text-5xl font-extrabold text-primary font-Roboto">
+          <p class="text-5xl font-extrabold text-primary font-roboto">
             Africa TechUp Tour
           </p>
           <p class="text-2xl mb-10 leading-8">
@@ -151,10 +151,10 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-Roboto">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Story
           </p>
-          <p class="text-5xl font-extrabold text-primary font-Roboto">
+          <p class="text-5xl font-extrabold text-primary font-roboto">
             CHMP & Coraq Lab
           </p>
           <p class="text-2xl mb-10 leading-8">
