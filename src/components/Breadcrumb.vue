@@ -30,7 +30,7 @@
         >{{ path }}</span
       >
       <span v-bind:class="{ 'text-primary font-bold': article }" v-if="article">
-        / {{ article }}</span
+        | {{ article }}</span
       >
     </div>
   </div>
