@@ -10,19 +10,19 @@
               <div class="w-full h-40 md:h-full"></div>
               <div class="w-full relative px-4 pb-4 md:-mt-24">
                 <div
-                  class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                  class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                 >
                   Offshoring
                 </div>
 
                 <div
-                  class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
+                  class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
                 >
                   Concentrez vous sur votre cœur d’activité.
                 </div>
 
                 <div
-                  class="text-white tracking-wider leading-relaxed font-sans text-xs flex flex-row justify-between"
+                  class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between"
                 >
                   <div>
                     • Dev. Python Java Php <br />
@@ -49,19 +49,19 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Offshoring
                     </div>
 
                     <div
-                      class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Un développeur à partir de 50€ / Jour
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       #Python #Java #Php. 1 mois offert.
                     </div>
@@ -76,19 +76,19 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Offshoring
                     </div>
 
                     <div
-                      class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Administration Cloud et Infrastructure
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       A partir de 200€ / Mois. 3Mois offerts.
                     </div>
@@ -107,13 +107,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Data Lab
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Accélérez votre croissance en exploitant pleinement
                       lepotentiel de vos données.
@@ -129,13 +129,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       (Big) Data & Analytics
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Captez, nettoyez, stockez, diffusez et exploitez vos
                       données
@@ -159,13 +159,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Développement & Intégration d’applications
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Accélérez votre croissance en exploitant pleinement
                       lepotentiel de vos données.
@@ -181,13 +181,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Intelligence Artificielle
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Meilleur connaissance client, Expérience client unique,
                       Produits et services augmentés.
@@ -203,13 +203,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Offshoring DevOps
                     </div>
 
                     <div
-                      class="text-white font-bold tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Optimisez vos processus de développement et livrez
                       rapidement vos produits et services.
@@ -225,13 +225,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Conseil
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       • Stratégie Data & IA • Stratégie de transformation
                       numériques
@@ -255,13 +255,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       API & MicroService
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       • Exposez vos produits, vos services et vos données via
                       des API <br />
@@ -278,13 +278,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Intelligence Artificielle
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Meilleur connaissance client, Expérience client unique,
                       Produits et services augmentés.
@@ -300,13 +300,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Conseil
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       • Stratégie Data & IA <br />
                       • Stratégie de transformation numériques
@@ -322,13 +322,13 @@
                   <div class="w-full h-40"></div>
                   <div class="w-full relative px-4 pb-4">
                     <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-sans"
+                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
                     >
                       Conseil
                     </div>
 
                     <div
-                      class="text-white tracking-wider leading-relaxed font-sans text-xs"
+                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       • Stratégie Data & IA <br />
                       • Stratégie de transformation numériques

@@ -5,20 +5,42 @@
     </LazyHydrate>
 
     <div
-      class="md:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full mt-24"
+      class="
+        md:flex
+        container
+        mx-auto
+        md:px-16
+        space-x-0
+        md:space-x-6
+        w-full
+        mt-24
+      "
     >
       <div id="home" class="container px-4 w-3/4">
-        <div class="space-y-6">
+        <div
+          v-if="searchResults.length > 0 && search !== null"
+          class="space-y-6"
+        >
           <!-- main post -->
           <div
-            class="mb-4 lg:mb-0 p-4 lg:p-0 w-full relative block bg-white"
-            v-for="edge in $page.posts.edges"
-            :key="edge.node.id"
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              relative
+              block
+              bg-white
+              shadow-sm
+            "
+            v-for="post in searchResults"
+            :key="post.node.id"
           >
-            <g-link :to="edge.node.path">
+            <g-link :to="post.node.path">
               <g-image
                 alt="iot"
-                :src="edge.node.coverImage"
+                :src="post.node.coverImage"
                 class="object-cover w-full h-96 mb-0"
               />
               <span
@@ -33,11 +55,11 @@
                   ml-4
                   -mt-7
                   capitalize
-                  w-64
+                  w-32
                   text-center
                 "
+                v-html="post.node.categories.title"
               >
-                {{ edge.node.categories.id }}
               </span>
               <p
                 class="
@@ -50,101 +72,140 @@
                   mx-4
                 "
               >
-                {{ edge.node.title }}
+                {{ post.node.title }}
               </p>
               <p class="text-primary text-xs space-x-8 mx-4">
-                <span>{{ edge.node.date }}</span>
-                <span>Publié par : xxxxxxxxxxxxx</span>
+                <span>{{ post.node.date }}</span>
               </p>
               <p
-                class="text-gray-600 mb-4 mx-4"
-                v-html="edge.node.metaDescription"
+                class="text-gray-600 mb-4 pb-8 mx-4"
+                v-html="post.node.metaDescription"
               ></p>
-              <div class="flex space-x-8 mx-4">
-                <p class="flex space-x-2">
-                  <Like /> <span class="text-xs">24k</span>
-                </p>
-                <p class="flex space-x-2">
-                  <Comment /> <span class="text-xs">247</span>
-                </p>
-                <p class="flex space-x-2">
-                  <Share /> <span class="text-xs">24</span>
-                </p>
-              </div>
             </g-link>
           </div>
 
           <!-- paginator -->
-          <ul
+
+          <div
             class="
-              flex
-              list-reset
-              border border-grey-light
-              rounded
-              w-auto
-              font-sans
+              px-5
+              py-5
+              flex flex-col
+              xs:flex-row
+              items-center
+              xs:justify-between
             "
           >
-            <li>
-              <a
-                class="
-                  block
-                  hover:text-white
-                  hover:bg-blue
-                  text-blue
-                  border-r border-grey-light
-                  px-3
-                  py-2
-                "
-                href="#"
-                >Previous</a
+            <div>
+              <nav
+                class="relative z-0 inline-flex rounded-md shadow-sm"
+                aria-label="Pagination"
               >
-            </li>
-            <li>
-              <a
-                class="
-                  block
-                  hover:text-white
-                  hover:bg-blue
-                  text-blue
-                  border-r border-grey-light
-                  px-3
-                  py-2
-                "
-                href="#"
-                >1</a
-              >
-            </li>
-            <li>
-              <a
-                class="
-                  block
-                  hover:text-white
-                  hover:bg-blue
-                  text-blue
-                  border-r border-grey-light
-                  px-3
-                  py-2
-                "
-                href="#"
-                >2</a
-              >
-            </li>
-            <li>
-              <a
-                class="block text-white bg-blue border-r border-blue px-3 py-2"
-                href="#"
-                >3</a
-              >
-            </li>
-            <li>
-              <a
-                class="block hover:text-white hover:bg-blue text-blue px-3 py-2"
-                href="#"
-                >Next</a
-              >
-            </li>
-          </ul>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  «
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = index - 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  ‹
+                </a>
+                <a
+                  v-for="index in numberOfPages"
+                  :key="index"
+                  @click="page = index"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  {{ index }}
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = index + 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  ›
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = numberOfPages"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  »
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div v-else>
+          <div class="shadow w-full p-24 h-full text-center">
+            <seo class="h-96 w-full" />
+            <h3>Aucun résultat correspondant à votre recherche</h3>
+            <p>
+              Veuillez essayer d'ajuster vos mots-clés de recherche ou vos
+              filtres.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -173,6 +234,7 @@
             type="search"
             name="search"
             placeholder=""
+            v-model="search"
           />
           <button
             type="submit"
@@ -200,7 +262,7 @@
         </div>
 
         <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Articles Populaires</h1>
+          <h1 class="text-lg md:text-xl font-bold mb-0">Articles à la une</h1>
           <div class="mb-4 -mt-3">
             <span class="inline-block w-1/3 border border-secondary"></span>
             <span class="inline-block w-2/3 border border-grey-300"></span>
@@ -209,99 +271,47 @@
 
         <div class="w-full hidden md:block">
           <!-- post 1 -->
-          <div class="w-full flex flex-col md:flex-row mb-5">
+          <div
+            class="w-full flex flex-col md:flex-row mb-5"
+            v-for="edge in $page.onlinePost.edges"
+            :key="edge.node.id"
+          >
             <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/ia.png"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
-              >
-                Big data
-              </span>
+              <g-link :to="edge.node.path">
+                <g-image
+                  alt="iot"
+                  :src="edge.node.coverImage"
+                  class="block md:hidden lg:block h-24 m-4 md:m-0 w-full"
+                />
+                <span
+                  class="
+                    relative
+                    text-white
+                    bg-secondary
+                    p-2
+                    text-sm
+                    hidden
+                    md:block
+                    ml-4
+                    -mt-7
+                    capitalize
+                    w-24
+                    text-center
+                  "
+                >
+                  {{ edge.node.categories.title }}
+                </span>
+              </g-link>
             </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>10 Jan 2020</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-                Article 2
-              </p>
-              <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-                Lorem Ipsum est simplement du faux texte employé dans...
-              </p>
-            </div>
-          </div>
-
-          <div class="w-full flex flex-col md:flex-row">
-            <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/ia.png"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
-              >
-                Big data
-              </span>
-            </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>10 Jan 2020</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-                Article 2
-              </p>
-              <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-                Lorem Ipsum est simplement du faux texte employé dans...
-              </p>
+            <div class="bg-white px-4 w-3/5 h-24">
+              <g-link :to="edge.node.path">
+                <p class="text-primary text-xs mt-4">
+                  <span>{{ edge.node.date | FormatDate }}</span>
+                </p>
+                <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-sm">
+                  {{ edge.node.title }}
+                </p>
+              </g-link>
             </div>
           </div>
         </div>
@@ -315,26 +325,12 @@
         </div>
         <div>
           <ul class="list-outside list-disc ml-6 font-bold">
-            <li class="text-secondary">
-              <div class="text-gray-700">Intelligence Artificielle</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Big Data</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Data Science & Data Analytics</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Cloud</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">DevOps</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Dataviz</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">API & Microservice</div>
+            <li
+              v-for="edge in $page.category.edges"
+              :key="edge.node.id"
+              class="text-secondary"
+            >
+              <div class="text-gray-700">{{ edge.node.title }}</div>
             </li>
           </ul>
         </div>
@@ -350,6 +346,8 @@
         </div>
         <div>
           <span
+            v-for="edge in $page.tags.edges"
+            :key="edge.node.id"
             class="
               inline-flex
               items-center
@@ -359,136 +357,123 @@
               m-1
               text-xs
               leading-none
-              bg-gray-200
-              text-gray-700
               hover:text-white
               hover:bg-secondary
+              cursor-pointer
             "
-            >Scrum</span
+            v-bind:class="{
+              'bg-secondary text-white':
+                pinnedTabs.indexOf(edge.node.id) !== -1,
+              'bg-gray-200 text-gray-700':
+                pinnedTabs.indexOf(edge.node.id) === -1,
+            }"
+            @click="pinTag(edge.node.id)"
           >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Méthode agile</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Intelligence Artificielle</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >API</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Formation</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >DevOps</span
-          >
+            {{ edge.node.title }}
+            <svg
+              v-if="pinnedTabs.indexOf(edge.node.id) !== -1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
         </div>
       </div>
     </div>
   </Layout>
 </template>
 
-
-
-
 <page-query>
 query {
-  posts: allBlogPost {
+  posts:  allBlogPost {
     edges {
       node {
         id
         title
         path
-        categories{
+        categories {
           id
+          title
+        }
+      tags {
+          id
+          title
         }
         date
         metaDescription
         coverImage
+        tags {
+          id
+          title
+        }
       }
     }
   }
+  tags: allTag {
+    edges {
+      node{
+        id
+        title
+      }
+    }
+  }
+  category: allCategory {
+    edges {
+      node{
+        id
+        title
+      }
+    }
+  }
+  
+  onlinePost : allBlogPost(
+    filter: { categories: { in: "Blog" } }
+    limit: 3
+    order: DESC
+  ) {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+      }
+    }
+  }
+
 }
+
 </page-query>
 
-
 <script>
+import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
+import { Pager } from "gridsome";
+import Seo from "~/assets/images/Illustrations/seo.svg";
+import RemoveTag from "~/assets/images/icons/remove.svg";
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
+    Pager,
+    Seo,
+    RemoveTag,
   },
   metaInfo: {
     title: "Blog",
@@ -496,10 +481,114 @@ export default {
   data() {
     return {
       path: "",
+      search: "",
+      searchByTag: "",
+      page: 1,
+      numberOfPages: 1,
+      pinnedTabs: [],
     };
   },
   mounted() {
     this.path = this.$router.currentRoute.path.slice(1).replace("-", " ");
   },
+  computed: {
+    searchResults() {
+      if (this.search) {
+        this.pinnedTabs = [];
+        let filteredPosts = this.$page.posts.edges.filter((post) => {
+          return post.node.title
+            .toLowerCase()
+            .includes(this.search.toLowerCase().trim());
+        });
+        this.numberOfPages = Math.ceil(filteredPosts.length / 5);
+        return this.paginate(filteredPosts, 5, this.page);
+      } else {
+        console.log(this.$page.posts.edges);
+        if (this.pinnedTabs.length !== 0) {
+          console.log(this.pinnedTabs);
+
+          /* // Get all the required ids
+          var ids = filter.map(function (f) {
+            return f.id;
+          });
+          var filtered = array.filter(function (a) {
+            // Check if both source and target are present in list of ids
+            return ids.indexOf(a.source) !== -1 && ids.indexOf(a.target) !== -1;
+          }); */
+          
+          console.log(filtered);
+          return [];
+        } else {
+          return this.paginate(this.$page.posts.edges, 5, this.page);
+        }
+      }
+    },
+  },
+  methods: {
+    paginate(array, page_size, page_number) {
+      // human-readable page numbers usually start with 1, so we reduce 1 in the first argument
+      return array.slice(
+        (page_number - 1) * page_size,
+        page_number * page_size
+      );
+    },
+    pinTag(tag) {
+      if (this.pinnedTabs.indexOf(tag) !== -1) {
+        this.pinnedTabs = this.pinnedTabs.filter((tagged) => tagged != tag);
+      } else {
+        this.search = "";
+        this.pinnedTabs.push(tag);
+      }
+    },
+  },
+  filters: {
+    // Filter definitions
+    FormatDate(value) {
+      if (value) {
+        return moment(String(value)).format("MM/DD/YYYY");
+      }
+    },
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../variables.scss";
+
+.pager {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+
+  &__link {
+    color: #e5e7eb;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover:not(.active) {
+      background-color: #9ca3af;
+      color: #000 !important;
+    }
+  }
+}
+
+.pager a {
+  background-color: #fff;
+  width: 2rem;
+  padding: 1rem;
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.pager a:hover {
+  background-color: #f9fafb;
+  color: #000 !important;
+}
+
+.active {
+  background-color: #e5e7eb !important;
+  color: #000 !important;
+  padding: 1rem;
+  border: 1px solid #3b82f6 !important;
+}
+</style>

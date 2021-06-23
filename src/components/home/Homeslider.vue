@@ -5,7 +5,7 @@
         class="
           bg-cover bg-center
           height
-          text-white
+          text-black
           py-2
           md:py-32
           px-2
@@ -14,16 +14,16 @@
           bg-homeslider-1
         "
       >
-        <div class="md:w-1/2">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+        <div class="md:w-5/12">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Prestation
           </p>
-          <p class="text-5xl font-extrabold font-openSans">
-            Nous accélérons votre transformation digital
+          <p class="text-5xl font-extrabold text-primary font-roboto">
+            Nous accélérons votre transformation digitale
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Rintio vous accompagne dans la mise en place de vos solution
-            digitale en mettant a votre disposition une équipe hautement
+            Rintio vous accompagne dans la mise en place de vos solutions
+            digitales en mettant à votre disposition une équipe hautement
             qualifiée.
           </p>
           <a
@@ -36,8 +36,7 @@
               font-bold
               uppercase
               text-xs
-              hover:bg-gray-200
-              hover:text-gray-800
+              hover:bg-primary
             "
             >En savoir plus</a
           >
@@ -61,17 +60,16 @@
           bg-homeslider-2
         "
       >
-        <div class="md:w-1/2">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
-            Rintio Prestation
+        <div class="md:w-5/12">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
+            Technologie
           </p>
-          <p class="text-5xl font-extrabold font-openSans">
-            Nous accélérons votre transformation digital
+          <p class="text-5xl font-extrabold text-primary font-roboto">
+            DataScience et Intelligence Artificielle
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Rintio vous accompagne dans la mise en place de vos solution
-            digitale en mettant a votre disposition une équipe hautement
-            qualifiée.
+            Restez leader en donnant de la voix à vos données grâce à nos
+            solutions de data visualisation et nos modèles prédictions.
           </p>
           <a
             href="#"
@@ -83,8 +81,7 @@
               font-bold
               uppercase
               text-xs
-              hover:bg-gray-200
-              hover:text-gray-800
+              hover:bg-primary
             "
             >En savoir plus</a
           >
@@ -108,16 +105,16 @@
           bg-homeslider-3
         "
       >
-        <div class="md:w-1/2">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+        <div class="md:w-5/12">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Formation
           </p>
-          <p class="text-5xl font-extrabold text-primary font-openSans">
-            Africa <br />TechUp Tour
+          <p class="text-5xl font-extrabold text-primary font-roboto">
+            Africa TechUp Tour
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Restez leader en donnant de la voix a vos données grâces à nos
-            solutions de datavisualisation et nos modèles prédictions.
+            Parcourez le monde avec nous dans notre quête continue de partage de
+            connaissance.
           </p>
           <a
             href="#"
@@ -129,8 +126,7 @@
               font-bold
               uppercase
               text-xs
-              hover:bg-gray-200
-              hover:text-gray-800
+              hover:bg-primary
             "
             >En savoir plus</a
           >
@@ -154,16 +150,16 @@
           bg-homeslider-4
         "
       >
-        <div class="md:w-1/2">
-          <p class="font-bold text-sm uppercase text-secondary font-openSans">
+        <div class="md:w-5/12">
+          <p class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Story
           </p>
-          <p class="text-5xl font-extrabold font-openSans">
-            CHMP & <br />Coraq-lab
+          <p class="text-5xl font-extrabold text-primary font-roboto">
+            CHMP & Coraq Lab
           </p>
           <p class="text-2xl mb-10 leading-8">
-            Parcourez le monde avec nous dans notre quête continue de partage de
-            connaissance.
+            Lancement de la plateforme e-learning Coraq Lab en partenariat avec
+            CHMP et Initiative 5%, financé par Expertise France.
           </p>
           <a
             href="#"
@@ -175,8 +171,7 @@
               font-bold
               uppercase
               text-xs
-              hover:bg-gray-200
-              hover:text-gray-800
+              hover:bg-primary
             "
             >En savoir plus</a
           >
@@ -340,7 +335,7 @@ export default {
 
 <style scoped>
 .bg-homeslider-1 {
-  background-image: url("./../../../static/images/home/slider/IA-1.png");
+  background-image: url("./../../../static/images/home/slider/rinttio-1.jpg");
 }
 
 .bg-homeslider-2 {

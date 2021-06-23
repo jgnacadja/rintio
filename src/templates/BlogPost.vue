@@ -1,519 +1,203 @@
 <template>
   <Layout>
-    <LazyHydrate when-idle>
-      <Breadcrumb :path="path" />
-    </LazyHydrate>
-
-    <div
-      class="
-        md:flex
-        container
-        mx-auto
-        md:px-16
-        space-x-0
-        md:space-x-6
-        w-full
-        mt-24
-      "
-    >
-      <div id="home" class="container px-4 w-3/4">
-        <span
-          class="
-            relative
-            text-white
-            bg-secondary
-            p-4
-            text-sm
-            hiddenx
-            md:block
-            ml-4
-            mt-7
-            -mb-7
-            capitalize
-            w-24
-            text-center
-          "
+    <!-- component -->
+    <div class="mx-auto">
+        <div
+          class="mb-4 md:mb-0 w-full mx-auto relative"
+          style="height: 24em"
         >
-          Big data
-        </span>
-        <g-image
-          alt="iot"
-          :src="$page.post.coverImage"
-          class="object-cover w-full h-96 mb-0"
-        />
+          <div
+            class="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-black opacity-70"
+          ></div>
+          <g-image
+            alt="iot"
+            :src="$page.post.coverImage"
+            class="absolute left-0 top-0 w-full h-full z-0 object-cover"
+          />
+          <div class="p-4 absolute bottom-0 left-0 z-20 px-20">
+            <a
+              href="#"
+              class="px-4 py-1 bg-secondary text-gray-200 inline-flex items-center justify-center mb-2"
+              >{{$page.post.categories.title}}</a
+            >
+          </div>
+        </div>
+      <Breadcrumb :path="path" :article="$page.post.title" />
 
         <div
-          class="
-            md:flex
-            bg-white
-            py-4
-            rounded-sm
-            shadow-sm
-            md:shadow-sm
-            min-h-0
-            mt-4
-            px-16
-          "
+          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
         >
           <div class="flex py-2 space-x-16 items-center">
             <div class="flex space-x-4">
               <button
-                class="
-                  uppercase
-                  p-3
-                  flex
-                  items-center
-                  bg-secondary
-                  max-w-max
-                  bg-opacity-10
-                  rounded-full
-                  w-12
-                  h-12
-                  pointer-events-none
-                "
+                class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
               >
                 <User />
               </button>
 
-              <div class="px-1 md:px-0 text-left text-gray-400">
-                <div class="text-sm">Vues</div>
+              <div class="px-1 md:px-0 text-left text-sm text-gray-800">
+                <div>Vues</div>
                 <div class="text-primary font-bold">813,454</div>
               </div>
             </div>
             <div class="flex space-x-4">
               <button
-                class="
-                  uppercase
-                  p-3
-                  flex
-                  items-center
-                  bg-secondary
-                  max-w-max
-                  bg-opacity-10
-                  rounded-full
-                  w-12
-                  h-12
-                  pointer-events-none
-                "
+                class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
               >
                 <Calendar />
               </button>
-              <div class="px-1 md:px-0 text-left text-gray-400">
-                <div class="text-sm">Dernière Modification</div>
-                <div class="text-primary font-bold">25/10/2021</div>
+              <div class="px-1 md:px-0 text-left text-sm text-gray-800">
+                <div>
+                  <span v-if="!$page.post.author">Par Rintio</span>
+                  <span v-if="$page.post.author"
+                    >Par {{$page.post.author}}</span
+                  >
+                </div>
+                <div class="text-primary font-bold">
+                  {{ $page.post.date }}
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="flex p-2 ml-auto space-x-2 items-center">
-            <div class="text-xl items-center font-bold mt-1">Partager:</div>
+          <div class="flex p-2 ml-auto items-center">
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
-                  href="https://www.linkedin.com/company/rintio/"
+                  :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://twitter.com/RintioGroup/" target="_blank">
+                <a
+                  :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
+                  target="_blank"
+                >
                   <Twitter />
                 </a>
                 <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+                  :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
                   target="_blank"
                 >
                   <Facebook />
-                </a>
-                <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <Instagram />
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <p class="py-12" v-html="$page.post.content"></p>
+        <div
+          class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
+        >
+          <vue-markdown>{{
+            $page.post.content
+          }}</vue-markdown>
+        </div>
 
         <div
-          class="
-            md:flex
-            bg-white
-            py-4
-            rounded-sm
-            shadow-sm
-            md:shadow-sm
-            min-h-0
-            mt-4
-            px-16
-          "
+          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
         >
           <div class="flex py-2 items-center">
             <button
-              class="
-                uppercase
-                p-3
-                flex
-                items-center
-                bg-white
-                max-w-max
-                bg-opacity-10
-                rounded-full
-                w-12
-                h-12
-                pointer-events-none
-              "
+              class="uppercase p-3 flex items-center bg-white max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
             >
               <Tag />
             </button>
 
-            <div class="w-1/2 px-1 md:px-0 text-left ml-5">
-              <div>
-                Intelligence Artificielle, Big data, Data Science, Dataviz, API
-                & Microservice
-              </div>
+            <div>
+              <span
+                v-for="edge in $page.tags.edges"
+                :key="edge.node.id"
+                class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize"
+                >{{ edge.node.title }}
+              </span>
             </div>
           </div>
 
-          <div class="flex p-2 ml-auto space-x-2 items-center">
-            <div class="text-xl items-center font-bold mt-1">Partager:</div>
+          <div class="flex p-2 ml-auto items-center">
             <div class="items-start">
               <div class="flex space-x-2">
                 <a
-                  href="https://www.linkedin.com/company/rintio/"
+                  :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://twitter.com/RintioGroup/" target="_blank">
+                <a
+                  :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
+                  target="_blank"
+                >
                   <Twitter />
                 </a>
                 <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+                  :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
                   target="_blank"
                 >
                   <Facebook />
-                </a>
-                <a
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <Instagram />
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="home" class="container px-4 w-1/4">
-        <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-extrabold mb-0">Recherche</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-
-        <div class="pt-2 relative mx-auto text-gray-600">
-          <input
-            class="
-              border-2 border-gray-300
-              bg-white
-              h-12
-              px-5
-              pr-16
-              rounded
-              text-sm
-              focus:outline-none
-              w-full
-            "
-            type="search"
-            name="search"
-            placeholder=""
-          />
-          <button
-            type="submit"
-            class="absolute -right-3 top-3 mr-4 p-2 bg-secondary rounded"
+        <!-- popular posts -->
+        <div
+          class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-xl mx-auto items-center justify-between"
+        >
+          <h2 class="font-bold text-3xl">Vous pouvez aussi lire</h2>
+          <g-link
+            to="/blog"
+            class="bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
           >
-            <svg
-              class="text-white h-6 w-6 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              id="Capa_1"
-              x="0px"
-              y="0px"
-              viewBox="0 0 56.966 56.966"
-              style="enable-background: new 0 0 56.966 56.966"
-              xml:space="preserve"
-              width="512px"
-              height="512px"
-            >
-              <path
-                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-              />
-            </svg>
-          </button>
+            Voir toutes les publications
+          </g-link>
         </div>
+        <div
+          class="block space-x-0 lg:flex max-w-screen-xl mx-auto lg:space-x-6"
+        >
+          <div
+            class="rounded w-full md:w-1/2 lg:w-1/3 p-4 lg:p-0"
+            v-for="edge in $page.onlinePost.edges"
+            :key="edge.node.id"
+          >
+            <g-image
+              alt="iot"
+              :src="edge.node.coverImage"
+              class="rounded h-64 w-full"
+            />
+            <div class="px-4 pl-0">
+              <h2 class="font-bold text-lg text-gray-800 mb-px">
+                {{ edge.node.title }}
+              </h2>
+              <p class="text-gray-700 mb-px">
+                {{ edge.node.metaDescription | truncate}}
+              </p>
 
-        <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Articles Populaires</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-
-        <div class="w-full hidden md:block">
-          <!-- post 1 -->
-          <div class="w-full flex flex-col md:flex-row mb-5">
-            <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/ia.png"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
+              <g-link
+                :to="edge.node.path"
+                class="flex rounded text-primary py-2"
               >
-                Big data
-              </span>
-            </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>10 Jan 2020</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-                Article 2
-              </p>
-              <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-                Lorem Ipsum est simplement du faux texte employé dans...
-              </p>
-            </div>
-          </div>
-
-          <div class="w-full flex flex-col md:flex-row">
-            <div class="w-2/5 h-full">
-              <g-image
-                alt="iot"
-                src="~/assets/images/home/blog/ia.png"
-                class="
-                  block
-                  md:hidden
-                  lg:block
-                  h-64
-                  md:h-full
-                  m-4
-                  md:m-0
-                  w-full
-                "
-              />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
-              >
-                Big data
-              </span>
-            </div>
-            <div class="bg-white px-4 w-3/5 h-full">
-              <p class="text-primary text-xs mt-4">
-                <span>10 Jan 2020</span>
-              </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
-                Article 2
-              </p>
-              <p class="block p-2 pl-0 pt-1 text-sm text-gray-600">
-                Lorem Ipsum est simplement du faux texte employé dans...
-              </p>
+                Lire plus
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 px-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </g-link>
             </div>
           </div>
         </div>
-
-        <div class="md:mx-0">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Catégories</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-        <div>
-          <ul class="list-outside list-disc ml-6 font-bold">
-            <li class="text-secondary">
-              <div class="text-gray-700">Intelligence Artificielle</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Big Data</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Data Science & Data Analytics</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Cloud</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">DevOps</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">Dataviz</div>
-            </li>
-            <li class="text-secondary">
-              <div class="text-gray-700">API & Microservice</div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="md:mx-0 pt-2">
-          <h1 class="text-lg md:text-xl font-bold mb-0">
-            Mots clés populaires
-          </h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-        <div>
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Scrum</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Méthode agile</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Intelligence Artificielle</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >API</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >Formation</span
-          >
-          <span
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-2
-              py-2
-              m-1
-              text-xs
-              leading-none
-              bg-gray-200
-              text-gray-700
-              hover:text-white
-              hover:bg-secondary
-            "
-            >DevOps</span
-          >
-        </div>
+        <!-- end popular posts -->
       </div>
-    </div>
   </Layout>
 </template>
 
@@ -528,7 +212,12 @@ query query($path:String) {
       id
       title
     }
-    date
+
+    tags {
+      id
+      title
+    }
+    date (format: "DD MMMM YYYY", locale: "fr")
     coverImage
     metaDescription
     subDescription
@@ -536,10 +225,52 @@ query query($path:String) {
     descriptionDown
     content
   }
+
+  tags: allTag {
+    edges {
+      node{
+        id
+        title
+      }
+    }
+  }
+
+
+  onlinePost : allBlogPost(
+    perPage: 3
+    page: 1
+    filter: { path: { nin: [$path] } }
+    limit: 3
+    order: DESC
+  ) @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        date
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+        metaDescription
+        subDescription
+        descriptionUp
+        descriptionDown
+        content
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
+import VueMarkdown from "vue-markdown";
+
+import PostSeo from "../mixins/SEO";
+
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import User from "~/assets/images/icons/user.svg";
@@ -551,9 +282,11 @@ import Linkedin from "~/assets/images/icons/linkedin.svg";
 import Twitter from "~/assets/images/icons/twitter.svg";
 
 export default {
+  mixins: [PostSeo],
   components: {
     LazyHydrate,
     Breadcrumb,
+    VueMarkdown,
     User,
     Calendar,
     Tag,
@@ -562,16 +295,28 @@ export default {
     Linkedin,
     Twitter,
   },
-  metaInfo: {
-    title: "Blog",
-  },
   data() {
     return {
       path: "",
+      fullPath: "",
+      tags: "",
     };
   },
   mounted() {
-    this.path = this.$router.currentRoute.path.slice(1).replace("-", " ");
+    this.path = this.$router.currentRoute.path.split("/")[1];
+    this.fullPath = this.$router.currentRoute.path;
+  },
+  created() {
+    this.$page.post.tags.forEach((tag) => {
+      this.tags !== ""
+        ? (this.tags = `${this.tags},${tag.title}`)
+        : (this.tags = `${tag.title}`);
+    });
+  },
+  filters: {
+    truncate(value) {
+         return value.substr(0, 50) + "...";
+    },
   },
 };
 </script>

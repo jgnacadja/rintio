@@ -1,8 +1,8 @@
 ---
 title: Offshoring
 published: true
-categories: Nos offres features
-keywords : []
+categories: Offres
+tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3110.png
 metaDescription: Concentrez vous sur votre coeur d'activité
