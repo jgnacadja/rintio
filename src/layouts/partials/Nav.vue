@@ -23,10 +23,10 @@
     </div>
 
     <div
-      v-bind:class="{ 'translate-x-0 ease-out': openMenu, '-translate-x-full ease-in': !openMenu }"
-      class="fixed md:hidden inset-y-0 left-0 z-50 w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
+      v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
+      class="fixed md:hidden inset-y-0 right-0 z-50 h-80 w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
     >
-      <div class="items-center justify-center mt-8 space-y-2">
+      <div class="items-center justify-center mt-6 space-y-2">
         <button
           class="navbar-burger flex items-center text-gray-600 p-3 ml-auto"
           @click="openMenu = !openMenu"
@@ -49,13 +49,50 @@
 
         <div
           id="home"
-          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+          class="mx-4 mt-2 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
         >
-          <div class="h-full pt-10">
+          <div class="h-full pt-4">
             <g-link to="/">
               <span class="font-bold uppercase font-openSans my-auto"
                 >Acceuil</span
               >
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          id="about"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/a-propos">
+              <span class="font-bold uppercase font-openSans my-auto">
+                A propos
+              </span>
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          id="offer"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/offres">
+              <span class="font-bold uppercase font-openSans my-auto">
+                Nos offres</span>
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          id="blog"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/blog">
+              <span class="font-bold uppercase font-openSans my-auto">  
+                Blog</span>
             </g-link>
           </div>
         </div>
