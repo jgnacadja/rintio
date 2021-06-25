@@ -24,7 +24,7 @@
 
     <div
       v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
-      class="fixed md:hidden inset-y-0 right-0 z-50 h-80 w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
+      class="fixed md:hidden inset-y-0 right-0 z-50 w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
     >
       <div class="items-center justify-center mt-6 space-y-2">
         <button

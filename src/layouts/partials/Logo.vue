@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <div class="logo ">
     <g-link to="/" title="Back to home">
       <Logo class="w-44" alt="Rintio.com" />
     </g-link>
