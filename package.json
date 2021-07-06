@@ -12,7 +12,7 @@
         "@gridsome/source-contentful": "^0.6.0",
         "axios": "^0.21.1",
         "babel-runtime": "^6.26.0",
-        "emailjs-com": "^3.1.0",
+        "emailjs-com": "^2.6.4",
         "gridsome": "^0.7.23",
         "gridsome-plugin-gtm": "^0.1.1",
         "gridsome-plugin-remark-youtube": "^1.0.1",
