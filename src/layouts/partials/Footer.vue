@@ -3,7 +3,7 @@
     <Contact />
 
     <footer class="bg-primary">
-      <div class="text-white md:flex w-full mx-4 md:mx-0 md:text-left">
+      <div class="text-white md:flex w-full px-4 md:px-0 md:mx-0 md:text-left">
         <!-- Col-1 -->
         <div class="md:px-20 p-5 w-full sm:w-4/12 md:w-3/12">
           <div class="w-10">
@@ -14,7 +14,7 @@
         <!-- Col-2 -->
         <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <!-- Col Title -->
-          <div class="uppercase text-white font-extrabold mb-6 font-openSans">
+          <div class="uppercase text-white font-extrabold mb-6 font-roboto">
             Produits
           </div>
           <!-- Title Dot -->
@@ -76,7 +76,7 @@
         <!-- Col-3 -->
         <div class="p-8 w-full sm:w-4/12 md:w-3/12">
           <!-- Col Title -->
-          <div class="uppercase text-white font-extrabold mb-6 font-openSans">
+          <div class="uppercase text-white font-extrabold mb-6 font-roboto">
             Liens utiles
           </div>
           <!-- Title Dot -->

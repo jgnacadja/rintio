@@ -1,85 +1,156 @@
 <template>
-  <nav class="px-10 h-24 hidden md:flex">
-    <div
-      id="home"
-      class="
-        mx-auto
-        text-center
-        w-40
-        border-b-2 border-transparent
-        transition
-        duration-300
-        hover:border-secondary
-      "
-    >
-      <div class="h-full pt-10">
-        <g-link to="/">
-          <span class="font-bold uppercase font-openSans my-auto">Acceuil</span>
-        </g-link>
-      </div>
+  <div class="self-center">
+    <div class="md:hidden">
+      <button
+        class="navbar-burger flex items-center text-gray-600 p-3"
+        @click="openMenu = !openMenu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
     </div>
 
     <div
-      id="about"
-      class="
-        mx-auto
-        text-center
-        w-40
-        border-b-2 border-transparent
-        transition
-        duration-300
-        hover:border-secondary
-      "
+      v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
+      class="fixed md:hidden inset-y-0 right-0 z-50 h-80 w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
     >
-      <div class="h-full pt-10">
-        <g-link to="/a-propos">
-          <span class="font-bold uppercase font-openSans my-auto"
-            >A propos</span
+      <div class="items-center justify-center mt-6 space-y-2">
+        <button
+          class="navbar-burger flex items-center text-gray-600 p-3 ml-auto"
+          @click="openMenu = !openMenu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-        </g-link>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div
+          id="home"
+          class="mx-4 mt-2 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/">
+              <span class="font-bold uppercase font-openSans my-auto"
+                >Acceuil</span
+              >
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          id="about"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/a-propos">
+              <span class="font-bold uppercase font-openSans my-auto">
+                A propos
+              </span>
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          id="offer"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/offres">
+              <span class="font-bold uppercase font-openSans my-auto">
+                Nos offres</span>
+            </g-link>
+          </div>
+        </div>
+
+        <div
+          id="blog"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/blog">
+              <span class="font-bold uppercase font-openSans my-auto">  
+                Blog</span>
+            </g-link>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div
-      id="offer"
-      class="
-        mx-auto
-        text-center
-        w-40
-        border-b-2 border-transparent
-        transition
-        duration-300
-        hover:border-secondary
-      "
-    >
-      <div class="h-full pt-10">
-        <g-link to="/offres">
-          <span class="font-bold uppercase font-openSans my-auto"
-            >Nos offres</span
-          >
-        </g-link>
+    <nav class="px-10 h-24 hidden md:flex">
+      <div
+        id="home"
+        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+      >
+        <div class="h-full pt-10">
+          <g-link to="/">
+            <span class="font-bold uppercase font-openSans my-auto"
+              >Acceuil</span
+            >
+          </g-link>
+        </div>
       </div>
-    </div>
 
-    <div
-      id="blog"
-      class="
-        mx-auto
-        text-center
-        w-40
-        border-b-2 border-transparent
-        transition
-        duration-300
-        hover:border-secondary
-      "
-    >
-      <div class="h-full pt-10">
-        <g-link to="/blog">
-          <span class="font-bold uppercase font-openSans my-auto">Blog</span>
-        </g-link>
+      <div
+        id="about"
+        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+      >
+        <div class="h-full pt-10">
+          <g-link to="/a-propos">
+            <span class="font-bold uppercase font-openSans my-auto"
+              >A propos</span
+            >
+          </g-link>
+        </div>
       </div>
-    </div>
-  </nav>
+
+      <div
+        id="offer"
+        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+      >
+        <div class="h-full pt-10">
+          <g-link to="/offres">
+            <span class="font-bold uppercase font-openSans my-auto"
+              >Nos offres</span
+            >
+          </g-link>
+        </div>
+      </div>
+
+      <div
+        id="blog"
+        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+      >
+        <div class="h-full pt-10">
+          <g-link to="/blog">
+            <span class="font-bold uppercase font-openSans my-auto">Blog</span>
+          </g-link>
+        </div>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -88,6 +159,11 @@ export default {
     //require our external library and load it in window
     window.$ = require("jquery");
     this.setActive(this.$router.currentRoute.path.slice(1));
+  },
+  data() {
+    return {
+      openMenu: false,
+    };
   },
   methods: {
     setActive: function (route) {

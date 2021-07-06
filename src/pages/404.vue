@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="h-screen w-full flex justify-center content-center flex-wrap">
-      <p class="font-sans text-black error-text">404</p>
+      <p class="font-roboto text-black error-text">404</p>
     </div>
 
     <div
@@ -11,7 +11,7 @@
         bottom-4
         mb-6
         text-black text-center
-        font-sans
+        font-roboto
         text-xl
       "
     >

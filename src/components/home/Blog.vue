@@ -1,19 +1,18 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
     <div class="text-center">
-      <h4 class="font-extrabold text-primary uppercase">Rintio blog</h4>
+      <h3 class="mb-3 text-sm text-primary font-semibold uppercase">Nos publications </h3>
     </div>
 
     <div class="text-center">
       <h2
         class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
-        Articles<span class="text-secondary"> à la une</span>
+        Rintio<span class="text-secondary"> blog</span>
       </h2>
-      <p class="md:w-1/2 mx-auto py-4">
-        Nous créons ensemble des outils créatifs depuis plus de dix ans et nous
-        avons une connaissance approfondie des applications logicielles.
-      </p>
+      <h4 class="md:w-1/2 mx-auto py-4">
+      Articles à la une
+      </h4>
     </div>
 
     <div
@@ -264,7 +263,7 @@
       </div>
     </div>
     <div class="md:flex container mx-auto md:px-16 w-full">
-      <g-link to="/blog">
+      <g-link to="/blog" class="ml-auto">
         <button
           href="#"
           class="

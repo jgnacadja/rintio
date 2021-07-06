@@ -4,15 +4,15 @@
       <h2
         class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
-        Rintio<span class="text-secondary font-openSans"> story</span>
+        Rintio<span class="text-secondary font-roboto"> story</span>
       </h2>
-      <p class="md:w-1/2 mx-auto py-4">
+      <h4 class="md:w-1/2 mx-auto py-4">
         Vivez
         <span class="font-bold">
           notre parcours dans l'écosystème technologique</span
         >
         à travers nos actions.
-      </p>
+      </h4>
     </div>
 
     <div class="md:flex container mx-auto space-x-0 md:space-x-6 w-full">

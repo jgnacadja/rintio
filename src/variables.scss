@@ -14,12 +14,16 @@ $sucess: $green-rintio;
 // General colors
 $scheme-main: $white;
 // Typography
-$family-sans-serif: Montserrat,
-sans-serif;
-$family-secondary: Roboto,
-sans-serif;
+$family-sans-serif: Roboto, sans-serif;
+$family-secondary: Montserrat, sans-serif;
 $body-family: $family-secondary;
 
 body {
-    font-weight: 300;
+    font-weight: 300 !important;
+    font-family: $family-secondary;
+}
+
+h1,
+h2 {
+    font-family: $family-sans-serif;
 }

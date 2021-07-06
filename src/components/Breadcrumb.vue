@@ -9,7 +9,7 @@
       px-20
       py-6
       capitalize
-      font-openSans
+      font-roboto
     "
   >
     <div v-if="!article">{{ path }}</div>

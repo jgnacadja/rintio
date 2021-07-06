@@ -15,10 +15,10 @@
         "
       >
         <div class="md:w-5/12">
-          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Prestation
           </h3>
-          <h1 class="text-5xl font-extrabold text-primary font-openSans">
+          <h1 class="text-5xl font-extrabold text-primary font-roboto">
             Nous accélérons votre transformation digitale
           </h1>
           <p class="text-2xl mb-10 leading-8">
@@ -61,10 +61,10 @@
         "
       >
         <div class="md:w-5/12">
-          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Technologie
           </h3>
-          <h1 class="text-5xl font-extrabold text-primary font-openSans">
+          <h1 class="text-5xl font-extrabold text-primary font-roboto">
             DataScience et Intelligence Artificielle
           </h1>
           <p class="text-2xl mb-10 leading-8">
@@ -106,10 +106,10 @@
         "
       >
         <div class="md:w-5/12">
-          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Formation
           </h3>
-          <h1 class="text-5xl font-extrabold text-primary font-openSans">
+          <h1 class="text-5xl font-extrabold text-primary font-roboto">
             Africa TechUp Tour
           </h1>
           <p class="text-2xl mb-10 leading-8">
@@ -151,10 +151,10 @@
         "
       >
         <div class="md:w-5/12">
-          <h3 class="font-bold text-sm uppercase text-secondary font-openSans">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Story
           </h3>
-          <h1 class="text-5xl font-extrabold text-primary font-openSans">
+          <h1 class="text-5xl font-extrabold text-primary font-roboto">
             CHMP & Coraq Lab
           </h1>
           <p class="text-2xl mb-10 leading-8">
