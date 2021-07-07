@@ -20,7 +20,6 @@
         items-center
         justify-center
         mx-auto
-        hidden
         md:block
       "
     >
@@ -39,8 +38,7 @@
         />
       </div>
     </div>
-
-    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+    <div class="w-full md:w-1/2 mb-8 md:mb-0 mt-96 md:mt-0">
       <div class="mx-4 md:mx-0">
         <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
           Qui sommes-nous ?
