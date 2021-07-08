@@ -69,7 +69,7 @@
       </div>
     </div>
 
-    <div class="w-full md:w-3/4 flex-row flex-wrap flex">
+    <div class="w-full md:w-3/4 flex-row flex-wrap flex px-3">
       <div
         class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0"
         v-observe-visibility="{

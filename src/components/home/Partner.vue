@@ -53,7 +53,7 @@
         items-start
         flex-wrap
         mx-auto
-        hidden
+        hidden 
         md:flex
         space-x-4
       "
