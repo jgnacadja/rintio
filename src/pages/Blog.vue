@@ -475,9 +475,20 @@ export default {
     Seo,
     RemoveTag,
   },
-  metaInfo: {
-    title: "Blog",
+  metaInfo() {
+    return{
+      title: "Blog",
+
+      meta: [
+        {
+          key: 'keywords',
+          name: 'keywords',
+          content: this.config.keywords
+        },
+      ],
+    }
   },
+
   data() {
     return {
       path: "",
@@ -486,6 +497,13 @@ export default {
       page: 1,
       numberOfPages: 1,
       pinnedTabs: [],
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {

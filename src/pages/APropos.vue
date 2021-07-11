@@ -44,12 +44,30 @@ export default {
     Stats,
     Team,
   },
-  metaInfo: {
-    title: "A propos",
+  metaInfo() {
+    return {
+      title: "A propos",
+
+      meta: [
+        {
+          key: 'keywords',
+          name: 'keywords',
+          content: this.config.keywords
+        },
+      ],
+    }
   },
+
   data() {
     return {
       path: "",
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {
