@@ -51,8 +51,18 @@ export default {
     Blog,
     Map,
   },
-  metaInfo: {
-    title: "We involve for a better life",
+   metaInfo() {
+    return {
+      title: "We involve for a better life",
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content:
+            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+        }
+      ],
+    };
   },
 };
 </script>
