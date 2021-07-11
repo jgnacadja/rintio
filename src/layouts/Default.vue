@@ -3,7 +3,7 @@
     <transition name="fade" appear>
       <main class="main-bg">
         <div class="flex justify-between bg-white">
-          <g-link to="/"><Logo class="mx-4 md:mx-20 my-6" /></g-link>
+          <g-link class="z-50" to="/"><Logo class="mx-4 md:mx-20 my-6" /></g-link>
           <Nav />
         </div>
         <slot />

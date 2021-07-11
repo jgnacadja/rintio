@@ -14,11 +14,11 @@ import Typography from "typography";
 import VueObserveVisibility from "vue-observe-visibility";
 
 const typography = new Typography({
-  baseFontSize: '16px',
+  baseFontSize: "16px",
   baseLineHeight: 1.6,
   scaleRatio: 2.6,
-  headerFontFamily: ['Roboto', 'sans-serif'],
-  bodyFontFamily: ['Montserrat', 'sans-serif'],
+  headerFontFamily: ["Roboto", "sans-serif"],
+  bodyFontFamily: ["Montserrat", "sans-serif"],
 });
 
 const fontsCss = `
@@ -413,8 +413,7 @@ const fontsCss = `
        url('../fonts/roboto-v27-latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/roboto-v27-latin-900italic.svg#Roboto') format('svg'); /* Legacy iOS */
 }
-`
-
+`;
 
 export default function (Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
@@ -435,7 +434,7 @@ export default function (Vue, { router, head, isClient }) {
   head.style.push({
     type: "text/css",
     cssText: fontsCss,
-  })
+  });
 
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);

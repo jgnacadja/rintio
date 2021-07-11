@@ -1,18 +1,18 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
     <div class="text-center">
-      <p class="font-extrabold text-primary uppercase">Nos publications </p>
+      <h3 class="mb-3 text-sm text-primary font-semibold uppercase">Nos publications </h3>
     </div>
 
     <div class="text-center">
-      <h1
+      <h2
         class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
         Rintio<span class="text-secondary"> blog</span>
-      </h1>
-      <p class="md:w-1/2 mx-auto py-4">
+      </h2>
+      <h4 class="md:w-1/2 mx-auto py-4">
       Articles à la une
-      </p>
+      </h4>
     </div>
 
     <div

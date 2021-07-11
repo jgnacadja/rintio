@@ -42,9 +42,9 @@
 
     <div class="w-full md:w-1/2 mb-8 md:mb-0">
       <div class="mx-4 md:mx-0">
-        <h1 class="mb-3 text-sm font-semibold uppercase text-primary">
+        <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
           Qui sommes-nous ?
-        </h1>
+        </h3>
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="mx-4 md:mx-0 pt-6">
-        <h1
+        <h2
           class="
             my-3
             text-xl
@@ -69,7 +69,7 @@
           Entreprise de <br class="hidden md:block" />
           services du
           <span class="text-secondary">numérique</span>
-        </h1>
+        </h2>
 
         <p class="my-3 text-justify leading-8">
           Rintio est une entreprise de services du numérique. Nous sommes
