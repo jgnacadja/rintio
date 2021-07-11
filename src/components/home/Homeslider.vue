@@ -158,7 +158,7 @@
             CHMP & Coraq Lab
           </h1>
           <p class="text-2xl mb-10 leading-8">
-            Lancement de la plateforme e-learning Coraq Lab en partenariat avec
+            Développement des  plateformes e-learning <a href="https://coraq.formation.chmp.org/" target="blanck">Coraq Lab</a>  & <a href="https://preprod.formation.chmp.org/" target="blanck">CHMP formations</a> en partenariat avec
             CHMP et Initiative 5%, financé par Expertise France.
           </p>
           <a
