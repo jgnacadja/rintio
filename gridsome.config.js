@@ -11,7 +11,7 @@ const googleTM = require("./plugins/plugin.googleTM");
 
 module.exports = {
   siteName: "Rintio",
-  siteDescription: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+  siteDescription: "We involve for a better life",
   siteUrl: `https://rintio.com`,
   titleTemplate: "Rintio - %s",
   icon: "./src/assets/favicon.png",

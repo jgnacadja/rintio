@@ -53,7 +53,7 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$static.metadata.siteDescription,
+          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
         },
         {
           key: "keywords",
