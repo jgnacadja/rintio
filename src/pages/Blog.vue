@@ -466,6 +466,7 @@ import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
+import Keywords from "~/assets/keywords.json";
 
 export default {
   components: {
@@ -475,8 +476,22 @@ export default {
     Seo,
     RemoveTag,
   },
-  metaInfo: {
-    title: "Blog",
+  metaInfo() {
+    return {
+      title: "Blog",
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.$static.metadata.siteDescription,
+        },
+        {
+          key: "keywords",
+          name: "keywords",
+          content: Keywords.list,
+        },
+      ],
+    };
   },
   data() {
     return {
@@ -515,7 +530,7 @@ export default {
             // Check if both source and target are present in list of ids
             return ids.indexOf(a.source) !== -1 && ids.indexOf(a.target) !== -1;
           }); */
-          
+
           console.log(filtered);
           return [];
         } else {

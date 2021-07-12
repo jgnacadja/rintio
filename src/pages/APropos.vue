@@ -34,6 +34,8 @@ import Services from "~/components/about/Services.vue";
 import Experts from "~/components/about/Experts.vue";
 import Stats from "~/components/about/Stats.vue";
 import Team from "~/components/about/Team.vue";
+import Keywords from "~/assets/keywords.json";
+
 export default {
   components: {
     LazyHydrate,
@@ -44,8 +46,22 @@ export default {
     Stats,
     Team,
   },
-  metaInfo: {
-    title: "A propos",
+  metaInfo() {
+    return {
+      title: "A propos",
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.$static.metadata.siteDescription,
+        },
+        {
+          key: "keywords",
+          name: "keywords",
+          content: Keywords.list,
+        },
+      ],
+    };
   },
   data() {
     return {
