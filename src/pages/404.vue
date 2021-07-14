@@ -1,7 +1,15 @@
 <template>
   <Layout>
-    <div class="h-screen w-full flex justify-center content-center flex-wrap">
-      <p class="font-roboto text-black error-text">404</p>
+    <div class="h-screen w-full flex flex-col justify-center content-center flex-wrap">
+      <p class="w-full mx-auto lg:w-1/3 -mt-24 mb-3 text-xl font-bold text-black md:text-2xl">
+        Page non trouvée (404)
+      </p>
+      <p class="w-full mx-auto lg:w-1/3 mb-3 text-base font-medium text-gray-700">
+        La page que vous recherchez a peut-être été déplacée ou n'existe plus.
+        Retournez sur notre
+        <g-link to="/" class="underline">page d'accueil</g-link>, ou consultez
+        l'une des sections ci-dessous.
+      </p>
     </div>
 
     <div
@@ -20,6 +28,16 @@
     </div>
   </Layout>
 </template>
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: "404",
+    };
+  },
+};
+</script>
 
 <style scoped>
 .error-text {
