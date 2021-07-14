@@ -1,6 +1,6 @@
 <template>
   <div class="bg-offer md:flex w-full justify-center py-6 md:py-24">
-    <div class="w-full mx-20 flex-row flex-wrap flex space-y-6">
+    <div class="w-full md:mx-20 flex-row flex-wrap flex space-y-6">
       <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div
@@ -39,9 +39,9 @@
           </div>
         </div>
 
-        <div class="w-1/2 md:space-y-6">
-          <div class="space-y-6">
-            <div class="md:flex md:flex-row space-x-6">
+        <div class="w-full md:w-1/2 space-y-6 md:space-y-6 space-x-0 md:space-x-0">
+          <div>
+            <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
                 class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring"
               >
@@ -99,7 +99,7 @@
           </div>
 
           <div class="space-y-6">
-            <div class="md:flex md:flex-row space-x-6">
+            <div class="md:flex md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0">
               <div
                 class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
@@ -151,7 +151,7 @@
       <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
         <div class="md:space-y-6">
           <div class="space-y-6">
-            <div class="md:flex md:flex-row space-x-6">
+            <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
                 class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
@@ -245,9 +245,9 @@
       </div>
 
       <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
-        <div class="md:space-y-6">
-          <div class="space-y-6">
-            <div class="md:flex md:flex-row space-x-6">
+        <div>
+          <div>
+            <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
                 class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
@@ -316,7 +316,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-council invisible"
+                class="hidden md:block shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-council invisible"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>

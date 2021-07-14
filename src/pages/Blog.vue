@@ -16,7 +16,7 @@
         mt-24
       "
     >
-      <div id="home" class="container px-4 w-3/4">
+      <div id="home" class="container px-4 w-full md:w-3/4">
         <div
           v-if="searchResults.length > 0 && search !== null"
           class="space-y-6"
@@ -209,7 +209,7 @@
         </div>
       </div>
 
-      <div id="home" class="container px-4 w-1/4">
+      <div id="home" class="container px-4 w-full md:w-1/4">
         <div class="md:mx-0 pt-6">
           <h1 class="text-lg md:text-xl font-extrabold mb-0">Recherche</h1>
           <div class="mb-4 -mt-3">

@@ -9,8 +9,8 @@
           <span class="text-secondary"> d’interventions</span>
         </h1>
       </div>
-      <div class="hidden md:block flex-row flex-wrap space-y-10 mx-4 md:mx-0 pt-6">
-        <div class="flex space-x-10 h-96">
+      <div class="md:block flex-row flex-wrap space-y-10 md:space-y-10 mx-4 md:mx-0 pt-6">
+        <div class="md:flex md:space-x-10 space-y-6 md:space-y-0 md:h-96">
           <div class="bg-primary md:w-1/3 text-center py-4 px-6">
             <Data class="w-20 mx-auto" />
             <h2 class="py-2 text-white">Big data & Data science</h2>
@@ -60,7 +60,7 @@
             </p>
           </div>
         </div>
-        <div class="flex space-x-10 h-96">
+        <div class="md:flex md:space-x-10 space-y-6 md:space-y-0 md:h-96">
           <div
             class="bg-white md:w-1/3 text-center py-4 px-6 cursor-pointer group hover:bg-primary"
             @mouseover="ApiHover = true"
