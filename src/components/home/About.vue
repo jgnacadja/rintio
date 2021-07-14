@@ -67,7 +67,8 @@
           Entreprise de <br class="hidden md:block" />
           services du
           <span class="text-secondary">numérique</span>
-        </h2 >
+        </h2>git fetch --all
+
 
         <p class="my-3 font-light text-justify leading-8">
           Rintio est une entreprise de services du numérique. Nous sommes

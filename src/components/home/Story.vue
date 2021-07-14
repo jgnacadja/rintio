@@ -2,17 +2,17 @@
   <div class="items-center w-full justify-center py-6 md:py-24 md:px-20">
     <div class="text-center">
       <h2
-        class="my-3 text-2xl md:text-5xl font-extrabold text-primary"
+        class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
         Rintio<span class="text-secondary font-roboto"> story</span>
       </h2>
-      <p class="md:w-1/2 font-light mx-auto py-4">
+      <h4 class="md:w-1/2 mx-auto py-4">
         Vivez
         <span class="font-bold">
           notre parcours dans l'écosystème technologique</span
         >
         à travers nos actions.
-      </p>
+      </h4>
     </div>
 
     <div class="md:flex container mx-auto space-x-0 md:space-x-6 w-full">

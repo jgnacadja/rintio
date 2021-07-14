@@ -1,12 +1,12 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
-    <h3 class="text-center">
-      <p class="font-extrabold text-primary uppercase text-sm">Nos publications </p>
-    </h3>
+    <div class="text-center">
+      <h3 class="mb-3 text-sm text-primary font-semibold uppercase">Nos publications </h3>
+    </div>
 
     <div class="text-center">
       <h2
-        class="my-3 text-2xl md:text-5xl font-extrabold text-primary"
+        class="my-3 text-xl md:text-5xl font-extrabold text-primary"
       >
         Rintio<span class="text-secondary"> blog</span>
       </h2>

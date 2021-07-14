@@ -17,8 +17,8 @@
           >
         </p>
       </div>
-      <div class="hidden md:block mx-4 md:mx-0 pt-6 px-24 space-y-10">
-        <div class="flex space-x-10">
+      <div class="md:block mx-4 md:mx-0 pt-6 md:px-24 space-y-10 md:space-y-0">
+        <div class="md:flex md:space-x-10">
           <div class="bg-white md:w-1/3 py-4">
             <Expert class="mx-auto w-72" />
             <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Mike</h2>
@@ -138,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="flex space-x-10">
+        <div class="md:flex md:space-x-10">
           <div class="bg-white md:w-1/3 py-4">
             <Expert class="mx-auto w-72" />
             <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Talla</h2>
@@ -261,7 +261,7 @@
             </div>
           </div>
         </div>
-        <div class="flex space-x-10">
+        <div class="md:flex md:space-x-10">
           <div class="bg-white md:w-1/3 py-4">
             <Expert class="mx-auto w-72" />
             <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Michel</h2>
@@ -345,7 +345,8 @@
               </a>
             </div>
           </div>
-          <div class="bg-white md:w-1/3 py-4 invisible"></div>
+          <div class="hidden md:block bg-white md:w-1/3 py-4 invisible">
+          </div>
         </div>
       </div>
     </div>

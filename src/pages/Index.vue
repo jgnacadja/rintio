@@ -39,6 +39,7 @@ import Story from "~/components/home/Story.vue";
 import Partner from "~/components/home/Partner.vue";
 import Blog from "~/components/home/Blog.vue";
 import Map from "~/components/home/Map.vue";
+import Keywords from "~/assets/keywords.json";
 
 export default {
   components: {
@@ -51,8 +52,22 @@ export default {
     Blog,
     Map,
   },
-  metaInfo: {
-    title: "We involve for a better life",
+  metaInfo() {
+    return {
+      title: "We involve for a better life",
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+        },
+        {
+          key: "keywords",
+          name: "keywords",
+          content: Keywords.list,
+        },
+      ],
+    };
   },
 };
 </script>

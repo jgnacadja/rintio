@@ -16,7 +16,7 @@
         mt-24
       "
     >
-      <div id="home" class="container px-4">
+      <div id="home" class="container px-4 w-full md:w-3/4">
         <div
           v-if="searchResults.length > 0 && search !== null"
           class="space-y-6"
@@ -209,7 +209,7 @@
         </div>
       </div>
 
-      <div id="home" class="container px-4 md:w-1/4 w-full">
+      <div id="home" class="container px-4 w-full md:w-1/4">
         <div class="md:mx-0 pt-6">
           <h1 class="text-lg md:text-xl font-extrabold mb-0">Recherche</h1>
           <div class="mb-4 -mt-3">
@@ -466,6 +466,7 @@ import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
+import Keywords from "~/assets/keywords.json";
 
 export default {
   components: {
@@ -476,17 +477,21 @@ export default {
     RemoveTag,
   },
   metaInfo() {
-    return{
+    return {
       title: "Blog",
-
       meta: [
         {
-          key: 'keywords',
-          name: 'keywords',
-          content: this.config.keywords
+          key: "description",
+          name: "description",
+          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+        },
+        {
+          key: "keywords",
+          name: "keywords",
+          content: Keywords.list,
         },
       ],
-    }
+    };
   },
 
   data() {
@@ -533,7 +538,7 @@ export default {
             // Check if both source and target are present in list of ids
             return ids.indexOf(a.source) !== -1 && ids.indexOf(a.target) !== -1;
           }); */
-          
+
           console.log(filtered);
           return [];
         } else {
