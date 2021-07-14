@@ -28,12 +28,15 @@
           class="absolute -top-12 left-0"
           src="~/assets/images/home/about/about.png"
           alt="Workplace"
+          Title="About"
           width="600"
         />
 
         <g-image
           class="absolute -top-12 p-20"
           src="~/assets/images/home/about/team.png"
+          alt="team"
+          title="team"
           width="600"
         />
       </div>
