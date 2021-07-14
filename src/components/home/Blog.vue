@@ -38,6 +38,7 @@
         <g-link :to="edge.node.path">
           <g-image
             alt="iot"
+            title="scrum"
             :src="edge.node.coverImage"
             class="object-cover w-full h-64 mb-0"
           />
@@ -94,7 +95,8 @@
           :key="edge.node.id"
       >
         <g-image
-          alt="iot"
+          alt="connect"
+          title="Connect"
           src="~/assets/images/home/blog/connect.png"
           class="object-cover w-full h-64 mb-0"
         />
@@ -151,6 +153,7 @@
             <g-link :to="edge.node.path">
               <g-image
                 alt="iot"
+                title="scrum"
                 :src="edge.node.coverImage"
                 class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
               />

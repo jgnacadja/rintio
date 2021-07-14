@@ -45,6 +45,9 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    after-appear=""
+                    alt="Cotonou"
+                    title="Cotonou localisation"
                   >
                     <path
                       stroke-linecap="round"
@@ -93,6 +96,8 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    alt="Paris"
+                    title="Paris localisation"
                   >
                     <path
                       stroke-linecap="round"
@@ -136,6 +141,8 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  alt="Abidjan"
+                  title="Abidjan localisation"
                 >
                   <path
                     stroke-linecap="round"

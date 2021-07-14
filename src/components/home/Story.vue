@@ -21,7 +21,8 @@
         class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
       >
         <g-image
-          alt="iot"
+          alt="coraq"
+          title="Coraq Chmp"
           src="~/assets/images/home/story/coraq.png"
           class="object-cover w-full mb-0"
         />
@@ -57,7 +58,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="Atut"
+              title="Africa TechUp Tour"
               src="~/assets/images/home/story/atut.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -86,7 +88,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="atut2020"
+              title="Africa TechUp Tour 2020"
               src="~/assets/images/home/story/atut2020.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -118,7 +121,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="sgmaroc"
+              title="Team sgmaroc"
               src="~/assets/images/home/story/sgmaroc.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -147,7 +151,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="idermato"
+              title="IA et Dermatologie"
               src="~/assets/images/home/story/idermato.png"
               class="object-cover w-full h-52 mb-0"
             />

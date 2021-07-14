@@ -53,12 +53,12 @@
         items-start
         flex-wrap
         mx-auto
-        hidden 
+        hidden
         md:flex
         space-x-4
       "
     >
-      <div class="1/3 space-y-4">
+      <div class="1/3 space-y-4 ">
         <div
           class="rounded-3xl p-2 m-2 bg-white text-gray-100 w-72 h-72 flex items-center justify-center text-xl font-bold shadow-xl"
         >
