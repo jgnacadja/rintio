@@ -1,18 +1,18 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
-    <div class="text-center">
-      <p class="font-extrabold text-primary uppercase">Nos publications </p>
-    </div>
+    <h3 class="text-center">
+      <p class="font-extrabold text-primary uppercase text-sm">Nos publications </p>
+    </h3>
 
     <div class="text-center">
-      <h1
-        class="my-3 text-xl md:text-5xl font-extrabold text-primary"
+      <h2
+        class="my-3 text-2xl md:text-5xl font-extrabold text-primary"
       >
         Rintio<span class="text-secondary"> blog</span>
-      </h1>
-      <p class="md:w-1/2 mx-auto py-4">
+      </h2>
+      <h4 class="md:w-1/2 mx-auto py-4">
       Articles à la une
-      </p>
+      </h4>
     </div>
 
     <div
@@ -59,16 +59,16 @@
           >
             {{ edge.node.categories.title }}
           </span>
-          <p
+          <h5
             class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4"
           >
             {{ edge.node.title }}
-          </p>
+          </h5>
           <p class="text-primary text-xs space-x-8 mx-4">
             <span>{{ edge.node.date | FormatDate}}</span>
             <span>Publié par : xxxxxxxxxxxxx</span>
           </p>
-          <p class="text-gray-600 mb-4 mx-4">
+          <p class="text-gray-600 font-light mb-4 mx-4">
             {{ edge.node.metaDescription }}
           </p>
           <div class="flex space-x-8 mx-4 mb-1"></div>
@@ -240,12 +240,13 @@
               <p class="text-primary text-xs mt-4 space-x-8">
                 <span>{{ edge.node.date | FormatDate }}</span>
               </p>
-              <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
+              <h5 class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
                 {{ edge.node.title }}
-              </p>
+              </h5>
               <p
                 class="
                   block
+                  font-light
                   p-2
                   pl-0
                   pt-1

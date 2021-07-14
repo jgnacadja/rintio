@@ -1,18 +1,18 @@
   <template>
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
-    <div class="mx-4 md:mx-0 md:text-center mb-4 md:mb-10">
-      <h1 class="text-xl md:text-5xl font-extrabold text-primary capitalize">
+    <div class="mx-4 md:mx-0 text-center mb-4 md:mb-10">
+      <h2 class="text-2xl md:text-5xl font-extrabold text-primary capitalize">
         Nos <span class="text-secondary lowercase">implantations</span>
-      </h1>
+      </h2>
     </div>
     <div class="text-center">
-      <p class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto">
+      <p class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto font-extrabold">
         Notre présence dans le monde.
       </p>
     </div>
 
-    <div class="hidden md:flex justify-center items-center w-3/4 mx-auto">
-      <div class="py-4 mx-4 w-full md:w-1/3">
+    <div class="md:flex justify-center items-center w-full md:w-3/4 md:mx-auto ">
+      <div class="py-4 md:mx-2 w-full md:w-1/3">
         <a
           href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
           target="_blank"
@@ -60,7 +60,7 @@
           </div>
         </a>
       </div>
-      <div class="py-4 mx-4 w-full md:w-1/3">
+      <div class="py-4 md:mx-2 w-full md:w-1/3">
         <a
           href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
           target="_blank"
@@ -108,7 +108,7 @@
           </div>
         </a>
       </div>
-      <div class="py-4 mx-4 w-full md:w-1/3">
+      <div class="py-4 md:mx-2 w-full md:w-1/3">
         <div
           class="
             shadow-lg

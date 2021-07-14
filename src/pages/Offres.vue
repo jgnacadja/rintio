@@ -35,12 +35,29 @@ export default {
     Breadcrumb,
     Offers,
   },
-  metaInfo: {
-    title: "Nos offres",
+  metaInfo() {
+    return{
+      title: "Nos offres",
+
+      meta: [
+        {
+          key: 'keywords',
+          name: 'keywords',
+          content: this.config.keywords
+        },
+      ],
+    }
   },
   data() {
     return {
       path: "",
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {

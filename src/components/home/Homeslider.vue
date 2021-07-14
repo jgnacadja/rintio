@@ -1,5 +1,5 @@
 <template>
-  <div class="sliderAx md:text-left text-center">
+  <div class="sliderAx text-center md:text-left">
     <div id="slider-1">
       <div
         class="
@@ -15,13 +15,13 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-roboto">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Prestation
-          </p>
-          <p class="md:text-5xl text-3xl font-extrabold text-primary font-roboto">
+          </h3>
+          <h1 class=" text-2xl md:text-5xl font-extrabold text-primary font-roboto">
             Nous accélérons votre transformation digitale
-          </p>
-          <p class="md:text-2xl text-xl mb-10 leading-8">
+          </h1>
+          <p class="text-1xl font-light md:text-2xl mb-10 leading-8">
             Rintio vous accompagne dans la mise en place de vos solutions
             digitales en mettant à votre disposition une équipe hautement
             qualifiée.
@@ -51,7 +51,7 @@
         class="
           bg-cover bg-center
           height
-          text-blacks
+          text-black
           py-2
           md:py-32
           px-2
@@ -61,13 +61,13 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-roboto">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Technologie
-          </p>
-          <p class="md:text-5xl text-3xl font-extrabold text-primary font-roboto">
+          </h3>
+          <h1 class="text-2xl md:text-5xl font-extrabold text-primary font-roboto">
             DataScience et Intelligence Artificielle
-          </p>
-          <p class="md:text-2xl text-xl mb-10 leading-8">
+          </h1>
+          <p class="text-1xl font-light md:text-2xl mb-10 leading-8">
             Restez leader en donnant de la voix à vos données grâce à nos
             solutions de data visualisation et nos modèles prédictions.
           </p>
@@ -106,13 +106,13 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-roboto">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Formation
-          </p>
-          <p class="md:text-5xl text-3xl font-extrabold text-primary font-roboto">
+          </h3>
+          <h1 class="text-2xl md:text-5xl font-extrabold text-primary font-roboto">
             Africa TechUp Tour
-          </p>
-          <p class="md:text-2xl text-xl mb-10 leading-8">
+          </h1>
+          <p class="text-1xl font-light md:text-2xl mb-10 leading-8">
             Parcourez le monde avec nous dans notre quête continue de partage de
             connaissance.
           </p>
@@ -151,13 +151,13 @@
         "
       >
         <div class="md:w-5/12">
-          <p class="font-bold text-sm uppercase text-secondary font-roboto">
+          <h3 class="font-bold text-sm uppercase text-secondary font-roboto">
             Rintio Story
-          </p>
-          <p class="md:text-5xl text-3xl font-extrabold text-primary font-roboto">
+          </h3>
+          <h1 class="text-2xl md:text-5xl font-extrabold text-primary font-roboto">
             CHMP & Coraq Lab
-          </p>
-          <p class="md:text-2xl text-xl mb-10 leading-8">
+          </h1>
+          <p class="text-1xl font-light md:text-2xl mb-10 leading-8">
             Lancement de la plateforme e-learning Coraq Lab en partenariat avec
             CHMP et Initiative 5%, financé par Expertise France.
           </p>

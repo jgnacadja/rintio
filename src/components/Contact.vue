@@ -5,9 +5,9 @@
         <div class="mx-auto">
           <div class="max-w-lg mx-auto my-10">
             <div class="mx-4 md:mx-0 pt-6">
-              <h1 class="my-3 text-sm font-semibold text-primary uppercase">
+              <h3 class="my-3 text-sm font-semibold text-primary uppercase">
                 Contactez-nous
-              </h1>
+              </h3>
               <!-- Title Dot -->
               <div class="-mt-3">
                 <span
@@ -23,10 +23,10 @@
             </div>
 
             <div class="mx-4 md:mx-0 pt-6">
-              <h1
+              <h2
                 class="
                   my-3
-                  text-xl
+                  text-2xl
                   md:text-5xl
                   font-extrabold
                   text-primary
@@ -34,7 +34,7 @@
               >
                 Besoin d'échanger sur
                 <span class="text-secondary">votre besoin ?</span>
-              </h1>
+              </h2>
 
               Toutes nos équipes au Bénin et et à l'international se tiennent à
               votre disposition !
@@ -134,9 +134,9 @@
             "
           >
             <div class="mx-4 md:m-7">
-              <h1 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
+              <h2 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
                 Envoyer nous un message
-              </h1>
+              </h2>
             </div>
             <div class="mx-4 md:m-7">
               <form id="form" name="form" @submit.prevent="sendEmail">

@@ -2,8 +2,8 @@
   <div>
     <transition name="fade" appear>
       <main class="main-bg">
-        <div class="flex justify-between bg-white">
-          <g-link to="/"><Logo class="mx-4 md:mx-20 my-6" /></g-link>
+        <div class="flex justify-center md:justify-between bg-white">
+          <g-link to="/"><Logo class="mx-14 md:mx-20 my-6 px-10 md:px-0" /></g-link>
           <Nav />
         </div>
         <slot />
