@@ -11,6 +11,8 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          alt="Logo Rintio"
+          title="Logo Rintio"
         >
           <path
             stroke-linecap="round"

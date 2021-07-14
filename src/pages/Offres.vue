@@ -14,7 +14,7 @@
         <p class="md:w-2/3 mx-auto py-4 md:px-0">
           Rintio est une entreprise de services du numérique. Nous sommes
           spécialisées dans le développement et l’intégration de solutions
-          informatiques..
+          informatiques.
         </p>
       </div>
     </div>

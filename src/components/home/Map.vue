@@ -1,7 +1,7 @@
   <template>
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
     <div class="mx-4 md:mx-0 md:text-center mb-4 md:mb-10">
-      <h1 class="text-xl md:text-5xl font-extrabold text-primary capitalize">
+      <h1 class="text-xl text-center md:text-5xl font-extrabold text-primary capitalize">
         Nos <span class="text-secondary lowercase">implantations</span>
       </h1>
     </div>
@@ -45,6 +45,9 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    @after-appear=""
+                    alt="Cotonou"
+                    title="Cotonou localisation"
                   >
                     <path
                       stroke-linecap="round"
@@ -93,6 +96,8 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    alt="Paris"
+                    title="Paris localisation"
                   >
                     <path
                       stroke-linecap="round"
@@ -136,6 +141,8 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  alt="Abidjan"
+                  title="Abidjan localisation"
                 >
                   <path
                     stroke-linecap="round"

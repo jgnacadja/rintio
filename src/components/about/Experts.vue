@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="bg-white md:w-1/3 py-4">
-          <Expert class="mx-auto w-72" />
+          <Expert class="mx-auto w-72" alt="expert" title="Expert" />
           <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
             Jacques <span class="font-bold uppercase">Gnacadja</span>
           </h2>
