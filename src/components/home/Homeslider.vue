@@ -1,5 +1,5 @@
 <template>
-  <div class="sliderAx text-center md:text-left">
+  <div class="sliderAx text-left">
     <div id="slider-1">
       <div
         class="
