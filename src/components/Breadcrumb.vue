@@ -6,7 +6,7 @@
       flex
       justify-between
       text-gray-800
-      px-14 md:px-20
+      px-8 md:px-20
       py-6
       capitalize
       font-roboto
