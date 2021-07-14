@@ -41,7 +41,7 @@
             :src="edge.node.coverImage"
             class="object-cover w-full h-64 mb-0"
           />
-          <span
+          <!-- <span
             class="
               relative
               text-white
@@ -58,7 +58,7 @@
             "
           >
             {{ edge.node.categories.title }}
-          </span>
+          </span> -->
           <h5
             class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4"
           >
@@ -66,75 +66,13 @@
           </h5>
           <p class="text-primary text-xs space-x-8 mx-4">
             <span>{{ edge.node.date | FormatDate}}</span>
-            <span>Publié par : xxxxxxxxxxxxx</span>
+            <span>Publié par : Rintio</span>
           </p>
-          <p class="text-gray-600 font-light mb-4 mx-4">
+          <p class="text-gray-600 text-justify font-light mb-4 mx-4">
             {{ edge.node.metaDescription }}
           </p>
           <div class="flex space-x-8 mx-4 mb-1"></div>
         </g-link>
-      </div>
-
-      <!-- main post 1-->
-
-      <div
-        class="
-          mb-4
-          lg:mb-0
-          p-4
-          lg:p-0
-          w-full
-          md:w-1/2
-          relative
-          block
-          bg-white
-          md:hidden
-        "
-      >
-        <g-image
-          alt="iot"
-          src="~/assets/images/home/blog/ia.png"
-          class="object-cover w-full h-64 mb-0"
-        />
-        <span
-          class="
-            relative
-            text-white
-            bg-secondary
-            p-4
-            text-sm
-            hidden
-            md:block
-            ml-4
-            -mt-7
-            capitalize
-            w-24
-            text-center
-          "
-        >
-          Big data
-        </span>
-        <p class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4">
-          Article 1
-        </p>
-        <p class="text-primary text-xs space-x-8 mx-4">
-          <span>10 Jan 2020</span>
-        </p>
-        <p class="text-gray-600 mb-4 mx-4">
-          Lorem Ipsum est simplement du faux texte employé dans la composition
-          et la mise en page avant impression...
-        </p>
-        <div class="flex space-x-8 mx-4">
-          <p class="flex space-x-2">
-            <Like /> <span class="text-xs">24k</span>
-          </p>
-          <p class="flex space-x-2">
-            <Comment /> <span class="text-xs">247</span>
-          </p>
-          <p class="flex space-x-2">
-            <Share /> <span class="text-xs">24</span>
-          </p>
-        </div>
       </div>
 
       <!-- main post 2 -->
@@ -152,6 +90,8 @@
           bg-white
           md:hidden
         "
+        v-for="edge in $static.otherPost.edges"
+          :key="edge.node.id"
       >
         <g-image
           alt="iot"
@@ -174,20 +114,19 @@
             text-center
           "
         >
-          Big data
+         {{ edge.node.categories.title }}
         </span>
         <p class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4">
-          Article 1
+         {{ edge.node.title }}
         </p>
         <p class="text-primary text-xs space-x-8 mx-4">
-          <span>10 Jan 2020</span>
-          <span>Publié par : xxxxxxxxxxxxx</span>
+          <span>{{ edge.node.date | FormatDate }}</span>
+          <span>Publié par : Rintio</span>
         </p>
-        <p class="text-gray-600 mb-4 mx-4">
-          Lorem Ipsum est simplement du faux texte employé dans la composition
-          et la mise en page avant impression...
+        <p class="text-gray-600 text-justify mb-4 mx-4">
+          {{ edge.node.metaDescription }}
         </p>
-        <div class="flex space-x-8 mx-4">
+        <!-- <div class="flex space-x-8 mx-4">
           <p class="flex space-x-2">
             <Like /> <span class="text-xs">24k</span>
           </p>
@@ -197,7 +136,7 @@
           <p class="flex space-x-2">
             <Share /> <span class="text-xs">24</span>
           </p>
-        </div>
+        </div> -->
       </div>
 
       <!-- sub-main posts -->
@@ -215,34 +154,17 @@
                 :src="edge.node.coverImage"
                 class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
               />
-              <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-24
-                  text-center
-                "
-              >
-                {{ edge.node.categories.title }}
-              </span>
             </g-link>
           </div>
           <div class="bg-white px-4 w-3/5 h-full">
             <g-link :to="edge.node.path">
-              <p class="text-primary text-xs mt-4 space-x-8">
-                <span>{{ edge.node.date | FormatDate }}</span>
-              </p>
               <h5 class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
                 {{ edge.node.title }}
               </h5>
+              <p class="text-primary text-xs mt-4 space-x-8">
+                <span>{{ edge.node.date | FormatDate }}</span>
+                <span>Publié par : Rintio</span>
+              </p>
               <p
                 class="
                   block
@@ -250,6 +172,7 @@
                   p-2
                   pl-0
                   pt-1
+                  text-justify
                   text-sm text-gray-600
                   overflow-clip overflow-hidden
                   ...
