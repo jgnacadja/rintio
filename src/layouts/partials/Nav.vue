@@ -96,6 +96,17 @@
             </g-link>
           </div>
         </div>
+        <div
+          id="blog1"
+          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        >
+          <div class="h-full pt-4">
+            <g-link to="/blog-vue">
+              <span class="font-bold uppercase font-openSans my-auto">  
+                Blog1</span>
+            </g-link>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -146,6 +157,16 @@
         <div class="h-full pt-10">
           <g-link to="/blog">
             <span class="font-bold uppercase font-openSans my-auto">Blog</span>
+          </g-link>
+        </div>
+      </div>
+      <div
+        id="blog1"
+        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+      >
+        <div class="h-full pt-10">
+          <g-link to="/blog-vue">
+            <span class="font-bold uppercase font-openSans my-auto">Blog1</span>
           </g-link>
         </div>
       </div>
