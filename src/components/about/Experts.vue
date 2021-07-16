@@ -10,16 +10,15 @@
         </h1>
 
         <p class="my-3 md:w-1/2 mx-auto">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le
+          Rintio a été fondée en 2017 par une équipe d’ingénieurs dans le souci de soulager les entreprises dans l’analyse et le traitement de données volumineuses, nous sommes spécialisés dans le
           <span class="font-bold"
-            >développement et l’intégration de solutions informatiques..</span
+            > domaine des technologies et services de l’information.</span
           >
         </p>
       </div>
       <div class="md:flex md:space-x-10 mx-4 md:mx-0 pt-6 md:px-24 space-y-10 md:space-y-0">
         <div class="bg-white md:w-1/3 py-4">
-          <Expert class="mx-auto w-72" />
+          <Michel class="mx-auto w-72" />
           <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
             Michel <span class="font-bold uppercase">Idjinou</span>
           </h2>
@@ -149,15 +148,21 @@
         </div>
       </div>
     </div>
+    
+
   </div>
+  
 </template>
 
 <script>
 import Expert from "~/assets/images/icons/expert.svg";
+import Michel from "~/assets/images/icons/expert.svg";
+
 
 export default {
   components: {
     Expert,
+    Michel,
   },
 };
 </script>

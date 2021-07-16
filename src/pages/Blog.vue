@@ -389,6 +389,16 @@
         </div>
       </div>
     </div>
+    
+ <LazyHydrate when-visible>
+      <Event  />
+    </LazyHydrate> 
+
+    <LazyHydrate when-visible>
+      <Post  />
+    </LazyHydrate>
+  </Layout>
+</template>
   </Layout>
 </template>
 
@@ -467,6 +477,8 @@ import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
 import Keywords from "~/assets/keywords.json";
+import Event from "~/components/blog/Event.vue";
+import Post from "~/components/blog/Post.vue";
 
 export default {
   components: {
@@ -475,6 +487,8 @@ export default {
     Pager,
     Seo,
     RemoveTag,
+    Event,
+    Post
   },
   metaInfo() {
     return {
