@@ -31,7 +31,7 @@
           RINTIO renforce sa stratégie d’appui des formations en ligne en
           mettant en production la plateforme E-learrning Coraq Lab
         </h3>
-        <p class="text-gray-600 font-light mb-4 mx-4 text-base">
+        <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
           Dans la vision d’ apporter des solutions innovantes aux Entreprises et
           Institutions en communiant les technologies du numérique aux grands
           enjeux de nos sociétés, RINTIO vient de mettre en production la
@@ -67,7 +67,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               Africa TechUp Tour
             </h3>
-            <p class="text-gray-600 font-light mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               Rintio, co-organisateur du Africa TechUp Tour apporte toutes son
               expertise en Data et IA dans la formation de la jeunesse.
             </p>
@@ -97,7 +97,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               Africa TechUp Tour
             </h3>
-            <p class="text-gray-600 font-light mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               La campagne 2020, déjà lancée. Etudiants, mathématiciens,
               Statisticiens, Inscrivez vous
               <g-link href="#" class="underline text-blue-600">ici</g-link>.
@@ -130,7 +130,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               SG Maroc imagine la banque du future avec l’IA
             </h3>
-            <p class="text-gray-600 font-light mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               Pendant une semaine, les experts RINTIO ont animé des ateliers de
               ... du Maroc.
             </p>
@@ -160,7 +160,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               iDermato : IA et Dermatologie
             </h3>
-            <p class="text-gray-600 font-light mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               Un projet Pan-Africain inédit. L’IA au service des dermatologues
               et généralistes pour le diagnostique d’affection cutanée sur peaux
               noires.
