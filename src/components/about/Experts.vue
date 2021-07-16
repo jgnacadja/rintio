@@ -28,7 +28,7 @@
             c.e.o
           </h3>
           <p class="mb-0 px-6">• PhD Informatique</p>
-          <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
+          <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer </p>
           <div class="flex py-4 px-6">
             <a
               class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
