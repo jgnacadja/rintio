@@ -100,7 +100,7 @@
             <p class="text-gray-600 font-light mb-4 mx-4 text-base">
               La campagne 2020, déjà lancée. Etudiants, mathématiciens,
               Statisticiens, Inscrivez vous
-              <g-link href="#" class="underline text-blue-600">ici</g-link>.
+              <g-link href="http://africatechuptour.com/" class="underline text-blue-600">ici</g-link>.
             </p>
           </div>
         </div>
