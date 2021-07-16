@@ -11,6 +11,8 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          alt="Logo Rintio"
+          title="Logo Rintio"
         >
           <path
             stroke-linecap="round"
@@ -97,11 +99,11 @@
           </div>
         </div>
         <div
-          id="blog1"
+          id="blog_1"
           class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
         >
           <div class="h-full pt-4">
-            <g-link to="/blog-vue">
+            <g-link to="/Blog-vue">
               <span class="font-bold uppercase font-openSans my-auto">  
                 Blog1</span>
             </g-link>

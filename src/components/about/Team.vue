@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="p-4 lg:w-1/2">
+            <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
           <Expert class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" />
           <div class="flex-grow sm:pl-8">
@@ -71,9 +71,8 @@
             <p class="mb-4">• PhD Informatique.</p>
             <p class="mb-4">• Data Engineer</p>
             <p class="mb-4">• +5 Ans d'Expériences : Ysance, Inria</p>
-
             <span class="inline-flex">
-            <a
+              <a
                 class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                 href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
                 target="_blank"
@@ -104,8 +103,7 @@
             </span>
           </div>
         </div>
-      </div>
-      <div class="p-4 lg:w-1/2">
+      </div>      <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
           <Expert class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" />
           <div class="flex-grow sm:pl-8">

@@ -12,7 +12,7 @@
         </div>
 
         <!-- Col-2 -->
-        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
+        <div class="-my-5 p-8 w-full sm:w-4/12 md:w-3/12 m-5">
           <!-- Col Title -->
           <div class="uppercase text-white font-extrabold mb-6 font-roboto">
             Produits
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Col-3 -->
-        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
+        <div class="-my-5 p-8 w-full sm:w-4/12 md:w-3/12 m-5">
           <!-- Col Title -->
           <div class="uppercase text-white font-extrabold mb-6 font-roboto">
             Liens utiles
@@ -149,10 +149,10 @@
         </div>
 
         <!-- Col-4 -->
-        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
+        <div class="-my-5 p-8 w-full sm:w-4/12 md:w-3/12 m-5">
           <div class="h-auto">
             <div class="text-red-light mb-3">Newsletter</div>
-            <div class="mt-4 flex">
+            <div class=" responsive-component flex mt-4" v-res>
               <input
                 type="text"
                 class="
@@ -182,7 +182,7 @@
                   focus:outline-none
                 "
               >
-                Je m'abonne
+               Je m'abonne
               </button>
             </div>
             <p class="mt-6 mb-4">Suivez nous sur :</p>

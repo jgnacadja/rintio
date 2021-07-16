@@ -21,7 +21,8 @@
         class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
       >
         <g-image
-          alt="iot"
+          alt="coraq"
+          title="Coraq Chmp"
           src="~/assets/images/home/story/coraq.png"
           class="object-cover w-full mb-0"
         />
@@ -30,7 +31,7 @@
           RINTIO renforce sa stratégie d’appui des formations en ligne en
           mettant en production la plateforme E-learrning Coraq Lab
         </h3>
-        <p class="text-gray-600 mb-4 mx-4 text-base">
+        <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
           Dans la vision d’ apporter des solutions innovantes aux Entreprises et
           Institutions en communiant les technologies du numérique aux grands
           enjeux de nos sociétés, RINTIO vient de mettre en production la
@@ -57,7 +58,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="Atut"
+              title="Africa TechUp Tour"
               src="~/assets/images/home/story/atut.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -65,7 +67,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               Africa TechUp Tour
             </h3>
-            <p class="text-gray-600 mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               Rintio, co-organisateur du Africa TechUp Tour apporte toutes son
               expertise en Data et IA dans la formation de la jeunesse.
             </p>
@@ -86,7 +88,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="atut2020"
+              title="Africa TechUp Tour 2020"
               src="~/assets/images/home/story/atut2020.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -94,10 +97,10 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               Africa TechUp Tour
             </h3>
-            <p class="text-gray-600 mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               La campagne 2020, déjà lancée. Etudiants, mathématiciens,
               Statisticiens, Inscrivez vous
-              <g-link href="#" class="underline text-blue-600">ici</g-link>.
+              <g-link href="http://africatechuptour.com/" class="underline text-blue-600">ici</g-link>.
             </p>
           </div>
         </div>
@@ -118,7 +121,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="sgmaroc"
+              title="Team sgmaroc"
               src="~/assets/images/home/story/sgmaroc.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -126,7 +130,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               SG Maroc imagine la banque du future avec l’IA
             </h3>
-            <p class="text-gray-600 mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               Pendant une semaine, les experts RINTIO ont animé des ateliers de
               ... du Maroc.
             </p>
@@ -147,7 +151,8 @@
             "
           >
             <g-image
-              alt="iot"
+              alt="idermato"
+              title="IA et Dermatologie"
               src="~/assets/images/home/story/idermato.png"
               class="object-cover w-full h-52 mb-0"
             />
@@ -155,7 +160,7 @@
             <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
               iDermato : IA et Dermatologie
             </h3>
-            <p class="text-gray-600 mb-4 mx-4 text-base">
+            <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
               Un projet Pan-Africain inédit. L’IA au service des dermatologues
               et généralistes pour le diagnostique d’affection cutanée sur peaux
               noires.

@@ -26,7 +26,7 @@
               <h2
                 class="
                   my-3
-                  text-xl
+                  text-2xl
                   md:text-5xl
                   font-extrabold
                   text-primary
@@ -134,9 +134,9 @@
             "
           >
             <div class="mx-4 md:m-7">
-              <h3 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
+              <h2 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
                 Envoyer nous un message
-              </h3>
+              </h2>
             </div>
             <div class="mx-4 md:m-7">
               <form id="form" name="form" @submit.prevent="sendEmail">
