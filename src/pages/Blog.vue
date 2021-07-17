@@ -402,8 +402,6 @@
     </LazyHydrate>
   </Layout>
 </template>
-  </Layout>
-</template>
 
 <page-query>
 query {
@@ -481,7 +479,7 @@ import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
 import Keywords from "~/assets/keywords.json";
 import Event from "~/components/blog/Event.vue";
-import Post from "~/components/blog/Post.vue";
+//import Post from "~/components/blog/Post.vue";
 
 export default {
   components: {
@@ -491,7 +489,7 @@ export default {
     Seo,
     RemoveTag,
     Event,
-    Post
+    //Post
   },
   metaInfo() {
     return {

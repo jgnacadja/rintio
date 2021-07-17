@@ -33,7 +33,7 @@
             <h2 class="py-2 text-primary group-hover:text-white">
               Formation
             </h2>
-            <p class="text-justify leading-8 group-hover:text-whit text-ellipsis--2">
+            <p class="text-justify leading-8 group-hover:text-white text-ellipsis--2">
               Nous avions pour ambition de renforcer la capacité des jeunes en Afrique dans les technologies de l'information ( Formation Big Data, Intelligence Artificielle, Java, Python, Développement d’API).etc...
               <span class="font-bold">
               
