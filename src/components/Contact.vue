@@ -1,6 +1,6 @@
 <template>
   <div class="md:flex w-full px-4 md:px-0 md:text-left">
-    <div class="md:px-20 md:w-1/2">
+    <div class="sm:px-8 lg:px-20 sm:w-1/2">
       <div class="flex">
         <div class="mx-auto">
           <div class="max-w-lg mx-auto my-10">
@@ -116,7 +116,7 @@
         </div>
       </div>
     </div>
-    <div class="md:px-32 md:w-1/2">
+    <div class="sm:px-8 lg:px-32 sm:w-1/2">
       <!-- Contact Form -->
       <div class="flex items-center">
         <div class="container mx-auto">
