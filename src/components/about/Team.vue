@@ -68,7 +68,7 @@
                     </span>
                   </div>
 
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Mike.
                     </h6>
@@ -128,7 +128,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Carlyna.
                     </h6>
@@ -186,7 +186,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Habib.
                     </h6>
@@ -247,7 +247,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Talla.
                     </h6>
@@ -303,7 +303,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Fiacre.
                     </h6>
@@ -361,7 +361,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Julien.
                     </h6>
@@ -375,7 +375,7 @@
                 </div>
               </div>
             </div>
-            <div class="px-3 w-full sm:w-1/2 lg:w-1/4 sm:-mt-4 lg:-mt-1">
+            <div class="px-3 w-full sm:w-1/2 lg:w-1/4 sm:-mt-1 lg:-mt-1">
               <div
                 class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
               >
@@ -420,7 +420,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Nicaise.
                     </h6>
@@ -478,7 +478,7 @@
                       </a>
                     </span>
                   </div>
-                  <div class="flex-grow w-2/3 pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Michel.
                     </h6>
