@@ -1,18 +1,16 @@
 <template>
   <div class="items-center w-full justify-center py-6 md:py-24">
     <div class="text-center">
-      <h3 class="mb-3 text-sm text-primary font-semibold uppercase">Nos publications </h3>
+      <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
+        Nos publications
+      </h3>
     </div>
 
     <div class="text-center">
-      <h2
-        class="my-3 text-xl md:text-5xl font-extrabold text-primary"
-      >
+      <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
         Rintio<span class="text-secondary"> blog</span>
       </h2>
-      <h4 class="md:w-1/2 mx-auto py-4">
-      Articles à la une
-      </h4>
+      <h4 class="md:w-1/2 mx-auto py-4">Articles à la une</h4>
     </div>
 
     <div
@@ -20,18 +18,7 @@
     >
       <!-- main post -->
       <div
-        class="
-          mb-4
-          lg:mb-0
-          p-4
-          lg:p-0
-          w-full
-          md:w-1/2
-          relative
-          block
-          bg-white
-          h-full
-        "
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white h-full"
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
@@ -67,7 +54,7 @@
           </h5>
           <p class="text-primary text-xs space-x-8 mx-4">
             <span>{{ edge.node.date | FormatDate}}</span>
-            <span>Publié par : Rintio</span>
+            <span class="float-right">Publié par : Rintio</span>
           </p>
           <p class="text-gray-600 text-justify font-light mb-4 mx-4">
             {{ edge.node.metaDescription }}
@@ -79,20 +66,9 @@
       <!-- main post 2 -->
 
       <div
-        class="
-          mb-4
-          lg:mb-0
-          p-4
-          lg:p-0
-          w-full
-          md:w-1/2
-          relative
-          block
-          bg-white
-          md:hidden
-        "
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white md:hidden"
         v-for="edge in $static.otherPost.edges"
-          :key="edge.node.id"
+        :key="edge.node.id"
       >
         <g-image
           alt="connect"
@@ -101,29 +77,16 @@
           class="object-cover w-full h-64 mb-0"
         />
         <span
-          class="
-            relative
-            text-white
-            bg-secondary
-            p-4
-            text-sm
-            hidden
-            md:block
-            ml-4
-            -mt-7
-            capitalize
-            w-24
-            text-center
-          "
+          class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
         >
-         {{ edge.node.categories.title }}
+          {{ edge.node.categories.title }}
         </span>
         <p class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4">
-         {{ edge.node.title }}
+          {{ edge.node.title }}
         </p>
         <p class="text-primary text-xs space-x-8 mx-4">
           <span>{{ edge.node.date | FormatDate }}</span>
-          <span>Publié par : Rintio</span>
+          <span class="float-right">Publié par : Rintio</span>
         </p>
         <p class="text-gray-600 text-justify mb-4 mx-4">
           {{ edge.node.metaDescription }}
@@ -166,20 +129,10 @@
               </h5>
               <p class="text-primary text-xs mt-4 space-x-8">
                 <span>{{ edge.node.date | FormatDate }}</span>
-                <span>Publié par : Rintio</span>
+                <span class="float-right">Publié par : Rintio</span>
               </p>
               <p
-                class="
-                  block
-                  font-light
-                  p-2
-                  pl-0
-                  pt-1
-                  text-justify
-                  text-sm text-gray-600
-                  overflow-clip overflow-hidden
-                  ...
-                "
+                class="block font-light p-2 pl-0 pt-1 text-justify text-sm text-gray-600 overflow-clip overflow-hidden ..."
               >
                 {{ edge.node.metaDescription }}
               </p>
@@ -193,14 +146,7 @@
       <g-link to="/blog" class="ml-auto">
         <button
           href="#"
-          class="
-            flex
-            md:text-lg
-            font-medium
-            hover:text-secondary
-            w-auto
-            focus:outline-none
-          "
+          class="flex ml-auto mr-8 md:ml-0 md:mr-0 md:text-lg font-medium hover:text-secondary focus:outline-none"
         >
           Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
         </button>
