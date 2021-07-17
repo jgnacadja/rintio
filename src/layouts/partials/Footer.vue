@@ -108,7 +108,7 @@
             aria-expanded="true"
             class="flex justify-between items-center w-full py-2 text-sm text-left focus:outline-none text-white font-extrabold font-roboto border-b border-white"
             aria-controls="headlessui-disclosure-panel-2"
-            @click="openProducts = !openProducts"
+            @click="openProducts = !openProducts, openLinks = false"
           >
             <span class="text-xl">Produits</span>
             <ChevronUp :class="openProducts ? 'transform rotate-180' : ''" />
@@ -150,7 +150,7 @@
             aria-expanded="true"
             class="flex justify-between items-center w-full py-2 text-sm text-left focus:outline-none text-white font-extrabold font-roboto border-b border-white"
             aria-controls="headlessui-disclosure-panel-2"
-            @click="openLinks = !openLinks"
+            @click="openLinks = !openLinks, openProducts = false"
           >
             <span class="text-xl">Liens utiles</span>
             <ChevronUp :class="openLinks ? 'transform rotate-180' : ''" />
