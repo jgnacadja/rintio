@@ -12,3 +12,8 @@ button.slick-prev:before, button.slick-next:before {
     color: $blue-rintio !important;
     //font-size: 40px !important;
 }
+
+.slick-dots li button:before {
+    color: $blue-rintio !important;
+    font-size: 15px !important;
+}
