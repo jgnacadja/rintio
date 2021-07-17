@@ -502,13 +502,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import Expert from "~/assets/images/icons/expert.svg";
-
-export default {
-  components: {
-    Expert,
-  },
-};
-</script>
