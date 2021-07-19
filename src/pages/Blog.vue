@@ -478,7 +478,7 @@ import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
 import Keywords from "~/assets/keywords.json";
-import Event from "~/components/blog/Event.vue";
+//import Event from "~/components/blog/Event.vue";
 //import Post from "~/components/blog/Post.vue";
 
 export default {
@@ -488,7 +488,7 @@ export default {
     Pager,
     Seo,
     RemoveTag,
-    Event,
+    //Event,
     //Post
   },
   metaInfo() {
