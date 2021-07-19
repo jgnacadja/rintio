@@ -1,5 +1,6 @@
 <template>
   <div class="sliderAx">
+    <VueSlickCarousel v-bind="settings">
     <div id="slider-1">
       <div
         class="
@@ -181,7 +182,7 @@
       <br />
     </div>
 
-    <div class="flex justify-between w-24 mx-auto -mt-20 space-x-2">
+    <!-- <div class="flex justify-between w-24 mx-auto -mt-20 space-x-2">
       <button
         id="sButton1"
         @click="sliderButton1()"
@@ -202,12 +203,20 @@
         @click="sliderButton4()"
         class="bg-gray-400 rounded-full w-4 p-2 focus:outline-none"
       ></button>
-    </div>
+    </div> -->
+    </VueSlickCarousel>
   </div>
 </template>
 
 <script>
+  import VueSlickCarousel from 'vue-slick-carousel'
+  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+  // optional style for arrows & dots
+  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 export default {
+  name: 'Slider',
+  components: { VueSlickCarousel },
   data() {
     return {
       counter: 0,
@@ -216,12 +225,17 @@ export default {
         autoplay: true,
         infinite: true,
         rows: 1,
-        edgeFriction: 0.35,
-        initialSlide: 1,
-        speed: 500,
+        initialSlide: 0,
+        speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
-        swipeToSlide: true,
+        swipeToSlide: false,
+        arrows:false,
+        fade:true,
+        dots:true,
+        dotsClass:'slick-dots',
+        pauseOnFocus:false,
+        pauseOnHover:false
       },
     };
   },
@@ -363,5 +377,9 @@ export default {
 
 .height {
   height: calc(100vh - 96px);
+}
+
+.slick-dots li button:before {
+ display: none;
 }
 </style>

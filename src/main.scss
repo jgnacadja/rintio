@@ -14,6 +14,17 @@ button.slick-prev:before, button.slick-next:before {
 }
 
 .slick-dots li button:before {
-    color: $blue-rintio !important;
-    font-size: 15px !important;
+    color: #9CA3AF !important;
+    font-size: 1.5rem !important;
+    opacity: 0.95 !important;
+    margin-bottom: 12em !important;
+}
+
+.slick-dots li button {
+    margin-top: 100px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: $red-rintio !important;
+    opacity: 0.95 !important;
 }
