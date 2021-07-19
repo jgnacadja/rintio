@@ -222,7 +222,7 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-      },x 
+      },
     };
   },
 /*   mounted() {
