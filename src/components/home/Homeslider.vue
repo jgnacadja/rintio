@@ -212,9 +212,20 @@ export default {
     return {
       counter: 0,
       xx: "",
+      settings: {
+        autoplay: true,
+        infinite: true,
+        rows: 1,
+        edgeFriction: 0.35,
+        initialSlide: 1,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+      },x 
     };
   },
-  mounted() {
+/*   mounted() {
     //require our external library and load it in window
     window.$ = require("jquery");
 
@@ -329,7 +340,7 @@ export default {
       this.reinitLoop(4000);
       this.counter = 3;
     },
-  },
+  }, */
 };
 </script>
 
