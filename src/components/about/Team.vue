@@ -29,7 +29,7 @@
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -39,31 +39,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -90,7 +69,7 @@
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -100,31 +79,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -148,7 +106,7 @@
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -158,31 +116,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -209,7 +146,7 @@
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -219,31 +156,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -265,41 +181,20 @@
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
-                        src="~/assets/images/icons/expert.svg"
+                        src="~/assets/images/home/about/Fiacre.jpeg"
                         alt=""
                       ></g-image>
                     </div>
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -316,14 +211,14 @@
                 </div>
               </div>
             </div>
-            <div class="px-3 w-full sm:w-1/2 lg:w-1/4 sm:-mt-4 lg:-mt-2">
+            <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
                 class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -333,31 +228,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -375,14 +249,14 @@
                 </div>
               </div>
             </div>
-            <div class="px-3 w-full sm:w-1/2 lg:w-1/4 sm:-mt-1 lg:-mt-1">
+            <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
                 class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -392,31 +266,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>
@@ -433,14 +286,14 @@
                 </div>
               </div>
             </div>
-            <div class="px-3 w-full sm:w-1/2 lg:w-1/4 lg:-mt-2">
+            <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
                 class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-full rounded-full h-24 mb-4 bg-gray-50 border border-gray-200"
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -450,31 +303,10 @@
                     <span class="inline-flex">
                       <a
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter relative"></i>
-                      </a>
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://twitter.com/RintioGroup/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram relative"></i>
                       </a>
                     </span>
                   </div>

@@ -19,11 +19,14 @@
         </p>
       </div>
       <div
-        class="md:flex flex-wrap hidden lg:space-x-0 mx-4 md:mx-0 pt-6 sm:p-12 lg:px-24 lg:p-0 lg:space-y-0 md:space-y-4 lg:mt-12"
+        class="md:flex hidden lg:space-x-4 mx-4 md:mx-0 pt-6 sm:p-12 lg:px-24 lg:p-0 lg:space-y-0 md:space-y-4 lg:mt-12"
       >
-        <div class="px-3 w-full sm:w-1/2 lg:w-1/3">
-          <div class="h-full bg-white py-4">
-            <g-image src="~/assets/images/icons/expert.svg" alt=""></g-image>
+        <div class="w-full sm:w-1/2 lg:w-1/3 shadow-md">
+          <div class="h-full bg-white pb-4">
+            <g-image
+              src="~/assets/images/home/about/Michel.jpeg"
+              alt=""
+            ></g-image>
             <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
               Michel <span class="font-bold uppercase">Idjinou</span>
             </h2>
@@ -37,39 +40,20 @@
             <div class="flex py-4 px-6">
               <a
                 class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
+                href="https://www.linkedin.com/in/michel-idjinou/"
                 target="_blank"
               >
                 <i class="fab fa-linkedin-in relative"></i>
               </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank
-"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
             </div>
           </div>
         </div>
-        <div class="px-3 w-full sm:w-1/2 lg:w-1/3">
-          <div class="h-full bg-white py-4">
-            <g-image src="~/assets/images/icons/expert.svg" alt=""></g-image>
+        <div class="w-full sm:w-1/2 lg:w-1/3 shadow-md">
+          <div class="h-full bg-white pb-4">
+            <g-image
+              src="~/assets/images/home/about/Jacques.jpeg"
+              alt=""
+            ></g-image>
             <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
               Jacques <span class="font-bold uppercase">Gnacadja</span>
             </h2>
@@ -78,43 +62,25 @@
             >
               c.o.o
             </h3>
-            <p class="mb-0 px-6">• PhD Informatique</p>
-            <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
+            <p class="mb-0 px-6">• Chef projet Digital</p>
+            <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
             <div class="flex py-4 px-6">
               <a
                 class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
+                href="https://www.linkedin.com/in/jacques-r-gnacadja-a3222276/"
                 target="_blank"
               >
                 <i class="fab fa-linkedin-in relative"></i>
               </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
             </div>
           </div>
         </div>
-        <div class="px-3 w-full sm:w-1/2 lg:w-1/3">
-          <div class="h-full bg-white py-4">
-            <g-image src="~/assets/images/icons/expert.svg" alt=""></g-image>
+        <div class="w-full sm:w-1/2 lg:w-1/3 shadow-md">
+          <div class="h-full bg-white pb-4">
+            <g-image
+              src="~/assets/images/home/about/Iskilou.jpeg"
+              alt=""
+            ></g-image>
             <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
               Iskilou <span class="font-bold uppercase">Yerima</span>
             </h2>
@@ -123,36 +89,15 @@
             >
               c.t.o
             </h3>
-            <p class="mb-0 px-6">• PhD Informatique</p>
-            <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
+            <p class="mb-0 px-6">• Chef Project Backend</p>
+            <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
             <div class="flex py-4 px-6">
               <a
                 class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
+                href="https://www.linkedin.com/in/iskilou-y%C3%A9rima-sanni-1052a950/"
                 target="_blank"
               >
                 <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
               </a>
             </div>
           </div>
@@ -160,10 +105,13 @@
       </div>
 
       <div class="w-full p-10">
-        <VueSlickCarousel v-bind="settings">
-          <div class="px-3 w-full">
-            <div class="h-full bg-white py-4">
-              <g-image src="~/assets/images/icons/expert.svg" alt=""></g-image>
+        <VueSlickCarousel v-bind="settings" class="shadow-md">
+          <div class="w-full">
+            <div class="h-full bg-white pb-4">
+              <g-image
+                src="~/assets/images/home/about/Michel.jpeg"
+                alt=""
+              ></g-image>
               <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
                 Michel <span class="font-bold uppercase">Idjinou</span>
               </h2>
@@ -177,39 +125,20 @@
               <div class="flex py-4 px-6">
                 <a
                   class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://www.linkedin.com/company/rintio/"
+                  href="https://www.linkedin.com/in/michel-idjinou/"
                   target="_blank"
                 >
                   <i class="fab fa-linkedin-in relative"></i>
                 </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://twitter.com/RintioGroup/"
-                  target="_blank"
-                >
-                  <i class="fab fa-twitter relative"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://twitter.com/RintioGroup/"
-                  target="_blank
-  "
-                >
-                  <i class="fab fa-instagram relative"></i>
-                </a>
               </div>
             </div>
           </div>
-          <div class="px-3 w-full">
-            <div class="h-full bg-white py-4">
-              <g-image src="~/assets/images/icons/expert.svg" alt=""></g-image>
+          <div class="w-full">
+            <div class="h-full bg-white pb-4">
+              <g-image
+                src="~/assets/images/home/about/Jacques.jpeg"
+                alt=""
+              ></g-image>
               <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
                 Jacques <span class="font-bold uppercase">Gnacadja</span>
               </h2>
@@ -218,43 +147,25 @@
               >
                 c.o.o
               </h3>
-              <p class="mb-0 px-6">• PhD Informatique</p>
-              <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
+              <p class="mb-0 px-6">• Chef projet Digital</p>
+              <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
               <div class="flex py-4 px-6">
                 <a
                   class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://www.linkedin.com/company/rintio/"
+                  href="https://www.linkedin.com/in/jacques-r-gnacadja-a3222276/"
                   target="_blank"
                 >
                   <i class="fab fa-linkedin-in relative"></i>
                 </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://twitter.com/RintioGroup/"
-                  target="_blank"
-                >
-                  <i class="fab fa-twitter relative"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://twitter.com/RintioGroup/"
-                  target="_blank"
-                >
-                  <i class="fab fa-instagram relative"></i>
-                </a>
               </div>
             </div>
           </div>
-          <div class="px-3 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white py-4">
-              <g-image src="~/assets/images/icons/expert.svg" alt=""></g-image>
+          <div class="w-full sm:w-1/2 lg:w-1/3">
+            <div class="h-full bg-white pb-4">
+              <g-image
+                src="~/assets/images/home/about/Iskilou.jpeg"
+                alt=""
+              ></g-image>
               <h2 class="mt-10 mb-2 px-6 font-normal text-primary">
                 Iskilou <span class="font-bold uppercase">Yerima</span>
               </h2>
@@ -263,36 +174,15 @@
               >
                 c.t.o
               </h3>
-              <p class="mb-0 px-6">• PhD Informatique</p>
-              <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
+              <p class="mb-0 px-6">• Chef Project Backend</p>
+              <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
               <div class="flex py-4 px-6">
                 <a
                   class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://www.linkedin.com/company/rintio/"
+                  href="https://www.linkedin.com/in/iskilou-y%C3%A9rima-sanni-1052a950/"
                   target="_blank"
                 >
                   <i class="fab fa-linkedin-in relative"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://twitter.com/RintioGroup/"
-                  target="_blank"
-                >
-                  <i class="fab fa-twitter relative"></i>
-                </a>
-                <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                  href="https://twitter.com/RintioGroup/"
-                  target="_blank"
-                >
-                  <i class="fab fa-instagram relative"></i>
                 </a>
               </div>
             </div>
