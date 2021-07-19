@@ -20,7 +20,7 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-        <p class="text-xl font-bold">Clients Satisfaits</p>
+        <p class="text-xl font-bold">Technologies utilisées</p>
       </div>
       <div class="text-center">
         <p class="text-8xl font-bold"><span id="project">0</span>+</p>
@@ -48,7 +48,7 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-        <p class="text-xl font-bold">Membres de l'équipe</p>
+        <p class="text-xl font-bold">Pays Internationals</p>
       </div>
       <div class="text-center">
         <p id="experience" class="text-8xl font-bold">0</p>
@@ -62,7 +62,7 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-        <p class="text-xl font-bold">Années d'expérience</p>
+        <p class="text-xl font-bold">Membres d'équipe</p>
       </div>
     </div>
   </div>
@@ -98,10 +98,10 @@ export default {
       const experience = document.getElementById("experience");
 
       if (entry.isIntersecting) {
-        this.animateValue(customer, 0, 103, 5000);
+        this.animateValue(customer, 0, 50, 5000);
         this.animateValue(project, 0, 30, 5000);
-        this.animateValue(member, 0, 50, 5000);
-        this.animateValue(experience, 0, 3, 5000);
+        this.animateValue(member, 0, 5, 5000);
+        this.animateValue(experience, 0, 50, 5000);
       }
     },
   },
