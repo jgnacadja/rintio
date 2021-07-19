@@ -286,48 +286,7 @@
                 </div>
               </div>
             </div>
-            <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
-              <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
-              >
-                <div class="w-full flex flex-row items-center">
-                  <div class="w-1/3">
-                    <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
-                    >
-                      <g-image
-                        src="~/assets/images/icons/expert.svg"
-                        alt=""
-                      ></g-image>
-                    </div>
-                    <span class="inline-flex">
-                      <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                        href="https://www.linkedin.com/company/rintio/"
-                        target="_blank"
-                      >
-                        <i class="fab fa-linkedin-in relative"></i>
-                      </a>
-                    </span>
-                  </div>
-                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
-                    <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
-                      Michel.
-                    </h6>
-                    <p class="text-xs mb-2">• Ingénieur Informatique</p>
-                    <p class="text-xs mb-2">
-                      • AI & Data Strategist, Enterprise Architect
-                    </p>
-                    <p class="text-xs mb-2">
-                      • +10 Ans d'Expériences : Société Générale, BNP Paribas,
-                      Dassault, Naval Group
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-
           <!---->
         </div>
       </div>
