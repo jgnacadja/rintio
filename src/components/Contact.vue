@@ -36,7 +36,7 @@
                 <span class="text-secondary">votre besoin ?</span>
               </h2>
 
-              Toutes nos équipes au Bénin et et à l'international se tiennent à
+              Toutes nos équipes au Bénin et à l'international se tiennent à
               votre disposition !
             </div>
 
