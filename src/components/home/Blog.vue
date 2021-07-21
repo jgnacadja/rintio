@@ -18,7 +18,7 @@
     >
       <!-- main post -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white h-full shadow-sm"
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2  relative block bg-white h-full shadow-sm"
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
@@ -52,7 +52,7 @@
           >
             {{ edge.node.title }}
           </h5>
-          <p class="text-primary text-xs space-x-8 mx-4">
+          <p class="text-primary md:h-11 text-xs space-x-8 mx-4">
             <span>{{ edge.node.date | FormatDate}}</span>
             <span class="float-right">Publié par : Rintio</span>
           </p>
@@ -64,7 +64,7 @@
       </div>
 
       <!-- sub-main posts -->
-      <div class="w-full md:w-1/2 ">
+      <div class="w-full md:w-1/2">
         <!-- post 1 -->
         <div
           class="w-full bg-white h-48 md:h-auto  flex flex-row md:flex-row mb-10"
@@ -81,15 +81,15 @@
               />
             </g-link>
           </div>
-          <div class="bg-white text-center md:text-left px-4 w-3/5 h-full shadow-sm mb:pb-1">
+          <div class="bg-white text-center md:text-left px-4 w-3/5 h-full   shadow-sm mb:pb-1">
             <g-link :to="edge.node.path">
               <h5 class="text-left md:mt-0 text-gray-800 font-semibold mb-2 text-lg md:text-xl ">
                 {{ edge.node.title }}
               </h5>
-              <p class="flex flex-row h-px text-primary text-xs mt-2 md:mt-4 h-8 space-x-8">
+              <p class=" h-px text-primary text-xs mt-2 md:mt-4  h-8 space-x-8">
                 <span>{{ edge.node.date | FormatDate }}</span>
-                <span class="flex flex-row text-xs">
-                <span class="float-right">Publié par :</span> <span> Rintio</span>
+                <span class="float-right">
+                Publié par : Rintio
                 </span>
               </p>
               <p
