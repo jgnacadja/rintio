@@ -8,8 +8,8 @@
     }"
   >
     <div class="flex flex-wrap mx-auto mb-8 md:mb-0 md:space-x-24 ">
-      <div class="w-1/2 md:w-auto sm:text-left text-center" >
-        <p id="customer" class="text-5xl md:text-8xl font-bold">0</p>
+      <div class="w-1/2 md:w-auto xl:w-auto sm:text-left text-center " >
+        <p id="customer" class="text-5xl md:text-5xl font-bold">0</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -25,7 +25,7 @@
           </div>
       </div>
       <div class="w-1/2 md:w-auto sm:text-left text-center" >
-        <p id="customer" class="text-5xl md:text-8xl font-bold"><span id="project">0</span>+</p>
+        <p id="customer" class="text-5xl md:text-5xl font-bold"><span id="project">0</span>+</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -39,7 +39,7 @@
         <div><p class="text-sm font-bold">Projets réalisés</p></div>
       </div>
       <div class="w-1/2 md:w-auto sm:text-left text-center" >
-        <p id="customer" class="text-5xl md:text-8xl font-bold"><span id="member">0</span>+</p>
+        <p id="customer" class="text-5xl md:text-5xl font-bold"><span id="member">0</span>+</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -52,8 +52,8 @@
         </div>
         <p class="text-sm font-bold">Pays Internationals</p>
       </div>
-      <div class="w-1/2 md:w-auto sm:text-left text-center" >
-        <p id="experience" class="text-5xl md:text-8xl font-bold">0</p>
+      <div class="w-1/2 md:w-auto sm:text-left xl:w-auto text-center" >
+        <p id="experience" class="text-5xl md:text-5xl lg:8xl font-bold">0</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
