@@ -272,9 +272,8 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
-  components: {
-    VueSlickCarousel
-  },
+  name: 'Slider',
+  components: { VueSlickCarousel },
   data() {
     return {
       hourFr: "",
@@ -292,7 +291,8 @@ export default {
         slidesToScroll: 1,
         swipeToSlide: true,
         arrows:false,
-        dots: true
+        dots: true,
+        dotsClass:'mappdots'
       },
     };
   },
@@ -336,7 +336,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../variables.scss";
 .bg-map {
   background-image: url("./../../../static/images/home/map.png");
 }
@@ -358,4 +359,5 @@ export default {
     display: none;
   }
 }
+
 </style>
