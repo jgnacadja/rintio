@@ -358,7 +358,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../variables.scss";
 .bg-homeslider-1 {
   background-image: url("./../../../static/images/home/slider/rinttio-1.jpg");
 }
@@ -382,4 +383,7 @@ export default {
 .slick-dots li button:before {
  display: none;
 }
+
+
+
 </style>
