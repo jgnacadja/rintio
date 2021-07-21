@@ -42,7 +42,6 @@
                   font-light
                   mb-6
                 "
-                
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
@@ -141,7 +140,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
@@ -199,7 +211,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/in/bah-alad%C3%A9-habib-sidi-aa476514/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAL1odwBxx1nMspDkJJBlhr3ygzUVYSE6UU"
                         target="_blank"
                       >
@@ -260,7 +285,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/in/tallaetsa/"
                         target="_blank"
                       >
@@ -316,7 +354,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/in/fiacre-kinmagbahohoue-directeur-de-projet-it-data-actuaire/"
                         target="_blank"
                       >
@@ -374,7 +425,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/in/juliencapgras/"
                         target="_blank"
                       >
@@ -433,7 +497,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/in/nicaisechoungmofofack/"
                         target="_blank"
                       >
@@ -461,4 +538,16 @@
     </div>
   </div>
 </template>
+
+<script>
+import experts from "~/assets/experts.json";
+
+export default {
+  data() {
+    return {
+      list: experts.list,
+    };
+  },
+};
+</script>
 
