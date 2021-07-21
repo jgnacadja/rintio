@@ -3,6 +3,7 @@
     <Contact />
 
     <footer class="bg-primary">
+      <div></div>
       <div class="text-white md:flex w-full px-4 md:px-0 md:mx-0 md:text-left">
         <!-- Col-1 -->
         <div class="md:px-20 p-5 w-full sm:w-4/12 md:w-3/12">
@@ -193,13 +194,13 @@
         </div>
 
         <!-- Col-4 -->
-        <div class="-my-5 py-8 px-4 md:px-8 w-full sm:w-4/12 md:w-3/12 md:m-5">
+        <div class="-my-5 py-8 px-4 md:px-2 w-full sm:w-4/12 md:w-3/12 md:m-5">
           <div class="h-auto">
             <div class="text-red-light mb-3">Newsletter</div>
             <div class="flex mt-4" v-res>
               <input
                 type="text"
-                class="w-full md:w-auto p-2 border border-grey-light round text-grey-dark text-sm h-auto rounded-l-sm text-gray-700 focus:outline-none"
+                class="w-auto p-2 border border-grey-light round text-grey-dark text-sm h-auto rounded-l-sm text-gray-700 focus:outline-none"
                 placeholder="Votre adresse"
               />
               <button
