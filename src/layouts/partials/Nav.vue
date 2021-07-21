@@ -112,32 +112,32 @@
       </div>
       <div class="flex absolute bottom-5 pl-3">
               <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                class="w-12 h-12 mr-2 flex items-center place-content-center rounded-full bg-white text-primary border-2 border-primary "
                 href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
                 target="_blank"
               >
-                <i class="text-lg fab fa-facebook-f"></i>
+                <i class="text-4xl fab fa-facebook-f"></i>
               </a>
               <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                class="w-12 h-12 mr-2 flex items-center place-content-center rounded-full bg-white text-primary border-2 border-primary "
                 href="https://www.linkedin.com/company/rintio/"
                 target="_blank"
               >
-                <i class="text-lg fab fa-linkedin-in relative "></i>
+                <i class="text-4xl fab fa-linkedin-in relative "></i>
               </a>
               <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                class="w-12 h-12 mr-2 flex items-center place-content-center rounded-full bg-white text-primary border-2 border-primary "
                 href="https://twitter.com/RintioGroup/"
                 target="_blank"
               >
-                <i class="text-lg fab fa-twitter relative"></i>
+                <i class="text-4xl fab fa-twitter relative"></i>
               </a>
               <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                class="w-12 h-12 mr-2 flex items-center place-content-center rounded-full bg-white text-primary border-2 border-primary "
                 href="https://twitter.com/RintioGroup/"
                 target="_blank"
               >
-                <i class="text-lg fab fa-instagram relative"></i>
+                <i class="text-4xl fab fa-instagram relative"></i>
               </a>
             </div>
     </div>
