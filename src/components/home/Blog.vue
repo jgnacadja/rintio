@@ -56,59 +56,18 @@
             <span>{{ edge.node.date | FormatDate}}</span>
             <span class="float-right">Publié par : Rintio</span>
           </p>
-          <p class="text-gray-600 text-justify font-light mb-4 mx-4">
+          <p class=" text-gray-600 text-justify font-light mb-4 mx-4">
             {{ edge.node.metaDescription }}
           </p>
           <div class="flex space-x-8 mx-4 mb-1"></div>
-        </g-link>
-      </div>
-
-      <!-- main post 2 -->
-
-      <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white md:hidden shadow-sm mb:pb-6"
-        v-for="edge in $static.otherPost.edges"
-        :key="edge.node.id"
-      >
-        <g-image
-          alt="connect"
-          title="Connect"
-          src="~/assets/images/home/blog/connect.png"
-          class="object-cover w-full h-64 mb-0"
-        />
-        <span
-          class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
-        >
-          {{ edge.node.categories.title }}
-        </span>
-        <p class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4">
-          {{ edge.node.title }}
-        </p>
-        <p class="text-primary text-xs space-x-8 mx-4">
-          <span>{{ edge.node.date | FormatDate }}</span>
-          <span class="float-right">Publié par : Rintio</span>
-        </p>
-        <p class="text-gray-600 text-justify mb-4 mx-4">
-          {{ edge.node.metaDescription }}
-        </p>
-        <!-- <div class="flex space-x-8 mx-4">
-          <p class="flex space-x-2">
-            <Like /> <span class="text-xs">24k</span>
-          </p>
-          <p class="flex space-x-2">
-            <Comment /> <span class="text-xs">247</span>
-          </p>
-          <p class="flex space-x-2">
-            <Share /> <span class="text-xs">24</span>
-          </p>
-        </div> -->
+        </g-link> 
       </div>
 
       <!-- sub-main posts -->
-      <div class="w-full md:w-1/2 hidden md:block">
+      <div class="w-full md:w-1/2 ">
         <!-- post 1 -->
         <div
-          class="w-full flex flex-col md:flex-row mb-10"
+          class="w-full bg-white h-48 md:h-auto  flex flex-row md:flex-row mb-10"
           v-for="edge in $static.otherPost.edges"
           :key="edge.node.id"
         >
@@ -118,21 +77,23 @@
                 alt="iot"
                 title="scrum"
                 :src="edge.node.coverImage"
-                class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
+                class="block object-cover md:hidden lg:block h-48 md:h-56 md:m-0 w-72"
               />
             </g-link>
           </div>
-          <div class="bg-white px-4 w-3/5 h-full shadow-sm mb:pb-1">
+          <div class="bg-white text-center md:text-left px-4 w-3/5 h-full shadow-sm mb:pb-1">
             <g-link :to="edge.node.path">
-              <h5 class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
+              <h5 class="text-left md:mt-0 text-gray-800 font-semibold mb-2 text-lg md:text-xl ">
                 {{ edge.node.title }}
               </h5>
-              <p class="text-primary text-xs mt-4 space-x-8">
+              <p class="flex flex-row h-px text-primary text-xs mt-2 md:mt-4 h-8 space-x-8">
                 <span>{{ edge.node.date | FormatDate }}</span>
-                <span class="float-right">Publié par : Rintio</span>
+                <span class="flex flex-row text-xs">
+                <span class="float-right">Publié par :</span> <span> Rintio</span>
+                </span>
               </p>
               <p
-                class="block font-light p-2 pl-0 pt-1 text-justify text-sm text-gray-600 overflow-clip overflow-hidden ..."
+                class="  md:h-32 block font-light pt-0 text-justify text-xs md:text-sm text-gray-600 overflow-clip overflow-hidden ..."
               >
                 {{ edge.node.metaDescription }}
               </p>
