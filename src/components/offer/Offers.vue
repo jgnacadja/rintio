@@ -43,7 +43,7 @@
           <div>
             <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -70,7 +70,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -99,9 +99,9 @@
           </div>
 
           <div class="space-y-6">
-            <div class="md:flex md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0">
-              <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+            <div class="md:flex md:flex-row  md:space-x-6 space-y-6 md:space-y-0">
+              <div 
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -123,7 +123,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-bigdata"
+                class="shadow-lg group container bg-white lg:max-w-sm sm:mx-auto md:mx-auto bg-center bg-cover bg-no-repeat bg-bigdata"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -153,7 +153,7 @@
           <div class="space-y-6">
             <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -175,7 +175,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -197,7 +197,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -219,7 +219,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-learning"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-learning"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -249,7 +249,7 @@
           <div>
             <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -272,7 +272,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-cloud"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-cloud"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
@@ -294,7 +294,7 @@
               </div>
 
               <div
-                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-council"
+                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-council"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>
