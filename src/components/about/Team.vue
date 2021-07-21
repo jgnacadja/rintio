@@ -29,7 +29,11 @@
           <!---->
 
           <div class="mt-12 -mx-3 flex flex-wrap items-start">
-            <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
+            <div
+              class="px-3 w-full sm:w-1/2 lg:w-1/4"
+              v-for="expert in list"
+              :key="expert"
+            >
               <div
                 class="
                   w-full
@@ -61,8 +65,8 @@
                       "
                     >
                       <g-image
-                        src="https://media-exp3.licdn.com/dms/image/C4D03AQEncnxv7c8f8w/profile-displayphoto-shrink_200_200/0/1614778021910?e=1632355200&v=beta&t=gpjnqwn61tNyLyVaFw-4K9swb7vBe_dfMuh6cb0qh_8"
-                        alt=""
+                        :src="expert.imgUrl"
+                        :alt="expert.imgAlt"
                       ></g-image>
                     </div>
                     <span class="inline-flex">
@@ -81,7 +85,7 @@
                           hover:bg-secondary
                           hover:text-white
                         "
-                        href="https://www.linkedin.com/company/rintio/"
+                        :href="expert.linkedInUrl"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -523,15 +527,15 @@
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       Nicaise.
                     </h6>
-                    <p class="text-xs mb-2">• PhD Informatique</p>
-                    <p class="text-xs mb-2">• Data Scientist, Data Architect</p>
-                    <p class="text-xs mb-2">
-                      • +8 Ans d'Expériences : Orange, Société Générale
+                    <p class="text-xs mb-2" v-for="career in expert.career" :key="career">
+                     • {{career}}
                     </p>
+                    
                   </div>
                 </div>
               </div>
             </div>
+            
           </div>
           <!---->
         </div>
