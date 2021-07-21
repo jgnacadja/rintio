@@ -140,20 +140,7 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
@@ -211,21 +198,8 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
-                        href="https://www.linkedin.com/company/rintio/"
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        href="https://www.linkedin.com/in/bah-alad%C3%A9-habib-sidi-aa476514/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAL1odwBxx1nMspDkJJBlhr3ygzUVYSE6UU"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -285,21 +259,8 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
-                        href="https://www.linkedin.com/company/rintio/"
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        href="https://www.linkedin.com/in/tallaetsa/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -354,21 +315,8 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
-                        href="https://www.linkedin.com/company/rintio/"
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        href="https://www.linkedin.com/in/fiacre-kinmagbahohoue-directeur-de-projet-it-data-actuaire/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -425,21 +373,8 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
-                        href="https://www.linkedin.com/company/rintio/"
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        href="https://www.linkedin.com/in/juliencapgras/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -497,21 +432,8 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
-                        href="https://www.linkedin.com/company/rintio/"
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        href="https://www.linkedin.com/in/nicaisechoungmofofack/"
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>

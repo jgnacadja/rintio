@@ -19,9 +19,7 @@
           Nous offrons des solutions professionnelles pour les entreprises
         </h1>
         <p class="md:w-2/3 mx-auto py-4 md:px-0">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le développement et l’intégration de solutions
-          informatiques.
+          Rintio apporte des solutions innovantes aux entreprises et institutions en communiquant les technologies du numérique  aux grands enjeux de nos sociétés.
         </p>
       </div>
     </div>
