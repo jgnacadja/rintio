@@ -200,7 +200,7 @@
             <div class="flex mt-4" v-res>
               <input
                 type="text"
-                class="w-auto p-2 border border-grey-light round text-grey-dark text-sm h-auto rounded-l-sm text-gray-700 focus:outline-none"
+                class="w-full md:w-auto p-2 border border-grey-light round text-grey-dark text-sm h-auto rounded-l-sm text-gray-700 focus:outline-none"
                 placeholder="Votre adresse"
               />
               <button
