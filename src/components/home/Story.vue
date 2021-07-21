@@ -29,10 +29,10 @@
 
         <h3 class="text-primary font-bold my-4 leading-tight text-xl mx-4">
           RINTIO renforce sa stratégie d’appui des formations en ligne en
-          mettant en production la plateforme E-learrning Coraq Lab
+          mettant en production la plateforme E-learning Coraq Lab
         </h3>
         <p class="text-gray-600 font-light mb-4 mx-4 text-base text-justify">
-          Dans la vision d’ apporter des solutions innovantes aux Entreprises et
+          Dans la vision d’apporter des solutions innovantes aux Entreprises et
           Institutions en communiant les technologies du numérique aux grands
           enjeux de nos sociétés, RINTIO vient de mettre en production la
           plateforme Coraq-Lab :Cela constitue pour RINTIO un grand pas en avant
