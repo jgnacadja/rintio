@@ -13,18 +13,83 @@ button.slick-prev:before, button.slick-next:before {
     //font-size: 40px !important;
 }
 
+//SCSS for components/home/Homeslider
 .slick-dots li button:before {
     color: #9CA3AF !important;
     font-size: 1.5rem !important;
     opacity: 0.95 !important;
     margin-bottom: 12em !important;
 }
-
 .slick-dots li button {
-    margin-top: 100px;
+    margin-top:100px;
 }
-
 .slick-dots li.slick-active button:before {
     color: $red-rintio !important;
     opacity: 0.95 !important;
+}
+
+// scss for components/home/Map
+.mappdots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.mappdots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.mappdots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.mappdots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 0.25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+.mappdots li button:before {
+    color: #9CA3AF !important;
+    font-size: 1.5rem !important;
+    opacity: 0.95 !important;
+}
+.mappdots li.slick-active button:before {
+    color: $red-rintio !important;
+    opacity: 0.95 !important;
+}
+// scss for slider components/about/Experts
+.slick-prev:before {
+    visibility: hidden;
+}
+.slick-next:before {
+    visibility: hidden;
 }

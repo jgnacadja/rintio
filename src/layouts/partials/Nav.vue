@@ -1,6 +1,6 @@
 <template>
   <div class="self-center">
-    <div class="md:hidden">
+    <div class="lg:hidden">
       <button
         class="navbar-burger flex items-center text-gray-600 p-3"
         @click="openMenu = !openMenu"
@@ -26,7 +26,7 @@
 
     <div
       v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
-      class="fixed md:hidden inset-y-0 right-0 z-40 h-full w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
+      class="fixed lg:hidden inset-y-0 right-0 z-40 h-full w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
     >
       <div class="items-center justify-center mt-6 space-y-2">
         <button
@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <div
+        <!-- <div
           id="blog"
           class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
         >
@@ -97,7 +97,7 @@
                 Blog</span>
             </g-link>
           </div>
-        </div>
+        </div> -->
         <div
           id="blog_1"
           class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
@@ -110,9 +110,39 @@
           </div>
         </div>
       </div>
+      <div class="flex absolute bottom-5 pl-3">
+              <a
+                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+                target="_blank"
+              >
+                <i class="text-lg fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                href="https://www.linkedin.com/company/rintio/"
+                target="_blank"
+              >
+                <i class="text-lg fab fa-linkedin-in relative "></i>
+              </a>
+              <a
+                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                href="https://twitter.com/RintioGroup/"
+                target="_blank"
+              >
+                <i class="text-lg fab fa-twitter relative"></i>
+              </a>
+              <a
+                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full bg-white text-primary text-xs"
+                href="https://twitter.com/RintioGroup/"
+                target="_blank"
+              >
+                <i class="text-lg fab fa-instagram relative"></i>
+              </a>
+            </div>
     </div>
 
-    <nav class="px-10 h-24 hidden md:flex">
+    <nav class="px-10 h-24 hidden lg:flex">
       <div
         id="home"
         class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
