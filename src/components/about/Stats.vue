@@ -7,10 +7,9 @@
       throttle: 300,
     }"
   >
-    <div class="md:flex mx-auto mb-8 md:mb-0 md:space-x-24">
-      <div class="flex flex-col ...">
-      <div class="text-center">
-        <p id="customer" class="text-8xl font-bold">0</p>
+    <div class="flex flex-wrap mx-auto mb-8 md:mb-0 md:space-x-24 ">
+      <div class="w-1/2 md:w-auto sm:text-left text-center" >
+        <p id="customer" class="text-5xl md:text-8xl font-bold">0</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -21,10 +20,12 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-        <div><p class="text-xl font-bold">Technologies utilisées</p></div>
+        <div>
+          <p class="text-sm font-bold">Technologies utilisées</p>
+          </div>
       </div>
-      <div class="text-center">
-        <p class="text-8xl font-bold"><span id="project">0</span>+</p>
+      <div class="w-1/2 md:w-auto sm:text-left text-center" >
+        <p id="customer" class="text-5xl md:text-8xl font-bold"><span id="project">0</span>+</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -35,10 +36,10 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-        <div><p class="text-xl font-bold">Projets réalisés</p></div>
+        <div><p class="text-sm font-bold">Projets réalisés</p></div>
       </div>
-      <div class="text-center">
-        <p class="text-8xl font-bold"><span id="member">0</span>+</p>
+      <div class="w-1/2 md:w-auto sm:text-left text-center" >
+        <p id="customer" class="text-5xl md:text-8xl font-bold"><span id="member">0</span>+</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -49,10 +50,10 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-        <p class="text-xl font-bold">Pays Internationals</p>
+        <p class="text-sm font-bold">Pays Internationals</p>
       </div>
-      <div class="text-center">
-        <p id="experience" class="text-8xl font-bold">0</p>
+      <div class="w-1/2 md:w-auto sm:text-left text-center" >
+        <p id="experience" class="text-5xl md:text-8xl font-bold">0</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
@@ -63,10 +64,9 @@
             class="inline-block w-2 h-2 rounded-full bg-colorblind ml-2"
           ></span>
         </div>
-       <div><p class="text-xl font-bold">Membres d'équipe</p></div>
+       <div><p class="text-sm font-bold">Membres d'équipe</p></div>
       </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -108,4 +108,7 @@ export default {
     },
   },
 };
+
 </script>
+
+
