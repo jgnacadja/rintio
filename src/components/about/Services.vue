@@ -24,11 +24,11 @@
           </div>
           <div
             class="bg-white md:w-1/3 text-center py-4 px-6 cursor-pointer group hover:bg-primary"
-            @mouseover="IaHover = true"
-            @mouseleave="IaHover = false"
+            @mouseover="CourseHover = true"
+            @mouseleave="CourseHover = false"
           >
-            <Ia class="w-20 mx-auto" v-if="!IaHover" />
-            <Ia2 class="w-20 mx-auto" v-if="IaHover" />
+            <Course class="w-20 mx-auto" v-if="!CourseHover" />
+            <Course2 class="w-20 mx-auto" v-if="CourseHover" />
 
             <h2 class="py-2 text-primary group-hover:text-white">
               Formation
@@ -133,6 +133,8 @@ import Cloud from "~/assets/images/icons/cloud.svg";
 import Cloud2 from "~/assets/images/icons/cloud-2.svg";
 import Pilot from "~/assets/images/icons/pilot.svg";
 import Pilot2 from "~/assets/images/icons/pilot-2.svg";
+import Course from "~/assets/images/icons/open-book-1.svg"
+import Course2 from "~/assets/images/icons/open-book-yellow.svg"
 
 export default {
   components: {
@@ -147,6 +149,8 @@ export default {
     Cloud2,
     Pilot,
     Pilot2,
+    Course,
+    Course2,
   },
   data() {
     return {
@@ -155,6 +159,7 @@ export default {
       ApiHover: false,
       CloudHover: false,
       PilotHover: false,
+      CourseHover: false,
     };
   },
 };

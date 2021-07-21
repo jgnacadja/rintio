@@ -6,7 +6,14 @@
       <div class="w-full mx-auto mb-8 md:mb-0">
         <div class="mx-4 md:mx-0 text-center">
           <h1
-            class="pb-8 text-xl md:text-5xl font-extrabold capitalize text-primary"
+            class="
+              pb-8
+              text-xl
+              md:text-5xl
+              font-extrabold
+              capitalize
+              text-primary
+            "
           >
             Nos
             <span class="text-secondary"> experts</span>
@@ -24,21 +31,56 @@
           <div class="mt-12 -mx-3 flex flex-wrap items-start">
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
+                
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
-                        src="~/assets/images/icons/expert.svg"
+                        src="https://media-exp3.licdn.com/dms/image/C4D03AQEncnxv7c8f8w/profile-displayphoto-shrink_200_200/0/1614778021910?e=1632355200&v=beta&t=gpjnqwn61tNyLyVaFw-4K9swb7vBe_dfMuh6cb0qh_8"
                         alt=""
                       ></g-image>
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         href="https://www.linkedin.com/company/rintio/"
                         target="_blank"
                       >
@@ -64,12 +106,33 @@
             </div>
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -78,8 +141,26 @@
                     </div>
                     <span class="inline-flex">
                       <a
+<<<<<<< HEAD
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/in/carlyna-bondiombouy-765306101/"
+=======
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
+                        href="https://www.linkedin.com/company/rintio/"
+>>>>>>> 3bcc718adc19e36e8247c281954c9fdb8eec56d3
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -101,12 +182,33 @@
             </div>
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -115,8 +217,26 @@
                     </div>
                     <span class="inline-flex">
                       <a
+<<<<<<< HEAD
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/in/bah-alad%C3%A9-habib-sidi-aa476514/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAL1odwBxx1nMspDkJJBlhr3ygzUVYSE6UU"
+=======
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
+                        href="https://www.linkedin.com/company/rintio/"
+>>>>>>> 3bcc718adc19e36e8247c281954c9fdb8eec56d3
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -141,12 +261,33 @@
             </div>
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -155,8 +296,26 @@
                     </div>
                     <span class="inline-flex">
                       <a
+<<<<<<< HEAD
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/in/tallaetsa/"
+=======
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
+                        href="https://www.linkedin.com/company/rintio/"
+>>>>>>> 3bcc718adc19e36e8247c281954c9fdb8eec56d3
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -176,12 +335,33 @@
             </div>
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
                         src="~/assets/images/home/about/Fiacre.jpeg"
@@ -190,8 +370,26 @@
                     </div>
                     <span class="inline-flex">
                       <a
+<<<<<<< HEAD
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/in/fiacre-kinmagbahohoue-directeur-de-projet-it-data-actuaire/"
+=======
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
+                        href="https://www.linkedin.com/company/rintio/"
+>>>>>>> 3bcc718adc19e36e8247c281954c9fdb8eec56d3
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -213,12 +411,33 @@
             </div>
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -227,8 +446,26 @@
                     </div>
                     <span class="inline-flex">
                       <a
+<<<<<<< HEAD
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/in/juliencapgras/"
+=======
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
+                        href="https://www.linkedin.com/company/rintio/"
+>>>>>>> 3bcc718adc19e36e8247c281954c9fdb8eec56d3
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -251,12 +488,33 @@
             </div>
             <div class="px-3 w-full sm:w-1/2 lg:w-1/4">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="
+                        overflow-hidden
+                        w-24
+                        rounded-full
+                        h-24
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
+                      "
                     >
                       <g-image
                         src="~/assets/images/icons/expert.svg"
@@ -265,8 +523,26 @@
                     </div>
                     <span class="inline-flex">
                       <a
+<<<<<<< HEAD
                         class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                         href="https://www.linkedin.com/in/nicaisechoungmofofack/"
+=======
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
+                        href="https://www.linkedin.com/company/rintio/"
+>>>>>>> 3bcc718adc19e36e8247c281954c9fdb8eec56d3
                         target="_blank"
                       >
                         <i class="fab fa-linkedin-in relative"></i>
@@ -293,3 +569,4 @@
     </div>
   </div>
 </template>
+
