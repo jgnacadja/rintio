@@ -72,3 +72,4 @@ module.exports = {
     //ContentfulTag: "/tag/:title",
   },
 };
+
