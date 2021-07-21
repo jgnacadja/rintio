@@ -42,7 +42,6 @@
                   font-light
                   mb-6
                 "
-                
               >
                 <div class="w-full flex flex-row items-center">
                   <div class="w-1/3">
@@ -540,3 +539,16 @@
   </div>
 </template>
 
+<script>
+import Experts from "~/assets/experts.json";
+export default {
+  data() {
+    return {
+      experts: Experts.list,
+    };
+  },
+  created() {
+    console.log(experts);
+  },
+};
+</script>
