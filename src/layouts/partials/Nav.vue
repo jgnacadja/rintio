@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <!-- <div
+         <div
           id="blog"
           class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
         >
@@ -97,7 +97,7 @@
                 Blog</span>
             </g-link>
           </div>
-        </div> -->
+        </div> 
         <div
           id="blog_1"
           class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"

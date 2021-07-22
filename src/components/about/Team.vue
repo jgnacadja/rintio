@@ -15,7 +15,7 @@
 
           <p class="my-3 md:w-1/2 mx-auto">
             Rintio est composé d’une équipe professionnelle et dynamique et d’un
-            réseau de partenaire qui n’ont qu’un seul objectif:
+            réseau de partenaires qui n’ont qu’un seul objectif:
             <span class="font-bold"
               >donner vie à vos projets en respectant les deadlines.</span
             >
