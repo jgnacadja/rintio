@@ -4,7 +4,7 @@
       <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div
-            class="shadow-lg group container bg-white w-full bg-center bg-cover bg-no-repeat bg-offshoring h-full xs:mx-auto sm:mx-auto"
+            class="shadow-lg group container bg-white w-full  bg-center bg-cover bg-no-repeat bg-offshoring h-full xs:mx-auto sm:mx-auto"
           >
             <div class="w-full overflow-hidden md:h-full">
               <div class="w-full h-40 md:h-full"></div>
@@ -238,9 +238,11 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
