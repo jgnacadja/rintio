@@ -105,7 +105,7 @@
         </div>
       </div>
 
-      <div class="w-full p-10">
+      <div class="w-full p-5">
         <VueSlickCarousel v-bind="settings" class="shadow-md">
           <div class="w-full">
             <div class="h-full bg-white pb-4">
@@ -123,9 +123,9 @@
               </h3>
               <p class="mb-0 px-6">• PhD Informatique</p>
               <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
-              <div class="flex py-4 px-6">
+              <div class="d-flex  py-4 px-6">
                 <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                  class="ml-auto w-7 h-7 mr-2 flex items-center place-content-center rounded-full bg-white border-2 border-primary hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/michel-idjinou/"
                   target="_blank"
                 >
@@ -150,9 +150,9 @@
               </h3>
               <p class="mb-0 px-6">• Chef projet Digital</p>
               <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
-              <div class="flex py-4 px-6">
+              <div class="d-flex  py-4 px-6">
                 <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                  class="ml-auto w-7 h-7 mr-2 flex items-center place-content-center rounded-full bg-white border-2 border-primary hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/jacques-r-gnacadja-a3222276/"
                   target="_blank"
                 >
@@ -177,9 +177,9 @@
               </h3>
               <p class="mb-0 px-6">• Chef Project Backend</p>
               <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
-              <div class="flex py-4 px-6">
+              <div class="d-flex  py-4 px-6">
                 <a
-                  class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                  class="ml-auto w-7 h-7 mr-2 flex items-center place-content-center rounded-full bg-white border-2 border-primary hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/iskilou-y%C3%A9rima-sanni-1052a950/"
                   target="_blank"
                 >
@@ -201,9 +201,8 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
-  components: {
-    VueSlickCarousel
-  },
+  name: 'Slider',
+  components: { VueSlickCarousel },
     data() {
     return {
       settings: {
@@ -216,6 +215,9 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
+        arrows:false,
+        dots:true,
+        dotsClass:'expertdots',
       },
     }
   },

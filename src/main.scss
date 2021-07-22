@@ -93,3 +93,62 @@ button.slick-prev:before, button.slick-next:before {
 .slick-next:before {
     visibility: hidden;
 }
+
+.expertdots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.expertdots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.expertdots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.expertdots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 0.25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+.expertdots li button:before {
+    color: #9CA3AF !important;
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+    opacity: 0.95 !important;
+}
+.expertdots li.slick-active button:before {
+    color: $red-rintio !important;
+    opacity: 0.95 !important;
+}
