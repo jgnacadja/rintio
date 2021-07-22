@@ -14,11 +14,11 @@
     </div>
 
     <div
-      class="md:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
+      class="lg:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
     >
       <!-- main post -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white h-full shadow-sm"
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2 relative block bg-white h-full shadow-sm"
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
@@ -66,7 +66,7 @@
       <!-- main post 2 -->
 
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white md:hidden shadow-sm mb:pb-6"
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2 relative block bg-white md:hidden shadow-sm mb:pb-6"
         v-for="edge in $static.otherPost.edges"
         :key="edge.node.id"
       >
@@ -77,7 +77,7 @@
           class="object-cover w-full h-64 mb-0"
         />
         <span
-          class="relative text-white bg-secondary p-4 text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
+          class="relative text-white bg-secondary p-4  text-sm hidden md:block ml-4 -mt-7 capitalize w-24 text-center"
         >
           {{ edge.node.categories.title }}
         </span>
@@ -105,10 +105,10 @@
       </div>
 
       <!-- sub-main posts -->
-      <div class="w-full md:w-1/2 hidden md:block">
+      <div class="w-full lg:w-1/2 hidden md:block">
         <!-- post 1 -->
         <div
-          class="w-full flex flex-col md:flex-row mb-10"
+          class="w-full flex flex-col  lg:flex-row mb-10"
           v-for="edge in $static.otherPost.edges"
           :key="edge.node.id"
         >
@@ -118,11 +118,11 @@
                 alt="iot"
                 title="scrum"
                 :src="edge.node.coverImage"
-                class="block md:hidden lg:block md:h-52 m-4 md:m-0 w-full"
+                class="lg:block md:h-52 m-4 md:m-0 w-full"
               />
             </g-link>
           </div>
-          <div class="bg-white px-4 w-3/5 h-full shadow-sm mb:pb-1">
+          <div class="bg-white px-4 w-3/5 h-full shadow-sm mb:pb-1" >
             <g-link :to="edge.node.path">
               <h5 class="md:mt-0 text-gray-800 font-semibold mb-2 text-xl">
                 {{ edge.node.title }}
@@ -142,7 +142,7 @@
         </div>
       </div>
     </div>
-    <div class="md:flex container mx-auto md:px-16 w-full">
+    <div class="lg:flex container mx-auto md:px-16 w-full">
       <g-link to="/blog" class="ml-auto">
         <button
           href="#"

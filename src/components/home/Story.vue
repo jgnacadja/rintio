@@ -15,10 +15,10 @@
       </h4>
     </div>
 
-    <div class="md:flex container mx-auto space-x-0 md:space-x-6 w-full">
+    <div class="lg:flex container mx-auto space-x-0 md:space-x-6 w-full">
       <!-- main story -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2 relative block bg-white"
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2 relative block bg-white"
       >
         <g-image
           alt="coraq"
@@ -41,8 +41,8 @@
       </div>
 
       <!-- sub-main story -->
-      <div class="w-full md:w-1/2 md:space-y-6">
-        <div class="md:flex md:space-x-6">
+      <div class="w-full lg:w-1/2 md:space-y-6">
+        <div class="lg:flex md:space-x-6">
           <!-- story 1 -->
           <div
             class="
@@ -51,7 +51,7 @@
               p-4
               lg:p-0
               w-full
-              md:w-1/2
+              lg:w-1/2
               relative
               block
               bg-white
@@ -81,7 +81,7 @@
               p-4
               lg:p-0
               w-full
-              md:w-1/2
+              lg:w-1/2
               relative
               block
               bg-white
@@ -105,7 +105,7 @@
           </div>
         </div>
 
-        <div class="md:flex md:space-x-6">
+        <div class="lg:flex md:space-x-6">
           <!-- story 3 -->
           <div
             class="
@@ -114,7 +114,7 @@
               p-4
               lg:p-0
               w-full
-              md:w-1/2
+              lg:w-1/2
               relative
               block
               bg-white
@@ -144,7 +144,7 @@
               p-4
               lg:p-0
               w-full
-              md:w-1/2
+              lg:w-1/2
               relative
               block
               bg-white
