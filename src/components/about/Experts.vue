@@ -123,7 +123,7 @@
               </h3>
               <p class="mb-0 px-6">• PhD Informatique</p>
               <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
-              <div class="d-flex  py-4 px-6">
+              <div class="flex  py-4 px-6">
                 <a
                   class="ml-auto w-7 h-7 mr-2 flex items-center place-content-center rounded-full bg-white border-2 border-primary hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/michel-idjinou/"
@@ -150,7 +150,7 @@
               </h3>
               <p class="mb-0 px-6">• Chef projet Digital</p>
               <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
-              <div class="d-flex  py-4 px-6">
+              <div class="flex  py-4 px-6">
                 <a
                   class="ml-auto w-7 h-7 mr-2 flex items-center place-content-center rounded-full bg-white border-2 border-primary hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/jacques-r-gnacadja-a3222276/"
@@ -177,7 +177,7 @@
               </h3>
               <p class="mb-0 px-6">• Chef Project Backend</p>
               <p class="mb-0 px-6">• Ingenieur Réseaux Télécom</p>
-              <div class="d-flex  py-4 px-6">
+              <div class="flex  py-4 px-6">
                 <a
                   class="ml-auto w-7 h-7 mr-2 flex items-center place-content-center rounded-full bg-white border-2 border-primary hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/iskilou-y%C3%A9rima-sanni-1052a950/"
