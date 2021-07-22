@@ -116,7 +116,7 @@
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Accélérez votre croissance en exploitant pleinement
-                      lepotentiel de vos données.
+                      le potentiel de vos données.
                     </div>
                   </div>
                 </div>
@@ -168,7 +168,7 @@
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Accélérez votre croissance en exploitant pleinement
-                      lepotentiel de vos données.
+                      le potentiel de vos données.
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@
                     <div
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
-                      Meilleur connaissance client, Expérience client unique,
+                      Meilleure connaissance client, Expérience client unique,
                       Produits et services augmentés.
                     </div>
                   </div>
@@ -209,7 +209,7 @@
                     </div>
 
                     <div
-                      class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                      class="text-white  tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Optimisez vos processus de développement et livrez
                       rapidement vos produits et services.
@@ -286,7 +286,7 @@
                     <div
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
-                      Meilleur connaissance client, Expérience client unique,
+                      Meilleure connaissance client, Expérience client unique,
                       Produits et services augmentés.
                     </div>
                   </div>

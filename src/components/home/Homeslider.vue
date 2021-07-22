@@ -16,10 +16,10 @@
           "
         >
           <div class="md:w-5/12">
-            <h3 class="font-bold text-sm xl:text-2xl uppercase text-secondary font-roboto">
+            <h3 class="font-bold text-sm 2xl:text-2xl uppercase text-secondary font-roboto">
               Rintio Prestation
             </h3>
-            <h1 class="text-5xl xl:text-7xl font-extrabold text-primary font-roboto">
+            <h1 class="text-5xl 2xl:text-7xl font-extrabold text-primary font-roboto">
               Nous accélérons votre transformation digitale
             </h1>
             <p class="text-2xl mb-10 leading-8">
@@ -33,13 +33,13 @@
                  bg-secondary
                 py-4
                 px-8
-                xl:py-6
-                xl:px-12
+                2xl:py-6
+                2xl:px-12
                 text-white
                 font-bold
                 uppercase
                 text-xs
-                xl:text-lg
+                2xl:text-lg
                  
               "
               >En savoir plus</a
@@ -65,10 +65,10 @@
           "
         >
           <div class="md:w-5/12">
-            <h3 class="font-bold text-sm xl:text-2xl uppercase text-secondary font-roboto">
+            <h3 class="font-bold text-sm 2xl:text-2xl uppercase text-secondary font-roboto">
               Technologie
             </h3>
-            <h1 class="text-5xl xl:text-7xl font-extrabold text-primary font-roboto">
+            <h1 class="text-5xl 2xl:text-7xl font-extrabold text-primary font-roboto">
               DataScience et Intelligence Artificielle
             </h1>
             <p class="text-2xl mb-10 leading-8">
@@ -81,13 +81,13 @@
                  bg-secondary
                 py-4
                 px-8
-                xl:py-6
-                xl:px-12
+                2xl:py-6
+                2xl:px-12
                 text-white
                 font-bold
                 uppercase
                 text-xs
-                xl:text-lg
+                2xl:text-lg
                  
               "
               >En savoir plus</a
@@ -113,7 +113,7 @@
           "
         >
           <div class="md:w-5/12">
-            <h3 class="font-bold text-sm xl:text-2xl uppercase text-secondary font-roboto">
+            <h3 class="font-bold text-sm 2xl:text-2xl uppercase text-secondary font-roboto">
               Rintio Formation
             </h3>
             <h1 class="text-5xl xl:text-7xl font-extrabold text-primary font-roboto">
@@ -129,13 +129,13 @@
                  bg-secondary
                 py-4
                 px-8
-                xl:py-6
-                xl:px-12
+                2xl:py-6
+                2xl:px-12
                 text-white
                 font-bold
                 uppercase
                 text-xs
-                xl:text-lg
+                2xl:text-lg
                  
               "
               >En savoir plus</a
@@ -161,13 +161,13 @@
           "
         >
           <div class="md:w-5/12">
-            <h3 class="font-bold text-sm xl:text-2xl uppercase text-secondary font-roboto">
+            <h3 class="font-bold text-sm 2xl:text-2xl uppercase text-secondary font-roboto">
               Rintio Story
             </h3>
-            <h1 class="text-5xl xl:text-7xl font-extrabold text-primary font-roboto">
+            <h1 class="text-5xl 2xl:text-7xl font-extrabold text-primary font-roboto">
               CHMP & Coraq Lab
             </h1>
-            <p class="text-2xl xl:text-2xl mb-10 leading-8">
+            <p class="text-2xl 2xl:text-2xl mb-10 leading-8">
               Développement des plateformes e-learning
               <a href="https://coraq.formation.chmp.org/" target="blanck"
                 >Coraq Lab</a
@@ -185,13 +185,13 @@
                 bg-secondary
                 py-4
                 px-8
-                xl:py-6
-                xl:px-12
+                2xl:py-6
+                2xl:px-12
                 text-white
                 font-bold
                 uppercase
                 text-xs
-                xl:text-lg
+                2xl:text-lg
                  
               "
               >En savoir plus</a
