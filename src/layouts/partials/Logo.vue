@@ -1,6 +1,6 @@
 <template>
   <div class="logo ">
-    <g-link to="/" title="Back to home">
+    <g-link to="/" >
       <Logo class="w-44" alt="Rintio.com" title="Rintio" />
     </g-link>
   </div>

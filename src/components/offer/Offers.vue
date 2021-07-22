@@ -116,7 +116,7 @@
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Accélérez votre croissance en exploitant pleinement
-                      lepotentiel de vos données.
+                      le potentiel de vos données.
                     </div>
                   </div>
                 </div>
@@ -168,29 +168,7 @@
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Accélérez votre croissance en exploitant pleinement
-                      lepotentiel de vos données.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
-              >
-                <div class="w-full overflow-hidden">
-                  <div class="w-full h-40"></div>
-                  <div class="w-full relative px-4 pb-4">
-                    <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                    >
-                      Intelligence Artificielle
-                    </div>
-
-                    <div
-                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                    >
-                      Meilleur connaissance client, Expérience client unique,
-                      Produits et services augmentés.
+                      le potentiel de vos données.
                     </div>
                   </div>
                 </div>
@@ -209,7 +187,7 @@
                     </div>
 
                     <div
-                      class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                      class="text-white  tracking-wider leading-relaxed font-roboto text-xs"
                     >
                       Optimisez vos processus de développement et livrez
                       rapidement vos produits et services.
@@ -217,37 +195,6 @@
                   </div>
                 </div>
               </div>
-
-              <div
-                class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-learning"
-              >
-                <div class="w-full overflow-hidden">
-                  <div class="w-full h-40"></div>
-                  <div class="w-full relative px-4 pb-4">
-                    <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                    >
-                      Conseil
-                    </div>
-
-                    <div
-                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                    >
-                      • Stratégie Data & IA • Stratégie de transformation
-                      numériques
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
-        <div>
-          <div>
-            <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
                 class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
               >
@@ -270,7 +217,6 @@
                   </div>
                 </div>
               </div>
-
               <div
                 class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-cloud"
               >
@@ -286,37 +232,23 @@
                     <div
                       class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                     >
-                      Meilleur connaissance client, Expérience client unique,
+                      Meilleure connaissance client, Expérience client unique,
                       Produits et services augmentés.
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0">
+        <div>
+          <div>
+            <div class="md:flex md:flex-row md:space-x-6 space-y-6 md:space-y-0">
               <div
                 class="shadow-lg group container bg-white lg:max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-council"
-              >
-                <div class="w-full overflow-hidden">
-                  <div class="w-full h-40"></div>
-                  <div class="w-full relative px-4 pb-4">
-                    <div
-                      class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                    >
-                      Conseil
-                    </div>
-
-                    <div
-                      class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                    >
-                      • Stratégie Data & IA <br />
-                      • Stratégie de transformation numériques
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="hidden md:block shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-council invisible"
               >
                 <div class="w-full overflow-hidden">
                   <div class="w-full h-40"></div>

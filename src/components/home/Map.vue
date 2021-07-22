@@ -109,7 +109,7 @@
               class="w-full relative justify-between flex px-4 py-4 bg-white"
             >
               <span class="tracking-wider leading-relaxed">
-                Abidjan, Cote d’Ivoire
+                Abidjan, Côte d'Ivoire
               </span>
 
               <span class="flex items-center text-sm">
@@ -234,7 +234,7 @@
                 class="w-full relative justify-between flex px-4 py-4 bg-white"
               >
                 <span class="tracking-wider leading-relaxed">
-                  Abidjan, Cote d’Ivoire
+                  Abidjan, Côte d'Ivoire
                 </span>
 
                 <span class="flex items-center text-sm">
