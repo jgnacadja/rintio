@@ -39,12 +39,14 @@
               group
               hover:bg-primary
             "
-            @mouseover="CourseHover = true"
-            @mouseleave="CourseHover = false"
+            @mouseover="DataHover = true"
+            @mouseleave="DataHover = false"
           >
-            <Data class="w-20 mx-auto" />
-            <h2 class="py-2 text-white">Data science & IA</h2>
-            <p class="text-justify leading-8 text-white text-ellipsis--2">
+            <Data class="w-20 mx-auto" v-if="!DataHover" />
+            <Data2 class="w-20 mx-auto" v-if="DataHover" />
+
+            <h2 class="py-2 text-primary group-hover:text-white">Data science & IA</h2>
+            <p class="text-justify leading-8 group-hover:text-white text-ellipsis--2">
               L’exploitation des données internes et externes à l’entreprise est
               clairement d’actualité. Rintio, entreprise du numérique est
               conscient du vrai potentiel qu’offrent ces données pour l’aide à
@@ -240,7 +242,8 @@
 </template>
 
 <script>
-import Data from "~/assets/images/icons/data.svg";
+import Data from "~/assets/images/icons/data-red.svg";
+import Data2 from "~/assets/images/icons/data.svg";
 import Ia from "~/assets/images/icons/ia.svg";
 import Ia2 from "~/assets/images/icons/ia-2.svg";
 import Code from "~/assets/images/icons/code.svg";
@@ -257,6 +260,7 @@ import Course2 from "~/assets/images/icons/open-book-yellow.svg";
 export default {
   components: {
     Data,
+    Data2,
     Ia,
     Ia2,
     Code,
@@ -272,6 +276,7 @@ export default {
   },
   data() {
     return {
+      DataHover:false,
       IaHover: false,
       CodeHover: false,
       ApiHover: false,
