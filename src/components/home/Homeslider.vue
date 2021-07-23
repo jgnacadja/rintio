@@ -16,13 +16,13 @@
           "
         >
           <div class="md:w-5/12">
-            <h3 class="font-bold text-sm 2xl:text-2xl uppercase text-secondary font-roboto">
+            <h3 class="font-bold text-sm 2xl:text-lg 3xl:text-3xl uppercase text-secondary font-roboto">
               Rintio Prestation
             </h3>
-            <h1 class="text-5xl 2xl:text-7xl font-extrabold text-primary font-roboto">
+            <h1 class="text-5xl 2xl:text-6xl 3xl:text-7xl font-extrabold text-primary font-roboto">
               Nous accélérons votre transformation digitale
             </h1>
-            <p class="text-2xl mb-10 leading-8">
+            <p class="text-xl 2xl:text-xl 3xl:text-2xl mb-10 leading-8">
               Rintio vous accompagne dans la mise en place de vos solutions
               digitales en mettant à votre disposition une équipe hautement
               qualifiée.

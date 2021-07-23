@@ -13,6 +13,12 @@ button.slick-prev:before, button.slick-next:before {
     //font-size: 40px !important;
 }
 
+@media (max-width: 767.98px){
+    .slick-dots li button {
+        margin-top:40px;
+    }
+}
+
 //SCSS for components/home/Homeslider
 .slick-dots li button:before {
     color: #9CA3AF !important;
