@@ -71,6 +71,7 @@
           v-for="edge in $static.otherPost.edges"
           :key="edge.node.id"
         >
+       
           <div class="w-2/5 h-full">
             <g-link :to="edge.node.path">
               <g-image
