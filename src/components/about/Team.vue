@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <!---->
@@ -25,7 +24,7 @@
           <div class="mt-12 -mx-3 flex flex-wrap items-start">
             <div
               class="px-3 w-full sm:w-1/2 lg:w-1/4"
-              v-for="expert in list"
+              v-for="expert in currentList"
               :key="expert"
             >
               <div
@@ -57,11 +56,11 @@
                       {{ expert.name }}
                     </h6>
                     <p
-                      class="text-xs mb-2"
-                      v-for="career in expert.career"
                       :key="career"
+                      v-for="career in expert.career"
+                      class="text-xs mb-2"
                     >
-                      • {{career}}
+                      • {{ career }}
                     </p>
                   </div>
                 </div>
@@ -69,6 +68,13 @@
             </div>
           </div>
           <!---->
+          <t-pagination
+            :total-items="totalItems"
+            :per-page="perPage"
+            v-model="currentPage"
+            :classes="classes"
+            @change="updateList($event)"
+          />
         </div>
       </div>
     </div>
@@ -77,11 +83,49 @@
 
 <script>
 import experts from "~/assets/experts.json";
+import { TPagination } from "vue-tailwind/dist/components";
+
 export default {
+  components: {
+    TPagination,
+  },
   data() {
     return {
       list: experts.list,
+      currentList: experts.list,
+      currentPage: 1,
+      perPage: 4,
+      totalItems: 1,
+      classes: {
+        wrapper: "table border-collapse text-center bg-white mx-auto shadow-sm",
+        element:
+          "w-8 h-8 border border-gray-200 table-cell hover:border-blue-100",
+        activeElement:
+          "w-8 h-8 border border-secondary table-cell hover:border-secondry",
+        disabledElement: "w-8 h-8 border border-gray-200 table-cell",
+        ellipsisElement: "w-8 h-8 border border-gray-200 hidden md:table-cell",
+        activeButton:
+          "bg-secondary w-full h-full text-white hover:bg-secondary transition duration-100 ease-in-out focus:outline-none",
+        disabledButton:
+          "opacity-25 w-full h-full cursor-not-allowed transition duration-100 ease-in-out",
+        button:
+          "hover:bg-blue-100 w-full h-full transition duration-100 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50",
+        ellipsis: "",
+      },
     };
+  },
+  mounted() {
+    this.list = experts.list;
+    this.totalItems = this.list.length;
+    this.updateList(this.currentPage);
+  },
+  methods: {
+    updateList(currentPage) {
+      this.currentList= this.list.slice(
+        (currentPage - 1) * this.perPage,
+        currentPage * this.perPage
+      );
+    },
   },
 };
 </script>

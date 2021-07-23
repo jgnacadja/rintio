@@ -26,13 +26,13 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative justify-between md:w-64 flex sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative md:w-64 flex lg:w-auto xl:w-auto sm:flex-col md:flex-shrink px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed"
+                <span class="tracking-wider leading-relaxed xl:text-center"
                   >Cotonou, Bénin
                 </span>
 
-                <span class="flex items-center text-sm">
+                <span class="flex items-center xl:justify-center text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -69,13 +69,13 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative justify-between md:w-64 flex sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative md:w-64 flex lg:w-auto xl:w-auto sm:flex-col md:flex-shrink px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed"
+                <span class="tracking-wider leading-relaxed xl:text-center"
                   >Paris, France
                 </span>
 
-                <span class="flex items-center text-sm">
+                <span class="flex items-center xl:justify-center text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -106,13 +106,13 @@
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
-              class="w-full relative justify-between md:w-64 flex sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+              class="w-full relative md:w-64 flex lg:w-auto xl:w-auto sm:flex-col md:flex-shrink px-4 py-4 bg-white"
             >
-              <span class="tracking-wider leading-relaxed">
+              <span class="tracking-wider leading-relaxed xl:text-center">
                 Abidjan, Côte d'Ivoire
               </span>
 
-              <span class="flex items-center text-sm">
+              <span class="flex items-center xl:justify-center text-sm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -151,13 +151,13 @@
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
                 <div
-                  class="w-full relative justify-between flex px-4 py-4 bg-white"
+                  class="w-full relative  flex flex-col sm:flex-col md:flex-shrink px-4 py-4 bg-white"
                 >
-                  <span class="tracking-wider leading-relaxed"
-                    >Cotonou, Bénin <br /><br />
+                  <span class="tracking-wider leading-relaxed text-center"
+                    >Cotonou, Bénin <br />
                   </span>
 
-                  <span class="flex items-start text-sm">
+                  <span class="flex items-start justify-center text-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
@@ -194,13 +194,13 @@
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
                 <div
-                  class="w-full relative justify-between flex px-4 py-4 bg-white"
+                  class="w-full relative  flex flex-col sm:flex-col md:flex-shrink px-4 py-4 bg-white"
                 >
-                  <span class="tracking-wider leading-relaxed"
-                    >Paris, France <br /><br />
+                  <span class="tracking-wider leading-relaxed text-center"
+                    >Paris, France <br />
                   </span>
 
-                  <span class="flex items-start text-sm">
+                  <span class="flex items-start justify-center text-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
@@ -231,13 +231,13 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative justify-between flex px-4 py-4 bg-white"
+                class="w-full relative flex flex-col sm:flex-col md:flex-shrink px-4 py-4 bg-white"
               >
-                <span class="tracking-tighter leading-relaxed">
-                  Abidjan, Côte d'Ivoire <br /><br />
+                <span class="tracking-tighter leading-relaxed text-center">
+                  Abidjan, Côte d'Ivoire <br />
                 </span>
 
-                <span class="flex items-start text-sm">
+                <span class="flex items-start justify-center text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
