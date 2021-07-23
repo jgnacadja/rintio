@@ -13,7 +13,6 @@
             lg:text-5xl
             font-extrabold
             text-primary
-            capitalize
           "
         >
           Nous offrons des solutions professionnelles pour les entreprises

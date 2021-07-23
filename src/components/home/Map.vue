@@ -26,7 +26,7 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative justify-between flex px-4 py-4 bg-white"
+                class="w-full relative justify-between md:w-64 flex sm:flex-col md:flex-shrink px-4 py-4 bg-white"
               >
                 <span class="tracking-wider leading-relaxed"
                   >Cotonou, Bénin
@@ -69,7 +69,7 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative justify-between flex px-4 py-4 bg-white"
+                class="w-full relative justify-between md:w-64 flex sm:flex-col md:flex-shrink px-4 py-4 bg-white"
               >
                 <span class="tracking-wider leading-relaxed"
                   >Paris, France
@@ -106,7 +106,7 @@
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
-              class="w-full relative justify-between flex px-4 py-4 bg-white"
+              class="w-full relative justify-between md:w-64 flex sm:flex-col md:flex-shrink px-4 py-4 bg-white"
             >
               <span class="tracking-wider leading-relaxed">
                 Abidjan, Côte d'Ivoire
@@ -233,11 +233,11 @@
               <div
                 class="w-full relative justify-between flex px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed">
-                  Abidjan, Côte d'Ivoire
+                <span class="tracking-tighter leading-relaxed">
+                  Abidjan, Côte d'Ivoire <br /><br />
                 </span>
 
-                <span class="flex items-center text-sm">
+                <span class="flex items-start text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
