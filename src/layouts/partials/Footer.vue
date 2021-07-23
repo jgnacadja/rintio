@@ -192,7 +192,7 @@
         </div>
 
         <!-- mobile footer col-1 -->
-        <div class="w-full md:hidden max-w-md py-2 mx-auto px-4">
+        <div class="w-full md:hidden py-2 mx-auto px-10">
           <button
             type="button"
             aria-expanded="true"
@@ -271,7 +271,7 @@
         </div>
 
         <!-- mobile footer col-1 -->
-        <div class="w-full md:hidden max-w-md py-2 mx-auto px-4">
+        <div class="w-full md:hidden py-2 px-10">
           <button
             type="button"
             aria-expanded="true"
@@ -364,7 +364,7 @@
         </div>
 
         <!-- Col-4 -->
-        <div class="-my-5 py-8 px-4 md:px-2 w-full sm:w-4/12 lg:w-3/12 lg:m-5">
+        <div class="-my-5 py-8 px-8 md:px-2 w-full sm:w-4/12 lg:w-3/12 lg:m-5">
           <div class="h-auto">
             <div class="text-red-light mb-3">Newsletter</div>
             <div class="flex mt-4" v-res>
