@@ -10,15 +10,15 @@
       <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
         Rintio<span class="text-secondary"> blog</span>
       </h2>
-      <h4 class="md:w-1/2 mx-auto py-4">Articles à la une</h4>
+      <h4 class="lg:w-1/2 mx-auto py-4">Articles à la une</h4>
     </div>
 
     <div
-      class="md:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
+      class="lg:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
     >
       <!-- main post -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-1/2  relative block bg-white h-full shadow-sm"
+        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2  relative block bg-white h-full shadow-sm"
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
@@ -64,10 +64,10 @@
       </div>
 
       <!-- sub-main posts -->
-      <div class="w-full md:w-1/2">
+      <div class="   w-full lg:w-1/2   ">
         <!-- post 1 -->
         <div
-          class="w-full bg-white h-48 md:h-auto  flex flex-row md:flex-row mb-10"
+          class="w-full bg-white  h-48 md:h-auto   flex flex-row md:flex-row mb-10"
           v-for="edge in $static.otherPost.edges"
           :key="edge.node.id"
         >
@@ -77,11 +77,11 @@
                 alt="iot"
                 title="scrum"
                 :src="edge.node.coverImage"
-                class="block object-cover md:hidden lg:block h-48 md:h-56 md:m-0 w-72"
+                class="lg:block md:h-52 m-4 md:m-0 w-full"
               />
             </g-link>
           </div>
-          <div class="bg-white text-center md:text-left px-4 w-3/5 h-full   shadow-sm mb:pb-1">
+          <div class="bg-white px-4 w-3/5 h-full shadow-sm mb:pb-1" >
             <g-link :to="edge.node.path">
               <h5 class="text-left md:mt-0 text-gray-800 font-semibold mb-2 text-lg md:text-xl ">
                 {{ edge.node.title }}
@@ -93,7 +93,7 @@
                 </span>
               </p>
               <p
-                class="  md:h-32 block font-light pt-0 text-justify text-xs md:text-sm text-gray-600 overflow-clip overflow-hidden ..."
+                class="  md:h-32 block font-light pt-0 text-justify text-xs md:text-sm text-gray-600 text-ellipsis--2 " 
               >
                 {{ edge.node.metaDescription }}
               </p>
@@ -194,3 +194,13 @@ export default {
   },
 };
 </script>
+<style scoped>
+.text-ellipsis--2{
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+</style>

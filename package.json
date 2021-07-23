@@ -26,7 +26,8 @@
         "vue-observe-visibility": "^1.0.0",
         "vue-popover": "^1.6.2",
         "vue-scrollto": "^2.20.0",
-        "vue-slick-carousel": "^1.0.6"
+        "vue-slick-carousel": "^1.0.6",
+        "vue-tailwind": "^2.4.2"
     },
     "devDependencies": {
         "@babel/core": "^7.14.6",

@@ -44,7 +44,7 @@
 
         <p class="my-3 font-light">
           Les solutions que nous proposons à nos précieux clients. Découvrez nos
-          offres qui accéléront certainement votre productivité.
+          offres qui accélérons certainement votre productivité.
         </p>
         <div class="mt-4 text-center">
           <g-link to="/offres">
@@ -242,7 +242,7 @@
                     "
                   >
                     Accélérez votre croissance en exploitant pleinement
-                    le potentiel de vos données.
+                    lepotentiel de vos données.
                   </div>
                 </div>
               </div>
