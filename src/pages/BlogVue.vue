@@ -4,9 +4,344 @@
       <Breadcrumb :path="path" />    
     </LazyHydrate>
 
+<<<<<<< HEAD
     <LazyHydrate when-visible>
       <Articles />
     </LazyHydrate>
+=======
+    <div
+      class="
+        md:flex
+        container
+        mx-auto
+        md:px-16
+        space-x-0
+        md:space-x-6
+        w-full
+        mt-24
+      "
+    >
+      <div id="home" class="container px-4 w-full md:w-3/4">
+        <div
+          v-if="searchResults.length > 0 && search !== null"
+          class="space-y-6"
+        >
+          <!-- main post -->
+          <div
+            class="
+              mb-4
+              lg:mb-0
+              p-4
+              lg:p-0
+              w-full
+              relative
+              block
+              bg-white
+              shadow-sm
+            "
+            v-for="post in searchResults"
+            :key="post.node.id"
+          >
+            <g-link :to="post.node.path">
+              <g-image
+                alt="atut"
+                title="atut"
+                :src="post.node.coverImage"
+                class="object-cover w-full h-96 mb-0"
+              />
+              <span
+                class="
+                  relative
+                  text-white
+                  bg-secondary
+                  p-4
+                  text-sm
+                  hidden
+                  md:block
+                  ml-4
+                  -mt-7
+                  capitalize
+                  w-32
+                  text-center
+                "
+                v-html="post.node.categories.title"
+              >
+              </span>
+              <p
+                class="
+                  text-gray-800
+                  font-bold
+                  mt-2
+                  mb-2
+                  leading-tight
+                  text-xl
+                  mx-4
+                "
+              >
+                {{ post.node.title }}
+              </p>
+              <p class="text-primary text-xs space-x-8 mx-4">
+                <span>{{ post.node.date }}</span>
+              </p>
+              <p
+                class="text-gray-600 mb-4 pb-8 mx-4"
+                v-html="post.node.metaDescription"
+              ></p>
+            </g-link>
+          </div>
+
+          <!-- paginator -->
+          <div
+            class="
+              px-5
+              py-5
+              flex flex-col
+              xs:flex-row
+              items-center
+              xs:justify-between
+            "
+          >
+            <div>
+              <nav
+                class="relative z-0 inline-flex rounded-md shadow-sm"
+                aria-label="Pagination"
+              >
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  «
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = index - 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  ‹
+                </a>
+                <a
+                  v-for="index in numberOfPages"
+                  :key="index"
+                  @click="page = index"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  {{ index }}
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = index + 1"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  ›
+                </a>
+                <a
+                  v-if="numberOfPages > 1"
+                  @click="page = numberOfPages"
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    border border-gray-300
+                    bg-white
+                    text-lg text-gray-700
+                    hover:bg-gray-50
+                  "
+                >
+                  »
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div v-else>
+          <div class="shadow w-full p-24 h-full text-center">
+            <seo class="h-96 w-full" />
+            <h3>Aucun résultat correspondant à votre recherche</h3>
+            <p>
+              Veuillez essayer d'ajuster vos mots-clés de recherche ou vos
+              filtres.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="home" class="container px-4 w-full md:w-1/4">
+        <div class="md:mx-0 pt-6">
+          <h1 class="text-lg md:text-xl font-extrabold mb-0">Recherche</h1>
+          <div class="mb-4 -mt-3">
+            <span class="inline-block w-1/3 border border-secondary"></span>
+            <span class="inline-block w-2/3 border border-grey-300"></span>
+          </div>
+        </div>
+
+        <div class="pt-2 relative mx-auto text-gray-600">
+          <input
+            class="
+              border-2 border-gray-300
+              bg-white
+              h-12
+              px-5
+              pr-16
+              rounded
+              text-sm
+              focus:outline-none
+              w-full
+            "
+            type="search"
+            name="search"
+            placeholder=""
+            v-model="search"
+          />
+          <button
+            type="submit"
+            class="absolute -right-3 top-3 mr-4 p-2 bg-secondary rounded"
+          >
+            <svg
+              class="text-white h-6 w-6 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 56.966 56.966"
+              style="enable-background: new 0 0 56.966 56.966"
+              xml:space="preserve"
+              width="512px"
+              height="512px"
+              alt="atut2020"
+              title="ATUT2020"
+            >
+              <path
+                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="md:mx-0 pt-6">
+          <h1 class="text-lg md:text-xl font-bold mb-0">Articles à la une</h1>
+          <div class="mb-4 -mt-3">
+            <span class="inline-block w-1/3 border border-secondary"></span>
+            <span class="inline-block w-2/3 border border-grey-300"></span>
+          </div>
+        </div>
+
+        <div class="w-full hidden md:block">
+          <!-- post 1 -->
+          <div
+            class="w-full flex flex-col md:flex-row mb-5"
+            v-for="edge in $page.onlinePost.edges"
+            :key="edge.node.id"
+          >
+            <div class="w-2/5 h-full">
+              <g-link :to="edge.node.path">
+                <g-image
+                  alt="iot"
+                  :src="edge.node.coverImage"
+                  class="block md:hidden lg:block h-24 m-4 md:m-0 w-full"
+                />
+                <span
+                  class="
+                    relative
+                    text-white
+                    bg-secondary
+                    p-2
+                    text-sm
+                    hidden
+                    md:block
+                    ml-4
+                    -mt-7
+                    capitalize
+                    w-24
+                    text-center
+                  "
+                >
+                  {{ edge.node.categories.title }}
+                </span>
+              </g-link>
+            </div>
+            <div class="bg-white px-4 w-3/5 h-24">
+              <g-link :to="edge.node.path">
+                <p class="text-primary text-xs mt-4">
+                  <span>{{ edge.node.date | FormatDate }}</span>
+                </p>
+                <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-sm">
+                  {{ edge.node.title }}
+                </p>
+              </g-link>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:mx-0">
+          <h1 class="text-lg md:text-xl font-bold mb-0">Catégories</h1>
+          <div class="mb-4 -mt-3">
+            <span class="inline-block w-1/3 border border-secondary"></span>
+            <span class="inline-block w-2/3 border border-grey-300"></span>
+          </div>
+        </div>
+        <div>
+          <ul class="list-outside list-disc ml-6 font-bold">
+            <li
+              v-for="edge in $page.category.edges"
+              :key="edge.node.id"
+              class="text-secondary"
+            >
+              <div class="text-gray-700">{{ edge.node.title }}</div>
+            </li>
+          </ul>
+        </div>
+>>>>>>> maintainer
 
     
   </Layout>
@@ -123,6 +458,13 @@ export default {
       page: 1,
       numberOfPages: 1,
       pinnedTabs: [],
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {

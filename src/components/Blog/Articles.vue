@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="md:px-20 pt-8">
      <div class="carousel relative md:container bg-center rounded overflow-hidden shadow-xl">
         <div class="carousel-inner relative overflow-hidden w-full">
@@ -218,3 +219,9 @@
             />
         </div> -->
     <!-- </div> -->
+=======
+<div>
+    <div> </div>
+</div>
+</template>
+>>>>>>> maintainer

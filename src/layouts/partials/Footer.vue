@@ -3,16 +3,45 @@
     <Contact />
 
     <footer class="bg-primary">
-      <div class="text-white md:flex w-full px-4 md:px-0 md:mx-0 md:text-left">
+      <div></div>
+      <div
+        class="
+          text-white
+          md:flex
+          flex-wrap
+          lg:flex-nowrap
+          w-full
+          px-4
+          sm:px-0
+          lg:px-4
+          md:px-0
+          md:mx-0
+          md:text-left
+        "
+      >
         <!-- Col-1 -->
-        <div class="md:px-20 p-5 w-full sm:w-4/12 md:w-3/12">
+        <div class="sm:px-10 lg:px-20 p-5 w-full lg:w-3/12">
           <div class="w-10">
             <Logo />
           </div>
         </div>
 
         <!-- Col-2 -->
-        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
+        <div
+          class="
+            hidden
+            md:block
+            -my-5
+            p-8
+            sm:p-4
+            md:p4
+            lg:p-8
+            w-full
+            sm:w-3/12
+            lg:w-3/12
+            md:m-5
+          "
+        >
           <!-- Col Title -->
           <div class="uppercase text-white font-extrabold mb-6 font-roboto">
             Produits
@@ -74,7 +103,21 @@
         </div>
 
         <!-- Col-3 -->
-        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
+        <div
+          class="
+            hidden
+            md:block
+            -my-5
+            p-8
+            sm:p-4
+            md:p4
+            lg:p-8
+            w-full
+            sm:w-3/12
+            lg:w-3/12
+            md:m-5
+          "
+        >
           <!-- Col Title -->
           <div class="uppercase text-white font-extrabold mb-6 font-roboto">
             Liens utiles
@@ -148,14 +191,188 @@
           </a>
         </div>
 
+        <!-- mobile footer col-1 -->
+        <div class="w-full md:hidden py-2 mx-auto px-10">
+          <button
+            type="button"
+            aria-expanded="true"
+            class="
+              flex
+              justify-between
+              items-center
+              w-full
+              py-2
+              text-sm text-left
+              focus:outline-none
+              text-white
+              font-extrabold font-roboto
+              border-b border-white
+            "
+            aria-controls="headlessui-disclosure-panel-2"
+            @click="(openProducts = !openProducts), (openLinks = false)"
+          >
+            <span class="text-xl">Produits</span>
+            <ChevronUp :class="openProducts ? 'transform rotate-180' : ''" />
+          </button>
+
+          <div
+            class="pt-2 pb-2 transition transform ease-out"
+            :class="
+              openProducts
+                ? 'scale-100 opacity-100 delay-100 duration-100'
+                : 'scale-95 opacity-0 duration-75'
+            "
+          >
+            <!-- Links -->
+            <a
+              href="https://coraq.formation.chmp.org"
+              class="
+                w-full
+                my-3
+                block
+                text-white
+                hover:text-gray-200
+                font-medium
+                duration-300
+              "
+              :class="!openProducts ? 'hidden' : ''"
+            >
+              &bull; Coraq Lab - CHMP
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rintio.idermato&hl=fr&gl=US"
+              class="
+                my-3
+                block
+                text-white
+                hover:text-gray-200
+                font-medium
+                duration-300
+              "
+              :class="!openProducts ? 'hidden' : ''"
+            >
+              &bull; Idermato
+            </a>
+            <a
+              href="#"
+              class="
+                my-3
+                block
+                text-white
+                hover:text-gray-300
+                font-medium
+                duration-300
+              "
+              :class="!openProducts ? 'hidden' : ''"
+            >
+              &bull; Duniya Data
+            </a>
+          </div>
+        </div>
+
+        <!-- mobile footer col-1 -->
+        <div class="w-full md:hidden py-2 px-10">
+          <button
+            type="button"
+            aria-expanded="true"
+            class="
+              flex
+              justify-between
+              items-center
+              w-full
+              py-2
+              text-sm text-left
+              focus:outline-none
+              text-white
+              font-extrabold font-roboto
+              border-b border-white
+            "
+            aria-controls="headlessui-disclosure-panel-2"
+            @click="(openLinks = !openLinks), (openProducts = false)"
+          >
+            <span class="text-xl">Liens utiles</span>
+            <ChevronUp :class="openLinks ? 'transform rotate-180' : ''" />
+          </button>
+
+          <div
+            class="pt-2 pb-2 transition transform ease-out"
+            :class="
+              openLinks
+                ? 'scale-100 opacity-100 delay-100 duration-100'
+                : 'scale-95 opacity-0 duration-75'
+            "
+          >
+            <!-- Links -->
+            <a
+              href="#"
+              class="
+                w-full
+                my-3
+                block
+                text-white
+                hover:text-gray-200
+                font-medium
+                duration-300
+              "
+              :class="!openLinks ? 'hidden' : ''"
+            >
+              &bull; Rintio Data Lab
+            </a>
+            <a
+              href="#"
+              class="
+                my-3
+                block
+                text-white
+                hover:text-gray-200
+                font-medium
+                duration-300
+              "
+              :class="!openLinks ? 'hidden' : ''"
+            >
+              &bull; Rintio Innovative Factory
+            </a>
+            <a
+              href="#"
+              class="
+                my-3
+                block
+                text-white
+                hover:text-gray-300
+                font-medium
+                duration-300
+              "
+              :class="!openLinks ? 'hidden' : ''"
+            >
+              &bull; Nos engagements
+            </a>
+            <a
+              href="#"
+              class="
+                my-3
+                block
+                text-white
+                hover:text-gray-300
+                font-medium
+                duration-300
+              "
+              :class="!openLinks ? 'hidden' : ''"
+            >
+              &bull; Africa Tech Up Tour
+            </a>
+          </div>
+        </div>
+
         <!-- Col-4 -->
-        <div class="p-8 w-full sm:w-4/12 md:w-3/12">
+        <div class="-my-5 py-8 px-8 md:px-2 w-full sm:w-4/12 lg:w-3/12 lg:m-5">
           <div class="h-auto">
             <div class="text-red-light mb-3">Newsletter</div>
-            <div class="mt-4 flex">
+            <div class="flex mt-4" v-res>
               <input
                 type="text"
                 class="
+                  w-full
+                  md:w-auto
                   p-2
                   border border-grey-light
                   round
@@ -182,7 +399,8 @@
                   focus:outline-none
                 "
               >
-                Je m'abonne
+                <span class="hidden md:block">Je m'abonne</span>
+                <Send class="md:hidden" />
               </button>
             </div>
             <p class="mt-6 mb-4">Suivez nous sur :</p>
@@ -273,11 +491,21 @@
 <script>
 import Logo from "./Logo";
 import Contact from "~/components/Contact.vue";
+import Send from "~/assets/images/icons/send.svg";
+import ChevronUp from "~/assets/images/icons/chevronup.svg";
 
 export default {
   components: {
     Logo,
     Contact,
+    Send,
+    ChevronUp,
+  },
+  data() {
+    return {
+      openProducts: false,
+      openLinks: false,
+    };
   },
 };
 </script>

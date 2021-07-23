@@ -1,6 +1,6 @@
 <template>
   <div class="md:flex w-full px-4 md:px-0 md:text-left">
-    <div class="md:px-20 md:w-1/2">
+    <div class="sm:px-8 lg:px-20 sm:w-1/2">
       <div class="flex">
         <div class="mx-auto">
           <div class="max-w-lg mx-auto my-10">
@@ -26,7 +26,7 @@
               <h2
                 class="
                   my-3
-                  text-xl
+                  text-2xl
                   md:text-5xl
                   font-extrabold
                   text-primary
@@ -36,7 +36,7 @@
                 <span class="text-secondary">votre besoin ?</span>
               </h2>
 
-              Toutes nos équipes au Bénin et et à l'international se tiennent à
+              Toutes nos équipes au Bénin et à l'international se tiennent à
               votre disposition !
             </div>
 
@@ -116,7 +116,7 @@
         </div>
       </div>
     </div>
-    <div class="md:px-32 md:w-1/2">
+    <div class="sm:px-8 lg:px-32 sm:w-1/2">
       <!-- Contact Form -->
       <div class="flex items-center">
         <div class="container mx-auto">
@@ -134,9 +134,9 @@
             "
           >
             <div class="mx-4 md:m-7">
-              <h3 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
+              <h2 class="my-3 text-lg md:text-3xl font-semibold text-gray-700">
                 Envoyer nous un message
-              </h3>
+              </h2>
             </div>
             <div class="mx-4 md:m-7">
               <form id="form" name="form" @submit.prevent="sendEmail">
