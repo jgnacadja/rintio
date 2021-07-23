@@ -44,7 +44,7 @@
 
         <p class="my-3 font-light">
           Les solutions que nous proposons à nos précieux clients. Découvrez nos
-          offres qui accélérons certainement votre productivité.
+          offres qui accéléront certainement votre productivité.
         </p>
         <div class="mt-4 text-center">
           <g-link to="/offres">

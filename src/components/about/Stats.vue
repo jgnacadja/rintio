@@ -8,7 +8,7 @@
     }"
   >
     <div class="flex flex-wrap mx-auto mb-8 md:mb-0 md:space-x-24 ">
-      <div class="w-1/2 md:w-auto xl:w-auto text-center " >
+      <div class="w-1/2 md:w-auto lg:auto xl:w-auto text-center " >
         <p id="customer" class="text-5xl md:text-5xl xl:text-8xl font-bold">0</p>
         <!-- Dot -->
         <div class="-mt-3">
