@@ -18,4 +18,5 @@
 .bg-homeslider-1 {
   background-image: url("./../../assets/images/blog/rectangle01.png");
 }
+
 </style>
