@@ -2,202 +2,181 @@
   <Layout>
     <!-- component -->
     <div class="mx-auto">
+      <div class="mb-4 md:mb-0 w-full mx-auto relative" style="height: 24em">
         <div
-          class="mb-4 md:mb-0 w-full mx-auto relative"
-          style="height: 24em"
+          class="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-black opacity-70"
+        ></div>
+        <g-image
+          alt="iot"
+          :src="$page.post.coverImage"
+          class="absolute left-0 top-0 w-full h-full z-0 object-cover"
+        />
+
+        <div class="p-4 absolute h-full w-full text-center z-20 pt-10 md:pt-28">
+          <span
+            class="px-4 py-1 mx-auto bg-secondary text-gray-200 inline-flex items-center justify-center mb-4 md:mb-10"
+            >{{ $page.post.categories.title }}</span
+          >
+          <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+            {{ $page.post.title }}
+          </h2>
+        </div>
+      </div>
+
+      <div class="w-full text-gray-800 mx-auto py-6 capitalize font-roboto">
+        <div
+          class="md:flex max-w-screen-xl mx-auto justify-between items-center text-gray-800 space-x-1"
         >
+          <div class="">
+            <g-link class="hover:text-primary" to="/"> Acceuil </g-link>
+            <span> | </span>
+            <g-link class="hover:text-primary" to="/blog"> Blog </g-link>
+          </div>
           <div
-            class="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-black opacity-70"
-          ></div>
+            class="md:flex px-4 lg:px-0 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
+          >
+            <div class="flex py-2 space-x-16 items-center">
+              <div class="flex space-x-4">
+                <button
+                  class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
+                >
+                  <User />
+                </button>
+
+                <div class="px-1 md:px-0 text-left text-sm text-gray-800">
+                  <div>Vues</div>
+                  <div class="text-primary font-bold">813,454</div>
+                </div>
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
+                >
+                  <Calendar />
+                </button>
+                <div class="px-1 md:px-0 text-left text-sm text-gray-800">
+                  <div>
+                    <span v-if="!$page.post.author">Par Rintio</span>
+                    <span v-if="$page.post.author"
+                      >Par {{ $page.post.author }}</span
+                    >
+                  </div>
+                  <div class="text-primary font-bold">
+                    {{ $page.post.date }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed text-justify"
+      >
+        <vue-markdown>{{ $page.post.content }}</vue-markdown>
+      </div>
+
+      <div
+        class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
+      >
+        <div class="flex py-2 items-center">
+          <button
+            class="uppercase p-3 flex items-center bg-white max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
+          >
+            <Tag />
+          </button>
+
+          <div>
+            <span
+              v-for="edge in $page.tags.edges"
+              :key="edge.node.id"
+              class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize"
+              >{{ edge.node.title }}
+            </span>
+          </div>
+        </div>
+
+        <div class="flex p-2 ml-auto items-center">
+          <div class="items-start">
+            <div class="flex space-x-2">
+              <a
+                :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
+                target="_blank"
+              >
+                <Linkedin />
+              </a>
+              <a
+                :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
+                target="_blank"
+              >
+                <Twitter />
+              </a>
+              <a
+                :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
+                target="_blank"
+              >
+                <Facebook />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- popular posts -->
+      <div
+        class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-xl mx-auto items-center justify-between"
+      >
+        <h2 class="font-bold text-3xl">Vous pouvez aussi lire</h2>
+        <g-link
+          to="/blog"
+          class="bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
+        >
+          Voir toutes les publications
+        </g-link>
+      </div>
+      <div class="block space-x-0 lg:flex max-w-screen-xl mx-auto lg:space-x-6">
+        <div
+          class="rounded w-full md:w-1/2 lg:w-1/3 p-4 lg:p-0 shadow-md bg-white"
+          v-for="edge in $page.onlinePost.edges"
+          :key="edge.node.id"
+        >
           <g-image
             alt="iot"
-            :src="$page.post.coverImage"
-            class="absolute left-0 top-0 w-full h-full z-0 object-cover"
+            :src="edge.node.coverImage"
+            class="rounded h-64 w-full"
           />
-          <div class="p-4 absolute bottom-0 left-0 z-20 px-20">
-            <a
-              href="#"
-              class="px-4 py-1 bg-secondary text-gray-200 inline-flex items-center justify-center mb-2"
-              >{{$page.post.categories.title}}</a
-            >
-          </div>
-        </div>
-      <Breadcrumb :path="path" :article="$page.post.title" />
+          <h2 class="font-bold text-lg text-gray-800 mb-px px-4">
+            {{ edge.node.title }}
+          </h2>
+          <p class="text-gray-700 mb-px px-4">
+            {{ edge.node.metaDescription | truncate }}
+          </p>
 
-        <div
-          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
-        >
-          <div class="flex py-2 space-x-16 items-center">
-            <div class="flex space-x-4">
-              <button
-                class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
-              >
-                <User />
-              </button>
-
-              <div class="px-1 md:px-0 text-left text-sm text-gray-800">
-                <div>Vues</div>
-                <div class="text-primary font-bold">813,454</div>
-              </div>
-            </div>
-            <div class="flex space-x-4">
-              <button
-                class="uppercase p-3 flex items-center bg-secondary max-w-max bg-opacity-10 rounded-full w-10 h-10 pointer-events-none"
-              >
-                <Calendar />
-              </button>
-              <div class="px-1 md:px-0 text-left text-sm text-gray-800">
-                <div>
-                  <span v-if="!$page.post.author">Par Rintio</span>
-                  <span v-if="$page.post.author"
-                    >Par {{$page.post.author}}</span
-                  >
-                </div>
-                <div class="text-primary font-bold">
-                  {{ $page.post.date }}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex p-2 ml-auto items-center">
-            <div class="items-start">
-              <div class="flex space-x-2">
-                <a
-                  :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
-                  target="_blank"
-                >
-                  <Linkedin />
-                </a>
-                <a
-                  :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
-                  target="_blank"
-                >
-                  <Twitter />
-                </a>
-                <a
-                  :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
-                  target="_blank"
-                >
-                  <Facebook />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
-        >
-          <vue-markdown>{{
-            $page.post.content
-          }}</vue-markdown>
-        </div>
-
-        <div
-          class="md:flex px-4 lg:px-0 mt-4 text-gray-700 max-w-screen-xl mx-auto text-lg leading-relaxed"
-        >
-          <div class="flex py-2 items-center">
-            <button
-              class="uppercase p-3 flex items-center bg-white max-w-max bg-opacity-10 rounded-full w-12 h-12 pointer-events-none"
-            >
-              <Tag />
-            </button>
-
-            <div>
-              <span
-                v-for="edge in $page.tags.edges"
-                :key="edge.node.id"
-                class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize"
-                >{{ edge.node.title }}
-              </span>
-            </div>
-          </div>
-
-          <div class="flex p-2 ml-auto items-center">
-            <div class="items-start">
-              <div class="flex space-x-2">
-                <a
-                  :href="`https://www.linkedin.com/sharing/share-offsite/?url=${$static.metadata.siteUrl}${fullPath}`"
-                  target="_blank"
-                >
-                  <Linkedin />
-                </a>
-                <a
-                  :href="`https://twitter.com/intent/tweet?url=${$static.metadata.siteUrl}${fullPath}&text=${$page.post.title}&via=rintioGroup&hashtags=${tags}`"
-                  target="_blank"
-                >
-                  <Twitter />
-                </a>
-                <a
-                  :href="`https://www.facebook.com/sharer.php?u=${$static.metadata.siteUrl}${fullPath}&href=${$static.metadata.siteUrl}${fullPath}&quote=${$page.post.metaDescription}`"
-                  target="_blank"
-                >
-                  <Facebook />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- popular posts -->
-        <div
-          class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-xl mx-auto items-center justify-between"
-        >
-          <h2 class="font-bold text-3xl">Vous pouvez aussi lire</h2>
           <g-link
-            to="/blog"
-            class="bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
+            :to="edge.node.path"
+            class="flex rounded text-primary py-2 px-4"
           >
-            Voir toutes les publications
+            Lire plus
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 px-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </g-link>
         </div>
-        <div
-          class="block space-x-0 lg:flex max-w-screen-xl mx-auto lg:space-x-6"
-        >
-          <div
-            class="rounded w-full md:w-1/2 lg:w-1/3 p-4 lg:p-0"
-            v-for="edge in $page.onlinePost.edges"
-            :key="edge.node.id"
-          >
-            <g-image
-              alt="iot"
-              :src="edge.node.coverImage"
-              class="rounded h-64 w-full"
-            />
-            <div class="px-4 pl-0">
-              <h2 class="font-bold text-lg text-gray-800 mb-px">
-                {{ edge.node.title }}
-              </h2>
-              <p class="text-gray-700 mb-px">
-                {{ edge.node.metaDescription | truncate}}
-              </p>
-
-              <g-link
-                :to="edge.node.path"
-                class="flex rounded text-primary py-2"
-              >
-                Lire plus
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 px-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </g-link>
-            </div>
-          </div>
-        </div>
-        <!-- end popular posts -->
       </div>
+      <!-- end popular posts -->
+    </div>
   </Layout>
 </template>
 
@@ -315,7 +294,7 @@ export default {
   },
   filters: {
     truncate(value) {
-         return value.substr(0, 50) + "...";
+      return value.substr(0, 50) + "...";
     },
   },
 };

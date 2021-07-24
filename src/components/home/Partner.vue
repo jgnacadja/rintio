@@ -23,7 +23,7 @@
         <h2
           class="
             my-3
-            text-xl
+            text-2xl
             md:text-5xl
             text-primary
             font-extrabold
@@ -34,7 +34,7 @@
           <span class="text-secondary">confiance</span>
         </h2>
 
-        <p class="my-3 text- xl">
+        <p class="my-3 font-light text- xl">
           Il serait long et fastidieux de présenter la 
           <span class="font-bold"
             > liste exhaustive de nos
@@ -58,7 +58,7 @@
         space-x-4
       "
     >
-      <div class="1/3 space-y-4">
+      <div class="1/3 space-y-4 ">
         <div
           class="rounded-3xl p-2 m-2 bg-white text-gray-100 w-72 h-72 flex items-center justify-center text-xl font-bold shadow-xl"
         >

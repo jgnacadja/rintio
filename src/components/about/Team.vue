@@ -1,351 +1,80 @@
 <template>
-  <div class="md:px-20 md:flex w-full justify-center py-6 md:py-24">
-    <div class="w-full mx-auto mb-8 md:mb-0">
-      <div class="mx-4 md:mx-0 text-center">
-        <h1
-          class="pb-8 text-xl md:text-5xl font-extrabold capitalize text-primary"
-        >
-          Nos
-          <span class="text-secondary"> experts</span>
-        </h1>
+  <div>
+    <!---->
 
-        <p class="my-3 md:w-1/2 mx-auto">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le
-          <span class="font-bold"
-            >développement et l’intégration de solutions informatiques..</span
+    <div class="md:px-20 md:flex w-full justify-center py-6 md:py-24">
+      <div class="w-full mx-auto mb-8 md:mb-0">
+        <div class="mx-4 md:mx-0 text-center">
+          <h1
+            class="pb-8 text-xl md:text-5xl font-extrabold capitalize text-primary"
           >
-        </p>
-      </div>
-      <div class="hidden md:block mx-4 md:mx-0 pt-6 px-24 space-y-10">
-        <div class="flex space-x-10">
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Mike</h2>
+            Nos
+            <span class="text-secondary"> experts</span>
+          </h1>
 
-            <p class="mb-0 px-6">• PhD Informatique</p>
-            <p class="mb-0 px-6">• Data Architect, Cloud & DevOps Engineer</p>
-            <p class="mb-0 px-6">
-              • +10 Ans d'Expériences : AXA, Amadeus, Orange
-            </p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
+          <p class="my-3 md:w-1/2 mx-auto">
+            Rintio est composé d’une équipe professionnelle et dynamique et d’un
+            réseau de partenaires qui n’ont qu’un seul objectif:
+            <span class="font-bold"
+              >donner vie à vos projets en respectant les deadlines.</span
+            >
+          </p>
+          <!---->
+
+          <div class="mt-12 -mx-3 flex flex-wrap items-start">
+            <div
+              class="px-3 w-full sm:w-1/2 lg:w-1/4"
+              v-for="expert in currentList"
+              :key="expert"
+            >
+              <div
+                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
               >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
+                <div class="w-full flex flex-row items-center">
+                  <div class="w-1/3">
+                    <div
+                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                    >
+                      <g-image
+                        :src="expert.imgUrl"
+                        :alt="expert.imgAlt"
+                      ></g-image>
+                    </div>
+                    <span class="inline-flex">
+                      <a
+                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        :href="expert.linkedInUrl"
+                        target="_blank"
+                      >
+                        <i class="fab fa-linkedin-in relative"></i>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
+                    <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
+                      {{ expert.name }}
+                    </h6>
+                    <p
+                      :key="career"
+                      v-for="career in expert.career"
+                      class="text-xs mb-2"
+                    >
+                      • {{ career }}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Carlyna</h2>
-
-            <p class="mb-0 px-6">• PhD Informatique</p>
-            <p class="mb-0 px-6">• Data Engineer</p>
-            <p class="mb-0 px-6">• +5 Ans d'Expériences : Ysance, Inria</p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Habib</h2>
-
-            <p class="mb-0 px-6">• PhD Informatique</p>
-            <p class="mb-0 px-6">• Data Scientist , Project Manager</p>
-            <p class="mb-0 px-6">
-              • +7 Ans d'Expériences : Ericsson, Orange, Bouygues Telecom
-            </p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="flex space-x-10">
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Talla</h2>
-
-            <p class="mb-0 px-6">• Ingénieur Informatique</p>
-            <p class="mb-0 px-6">
-              • Ingénieur Informatique • +6 Ans d'Expériences : Orange, Oracle,
-              Société Générale
-            </p>
-            <p class="mb-0 px-6">
-              • +6 Ans d'Expériences : Orange, Oracle, Société Générale
-            </p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Julien</h2>
-
-            <p class="mb-0 px-6">• Ingénieur Informatique</p>
-            <p class="mb-0 px-6">
-              • Ingénieur Informatique • +8 Ans d'Expériences: Tota
-            </p>
-            <p class="mb-0 px-6">• +8 Ans d'Expériences: Tota</p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Fiacre</h2>
-
-            <p class="mb-0 px-6">• Ingénieur Informatique, Actuaire</p>
-            <p class="mb-0 px-6">• Projet Manager, Scrum Master</p>
-            <p class="mb-0 px-6">• +7 Ans d'Exp : SNCF, AXA</p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="flex space-x-10">
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Michel</h2>
-
-            <p class="mb-0 px-6">• Ingénieur Informatique</p>
-            <p class="mb-0 px-6">
-              • AI & Data Strategist, Enterprise Architect
-            </p>
-            <p class="mb-0 px-6">
-              • +10 Ans d'Expériences : Société Générale, BNP Paribas, Dassault,
-              Naval Group
-            </p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.faceboldbook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-          <div class="bg-white md:w-1/3 py-4">
-            <Expert class="mx-auto w-72" />
-            <h2 class="mt-10 px-6 border-b-2 border-secondary pb-2">Nicaise</h2>
-
-            <p class="mb-0 px-6">• PhD Informatique</p>
-            <p class="mb-0 px-6">• Data Scientist, Data Architect</p>
-            <p class="mb-0 px-6">
-              • +8 Ans d'Expériences : Orange, Société Générale
-            </p>
-            <div class="flex py-4 px-6">
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter relative"></i>
-              </a>
-              <a
-                class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-              >
-                <i class="fab fa-instagram relative"></i>
-              </a>
-            </div>
-          </div>
-          <div class="bg-white md:w-1/3 py-4 invisible"></div>
+          <!---->
+          <t-pagination
+            :total-items="totalItems"
+            :per-page="perPage"
+            v-model="currentPage"
+            :classes="classes"
+            @change="updateList($event)"
+          />
         </div>
       </div>
     </div>
@@ -353,11 +82,50 @@
 </template>
 
 <script>
-import Expert from "~/assets/images/icons/expert.svg";
+import experts from "~/assets/experts.json";
+import { TPagination } from "vue-tailwind/dist/components";
 
 export default {
   components: {
-    Expert,
+    TPagination,
+  },
+  data() {
+    return {
+      list: experts.list,
+      currentList: experts.list,
+      currentPage: 1,
+      perPage: 4,
+      totalItems: 1,
+      classes: {
+        wrapper: "table border-collapse text-center bg-white mx-auto shadow-sm",
+        element:
+          "w-8 h-8 border border-gray-200 table-cell hover:border-blue-100",
+        activeElement:
+          "w-8 h-8 border border-secondary table-cell hover:border-secondry",
+        disabledElement: "w-8 h-8 border border-gray-200 table-cell",
+        ellipsisElement: "w-8 h-8 border border-gray-200 hidden md:table-cell",
+        activeButton:
+          "bg-secondary w-full h-full text-white hover:bg-secondary transition duration-100 ease-in-out focus:outline-none",
+        disabledButton:
+          "opacity-25 w-full h-full cursor-not-allowed transition duration-100 ease-in-out",
+        button:
+          "hover:bg-blue-100 w-full h-full transition duration-100 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50",
+        ellipsis: "",
+      },
+    };
+  },
+  mounted() {
+    this.list = experts.list;
+    this.totalItems = this.list.length;
+    this.updateList(this.currentPage);
+  },
+  methods: {
+    updateList(currentPage) {
+      this.currentList= this.list.slice(
+        (currentPage - 1) * this.perPage,
+        currentPage * this.perPage
+      );
+    },
   },
 };
 </script>
