@@ -7,14 +7,18 @@
     <div class="items-center w-full justify-center py-6">
       <div class="text-center mx-4 sm:mx-4 lg:mx-32 xl:mx-64">
         <h1
-          class="my-3 text-2xl lg:text-5xl font-extrabold text-primary capitalize"
+          class="
+            my-3
+            text-2xl
+            lg:text-5xl
+            font-extrabold
+            text-primary
+          "
         >
           Nous offrons des solutions professionnelles pour les entreprises
         </h1>
         <p class="md:w-2/3 mx-auto py-4 md:px-0">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le développement et l’intégration de solutions
-          informatiques..
+          Rintio apporte des solutions innovantes aux entreprises et institutions en communiquant les technologies du numérique  aux grands enjeux de nos sociétés.
         </p>
       </div>
     </div>
@@ -29,18 +33,41 @@
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import Offers from "~/components/offer/Offers.vue";
+import Keywords from "~/assets/keywords.json";
+
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
     Offers,
   },
-  metaInfo: {
-    title: "Nos offres",
+  metaInfo() {
+    return {
+      title: "Nos offres",
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+        },
+        {
+          key: "keywords",
+          name: "keywords",
+          content: Keywords.list,
+        },
+      ],
+    };
   },
   data() {
     return {
       path: "",
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {

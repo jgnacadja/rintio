@@ -20,7 +20,6 @@
         items-center
         justify-center
         mx-auto
-        hidden
         md:block
       "
     >
@@ -29,18 +28,20 @@
           class="absolute -top-12 left-0"
           src="~/assets/images/home/about/about.png"
           alt="Workplace"
+          Title="About"
           width="600"
         />
 
         <g-image
           class="absolute -top-12 p-20"
           src="~/assets/images/home/about/team.png"
+          alt="team"
+          title="team"
           width="600"
         />
       </div>
     </div>
-
-    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+    <div class="w-full md:w-1/2 mb-8 md:mb-0 mt-96 md:mt-0">
       <div class="mx-4 md:mx-0">
         <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
           Qui sommes-nous ?
@@ -60,7 +61,7 @@
         <h2
           class="
             my-3
-            text-xl
+            text-2xl
             md:text-5xl
             font-extrabold
             text-primary
@@ -71,7 +72,8 @@
           <span class="text-secondary">numérique</span>
         </h2>
 
-        <p class="my-3 text-justify leading-8">
+
+        <p class="my-3 font-light text-justify leading-8">
           Rintio est une entreprise de services du numérique. Nous sommes
           spécialisées dans le
           <span class="font-bold"

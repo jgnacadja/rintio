@@ -34,6 +34,8 @@ import Services from "~/components/about/Services.vue";
 import Experts from "~/components/about/Experts.vue";
 import Stats from "~/components/about/Stats.vue";
 import Team from "~/components/about/Team.vue";
+import Keywords from "~/assets/keywords.json";
+
 export default {
   components: {
     LazyHydrate,
@@ -44,12 +46,34 @@ export default {
     Stats,
     Team,
   },
-  metaInfo: {
-    title: "A propos",
+  metaInfo() {
+    return {
+      title: "A propos",
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+        },
+        {
+          key: "keywords",
+          name: "keywords",
+          content: Keywords.list,
+        },
+      ],
+    };
   },
+
   data() {
     return {
       path: "",
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {
