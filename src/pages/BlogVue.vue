@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
-      <Breadcrumb :path="path" />    
+      <Breadcrumb :path="path" />
     </LazyHydrate>
 
     <div
@@ -336,8 +336,8 @@
             </li>
           </ul>
         </div>
-
-    
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -422,7 +422,7 @@ export default {
   components: {
     LazyHydrate,
     Breadcrumb,
-    Articles, 
+    Articles,
     Pager,
     Seo,
     RemoveTag,
@@ -434,7 +434,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content:
+            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
         },
         {
           key: "keywords",
@@ -453,10 +454,25 @@ export default {
       numberOfPages: 1,
       pinnedTabs: [],
       config: {
-        keywords: ['service','numérique','cloud','Devops','offshoring',
-        'nearingShore','Afrique','informatique','IT','webservice',
-        'Big data','IA','intelligence','Application','python',
-        'cluster','java','E-learning'
+        keywords: [
+          "service",
+          "numérique",
+          "cloud",
+          "Devops",
+          "offshoring",
+          "nearingShore",
+          "Afrique",
+          "informatique",
+          "IT",
+          "webservice",
+          "Big data",
+          "IA",
+          "intelligence",
+          "Application",
+          "python",
+          "cluster",
+          "java",
+          "E-learning",
         ],
       },
     };
