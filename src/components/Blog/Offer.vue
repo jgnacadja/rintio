@@ -1,126 +1,64 @@
 <template>
-    <div class="container mx-auto m-16">
+    <div class="container mx-auto w-full mt-8 md:mt-24 md:px-16">
         <div class="mt-4 m-16">
-            <div class="text-base text-indigo-600 font-bold">
+            <div class="mb-12 text-lg text-primary font-bold">
                 <h4>Offres</h4>
             </div>
-            <!-- <div class="w-full">
-                <VueSlickCarousel v-bind="settings">                                                                                                                        
-                    <div class="space-y-6 flex flex-col">
-                        <div class="space-x-6">
-                            <div
-                                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring"
-                            >
-                                <div class="w-full overflow-hidden">
-                                <div class="w-full h-40"></div>
-                                <div class="w-full relative px-4 pb-4">
-                                    <div
-                                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                                    >
-                                    Offshoring
-                                    </div>
+            
+            <VueSlickCarousel v-bind="settings">
+                <div
+                    class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
+                >
+                    <div class="w-full overflow-hidden">
+                    <div class="w-full h-40"></div>
+                    <div class="w-full relative px-4 pb-4">
+                        <div
+                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                        >
+                        Offshoring
+                        </div>
 
-                                    <div
-                                    class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-                                    >
-                                    Un développeur à partir de 50€ / Jour
-                                    </div>
+                        <div
+                        class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        Un développeur à partir de 50€ / Jour
+                        </div>
 
-                                    <div
-                                    class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                                    >
-                                    #Python #Java #Php. 1 mois offert.
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
-                            >
-                                <div class="w-full overflow-hidden">
-                                <div class="w-full h-40"></div>
-                                <div class="w-full relative px-4 pb-4">
-                                    <div
-                                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                                    >
-                                    Offshoring
-                                    </div>
-
-                                    <div
-                                    class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-                                    >
-                                    Administration Cloud et Infrastructure
-                                    </div>
-
-                                    <div
-                                    class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                                    >
-                                    A partir de 200€ / Mois. 3Mois offerts.
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                        <div
+                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        A partir de 200€ / Mois. 3Mois offerts.
                         </div>
                     </div>
+                    </div>
+                </div> 
 
-                    <div class="space-y-6">
-                        <div class="flex-wrap space-x-6">
-                            <div
-                                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
-                            >
-                                <div class="w-full overflow-hidden">
-                                <div class="w-full h-40"></div>
-                                <div class="w-full relative px-4 pb-4">
-                                    <div
-                                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                                    >
-                                    Data Lab
-                                    </div>
+                <div
+                    class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+                >
+                    <div class="w-full overflow-hidden">
+                    <div class="w-full h-40"></div>
+                    <div class="w-full relative px-4 pb-4">
+                        <div
+                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                        >
+                        (Big) Data & Analytics
+                        </div>
 
-                                    <div
-                                    class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                                    >
-                                    Accélérez votre croissance en exploitant pleinement
-                                    lepotentiel de vos données.
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-bigdata"
-                            >
-                                <div class="w-full overflow-hidden">
-                                <div class="w-full h-40"></div>
-                                <div class="w-full relative px-4 pb-4">
-                                    <div
-                                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                                    >
-                                    (Big) Data & Analytics
-                                    </div>
-
-                                    <div
-                                    class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                                    >
-                                    Captez, nettoyez, stockez, diffusez et exploitez vos
-                                    données
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                        <div
+                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                         Accélérez votre croissance en exploitant pleinement
+                      le potentiel de vos données.
                         </div>
                     </div>
-                </VueSlickCarousel>
-            </div> -->
-        
+                    </div>
+                </div>  
 
-            <div class="w-full ">
-                <div class="flex flex-row">
-                    <div
-                        class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring"
-                    >
-                        <div class="w-full overflow-hidden">
+                <div
+                    class="shadow-lg group container bg-white max-w-sm bg-center bg-cover bg-no-repeat bg-offshoring"
+                >
+                    <div class="w-full overflow-hidden">
                         <div class="w-full h-40"></div>
                         <div class="w-full relative px-4 pb-4">
                             <div
@@ -141,13 +79,89 @@
                             #Python #Java #Php. 1 mois offert.
                             </div>
                         </div>
+                    </div>
+                </div>    
+
+                <div
+                    class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
+                >
+                    <div class="w-full overflow-hidden">
+                    <div class="w-full h-40"></div>
+                    <div class="w-full relative px-4 pb-4">
+                        <div
+                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                        >
+                        Offshoring
+                        </div>
+
+                        <div
+                        class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        Un développeur à partir de 50€ / Jour
+                        </div>
+
+                        <div
+                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        A partir de 200€ / Mois. 3Mois offerts.
                         </div>
                     </div>
+                    </div>
+                </div>
 
-                    <div
-                        class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
-                    >
-                        <div class="w-full overflow-hidden">
+                <div
+                    class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
+                >
+                    <div class="w-full overflow-hidden">
+                    <div class="w-full h-40"></div>
+                    <div class="w-full relative px-4 pb-4">
+                        <div
+                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                        >
+                        Offshoring
+                        </div>
+
+                        <div
+                        class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        Un développeur à partir de 50€ / Jour
+                        </div>
+
+                        <div
+                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        A partir de 200€ / Mois. 3Mois offerts.
+                        </div>
+                    </div>
+                    </div>
+                </div> 
+
+                <div
+                    class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
+                >
+                    <div class="w-full overflow-hidden">
+                    <div class="w-full h-40"></div>
+                    <div class="w-full relative px-4 pb-4">
+                        <div
+                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                        >
+                        (Big) Data & Analytics
+                        </div>
+
+                        <div
+                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                         Accélérez votre croissance en exploitant pleinement
+                      le potentiel de vos données.
+                        </div>
+                    </div>
+                    </div>
+                </div>  
+
+                <div
+                    class="shadow-lg group container bg-white max-w-sm bg-center bg-cover bg-no-repeat bg-offshoring"
+                >
+                    <div class="w-full overflow-hidden">
                         <div class="w-full h-40"></div>
                         <div class="w-full relative px-4 pb-4">
                             <div
@@ -159,67 +173,46 @@
                             <div
                             class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
                             >
-                            Administration Cloud et Infrastructure
+                            Un développeur à partir de 50€ / Jour
                             </div>
 
                             <div
                             class="text-white tracking-wider leading-relaxed font-roboto text-xs"
                             >
-                            A partir de 200€ / Mois. 3Mois offerts.
+                            #Python #Java #Php. 1 mois offert.
                             </div>
-                        </div>
                         </div>
                     </div>
-                    
-                    <div
-                        class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-datalab"
-                    >
-                        <div class="w-full overflow-hidden">
-                        <div class="w-full h-40"></div>
-                        <div class="w-full relative px-4 pb-4">
-                            <div
-                            class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                            >
-                            Data Lab
-                            </div>
+                </div>    
 
-                            <div
-                            class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                            >
-                            Accélérez votre croissance en exploitant pleinement
-                            lepotentiel de vos données.
-                            </div>
+                <div
+                    class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
+                >
+                    <div class="w-full overflow-hidden">
+                    <div class="w-full h-40"></div>
+                    <div class="w-full relative px-4 pb-4">
+                        <div
+                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                        >
+                        Offshoring
                         </div>
+
+                        <div
+                        class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        Un développeur à partir de 50€ / Jour
+                        </div>
+
+                        <div
+                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                        >
+                        A partir de 200€ / Mois. 3Mois offerts.
                         </div>
                     </div>
-
-                    <div
-                        class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-bigdata"
-                    >
-                        <div class="w-full overflow-hidden">
-                        <div class="w-full h-40"></div>
-                        <div class="w-full relative px-4 pb-4">
-                            <div
-                            class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                            >
-                            (Big) Data & Analytics
-                            </div>
-
-                            <div
-                            class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                            >
-                            Captez, nettoyez, stockez, diffusez et exploitez vos
-                            données
-                            </div>
-                        </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-
-           
+            </VueSlickCarousel>
         </div>
-       
     </div>
 </template>
 
@@ -229,7 +222,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 export default {
     components: {
-        VueSlickCarousel
+        VueSlickCarousel,
     },
 
     data(){
@@ -245,33 +238,27 @@ export default {
                     {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
                         infinite: true,
                         dots: true
                     }
                     },
                     {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        initialSlide: 2
-                    }
-                    },
-                    {
-                    breakpoint: 480,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        initialSlide: 1
                     }
-                    }
+                    },
                 ]
 
             },
 
         };
     },
+
 };
 </script>
 
