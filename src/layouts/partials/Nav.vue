@@ -172,7 +172,7 @@
         </div>
       </div>
 
-      <!--       <div
+             <div
         id="blog"
         class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
       >
@@ -181,7 +181,7 @@
             <span class="font-bold uppercase font-openSans my-auto">Blog</span>
           </g-link>
         </div>
-      </div> -->
+      </div> 
     </nav>
   </div>
 </template>
