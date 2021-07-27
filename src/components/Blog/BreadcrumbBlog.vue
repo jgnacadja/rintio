@@ -16,6 +16,6 @@
 <style lang="scss" scoped>
 @import "../../variables.scss";
 .bg-homeslider-1 {
-  background-image: url("./../../assets/images/blog/rectangle01.png");
+  background-image: url("/src/assets/images/Blog/womanwork");
 }
 </style>

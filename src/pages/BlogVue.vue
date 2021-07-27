@@ -413,10 +413,12 @@ import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import Articles from "~/components/Blog/Articles.vue";
+import ALaUne from "~/components/Blog/ALaUne.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
 import Keywords from "~/assets/keywords.json";
+
 
 export default {
   components: {
