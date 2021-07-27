@@ -63,9 +63,17 @@ export default {
       ],
     };
   },
+
   data() {
     return {
       path: "",
+      config: {
+        keywords: ['service','numérique','cloud','Devops','offshoring',
+        'nearingShore','Afrique','informatique','IT','webservice',
+        'Big data','IA','intelligence','Application','python',
+        'cluster','java','E-learning'
+        ],
+      },
     };
   },
   mounted() {
