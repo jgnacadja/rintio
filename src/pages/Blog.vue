@@ -16,7 +16,7 @@
 
         <div
           id="header_slider"
-          class="relative w-11/12 h-44 md:h-96 overflow-hidden mx-auto"
+          class="relative w-11/12 h-44 md:h-96 overflow-hidden mx-auto shadow-lg rounded-md bg-white"
         >
           <div
             id="slide_item"
@@ -25,7 +25,7 @@
             <p
               class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
             >
-              Start your morning with a cup of coffee
+              Start your morning
             </p>
           </div>
           <div
@@ -35,7 +35,7 @@
             <p
               class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
             >
-              Take a break, drink some coffee
+              drink some coffee
             </p>
           </div>
           <div
@@ -356,23 +356,5 @@ export default {
   color: #000 !important;
   padding: 1rem;
   border: 1px solid #3b82f6 !important;
-}
-
-#header_slider #slide_item:nth-child(1) {
-  background: url("https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg")
-    no-repeat center center;
-  background-size: cover;
-}
-
-#header_slider #slide_item:nth-child(2) {
-  background: url("https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg")
-    no-repeat center center;
-  background-size: cover;
-}
-
-#header_slider #slide_item:nth-child(3) {
-  background: url("https://images.pexels.com/photos/2067628/pexels-photo-2067628.jpeg")
-    no-repeat center center;
-  background-size: cover;
 }
 </style>
