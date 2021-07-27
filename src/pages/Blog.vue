@@ -4,6 +4,10 @@
       <BreadcrumbBlog />
     </LazyHydrate>
 
+    <LazyHydrate when-visible>
+      <Event />
+    </LazyHydrate>
+
     <!--
       <LazyHydrate when-idle>
       <Breadcrumb :path="path" />
@@ -11,7 +15,16 @@
     -->
 
     <div
-      class="container w-full mx-auto mt-24 space-x-0 md:flex md:px-16 md:space-x-6"
+      class="
+        container
+        w-full
+        mx-auto
+        mt-24
+        space-x-0
+        md:flex
+        md:px-16
+        md:space-x-6
+      "
     >
       <div id="home" class="container w-full px-4 md:w-3/4">
         <div
@@ -20,7 +33,17 @@
         >
           <!-- main post -->
           <div
-            class="relative block w-full p-4 mb-4 bg-white shadow-sm lg:mb-0 lg:p-0"
+            class="
+              relative
+              block
+              w-full
+              p-4
+              mb-4
+              bg-white
+              shadow-sm
+              lg:mb-0
+              lg:p-0
+            "
             v-for="post in searchResults"
             :key="post.node.id"
           >
@@ -32,12 +55,31 @@
                 class="object-cover w-full mb-0 h-96"
               />
               <span
-                class="relative hidden w-32 p-4 ml-4 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
+                class="
+                  relative
+                  hidden
+                  w-32
+                  p-4
+                  ml-4
+                  text-sm text-center text-white
+                  capitalize
+                  bg-secondary
+                  md:block
+                  -mt-7
+                "
                 v-html="post.node.categories.title"
               >
               </span>
               <p
-                class="mx-4 mt-2 mb-2 text-xl font-bold leading-tight text-gray-800 "
+                class="
+                  mx-4
+                  mt-2
+                  mb-2
+                  text-xl
+                  font-bold
+                  leading-tight
+                  text-gray-800
+                "
               >
                 {{ post.node.title }}
               </p>
@@ -54,7 +96,14 @@
           <!-- paginator -->
 
           <div
-            class="flex flex-col items-center px-5 py-5 xs:flex-row xs:justify-between"
+            class="
+              flex flex-col
+              items-center
+              px-5
+              py-5
+              xs:flex-row
+              xs:justify-between
+            "
           >
             <div>
               <nav
@@ -65,7 +114,17 @@
                   v-if="numberOfPages > 1"
                   @click="page = 1"
                   href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    text-lg text-gray-700
+                    bg-white
+                    border border-gray-300
+                    hover:bg-gray-50
+                  "
                 >
                   «
                 </a>
@@ -73,7 +132,17 @@
                   v-if="numberOfPages > 1"
                   @click="page = index - 1"
                   href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    text-lg text-gray-700
+                    bg-white
+                    border border-gray-300
+                    hover:bg-gray-50
+                  "
                 >
                   ‹
                 </a>
@@ -82,7 +151,17 @@
                   :key="index"
                   @click="page = index"
                   href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    text-lg text-gray-700
+                    bg-white
+                    border border-gray-300
+                    hover:bg-gray-50
+                  "
                 >
                   {{ index }}
                 </a>
@@ -90,7 +169,17 @@
                   v-if="numberOfPages > 1"
                   @click="page = index + 1"
                   href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    text-lg text-gray-700
+                    bg-white
+                    border border-gray-300
+                    hover:bg-gray-50
+                  "
                 >
                   ›
                 </a>
@@ -98,7 +187,17 @@
                   v-if="numberOfPages > 1"
                   @click="page = numberOfPages"
                   href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
+                  class="
+                    relative
+                    inline-flex
+                    items-center
+                    px-4
+                    py-2
+                    text-lg text-gray-700
+                    bg-white
+                    border border-gray-300
+                    hover:bg-gray-50
+                  "
                 >
                   »
                 </a>
@@ -130,7 +229,17 @@
 
         <div class="relative pt-2 mx-auto text-gray-600">
           <input
-            class="w-full h-12 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded focus:outline-none"
+            class="
+              w-full
+              h-12
+              px-5
+              pr-16
+              text-sm
+              bg-white
+              border-2 border-gray-300
+              rounded
+              focus:outline-none
+            "
             type="search"
             name="search"
             placeholder=""
@@ -186,7 +295,18 @@
                   class="block w-full h-24 m-4 md:hidden lg:block md:m-0"
                 />
                 <span
-                  class="relative hidden w-24 p-2 ml-4 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
+                  class="
+                    relative
+                    hidden
+                    w-24
+                    p-2
+                    ml-4
+                    text-sm text-center text-white
+                    capitalize
+                    bg-secondary
+                    md:block
+                    -mt-7
+                  "
                 >
                   {{ edge.node.categories.title }}
                 </span>
@@ -237,7 +357,19 @@
           <span
             v-for="edge in $page.tags.edges"
             :key="edge.node.id"
-            class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs leading-none cursor-pointer hover:text-white hover:bg-secondary"
+            class="
+              inline-flex
+              items-center
+              justify-center
+              px-2
+              py-2
+              m-1
+              text-xs
+              leading-none
+              cursor-pointer
+              hover:text-white
+              hover:bg-secondary
+            "
             v-bind:class="{
               'bg-secondary text-white':
                 pinnedTabs.indexOf(edge.node.id) !== -1,
@@ -266,13 +398,9 @@
         </div>
       </div>
     </div>
-    
- <LazyHydrate when-visible>
-      <Event  />
-    </LazyHydrate> 
 
     <LazyHydrate when-visible>
-      <Post  />
+      <Post />
     </LazyHydrate>
   </Layout>
 </template>
@@ -353,7 +481,7 @@ import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
 import Keywords from "~/assets/keywords.json";
 import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
-//import Event from "~/components/blog/Event.vue";
+import Event from "~/components/Blog/Event.vue";
 //import Post from "~/components/blog/Post.vue";
 
 export default {
@@ -364,7 +492,7 @@ export default {
     Seo,
     RemoveTag,
     BreadcrumbBlog,
-    //Event,
+    Event,
     //Post
   },
   metaInfo() {
@@ -374,7 +502,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content:
+            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
         },
         {
           key: "keywords",
@@ -394,10 +523,25 @@ export default {
       numberOfPages: 1,
       pinnedTabs: [],
       config: {
-        keywords: ['service','numérique','cloud','Devops','offshoring',
-        'nearingShore','Afrique','informatique','IT','webservice',
-        'Big data','IA','intelligence','Application','python',
-        'cluster','java','E-learning'
+        keywords: [
+          "service",
+          "numérique",
+          "cloud",
+          "Devops",
+          "offshoring",
+          "nearingShore",
+          "Afrique",
+          "informatique",
+          "IT",
+          "webservice",
+          "Big data",
+          "IA",
+          "intelligence",
+          "Application",
+          "python",
+          "cluster",
+          "java",
+          "E-learning",
         ],
       },
     };

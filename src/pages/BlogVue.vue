@@ -428,6 +428,7 @@ export default {
     Pager,
     Seo,
     RemoveTag,
+    ALaUne,
   },
   metaInfo() {
     return {

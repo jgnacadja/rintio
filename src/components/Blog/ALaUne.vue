@@ -1,5 +1,5 @@
 <template lang="pug">
-    <div class="md:flex">
+<div class="md:flex">
   <div class="md:flex-shrink-0">
     <img class="rounded-lg md:w-56" src="/img/shopping.jpg" alt="Woman paying for a purchase">
   </div>
