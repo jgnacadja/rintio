@@ -6,7 +6,7 @@
       flex
       justify-between
       text-gray-800
-      px-20
+      px-8 md:px-20
       py-6
       capitalize
       font-roboto
@@ -30,7 +30,7 @@
         >{{ path }}</span
       >
       <span v-bind:class="{ 'text-primary font-bold': article }" v-if="article">
-        / {{ article }}</span
+        | {{ article }}</span
       >
     </div>
   </div>

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px',
+      },
       textColor: {
         'primary': '#014A7F',
         'secondary': '#FF0C0B',
