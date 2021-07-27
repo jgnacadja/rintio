@@ -551,7 +551,10 @@ export default {
       if (this.newsletter.email === "") {
         this.newsletter.message = "Votre email est requis";
         this.newsletter.error = true;
-      } else if (!this.newsletter.reg.test(this.newsletter.email) && this.newsletter.email !== "") {
+      } else if (
+        !this.newsletter.reg.test(this.newsletter.email) &&
+        this.newsletter.email !== ""
+      ) {
         this.newsletter.message = "Taper une adresse mail valide";
         this.newsletter.error = true;
       } else {
@@ -563,12 +566,8 @@ export default {
         let email = this.email;
         var axios = require("axios");
         var data = JSON.stringify({
-          mail: this.newsletter.email,
-          list_id: process.env.GRIDSOME_MAILJET_LIST_ID,
-          user: process.env.GRIDSOME_MAILJET_USER,
-          pwd: process.env.GRIDSOME_MAILJET_PASS,
-          contact_url: process.env.GRIDSOME_MAILJET_API_CONTACT,
-          mail_list_url: process.env.GRIDSOME_MAILJET_API_LIST_RECIPIENT,
+          email: this.newsletter.email,
+          id: process.env.GRIDSOME_MAILJET_LIST_ID,
           is_excluded_from_campaigns:
             process.env.GRIDSOME_MAILJET_IS_EXCLUDED_FROM_CAMPAIGNS,
           is_unsubscribed: process.env.GRIDSOME_MAILJET_IS_UNSUBSCRIBED,
@@ -578,7 +577,11 @@ export default {
           headers: {
             "Content-Type": "application/json",
           },
-          url: process.env.GRIDSOME_MAILJET_API_SERVICE,
+          auth: {
+            username: process.env.GRIDSOME_MAILJET_USER,
+            password: process.env.GRIDSOME_MAILJET_PASS,
+          },
+          url: process.env.GRIDSOME_MAILJET_API_CONTACT,
           data: data,
         };
         axios(config)
