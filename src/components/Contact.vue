@@ -23,15 +23,7 @@
             </div>
 
             <div class="mx-4 md:mx-0 pt-6">
-              <h2
-                class="
-                  my-3
-                  text-2xl
-                  md:text-5xl
-                  font-extrabold
-                  text-primary
-                "
-              >
+              <h2 class="my-3 text-2xl md:text-5xl font-extrabold text-primary">
                 Besoin d'échanger sur
                 <span class="text-secondary">votre besoin ?</span>
               </h2>
@@ -274,56 +266,23 @@ export default {
       message: null,
     };
   },
-  // methods: {
-  //   sendEmail(e) {
-  //     try {
-  //       emailjs.sendForm('service_kcg1fpl', 'template_q2ewdb3', e.target, 'user_Y2KIJGmvuqmYVVqo9JBO8',
-  //       {
-  //         name: this.name,
-  //         email: this.email,
-  //         object: this.object,
-  //         message: this.message
-  //       })
-  //     // document.getElementById("popup").style.display="block"
-
-  //     } catch(error) {
-  //         console.log({error})
-  //     }
-  //     // Reset form field
-  //     this.name = ''
-  //     this.email = ''
-  //     this.object = ''
-  //     this.message = ''
-  //   },
-  // }
-
   methods: {
-    sendEmail: (e) => {
+    sendEmail: function (e) {
       emailjs
         .sendForm(
-          "service_kcg1fpl",
-          "template_q2ewdb3",
+          process.env.GRIDSOME_EMAILJS_SERVICE_ID,
+          process.env.GRIDSOME_EMAILJS_TEMPLATE_ID,
           e.target,
-          "user_Y2KIJGmvuqmYVVqo9JBO8"
+          process.env.GRIDSOME_EMAILJS_USER_ID
         )
         .then(
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
             document.getElementById("result").innerHTML =
               "<span style='color:green'>Votre message a été envoyé.</span>";
-            // innerHTML="Votre message a été envoyé.";
+
             // Reset form field
             document.getElementById("form").reset();
-
-            // document.forms["form"]["name"].value="";
-            // document.forms["form"]["email"].value="";
-            // document.forms["form"]["object"].value="";
-            // document.forms["form"]["message"].value="";
-
-            // this.name = ''
-            // this.email = ''
-            // this.object = ''
-            // this.message = ''
           },
           (error) => {
             console.log("FAILED...", error);

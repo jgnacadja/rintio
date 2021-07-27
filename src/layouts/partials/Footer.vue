@@ -382,6 +382,7 @@
                   text-gray-700
                   focus:outline-none
                 "
+                v-model="newsletter.email"
                 placeholder="Votre adresse"
               />
               <button
@@ -398,11 +399,40 @@
                   font-semibold
                   focus:outline-none
                 "
+                @click="submit"
               >
                 <span class="hidden md:block">Je m'abonne</span>
                 <Send class="md:hidden" />
               </button>
             </div>
+            <span
+              class="
+                flex
+                items-center
+                font-medium
+                tracking-wide
+                text-red-500 text-xs
+                mt-1
+                ml-1
+              "
+              v-if="newsletter.message && newsletter.error"
+            >
+              {{ newsletter.message }}
+            </span>
+            <span
+              class="
+                flex
+                items-center
+                font-medium
+                tracking-wide
+                text-white text-xs
+                mt-1
+                ml-1
+              "
+              v-if="newsletter.message && !newsletter.error"
+            >
+              {{ newsletter.message }}
+            </span>
             <p class="mt-6 mb-4">Suivez nous sur :</p>
             <div class="flex">
               <a
@@ -505,7 +535,84 @@ export default {
     return {
       openProducts: false,
       openLinks: false,
+      newsletter: {
+        loading: false,
+        reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+        email: "lohnsonok@gmail.com",
+        ListeID: process.env.GRIDSOME_MAILJET_LIST_ID,
+        message: "",
+        error: false,
+      },
     };
+  },
+  methods: {
+    submit: function (e) {
+      this.newsletter.message = "";
+      if (this.newsletter.email === "") {
+        this.newsletter.message = "Votre email est requis";
+        this.newsletter.error = true;
+      } else if (!this.newsletter.reg.test(this.newsletter.email) && this.newsletter.email !== "") {
+        this.newsletter.message = "Taper une adresse mail valide";
+        this.newsletter.error = true;
+      } else {
+        this.newsletter.message = "";
+      }
+      //console.log(this.message);
+      if (this.newsletter.message === "") {
+        this.loading = true;
+        let email = this.email;
+        var axios = require("axios");
+        var data = JSON.stringify({
+          mail: this.newsletter.email,
+          list_id: process.env.GRIDSOME_MAILJET_LIST_ID,
+          user: process.env.GRIDSOME_MAILJET_USER,
+          pwd: process.env.GRIDSOME_MAILJET_PASS,
+          contact_url: process.env.GRIDSOME_MAILJET_API_CONTACT,
+          mail_list_url: process.env.GRIDSOME_MAILJET_API_LIST_RECIPIENT,
+          is_excluded_from_campaigns:
+            process.env.GRIDSOME_MAILJET_IS_EXCLUDED_FROM_CAMPAIGNS,
+          is_unsubscribed: process.env.GRIDSOME_MAILJET_IS_UNSUBSCRIBED,
+        });
+        var config = {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          url: process.env.GRIDSOME_MAILJET_API_SERVICE,
+          data: data,
+        };
+        axios(config)
+          .then((res) => {
+            this.newsletter.error = false;
+            this.newsletter.loading = false;
+            //console.log(res)
+            switch (res.data.code) {
+              case 400: {
+                this.newsletter.message = "Vous êtes déjà abonné !";
+                this.newsletter.error = true;
+                break;
+              }
+              case 401: {
+                this.newsletter.message =
+                  "Quelque chose s'est mal passer ! Merci de réessayer";
+                this.newsletter.error = true;
+                break;
+              }
+              default: {
+                this.newsletter.message =
+                  "Vous êtes maintenant abonné à Studely";
+                this.newsletter.error = false;
+              }
+            }
+          })
+          .catch((error) => {
+            this.newsletter.loading = false;
+            this.newsletter.message = error;
+            this.newsletter.error = true;
+          });
+      }
+      e.preventDefault();
+    },
   },
 };
 </script>
