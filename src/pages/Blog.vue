@@ -4,12 +4,11 @@
       <BreadcrumbBlog />
     </LazyHydrate>
 
-    <!--
-      <LazyHydrate when-idle>
-      <Breadcrumb :path="path" />
+   
+    <LazyHydrate when-idle>
+      <Offer />
     </LazyHydrate>
-    -->
-
+   
     <div
       class="container w-full mx-auto mt-24 space-x-0 md:flex md:px-16 md:space-x-6"
     >
@@ -345,6 +344,7 @@ query {
 </page-query>
 
 <script>
+import Offer from "~/components/Blog/Offer.vue"
 import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
@@ -358,6 +358,7 @@ import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
 
 export default {
   components: {
+    Offer,
     LazyHydrate,
     Breadcrumb,
     Pager,
