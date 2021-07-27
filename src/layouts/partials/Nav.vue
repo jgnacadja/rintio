@@ -25,8 +25,25 @@
     </div>
 
     <div
-      v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
-      class="fixed lg:hidden inset-y-0 right-0 z-40 h-full w-full transition duration-300 transform bg-white overflow-y-auto lg:translate-x-0"
+      v-bind:class="{
+        '-translate-x-0 ease-out': openMenu,
+        'translate-x-full ease-in': !openMenu,
+      }"
+      class="
+        fixed
+        lg:hidden
+        inset-y-0
+        right-0
+        z-40
+        h-full
+        w-full
+        transition
+        duration-300
+        transform
+        bg-white
+        overflow-y-auto
+        lg:translate-x-0
+      "
     >
       <div class="items-center justify-center mt-6 space-y-2">
         <button
@@ -51,7 +68,16 @@
 
         <div
           id="home"
-          class="mx-4 mt-2 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+          class="
+            mx-4
+            mt-2
+            text-left
+            w-full
+            border-b-2 border-transparent
+            transition
+            duration-300
+            hover:border-secondary
+          "
         >
           <div class="h-full pt-4">
             <g-link to="/">
@@ -64,7 +90,15 @@
 
         <div
           id="about"
-          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+          class="
+            mx-4
+            text-left
+            w-full
+            border-b-2 border-transparent
+            transition
+            duration-300
+            hover:border-secondary
+          "
         >
           <div class="h-full pt-4">
             <g-link to="/a-propos">
@@ -77,7 +111,15 @@
 
         <div
           id="offer"
-          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+          class="
+            mx-4
+            text-left
+            w-full
+            border-b-2 border-transparent
+            transition
+            duration-300
+            hover:border-secondary
+          "
         >
           <div class="h-full pt-4">
             <g-link to="/offres">
@@ -102,28 +144,72 @@
       </div>
       <div class="flex absolute bottom-5 pl-3">
         <a
-          class="w-10 h-10 mr-2 flex items-center place-content-center rounded-full bg-white border border-gray-600 text-gray-600 text-lg"
+          class="
+            w-10
+            h-10
+            mr-2
+            flex
+            items-center
+            place-content-center
+            rounded-full
+            bg-white
+            border border-gray-600
+            text-gray-600 text-lg
+          "
           href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
           target="_blank"
         >
           <i class="fab fa-facebook-f"></i>
         </a>
         <a
-          class="w-10 h-10 mr-2 flex items-center place-content-center rounded-full bg-white border border-gray-600 text-gray-600 text-lg"
+          class="
+            w-10
+            h-10
+            mr-2
+            flex
+            items-center
+            place-content-center
+            rounded-full
+            bg-white
+            border border-gray-600
+            text-gray-600 text-lg
+          "
           href="https://www.linkedin.com/company/rintio/"
           target="_blank"
         >
           <i class="fab fa-linkedin-in relative"></i>
         </a>
         <a
-          class="w-10 h-10 mr-2 flex items-center place-content-center rounded-full bg-white border border-gray-600 text-gray-600 text-lg"
+          class="
+            w-10
+            h-10
+            mr-2
+            flex
+            items-center
+            place-content-center
+            rounded-full
+            bg-white
+            border border-gray-600
+            text-gray-600 text-lg
+          "
           href="https://twitter.com/RintioGroup/"
           target="_blank"
         >
           <i class="fab fa-twitter relative"></i>
         </a>
         <a
-          class="w-10 h-10 mr-2 flex items-center place-content-center rounded-full bg-white border border-gray-600 text-gray-600 text-lg"
+          class="
+            w-10
+            h-10
+            mr-2
+            flex
+            items-center
+            place-content-center
+            rounded-full
+            bg-white
+            border border-gray-600
+            text-gray-600 text-lg
+          "
           href="https://twitter.com/RintioGroup/"
           target="_blank"
         >
@@ -135,7 +221,15 @@
     <nav class="px-10 h-24 hidden lg:flex">
       <div
         id="home"
-        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        class="
+          mx-auto
+          text-center
+          w-40
+          border-b-2 border-transparent
+          transition
+          duration-300
+          hover:border-secondary
+        "
       >
         <div class="h-full pt-10">
           <g-link to="/">
@@ -148,7 +242,15 @@
 
       <div
         id="about"
-        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        class="
+          mx-auto
+          text-center
+          w-40
+          border-b-2 border-transparent
+          transition
+          duration-300
+          hover:border-secondary
+        "
       >
         <div class="h-full pt-10">
           <g-link to="/a-propos">
@@ -161,7 +263,15 @@
 
       <div
         id="offer"
-        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        class="
+          mx-auto
+          text-center
+          w-40
+          border-b-2 border-transparent
+          transition
+          duration-300
+          hover:border-secondary
+        "
       >
         <div class="h-full pt-10">
           <g-link to="/offres">
@@ -172,9 +282,17 @@
         </div>
       </div>
 
-            <div
+      <div
         id="blog"
-        class="mx-auto text-center w-40 border-b-2 border-transparent transition duration-300 hover:border-secondary"
+        class="
+          mx-auto
+          text-center
+          w-40
+          border-b-2 border-transparent
+          transition
+          duration-300
+          hover:border-secondary
+        "
       >
         <div class="h-full pt-10">
           <g-link to="/blog">
