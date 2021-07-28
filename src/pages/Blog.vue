@@ -4,10 +4,6 @@
       <BreadcrumbBlog />
     </LazyHydrate>
 
-    <LazyHydrate when-idle>
-      <Offer />
-    </LazyHydrate>
-
     <div
       class="container w-full mx-auto mt-8 md:mt-24 space-x-0 md:flex md:px-16 md:space-x-6 "
     >
@@ -99,6 +95,10 @@
         </div>
       </div>
     </div>
+
+    <LazyHydrate when-idle>
+      <Offer />
+    </LazyHydrate>
 
     <LazyHydrate when-visible>
       <Event />
