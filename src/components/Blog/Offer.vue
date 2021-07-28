@@ -10,26 +10,26 @@
                     class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-offshoring_2"
                 >
                     <div class="w-full overflow-hidden">
-                    <div class="w-full h-40"></div>
-                    <div class="w-full relative px-4 pb-4">
-                        <div
-                        class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                        >
-                        Offshoring
-                        </div>
+                        <div class="w-full h-40"></div>
+                        <div class="w-full relative px-4 pb-4">
+                            <div
+                            class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
+                            >
+                            Offshoring
+                            </div>
 
-                        <div
-                        class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-                        >
-                        Un développeur à partir de 50€ / Jour
-                        </div>
+                            <div
+                            class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
+                            >
+                            Un développeur à partir de 50€ / Jour
+                            </div>
 
-                        <div
-                        class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                        >
-                        A partir de 200€ / Mois. 3Mois offerts.
+                            <div
+                            class="text-white tracking-wider leading-relaxed font-roboto text-xs"
+                            >
+                            A partir de 200€ / Mois. 3Mois offerts.
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div> 
 
@@ -228,13 +228,32 @@ export default {
     data(){
         return{
             settings:{
+                autoplay: true,
                 dots: true,
-                infinite: false,
+                infinite: true,
+                arrows: false,
+                fade: false,
                 speed: 500,
-                slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 initialSlide: 0,
                 responsive: [
+                    {
+                    breakpoint: 1536,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        initialSlide: 1
+                    }
+                    },
+                    {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        initialSlide: 1
+                    }
+                    },
                     {
                     breakpoint: 1024,
                     settings: {
@@ -246,6 +265,14 @@ export default {
                     },
                     {
                     breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        initialSlide: 1
+                    }
+                    },
+                    {
+                    breakpoint: 640,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
