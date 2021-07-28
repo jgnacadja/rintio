@@ -237,7 +237,7 @@
 
         <!-- Col-4 -->
         <div
-          class="-my-5 py-8 px-4 lg:px-8 lg:pr-16 md:px-2 w-full sm:w-4/12 lg:w-3/12 lg:m-5"
+          class="-my-5 py-8 px-4 md:px-0 2xl:px-8 pr-4 2xl:pr-12 2xl:pr-16 md:px-2 w-full sm:w-4/12 xl:w-3/12 lg:m-5"
         >
           <div class="h-auto">
             <div class="text-red-light mb-3">Newsletter</div>
