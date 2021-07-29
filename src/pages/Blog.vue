@@ -74,7 +74,7 @@
 
 <LazyHydrate when-visible>
 
-      <Article/>
+      <Article :allposts="$page.allPosts.edges" :type="'post'" />
     </LazyHydrate>
     
     <LazyHydrate when-visible>
@@ -152,9 +152,28 @@ query {
     }
   }
 
+    allPosts: allBlogPost(filter: { categories: { in: "Blog" } }, order: DESC)
+    @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+        metaDescription
+      }
+    }
+  }
+
 }
 
 </page-query>
+
 
 <script>
 import moment from "moment";
