@@ -10,6 +10,7 @@ module.exports = {
             screens: {
                 'xs': '320px',
                 '3xl': '1920px',
+                '4xl': '2560px'
             },
             textColor: {
                 'primary': '#014A7F',
