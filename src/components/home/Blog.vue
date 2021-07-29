@@ -14,11 +14,11 @@
     </div>
 
     <div
-      class="lg:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
+      class=" pl-0  lg:flex  container mx-auto md:px-16 space-x-0 md:space-x-6  w-full"
     >
       <!-- main post -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2  relative block bg-white h-full shadow-sm"
+        class="  md:ml-6  mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2  relative block bg-white h-full shadow-sm"
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
@@ -27,7 +27,7 @@
             alt="iot"
             title="scrum"
             :src="edge.node.coverImage"
-            class="object-cover w-full h-64 mb-0"
+            class=" object-cover w-full h-64 mb-0"
           />
           <!-- <span
             class="
@@ -64,36 +64,51 @@
       </div>
 
       <!-- sub-main posts -->
-      <div class="   w-full lg:w-1/2   ">
+      <div class=" pl-0  w-full lg:w-1/2   ">
         <!-- post 1 -->
         <div
-          class="w-full bg-white  h-48 md:h-auto   flex flex-row md:flex-row mb-10"
+          class=" w-full   sm:h-38  lg:h-64 xl:h-60  2xl:h-56 h-48 md:h-auto   flex flex-row md:flex-row  mb-10"
           v-for="edge in $static.otherPost.edges"
           :key="edge.node.id"
         >
-          <div class="w-2/5 h-full">
+       
+          <div class=" w-2/5">
             <g-link :to="edge.node.path">
               <g-image
                 alt="iot"
                 title="scrum"
                 :src="edge.node.coverImage"
-                class="lg:block md:h-52 m-4 md:m-0 w-full"
+                class=" object-cover h-full ml-0 sm:ml-0 sm:h-1/2 sm:h-full lg:block md:h-52 m-4 md:m-0 w-full lg:h-full xl:h-full 2xl:h-full "
               />
             </g-link>
           </div>
-          <div class="bg-white px-4 w-3/5 h-full shadow-sm mb:pb-1" >
+          <div class="mt-4  bg-white px-4 md:mt-0  w-3/5 h-full shadow-sm mb:pb-1 sm:mt-4" >
             <g-link :to="edge.node.path">
-              <h5 class="text-left md:mt-0 text-gray-800 font-semibold mb-2 text-lg md:text-xl ">
+              <h5 class=" h-4 text-left md:mt-0 text-gray-800 font-semibold mb-2 text-lg md:text-xl ">
                 {{ edge.node.title }}
               </h5>
-              <p class=" h-px text-primary text-xs mt-2 md:mt-4  h-8 space-x-8">
-                <span>{{ edge.node.date | FormatDate }}</span>
-                <span class="float-right">
-                Publié par : Rintio
+              <p class=" h-px  text-primary text-xs mt-2 md:mt-4  h-8 space-x-8">
+                <span  >{{ edge.node.date | FormatDate }}</span>
+                <span class=" pt-0 float-right flex">
+                       
+                       <svg xmlns="http://www.w3.org/2000/svg" class=" sm:hidden h-4 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                       </svg>
+
+                      <span class="hidden sm:flex"> 
+                        
+                        Publié par :
+
+                      </span>
+                  Rintio
+               
+                
+                  
                 </span>
+                
               </p>
               <p
-                class="  md:h-32 block font-light pt-0 text-justify text-xs md:text-sm text-gray-600 text-ellipsis--2 " 
+                class="  w-full md:h-32 block font-light pt-0 text-justify text-xs md:text-sm text-gray-600 text-ellipsis--2 " 
               >
                 {{ edge.node.metaDescription }}
               </p>

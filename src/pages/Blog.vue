@@ -4,275 +4,108 @@
       <BreadcrumbBlog />
     </LazyHydrate>
 
-    <!--
-      <LazyHydrate when-idle>
-      <Breadcrumb :path="path" />
-    </LazyHydrate>
-    -->
-
     <div
-      class="container w-full mx-auto mt-24 space-x-0 md:flex md:px-16 md:space-x-6"
+      class="container w-full mx-auto mt-8 md:mt-24 space-x-0 md:flex md:px-16 md:space-x-6 "
     >
-      <div id="home" class="container w-full px-4 md:w-3/4">
-        <div
-          v-if="searchResults.length > 0 && search !== null"
-          class="space-y-6"
-        >
-          <!-- main post -->
-          <div
-            class="relative block w-full p-4 mb-4 bg-white shadow-sm lg:mb-0 lg:p-0"
-            v-for="post in searchResults"
-            :key="post.node.id"
-          >
-            <g-link :to="post.node.path">
-              <g-image
-                alt="atut"
-                title="atut"
-                :src="post.node.coverImage"
-                class="object-cover w-full mb-0 h-96"
-              />
-              <span
-                class="relative hidden w-32 p-4 ml-4 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
-                v-html="post.node.categories.title"
-              >
-              </span>
-              <p
-                class="mx-4 mt-2 mb-2 text-xl font-bold leading-tight text-gray-800 "
-              >
-                {{ post.node.title }}
-              </p>
-              <p class="mx-4 space-x-8 text-xs text-primary">
-                <span>{{ post.node.date }}</span>
-              </p>
-              <p
-                class="pb-8 mx-4 mb-4 text-gray-600"
-                v-html="post.node.metaDescription"
-              ></p>
-            </g-link>
-          </div>
-
-          <!-- paginator -->
-
-          <div
-            class="flex flex-col items-center px-5 py-5 xs:flex-row xs:justify-between"
-          >
-            <div>
-              <nav
-                class="relative z-0 inline-flex rounded-md shadow-sm"
-                aria-label="Pagination"
-              >
-                <a
-                  v-if="numberOfPages > 1"
-                  @click="page = 1"
-                  href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
-                >
-                  «
-                </a>
-                <a
-                  v-if="numberOfPages > 1"
-                  @click="page = index - 1"
-                  href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
-                >
-                  ‹
-                </a>
-                <a
-                  v-for="index in numberOfPages"
-                  :key="index"
-                  @click="page = index"
-                  href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
-                >
-                  {{ index }}
-                </a>
-                <a
-                  v-if="numberOfPages > 1"
-                  @click="page = index + 1"
-                  href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
-                >
-                  ›
-                </a>
-                <a
-                  v-if="numberOfPages > 1"
-                  @click="page = numberOfPages"
-                  href="#"
-                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50"
-                >
-                  »
-                </a>
-              </nav>
-            </div>
-          </div>
+      <div id="home" class="container w-full ">
+        <div class="mx-4 md:px-10">
+          <h3 class="md:mb-12 text-lg text-primary font-bold">
+            Articles à la une
+          </h3>
         </div>
 
-        <div v-else>
-          <div class="w-full h-full p-24 text-center shadow">
-            <seo class="w-full h-96" />
-            <h3>Aucun résultat correspondant à votre recherche</h3>
-            <p>
-              Veuillez essayer d'ajuster vos mots-clés de recherche ou vos
-              filtres.
+        <div
+          id="header_slider"
+          class="relative w-11/12 md:h-96 overflow-hidden mx-auto shadow-lg rounded-md bg-white pt-2"
+        >
+          <div
+            id="slide_item"
+            class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end transition-all ease-in-out duration-1000 transform translate-x-0 slide "
+          >
+            <div class="mx-16 md:my-16">
+              <div class=" md:my-8 text-lg text-primary font-bold pt-4">
+                  Remise des diplômes au Africa TechUp Tour 
+                  <br>Abidjan 2021
+              </div>
+              <p class="mt-8 md:my-8 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Suspendisse lacus interdum quis sociis vitae tempor volutpat. 
+                Elit faucibus arcu, amet, praesent. Laoreet fringilla amet 
+                tellus ultrices facilisi egestas maecenas. Integer cras tristique urna,
+                diam, sed enim. Egestas vehicula ipsum vitae amet a nam lacinia.
+              </p>
+              <div class="fixed h-full bg-white">
+                    <div class="fixed text-left mx-4 md:px-10">
+                        <h3 class="md:mb-12 ml-2 text-sm text-primary font-bold pt-3">
+                            Rintio 
+                              <p class="text-sm mb-2 text-gray-300">
+                                17 Mai 2021
+                              </p>
+                         </h3>
+                     </div>
+                <g-image
+                    src="~/assets/images/Blog/article1.png"
+                    alt=""
+                    class="pt-2 w-auto">
+                </g-image>
+              </div>
+            </div>
+            <div class="h-5/6 md:h-full my-px md:flex-shrink-0">
+               <g-image
+                 src="~/assets/images/Blog/certificate1.png"
+                 alt=""
+                 class=" h-96 pt-5 pb-5 w-auto">
+               </g-image>
+            </div>
+          </div>
+          <div
+            id="slide_item"
+            class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end justify-center transition-all ease-in-out duration-1000 transform translate-x-full slide"
+          >
+            <p
+              class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
+            >
+              drink some coffee
+            </p>
+          </div>
+          <div
+            id="slide_item"
+            class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end justify-center transition-all ease-in-out duration-1000 transform translate-x-full slide"
+          >
+            <p
+              class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
+            >
+              Coffee is always a good idea
             </p>
           </div>
         </div>
-      </div>
-
-      <div id="home" class="container w-full px-4 md:w-1/4">
-        <div class="pt-6 md:mx-0">
-          <h1 class="mb-0 text-lg font-extrabold md:text-xl">Recherche</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-
-        <div class="relative pt-2 mx-auto text-gray-600">
-          <input
-            class="w-full h-12 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded focus:outline-none"
-            type="search"
-            name="search"
-            placeholder=""
-            v-model="search"
-          />
-          <button
-            type="submit"
-            class="absolute p-2 mr-4 rounded -right-3 top-3 bg-secondary"
-          >
-            <svg
-              class="w-6 h-6 text-white fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              id="Capa_1"
-              x="0px"
-              y="0px"
-              viewBox="0 0 56.966 56.966"
-              style="enable-background: new 0 0 56.966 56.966"
-              xml:space="preserve"
-              width="512px"
-              height="512px"
-              alt="atut2020"
-              title="ATUT2020"
-            >
-              <path
-                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div class="pt-6 md:mx-0">
-          <h1 class="mb-0 text-lg font-bold md:text-xl">Articles à la une</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-
-        <div class="hidden w-full md:block">
-          <!-- post 1 -->
+        <div class="flex float-right mt-4" style="margin-right: 3.58rem ">
           <div
-            class="flex flex-col w-full mb-5 md:flex-row"
-            v-for="edge in $page.onlinePost.edges"
-            :key="edge.node.id"
+            class="z-10 bg-primary bg-opacity-10 w-12 h-12 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            @click="previousSlide()"
           >
-            <div class="w-2/5 h-full">
-              <g-link :to="edge.node.path">
-                <g-image
-                  alt="iot"
-                  :src="edge.node.coverImage"
-                  class="block w-full h-24 m-4 md:hidden lg:block md:m-0"
-                />
-                <span
-                  class="relative hidden w-24 p-2 ml-4 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
-                >
-                  {{ edge.node.categories.title }}
-                </span>
-              </g-link>
-            </div>
-            <div class="w-3/5 h-24 px-4 bg-white">
-              <g-link :to="edge.node.path">
-                <p class="mt-4 text-xs text-primary">
-                  <span>{{ edge.node.date | FormatDate }}</span>
-                </p>
-                <p class="mb-2 text-sm font-semibold text-gray-800 md:mt-0">
-                  {{ edge.node.title }}
-                </p>
-              </g-link>
-            </div>
+            <ArrowLeft />
           </div>
-        </div>
-
-        <div class="md:mx-0">
-          <h1 class="mb-0 text-lg font-bold md:text-xl">Catégories</h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-        <div>
-          <ul class="ml-6 font-bold list-disc list-outside">
-            <li
-              v-for="edge in $page.category.edges"
-              :key="edge.node.id"
-              class="text-secondary"
-            >
-              <div class="text-gray-700">{{ edge.node.title }}</div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pt-2 md:mx-0">
-          <h1 class="mb-0 text-lg font-bold md:text-xl">
-            Mots clés populaires
-          </h1>
-          <div class="mb-4 -mt-3">
-            <span class="inline-block w-1/3 border border-secondary"></span>
-            <span class="inline-block w-2/3 border border-grey-300"></span>
-          </div>
-        </div>
-        <div>
-          <span
-            v-for="edge in $page.tags.edges"
-            :key="edge.node.id"
-            class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs leading-none cursor-pointer hover:text-white hover:bg-secondary"
-            v-bind:class="{
-              'bg-secondary text-white':
-                pinnedTabs.indexOf(edge.node.id) !== -1,
-              'bg-gray-200 text-gray-700':
-                pinnedTabs.indexOf(edge.node.id) === -1,
-            }"
-            @click="pinTag(edge.node.id)"
+          <div
+            class="z-10 bg-primary bg-opacity-10 w-12 h-12 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            @click="nextSlide()"
           >
-            {{ edge.node.title }}
-            <svg
-              v-if="pinnedTabs.indexOf(edge.node.id) !== -1"
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </span>
+            <ArrowRight />
+          </div>
         </div>
       </div>
     </div>
-    
- <LazyHydrate when-visible>
-      <Event  />
-    </LazyHydrate> 
+
+    <LazyHydrate when-idle>
+      <Offer />
+    </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Post  />
+      <Event />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <Post />
     </LazyHydrate>
   </Layout>
 </template>
@@ -345,12 +178,15 @@ query {
 </page-query>
 
 <script>
+import Offer from "~/components/Blog/Offer.vue"
 import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
+import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
+import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
 //import Event from "~/components/blog/Event.vue";
@@ -358,11 +194,14 @@ import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
 
 export default {
   components: {
+    Offer,
     LazyHydrate,
     Breadcrumb,
     Pager,
     Seo,
     RemoveTag,
+    ArrowLeft,
+    ArrowRight,
     BreadcrumbBlog,
     //Event,
     //Post
@@ -400,6 +239,7 @@ export default {
         'cluster','java','E-learning'
         ],
       },
+      currentSlide: 1,
     };
   },
   mounted() {
@@ -452,6 +292,54 @@ export default {
       } else {
         this.search = "";
         this.pinnedTabs.push(tag);
+      }
+    },
+    nextSlide() {
+      if (this.currentSlide == 3) {
+        let activeSlide = document.querySelector(".slide.translate-x-0");
+        activeSlide.classList.remove("translate-x-0");
+        activeSlide.classList.add("translate-x-full");
+
+        let nextSlide =
+          activeSlide.previousElementSibling.previousElementSibling;
+        nextSlide.classList.remove("translate-x-full");
+        nextSlide.classList.add("translate-x-0");
+
+        this.currentSlide = 1;
+      } else {
+        this.currentSlide++;
+
+        let activeSlide = document.querySelector(".slide.translate-x-0");
+        activeSlide.classList.remove("translate-x-0");
+        activeSlide.classList.add("translate-x-full");
+
+        let nextSlide = activeSlide.nextElementSibling;
+        nextSlide.classList.remove("translate-x-full");
+        nextSlide.classList.add("translate-x-0");
+      }
+    },
+
+    previousSlide() {
+      if (this.currentSlide == 1) {
+        let activeSlide = document.querySelector(".slide.translate-x-0");
+        activeSlide.classList.remove("translate-x-0");
+        activeSlide.classList.add("translate-x-full");
+
+        let previousSlide = activeSlide.nextElementSibling.nextElementSibling;
+        previousSlide.classList.remove("translate-x-full");
+        previousSlide.classList.add("translate-x-0");
+
+        this.currentSlide = 3;
+      } else {
+        this.currentSlide--;
+
+        let activeSlide = document.querySelector(".slide.translate-x-0");
+        activeSlide.classList.remove("translate-x-0");
+        activeSlide.classList.add("translate-x-full");
+
+        let previousSlide = activeSlide.previousElementSibling;
+        previousSlide.classList.remove("translate-x-full");
+        previousSlide.classList.add("translate-x-0");
       }
     },
   },

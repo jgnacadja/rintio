@@ -7,7 +7,7 @@
       throttle: 300,
     }"
   >
-    <div class="flex flex-wrap mx-auto mb-8 md:mb-0 md:space-x-24 ">
+    <div class="flex flex-wrap mx-auto mb-8 md:flex-nowrap md:mb-0 md:space-x-24 ">
       <div class="w-1/2 text-center md:w-auto xl:w-auto " >
         <p id="customer" class="text-5xl font-bold md:text-5xl xl:text-8xl">0</p>
         <!-- Dot -->

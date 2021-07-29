@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
-      <Breadcrumb :path="path" />    
+      <Breadcrumb :path="path" />
     </LazyHydrate>
 
     <div
@@ -216,8 +216,13 @@
             </li>
           </ul>
         </div>
+<<<<<<< HEAD
 
     
+=======
+      </div>
+    </div>
+>>>>>>> fdbd5b123dfdb2916f30d5f110b2a36d623825f8
   </Layout>
 </template>
 
@@ -293,16 +298,18 @@ import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import Articles from "~/components/Blog/Articles.vue";
+import ALaUne from "~/components/Blog/ALaUne.vue";
 import { Pager } from "gridsome";
 import Seo from "~/assets/images/Illustrations/seo.svg";
 import RemoveTag from "~/assets/images/icons/remove.svg";
 import Keywords from "~/assets/keywords.json";
 
+
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
-    Articles, 
+    Articles,
     Pager,
     Seo,
     RemoveTag,
@@ -314,7 +321,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content:
+            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
         },
         {
           key: "keywords",
@@ -333,10 +341,25 @@ export default {
       numberOfPages: 1,
       pinnedTabs: [],
       config: {
-        keywords: ['service','numérique','cloud','Devops','offshoring',
-        'nearingShore','Afrique','informatique','IT','webservice',
-        'Big data','IA','intelligence','Application','python',
-        'cluster','java','E-learning'
+        keywords: [
+          "service",
+          "numérique",
+          "cloud",
+          "Devops",
+          "offshoring",
+          "nearingShore",
+          "Afrique",
+          "informatique",
+          "IT",
+          "webservice",
+          "Big data",
+          "IA",
+          "intelligence",
+          "Application",
+          "python",
+          "cluster",
+          "java",
+          "E-learning",
         ],
       },
     };
