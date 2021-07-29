@@ -5,7 +5,9 @@
     </LazyHydrate>
 
     <div
+
       class="container w-full mx-auto mt-8 md:mt-24 space-x-0 md:flex md:px-16 md:space-x-6 "
+
     >
       <div id="home" class="container w-full ">
         <div class="mx-4 md:px-10">
@@ -22,6 +24,7 @@
             id="slide_item"
             class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end transition-all ease-in-out duration-1000 transform translate-x-0 slide "
           >
+
             <div class="mx-16 md:my-16">
               <div class=" md:my-8 text-lg text-primary font-bold pt-4">
                   Remise des diplômes au Africa TechUp Tour 
@@ -57,8 +60,10 @@
                  class=" h-96 pt-5 pb-5 w-auto">
                </g-image>
             </div>
+
           </div>
           <div
+
             id="slide_item"
             class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end justify-center transition-all ease-in-out duration-1000 transform translate-x-full slide"
           >
@@ -71,6 +76,7 @@
           <div
             id="slide_item"
             class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end justify-center transition-all ease-in-out duration-1000 transform translate-x-full slide"
+
           >
             <p
               class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
@@ -84,11 +90,13 @@
             class="z-10 bg-primary bg-opacity-10 w-12 h-12 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
             @click="previousSlide()"
           >
+
             <ArrowLeft />
           </div>
           <div
             class="z-10 bg-primary bg-opacity-10 w-12 h-12 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
             @click="nextSlide()"
+
           >
             <ArrowRight />
           </div>
@@ -96,15 +104,23 @@
       </div>
     </div>
 
-    <LazyHydrate when-idle>
-      <Offer />
+<LazyHydrate when-visible>
+
+      <Article :allposts="$page.allPosts.edges" :type="'offer'" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
+
+      <Article :allposts="$page.allPosts.edges" :type="'post'" />
+    </LazyHydrate>
+    
+    <LazyHydrate when-visible>
+
       <Event />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
+
       <Post />
     </LazyHydrate>
   </Layout>
@@ -173,9 +189,28 @@ query {
     }
   }
 
+    allPosts: allBlogPost(filter: { categories: { in: "Blog" } }, order: DESC)
+    @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+        metaDescription
+      }
+    }
+  }
+
 }
 
 </page-query>
+
 
 <script>
 import Offer from "~/components/Blog/Offer.vue"
@@ -189,7 +224,9 @@ import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
-//import Event from "~/components/blog/Event.vue";
+import Event from "~/components/Blog/Event.vue";
+import Articles from '../components/Blog/Articles.vue';
+import Article from '../components/Blog/Article.vue';
 //import Post from "~/components/blog/Post.vue";
 
 export default {
@@ -203,9 +240,10 @@ export default {
     ArrowLeft,
     ArrowRight,
     BreadcrumbBlog,
-    //Event,
+    Event,
+    Article,
     //Post
-  },
+    Articles  },
   metaInfo() {
     return {
       title: "Blog",
@@ -213,7 +251,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content:
+            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
         },
         {
           key: "keywords",
@@ -233,10 +272,25 @@ export default {
       numberOfPages: 1,
       pinnedTabs: [],
       config: {
-        keywords: ['service','numérique','cloud','Devops','offshoring',
-        'nearingShore','Afrique','informatique','IT','webservice',
-        'Big data','IA','intelligence','Application','python',
-        'cluster','java','E-learning'
+        keywords: [
+          "service",
+          "numérique",
+          "cloud",
+          "Devops",
+          "offshoring",
+          "nearingShore",
+          "Afrique",
+          "informatique",
+          "IT",
+          "webservice",
+          "Big data",
+          "IA",
+          "intelligence",
+          "Application",
+          "python",
+          "cluster",
+          "java",
+          "E-learning",
         ],
       },
       currentSlide: 1,

@@ -5,35 +5,16 @@
     </LazyHydrate>
 
     <div
-      class="
-        md:flex
-        container
-        mx-auto
-        md:px-16
-        space-x-0
-        md:space-x-6
-        w-full
-        mt-24
-      "
+      class="container w-full mx-auto mt-24 space-x-0  md:flex md:px-16 md:space-x-6"
     >
-      <div id="home" class="container px-4 w-full md:w-3/4">
+      <div id="home" class="container w-full px-4 md:w-3/4">
         <div
           v-if="searchResults.length > 0 && search !== null"
           class="space-y-6"
         >
           <!-- main post -->
           <div
-            class="
-              mb-4
-              lg:mb-0
-              p-4
-              lg:p-0
-              w-full
-              relative
-              block
-              bg-white
-              shadow-sm
-            "
+            class="relative block w-full p-4 mb-4 bg-white shadow-sm  lg:mb-0 lg:p-0"
             v-for="post in searchResults"
             :key="post.node.id"
           >
@@ -42,44 +23,23 @@
                 alt="atut"
                 title="atut"
                 :src="post.node.coverImage"
-                class="object-cover w-full h-96 mb-0"
+                class="object-cover w-full mb-0 h-96"
               />
               <span
-                class="
-                  relative
-                  text-white
-                  bg-secondary
-                  p-4
-                  text-sm
-                  hidden
-                  md:block
-                  ml-4
-                  -mt-7
-                  capitalize
-                  w-32
-                  text-center
-                "
+                class="relative hidden w-32 p-4 ml-4 text-sm text-center text-white capitalize  bg-secondary md:block -mt-7"
                 v-html="post.node.categories.title"
               >
               </span>
               <p
-                class="
-                  text-gray-800
-                  font-bold
-                  mt-2
-                  mb-2
-                  leading-tight
-                  text-xl
-                  mx-4
-                "
+                class="mx-4 mt-2 mb-2 text-xl font-bold leading-tight text-gray-800 "
               >
                 {{ post.node.title }}
               </p>
-              <p class="text-primary text-xs space-x-8 mx-4">
+              <p class="mx-4 space-x-8 text-xs text-primary">
                 <span>{{ post.node.date }}</span>
               </p>
               <p
-                class="text-gray-600 mb-4 pb-8 mx-4"
+                class="pb-8 mx-4 mb-4 text-gray-600"
                 v-html="post.node.metaDescription"
               ></p>
             </g-link>
@@ -87,14 +47,7 @@
 
           <!-- paginator -->
           <div
-            class="
-              px-5
-              py-5
-              flex flex-col
-              xs:flex-row
-              items-center
-              xs:justify-between
-            "
+            class="flex flex-col items-center px-5 py-5  xs:flex-row xs:justify-between"
           >
             <div>
               <nav
@@ -105,17 +58,7 @@
                   v-if="numberOfPages > 1"
                   @click="page = 1"
                   href="#"
-                  class="
-                    relative
-                    inline-flex
-                    items-center
-                    px-4
-                    py-2
-                    border border-gray-300
-                    bg-white
-                    text-lg text-gray-700
-                    hover:bg-gray-50
-                  "
+                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300  hover:bg-gray-50"
                 >
                   «
                 </a>
@@ -123,17 +66,7 @@
                   v-if="numberOfPages > 1"
                   @click="page = index - 1"
                   href="#"
-                  class="
-                    relative
-                    inline-flex
-                    items-center
-                    px-4
-                    py-2
-                    border border-gray-300
-                    bg-white
-                    text-lg text-gray-700
-                    hover:bg-gray-50
-                  "
+                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300  hover:bg-gray-50"
                 >
                   ‹
                 </a>
@@ -142,17 +75,7 @@
                   :key="index"
                   @click="page = index"
                   href="#"
-                  class="
-                    relative
-                    inline-flex
-                    items-center
-                    px-4
-                    py-2
-                    border border-gray-300
-                    bg-white
-                    text-lg text-gray-700
-                    hover:bg-gray-50
-                  "
+                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300  hover:bg-gray-50"
                 >
                   {{ index }}
                 </a>
@@ -160,17 +83,7 @@
                   v-if="numberOfPages > 1"
                   @click="page = index + 1"
                   href="#"
-                  class="
-                    relative
-                    inline-flex
-                    items-center
-                    px-4
-                    py-2
-                    border border-gray-300
-                    bg-white
-                    text-lg text-gray-700
-                    hover:bg-gray-50
-                  "
+                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300  hover:bg-gray-50"
                 >
                   ›
                 </a>
@@ -178,17 +91,7 @@
                   v-if="numberOfPages > 1"
                   @click="page = numberOfPages"
                   href="#"
-                  class="
-                    relative
-                    inline-flex
-                    items-center
-                    px-4
-                    py-2
-                    border border-gray-300
-                    bg-white
-                    text-lg text-gray-700
-                    hover:bg-gray-50
-                  "
+                  class="relative inline-flex items-center px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300  hover:bg-gray-50"
                 >
                   »
                 </a>
@@ -198,8 +101,8 @@
         </div>
 
         <div v-else>
-          <div class="shadow w-full p-24 h-full text-center">
-            <seo class="h-96 w-full" />
+          <div class="w-full h-full p-24 text-center shadow">
+            <seo class="w-full h-96" />
             <h3>Aucun résultat correspondant à votre recherche</h3>
             <p>
               Veuillez essayer d'ajuster vos mots-clés de recherche ou vos
@@ -209,28 +112,18 @@
         </div>
       </div>
 
-      <div id="home" class="container px-4 w-full md:w-1/4">
-        <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-extrabold mb-0">Recherche</h1>
+      <div id="home" class="container w-full px-4 md:w-1/4">
+        <div class="pt-6 md:mx-0">
+          <h1 class="mb-0 text-lg font-extrabold md:text-xl">Recherche</h1>
           <div class="mb-4 -mt-3">
             <span class="inline-block w-1/3 border border-secondary"></span>
             <span class="inline-block w-2/3 border border-grey-300"></span>
           </div>
         </div>
 
-        <div class="pt-2 relative mx-auto text-gray-600">
+        <div class="relative pt-2 mx-auto text-gray-600">
           <input
-            class="
-              border-2 border-gray-300
-              bg-white
-              h-12
-              px-5
-              pr-16
-              rounded
-              text-sm
-              focus:outline-none
-              w-full
-            "
+            class="w-full h-12 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded  focus:outline-none"
             type="search"
             name="search"
             placeholder=""
@@ -238,10 +131,10 @@
           />
           <button
             type="submit"
-            class="absolute -right-3 top-3 mr-4 p-2 bg-secondary rounded"
+            class="absolute p-2 mr-4 rounded -right-3 top-3 bg-secondary"
           >
             <svg
-              class="text-white h-6 w-6 fill-current"
+              class="w-6 h-6 text-white fill-current"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               version="1.1"
@@ -263,18 +156,18 @@
           </button>
         </div>
 
-        <div class="md:mx-0 pt-6">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Articles à la une</h1>
+        <div class="pt-6 md:mx-0">
+          <h1 class="mb-0 text-lg font-bold md:text-xl">Articles à la une</h1>
           <div class="mb-4 -mt-3">
             <span class="inline-block w-1/3 border border-secondary"></span>
             <span class="inline-block w-2/3 border border-grey-300"></span>
           </div>
         </div>
 
-        <div class="w-full hidden md:block">
+        <div class="hidden w-full md:block">
           <!-- post 1 -->
           <div
-            class="w-full flex flex-col md:flex-row mb-5"
+            class="flex flex-col w-full mb-5 md:flex-row"
             v-for="edge in $page.onlinePost.edges"
             :key="edge.node.id"
           >
@@ -283,34 +176,21 @@
                 <g-image
                   alt="iot"
                   :src="edge.node.coverImage"
-                  class="block md:hidden lg:block h-24 m-4 md:m-0 w-full"
+                  class="block w-full h-24 m-4 md:hidden lg:block md:m-0"
                 />
                 <span
-                  class="
-                    relative
-                    text-white
-                    bg-secondary
-                    p-2
-                    text-sm
-                    hidden
-                    md:block
-                    ml-4
-                    -mt-7
-                    capitalize
-                    w-24
-                    text-center
-                  "
+                  class="relative hidden w-24 p-2 ml-4 text-sm text-center text-white capitalize  bg-secondary md:block -mt-7"
                 >
                   {{ edge.node.categories.title }}
                 </span>
               </g-link>
             </div>
-            <div class="bg-white px-4 w-3/5 h-24">
+            <div class="w-3/5 h-24 px-4 bg-white">
               <g-link :to="edge.node.path">
-                <p class="text-primary text-xs mt-4">
+                <p class="mt-4 text-xs text-primary">
                   <span>{{ edge.node.date | FormatDate }}</span>
                 </p>
-                <p class="md:mt-0 text-gray-800 font-semibold mb-2 text-sm">
+                <p class="mb-2 text-sm font-semibold text-gray-800 md:mt-0">
                   {{ edge.node.title }}
                 </p>
               </g-link>
@@ -319,14 +199,14 @@
         </div>
 
         <div class="md:mx-0">
-          <h1 class="text-lg md:text-xl font-bold mb-0">Catégories</h1>
+          <h1 class="mb-0 text-lg font-bold md:text-xl">Catégories</h1>
           <div class="mb-4 -mt-3">
             <span class="inline-block w-1/3 border border-secondary"></span>
             <span class="inline-block w-2/3 border border-grey-300"></span>
           </div>
         </div>
         <div>
-          <ul class="list-outside list-disc ml-6 font-bold">
+          <ul class="ml-6 font-bold list-disc list-outside">
             <li
               v-for="edge in $page.category.edges"
               :key="edge.node.id"
@@ -428,6 +308,7 @@ export default {
     Pager,
     Seo,
     RemoveTag,
+    ALaUne,
   },
   metaInfo() {
     return {
