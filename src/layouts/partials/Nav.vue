@@ -2,12 +2,12 @@
   <div class="self-center">
     <div class="lg:hidden">
       <button
-        class="navbar-burger flex items-center text-gray-600 p-3"
+        class="flex items-center p-3 text-gray-600 navbar-burger"
         @click="openMenu = !openMenu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="w-6 h-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -25,6 +25,7 @@
     </div>
 
     <div
+<<<<<<< HEAD
       v-bind:class="{
         '-translate-x-0 ease-out': openMenu,
         'translate-x-full ease-in': !openMenu,
@@ -44,15 +45,19 @@
         overflow-y-auto
         lg:translate-x-0
       "
+=======
+      v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
+      class="fixed inset-y-0 right-0 z-40 w-full h-full overflow-y-auto transition duration-300 transform bg-white lg:hidden lg:translate-x-0"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
     >
       <div class="items-center justify-center mt-6 space-y-2">
         <button
-          class="navbar-burger flex items-center text-gray-600 p-3 ml-auto"
+          class="flex items-center p-3 ml-auto text-gray-600 navbar-burger"
           @click="openMenu = !openMenu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -68,6 +73,7 @@
 
         <div
           id="home"
+<<<<<<< HEAD
           class="
             mx-4
             mt-2
@@ -78,10 +84,13 @@
             duration-300
             hover:border-secondary
           "
+=======
+          class="w-full mx-4 mt-2 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
         >
           <div class="h-full pt-4">
             <g-link to="/">
-              <span class="font-bold uppercase font-openSans my-auto"
+              <span class="my-auto font-bold uppercase font-openSans"
                 >Acceuil</span
               >
             </g-link>
@@ -90,6 +99,7 @@
 
         <div
           id="about"
+<<<<<<< HEAD
           class="
             mx-4
             text-left
@@ -99,10 +109,13 @@
             duration-300
             hover:border-secondary
           "
+=======
+          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
         >
           <div class="h-full pt-4">
             <g-link to="/a-propos">
-              <span class="font-bold uppercase font-openSans my-auto">
+              <span class="my-auto font-bold uppercase font-openSans">
                 A propos
               </span>
             </g-link>
@@ -111,6 +124,7 @@
 
         <div
           id="offer"
+<<<<<<< HEAD
           class="
             mx-4
             text-left
@@ -120,30 +134,39 @@
             duration-300
             hover:border-secondary
           "
+=======
+          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
         >
           <div class="h-full pt-4">
             <g-link to="/offres">
-              <span class="font-bold uppercase font-openSans my-auto">
+              <span class="my-auto font-bold uppercase font-openSans">
                 Nos offres</span
               >
             </g-link>
           </div>
         </div>
 
-        <!--         <div
+        <div
           id="blog"
-          class="mx-4 text-left w-full border-b-2 border-transparent transition duration-300 hover:border-secondary"
+          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
           <div class="h-full pt-4">
             <g-link to="/blog">
-              <span class="font-bold uppercase font-openSans my-auto">  
+              <span class="my-auto font-bold uppercase font-openSans">  
                 Blog</span>
             </g-link>
           </div>
-        </div>  -->
+        </div> 
+        <div
+          id="blog_1"
+          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+        >
+        </div>
       </div>
-      <div class="flex absolute bottom-5 pl-3">
+      <div class="absolute flex pl-3 bottom-5">
         <a
+<<<<<<< HEAD
           class="
             w-10
             h-10
@@ -156,12 +179,16 @@
             border border-gray-600
             text-gray-600 text-lg
           "
+=======
+          class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
           href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
           target="_blank"
         >
           <i class="fab fa-facebook-f"></i>
         </a>
         <a
+<<<<<<< HEAD
           class="
             w-10
             h-10
@@ -174,12 +201,16 @@
             border border-gray-600
             text-gray-600 text-lg
           "
+=======
+          class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
           href="https://www.linkedin.com/company/rintio/"
           target="_blank"
         >
-          <i class="fab fa-linkedin-in relative"></i>
+          <i class="relative fab fa-linkedin-in"></i>
         </a>
         <a
+<<<<<<< HEAD
           class="
             w-10
             h-10
@@ -192,12 +223,16 @@
             border border-gray-600
             text-gray-600 text-lg
           "
+=======
+          class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
           href="https://twitter.com/RintioGroup/"
           target="_blank"
         >
-          <i class="fab fa-twitter relative"></i>
+          <i class="relative fab fa-twitter"></i>
         </a>
         <a
+<<<<<<< HEAD
           class="
             w-10
             h-10
@@ -210,17 +245,21 @@
             border border-gray-600
             text-gray-600 text-lg
           "
+=======
+          class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
           href="https://twitter.com/RintioGroup/"
           target="_blank"
         >
-          <i class="fab fa-instagram relative"></i>
+          <i class="relative fab fa-instagram"></i>
         </a>
       </div>
     </div>
 
-    <nav class="px-10 h-24 hidden lg:flex">
+    <nav class="hidden h-24 px-10 lg:flex">
       <div
         id="home"
+<<<<<<< HEAD
         class="
           mx-auto
           text-center
@@ -230,10 +269,13 @@
           duration-300
           hover:border-secondary
         "
+=======
+        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
       >
         <div class="h-full pt-10">
           <g-link to="/">
-            <span class="font-bold uppercase font-openSans my-auto"
+            <span class="my-auto font-bold uppercase font-openSans"
               >Acceuil</span
             >
           </g-link>
@@ -242,6 +284,7 @@
 
       <div
         id="about"
+<<<<<<< HEAD
         class="
           mx-auto
           text-center
@@ -251,10 +294,13 @@
           duration-300
           hover:border-secondary
         "
+=======
+        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
       >
         <div class="h-full pt-10">
           <g-link to="/a-propos">
-            <span class="font-bold uppercase font-openSans my-auto"
+            <span class="my-auto font-bold uppercase font-openSans"
               >A propos</span
             >
           </g-link>
@@ -263,6 +309,7 @@
 
       <div
         id="offer"
+<<<<<<< HEAD
         class="
           mx-auto
           text-center
@@ -272,10 +319,13 @@
           duration-300
           hover:border-secondary
         "
+=======
+        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
       >
         <div class="h-full pt-10">
           <g-link to="/offres">
-            <span class="font-bold uppercase font-openSans my-auto"
+            <span class="my-auto font-bold uppercase font-openSans"
               >Nos offres</span
             >
           </g-link>
@@ -284,6 +334,7 @@
 
       <div
         id="blog"
+<<<<<<< HEAD
         class="
           mx-auto
           text-center
@@ -293,13 +344,25 @@
           duration-300
           hover:border-secondary
         "
+=======
+        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
       >
         <div class="h-full pt-10">
           <g-link to="/blog">
-            <span class="font-bold uppercase font-openSans my-auto">Blog</span>
+            <span class="my-auto font-bold uppercase font-openSans">Blog</span>
           </g-link>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      <div
+        id="blog1"
+        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+      >
+        
+      </div>
+>>>>>>> 8b489dc34e08d29b186d917d5bb5d3f365e40979
     </nav>
   </div>
 </template>
