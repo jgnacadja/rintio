@@ -72,6 +72,11 @@
       </div>
     </div>
 
+<LazyHydrate when-visible>
+
+      <Article/>
+    </LazyHydrate>
+    
     <LazyHydrate when-visible>
 
       <Event />
@@ -163,6 +168,8 @@ import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
 import Event from "~/components/Blog/Event.vue";
+import Articles from '../components/Blog/Articles.vue';
+import Article from '../components/Blog/Article.vue';
 //import Post from "~/components/blog/Post.vue";
 
 export default {
@@ -176,8 +183,9 @@ export default {
     ArrowRight,
     BreadcrumbBlog,
     Event,
+    Article,
     //Post
-  },
+    Articles  },
   metaInfo() {
     return {
       title: "Blog",
