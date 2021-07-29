@@ -5,6 +5,6 @@ published: true
 technology: ["frontend", "design", "scrum"]
 coverImage: /images/home/offer/offshoring.png
 metaDescription: ["#Python #Java #Php. 1 mois offert."]
-subDescription: 
-
+subDescription: ""
+date: ""
 ---

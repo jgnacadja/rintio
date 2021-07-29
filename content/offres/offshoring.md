@@ -5,6 +5,6 @@ published: true
 technology: ["frontend", "design", "scrum"]
 coverImage: /images/home/offer/offshoring.png
 metaDescription: ["Dev. Python Java Php","Migration Cloud","Admin. cloud & Infra ","DevOps"]
-subDescription: 
-
+subDescription: ""
+date: ""
 ---
