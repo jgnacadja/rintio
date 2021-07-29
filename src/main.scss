@@ -158,3 +158,60 @@ button.slick-prev:before, button.slick-next:before {
     color: $red-rintio !important;
     opacity: 0.95 !important;
 }
+// scss for components/Blog/Article
+.articledots {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+  }
+  .articledots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .articledots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+  
+  .articledots li button:before {
+    font-family: "slick";
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+    opacity: 0.25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    /* margin-top: 200px; */
+  }
+  .articledots li button:before {
+    color: #9ca3af !important;
+    font-size: 1rem !important;
+    opacity: 0.95 !important;
+  }
+  .articledots li.slick-active button:before {
+    color: $red-rintio !important;
+    opacity: 0.95 !important;
+  }

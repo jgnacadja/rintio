@@ -104,10 +104,16 @@
       </div>
     </div>
 
-    <LazyHydrate when-idle>
-      <Offer />
+<LazyHydrate when-visible>
+
+      <Article :allposts="$page.allPosts.edges" :type="'offer'" />
     </LazyHydrate>
 
+    <LazyHydrate when-visible>
+
+      <Article :allposts="$page.allPosts.edges" :type="'post'" />
+    </LazyHydrate>
+    
     <LazyHydrate when-visible>
 
       <Event />
@@ -183,9 +189,28 @@ query {
     }
   }
 
+    allPosts: allBlogPost(filter: { categories: { in: "Blog" } }, order: DESC)
+    @paginate {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+        metaDescription
+      }
+    }
+  }
+
 }
 
 </page-query>
+
 
 <script>
 import Offer from "~/components/Blog/Offer.vue"
@@ -200,6 +225,8 @@ import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import BreadcrumbBlog from "~/components/Blog/BreadcrumbBlog.vue";
 import Event from "~/components/Blog/Event.vue";
+import Articles from '../components/Blog/Articles.vue';
+import Article from '../components/Blog/Article.vue';
 //import Post from "~/components/blog/Post.vue";
 
 export default {
@@ -214,8 +241,9 @@ export default {
     ArrowRight,
     BreadcrumbBlog,
     Event,
+    Article,
     //Post
-  },
+    Articles  },
   metaInfo() {
     return {
       title: "Blog",

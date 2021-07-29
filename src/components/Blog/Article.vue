@@ -1,0 +1,265 @@
+<template>
+  <div
+    class="container w-full mx-auto mt-4 md:mt-24 space-x-0 md:flex md:px-16"
+  >
+    <div class="w-full">
+      <div class="w-full my-6 mx-auto">
+        <h3 class="px-3 md:text-md md:mx-auto text-primary font-bold">
+          <span v-if="type === 'post'">Articles</span>
+        </h3>
+      </div>
+      <div v-if="type === 'post'">
+        <VueSlickCarousel
+          v-bind="settings"
+          ref="carouselblog"
+          v-if="type === 'post'"
+        >
+          <!--first slide-card-->
+          <div
+            class="md:mx-2 w-full"
+            v-for="edge in allposts"
+            :key="edge.node.id"
+          >
+            <div
+              class="
+                shadow-lg
+                group
+                container
+                bg-white
+                max-w-sm
+                mx-auto
+                bg-white bg-center bg-cover bg-no-repeat
+                w-11/12
+                mx-2
+              "
+            >
+              <g-link :to="edge.node.path">
+                <div class="w-full overflow-hidden">
+                  <g-image
+                    alt="Scrum"
+                    title="Africa TechUp Tour"
+                    :src="edge.node.coverImage"
+                    class="object-cover w-full h-48 mb-0"
+                  />
+                  <div class="w-full relative px-4 pb-4 pt-2 bg-white">
+                    <div
+                      class="
+                        text-primary
+                        font-bold
+                        tracking-wider
+                        leading-relaxed
+                        font-roboto
+                      "
+                    >
+                      {{ edge.node.title }}
+                    </div>
+
+                    <div
+                      class="
+                        tracking-tight
+                        leading-relaxed
+                        font-roboto
+                        text-xs
+                        mt-2
+                      "
+                    >
+                      <p
+                        class="
+                          text-gray-600
+                          font-light
+                          text-base text-justify
+                          text-ellipsis--2
+                        "
+                      >
+                        {{ edge.node.metaDescription }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </g-link>
+            </div>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex float-right mt-4" style="margin-right: 2rem">
+          <div
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-12
+              h-12
+              mr-2
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
+          >
+            <button @click="showPrev">
+              <ArrowLeft />
+            </button>
+          </div>
+          <div
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-12
+              h-12
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
+          >
+            <button @click="showNext">
+              <ArrowRight />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
+import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
+export default {
+  props: {
+    allposts: {
+      type: Array,
+      default() {
+        return "";
+      },
+    },
+    type: {
+      type: String,
+      default() {
+        return "";
+      },
+    },
+  },
+  components: {
+    VueSlickCarousel,
+    ArrowLeft,
+    ArrowRight,
+  },
+  data() {
+    return {
+      settings: {
+        dots: false,
+        dotsClass: "articledots visible",
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      },
+    };
+  },
+  created() {
+    setInterval(this.getTime, 1000);
+  },
+  mounted() {
+    console.log(this.allposts);
+    console.log(this.type);
+  },
+  methods: {
+    showNext() {
+      this.$refs.carouselblog.next();
+    },
+    showPrev() {
+      this.$refs.carouselblog.prev();
+    },
+  },
+};
+</script>
+
+<style scoped>
+.bg-offer {
+  background-image: url("./../../../static/images/home/offer.png");
+}
+
+.bg-offshoring {
+  background-image: url("./../../../static/images/home/offer/offshoring.png");
+}
+
+.bg-offshoring_2 {
+  background-image: url("./../../../static/images/home/offer/offshoring2.png");
+}
+
+.bg-datalab {
+  background-image: url("./../../../static/images/home/offer/datalab.png");
+}
+
+/* Animations */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide-in-up animation*/
+.slide-in-up-enter-active,
+.slide-in-up-leave-active {
+  transition: all 0.5s;
+  transform: translateY(0);
+}
+.slide-in-up-enter,
+.slide-in-up-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.bg-offshoring_2 {
+  background-image: url("./../../../static/images/home/offer/offshoring2.png");
+}
+
+.text-ellipsis--2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+</style>
