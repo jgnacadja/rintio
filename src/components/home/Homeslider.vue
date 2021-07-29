@@ -223,7 +223,7 @@ export default {
       counter: 0,
       xx: "",
       settings: {
-        autoplay: false,
+        autoplay: true,
         infinite: true,
         rows: 1,
         initialSlide: 0,

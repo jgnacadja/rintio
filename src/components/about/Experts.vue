@@ -19,7 +19,7 @@
         </p>
       </div>
       <div
-        class="lg:flex hidden lg:space-x-4  md:mx-0 pt-6 sm:p-12 lg:px-0  xl:px-24 2xl:px-96 lg:p-0 lg:space-y-0 lg:space-y-0 md:space-y-4 lg:mt-12"
+        class="lg:flex hidden lg:space-x-4  md:mx-0 pt-6 sm:p-12 lg:px-0  xl:px-24  2xl:px-64 3xl:px-96 lg:p-0 lg:space-y-0 lg:space-y-0 md:space-y-4 lg:mt-12"
       >
         <div class="w-full md:w-1/2  shadow-md">
           <div class="h-full bg-white ">
@@ -27,11 +27,11 @@
               src="~/assets/images/home/about/Michel.jpg"
               alt=""
             ></g-image>
-            <h2 class="mt-10 lg:mt-0 mb-2 px-6 lg:px-2 font-normal lg:text-2xl 2xl:text-4xl 2xl:px-8 text-primary">
+            <h2 class="mt-10 lg:mt-0 mb-2 px-6 lg:px-2 font-normal lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary">
               Michel <span class="font-bold uppercase">Idjinou</span>
             </h2>
             <h3
-              class="text-secondary border-b-2 border-secondary px-6 lg:px-2 lg:text-lg pb-2 2xl:text-2xl 2xl:px-8 uppercase"
+              class="text-secondary border-b-2 border-secondary px-6 lg:px-2 lg:text-lg pb-2 3xl:text-2xl 2xl:px-4 3xl:px-8 uppercase"
             >
               c.e.o
             </h3>
@@ -54,11 +54,11 @@
               src="~/assets/images/home/about/Jacques.jpeg"
               alt=""
             ></g-image>
-            <h2 class="mt-10 lg:mt-0 mb-2 px-6 lg:px-2 font-normal lg:text-2xl 2xl:text-4xl 2xl:px-8 text-primary">
+            <h2 class="mt-10 lg:mt-0 mb-2 px-6 lg:px-2 font-normal lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary">
               Jacques <span class="font-bold uppercase">Gnacadja</span>
             </h2>
             <h3
-              class="text-secondary border-b-2 border-secondary px-6 lg:px-2 lg:text-lg 2xl:text-2xl 2xl:px-8 pb-2 uppercase"
+              class="text-secondary border-b-2 border-secondary px-6 lg:px-2 lg:text-lg 3xl:text-2xl 2xl:px-4 3xl:px-8 pb-2 uppercase"
             >
               c.o.o
             </h3>
@@ -82,11 +82,11 @@
               src="~/assets/images/home/about/Iskilou.jpeg"
               alt=""
             ></g-image>
-            <h2 class="mt-10 lg:mt-0 mb-2 px-6 lg:px-2 font-normal lg:text-2xl 2xl:text-4xl text-primary">
+            <h2 class="mt-10 lg:mt-0 mb-2 px-6 lg:px-2 font-normal lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary">
               Iskilou <span class="font-bold uppercase">Yerima</span>
             </h2>
             <h3
-              class="text-secondary border-b-2 border-secondary px-6 lg:px-2 lg:text-lg 2xl:text-2xl 2xl:px-8 pb-2 uppercase"
+              class="text-secondary border-b-2 border-secondary px-6 lg:px-2 lg:text-lg 3xl:text-2xl 2xl:px-4 3xl:px-8 pb-2 uppercase"
             >
               c.t.o
             </h3>
