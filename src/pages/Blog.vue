@@ -106,17 +106,12 @@
 
 <LazyHydrate when-visible>
 
-      <Article :allposts="$page.allPosts.edges" :type="'offer'" />
+      <Article :allposts="$page.allOffer.edges" :type="'offer'" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
 
       <Article :allposts="$page.allPosts.edges" :type="'post'" />
-    </LazyHydrate>
-    
-    <LazyHydrate when-visible>
-
-      <Event />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
@@ -189,8 +184,24 @@ query {
     }
   }
 
-    allPosts: allBlogPost(filter: { categories: { in: "Blog" } }, order: DESC)
-    @paginate {
+    allPosts: allBlogPost(filter: { categories: { in: "Blog" } }, order: DESC) {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+        metaDescription
+      }
+    }
+  }
+
+  allOffer: allBlogPost(filter: { categories: { in: "Offres" } }, order: DESC) {
     edges {
       node {
         id
@@ -208,6 +219,7 @@ query {
   }
 
 }
+
 
 </page-query>
 

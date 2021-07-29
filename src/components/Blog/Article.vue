@@ -6,7 +6,120 @@
       <div class="w-full my-6 mx-auto">
         <h3 class="px-3 md:text-md md:mx-auto text-primary font-bold">
           <span v-if="type === 'post'">Articles</span>
+          <span v-if="type === 'offer'">Offres</span>
         </h3>
+      </div>
+      <div v-if="type === 'offer'">
+        <VueSlickCarousel
+          v-bind="settings"
+          ref="carouselblog"
+          v-if="type === 'offer'"
+        >
+          <!--first slide-card-->
+          <div
+            class="md:mx-2 w-full"
+            v-for="edge in allposts"
+            :key="edge.node.id"
+          >
+          <g-link :to="edge.node.path">
+            <div
+              class="
+                shadow-lg
+                group
+                container
+                max-w-sm
+               bg-center bg-cover bg-no-repeat
+                w-11/12
+                mx-2
+                h-72
+              "
+              v-bind:style="{ 'background-image': 'url(' + edge.node.coverImage + ')' }"
+            >
+          
+              
+            <div class="w-full bg-transparent">
+                  
+                  <div class="w-full relative px-4 pb-4 pt-2">
+                    <div
+                      class="
+                        text-primary
+                        font-bold
+                        tracking-wider
+                        leading-relaxed
+                        font-roboto
+                      "
+                    >
+                      {{ edge.node.title }}
+                    </div>
+
+                    <div
+                      class="
+                        tracking-tight
+                        leading-relaxed
+                        font-roboto
+                        text-xs
+                        mt-2
+                      "
+                    >
+                      <p
+                        class="
+                          text-gray-600
+                          font-light
+                          text-base text-justify
+                          text-ellipsis--6
+                        "
+                      >
+                        {{ edge.node.metaDescription }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+            </g-link>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex float-right mt-4" style="margin-right: 2rem">
+          <div
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-12
+              h-12
+              mr-2
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
+          >
+            <button @click="showPrev">
+              <ArrowLeft />
+            </button>
+          </div>
+          <div
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-12
+              h-12
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
+          >
+            <button @click="showNext">
+              <ArrowRight />
+            </button>
+          </div>
+        </div>
       </div>
       <div v-if="type === 'post'">
         <VueSlickCarousel
@@ -25,10 +138,7 @@
                 shadow-lg
                 group
                 container
-                bg-white
-                max-w-sm
-                mx-auto
-                bg-white bg-center bg-cover bg-no-repeat
+                max-w-sm bg-center bg-cover bg-no-repeat
                 w-11/12
                 mx-2
               "
@@ -136,6 +246,18 @@ import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 export default {
   props: {
     allposts: {
+      type: Array,
+      default() {
+        return "";
+      },
+    },
+    type: {
+      type: String,
+      default() {
+        return "";
+      },
+    },
+      allOffer: {
       type: Array,
       default() {
         return "";
@@ -259,6 +381,14 @@ export default {
   overflow: hidden;
   display: -webkit-box !important;
   -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.text-ellipsis--6 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   white-space: normal;
 }
