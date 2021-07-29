@@ -4,16 +4,18 @@
       bg-offer
       mt-0
       md:mt-14
-      md:px-20
+      md:px-8
       md:flex
       w-full
       justify-center
       md:py-24
-      md:space-x-4
+      md:space-x-0
+      md:flex-col
+      lg:flex-row
     "
   >
-    <div class="w-full md:w-1/4 mb-8 md:mb-0">
-      <div class="mx-4 md:mx-0">
+    <div class="w-full lg:w-1/4 md:w-full mb-8 md:mb-8 lg:mb-0">
+      <div class="mx-4 md:mx-3">
         <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
           Nos offres
         </h3>
@@ -42,7 +44,7 @@
           <span class="text-secondary">client</span>
         </h2>
 
-        <p class="my-3 font-light">
+        <p class="my-3 font-light ">
           Les solutions que nous proposons à nos précieux clients. Découvrez nos
           offres qui accéléront certainement votre productivité.
         </p>
@@ -69,9 +71,9 @@
       </div>
     </div>
 
-    <div class="w-full md:w-3/4 flex-row flex-wrap flex px-3">
+    <div class="w-full  md:flex-shrink-0 lg:w-2/3 px-1 md:px-0 lg:px-2">
       <div
-        class="w-full md:flex md:space-x-6 space-y-6 md:space-y-0"
+        class="w-full flex-row md:flex md:space-x-4 space-y-6 md:space-y-0"
         v-observe-visibility="{
           callback: animate,
           once: true,
@@ -79,7 +81,7 @@
         }"
       >
         <transition name="slide-in-up">
-          <div class="w-full md:w-2/3" v-if="show">
+          <div class="w-full lg:flex-shrink-0 lg:w-1/2" v-if="show">
             <div
               class="
                 shadow-lg
@@ -93,7 +95,7 @@
                 sm:mx-auto
               "
             >
-              <div class="w-full overflow-hidden md:h-full">
+              <div class="w-full  overflow-hidden md:h-full">
                 <div class="w-full h-40 md:h-full"></div>
                 <div class="w-full relative px-4 pb-4 md:-mt-24">
                   <div
@@ -147,7 +149,7 @@
           </div>
         </transition>
 
-        <div class="w-full md:w-1/3 space-y-6">
+        <div class="w-full md:w-3/4 space-y-4 lg:space-x-0">
           <transition name="slide-in-up">
             <div
               class="
@@ -155,8 +157,9 @@
                 group
                 container
                 bg-white
-                max-w-sm
-                mx-auto
+                lg:max-w-sm
+                md:mx-auto
+                lg:mx-px
                 bg-center bg-cover bg-no-repeat
                 bg-offshoring_2
               "
@@ -212,7 +215,7 @@
                 group
                 container
                 bg-white
-                max-w-sm
+                lg:max-w-sm
                 mx-auto
                 bg-center bg-cover bg-no-repeat bg-datalab
               "
