@@ -5,296 +5,123 @@
     <div class="w-full">
       <div class="w-full my-6 mx-auto">
         <h3 class="px-3 md:text-md md:mx-auto text-primary font-bold">
-          Articles
+          <span v-if="type === 'post'">Articles</span>
         </h3>
       </div>
-      <VueSlickCarousel v-bind="settings">
-        <!--first slide-card-->
-        <div
-          class="md:mx-2 w-full"
-          v-for="edge in allposts"
-          :key="edge.node.id"
+      <div v-if="type === 'post'">
+        <VueSlickCarousel
+          v-bind="settings"
+          ref="carouselblog"
+          v-if="type === 'post'"
         >
+          <!--first slide-card-->
           <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-white bg-center bg-cover bg-no-repeat
-              w-11/12
-              mx-2
-            "
+            class="md:mx-2 w-full"
+            v-for="edge in allposts"
+            :key="edge.node.id"
           >
-            <g-link :to="edge.node.path">
-              <div class="w-full overflow-hidden">
-                <g-image
-                  alt="Scrum"
-                  title="Africa TechUp Tour"
-                  :src="edge.node.coverImage"
-                  class="object-cover w-full h-48 mb-0"
-                />
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    {{ edge.node.title }}
-                  </div>
+            <div
+              class="
+                shadow-lg
+                group
+                container
+                bg-white
+                max-w-sm
+                mx-auto
+                bg-white bg-center bg-cover bg-no-repeat
+                w-11/12
+                mx-2
+              "
+            >
+              <g-link :to="edge.node.path">
+                <div class="w-full overflow-hidden">
+                  <g-image
+                    alt="Scrum"
+                    title="Africa TechUp Tour"
+                    :src="edge.node.coverImage"
+                    class="object-cover w-full h-48 mb-0"
+                  />
+                  <div class="w-full relative px-4 pb-4 pt-2 bg-white">
+                    <div
+                      class="
+                        text-primary
+                        font-bold
+                        tracking-wider
+                        leading-relaxed
+                        font-roboto
+                      "
+                    >
+                      {{ edge.node.title }}
+                    </div>
 
-                  <div
-                    class="
-                      tracking-tight
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                      mt-2
-                    "
-                  >
-                    <p class="text-gray-600 font-light text-base text-justify text-ellipsis--2">
-                      {{ edge.node.metaDescription }}
-                    </p>
+                    <div
+                      class="
+                        tracking-tight
+                        leading-relaxed
+                        font-roboto
+                        text-xs
+                        mt-2
+                      "
+                    >
+                      <p
+                        class="
+                          text-gray-600
+                          font-light
+                          text-base text-justify
+                          text-ellipsis--2
+                        "
+                      >
+                        {{ edge.node.metaDescription }}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </g-link>
+              </g-link>
+            </div>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex float-right mt-4" style="margin-right: 2rem">
+          <div
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-12
+              h-12
+              mr-2
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
+          >
+            <button @click="showPrev">
+              <ArrowLeft />
+            </button>
+          </div>
+          <div
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-12
+              h-12
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
+          >
+            <button @click="showNext">
+              <ArrowRight />
+            </button>
           </div>
         </div>
-        <!--second slide-card-->
-        <!--<div class="md:mx-2 w-full container">
-          <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-white bg-center bg-cover bg-no-repeat
-              w-11/12
-              mx-2
-            "
-          >
-            <div class="w-full overflow-hidden">
-              <g-image
-                alt="atut2020"
-                title="Africa TechUp Tour 2020"
-                src="~/assets/images/home/story/atut2020.png"
-                class="object-cover w-full h-48 mb-0"
-              />
-              <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                <div
-                  class="
-                    text-primary
-                    font-bold
-                    tracking-wider
-                    leading-relaxed
-                    font-roboto
-                  "
-                >
-                  Africa TechUp Tour
-                </div>
-
-                <div
-                  class="
-                    tracking-wider
-                    leading-relaxed
-                    font-roboto
-                    text-xs
-                    mt-2
-                  "
-                >
-                  <p class="text-gray-600 font-light text-base text-justify">
-                    La campagne 2020, déjà lancée. Etudiants, mathématiciens,
-                    Statisticiens, Inscrivez vous
-                    <g-link
-                      href="http://africatechuptour.com/"
-                      class="underline text-blue-600"
-                      >ici</g-link
-                    >.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!--third slide-card-->
-        <!--<div class="md:mx-2 w-full">
-          <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-white bg-center bg-cover bg-no-repeat
-              w-11/12
-              mx-2
-            "
-          >
-            <div class="w-full overflow-hidden">
-              <g-image
-                alt="sgmaroc"
-                title="Team sgmaroc"
-                src="~/assets/images/home/story/sgmaroc.png"
-                class="object-cover w-full h-48 mb-0"
-              />
-              <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                <div
-                  class="
-                    text-primary
-                    font-bold
-                    tracking-tighter
-                    leading-relaxed
-                    font-roboto
-                  "
-                >
-                  SG Maroc imagine la banque du future avec l’IA
-                </div>
-
-                <div
-                  class="
-                    tracking-tighter
-                    leading-relaxed
-                    font-roboto
-                    text-xs
-                    mt-2
-                  "
-                >
-                  <p class="text-gray-600 font-light text-base text-justify">
-                    Pendant une semaine, les experts RINTIO ont animé des
-                    ateliers de ... du Maroc.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
-        <!--fourth slide-card-->
-        <!--<div class="md:mx-2 w-full">
-          <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-white bg-center bg-cover bg-no-repeat
-              w-11/12
-              mx-2
-            "
-          >
-            <div class="w-full overflow-hidden">
-              <g-image
-                alt="idermato"
-                title="IA et Dermatologie"
-                src="~/assets/images/home/story/idermato.png"
-                class="object-cover w-full h-48 mb-0"
-              />
-              <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                <div
-                  class="
-                    text-primary
-                    font-bold
-                    tracking-tighter
-                    leading-relaxed
-                    font-roboto
-                  "
-                >
-                  iDermato : IA et Dermatologie
-                </div>
-
-                <div
-                  class="
-                    tracking-tight
-                    leading-relaxed
-                    font-roboto
-                    text-xs
-                    mt-2
-                  "
-                >
-                  <p
-                    class="
-                      text-gray-600
-                      tracking-tighter
-                      font-light
-                      text-base text-justify
-                    "
-                  >
-                    Un projet Pan-Africain inédit. L’IA au service des
-                    dermatologues et généralistes pour le diagnostique
-                    d’affection ...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
-        <!--fith slide-card-->
-        <!--<div class="md:mx-2 w-full">
-          <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-white bg-center bg-cover bg-no-repeat
-              w-11/12
-              mx-2
-            "
-          >
-            <div class="w-full overflow-hidden">
-              <g-image
-                alt="Atut"
-                title="Africa TechUp Tour"
-                src="~/assets/images/home/story/atut.png"
-                class="object-cover w-full h-48 mb-0"
-              />
-              <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                <div
-                  class="
-                    text-primary
-                    font-bold
-                    tracking-wider
-                    leading-relaxed
-                    font-roboto
-                  "
-                >
-                  Africa TechUp Tour
-                </div>
-
-                <div
-                  class="
-                    tracking-tight
-                    leading-relaxed
-                    font-roboto
-                    text-xs
-                    mt-2
-                  "
-                >
-                  <p class="text-gray-600 font-light text-base text-justify">
-                    Rintio, co-organisateur du Africa TechUp Tour apporte toutes
-                    son expertise en Data et IA dans la formation de la
-                    jeunesse.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
-        <!--fourth slide-card-->
-      </VueSlickCarousel>
+      </div>
     </div>
   </div>
 </template>
@@ -304,9 +131,11 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
+import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 export default {
-  props:{
-        allposts: {
+  props: {
+    allposts: {
       type: Array,
       default() {
         return "";
@@ -321,11 +150,13 @@ export default {
   },
   components: {
     VueSlickCarousel,
+    ArrowLeft,
+    ArrowRight,
   },
   data() {
     return {
       settings: {
-        dots: true,
+        dots: false,
         dotsClass: "articledots visible",
         infinite: false,
         speed: 500,
@@ -340,7 +171,7 @@ export default {
               slidesToShow: 3,
               slidesToScroll: 3,
               infinite: true,
-              dots: true,
+              dots: false,
             },
           },
           {
@@ -370,42 +201,11 @@ export default {
     console.log(this.type);
   },
   methods: {
-    getTime: function () {
-      var now = new Date();
-      var days = now.getDay();
-      var months = now.getMonth();
-      var years = now.getFullYear();
-      var hour = now.getHours();
-      var minute = now.getMinutes();
-
-      if (days.toString().length == 1) {
-        days = "0" + days;
-      }
-      if (months.toString().length == 1) {
-        months = "0" + months;
-      }
-      if (years.toString().length == 1) {
-        years = "0" + years;
-      }
-      if (hour.toString().length == 1) {
-        hour = "0" + hour;
-      }
-      if (minute.toString().length == 1) {
-        minute = "0" + minute;
-      }
-
-      this.days = days;
-
-      if (this.days.toString().length == 1) this.days = "0" + this.days;
-      if (this.months.toString().length == 1) this.months = "0" + this.months;
-      if (this.years.toString().length == 1) this.years = "0" + this.years;
-      if (this.hour.toString().length == 1) this.hour = "0" + this.hour;
-      if (this.minute.toString().length == 1) this.minute = "0" + this.minute;
-
-      this.months = months;
-      this.years = years;
-      this.hour = hour;
-      this.minute = minute;
+    showNext() {
+      this.$refs.carouselblog.next();
+    },
+    showPrev() {
+      this.$refs.carouselblog.prev();
     },
   },
 };

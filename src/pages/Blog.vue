@@ -74,6 +74,11 @@
 
 <LazyHydrate when-visible>
 
+      <Article :allposts="$page.allPosts.edges" :type="'offer'" />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+
       <Article :allposts="$page.allPosts.edges" :type="'post'" />
     </LazyHydrate>
     
