@@ -88,7 +88,7 @@
           </div>
         </div>
 
-        <!--         <div
+        <div
           id="blog"
           class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
