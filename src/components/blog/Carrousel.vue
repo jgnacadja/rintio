@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container w-full mx-auto mt-4 md:mt-24 space-x-0 md:flex md:px-16"
+    class="container w-full mx-auto mt-4 md:mt-24 space-x-0 md:flex"
   >
     <div class="w-full">
       <div class="w-full my-6 mx-auto">
@@ -13,7 +13,7 @@
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
           <div
-            class="md:mx-2 w-full"
+            class="md:mx-0 w-full"
             v-for="edge in allposts"
             :key="edge.node.id"
           >
@@ -98,7 +98,7 @@
                       class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
                     >
                       <p
-                        class="text-gray-600 font-light text-base text-justify text-ellipsis--2"
+                        class="text-gray-600 font-light text-base text-justify text-ellipsis--2 "
                       >
                         {{ edge.node.metaDescription }}
                       </p>
@@ -172,14 +172,14 @@ export default {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+              slidesToShow: 3,
+              slidesToScroll: 3,
               infinite: true,
               dots: false,
             },
           },
           {
-            breakpoint: 600,
+            breakpoint: 700,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
