@@ -1,6 +1,6 @@
 <template>
   <div
-    class="justify-center w-full mt-0 bg-offer md:mt-14 md:px-8 md:flex md:py-24 md:space-x-0 md:flex-col lg:flex-row"
+    class="justify-center w-full mt-0  bg-offer md:mt-14 md:px-8 md:flex md:py-24 md:space-x-0 md:flex-col lg:flex-row"
   >
     <div class="w-full mb-8 lg:w-1/4 md:w-full md:mb-8 lg:mb-0">
       <div class="mx-4 md:mx-3">
@@ -49,7 +49,7 @@
           once: true,
           throttle: 300,
         }"
-        >
+      >
         <transition name="slide-in-up">
           <div class="w-full lg:flex-shrink-0 lg:w-1/2" v-if="show">
             <div
@@ -92,7 +92,7 @@
         <div class="w-full space-y-4 md:w-3/4 lg:space-x-0">
           <transition name="slide-in-up">
             <div
-              class="container bg-white bg-center bg-no-repeat bg-cover shadow-lg group lg:max-w-sm md:mx-auto lg:mx-px bg-offshoring_2"
+              class="container bg-white bg-center bg-no-repeat bg-cover shadow-lg  group lg:max-w-sm md:mx-auto lg:mx-px bg-offshoring_2"
               v-if="show"
             >
               <div class="w-full overflow-hidden">
@@ -122,7 +122,7 @@
 
           <transition name="slide-in-up">
             <div
-              class="container mx-auto bg-white bg-center bg-no-repeat bg-cover shadow-lg group lg:max-w-sm bg-datalab"
+              class="container mx-auto bg-white bg-center bg-no-repeat bg-cover shadow-lg  group lg:max-w-sm bg-datalab"
               v-if="show"
             >
               <div class="w-full overflow-hidden">

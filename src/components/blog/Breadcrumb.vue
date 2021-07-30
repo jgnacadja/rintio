@@ -1,7 +1,7 @@
 <template>
-    <div class="object-contain w-full px-2 py-2 bg-right bg-no-repeat bg-cover md:bg-contain md:py-32 md:px-20 bg-homeslider-1">
-      <div class=" md:w-5/12">
-        <h2 class="flex text-2xl font-extrabold md:text-5xl text-secondary">
+    <div class="flex-auto object-contain w-full px-2 py-2 bg-right bg-no-repeat bg-cover md:bg-contain md:p-20 bg-homeslider-1 ">
+      <div class="">
+        <h2 class="text-2xl font-extrabold md:text-5xl text-secondary">
           Rintio
         </h2>
         <p class="text-sm font-light ">
