@@ -6,7 +6,9 @@
         "develop": "gridsome develop",
         "explore": "gridsome explore",
         "lint": "eslint --ext .js,.vue src/",
-        "lint-fix": "eslint --ext .js,.vue src/ --fix"
+        "lint-fix": "eslint --ext .js,.vue src/ --fix",
+        "markdown:lint": "markdownlint '**/*.md' --ignore node_modules",
+        "markdown:fix": "markdownlint '**/*.md' --ignore node_modules --fix"
     },
     "dependencies": {
         "@gridsome/plugin-google-analytics": "^0.1.2",
