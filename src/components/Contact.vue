@@ -186,7 +186,6 @@
 import Phone from "~/assets/images/icons/phone.svg";
 import Mail from "~/assets/images/icons/envelope.svg";
 import emailjs from "emailjs-com";
-
 export default {
   name: "ContactUs",
   components: {
@@ -212,7 +211,6 @@ export default {
   //         message: this.message
   //       })
   //     // document.getElementById("popup").style.display="block"
-
   //     } catch(error) {
   //         console.log({error})
   //     }
@@ -223,7 +221,6 @@ export default {
   //     this.message = ''
   //   },
   // }
-
   methods: {
     sendEmail: (e) => {
       emailjs
@@ -241,12 +238,10 @@ export default {
             // innerHTML="Votre message a été envoyé.";
             // Reset form field
             document.getElementById("form").reset();
-
             // document.forms["form"]["name"].value="";
             // document.forms["form"]["email"].value="";
             // document.forms["form"]["object"].value="";
             // document.forms["form"]["message"].value="";
-
             // this.name = ''
             // this.email = ''
             // this.object = ''

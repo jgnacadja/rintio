@@ -106,7 +106,7 @@
     </LazyHydrate>
 
         <!-- <LazyHydrate when-visible>
-      <Carrousel :allposts="$page.AllEventpost.edges" :type="'post'" />
+      <Carrousel :allposts="$page.AllEventpost.edges" :type="'Event'" />
     </LazyHydrate> -->
   </Layout>
 </template>
@@ -209,7 +209,6 @@ query {
   }
     AllEventpost: allBlogPost(
     filter: { categories: { in: "Blog" } }
-    limit: 3
     order: DESC
   ) {
     edges {

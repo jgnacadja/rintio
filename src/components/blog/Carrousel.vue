@@ -19,15 +19,15 @@
           >
             <g-link :to="edge.node.path">
               <div
-                class="shadow-lg group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-2 h-72"
+                class="shadow-lg group container max-w-sm bg-center bg-cover bg-no-repeat h-72 w-11/12 mx-2 relative"
                 v-bind:style="{
                   'background-image': 'url(' + edge.node.coverImage + ')',
                 }"
               >
                 <div class="w-full bg-transparent">
-                  <div class="w-full relative px-4 pb-4 pt-2">
+                  <div class="w-full px-4 pb-4 pt-2 absolute bottom-2 lg:-bottom-6 h-40 text-white">
                     <div
-                      class="text-primary font-bold tracking-wider leading-relaxed font-roboto"
+                      class="font-bold tracking-wider leading-relaxed font-roboto"
                     >
                       {{ edge.node.title }}
                     </div>
@@ -36,7 +36,7 @@
                       class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
                     >
                       <p
-                        class="text-gray-600 font-light text-base text-justify text-ellipsis--6"
+                        class="font-light text-base text-justify text-ellipsis--6"
                       >
                         {{ edge.node.metaDescription }}
                       </p>
@@ -87,6 +87,10 @@
                     <div
                       class="text-primary font-bold tracking-wider leading-relaxed font-roboto"
                     >
+                    <span class="relative hidden w-20 font-light h-9 p-2 ml-0 text-sm text-center text-white capitalize bg-secondary md:block -mt-7" data-v-27823496="">
+                      {{ edge.node.categories.title }}
+
+                    </span>
                       {{ edge.node.title }}
                     </div>
 
