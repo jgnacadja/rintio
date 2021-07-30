@@ -104,6 +104,10 @@
     <LazyHydrate when-visible>
       <Carrousel :allposts="$page.allPosts.edges" :type="'post'" />
     </LazyHydrate>
+
+        <!-- <LazyHydrate when-visible>
+      <Carrousel :allposts="$page.AllEventpost.edges" :type="'Event'" />
+    </LazyHydrate> -->
   </Layout>
 </template>
 
@@ -200,6 +204,24 @@ query {
         date
         coverImage
         metaDescription
+      }
+    }
+  }
+    AllEventpost: allBlogPost(
+    filter: { categories: { in: "Blog" } }
+    order: DESC
+  ) {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
       }
     }
   }
