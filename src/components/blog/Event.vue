@@ -8,9 +8,6 @@
       <h4 class="mb-5 text-lg text-primary font-bold">Evènements</h4>
         </h3>
       </div>
-      <!-- <div class="mt-4 m-16 ">
-        <h4 class="mb-5 text-lg text-primary font-bold">Evènements</h4>
-      </div> -->
       <VueSlickCarousel v-bind="settings" ref="carouselEvent">
         <div class=" md:mx-2 w-full container ">
           <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
@@ -306,7 +303,7 @@ export default {
           speed: 500,
           slidesToShow: 4,
           slidesToScroll: 4,
-          initialSlide: 0,
+          initialSlide: 1,
           arrows:true,
           responsive: [
             {
