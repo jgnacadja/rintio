@@ -4,7 +4,7 @@
   >
     <div class="w-full">
       <div class="w-full my-6 mx-auto">
-        <h3 class="px-3 md:text-md md:mx-auto mt-20 md:mt-0 text-primary font-bold">
+        <h3 class="px-3 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold">
           <span v-if="type === 'post'">Articles</span>
           <span v-if="type === 'offer'">Offres</span>
         </h3>
