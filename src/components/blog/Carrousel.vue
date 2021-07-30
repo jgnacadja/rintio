@@ -161,7 +161,7 @@ export default {
     return {
       settings: {
         dots: false,
-        dotsClass: "articledots visible",
+        dotsClass: "articledots",
         infinite: false,
         speed: 500,
         slidesToShow: 4,
@@ -172,8 +172,8 @@ export default {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
+              slidesToShow: 2,
+              slidesToScroll: 2,
               infinite: true,
               dots: false,
             },

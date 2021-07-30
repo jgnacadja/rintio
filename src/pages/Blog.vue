@@ -105,9 +105,9 @@
       <Carrousel :allposts="$page.allPosts.edges" :type="'post'" />
     </LazyHydrate>
 
-        <!-- <LazyHydrate when-visible>
+        <LazyHydrate when-visible>
       <Carrousel :allposts="$page.AllEventpost.edges" :type="'Event'" />
-    </LazyHydrate> -->
+    </LazyHydrate>
   </Layout>
 </template>
 

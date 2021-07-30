@@ -94,7 +94,7 @@ export default {
       list: experts.list,
       currentList: experts.list,
       currentPage: 1,
-      perPage: 4,
+      perPage: 8,
       totalItems: 1,
       classes: {
         wrapper: "table border-collapse text-center bg-white mx-auto shadow-sm",
