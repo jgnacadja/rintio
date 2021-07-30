@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container w-full mx-auto mt-4 md:mt-24 space-x-0 md:flex md:px-16"
+    class="container w-full mx-auto mt-4 md:mt-24 space-x-0 md:flex"
   >
     <div class="w-full">
       <div class="w-full my-6 mx-auto">
@@ -13,7 +13,7 @@
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
           <div
-            class="md:mx-2 w-full"
+            class="md:mx-0 w-full"
             v-for="edge in allposts"
             :key="edge.node.id"
           >
@@ -49,14 +49,14 @@
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">
           <div
-            class="z-10 bg-primary bg-opacity-10 w-12 h-12 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
           >
             <button @click="showPrev">
               <ArrowLeft />
             </button>
           </div>
           <div
-            class="z-10 bg-primary bg-opacity-10 w-12 h-12 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
           >
             <button @click="showNext">
               <ArrowRight />
@@ -98,7 +98,7 @@
                       class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
                     >
                       <p
-                        class="text-gray-600 font-light text-base text-justify text-ellipsis--2"
+                        class="text-gray-600 font-light text-base text-justify text-ellipsis--2 "
                       >
                         {{ edge.node.metaDescription }}
                       </p>
@@ -111,14 +111,14 @@
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">
           <div
-            class="z-10 bg-primary bg-opacity-10 w-12 h-12 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
           >
             <button @click="showPrev">
               <ArrowLeft />
             </button>
           </div>
           <div
-            class="z-10 bg-primary bg-opacity-10 w-12 h-12 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
           >
             <button @click="showNext">
               <ArrowRight />
@@ -161,7 +161,7 @@ export default {
     return {
       settings: {
         dots: false,
-        dotsClass: "articledots visible",
+        dotsClass: "articledots",
         infinite: false,
         speed: 500,
         slidesToShow: 4,
@@ -179,7 +179,7 @@ export default {
             },
           },
           {
-            breakpoint: 600,
+            breakpoint: 700,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
