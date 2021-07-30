@@ -87,6 +87,10 @@
                     <div
                       class="text-primary font-bold tracking-wider leading-relaxed font-roboto"
                     >
+                    <span class="relative hidden w-20 font-light h-9 p-2 ml-0 text-sm text-center text-white capitalize bg-secondary md:block -mt-7" data-v-27823496="">
+                      {{ edge.node.categories.title }}
+
+                    </span>
                       {{ edge.node.title }}
                     </div>
 
