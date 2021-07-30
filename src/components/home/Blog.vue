@@ -10,7 +10,7 @@
       <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
         Rintio<span class="text-secondary"> blog</span>
       </h2>
-      <h4 class="lg:w-1/2  py-4">Articles à la une</h4>
+      <h4 class=" py-4">Articles à la une</h4>
     </div>
 
     <div
@@ -21,6 +21,8 @@
         gap-4
         md:grid-flow-row
         xl:grid-flow-rows
+        px-2
+        xl:px-24
       "
     >
       <div
@@ -51,7 +53,24 @@
           </h5>
           <p class="text-primary  text-xs space-x-8 mx-4">
             <span>{{ edge.node.date | FormatDate }}</span>
-            <span class="float-right">Publié par : Rintio</span>
+             <span class="pt-0 float-right flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="sm:hidden h-4 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                  <span class="hidden sm:flex"> Publié par : </span>
+                  Rintio
+                </span>
+            
           </p>
           <p class="text-gray-600 text-justify font-light mb-4 mx-4">
             {{ edge.node.metaDescription }}
@@ -139,16 +158,13 @@
       </div>
     </div>
 
-    <div class="md:flex container mx-auto md:px-16 w-full">
+    <div class="md:flex  mx-auto py-4 px-2 xl:px-24 w-full">
       <g-link to="/blog" class="ml-auto">
         <button
           href="#"
           class="
             flex
             ml-auto
-            mr-8
-            md:ml-0
-            md:mr-0
             md:text-lg
             font-medium
             hover:text-secondary
