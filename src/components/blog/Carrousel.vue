@@ -4,7 +4,7 @@
   >
     <div class="w-full">
       <div class="w-full my-6 mx-auto">
-        <h3 class="px-3 md:text-md md:mx-auto text-primary font-bold">
+        <h3 class="px-3 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold">
           <span v-if="type === 'post'">Articles</span>
           <span v-if="type === 'offer'">Offres</span>
         </h3>
@@ -25,18 +25,18 @@
                 }"
               >
                 <div class="w-full bg-transparent">
-                  <div class="w-full px-4 pb-4 pt-2 absolute bottom-2 lg:-bottom-6 h-40 text-white">
+                  <div class="w-full px-4 pb-4 pt-2 absolute bottom-2 lg:-bottom-6 h-24 md:h-24 lg:h-32 xl:h-24 text-white">
                     <div
-                      class="font-bold tracking-wider leading-relaxed font-roboto"
+                      class="font-bold tracking-wider leading-relaxed text-lg font-roboto"
                     >
                       {{ edge.node.title }}
                     </div>
 
                     <div
-                      class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
+                      class="tracking-tight leading-normal font-roboto text-sm mt-2"
                     >
                       <p
-                        class="font-light text-base text-justify text-ellipsis--6"
+                        class="font-light text-base text-ellipsis--6 md:text-ellipsis--2"
                       >
                         {{ edge.node.metaDescription }}
                       </p>
@@ -212,8 +212,18 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box !important;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     white-space: normal;
 }
+
+.text-ellipsis--6 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
 </style>
