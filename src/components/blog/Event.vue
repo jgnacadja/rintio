@@ -226,28 +226,28 @@
                     Hackathon Douala
                   </div>
                   <div
-                   class="tracking-wider leading-relaxed font-roboto text-xs mt-2"
+                   class="tracking-wider leading-relaxed font-roboto text-xs"
                   >
-                     <span class="flex items-start text-sm">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      after-appear=""
-                      alt="Cotonou"
-                      title="Cotonou localisation"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    {{days}}/{{months}}/{{years}}  |  {{ hour }}H {{ minute }}
-                  </span>
+                    <span class="flex items-start text-sm">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        after-appear=""
+                        alt="Cotonou"
+                        title="Cotonou localisation"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      {{days}}/{{months}}/{{years}}  |  {{ hour }}H {{ minute }}
+                    </span>
                   </div>
                   <div
                    class="text-black tracking-wider leading-relaxed font-roboto text-xs"
@@ -260,7 +260,7 @@
         </div>
         
       </VueSlickCarousel>
-              <div class="flex float-right mt-4" style="margin-right: 2rem">
+        <div class="flex float-right mt-4" style="margin-right: 2rem">
           <div
             class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
           >
