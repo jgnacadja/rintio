@@ -102,11 +102,11 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Carrousel :allposts="$page.allPosts.edges" :type="'post'" />
+      <Event :allposts="$page.AllEventpost.edges" :type="'Event'" />
     </LazyHydrate>
 
-        <LazyHydrate when-visible>
-      <Event :allposts="$page.AllEventpost.edges" :type="'Event'" />
+    <LazyHydrate when-visible>
+      <Carrousel :allposts="$page.allPosts.edges" :type="'post'" />
     </LazyHydrate>
   </Layout>
 </template>

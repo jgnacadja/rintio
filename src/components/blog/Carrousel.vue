@@ -98,7 +98,7 @@
                       class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
                     >
                       <p
-                        class="text-gray-600 font-light text-base text-justify text-ellipsis--2 "
+                        class="text-gray-600 font-light text-base text-ellipsis--2 "
                       >
                         {{ edge.node.metaDescription }}
                       </p>
