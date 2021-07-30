@@ -82,13 +82,13 @@
         </div>
         <div class="flex float-right mt-4" style="margin-right: 3.58rem">
           <div
-            class="z-10 bg-primary bg-opacity-10 w-12 h-12 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
             @click="previousSlide()"
           >
             <ArrowLeft />
           </div>
           <div
-            class="z-10 bg-primary bg-opacity-10 w-12 h-12 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
             @click="nextSlide()"
           >
             <ArrowRight />
