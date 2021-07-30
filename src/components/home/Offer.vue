@@ -1,179 +1,231 @@
 <template>
   <div
     class="
+      grid grid-cols-6
+      md:grid-cols-4
+      lg:grid-cols-3
+      gap-4
+      md:grid-flow-row
+      lg:grid-flow-rows
       bg-offer
-      mt-0
-      md:mt-14
-      md:px-8
-      md:flex
-      w-full
-      justify-center
-      md:py-24
-      md:space-x-0
-      md:flex-col
-      lg:flex-row
+      py-8
+      px-4
+      xl:px-12
+      xl:py-16
+        2xl:px-32
+      2xl:py-24
     "
   >
-    <div class="w-full lg:w-1/4 md:w-full mb-8 md:mb-8 lg:mb-0">
-      <div class="mx-4 md:mx-3">
-        <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
-          Nos offres
-        </h3>
-        <!-- Title Dot -->
-        <div class="-mt-3">
-          <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-          ></span>
+    <div
+      class="
+        row-span-4
+        col-span-6
+        md:row-span-6
+        md:col-span-4
+        lg:col-span-1
+        lg:row-span-2
+        w-full
+        h-full
+      "
+    >
+      <div class="">
+        <div class="">
+          <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
+            Nos offres
+          </h3>
+          <!-- Title Dot -->
+          <div class="-mt-3">
+            <span
+              class="inline-block w-20 h-2 rounded-full bg-secondary"
+            ></span>
+            <span
+              class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
+            ></span>
+            <span
+              class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
+            ></span>
+          </div>
         </div>
-      </div>
-      <div class="mx-4 md:mx-0 pt-6">
-        <h2 class="my-3 text-2xl md:text-5xl font-extrabold text-primary">
-          Prestation<br />
-          <span class="text-secondary">client</span>
-        </h2>
+        <div class="pt-6">
+          <h2 class="my-3 text-2xl md:text-5xl font-extrabold text-primary">
+            Prestation<br />
+            <span class="text-secondary">client</span>
+          </h2>
 
-        <p class="my-3 font-light ">
-          Les solutions que nous proposons à nos précieux clients. Découvrez nos
-          offres qui accéléront certainement votre productivité.
-        </p>
-        <div class="mt-4 text-center">
-          <g-link to="/offres">
-            <button
-              type="submit"
-              class="px-6 py-2 md:py-4 flex text-white text-sm bg-secondary rounded-sm hover:bg-primary uppercase"
-            >
-              Tout consulter
-            </button>
-          </g-link>
+          <p class="my-3 font-light">
+            Les solutions que nous proposons à nos précieux clients. Découvrez
+            nos offres qui accéléront certainement votre productivité.
+          </p>
+          <div class="mt-4 text-center">
+            <g-link to="/offres">
+              <button
+                type="submit"
+                class="
+                  px-6
+                  py-2
+                  md:py-4
+                  flex
+                  text-white text-sm
+                  bg-secondary
+                  rounded-sm
+                  hover:bg-primary
+                  uppercase
+                "
+              >
+                Tout consulter
+              </button>
+            </g-link>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="w-full  md:flex-shrink-0 lg:w-2/3 px-1 md:px-0 lg:px-2">
+    <div
+      class="
+        col-span-6
+        md:col-span-2
+        row-span-2
+        md:row-span-2
+        lg:col-span-1
+        lg:row-span-2
+        w-full
+        h-full
+      "
+    >
       <div
-        class="w-full flex-row md:flex md:space-x-4 space-y-6 md:space-y-0"
-        v-observe-visibility="{
-          callback: animate,
-          once: true,
-          throttle: 300,
-        }"
+        class="
+          shadow-lg
+          group
+          bg-center bg-cover bg-no-repeat bg-offshoring
+          h-80
+          md:h-full
+          relative
+        "
       >
-        <transition name="slide-in-up">
-          <div class="w-full lg:flex-shrink-0 lg:w-1/2" v-if="show">
-            <div
-              class="shadow-lg group container bg-white w-full bg-center bg-cover bg-no-repeat bg-offshoring h-full xs:mx-auto sm:mx-auto"
-            >
-              <div class="w-full  overflow-hidden md:h-full">
-                <div class="w-full h-40 md:h-full"></div>
-                <div class="w-full relative px-4 pb-4 md:-mt-24">
-                  <div
-                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                  >
-                    Offshoring
-                  </div>
+        <div class="absolute bottom-4 px-4">
+          <div
+            class="
+              text-white
+              font-extrabold
+              tracking-wider
+              leading-relaxed
+              font-roboto
+              2xl:text-4xl
+            "
+          >
+            Offshoring
+          </div>
 
-                  <div
-                    class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-                  >
-                    Concentrez vous sur votre cœur d’activité.
-                  </div>
+          <div class="text-white font-bold leading-relaxed font-roboto text-xs 2xl:text-xl">
+            Concentrez vous sur votre cœur d’activité.
+          </div>
 
-                  <div
-                    class="text-white tracking-wider leading-relaxed text-xs flex flex-row justify-between"
-                  >
-                    <div>
-                      • Dev. Python Java Php <br />
-                      • Admin. cloud & Infra
-                    </div>
+          <div
+            class="
+              text-white
+              tracking-wider
+              leading-relaxed
+              text-xs
+              2xl:text-lg
+              justify-between
+            "
+          >
+            <div>
+              • Dev. Python Java Php <br />
+              • Admin. cloud & Infra
+            </div>
 
-                    <div>
-                      • Migration Cloud <br />
-                      • DevOps
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              • Migration Cloud <br />
+              • DevOps
             </div>
           </div>
-        </transition>
-
-        <div class="w-full md:w-3/4 space-y-4 lg:space-x-0">
-          <transition name="slide-in-up">
+        </div>
+      </div>
+    </div>
+    <div
+      class="
+        col-span-6
+        md:col-span-2
+        row-span-2
+        md:row-span-1
+        lg:col-span-1
+        lg:row-span-1
+        w-full
+        h-full
+      "
+    >
+      <div
+        class="
+          shadow-lg
+          group
+          bg-white bg-center bg-cover bg-no-repeat
+          bg-offshoring_2
+        "
+      >
+        <div class="w-full">
+          <div class="w-full h-40"></div>
+          <div class="w-full relative px-4 pb-4">
             <div
               class="
-                shadow-lg
-                group
-                container
-                bg-white
-                lg:max-w-sm
-                md:mx-auto
-                lg:mx-px
-                bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
+                text-white
+                font-extrabold
+                tracking-wider
+                leading-relaxed
+                font-roboto
               "
-              v-if="show"
             >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-40"></div>
-                <div class="w-full relative px-4 pb-4">
-                  <div
-                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                  >
-                    Offshoring
-                  </div>
-
-                  <div
-                    class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-                  >
-                    Un développeur à partir de 50€ / Jour
-                  </div>
-
-                  <div
-                    class="text-white tracking-wider leading-relaxed text-xs"
-                  >
-                    #Python #Java #Php. 1 mois offert.
-                  </div>
-                </div>
-              </div>
+              Offshoring
             </div>
-          </transition>
 
-          <transition name="slide-in-up">
             <div
               class="
-                shadow-lg
-                group
-                container
-                bg-white
-                lg:max-w-sm
-                mx-auto
-                bg-center bg-cover bg-no-repeat bg-datalab
+                text-white
+                font-bold
+                tracking-wider
+                leading-relaxed
+                font-roboto
+                text-xs
               "
-              v-if="show"
             >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-40"></div>
-                <div class="w-full relative px-4 pb-4">
-                  <div
-                    class="text-white font-extrabold tracking-wider leading-relaxed font-roboto"
-                  >
-                    Data Lab
-                  </div>
-
-                  <div
-                    class="text-white tracking-wider leading-relaxed text-xs"
-                  >
-                    Accélérez votre croissance en exploitant pleinement
-                    lepotentiel de vos données.
-                  </div>
-                </div>
-              </div>
+              Un développeur à partir de 50€ / Jour
             </div>
-          </transition>
+
+            <div class="text-white tracking-wider leading-relaxed text-xs">
+              #Python #Java #Php. 1 mois offert.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="
+        col-span-6
+        md:col-span-2
+        row-span-2
+        md:row-span-1
+        lg:col-span-1
+        lg:row-span-1
+      "
+    >
+      <div
+        class="
+          shadow-lg
+          group
+          bg-white bg-center bg-cover bg-no-repeat bg-datalab
+        "
+      >
+        <div class="w-full">
+          <div class="w-full h-40"></div>
+          <div class="w-full relative px-4 pb-4">
+            <div class="text-white font-extrabold leading-relaxed font-roboto">
+              Data Lab
+            </div>
+
+            <div class="text-white tracking-wider leading-relaxed text-xs">
+              Accélérez votre croissance en exploitant pleinement lepotentiel de
+              vos données.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -183,17 +235,9 @@
 <script>
 export default {
   data() {
-    return {
-      show: false,
-    };
+    return {};
   },
-  methods: {
-    animate: function (isVisble, entry) {
-      if (entry.isIntersecting) {
-        this.show = true;
-      }
-    },
-  },
+  methods: {},
 };
 </script>
 
