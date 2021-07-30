@@ -250,27 +250,27 @@ import VueMarkdown from "vue-markdown";
 
 import PostSeo from "../mixins/SEO";
 
-import LazyHydrate from "vue-lazy-hydration";
-import Breadcrumb from "~/components/Breadcrumb.vue";
+//import LazyHydrate from "vue-lazy-hydration";
+//import Breadcrumb from "~/components/Breadcrumb.vue";
 import User from "~/assets/images/icons/user.svg";
 import Calendar from "~/assets/images/icons/calendar.svg";
 import Tag from "~/assets/images/icons/tag.svg";
 import Facebook from "~/assets/images/icons/facebook.svg";
-import Instagram from "~/assets/images/icons/instagram.svg";
+//import Instagram from "~/assets/images/icons/instagram.svg";
 import Linkedin from "~/assets/images/icons/linkedin.svg";
 import Twitter from "~/assets/images/icons/twitter.svg";
 
 export default {
   mixins: [PostSeo],
   components: {
-    LazyHydrate,
-    Breadcrumb,
+    //LazyHydrate,
+    //Breadcrumb,
     VueMarkdown,
     User,
     Calendar,
     Tag,
     Facebook,
-    Instagram,
+    //Instagram,
     Linkedin,
     Twitter,
   },

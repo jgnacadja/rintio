@@ -25,7 +25,10 @@
     </div>
 
     <div
-      v-bind:class="{ '-translate-x-0 ease-out': openMenu, 'translate-x-full ease-in': !openMenu }"
+      v-bind:class="{
+        '-translate-x-0 ease-out': openMenu,
+        'translate-x-full ease-in': !openMenu,
+      }"
       class="fixed inset-y-0 right-0 z-40 w-full h-full overflow-y-auto transition duration-300 transform bg-white lg:hidden lg:translate-x-0"
     >
       <div class="items-center justify-center mt-6 space-y-2">
@@ -94,16 +97,16 @@
         >
           <div class="h-full pt-4">
             <g-link to="/blog">
-              <span class="my-auto font-bold uppercase font-openSans">  
-                Blog</span>
+              <span class="my-auto font-bold uppercase font-openSans">
+                Blog</span
+              >
             </g-link>
           </div>
-        </div> 
+        </div>
         <div
           id="blog_1"
           class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
-        >
-        </div>
+        ></div>
       </div>
       <div class="absolute flex pl-3 bottom-5">
         <a
@@ -187,12 +190,6 @@
           </g-link>
         </div>
       </div>
-      <div
-        id="blog1"
-        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
-      >
-        
-      </div>
     </nav>
   </div>
 </template>
@@ -201,6 +198,7 @@
 export default {
   mounted() {
     //require our external library and load it in window
+    // eslint-disable-next-line no-undef
     window.$ = require("jquery");
     this.setActive(this.$router.currentRoute.path.slice(1));
   },
@@ -213,27 +211,45 @@ export default {
     setActive: function (route) {
       switch (route) {
         case "":
+          // eslint-disable-next-line no-undef
           $("#home").addClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#about").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#offer").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#blog").removeClass("border-secondary text-secondary");
+
           break;
         case "a-propos":
+          // eslint-disable-next-line no-undef
           $("#home").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#about").addClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#offer").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#blog").removeClass("border-secondary text-secondary");
           break;
         case "offres":
+          // eslint-disable-next-line no-undef
           $("#home").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#about").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#offer").addClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#blog").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           break;
         case "blog":
+          // eslint-disable-next-line no-undef
           $("#home").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#about").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#offer").removeClass("border-secondary text-secondary");
+          // eslint-disable-next-line no-undef
           $("#blog").addClass("border-secondary text-secondary");
           break;
       }

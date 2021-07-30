@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
-      <BreadcrumbBlog />
+      <Breadcrumb />
     </LazyHydrate>
 
     <div
@@ -104,6 +104,10 @@
     <LazyHydrate when-visible>
       <Carrousel :allposts="$page.allPosts.edges" :type="'post'" />
     </LazyHydrate>
+
+        <!-- <LazyHydrate when-visible>
+      <Carrousel :allposts="$page.AllEventpost.edges" :type="'Event'" />
+    </LazyHydrate> -->
   </Layout>
 </template>
 
@@ -203,31 +207,44 @@ query {
       }
     }
   }
+    AllEventpost: allBlogPost(
+    filter: { categories: { in: "Blog" } }
+    order: DESC
+  ) {
+    edges {
+      node {
+        id
+        title
+        path
+        categories {
+          id
+          title
+        }
+        date
+        coverImage
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
-import Offer from "~/components/blog/Offer.vue";
 import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
-import RemoveTag from "~/assets/images/icons/remove.svg";
+//import RemoveTag from "~/assets/images/icons/remove.svg";
 import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import Breadcrumb from "~/components/blog/Breadcrumb.vue";
-import Event from "~/components/blog/Event.vue";
+//import Event from "~/components/blog/Event.vue";
 import Carrousel from "../components/blog/Carrousel.vue";
 
 export default {
   components: {
-    Offer,
     LazyHydrate,
     Breadcrumb,
-    RemoveTag,
     ArrowLeft,
     ArrowRight,
-    Breadcrumb,
-    Event,
     Carrousel,
   },
   metaInfo() {

@@ -17,7 +17,7 @@
       </div>
       <VueSlickCarousel v-bind="settings">
         <div class=" md:mx-2 w-full container ">
-          <div class=" shadow-lg group container bg-white max-w-sm mx-auto bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
+          <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
                 <div class="w-full h-48"></div>
                 <div class="w-full relative px-4 pb-4 pt-2 bg-white">
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class=" md:mx-2 w-full">
-          <div class=" shadow-lg group container bg-white max-w-sm mx-auto bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
+          <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
                 <div class="w-full h-48"></div>
                 <div class="w-full relative px-4 pb-4 pt-2 bg-white">
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class=" md:mx-2 w-full  ">
-          <div class=" shadow-lg group container bg-white mx-auto bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
+          <div class=" shadow-lg group container bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
                 <div class="w-full h-48"></div>
                 <div class="w-full relative px-4 pb-4 pt-2 bg-white">
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class=" md:mx-2 w-full  ">
-          <div class=" shadow-lg group container bg-white max-w-sm mx-auto bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
+          <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
                 <div class="w-full h-48"></div>
                 <div class="w-full relative px-4 pb-4 pt-2 bg-white">
@@ -181,7 +181,7 @@
           </div>
         </div>
         <div class=" md:mx-2 w-full  ">
-          <div class=" shadow-lg group container bg-white max-w-sm mx-auto bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
+          <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
                 <div class="w-full h-48"></div>
                 <div class="w-full relative px-4 pb-4 pt-2 bg-white">
@@ -222,7 +222,7 @@
           </div>
         </div>
         <div class=" md:mx-2 w-full  ">
-          <div class=" shadow-lg group container bg-white max-w-sm mx-auto bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
+          <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
                 <div class="w-full h-48"></div>
                 <div class="w-full relative px-4 pb-4 pt-2 bg-white">

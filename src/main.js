@@ -5,7 +5,6 @@ import DefaultLayout from "~/layouts/Default.vue";
 
 import "~/main.scss";
 import "~/variables.scss";
-import axios from "axios";
 import "~/assets/font-awesome/all.js";
 
 import VueScrollTo from "vue-scrollto";
@@ -14,7 +13,7 @@ import Typography from "typography";
 
 import VueObserveVisibility from "vue-observe-visibility";
 
-import VueTailwind from 'vue-tailwind'
+import VueTailwind from "vue-tailwind";
 
 const typography = new Typography({
   baseFontSize: "16px",
@@ -418,9 +417,7 @@ const fontsCss = `
 }
 `;
 
-
-
-export default function (Vue, { router, head, isClient }) {
+export default function (Vue, { head }) {
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: "fr" };
 
@@ -453,5 +450,5 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.use(VueObserveVisibility);
 
-  Vue.use(VueTailwind)
+  Vue.use(VueTailwind);
 }

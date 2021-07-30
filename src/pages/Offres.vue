@@ -102,15 +102,12 @@ import LazyHydrate from "vue-lazy-hydration";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import Offers from "~/components/offer/Offers.vue";
 import Keywords from "~/assets/keywords.json";
-//import Project from "~/assets/images/project-start.svg";
-import Project from "~/assets/images/project.png";
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
     Offers,
-    Project,
   },
   metaInfo() {
     return {
