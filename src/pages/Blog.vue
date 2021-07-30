@@ -106,7 +106,7 @@
     </LazyHydrate>
 
         <LazyHydrate when-visible>
-      <Carrousel :allposts="$page.AllEventpost.edges" :type="'Event'" />
+      <Event :allposts="$page.AllEventpost.edges" :type="'Event'" />
     </LazyHydrate>
   </Layout>
 </template>
@@ -238,6 +238,7 @@ import Keywords from "~/assets/keywords.json";
 import Breadcrumb from "~/components/blog/Breadcrumb.vue";
 //import Event from "~/components/blog/Event.vue";
 import Carrousel from "../components/blog/Carrousel.vue";
+import Event from '../components/blog/Event.vue';
 
 export default {
   components: {
@@ -246,6 +247,7 @@ export default {
     ArrowLeft,
     ArrowRight,
     Carrousel,
+    Event,
   },
   metaInfo() {
     return {

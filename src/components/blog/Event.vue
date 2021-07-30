@@ -1,21 +1,17 @@
 <template>
   <div
-    class="
-      container
-      w-full
-      mx-auto
-      mt-4
-      md:mt-24
-      space-x-0
-      md:flex
-      md:px-16
-    "
+    class="container w-full mx-auto mt-4 md:mt-24 space-x-0 md:flex"
   >
     <div class="w-full">
-      <div class="mt-4 m-16 ">
-        <h4 class="mb-5 text-lg text-primary font-bold">Evènements</h4>
+      <div class="w-full my-6 mx-auto">
+        <h3 class="px-3 md:text-md md:mx-auto text-primary font-bold">
+      <h4 class="mb-5 text-lg text-primary font-bold">Evènements</h4>
+        </h3>
       </div>
-      <VueSlickCarousel v-bind="settings">
+      <!-- <div class="mt-4 m-16 ">
+        <h4 class="mb-5 text-lg text-primary font-bold">Evènements</h4>
+      </div> -->
+      <VueSlickCarousel v-bind="settings" ref="carouselEvent">
         <div class=" md:mx-2 w-full container ">
           <div class=" shadow-lg group container max-w-sm bg-white bg-center bg-cover bg-no-repeat bg-offshoring_2 w-11/12 mx-2"> 
               <div class="w-full overflow-hidden">
@@ -264,6 +260,22 @@
         </div>
         
       </VueSlickCarousel>
+              <div class="flex float-right mt-4" style="margin-right: 2rem">
+          <div
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+          >
+            <button @click="showPrev">
+              <ArrowLeft />
+            </button>
+          </div>
+          <div
+            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+          >
+            <button @click="showNext">
+              <ArrowRight />
+            </button>
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -272,9 +284,13 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
+import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 export default {
   components: {
     VueSlickCarousel,
+    ArrowLeft,
+    ArrowRight,
   },
   data() { 
     return {
@@ -284,7 +300,8 @@ export default {
       hour: "",
       minute: "",
       settings:{
-          dots: true,
+          dots: false,
+          dotsClass:"articledots",
           infinite: false,
           speed: 500,
           slidesToShow: 4,
@@ -298,7 +315,7 @@ export default {
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true,
+                dots: false,
               },
             },
             {
@@ -320,10 +337,17 @@ export default {
       },
     };
   }, 
-  created() {
+
+created() {
     setInterval(this.getTime, 1000);
   },
   methods:{
+        showNext() {
+      this.$refs.carouselEvent.next();
+    },
+    showPrev() {
+      this.$refs.carouselEvent.prev();
+    },
     getTime: function () {
       var now = new Date();
       var days = now.getDay();
