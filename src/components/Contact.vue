@@ -256,7 +256,6 @@
 <script>
 import Phone from "~/assets/images/icons/phone.svg";
 import Mail from "~/assets/images/icons/envelope.svg";
-import Location from "~/assets/images/icons/maps-and-flags.svg";
 import emailjs from "emailjs-com";
 
 export default {
@@ -264,7 +263,6 @@ export default {
   components: {
     Phone,
     Mail,
-    Location,
   },
   data() {
     return {

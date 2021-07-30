@@ -218,17 +218,14 @@ query {
 
 <script>
 import Arrow from "~/assets/images/icons/arrow.svg";
-import Like from "~/assets/images/icons/like.svg";
-import Comment from "~/assets/images/icons/comment.svg";
-import Share from "~/assets/images/icons/share.svg";
+//import Like from "~/assets/images/icons/like.svg";
+//import Comment from "~/assets/images/icons/comment.svg";
+//import Share from "~/assets/images/icons/share.svg";
 import moment from "moment";
 
 export default {
   components: {
     Arrow,
-    Like,
-    Comment,
-    Share,
   },
   filters: {
     // Filter definitions

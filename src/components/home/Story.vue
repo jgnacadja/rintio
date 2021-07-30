@@ -1,15 +1,6 @@
 <template>
   <div
-    class="
-      items-center
-      w-full
-      justify-center
-      py-6
-      md:py-24
-      md:px-4
-      lg:px-12
-      xl:px-24
-    "
+    class="items-center w-full justify-center py-6 md:py-24 md:px-4 lg:px-12 xl:px-24"
   >
     <div class="text-center">
       <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
@@ -25,14 +16,7 @@
     </div>
 
     <div
-      class="
-        grid
-        md:grid-cols-6
-        xl:grid-cols-4
-        gap-4
-        md:grid-flow-row
-        xl:grid-flow-rows
-      "
+      class="grid md:grid-cols-6 xl:grid-cols-4 gap-4 md:grid-flow-row xl:grid-flow-rows"
     >
       <!-- RINTIO renforce sa stratégie d’appui des formations en ligne en mettant en production la plateforme E-learning Coraq Lab -->
 
@@ -45,11 +29,15 @@
             class="object-cover w-full mb-0"
           />
 
-          <h3 class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4">
+          <h3
+            class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4"
+          >
             RINTIO renforce sa stratégie d’appui des formations en ligne en
             mettant en production la plateforme E-learning Coraq Lab
           </h3>
-          <p class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify">
+          <p
+            class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify"
+          >
             Dans la vision d’apporter des solutions innovantes aux Entreprises
             et Institutions en communiant les technologies du numérique aux
             grands enjeux de nos sociétés, RINTIO vient de mettre en production
@@ -70,10 +58,14 @@
             class="object-cover w-full h-52 mb-0"
           />
 
-          <h3 class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4">
+          <h3
+            class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4"
+          >
             Africa TechUp Tour
           </h3>
-          <p class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify">
+          <p
+            class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify"
+          >
             Rintio, co-organisateur du Africa TechUp Tour apporte toutes son
             expertise en Data et IA dans la formation de la jeunesse.
           </p>
@@ -91,10 +83,14 @@
             class="object-cover w-full h-52 mb-0"
           />
 
-          <h3 class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4">
+          <h3
+            class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4"
+          >
             Africa TechUp Tour
           </h3>
-          <p class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify">
+          <p
+            class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify"
+          >
             La campagne 2020, déjà lancée. Etudiants, mathématiciens,
             Statisticiens, Inscrivez vous
             <g-link
@@ -117,10 +113,14 @@
             class="object-cover w-full h-52 mb-0"
           />
 
-          <h3 class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4">
+          <h3
+            class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4"
+          >
             SG Maroc imagine la banque du future avec l’IA
           </h3>
-          <p class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify">
+          <p
+            class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify"
+          >
             Pendant une semaine, les experts RINTIO ont animé des ateliers de
             ... du Maroc.
           </p>
@@ -138,10 +138,14 @@
             class="object-cover w-full h-52 mb-0"
           />
 
-          <h3 class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4">
+          <h3
+            class="text-primary font-bold my-4 leading-tight text-xl 4xl:text-4xl 4xl:leading-10 mx-4"
+          >
             iDermato : IA et Dermatologie
           </h3>
-          <p class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify">
+          <p
+            class="text-gray-600 font-light mb-4 mx-4 text-base 4xl:text-2xl 4xl:leading-10 text-justify"
+          >
             Un projet Pan-Africain inédit. L’IA au service des dermatologues et
             généralistes pour le diagnostique d’affection cutanée sur peaux
             noires.
@@ -152,18 +156,14 @@
   </div>
 </template>
 
-  <script>
-import Arrow from "~/assets/images/icons/arrow.svg";
-import Like from "~/assets/images/icons/like.svg";
-import Comment from "~/assets/images/icons/comment.svg";
-import Share from "~/assets/images/icons/share.svg";
+<script>
+//import Arrow from "~/assets/images/icons/arrow.svg";
+//import Like from "~/assets/images/icons/like.svg";
+//import Comment from "~/assets/images/icons/comment.svg";
+//import Share from "~/assets/images/icons/share.svg";
 
 export default {
   components: {
-    Arrow,
-    Like,
-    Comment,
-    Share,
   },
 };
 </script>

@@ -256,8 +256,6 @@
 <script>
 import Data from "~/assets/images/icons/data-red.svg";
 import Data2 from "~/assets/images/icons/data.svg";
-import Ia from "~/assets/images/icons/ia.svg";
-import Ia2 from "~/assets/images/icons/ia-2.svg";
 import Code from "~/assets/images/icons/code.svg";
 import Code2 from "~/assets/images/icons/code-2.svg";
 import Api from "~/assets/images/icons/api.svg";
@@ -273,8 +271,6 @@ export default {
   components: {
     Data,
     Data2,
-    Ia,
-    Ia2,
     Code,
     Code2,
     Api,

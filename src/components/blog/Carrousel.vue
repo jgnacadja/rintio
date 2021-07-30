@@ -138,7 +138,7 @@ export default {
     allposts: {
       type: Array,
       default() {
-        return "";
+        return [];
       },
     },
     type: {
