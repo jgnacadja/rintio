@@ -1,73 +1,30 @@
 <template>
-  <div class="md:flex w-full px-4 md:px-0 md:text-left">
-    <div class="sm:px-8 lg:px-20 sm:w-1/2">
-      <div class="flex">
-        <div class="mx-auto">
-          <div class="max-w-lg mx-auto my-10">
-            <div class="mx-4 md:mx-0 pt-6">
-              <h3 class="my-3 text-sm font-semibold text-primary uppercase">
-                Contactez-nous
-              </h3>
-              <!-- Title Dot -->
-              <div class="-mt-3">
-                <span
-                  class="inline-block w-20 h-2 rounded-full bg-secondary"
-                ></span>
-                <span
-                  class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-                ></span>
-                <span
-                  class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-                ></span>
-              </div>
-            </div>
-
-            <div class="mx-4 md:mx-0 pt-6">
-              <h2 class="my-3 text-2xl md:text-5xl font-extrabold text-primary">
-                Besoin d'échanger sur
-                <span class="text-secondary">votre besoin ?</span>
-              </h2>
-
-              Toutes nos équipes au Bénin et à l'international se tiennent à
-              votre disposition !
-            </div>
-
-            <div>
-              <div class="flex p-4 items-center">
-                <div class="w-2/12 text-center">
-                  <button
-                    class="
-                      uppercase
-                      p-3
-                      flex
-                      items-center
-                      bg-secondary
-                      max-w-max
-                      bg-opacity-10
-                      rounded-full
-                      w-12
-                      h-12
-                      pointer-events-none
-                    "
-                  >
-                    <Phone />
-                  </button>
-                </div>
-                <div class="w-10/12 px-4 md:px-0">
-                  <div>
-                    <a class="hover:text-secondary" href="tel:+33 6 25 18 40 11"
-                      >+33 6 25 18 40 11</a
-                    >
-                  </div>
-                  <div>
-                    <a class="hover:text-secondary" href="tel:+225 01 07 07 77"
-                      >+225 01 07 07 77</a
-                    >
-                  </div>
-                  <div>
-                    <a class="hover:text-secondary" href="tel:+229 97 11 94 79"
-                      >+229 97 11 94 79</a
-                    >
+  <div class="w-full px-4 justify-evenly md:px-0 md:text-left">
+    <div
+      class="grid gap-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:grid-flow-row xl:grid-flow-rows"
+    >
+      <div
+        class="col-span-2 sm:col-span-1 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1"
+      >
+        <div class="sm:px-8 lg:px-10">
+          <div>
+            <div class="mx-auto">
+              <div class="max-w-lg mx-auto my-10">
+                <div class="pt-6 mx-4 md:mx-0">
+                  <h3 class="my-3 text-sm font-semibold uppercase text-primary">
+                    Contactez-nous
+                  </h3>
+                  <!-- Title Dot -->
+                  <div class="-mt-3">
+                    <span
+                      class="inline-block w-20 h-2 rounded-full bg-secondary"
+                    ></span>
+                    <span
+                      class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"
+                    ></span>
+                    <span
+                      class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"
+                    ></span>
                   </div>
                 </div>
 
@@ -229,7 +186,6 @@
 import Phone from "~/assets/images/icons/phone.svg";
 import Mail from "~/assets/images/icons/envelope.svg";
 import emailjs from "emailjs-com";
-
 export default {
   name: "ContactUs",
   components: {
@@ -244,26 +200,52 @@ export default {
       message: null,
     };
   },
+  // methods: {
+  //   sendEmail(e) {
+  //     try {
+  //       emailjs.sendForm('service_kcg1fpl', 'template_q2ewdb3', e.target, 'user_Y2KIJGmvuqmYVVqo9JBO8',
+  //       {
+  //         name: this.name,
+  //         email: this.email,
+  //         object: this.object,
+  //         message: this.message
+  //       })
+  //     // document.getElementById("popup").style.display="block"
+  //     } catch(error) {
+  //         console.log({error})
+  //     }
+  //     // Reset form field
+  //     this.name = ''
+  //     this.email = ''
+  //     this.object = ''
+  //     this.message = ''
+  //   },
+  // }
   methods: {
-    sendEmail: function (e) {
+    sendEmail: (e) => {
       emailjs
         .sendForm(
-          // eslint-disable-next-line no-undef
-          process.env.GRIDSOME_EMAILJS_SERVICE_ID,
-          // eslint-disable-next-line no-undef
-          process.env.GRIDSOME_EMAILJS_TEMPLATE_ID,
+          "service_kcg1fpl",
+          "template_q2ewdb3",
           e.target,
-          // eslint-disable-next-line no-undef
-          process.env.GRIDSOME_EMAILJS_USER_ID
+          "user_Y2KIJGmvuqmYVVqo9JBO8"
         )
         .then(
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
             document.getElementById("result").innerHTML =
               "<span style='color:green'>Votre message a été envoyé.</span>";
-
+            // innerHTML="Votre message a été envoyé.";
             // Reset form field
             document.getElementById("form").reset();
+            // document.forms["form"]["name"].value="";
+            // document.forms["form"]["email"].value="";
+            // document.forms["form"]["object"].value="";
+            // document.forms["form"]["message"].value="";
+            // this.name = ''
+            // this.email = ''
+            // this.object = ''
+            // this.message = ''
           },
           (error) => {
             console.log("FAILED...", error);
