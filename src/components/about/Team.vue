@@ -51,14 +51,14 @@
                     </span>
                   </div>
 
-                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
+                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left lg:text-ellipsis--2 lg:tracking-tighter">
                     <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
                       {{ expert.name }}
                     </h6>
                     <p
                       :key="career"
                       v-for="career in expert.career"
-                      class="text-xs mb-2"
+                      class="text-xs mb-2 tracking-tighter"
                     >
                       • {{ career }}
                     </p>
@@ -129,3 +129,13 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.text-ellipsis--2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+</style>
