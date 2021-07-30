@@ -25,7 +25,7 @@
                 }"
               >
                 <div class="w-full bg-transparent">
-                  <div class="w-full px-4 pb-4 pt-2 absolute bottom-2 lg:-bottom-6 h-24 lg:h-32 text-white">
+                  <div class="w-full px-4 pb-4 pt-2 absolute bottom-2 lg:-bottom-6 h-24 md:h-24 lg:h-32 xl:h-24 text-white">
                     <div
                       class="font-bold tracking-wider leading-relaxed text-lg font-roboto"
                     >
