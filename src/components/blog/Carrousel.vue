@@ -4,7 +4,7 @@
   >
     <div class="w-full">
       <div class="w-full my-6 mx-auto">
-        <h3 class="px-3 md:text-md md:mx-auto text-primary font-bold">
+        <h3 class="px-3 md:text-md md:mx-auto mt-20 md:mt-0 text-primary font-bold">
           <span v-if="type === 'post'">Articles</span>
           <span v-if="type === 'offer'">Offres</span>
         </h3>
@@ -36,7 +36,7 @@
                       class="tracking-tight leading-normal font-roboto text-sm mt-2"
                     >
                       <p
-                        class="font-light text-base text-ellipsis--2 lg:text-ellipsis--6"
+                        class="font-light text-base text-ellipsis--6 md:text-ellipsis--2"
                       >
                         {{ edge.node.metaDescription }}
                       </p>
@@ -221,7 +221,7 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box !important;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     white-space: normal;
 }
