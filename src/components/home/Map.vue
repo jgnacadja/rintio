@@ -12,16 +12,32 @@
     </div>
 
     <div
-      class="md:flex hidden justify-center items-center w-full md:w-3/4 md:mx-auto"
+      class="
+        md:flex
+        hidden
+        justify-center
+        items-center
+        w-full
+        md:w-3/4
+        md:mx-auto
+      "
     >
-      <div class="py-4 md:mx-2 w-full md:w-1/3">
+      <div class="py-4 mx-4 w-full md:w-1/3">
         <a
           href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div
-            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
+            class="
+              shadow-lg
+              group
+              container
+              bg-white
+              max-w-sm
+              mx-auto
+              bg-center bg-cover bg-no-repeat bg-map-cotonou
+            "
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
@@ -39,9 +55,6 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    after-appear=""
-                    alt="Cotonou"
-                    title="Cotonou localisation"
                   >
                     <path
                       stroke-linecap="round"
@@ -57,14 +70,22 @@
           </div>
         </a>
       </div>
-      <div class="py-4 md:mx-2 w-full md:w-1/3">
+      <div class="py-4 mx-4 w-full md:w-1/3">
         <a
           href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div
-            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
+            class="
+              shadow-lg
+              group
+              container
+              bg-white
+              max-w-sm
+              mx-auto
+              bg-center bg-cover bg-no-repeat bg-map-paris
+            "
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
@@ -82,8 +103,6 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    alt="Paris"
-                    title="Paris localisation"
                   >
                     <path
                       stroke-linecap="round"
@@ -99,9 +118,28 @@
           </div>
         </a>
       </div>
-      <div class="py-4 md:mx-2 w-full md:w-1/3">
+
+      <div
+        class="
+          shadow-lg
+          group
+          container
+          bg-white
+          max-w-sm
+          mx-auto
+          bg-center bg-cover bg-no-repeat bg-map-abidjan
+        "
+      >
         <div
-          class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-abidjan"
+          class="
+            shadow-lg
+            group
+            container
+            bg-white
+            max-w-sm
+            mx-auto
+            bg-center bg-cover bg-no-repeat bg-map-abidjan
+          "
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
@@ -119,8 +157,6 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  alt="Abidjan"
-                  title="Abidjan localisation"
                 >
                   <path
                     stroke-linecap="round"
@@ -137,7 +173,7 @@
       </div>
     </div>
 
-    <div class="w-full p-10 md:hidden">
+    <div class="w-full p-4 md:hidden">
       <VueSlickCarousel v-bind="settings">
         <div class="py-4 md:mx-2 w-full h-full">
           <a
@@ -146,7 +182,15 @@
             rel="noopener noreferrer"
           >
             <div
-              class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
+              class="
+                shadow-lg
+                group
+                container
+                bg-white
+                max-w-sm
+                mx-auto
+                bg-center bg-cover bg-no-repeat bg-map-cotonou
+              "
             >
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
@@ -189,7 +233,15 @@
             rel="noopener noreferrer"
           >
             <div
-              class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
+              class="
+                shadow-lg
+                group
+                container
+                bg-white
+                max-w-sm
+                mx-auto
+                bg-center bg-cover bg-no-repeat bg-map-paris
+              "
             >
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
@@ -226,7 +278,15 @@
         </div>
         <div class="py-4 md:mx-2 w-full h-full">
           <div
-            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-abidjan"
+            class="
+              shadow-lg
+              group
+              container
+              bg-white
+              max-w-sm
+              mx-auto
+              bg-center bg-cover bg-no-repeat bg-map-abidjan
+            "
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
@@ -266,13 +326,13 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel';
-import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-  // optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+// optional style for arrows & dots
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
-  name: 'Slider',
+  name: "Slider",
   components: { VueSlickCarousel },
   data() {
     return {
@@ -290,9 +350,9 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-        arrows:false,
+        arrows: false,
         dots: true,
-        dotsClass:'mappdots'
+        dotsClass: "mappdots",
       },
     };
   },
@@ -359,5 +419,4 @@ export default {
     display: none;
   }
 }
-
 </style>
