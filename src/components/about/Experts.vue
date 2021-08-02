@@ -106,7 +106,7 @@
       </div>
 
       <div class="w-full p-5 ">
-        <VueSlickCarousel v-bind="settings" class="space-x-4   ">
+        <VueSlickCarousel v-bind="settings" class="space-x-4">
           <div class="w-full ">
             <div class="h-full shadow-md mx-1 bg-white pb-4">
               <g-image

@@ -6,7 +6,14 @@
       <div class="w-full mx-auto mb-8 md:mb-0">
         <div class="mx-4 md:mx-0 text-center">
           <h1
-            class="pb-8 text-xl md:text-5xl font-extrabold capitalize text-primary"
+            class="
+              pb-8
+              text-xl
+              md:text-5xl
+              font-extrabold
+              capitalize
+              text-primary
+            "
           >
             Nos
             <span class="text-secondary"> experts</span>
@@ -20,20 +27,26 @@
             >
           </p>
           <!---->
-
-          <div class="mt-12 -mx-3 flex flex-wrap items-start">
-            <div
-              class="px-3 w-full sm:w-1/2 lg:w-1/4"
-              v-for="expert in currentList"
-              :key="expert"
-            >
+          <VueSlickCarousel v-bind="settings">
+            <div class="px-3" v-for="expert in currentList" :key="expert">
               <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6"
+                class="
+                  w-full
+                  mx-auto
+                  rounded-lg
+                  bg-white
+                  border border-gray-200
+                  p-5
+                  text-gray-800
+                  font-light
+                  mb-6
+                "
               >
-                <div class="w-full flex flex-row items-center">
+                <div class="w-full flex flex-row items-center space-x-0">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-24 rounded-full h-24 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto"
+                      class="overflow-hidden w-16 rounded-full h-16 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto
+                      "
                     >
                       <g-image
                         :src="expert.imgUrl"
@@ -42,7 +55,20 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="w-5 h-5 mr-2 flex items-center place-content-center rounded-full border hover:border-none text-primary text-xs hover:bg-secondary hover:text-white"
+                        class="
+                          w-5
+                          h-5
+                          mr-2
+                          flex
+                          items-center
+                          place-content-center
+                          rounded-full
+                          border
+                          hover:border-none
+                          text-primary text-xs
+                          hover:bg-secondary
+                          hover:text-white
+                        "
                         :href="expert.linkedInUrl"
                         target="_blank"
                       >
@@ -66,15 +92,16 @@
                 </div>
               </div>
             </div>
-          </div>
+          </VueSlickCarousel>
+
           <!---->
-          <t-pagination
+          <!-- <t-pagination
             :total-items="totalItems"
             :per-page="perPage"
             v-model="currentPage"
             :classes="classes"
             @change="updateList($event)"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -83,11 +110,13 @@
 
 <script>
 import experts from "~/assets/experts.json";
-import { TPagination } from "vue-tailwind/dist/components";
+import VueSlickCarousel from "vue-slick-carousel";
+// import { TPagination } from "vue-tailwind/dist/components";
 
 export default {
   components: {
-    TPagination,
+    VueSlickCarousel,
+    // TPagination,
   },
   data() {
     return {
@@ -112,6 +141,69 @@ export default {
           "hover:bg-blue-100 w-full h-full transition duration-100 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50",
         ellipsis: "",
       },
+      settings: {
+        dots: true,
+        autoplay: true,
+        dotsClass: "articledots",
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1536,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+              dots: false,
+            },
+          },
+           {
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+           {
+            breakpoint: 1023,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              initialSlide: 2,
+            },
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2,
+            },
+          },
+          {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      },
     };
   },
   mounted() {
@@ -121,7 +213,7 @@ export default {
   },
   methods: {
     updateList(currentPage) {
-      this.currentList= this.list.slice(
+      this.currentList = this.list.slice(
         (currentPage - 1) * this.perPage,
         currentPage * this.perPage
       );
