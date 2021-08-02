@@ -4,9 +4,9 @@
       <Breadcrumb />
     </LazyHydrate>
 
-<LazyHydrate when-visible >
-  <ALaUne />
-</LazyHydrate>
+    <LazyHydrate when-visible>
+      <ALaUne />
+    </LazyHydrate>
 
     <LazyHydrate when-visible>
       <Carrousel :alloffers="$page.allOffer.edges" :type="'offer'" />
@@ -142,23 +142,16 @@ query {
 <script>
 import moment from "moment";
 import LazyHydrate from "vue-lazy-hydration";
-//import RemoveTag from "~/assets/images/icons/remove.svg";
-import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
-import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import Breadcrumb from "~/components/blog/Breadcrumb.vue";
 import Carrousel from "../components/blog/Carrousel.vue";
-import Event from '../components/blog/Event.vue';
-import ALaUne from "../components/blog/ALaUne.vue"
+import ALaUne from "../components/blog/ALaUne.vue";
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
-    ArrowLeft,
-    ArrowRight,
     Carrousel,
-    Event,
     ALaUne,
   },
   metaInfo() {
