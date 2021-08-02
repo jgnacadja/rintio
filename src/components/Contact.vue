@@ -1,7 +1,7 @@
 <template>
   <div class="w-full px-4 justify-evenly md:px-0 md:text-left">
     <div
-      class="grid gap-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:grid-flow-row xl:grid-flow-rows"
+      class="md:grid gap-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:grid-flow-row xl:grid-flow-rows"
     >
       <div
         class="col-span-2 sm:col-span-1 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1"

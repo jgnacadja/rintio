@@ -5,7 +5,17 @@
     </LazyHydrate>
 
     <div
-      class="container w-full mx-auto mt-8 md:mt-24 space-x-0 md:flex md:px-16 md:space-x-6"
+      class="
+        container
+        w-full
+        mx-auto
+        mt-8
+        md:mt-24
+        space-x-0
+        md:flex
+        md:px-16
+        md:space-x-6
+      "
     >
       <div id="home" class="container w-full">
         <div class="mx-4 md:px-10">
@@ -16,11 +26,35 @@
 
         <div
           id="header_slider"
-          class="relative w-11/12 md:h-96 overflow-hidden mx-auto shadow-lg rounded-md bg-white pt-2"
+          class="
+            relative
+            w-11/12
+            md:h-96
+            overflow-hidden
+            mx-auto
+            shadow-lg
+            rounded-md
+            bg-white
+            pt-2
+          "
         >
           <div
             id="slide_item"
-            class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end transition-all ease-in-out duration-1000 transform translate-x-0 slide"
+            class="
+              absolute
+              px-10
+              pb-10
+              inset-0
+              bg-transparent
+              flex
+              items-end
+              transition-all
+              ease-in-out
+              duration-1000
+              transform
+              translate-x-0
+              slide
+            "
           >
             <div class="mx-16 md:my-16">
               <div class="md:my-8 text-lg text-primary font-bold pt-4">
@@ -61,20 +95,68 @@
           </div>
           <div
             id="slide_item"
-            class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end justify-center transition-all ease-in-out duration-1000 transform translate-x-full slide"
+            class="
+              absolute
+              px-10
+              pb-10
+              inset-0
+              bg-transparent
+              flex
+              items-end
+              justify-center
+              transition-all
+              ease-in-out
+              duration-1000
+              transform
+              translate-x-full
+              slide
+            "
           >
             <p
-              class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
+              class="
+                bg-gray-900
+                px-7
+                py-3
+                text-white
+                font-bold
+                uppercase
+                rounded-md
+                opacity-80
+              "
             >
               drink some coffee
             </p>
           </div>
           <div
             id="slide_item"
-            class="absolute px-10 pb-10 inset-0 bg-transparent flex items-end justify-center transition-all ease-in-out duration-1000 transform translate-x-full slide"
+            class="
+              absolute
+              px-10
+              pb-10
+              inset-0
+              bg-transparent
+              flex
+              items-end
+              justify-center
+              transition-all
+              ease-in-out
+              duration-1000
+              transform
+              translate-x-full
+              slide
+            "
           >
             <p
-              class="bg-gray-900 px-7 py-3 text-white font-bold uppercase rounded-md opacity-80"
+              class="
+                bg-gray-900
+                px-7
+                py-3
+                text-white
+                font-bold
+                uppercase
+                rounded-md
+                opacity-80
+              "
             >
               Coffee is always a good idea
             </p>
@@ -82,13 +164,38 @@
         </div>
         <div class="flex float-right mt-4" style="margin-right: 3.58rem">
           <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-8
+              h-8
+              mr-2
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
             @click="previousSlide()"
           >
             <ArrowLeft />
           </div>
           <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            class="
+              z-10
+              bg-primary bg-opacity-10
+              w-8
+              h-8
+              rounded-md
+              border border-primary
+              flex
+              items-center
+              justify-center
+              text-black
+              cursor-pointer
+            "
             @click="nextSlide()"
           >
             <ArrowRight />
@@ -98,11 +205,11 @@
     </div>
 
     <LazyHydrate when-visible>
-      <Carrousel :allposts="$page.allOffer.edges" :type="'offer'" />
+      <Carrousel :alloffers="$page.allOffer.edges" :type="'offer'" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Event :allposts="$page.AllEventpost.edges" :type="'Event'" />
+      <Carrousel :allevents="$page.AllEventpost.edges" :type="'event'" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
@@ -236,9 +343,7 @@ import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import Breadcrumb from "~/components/blog/Breadcrumb.vue";
-//import Event from "~/components/blog/Event.vue";
 import Carrousel from "../components/blog/Carrousel.vue";
-import Event from '../components/blog/Event.vue';
 
 export default {
   components: {
@@ -247,7 +352,6 @@ export default {
     ArrowLeft,
     ArrowRight,
     Carrousel,
-    Event,
   },
   metaInfo() {
     return {
