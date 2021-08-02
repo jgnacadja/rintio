@@ -26,13 +26,13 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative md:w-64 flex lg:w-auto xl:w-auto sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed xl:text-center"
+                <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm text-center mx-auto"
                   >Cotonou, Bénin
                 </span>
 
-                <span class="flex items-center xl:justify-center text-sm">
+                <span class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -50,7 +50,7 @@
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  {{ hour }}h:{{ minute }}m:{{ second }}s
+                  {{ hour }}h:{{ minute }}min
                 </span>
               </div>
             </div>
@@ -69,13 +69,13 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative md:w-64 flex lg:w-auto xl:w-auto sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-4 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed xl:text-center"
+                <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto"
                   >Paris, France
                 </span>
 
-                <span class="flex items-center xl:justify-center text-sm">
+                <span class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -92,7 +92,7 @@
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  {{ hourFr }}h:{{ minute }}m:{{ second }}s
+                  {{ hourFr }}h:{{ minute }}min
                 </span>
               </div>
             </div>
@@ -106,13 +106,13 @@
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
-              class="w-full relative md:w-64 flex lg:w-auto xl:w-auto sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+              class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-8 md:px-2 py-4 bg-white"
             >
-              <span class="tracking-wider leading-relaxed xl:text-center">
+              <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto">
                 Abidjan, Côte d'Ivoire
               </span>
 
-              <span class="flex items-center xl:justify-center text-sm">
+              <span class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -129,7 +129,7 @@
                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                {{ hourCi }}h:{{ minute }}m:{{ second }}s
+                {{ hourCi }}h:{{ minute }}min
               </span>
             </div>
           </div>
@@ -151,13 +151,13 @@
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
                 <div
-                  class="w-full relative  flex flex-col sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                  class="w-full relative  flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
                 >
-                  <span class="tracking-wider leading-relaxed text-center"
+                  <span class="tracking-wider leading-relaxed text-sm text-center mx-auto"
                     >Cotonou, Bénin <br />
                   </span>
 
-                  <span class="flex items-start justify-center text-sm">
+                  <span class="flex items-start justify-center text-sm mx-auto">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
@@ -175,7 +175,7 @@
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    {{ hour }}h:{{ minute }}m:{{ second }}s
+                    {{ hour }}h:{{ minute }}min
                   </span>
                 </div>
               </div>
@@ -194,13 +194,13 @@
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
                 <div
-                  class="w-full relative  flex flex-col sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                  class="w-full relative  flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
                 >
-                  <span class="tracking-wider leading-relaxed text-center"
+                  <span class="tracking-wider leading-relaxed text-sm text-center mx-auto"
                     >Paris, France <br />
                   </span>
 
-                  <span class="flex items-start justify-center text-sm">
+                  <span class="flex items-start justify-center text-sm mx-auto">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
@@ -217,7 +217,7 @@
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    {{ hourFr }}h:{{ minute }}m:{{ second }}s
+                    {{ hourFr }}h:{{ minute }}min
                   </span>
                 </div>
               </div>
@@ -231,13 +231,13 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative flex flex-col sm:flex-col md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative flex sm:flex-row md:flex-col px-4 py-4 bg-white"
               >
-                <span class="tracking-tighter leading-relaxed text-center">
+                <span class="tracking-tighter leading-relaxed text-sm text-center mx-auto">
                   Abidjan, Côte d'Ivoire <br />
                 </span>
 
-                <span class="flex items-start justify-center text-sm">
+                <span class="flex items-start justify-center text-sm mx-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -254,7 +254,7 @@
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  {{ hourCi }}h:{{ minute }}m:{{ second }}s
+                  {{ hourCi }}h:{{ minute }}min
                 </span>
               </div>
             </div>
