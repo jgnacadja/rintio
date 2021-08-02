@@ -9,11 +9,11 @@
 </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Carrousel :allposts="$page.allOffer.edges" :type="'offer'" />
+      <Carrousel :alloffers="$page.allOffer.edges" :type="'offer'" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Event :allposts="$page.AllEventpost.edges" :type="'Event'" />
+      <Carrousel :allevents="$page.AllEventpost.edges" :type="'event'" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
@@ -147,7 +147,6 @@ import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 import Keywords from "~/assets/keywords.json";
 import Breadcrumb from "~/components/blog/Breadcrumb.vue";
-//import Event from "~/components/blog/Event.vue";
 import Carrousel from "../components/blog/Carrousel.vue";
 import Event from '../components/blog/Event.vue';
 import ALaUne from "../components/blog/ALaUne.vue"
