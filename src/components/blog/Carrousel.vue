@@ -18,7 +18,7 @@
             font-bold
           "
         >
-          <span v-if="type === 'post'">Articles</span>
+          <span v-if="type === 'post'">À la une</span>
           <span v-if="type === 'offer'">Offres</span>
           <span v-if="type === 'event'">Evènements</span>
         </h3>
