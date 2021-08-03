@@ -6,13 +6,9 @@
       <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
         Rintio<span class="text-secondary font-roboto"> story</span>
       </h2>
-      <h4 class="md:w-1/2 mx-auto py-4">
-        Vivez
-        <span class="font-bold">
-          notre parcours dans l'écosystème technologique</span
-        >
-        à travers nos actions.
-      </h4>
+      <div class="md:w-1/2 mx-auto py-4 font-light">
+        Vivez notre parcours dans l'écosystème technologique à travers nos actions.
+      </div>
     </div>
 
     <div
