@@ -41,6 +41,8 @@
                   font-light
                   mb-6
                   md:h-44
+                  lg:h-56
+                  xl:h-44
                   h-52
                 "
               >
