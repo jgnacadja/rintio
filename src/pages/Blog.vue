@@ -5,7 +5,7 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <ALaUne />
+      <ALaUne :allposts="$page.onlinePost.edges" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>

@@ -1,38 +1,35 @@
 <template>
   <div
-    class="
-      container
-      w-full
-      mx-auto
-      mt-8
-      md:mt-24
-      space-x-0
-      md:flex
-      md:px-16
-      md:space-x-6
-    "
+    class="container w-full mx-auto mt-4 md:mt-24 md:px-20 space-x-0 md:flex"
   >
-    <div id="home" class="container w-full">
-      <div class="mx-4 md:px-10">
-        <h3 class="md:mb-12 text-lg text-primary font-bold">
+    <div class="w-full">
+      <div class="w-full my-6">
+        <h3
+          class="
+            px-1
+            md:text-md
+            md:mx-auto
+            mt-20
+            md:-mt-16
+            lg:-mt-16
+            xl:-mt-12
+            2xl:-mt-12
+            text-primary
+            font-bold
+          "
+        >
           Articles à la une
         </h3>
       </div>
 
-      <VueSlickCarousel v-bind="settings" ref="carouselref">
-        <div>
+      <VueSlickCarousel
+        v-bind="settings"
+        ref="carouselref"
+        class="border rounded shadow-sm bg-white"
+      >
+        <div v-for="edge in allposts" :key="edge.node.id">
           <div
-            class="
-              grid grid-cols-1
-              md:grid-cols-2
-              md:px-8
-              md:gap-x-8
-              md:py-4
-              rounded
-              shadow-lg
-              border
-              bg-white
-            "
+            class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
           >
             <div class="col-start-1 row-start-2 md:row-start-1 px-4">
               <h2
@@ -47,15 +44,10 @@
                   md:mt-0
                 "
               >
-                Remise des diplôme au Africa TechUp Tour Abidjan 2021
+                {{ edge.node.title }}
               </h2>
               <p class="py-3 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse lacus interdum quis sociis vitae tempor volutpat.
-                Elit faucibus arcu, amet, praesent. Laoreet fringilla amet
-                tellus ultrices facilisi egestas maecenas. Integer cras
-                tristique urna, diam, sed enim. Egestas vehicula ipsum vitae
-                amet a nam lacinia.
+                {{ edge.node.metaDescription }}
               </p>
               <div
                 class="
@@ -70,7 +62,7 @@
               >
                 <div class="ml-1">
                   <img
-                    src="https://i.imgur.com/Y8WHhk2.jpg"
+                    :src="edge.node.coverImage"
                     alt=""
                     class="
                       rounded-full
@@ -85,7 +77,9 @@
 
                 <div class="flex flex-col px-4">
                   <p class="text-primary text-base font-medium">Rintio</p>
-                  <p class="text-gray-400 -mt-6">17 Mai 2021</p>
+                  <p class="text-gray-400 -mt-6">
+                    {{ edge.node.date | FormatDate }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -93,12 +87,10 @@
             <div
               class="col-start-1 row-start-1 flex md:col-start-2 md:row-span-3"
             >
-              <div
-                class="w-full grid grid-cols-1 grid-rows-2 gap-2 h-80 md:h-full"
-              >
+              <div class="w-full grid grid-cols-1 grid-rows-2 gap-2">
                 <div class="relative col-span-3 row-span-2 md:col-span-2">
                   <img
-                    src="https://i.imgur.com/Y8WHhk2.jpg"
+                    :src="edge.node.coverImage"
                     alt=""
                     class="
                       absolute
@@ -163,6 +155,7 @@
 </template>
 
 <script>
+import moment from "moment";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -170,6 +163,14 @@ import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 
 export default {
+  props: {
+    allposts: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
   components: {
     ArrowLeft,
     ArrowRight,
@@ -195,6 +196,14 @@ export default {
     },
     showPrev() {
       this.$refs.carouselref.prev();
+    },
+  },
+  filters: {
+    // Filter definitions
+    FormatDate(value) {
+      if (value) {
+        return moment(String(value)).format("MM/DD/YYYY");
+      }
     },
   },
 };

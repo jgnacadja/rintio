@@ -127,10 +127,10 @@
       <div
         class="flex mt-16 mb-4 px-4 lg:px-0 max-w-screen-xl mx-auto items-center justify-between"
       >
-        <h2 class="font-bold text-3xl">Vous pouvez aussi lire</h2>
+        <h2 class="font-bold text-base md:text-3xl">Vous pouvez aussi lire</h2>
         <g-link
           to="/blog"
-          class="bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
+          class="hidden md:block bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
         >
           Voir toutes les publications
         </g-link>
@@ -149,7 +149,7 @@
           <h2 class="font-bold text-lg text-gray-800 mb-px px-4">
             {{ edge.node.title }}
           </h2>
-          <p class="text-gray-700 mb-px px-4">
+          <p class="text-gray-700 mb-px px-4 h-12">
             {{ edge.node.metaDescription | truncate }}
           </p>
 
@@ -176,6 +176,16 @@
         </div>
       </div>
       <!-- end popular posts -->
+            <div
+        class="md:hidden flex mt-8 mb-4 px-4 lg:px-0 max-w-screen-xl mx-auto items-center justify-center"
+      >
+        <g-link
+          to="/blog"
+          class="bg-gray-200 hover:bg-secondary hover:text-white text-gray-800 px-3 py-1 rounded cursor-pointer"
+        >
+          Voir toutes les publications
+        </g-link>
+      </div>
     </div>
   </Layout>
 </template>
