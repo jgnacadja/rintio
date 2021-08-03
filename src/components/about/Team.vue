@@ -19,7 +19,7 @@
             <span class="text-secondary"> experts</span>
           </h1>
 
-          <p class="my-3 md:w-1/2 mx-auto">
+          <p class="my-3 md:mb-24 md:w-1/2 mx-auto">
             Rintio est composé d’une équipe professionnelle et dynamique et d’un
             réseau de partenaires qui n’ont qu’un seul objectif:
             <span class="font-bold"
@@ -40,12 +40,24 @@
                   text-gray-800
                   font-light
                   mb-6
+                  md:h-44
+                  h-52
                 "
               >
                 <div class="w-full flex flex-row items-center space-x-0">
                   <div class="w-1/3">
                     <div
-                      class="overflow-hidden w-16 rounded-full h-16 mb-4 bg-gray-50 border border-gray-200 items-center justify-center mx-auto
+                      class="
+                        overflow-hidden
+                        w-16
+                        rounded-full
+                        h-16
+                        mb-4
+                        bg-gray-50
+                        border border-gray-200
+                        items-center
+                        justify-center
+                        mx-auto
                       "
                     >
                       <g-image
@@ -93,15 +105,6 @@
               </div>
             </div>
           </VueSlickCarousel>
-
-          <!---->
-          <!-- <t-pagination
-            :total-items="totalItems"
-            :per-page="perPage"
-            v-model="currentPage"
-            :classes="classes"
-            @change="updateList($event)"
-          /> -->
         </div>
       </div>
     </div>
@@ -143,12 +146,14 @@ export default {
       },
       settings: {
         dots: true,
-        autoplay: true,
-        dotsClass: "articledots",
+        autoplay: false,
+        dotsClass: "teamdots",
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
+        rows: 2,
+        slidesPerRow: 1,
         initialSlide: 0,
         arrows: true,
         responsive: [
@@ -157,17 +162,13 @@ export default {
             settings: {
               slidesToShow: 4,
               slidesToScroll: 4,
-              infinite: true,
-              dots: false,
             },
           },
-           {
-            breakpoint: 1280,
+          {
+            breakpoint: 1535,
             settings: {
-              slidesToShow: 4,
-              slidesToScroll: 4,
-              infinite: true,
-              dots: false,
+              slidesToShow: 3,
+              slidesToScroll: 3,
             },
           },
           {
@@ -175,20 +176,10 @@ export default {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
-              infinite: true,
-              dots: false,
-            },
-          },
-           {
-            breakpoint: 1023,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              initialSlide: 2,
             },
           },
           {
-            breakpoint: 767,
+            breakpoint: 1023,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
