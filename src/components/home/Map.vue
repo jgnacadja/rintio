@@ -6,9 +6,9 @@
       </h2>
     </div>
     <div class="text-center">
-      <h4 class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto">
+      <div class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto font-light">
         Notre présence dans le monde.
-      </h4>
+      </div>
     </div>
 
     <div
