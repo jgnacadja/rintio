@@ -36,7 +36,7 @@
 
         <p class="my-3 font-light text- xl">
           Il serait long et fastidieux de présenter la 
-          <span class="font-bold"
+          <span class="font-light"
             > liste exhaustive de nos
           clients.</span
           > Mais voici quelques exemples de collaborations qui illustrent

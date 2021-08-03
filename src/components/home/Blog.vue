@@ -10,7 +10,7 @@
       <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
         Rintio<span class="text-secondary"> blog</span>
       </h2>
-      <h4 class=" py-4">Articles à la une</h4>
+      <div class=" py-4">Articles à la une</div>
     </div>
 
     <div

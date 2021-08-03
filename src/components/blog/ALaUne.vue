@@ -4,7 +4,7 @@
   >
     <div class="w-full">
       <div class="w-full my-6">
-        <h3
+        <h2
           class="
             px-1
             md:text-md
@@ -18,8 +18,8 @@
             font-bold
           "
         >
-          Articles à la une
-        </h3>
+          À la une
+        </h2>
       </div>
 
       <VueSlickCarousel
