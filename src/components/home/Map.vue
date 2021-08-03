@@ -119,17 +119,7 @@
         </a>
       </div>
 
-      <div
-        class="
-          shadow-lg
-          group
-          container
-          bg-white
-          max-w-sm
-          mx-auto
-          bg-center bg-cover bg-no-repeat bg-map-abidjan
-        "
-      >
+      <div class="py-4 mx-4 w-full md:w-1/3">
         <div
           class="
             shadow-lg
