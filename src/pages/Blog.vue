@@ -80,6 +80,7 @@ query {
           title
         }
         date
+        metaDescription
         coverImage
       }
     }
