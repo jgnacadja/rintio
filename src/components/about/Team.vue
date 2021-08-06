@@ -2,24 +2,17 @@
   <div>
     <!---->
 
-    <div class="md:px-20 md:flex w-full justify-center py-6 md:py-24">
+    <div class="justify-center w-full py-6 md:px-20 md:flex md:py-24">
       <div class="w-full mx-auto mb-8 md:mb-0">
-        <div class="mx-4 md:mx-0 text-center">
+        <div class="mx-4 text-center md:mx-0">
           <h1
-            class="
-              pb-8
-              text-xl
-              md:text-5xl
-              font-extrabold
-              capitalize
-              text-primary
-            "
+            class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
           >
             Nos
             <span class="text-secondary"> experts</span>
           </h1>
 
-          <p class="my-3 md:mb-24 md:w-1/2 mx-auto">
+          <p class="mx-auto my-3 md:mb-24 md:w-1/2">
             Rintio est composé d’une équipe professionnelle et dynamique et d’un
             réseau de partenaires qui n’ont qu’un seul objectif:
             <span class="font-bold"
@@ -30,37 +23,12 @@
           <VueSlickCarousel v-bind="settings">
             <div class="px-3" v-for="expert in currentList" :key="expert">
               <div
-                class="
-                  w-full
-                  mx-auto
-                  rounded-lg
-                  bg-white
-                  border border-gray-200
-                  p-5
-                  text-gray-800
-                  font-light
-                  mb-6
-                  md:h-44
-                  lg:h-56
-                  xl:h-44
-                  h-52
-                "
+                class="w-full p-5 mx-auto mb-6 font-light text-gray-800 bg-white border border-gray-200 rounded-lg md:h-44 lg:h-56 xl:h-44 h-52"
               >
-                <div class="w-full flex flex-row items-center space-x-0">
+                <div class="flex flex-row items-center w-full space-x-0">
                   <div class="w-1/3">
                     <div
-                      class="
-                        overflow-hidden
-                        w-16
-                        rounded-full
-                        h-16
-                        mb-4
-                        bg-gray-50
-                        border border-gray-200
-                        items-center
-                        justify-center
-                        mx-auto
-                      "
+                      class="items-center justify-center w-16 h-16 mx-auto mb-4 overflow-hidden border border-gray-200 rounded-full bg-gray-50"
                     >
                       <g-image
                         :src="expert.imgUrl"
@@ -69,36 +37,23 @@
                     </div>
                     <span class="inline-flex">
                       <a
-                        class="
-                          w-5
-                          h-5
-                          mr-2
-                          flex
-                          items-center
-                          place-content-center
-                          rounded-full
-                          border
-                          hover:border-none
-                          text-primary text-xs
-                          hover:bg-secondary
-                          hover:text-white
-                        "
+                        class="flex items-center w-5 h-5 mr-2 text-xs border rounded-full place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
                         :href="expert.linkedInUrl"
                         target="_blank"
                       >
-                        <i class="fab fa-linkedin-in relative"></i>
+                        <em class="relative fab fa-linkedin-in"></em>
                       </a>
                     </span>
                   </div>
 
-                  <div class="flex-grow w-2/3 pl-4 sm:pl-5 lg:pl-4 text-left">
-                    <h6 class="font-bold text-sm uppercase text-gray-600 mb-4">
+                  <div class="flex-grow w-2/3 pl-4 text-left sm:pl-5 lg:pl-4">
+                    <h6 class="mb-4 text-sm font-bold text-gray-600 uppercase">
                       {{ expert.name }}
                     </h6>
                     <p
                       :key="career"
                       v-for="career in expert.career"
-                      class="text-xs mb-2"
+                      class="mb-2 text-xs"
                     >
                       • {{ career }}
                     </p>
