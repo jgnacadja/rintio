@@ -42,6 +42,7 @@
                 class="flex items-center ml-auto mr-2 text-xs border rounded-full w-7 h-7 place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
                 href="https://www.linkedin.com/in/michel-idjinou/"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="relative fab fa-linkedin-in"></em>
               </a>
@@ -63,13 +64,13 @@
               c.o.o
             </h3>
             <p class="px-6 mb-0">• Ingenieur Génie Télécom</p>
-            <p class="px-6 mb-0">• Chef projet Digital</p>
-            
+            <p class="px-6 mb-0">• Chef projet Digital</p>     
             <div class="flex px-6 py-4">
               <a
                 class="flex items-center ml-auto mr-2 text-xs border rounded-full w-7 h-7 place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
                 href="https://www.linkedin.com/in/jacques-r-gnacadja-a3222276/"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="relative fab fa-linkedin-in"></em>
               </a>
@@ -97,6 +98,7 @@
                 class="flex items-center ml-auto mr-2 text-xs border rounded-full w-7 h-7 place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
                 href="https://www.linkedin.com/in/iskilou-y%C3%A9rima-sanni-1052a950/"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="relative fab fa-linkedin-in"></em>
               </a>
@@ -128,6 +130,7 @@
                   class="flex items-center ml-auto mr-2 text-xs bg-white border-2 rounded-full w-7 h-7 place-content-center border-primary hover:border-none text-primary hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/michel-idjinou/"
                   target="_blank"
+                  rel="noopener"
                 >
                   <em class="relative fab fa-linkedin-in"></em>
                 </a>
@@ -155,6 +158,7 @@
                   class="flex items-center ml-auto mr-2 text-xs bg-white border-2 rounded-full w-7 h-7 place-content-center border-primary hover:border-none text-primary hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/jacques-r-gnacadja-a3222276/"
                   target="_blank"
+                  rel="noopener"
                 >
                   <em class="relative fab fa-linkedin-in"></em>
                 </a>
@@ -182,6 +186,7 @@
                   class="flex items-center ml-auto mr-2 text-xs bg-white border-2 rounded-full w-7 h-7 place-content-center border-primary hover:border-none text-primary hover:bg-secondary hover:text-white"
                   href="https://www.linkedin.com/in/iskilou-y%C3%A9rima-sanni-1052a950/"
                   target="_blank"
+                  rel="noopener"
                 >
                   <em class="relative fab fa-linkedin-in"></em>
                 </a>
@@ -227,7 +232,7 @@ export default {
         "infinite": true,
         "dots": true
       }
-      
+
     },{
       "breakpoint": 640,
       "settings": {
@@ -236,7 +241,7 @@ export default {
         "initialSlide": 1
       }
     }
-    
+
   ]
       },
     }

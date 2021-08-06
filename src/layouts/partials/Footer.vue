@@ -19,6 +19,7 @@
                 class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
                 href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="fab fa-facebook-f"></em>
               </a>
@@ -26,6 +27,7 @@
                 class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
                 href="https://www.linkedin.com/company/rintio/"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="relative fab fa-linkedin-in"></em>
               </a>
@@ -33,6 +35,7 @@
                 class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
                 href="https://twitter.com/RintioGroup/"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="relative fab fa-twitter"></em>
               </a>
@@ -40,6 +43,7 @@
                 class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
                 href="https://twitter.com/RintioGroup/"
                 target="_blank"
+                rel="noopener"
               >
                 <em class="relative fab fa-instagram"></em>
               </a>
