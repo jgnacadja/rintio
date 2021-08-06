@@ -71,7 +71,7 @@
 <script>
 import experts from "~/assets/experts.json";
 import VueSlickCarousel from "vue-slick-carousel";
-// import { TPagination } from "vue-tailwind/dist/components";
+
 
 export default {
   components: {
