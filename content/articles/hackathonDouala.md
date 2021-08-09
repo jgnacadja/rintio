@@ -1,8 +1,8 @@
 ---
-title: hackathon abidjan
-tag: Big Data
+title: hackathon douala
+tag: Formation
 categories: Evènements
-coverImage: /images/Blog/article.png
+coverImage: /img/articles/CLoud1.png
 date: 2021-07-26
 heure: 08h 30
 localisation: En ligne
