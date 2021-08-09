@@ -54,6 +54,9 @@ button.slick-next:before {
   margin: 0 5px;
   padding: 0;
   cursor: pointer;
+  color: #9ca3af !important;
+  font-size: 1rem !important;
+  opacity: 0.95 !important;
 }
 .mappdots li button {
   font-size: 0;
@@ -83,11 +86,7 @@ button.slick-next:before {
   color: black;
   -webkit-font-smoothing: antialiased;
 }
-.mappdots li  {
-  color: #9ca3af !important;
-  font-size: 1rem !important;
-  opacity: 0.95 !important;
-}
+
 .mappdots li.slick-active button:before {
   color: $red-rintio !important;
   opacity: 0.95 !important;
@@ -216,58 +215,58 @@ button.slick-next:before {
 
 // scss for components/Blog/Article
 .teamdots {
-    position: absolute;
-    display: block;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    margin-left: 0px !important;
-  }
-  .teamdots li {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-  }
-  .teamdots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-  }
-  
-  .teamdots li button:before {
-    font-size: 6px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    content: "•";
-    text-align: center;
-    opacity: 0.25;
-    color: black;
-    -webkit-font-smoothing: antialiased;
-    /* margin-top: 200px; */
-  }
-  .teamdots li button:before {
-    color: #9ca3af !important;
-    font-size: 1rem !important;
-    opacity: 0.95 !important;
-  }
-  .teamdots li.slick-active button:before {
-    color: $red-rintio !important;
-    opacity: 0.95 !important;
-  }
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-left: 0px !important;
+}
+.teamdots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.teamdots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.teamdots li button:before {
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  /* margin-top: 200px; */
+}
+.teamdots li button:before {
+  color: #9ca3af !important;
+  font-size: 1rem !important;
+  opacity: 0.95 !important;
+}
+.teamdots li.slick-active button:before {
+  color: $red-rintio !important;
+  opacity: 0.95 !important;
+}
