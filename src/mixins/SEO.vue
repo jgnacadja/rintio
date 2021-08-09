@@ -80,7 +80,7 @@ export default {
         {
           type: "application/ld+json",
           json: {
-            "@context": "http://schema.org",
+            "@context": "https://schema.org",
             "@type": "BlogPosting",
             description: this.$page.post.metaDescription,
             datePublished: this.$page.post.date,
