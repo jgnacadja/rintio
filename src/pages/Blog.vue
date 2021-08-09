@@ -120,7 +120,7 @@ query {
     }
   }
     AllEventpost: allBlogPost(
-    filter: { categories: { in: "Blog" } }
+    filter: { categories: { in: "Evènements" } }
     order: DESC
   ) {
     edges {
