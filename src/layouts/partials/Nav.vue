@@ -113,29 +113,33 @@
           class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
           href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
           target="_blank"
+          rel="noopener"
         >
-          <i class="fab fa-facebook-f"></i>
+          <em class="fab fa-facebook-f"></em>
         </a>
         <a
           class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
           href="https://www.linkedin.com/company/rintio/"
           target="_blank"
+          rel="noopener"
         >
-          <i class="relative fab fa-linkedin-in"></i>
+          <em class="relative fab fa-linkedin-in"></em>
         </a>
         <a
           class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
           href="https://twitter.com/RintioGroup/"
           target="_blank"
+          rel="noopener"
         >
-          <i class="relative fab fa-twitter"></i>
+          <em class="relative fab fa-twitter"></em>
         </a>
         <a
           class="flex items-center w-10 h-10 mr-2 text-lg text-gray-600 bg-white border border-gray-600 rounded-full place-content-center"
           href="https://twitter.com/RintioGroup/"
           target="_blank"
+          rel="noopener"
         >
-          <i class="relative fab fa-instagram"></i>
+          <em class="relative fab fa-instagram"></em>
         </a>
       </div>
     </div>
