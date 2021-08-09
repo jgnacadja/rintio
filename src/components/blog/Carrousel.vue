@@ -19,13 +19,12 @@
           "
         >
           <span v-if="type === 'post'">Publications</span>
-          <span v-if="type === 'offer'">Offres</span>
+          <!-- <span v-if="type === 'offer'">Offres</span> -->
           <span v-if="type === 'event'">Evènements</span>
         </h3>
       </div>
-      <div v-if="type === 'offer'">
+      <!-- <div v-if="type === 'offer'">
         <VueSlickCarousel v-bind="settingsoffer" ref="carouseloffer">
-          <!--first slide-card-->
           <div
             class="md:mx-0 w-full"
             v-for="edge in alloffers"
@@ -143,7 +142,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
       <div v-if="type === 'post'">
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
