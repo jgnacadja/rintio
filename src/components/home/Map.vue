@@ -389,19 +389,19 @@ export default {
 <style lang="scss" scoped>
 @import "../../variables.scss";
 .bg-map {
-  background-image: url("./../../../static/images/home/map.png");
+  background-image: url("./../../../static/images/home/map.webp");
 }
 
 .bg-map-cotonou {
-  background-image: url("./../../../static/images/home/map/cotonou.png");
+  background-image: url("./../../../static/images/home/map/cotonou.webp");
 }
 
 .bg-map-paris {
-  background-image: url("./../../../static/images/home/map/paris.png");
+  background-image: url("./../../../static/images/home/map/paris.webp");
 }
 
 .bg-map-abidjan {
-  background-image: url("./../../../static/images/home/map/abidjan.png");
+  background-image: url("./../../../static/images/home/map/abidjan.webp");
 }
 
 @media (min-width: 768px) {

@@ -29,7 +29,7 @@
         "
       >
         <div class="col-span-3 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1 items-center justify-center mx-auto my-auto">
-          <g-image src="~/assets/images/project.png" class="" />
+          <g-image src="~/assets/images/project.webp" class="" />
         </div>
         <div class="col-span-3 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1  ">
           <div class=" xl:px-24 pr-8">
@@ -162,6 +162,6 @@ export default {
 
 <style scoped>
 .bg-offer {
-  background-image: url("./../../static/images/bg-offer-2.png");
+  background-image: url("./../../static/images/bg-offer-2.webp");
 }
 </style>

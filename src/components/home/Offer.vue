@@ -141,19 +141,19 @@ export default {
 
 <style scoped>
 .bg-offer {
-  background-image: url("./../../../static/images/home/offer.png");
+  background-image: url("./../../../static/images/home/offer.webp");
 }
 
 .bg-offshoring {
-  background-image: url("./../../../static/images/home/offer/offshoring.png");
+  background-image: url("./../../../static/images/home/offer/offshoring.webp");
 }
 
 .bg-offshoring_2 {
-  background-image: url("./../../../static/images/home/offer/offshoring2.png");
+  background-image: url("./../../../static/images/home/offer/offshoring2.webp");
 }
 
 .bg-datalab {
-  background-image: url("./../../../static/images/home/offer/datalab.png");
+  background-image: url("./../../../static/images/home/offer/datalab.webp");
 }
 
 /* Animations */
