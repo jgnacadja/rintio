@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <!-- <div
+    <div
       class="
         w-3/4
         flex-row
@@ -117,9 +117,9 @@
           <ExpertiseFrance />
         </div>
       </div>
-    </div> -->
+    </div>
   
-   <div
+   <!-- <div
       class="
         md:w-3/4
         flex-row
@@ -191,7 +191,7 @@
      
 
       
-    </div>
+    </div> -->
   
   </div>
 </template>
