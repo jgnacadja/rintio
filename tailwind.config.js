@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+    jit: true,
     purge: [
         "./src/**/*.vue",
         "./src/**/*.js",
