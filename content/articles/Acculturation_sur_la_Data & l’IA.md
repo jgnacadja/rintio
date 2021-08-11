@@ -4,7 +4,7 @@ published: true
 categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
-coverImage: /img/articles/environnement_numerique.png
+coverImage: /img/articles/environnement_numerique.webp
 button: Profiter de l'offre
 path:
 ---

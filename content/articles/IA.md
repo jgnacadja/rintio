@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-29
-coverImage: /img/articles/download.png
+coverImage: /img/articles/download.webp
 metaDescription: Meilleur connaissance client, Expérience client unique, Produits et services augmentés
 subDescription: 
 

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     purge: [
         "./src/**/*.vue",
@@ -29,9 +30,6 @@ module.exports = {
                 'primary': '#014A7F',
                 'secondary': '#FF0C0B',
                 'danger': '#e3342f',
-            }),
-            backgroundImage: theme => ({
-                'map': "url('/src/assets/images/home/map.png')",
             }),
             fontFamily: {
                 montserrat: ['Montserrat', 'sans-serif'],
