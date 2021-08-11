@@ -27,6 +27,7 @@ const fontsCss = `
 /* montserrat-100 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 100;
   src: url('../fonts/montserrat-v15-latin-100.eot'); /* IE9 Compat Modes */
@@ -40,6 +41,7 @@ const fontsCss = `
 /* montserrat-100italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 100;
   src: url('../fonts/montserrat-v15-latin-100italic.eot'); /* IE9 Compat Modes */
@@ -53,6 +55,7 @@ const fontsCss = `
 /* montserrat-200italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 200;
   src: url('../fonts/montserrat-v15-latin-200italic.eot'); /* IE9 Compat Modes */
@@ -66,6 +69,7 @@ const fontsCss = `
 /* montserrat-200 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 200;
   src: url('../fonts/montserrat-v15-latin-200.eot'); /* IE9 Compat Modes */
@@ -79,6 +83,7 @@ const fontsCss = `
 /* montserrat-300italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 300;
   src: url('../fonts/montserrat-v15-latin-300italic.eot'); /* IE9 Compat Modes */
@@ -92,6 +97,7 @@ const fontsCss = `
 /* montserrat-300 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/montserrat-v15-latin-300.eot'); /* IE9 Compat Modes */
@@ -105,6 +111,7 @@ const fontsCss = `
 /* montserrat-regular - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
@@ -118,6 +125,7 @@ const fontsCss = `
 /* montserrat-italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
   src: url('../fonts/montserrat-v15-latin-italic.eot'); /* IE9 Compat Modes */
@@ -131,6 +139,7 @@ const fontsCss = `
 /* montserrat-500 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 500;
   src: url('../fonts/montserrat-v15-latin-500.eot'); /* IE9 Compat Modes */
@@ -144,6 +153,7 @@ const fontsCss = `
 /* montserrat-500italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 500;
   src: url('../fonts/montserrat-v15-latin-500italic.eot'); /* IE9 Compat Modes */
@@ -157,6 +167,7 @@ const fontsCss = `
 /* montserrat-600 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 600;
   src: url('../fonts/montserrat-v15-latin-600.eot'); /* IE9 Compat Modes */
@@ -170,6 +181,7 @@ const fontsCss = `
 /* montserrat-600italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 600;
   src: url('../fonts/montserrat-v15-latin-600italic.eot'); /* IE9 Compat Modes */
@@ -183,6 +195,7 @@ const fontsCss = `
 /* montserrat-700 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/montserrat-v15-latin-700.eot'); /* IE9 Compat Modes */
@@ -196,6 +209,7 @@ const fontsCss = `
 /* montserrat-700italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 700;
   src: url('../fonts/montserrat-v15-latin-700italic.eot'); /* IE9 Compat Modes */
@@ -209,6 +223,7 @@ const fontsCss = `
 /* montserrat-800 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 800;
   src: url('../fonts/montserrat-v15-latin-800.eot'); /* IE9 Compat Modes */
@@ -222,6 +237,7 @@ const fontsCss = `
 /* montserrat-800italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 800;
   src: url('../fonts/montserrat-v15-latin-800italic.eot'); /* IE9 Compat Modes */
@@ -235,6 +251,7 @@ const fontsCss = `
 /* montserrat-900 - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: normal;
   font-weight: 900;
   src: url('../fonts/montserrat-v15-latin-900.eot'); /* IE9 Compat Modes */
@@ -248,6 +265,7 @@ const fontsCss = `
 /* montserrat-900italic - latin */
 @font-face {
   font-family: 'Montserrat';
+  font-display: swap;
   font-style: italic;
   font-weight: 900;
   src: url('../fonts/montserrat-v15-latin-900italic.eot'); /* IE9 Compat Modes */
@@ -262,6 +280,7 @@ const fontsCss = `
 /* roboto-100 - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: normal;
   font-weight: 100;
   src: url('../fonts/roboto-v27-latin-100.eot'); /* IE9 Compat Modes */
@@ -275,6 +294,7 @@ const fontsCss = `
 /* roboto-100italic - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: italic;
   font-weight: 100;
   src: url('../fonts/roboto-v27-latin-100italic.eot'); /* IE9 Compat Modes */
@@ -288,6 +308,7 @@ const fontsCss = `
 /* roboto-300 - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/roboto-v27-latin-300.eot'); /* IE9 Compat Modes */
@@ -301,6 +322,7 @@ const fontsCss = `
 /* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/roboto-v27-latin-regular.eot'); /* IE9 Compat Modes */
@@ -314,6 +336,7 @@ const fontsCss = `
 /* roboto-300italic - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: italic;
   font-weight: 300;
   src: url('../fonts/roboto-v27-latin-300italic.eot'); /* IE9 Compat Modes */
@@ -327,6 +350,7 @@ const fontsCss = `
 /* roboto-italic - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
   src: url('../fonts/roboto-v27-latin-italic.eot'); /* IE9 Compat Modes */
@@ -340,6 +364,7 @@ const fontsCss = `
 /* roboto-500 - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: normal;
   font-weight: 500;
   src: url('../fonts/roboto-v27-latin-500.eot'); /* IE9 Compat Modes */
@@ -353,6 +378,7 @@ const fontsCss = `
 /* roboto-500italic - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: italic;
   font-weight: 500;
   src: url('../fonts/roboto-v27-latin-500italic.eot'); /* IE9 Compat Modes */
@@ -366,6 +392,7 @@ const fontsCss = `
 /* roboto-700 - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/roboto-v27-latin-700.eot'); /* IE9 Compat Modes */
@@ -379,6 +406,7 @@ const fontsCss = `
 /* roboto-700italic - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: italic;
   font-weight: 700;
   src: url('../fonts/roboto-v27-latin-700italic.eot'); /* IE9 Compat Modes */
@@ -392,6 +420,7 @@ const fontsCss = `
 /* roboto-900 - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: normal;
   font-weight: 900;
   src: url('../fonts/roboto-v27-latin-900.eot'); /* IE9 Compat Modes */
@@ -405,6 +434,7 @@ const fontsCss = `
 /* roboto-900italic - latin */
 @font-face {
   font-family: 'Roboto';
+  font-display: swap;
   font-style: italic;
   font-weight: 900;
   src: url('../fonts/roboto-v27-latin-900italic.eot'); /* IE9 Compat Modes */
