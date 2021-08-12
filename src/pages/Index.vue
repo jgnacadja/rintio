@@ -21,6 +21,10 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
+      <PartnerMobile />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
       <Blog />
     </LazyHydrate>
 
@@ -37,6 +41,7 @@ import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue";
 import Story from "~/components/home/Story.vue";
 import Partner from "~/components/home/Partner.vue";
+import PartnerMobile from "~/components/home/PartnerMobile.vue";
 import Blog from "~/components/home/Blog.vue";
 import Map from "~/components/home/Map.vue";
 import Keywords from "~/assets/keywords.json";
@@ -49,6 +54,8 @@ export default {
     Offer,
     Story,
     Partner,
+
+    PartnerMobile,
     Blog,
     Map,
   },

@@ -1,6 +1,7 @@
 <template>
+
   <div
-    class="flex justify-center w-full py-6 text-black md:px-16 md:py-24"
+    class="flex justify-center w-full py-6 text-black md:px-16 md:py-24 md:hidden"
     style="background: #e8e8e8"
   >
     <div class="md:w-1/4">
@@ -86,6 +87,7 @@
         </VueSlickCarousel>
     </div>
   </div>
+
 </template>
 
 <script>
