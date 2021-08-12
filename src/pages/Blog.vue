@@ -4,9 +4,7 @@
       <Breadcrumb />
     </LazyHydrate>
 
-<LazyHydrate when-idle>
-      <Preview />
-    </LazyHydrate>
+
 
     <LazyHydrate when-visible>
       <ALaUne :allposts="$page.onlinePost.edges" />
@@ -156,13 +154,13 @@ import Keywords from "~/assets/keywords.json";
 import Breadcrumb from "~/components/blog/Breadcrumb.vue";
 import Carrousel from "../components/blog/Carrousel.vue";
 import ALaUne from "../components/blog/ALaUne.vue";
-import Preview from "../components/events/Preview.vue";
+
 
 export default {
   components: {
     LazyHydrate,
     Breadcrumb,
-    Preview,
+   
     Carrousel,
     ALaUne,
     
