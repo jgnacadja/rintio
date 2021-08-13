@@ -4,7 +4,7 @@ published: true
 categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-18
-coverImage: /img/articles/dominodatalab_4.png
+coverImage: /img/articles/dominodatalab_4.webp
 button: Profiter de l'offre
 path:
 ---

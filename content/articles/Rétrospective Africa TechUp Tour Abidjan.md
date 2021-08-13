@@ -4,7 +4,7 @@ published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-03
-coverImage: /img/articles/ID1_signed.png
+coverImage: /img/articles/ID1_signed.webp
 metaDescription: Le Bootcamp et le Hackathon en image.
 subDescription: 
 subDescriptionDown: 

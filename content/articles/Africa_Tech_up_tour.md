@@ -4,7 +4,7 @@ published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-07
-coverImage: /img/articles/WhatsApp_Image_2020_01_24_at_1.png
+coverImage: /img/articles/WhatsApp_Image_2020_01_24_at_1.webp
 metaDescription: La campagne 2020, déjà lancée. Etudiants, mathématiciens, Statisticiens, Inscrivez vous <a href="#">ici</a>.
 
 ---

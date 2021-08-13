@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-28
-coverImage: /img/articles/ID11558400.png
+coverImage: /img/articles/ID11558400.webp
 metaDescription: Optimisez vos processus de developpement et livrez rapidement vos produits et vos services.
 subDescription: 
 
