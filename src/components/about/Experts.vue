@@ -24,7 +24,7 @@
         <div class="w-full shadow-md md:w-1/2">
           <div class="h-full bg-white ">
             <g-image
-              src="~/assets/images/home/about/Michel.jpg"
+              src="~/assets/images/home/about/Michel.webp"
               alt=""
             ></g-image>
             <h2 class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary">
@@ -52,7 +52,7 @@
         <div class="w-full shadow-md sm:w-1/2">
           <div class="h-full bg-white">
             <g-image
-              src="~/assets/images/home/about/Jacques.jpeg"
+              src="~/assets/images/home/about/Jacques.webp"
               alt=""
             ></g-image>
             <h2 class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary">
@@ -80,7 +80,7 @@
         <div class="w-full shadow-md sm:w-1/2">
           <div class="h-full bg-white ">
             <g-image
-              src="~/assets/images/home/about/Iskilou.jpeg"
+              src="~/assets/images/home/about/Iskilou.webp"
               alt=""
             ></g-image>
             <h2 class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary">
@@ -112,7 +112,7 @@
           <div class="w-full ">
             <div class="h-full pb-4 mx-1 bg-white shadow-md">
               <g-image
-                src="~/assets/images/home/about/Michel.jpg"
+                src="~/assets/images/home/about/Michel.webp"
                 alt=""
               ></g-image>
               <h2 class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary">
@@ -140,7 +140,7 @@
           <div class="w-full">
             <div class="h-full pb-4 mx-1 bg-white shadow-md">
               <g-image
-                src="~/assets/images/home/about/Jacques.jpeg"
+                src="~/assets/images/home/about/Jacques.webp"
                 alt=""
               ></g-image>
               <h2 class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary">
@@ -168,7 +168,7 @@
           <div class="w-full sm:w-1/2 lg:w-1/3">
             <div class="h-full pb-4 mx-1 bg-white shadow-md">
               <g-image
-                src="~/assets/images/home/about/Iskilou.jpeg"
+                src="~/assets/images/home/about/Iskilou.webp"
                 alt=""
               ></g-image>
               <h2 class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary">

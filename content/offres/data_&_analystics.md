@@ -6,6 +6,6 @@ categories: Offre
 metaDescription: ["Captez, nettoyer, stockez, diffusez et exploitez vos données"]
 subDescription:""
 technology: ["Frontend", "Design", "Code Style"]
-coverImage: /images/home/offer/bigdata.png
+coverImage: /images/home/offer/bigdata.webp
 date: ""
 ---

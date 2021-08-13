@@ -17,11 +17,11 @@
       <!-- RINTIO renforce sa stratégie d’appui des formations en ligne en mettant en production la plateforme E-learning Coraq Lab -->
 
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2">
-        <div class="w-full h-full p-4 bg-white">
+        <div class="w-full h-full bg-white">
           <g-image
             alt="coraq"
             title="Coraq Chmp"
-            src="~/assets/images/home/story/coraq.png"
+            src="~/assets/images/home/story/coraq.webp"
             class="object-cover w-full mb-0"
           />
 
@@ -50,7 +50,7 @@
           <g-image
             alt="Atut"
             title="Africa TechUp Tour"
-            src="~/assets/images/home/story/atut.png"
+            src="~/assets/images/home/story/atut.webp"
             class="object-cover w-full mb-0 h-52"
           />
 
@@ -75,7 +75,7 @@
           <g-image
             alt="atut2020"
             title="Africa TechUp Tour 2020"
-            src="~/assets/images/home/story/atut2020.png"
+            src="~/assets/images/home/story/atut2020.webp"
             class="object-cover w-full mb-0 h-52"
           />
 
@@ -105,7 +105,7 @@
           <g-image
             alt="sgmaroc"
             title="Team sgmaroc"
-            src="~/assets/images/home/story/sgmaroc.png"
+            src="~/assets/images/home/story/sgmaroc.webp"
             class="object-cover w-full mb-0 h-52"
           />
 
@@ -130,7 +130,7 @@
           <g-image
             alt="idermato"
             title="IA et Dermatologie"
-            src="~/assets/images/home/story/idermato.png"
+            src="~/assets/images/home/story/idermato.webp"
             class="object-cover w-full mb-0 h-52"
           />
 

@@ -171,19 +171,19 @@ export default {
 <style lang="scss" scoped>
 @import "../../variables.scss";
 .bg-homeslider-1 {
-  background-image: url("./../../../static/images/home/slider/work.jpg");
+  background-image: url("./../../../static/images/home/slider/rinttio-1.webp");
 }
 
 .bg-homeslider-2 {
-  background-image: url("./../../../static/images/home/slider/IA-1.png");
+  background-image: url("./../../../static/images/home/slider/IA-1.webp");
 }
 
 .bg-homeslider-3 {
-  background-image: url("./../../../static/images/home/slider/atut.png");
+  background-image: url("./../../../static/images/home/slider/atut.webp");
 }
 
 .bg-homeslider-4 {
-  background-image: url("./../../../static/images/home/slider/coraq-slider-web-100x.png");
+  background-image: url("./../../../static/images/home/slider/coraq-slider-web-100x.webp");
 }
 
 .height {

@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-27
-coverImage: /img/articles/ID4H1A1937.png
+coverImage: /img/articles/ID4H1A1937.webp
 metaDescription: .Exposez vos produits, vos services, et vos données via des API 
 subDescription: .Monétisez vos API
 ---
