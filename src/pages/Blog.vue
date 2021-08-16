@@ -134,6 +134,8 @@ query {
         }
         date
         coverImage
+        metaDescription
+        heure
       }
     }
   }
