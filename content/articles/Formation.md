@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
-coverImage: /img/articles/IMG_3265.png
+coverImage: /img/articles/IMG_3265.webp
 descriptionUp: Java,Phython,Big DAta (Handoop, Spark, ELK,MangoBD,
 descriptionDown: Kafka), IA (Marchine Learning,Deep Learning, NLP).
 

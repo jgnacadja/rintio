@@ -4,7 +4,7 @@ published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-04
-coverImage: /img/articles/Screenshot_20200123_142743.png
+coverImage: /img/articles/Screenshot_20200123_142743.webp
 metaDescription: Le coordinateur de Africa TechuUp Tour invité sur le plateau de C'Midi
 button:
 path:

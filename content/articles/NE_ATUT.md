@@ -4,7 +4,7 @@ published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-04
-coverImage: /img/articles/thumbnail.png
+coverImage: /img/articles/thumbnail.webp
 metaDescription: La campagne 2020, déjà lancée. Etudiants, mathématiciens, Statisticiens, Inscrivez vous <a href="#"> ici </a>.
 button: S'inscrire  
 path:

@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-26
-coverImage: /img/articles/CLoud1.png
+coverImage: /img/articles/CLoud1.webp
 metaDescription: Migration dans le Cloud
 subDescription: Gagnez en elasticité et en souplesse avec le Cloud
 ---
