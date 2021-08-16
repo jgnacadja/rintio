@@ -10,9 +10,9 @@
           Nous offrons des solutions professionnelles pour les entreprises
         </h1>
         <p class="md:w-2/3 mx-auto py-4 md:px-0">
-          Rintio apporte des solutions innovantes aux entreprises et
-          institutions en communiquant les technologies du numérique aux grands
-          enjeux de nos sociétés.
+          RINTIO apporte des solutions innoventes aux entreprises et 
+          institutions en combinant les technologies du numérique aux 
+          grands enjeux évolutifs des communautés.
         </p>
       </div>
     </div>

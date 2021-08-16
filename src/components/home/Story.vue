@@ -7,7 +7,7 @@
         Rintio<span class="text-secondary font-roboto"> story</span>
       </h2>
       <div class="py-4 mx-auto font-light md:w-1/2">
-        Vivez notre parcours dans l'écosystème technologique à travers nos actions.
+        Suivez notre parcours dans l'écosystème de la technologie à travers nos diverses actions.
       </div>
     </div>
 
@@ -34,11 +34,9 @@
           <p
             class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
           >
-            Dans la vision d’apporter des solutions innovantes aux Entreprises
-            et Institutions en communiant les technologies du numérique aux
-            grands enjeux de nos sociétés, RINTIO vient de mettre en production
-            la plateforme Coraq-Lab :Cela constitue pour RINTIO un grand pas en
-            avant dans sa stratégie d’appui des formations en ligne.
+            Dans sa vision d'être un acteur principal dans la formation aux outils du numériques, 
+            RINTIO met en place la plateforme Conraq-Lab. Ceci constitue pour RINTIO, un pas en 
+            avant dans sa stratégie d'appui aux formations en ligne. 
           </p>
         </div>
       </div>
@@ -62,8 +60,8 @@
           <p
             class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
           >
-            Rintio, co-organisateur du Africa TechUp Tour apporte toutes son
-            expertise en Data et IA dans la formation de la jeunesse.
+            Co-organisateur de Africa TechUp Tour, RINTIO apporte son expertise en Big Data et 
+            Intelligence Artificielle  dans la formation de jeunes développeurs africains
           </p>
         </div>
       </div>
@@ -142,9 +140,8 @@
           <p
             class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
           >
-            Un projet Pan-Africain inédit. L’IA au service des dermatologues et
-            généralistes pour le diagnostique d’affection cutanée sur peaux
-            noires.
+            iDermato est un projet Panafricain qui vise les échanges entre dermatologues et médécins 
+            généralistes dans le diagnostique d'infections cutanées sur peaux noires.
           </p>
         </div>
       </div>

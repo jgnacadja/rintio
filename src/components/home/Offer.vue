@@ -30,7 +30,7 @@
           </h2>
 
           <p class="my-3 font-light">
-            Découvrez nos offres qui accéléront certainement votre productivité.
+            Découvrez nos offres.
           </p>
           <div class="mt-4 text-center">
             <g-link to="/offres">

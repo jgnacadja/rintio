@@ -10,11 +10,11 @@
         </h1>
 
         <p class="mx-auto my-3 w-ful lg:w-1/2">
-          Rintio a été fondée en 2017 par une équipe d’ingénieurs dans le souci
-          de soulager les entreprises dans l’analyse et le traitement de données
-          volumineuses, nous sommes spécialisés dans le
+          Fondée en 2017 par une équipe de trois ingénieurs ayant le soucis 
+          d'apporter aux entreprises des solutions liées aux problèmes numériques, 
+          RINTIO s'est spécialisée dans les 
           <span class="font-bold">
-            domaine des technologies et services de l’information.</span
+            domaines de la technologie et des services de l’information.</span
           >
         </p>
       </div>

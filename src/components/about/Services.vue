@@ -12,7 +12,7 @@
             text-primary
           "
         >
-          Notre Expertise
+          Nos domaines
           <span class="text-secondary"> d’interventions</span>
         </h1>
       </div>

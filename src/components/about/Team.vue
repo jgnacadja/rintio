@@ -13,10 +13,10 @@
           </h1>
 
           <p class="mx-auto my-3 md:mb-24 md:w-1/2">
-            Rintio est composé d’une équipe professionnelle et dynamique et d’un
-            réseau de partenaires qui n’ont qu’un seul objectif:
+            RINTIO, c'est une équipe de professionnels dynamiques et un 
+            réseau de partenaires ayant pour but de 
             <span class="font-bold"
-              >donner vie à vos projets en respectant les deadlines.</span
+              >donner vie à vos projets dans le respect des deadlines.</span
             >
           </p>
           <!---->

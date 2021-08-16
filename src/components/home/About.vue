@@ -69,25 +69,26 @@
             text-primary
           "
         >
-          Entreprise de <br class="hidden md:block" />
-          services du
+          Entreprise de prestation de <br class="hidden md:block" />
+          services
           <span class="text-secondary">numérique</span>
         </h2>
 
 
         <p class="my-3 font-light text-justify leading-8">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le
-          <span class="font-bold"
-            >développement et l’intégration de solutions informatiques</span
-          >, le <span class="font-bold">traitement de données</span>, les
-          technologies <span class="font-bold">Big Data</span> et l’<span
-            class="font-bold"
-            >Intelligence Artificielle</span
-          >. Nous proposons, entre autres, des prestations en Offshoring (<span
-            class="font-bold"
-            >Coding, Admin Infrastructure & Cloud, DevOps</span
-          >) pour nos clients en afrique et dans le monde.
+          Le <span class="font-bold">numérique</span> est devenu aujourd'hui un outil incontournable dans 
+          l'organisation, la gestion et la rentabilité des entreprises. 
+          Quelque soit le domaine d'intervention, Il facilite le fonctionnement  
+          les différents secteurs et peut également s'adapter aux spécificités 
+          de chaque entreprise ou institution. RINTIO vous aide à atteindre 
+          vos objectifs grâce à la création d'<span class="font-bold">outils informatiques performants</span> . 
+          Il solutionne tous vos problèmes liés à l’<span class="font-bold">analyse</span> et le <span class="font-bold">traitement 
+          de données</span> volumineuses. Composée d'une équipe dynamique et spécialisée, 
+          RINTIO est une entreprise qui intervient entre autre dans le <span class="font-bold">développement </span> 
+          et l'intégration de <span class="font-bold">solutions numériques</span>  de <span class="font-bold">traitement données</span> , 
+          de <span class="font-bold">technologies </span> 
+          Big Data et d'<span class="font-bold">intelligence artificielle</span> . Où que vous soyez, RINTIO est disposé 
+          à vous servir et à donner pour vous satisfaire, le meilleur d'elle même.
         </p>
         <div class="mt-4">
           <g-link to="/a-propos">
