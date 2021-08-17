@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
-coverImage: /img/articles/IMG_3110.png
+coverImage: /img/articles/IMG_3110.webp
 metaDescription: Concentrez vous sur votre coeur d'activité
 subMetaDescriptionLeft: • Dev.Python Java PHP
 subMetaDescriptionRigth: • Migration Cloud

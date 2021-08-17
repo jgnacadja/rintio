@@ -298,7 +298,7 @@ export default {
 
 <style scoped>
 .bg-services {
-  background-image: url("./../../../static/images/home/offer.png");
+  background-image: url("./../../../static/images/home/offer.webp");
 }
 .text-ellipsis--2 {
   text-overflow: ellipsis;

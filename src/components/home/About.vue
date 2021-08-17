@@ -34,7 +34,7 @@
 
         <g-image
           class="absolute -top-12 p-20"
-          src="~/assets/images/home/about/team.png"
+          src="~/assets/images/home/about/team.webp"
           alt="team"
           title="team"
           width="600"
@@ -134,6 +134,6 @@ export default {
 }
 
 .bg-about-team {
-  background-image: url("./../../../static/images/home/about/team.png");
+  background-image: url("./../../../static/images/home/about/team.webp");
 }
 </style>

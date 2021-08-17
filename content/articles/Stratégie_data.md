@@ -4,7 +4,7 @@ published: true
 categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-05
-coverImage: /img/articles/Mode_emploi_premiere_strategie.png
+coverImage: /img/articles/Mode_emploi_premiere_strategie.webp
 button: Profiter de l'offre
 path:
 ---

@@ -4,7 +4,7 @@ published: true
 categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-30
-coverImage: /img/articles/data_governance_gouvernance_de.png
+coverImage: /img/articles/data_governance_gouvernance_de.webp
 button: Profiter de l'offre
 path:
 ---

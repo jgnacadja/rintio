@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-29
-coverImage: /img/articles/team_ux_designer_creative_grap.png
+coverImage: /img/articles/team_ux_designer_creative_grap.webp
 descriptionUp: Accelérez le développement de vos projets.
 descriptionDown: .#Phython,#Java,#Php,#Hadoop,#Spark,#Kafka,#ELK.
 

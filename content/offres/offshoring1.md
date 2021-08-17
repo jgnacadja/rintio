@@ -4,7 +4,7 @@ subTitle: Un développeur à partir de 50€ / Jour
 published: true
 categories: Offre
 technology: ["frontend", "design", "scrum"]
-coverImage: /images/home/offer/offshoring.png
+coverImage: /images/home/offer/offshoring.webp
 metaDescription: ["#Python #Java #Php. 1 mois offert."]
 subDescription: ""
 date: ""

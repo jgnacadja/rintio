@@ -292,34 +292,34 @@ export default {
 
 <style scoped>
 .bg-offer {
-  background-image: url("./../../../static/images/home/offer.png");
+  background-image: url("./../../../static/images/home/offer.webp");
 }
 
 .bg-offshoring {
-  background-image: url("./../../../static/images/home/offer/offshoring.png");
+  background-image: url("./../../../static/images/home/offer/offshoring.webp");
 }
 
 .bg-offshoring_2 {
-  background-image: url("./../../../static/images/home/offer/offshoring2.png");
+  background-image: url("./../../../static/images/home/offer/offshoring2.webp");
 }
 
 .bg-datalab {
-  background-image: url("./../../../static/images/home/offer/datalab.png");
+  background-image: url("./../../../static/images/home/offer/datalab.webp");
 }
 
 .bg-bigdata {
-  background-image: url("./../../../static/images/home/offer/bigdata.png");
+  background-image: url("./../../../static/images/home/offer/bigdata.webp");
 }
 
 .bg-cloud {
-  background-image: url("./../../../static/images/home/offer/cloud.png");
+  background-image: url("./../../../static/images/home/offer/cloud.webp");
 }
 
 .bg-council {
-  background-image: url("./../../../static/images/home/offer/council.png");
+  background-image: url("./../../../static/images/home/offer/council.webp");
 }
 
 .bg-learning {
-  background-image: url("./../../../static/images/home/offer/learning.png");
+  background-image: url("./../../../static/images/home/offer/learning.webp");
 }
 </style>

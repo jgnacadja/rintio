@@ -44,7 +44,7 @@
         "@gridsome/source-filesystem": "^0.6.2",
         "@gridsome/transformer-remark": "^0.6.4",
         "@gridsome/vue-remark": "^0.2.6",
-        "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
+        "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat@^2.2.7",
         "autoprefixer": "^10",
         "babel-jest": "^27.0.6",
         "eslint": "^7.32.0",
