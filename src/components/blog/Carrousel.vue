@@ -167,21 +167,43 @@
                 relative
               "
             >
-              <g-link :to="edge.node.path">
+              <g-link :to="edge.node.src === '#' ? edge.node.src : edge.node.src">
                 <div class="w-full overflow-hidden">
-                      <div class="absolute inset-0 bg-gradient from-black to-black opacity-25"></div>
+                  <div
+                    class="
+                      absolute
+                      inset-0
+                      bg-gradient
+                      from-black
+                      to-black
+                      opacity-25
+                    "
+                  ></div>
+                  <div
+                     class="border-b-2 py-2 text-center font-semibold opacity-90"
+                    v-bind:style="{
+                      'background-image': 'url(' + edge.node.coverImage + ')',
+                    }"
+                     v-bind:class="{'text-primary': !edge.node.coverImage , 'text-white': edge.node.coverImage }"
+                    
+                  >
+                    <div
+                      class="text-9xl "
+                    >
+                      {{ edge.node.date | getDay }}
+                    </div>
+                    <div class="text-xl capitalize">
+                      {{ edge.node.date | getMonth }}
+                    </div>
+                  </div>
 
-                  <g-image
+                  <!-- <g-image
                     v-if="edge.node.coverImage"
                     alt=""
                     title=""
                     :src="edge.node.coverImage"
                     class="object-cover w-full h-48 mb-0"
-                  />
-                  <div v-else class="w-full h-48 mb-0 text-center py-2 bg-white border-b">
-                      <div class="text-9xl font-semibold text-primary">16</div>
-                      <div class="text-xl font-semibold">Aout</div>
-                  </div>
+                  /> -->
                   <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                     <div
                       class="
@@ -190,20 +212,14 @@
                         tracking-wider
                         leading-relaxed
                         font-roboto
-                        
+                        my-2
                       "
                     >
                       {{ edge.node.title }}
                     </div>
 
                     <div
-                      class="
-                        tracking-tight
-                        leading-relaxed
-                        font-roboto
-                        text-xs
-                        mt-2
-                      "
+                      class="tracking-tight leading-relaxed font-roboto text-xs"
                     >
                       <p
                         class="
@@ -211,32 +227,15 @@
                           font-light
                           text-base
                           text-ellipsis--2
+                          my-2
                         "
                       >
                         {{ edge.node.metaDescription }}
                       </p>
                     </div>
                     <div
-                      class="
-                        tracking-tight
-                        leading-normal
-                        font-roboto
-                        text-sm
-                        mt-2
-                      "
-                    >
-                      <p
-                        class="
-                          font-light
-                          text-base
-                          text-ellipsis--6
-                          md:text-ellipsis--2
-                        "
-                      >
-                        {{ edge.node.date | FormatDate }}
-                        {{ edge.node.heure }}
-                      </p>
-                    </div>
+                      class="tracking-tight leading-normal font-roboto text-sm"
+                    ></div>
                   </div>
                 </div>
               </g-link>
@@ -413,6 +412,7 @@
 
 <script>
 import moment from "moment";
+import "moment/locale/fr";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -547,7 +547,6 @@ export default {
       this.$refs.carouselevent.prev();
     },
   },
-
   filters: {
     // Filter definitions
     FormatDate(value) {
@@ -555,25 +554,17 @@ export default {
         return moment(String(value)).format("MM/DD/YYYY");
       }
     },
+    getDay(value) {
+      if (value) {
+        return moment(String(value)).format("DD");
+      }
+    },
+    getMonth(value) {
+      if (value) {
+        return moment(String(value)).format("MMMM");
+      }
+    },
   },
-
-  // filters: {
-  //   // Filter definitions
-  //   FormatDate(value) {
-  //     if (value) {
-  //       return moment(String(value)).format("JJ");
-  //     }
-  //   },
-  // },
-
-  // filters: {
-  //   // Filter definitions
-  //   FormatDate(value) {
-  //     if (value) {
-  //       return moment(String(value)).format("MM");
-  //     }
-  //   },
-  // },
 };
 </script>
 <style lang="scss" scoped>

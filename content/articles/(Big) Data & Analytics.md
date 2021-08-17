@@ -2,11 +2,10 @@
 title: (Big) Data & Analytics
 published: true
 categories: Offres
-keywords: []
+tags: ["frontend", "design", "code style"]
 date: 2020-08-30
 coverImage: /images/home/offer/bigdata.webp
 metaDescription: Captez, nettoyer, stockez, diffusez et exploitez vos données
-tags: ["frontend", "design", "code style"]
 subDescription:
 ---
 
