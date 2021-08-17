@@ -2,6 +2,7 @@
 title: Data Lab
 published: true
 categories: Offres
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-01
 coverImage: /images/home/offer/datalab.webp

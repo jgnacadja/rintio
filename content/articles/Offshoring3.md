@@ -2,6 +2,7 @@
 title: Offshoring Compta360
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-29
 coverImage: /img/articles/T_MOIGNAGES_2.webp

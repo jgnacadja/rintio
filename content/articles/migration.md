@@ -2,6 +2,7 @@
 title: Offshoring  Cloud
 published: true
 categories: Offres
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-26
 coverImage: /img/articles/CLoud1.webp

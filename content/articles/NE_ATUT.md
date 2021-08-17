@@ -2,6 +2,7 @@
 title: Africa TechUp Tour 2020
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-04
 coverImage: /img/articles/thumbnail.webp

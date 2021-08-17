@@ -2,6 +2,7 @@
 title: Conseil
 published: true
 categories: Offres
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-26
 coverImage: /img/articles/ID2GLBDTYq_4x.webp

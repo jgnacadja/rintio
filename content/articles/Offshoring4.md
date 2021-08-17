@@ -2,6 +2,7 @@
 title: Offshoring ISCI
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-03
 coverImage: /img/articles/ISCI.webp

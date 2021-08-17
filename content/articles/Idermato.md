@@ -2,6 +2,7 @@
 title: iDermato, IA et Dermatologie
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-06
 coverImage: /img/articles/d_pigmentation_en_Afrique_A_la.webp

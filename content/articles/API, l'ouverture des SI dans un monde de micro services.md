@@ -2,6 +2,7 @@
 title: API, l'ouverture des SI dans un monde de micro services
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/programmers_concept_with_flat_.webp

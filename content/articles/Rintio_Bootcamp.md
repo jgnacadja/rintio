@@ -2,6 +2,7 @@
 title: Rintio Bootcamp
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/mobile_app_development_backgro.webp

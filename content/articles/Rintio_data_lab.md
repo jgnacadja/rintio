@@ -2,6 +2,7 @@
 title: Rintio Data Lab
 published: true
 categories: Datalab
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-18
 coverImage: /img/articles/dominodatalab_4.webp

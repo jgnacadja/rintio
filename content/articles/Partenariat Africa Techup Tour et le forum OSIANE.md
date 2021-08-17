@@ -2,6 +2,7 @@
 title: Partenariat Africa TechUp et le forum OSIANE
 published: true
 categories: Stories
+src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/EKeyCqeXUAABa4j__1_.webp
