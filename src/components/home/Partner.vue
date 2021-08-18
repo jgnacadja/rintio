@@ -58,7 +58,7 @@
     >
       <div class="1/3 space-y-4">
         <div
-          class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-gray-100 w-12 md:w-48 lg:w-48 xl:w-72 h-12 md:h-48 lg:h-48 xl:h-72 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-gray-100 w-12 md:w-48 lg:w-48 xl:w-60 h-12 md:h-48 lg:h-48 xl:h-60 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <Studely />
         </div>
@@ -70,12 +70,12 @@
       </div>
       <div class="1/3 space-y-4 ">
         <div
-          class="rounded-xl md:rounded-3xl md:ml-auto p-2 m-2 bg-white text-indigo-100 w-12 md:w-44 lg:w-40 xl:w-64 h-12 md:h-44 lg:h-40 xl:h-64 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl md:ml-auto p-2 m-2 bg-white text-indigo-100 w-12 md:w-44 lg:w-40 xl:w-56 h-12 md:h-44 lg:h-40 xl:h-56 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <Bnpparibas />
         </div>
         <div
-          class="rounded-xl md:rounded-3xl md:ml-auto p-2 m-2 bg-white text-green-100 w-12 md:w-40 lg:w-32 xl:w-60 h-12 md:h-40 lg:h-32 xl:h-60 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl md:ml-auto p-2 m-2 bg-white text-green-100 w-12 md:w-40 lg:w-32 xl:w-52 h-12 md:h-40 lg:h-32 xl:h-52 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <CiviTime />
         </div>
@@ -94,7 +94,7 @@
       </div>
       <div class="1/3 space-y-4">
         <div
-          class="rounded-xl md:rounded-3xl xl:ml-auto p-2 m-2 bg-white text-pink-100 w-12 md:w-56 lg:w-60 xl:w-full h-12 md:h-40 lg:h-36 xl:h-60 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl xl:ml-auto p-2 m-2 bg-white text-pink-100 w-12 md:w-56 lg:w-60 xl:w-full h-12 md:h-40 lg:h-36 xl:h-52 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <Societegeneral />
         </div>
@@ -111,7 +111,7 @@
           </div>
         </div>
         <div
-          class="rounded-xl md:rounded-3xl p-2 m-2 lg:ml-auto bg-white text-teal-100 w-12 md:w-56 lg:w-52 xl:w-64 h-12 md:h-56 lg:h-52 xl:h-64 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl p-2 m-2 lg:ml-auto bg-white text-teal-100 w-12 md:w-56 lg:w-52 xl:w-56 h-12 md:h-56 lg:h-52 xl:h-56 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <ExpertiseFrance />
         </div>
