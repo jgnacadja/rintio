@@ -167,7 +167,7 @@
                 relative
               "
             >
-              <g-link :to="edge.node.src === '#' ? edge.node.src : edge.node.src">
+              <g-link :to="edge.node.path">
                 <div class="w-full overflow-hidden">
                   <div
                     class="

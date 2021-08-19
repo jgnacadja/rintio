@@ -2,6 +2,7 @@
 title: (Big) Data & Analytics
 published: true
 categories: Offres
+src: #
 tags: ["frontend", "design", "code style"]
 date: 2020-08-30
 coverImage: /images/home/offer/bigdata.webp
