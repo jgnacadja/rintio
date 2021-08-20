@@ -2,7 +2,6 @@
 title: Africa Techup Tour (ATUT)
 published: true
 categories: Stories
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-05
 coverImage: /img/articles/WhatsApp_Image_2020_01_24_at_1_hw.webp

@@ -2,7 +2,6 @@
 title: Développement & Intégration d’applications
 published: true
 categories: Offres
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-29
 coverImage: /img/articles/team_ux_designer_creative_grap.webp

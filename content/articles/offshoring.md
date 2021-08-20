@@ -2,7 +2,6 @@
 title: Offshoring
 published: true
 categories: Offres
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 coverImage: /img/articles/IMG_3110.webp

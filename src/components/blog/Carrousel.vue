@@ -180,30 +180,20 @@
                     "
                   ></div>
                   <div
-                     class="border-b-2 py-2 text-center font-semibold opacity-90"
-                    v-bind:style="{
-                      'background-image': 'url(' + edge.node.coverImage + ')',
+                    class="border-b-2 py-2 text-center font-semibold opacity-90"
+                    v-bind:style="[ edge.node.type === 'blog' ? {backgroundImage: 'url(' + edge.node.coverImage + ')'} : null]"
+                    v-bind:class="{
+                      'text-primary': edge.node.type !== 'blog',
+                      'text-white': edge.node.type === 'blog',
                     }"
-                     v-bind:class="{'text-primary': !edge.node.coverImage , 'text-white': edge.node.coverImage }"
-                    
                   >
-                    <div
-                      class="text-9xl "
-                    >
+                    <div class="text-9xl">
                       {{ edge.node.date | getDay }}
                     </div>
                     <div class="text-xl capitalize">
                       {{ edge.node.date | getMonth }}
                     </div>
                   </div>
-
-                  <!-- <g-image
-                    v-if="edge.node.coverImage"
-                    alt=""
-                    title=""
-                    :src="edge.node.coverImage"
-                    class="object-cover w-full h-48 mb-0"
-                  /> -->
                   <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                     <div
                       class="
@@ -238,130 +228,9 @@
                     ></div>
                   </div>
                 </div>
+                
               </g-link>
-              <!-- <div class="w-full bg-transparent">
-                  <div
-                    class="
-                      w-full
-                      px-4
-                      pb-4
-                      pt-2
-                      absolute
-                      bottom-2
-                      lg:-bottom-6
-                      h-24
-                      md:h-24
-                      lg:h-32
-                      xl:h-24
-                    "
-                  >
-                    <div
-                      class="
-                        font-bold
-                        tracking-wider
-                        leading-relaxed
-                        text-lg
-                        font-roboto
-                        text-primary
-                      "
-                    >
-                      {{ edge.node.title }}
-                    </div>
-
-                    <div
-                      class="
-                        tracking-tight
-                        leading-normal
-                        font-roboto
-                        text-sm
-                        mt-2
-                      "
-                    >
-                      <p
-                        class="
-                          font-light
-                          text-base
-                          text-ellipsis--6
-                          md:text-ellipsis--2
-                        "
-                      >
-                        {{ edge.node.date | FormatDate }}
-                      </p>
-                    </div>
-                  </div>
-                </div> -->
             </div>
-
-            <!-- <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                      mt-2
-                    "
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">

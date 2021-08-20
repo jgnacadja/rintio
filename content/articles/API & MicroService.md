@@ -2,7 +2,6 @@
 title: API MicroService
 published: true
 categories: Offres
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-27
 coverImage: /img/articles/ID4H1A1937.webp

@@ -2,7 +2,6 @@
 title: Offshoring ActuData
 published: true
 categories: Stories
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-09-01
 coverImage: /img/articles/Aviva_and_CII_join_Insurtech_U.webp

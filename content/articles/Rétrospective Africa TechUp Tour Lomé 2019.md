@@ -2,7 +2,6 @@
 title: Rétrospective Africa TechUp Tour Lomé 2019
 published: true
 categories: Stories
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-08-01
 coverImage: /img/articles/IMG_3590.webp

@@ -2,7 +2,6 @@
 title: Datascience & IA
 published: true
 categories: Blog
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
 publie: Publié par ...

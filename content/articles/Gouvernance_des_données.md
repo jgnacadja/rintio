@@ -2,7 +2,6 @@
 title: Gouvernance des données
 published: true
 categories: Datalab
-src: #
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-30
 coverImage: /img/articles/data_governance_gouvernance_de.webp

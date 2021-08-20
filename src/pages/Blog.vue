@@ -133,10 +133,10 @@ query {
           id
           title
         }
+        type
         date
         coverImage
         metaDescription
-        heure
       }
     }
   }
