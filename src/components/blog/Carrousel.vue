@@ -22,7 +22,7 @@
           <span v-if="type === 'event'">Evènements</span>
         </h3>
       </div>
-    
+
       <div v-if="type === 'post'">
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
@@ -151,11 +151,22 @@
       </div>
       <div v-if="type === 'event'">
         <VueSlickCarousel v-bind="settings" ref="carouselevent">
-          <div class="md:mx-2 w-full container"
+          <div
+            class="md:mx-2 w-full container"
             v-for="edge in allevents"
             :key="edge.node.id"
           >
-            <div class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 relative">
+            <div
+              class="
+                shadow-md
+                group
+                container
+                max-w-sm
+                bg-center bg-cover bg-no-repeat
+                w-11/12
+                relative
+              "
+            >
               <g-link :to="edge.node.path">
                 <div class="w-full overflow-hidden">
                   <div
@@ -170,59 +181,56 @@
                   ></div>
                   <div
                     class="border-b-2 py-2 text-center font-semibold opacity-90"
-                    v-bind:style="{
-                      'background-image': 'url(' + edge.node.coverImage + ')',
+                    v-bind:style="[ edge.node.type === 'blog' ? {backgroundImage: 'url(' + edge.node.coverImage + ')'} : null]"
+                    v-bind:class="{
+                      'text-primary': edge.node.type !== 'blog',
+                      'text-white': edge.node.type === 'blog',
                     }"
-                    v-bind:class="{'text-primary': !edge.node.coverImage , 'text-white': edge.node.coverImage }"
-
                   >
-                    <div
-                      class="text-9xl "
-                    >
+                    <div class="text-9xl">
                       {{ edge.node.date | getDay }}
                     </div>
                     <div class="text-xl capitalize">
                       {{ edge.node.date | getMonth }}
                     </div>
                   </div>
-                </div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      my-2
-                    "
-                  >
-                    {{ edge.node.title }}
-                  </div>
-
-                  <div
-                    class="tracking-tight leading-relaxed font-roboto text-xs"
-                  >
-                    <p
+                  <div class="w-full relative px-4 pb-4 pt-2 bg-white">
+                    <div
                       class="
-                        text-gray-600
-                        font-light
-                        text-base
-                        text-ellipsis--2
+                        text-primary
+                        font-bold
+                        tracking-wider
+                        leading-relaxed
+                        font-roboto
                         my-2
                       "
                     >
-                      {{ edge.node.metaDescription }}
-                    </p>
+                      {{ edge.node.title }}
+                    </div>
+
+                    <div
+                      class="tracking-tight leading-relaxed font-roboto text-xs"
+                    >
+                      <p
+                        class="
+                          text-gray-600
+                          font-light
+                          text-base
+                          text-ellipsis--2
+                          my-2
+                        "
+                      >
+                        {{ edge.node.metaDescription }}
+                      </p>
+                    </div>
+                    <div
+                      class="tracking-tight leading-normal font-roboto text-sm"
+                    ></div>
                   </div>
-                  <div
-                    class="tracking-tight leading-normal font-roboto text-sm"
-                  ></div>
                 </div>
+                
               </g-link>
             </div>
-            
-           
           </div>
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">
@@ -428,7 +436,6 @@ export default {
       }
     },
   },
-
 };
 </script>
 <style lang="scss" scoped>
