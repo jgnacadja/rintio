@@ -416,7 +416,6 @@ export default {
       this.$refs.carouselevent.prev();
     },
   },
-
   filters: {
     // Filter definitions
     FormatDate(value) {
@@ -424,7 +423,6 @@ export default {
         return moment(String(value)).format("MM/DD/YYYY");
       }
     },
-
     getDay(value) {
       if (value) {
         return moment(String(value)).format("DD");

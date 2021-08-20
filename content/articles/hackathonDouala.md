@@ -1,5 +1,5 @@
 ---
-title: hackathon douala
+title: Hackathon douala
 tag: Formation
 categories: Evènements
 type: blog

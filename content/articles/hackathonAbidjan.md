@@ -1,5 +1,5 @@
 ---
-title: hackathon abidjan
+title: Hackathon abidjan
 tag: Big Data
 categories: Evènements
 type: 

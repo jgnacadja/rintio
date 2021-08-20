@@ -1,5 +1,5 @@
 ---
-title: module
+title: Module
 tag: Big Data
 categories: Evènements
 type: 

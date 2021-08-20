@@ -1,5 +1,5 @@
 ---
-title: hackathon cotonou
+title: Hackathon cotonou
 tag: Big Data
 categories: Evènements
 type: blog

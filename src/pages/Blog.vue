@@ -96,6 +96,7 @@ query {
           id
           title
         }
+        
         date
         coverImage
         metaDescription

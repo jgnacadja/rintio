@@ -1,5 +1,5 @@
 ---
-title: travaux pratiques
+title: Travaux pratiques
 tag: Formation
 categories: Evènements
 type: blog

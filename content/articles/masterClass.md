@@ -1,5 +1,5 @@
 ---
-title: master class
+title: Master class
 tag: Formation
 categories: Evènements
 type: 

@@ -1,5 +1,5 @@
 ---
-title: hackathon paris
+title: Hackathon paris
 tag: Formation
 categories: Evènements
 type: 
