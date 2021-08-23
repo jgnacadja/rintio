@@ -35,7 +35,8 @@
         "vue-popover": "^1.6.2",
         "vue-scrollto": "^2.20.0",
         "vue-slick-carousel": "^1.0.6",
-        "vue-tailwind": "^2.4.2"
+        "vue-tailwind": "^2.4.2",
+        "vueperslides": "^2.15.2"
     },
     "devDependencies": {
         "@babel/core": "^7.15.0",
