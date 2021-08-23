@@ -23,9 +23,9 @@
             </p>
             <a
               href="#"
-              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold uppercase text-xs 2xl:text-lg"
-              >En savoir plus</a
-            >
+              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold hover:bg-primary uppercase text-xs 2xl:text-lg"
+              >En savoir plus
+            </a>
           </div>
         </div>
         <!-- container -->
@@ -53,9 +53,9 @@
             </p>
             <a
               href="#"
-              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold uppercase text-xs 2xl:text-lg"
-              >En savoir plus</a
-            >
+              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold hover:bg-primary uppercase text-xs 2xl:text-lg"
+              >En savoir plus
+            </a>
           </div>
         </div>
         <!-- container -->
@@ -83,9 +83,9 @@
             </p>
             <a
               href="#"
-              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold uppercase text-xs 2xl:text-lg"
-              >En savoir plus</a
-            >
+              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold hover:bg-primary uppercase text-xs 2xl:text-lg"
+              >En savoir plus
+            </a>
           </div>
         </div>
         <!-- container -->
@@ -121,9 +121,9 @@
             </p>
             <a
               href="#"
-              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold uppercase text-xs 2xl:text-lg"
-              >En savoir plus</a
-            >
+              class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold hover:bg-primary uppercase text-xs 2xl:text-lg"
+              >En savoir plus
+            </a>
           </div>
         </div>
         <!-- container -->
