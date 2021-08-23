@@ -14,7 +14,7 @@
           d'apporter aux entreprises des solutions liées aux problèmes numériques, 
           RINTIO s'est spécialisée dans les 
           <span class="font-bold">
-            domaines de la technologie et des services de l’information.</span
+            domaines de la technologie et des services de l’information numérique.</span
           >
         </p>
       </div>

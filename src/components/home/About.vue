@@ -76,19 +76,21 @@
 
 
         <p class="my-3 font-light text-justify leading-8">
-          Le <span class="font-bold">numérique</span> est devenu aujourd'hui un outil incontournable dans 
-          l'organisation, la gestion et la rentabilité des entreprises. 
-          Quelque soit le domaine d'intervention, Il facilite le fonctionnement  
+         Le <span class="font-bold">numérique</span> est devenu aujourd'hui un outil incontournable 
+          dans l'organisation, la gestion et la rentabilité des entreprises. 
+          Quelque soit le domaine d'intervention, il facilite le fonctionnement 
           les différents secteurs et peut également s'adapter aux spécificités 
-          de chaque entreprise ou institution. RINTIO vous aide à atteindre 
-          vos objectifs grâce à la création d'<span class="font-bold">outils informatiques performants</span> . 
-          Il solutionne tous vos problèmes liés à l’<span class="font-bold">analyse</span> et le <span class="font-bold">traitement 
-          de données</span> volumineuses. Composée d'une équipe dynamique et spécialisée, 
-          RINTIO est une entreprise qui intervient entre autre dans le <span class="font-bold">développement </span> 
-          et l'intégration de <span class="font-bold">solutions numériques</span>  de <span class="font-bold">traitement données</span> , 
-          de <span class="font-bold">technologies </span> 
-          Big Data et d'<span class="font-bold">intelligence artificielle</span> . Où que vous soyez, RINTIO est disposé 
-          à vous servir et à donner pour vous satisfaire, le meilleur d'elle même.
+          de chaque entreprise ou institution. Nous vous accompagnons dans 
+          l'atteinte de vos <span class="font-bold">objectifs</span> grâce à 
+          la création d'<span class="font-bold">outils informatiques 
+          performants</span>. Composés d'une équipe dynamique et spécialisée, 
+          Nous intervenons dans le <span class="font-bold">développement</span> et l'intégration 
+          de <span class="font-bold">solutions numériques</span>, le 
+          <span class="font-bold">traitement des données</span>, les 
+          <span class="font-bold">technologies Big Data</span> et 
+          l'<span class="font-bold">intelligence artificielle</span>. Nous sommes 
+          disposés à vous aider où que vous soyez et à mettre notre expertise à votre 
+          disposition pour vous servir.
         </p>
         <div class="mt-4">
           <g-link to="/a-propos">

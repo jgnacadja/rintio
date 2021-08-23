@@ -34,9 +34,10 @@
           <p
             class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
           >
-            Dans sa vision d'être un acteur principal dans la formation aux outils du numériques, 
-            RINTIO met en place la plateforme Conraq-Lab. Ceci constitue pour RINTIO, un pas en 
-            avant dans sa stratégie d'appui aux formations en ligne. 
+            Dans le but d’apporter des solutions innovantes aux Entreprises et Institutions en 
+            communiant les technologies du numérique aux grands enjeux de nos sociétés, RINTIO 
+            a mis en place la plateforme Coraq-Lab, qui constitue un grand pas en avant dans 
+            sa stratégie d’appui aux formations en ligne. 
           </p>
         </div>
       </div>

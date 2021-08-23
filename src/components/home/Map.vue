@@ -2,7 +2,7 @@
   <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
     <div class="mx-4 md:mx-0 text-center mb-4 md:mb-10">
       <h2 class="text-2xl md:text-5xl font-extrabold text-primary capitalize">
-        GEO- <span class="text-secondary capitalize">LOCALISATION</span>
+        Nos <span class="text-secondary capitalize">Implantations</span>
       </h2>
     </div>
     <div class="text-center">

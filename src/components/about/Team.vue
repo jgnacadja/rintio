@@ -12,12 +12,13 @@
             <span class="text-secondary"> experts</span>
           </h1>
 
-          <p class="mx-auto my-3 md:mb-24 md:w-1/2">
-            RINTIO, c'est une équipe de professionnels dynamiques et un 
-            réseau de partenaires ayant pour but de 
-            <span class="font-bold"
-              >donner vie à vos projets dans le respect des deadlines.</span
-            >
+          <p class="mx-auto my-3 md:mb-24 md:w-1/2 text-justify">
+            RINTIO, c'est un réseau d’experts pour une offre globale performante.
+            Intervenant du conseil jusqu'à l'exploitation, l'équipe de RINTIO 
+            se compose d'experts de la technologie, de l’intégration et traitement 
+            de données. Grâce à l'expérience acquise depuis plusieurs années, 
+            nous possèdons une expertise qui nous permet de concevoir 
+            les solutions alliant performance et rentabilité.
           </p>
           <!---->
           <VueSlickCarousel v-bind="settings">

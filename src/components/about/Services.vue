@@ -53,7 +53,6 @@
               text-justify
               leading-8
               group-hover:text-white
-              text-ellipsis--2
             "
           >
             L’exploitation des données internes et externes à l’entreprise est
@@ -89,7 +88,6 @@
               text-justify
               leading-8
               group-hover:text-white
-              text-ellipsis--2
             "
           >
             Nous avions pour ambition de renforcer la capacité des jeunes en
@@ -124,7 +122,6 @@
               text-justify
               leading-8
               group-hover:text-white
-              text-ellipsis--2
             "
           >
             La performance de nos produits se base sur la maîtrise des
@@ -159,7 +156,6 @@
               text-justify
               leading-8
               group-hover:text-white
-              text-ellipsis--2
             "
           >
             Rintio utilise cette nouvelle méthode et technologie pour
@@ -199,7 +195,6 @@
               text-justify
               leading-8
               group-hover:text-white
-              text-ellipsis--2
             "
           >
             DevOps est un ensemble de pratiques qui automatisent les processus
@@ -236,7 +231,6 @@
               text-justify
               leading-8
               group-hover:text-white
-              text-ellipsis--2
             "
           >
             Pour rappel Scrum est une méthode agile dédiée à la « gestion de

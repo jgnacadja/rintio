@@ -10,9 +10,10 @@
           Nous offrons des solutions professionnelles pour les entreprises
         </h1>
         <p class="md:w-2/3 mx-auto py-4 md:px-0">
-          RINTIO apporte des solutions innoventes aux entreprises et 
-          institutions en combinant les technologies du numérique aux 
-          grands enjeux évolutifs des communautés.
+          La transformation digitale s'impose de plus en plus dans tous les domaines 
+          d'activités. Voici les services que RINTIO met à la disposition 
+          des entreprises pour leur permettre de tirer profit des opportunités 
+          et répondre aux nouveaux enjeux du numérique.
         </p>
       </div>
     </div>
