@@ -52,20 +52,15 @@
               </h2>
 
               <p class="my-8 font-light text-justify leading-10">
-                Rintio est une entreprise de services du numérique. Nous sommes
-                spécialisées dans le
-                <span class="font-bold"
-                  >développement et l’intégration de solutions
-                  informatiques</span
-                >, le <span class="font-bold">traitement de données</span>, les
-                technologies <span class="font-bold">Big Data</span> et l’<span
-                  class="font-bold"
-                  >Intelligence Artificielle</span
-                >. Nous proposons, entre autres, des prestations en Offshoring
-                (<span class="font-bold"
-                  >Coding, Admin Infrastructure & Cloud, DevOps</span
-                >) pour nos clients en afrique et dans le monde.
-              </p>
+                Rintio vous accompagne tout au long de votre transformation digitale, 
+                pour vous aider à maximiser vos revenus et parfaire votre relation client. 
+                Nous vous proposons la mise en place de logiciels de gestion adaptés 
+                au fonctionnement de votre entreprise, le traitement et l'analyse des 
+                données volumineux, des plateformes de discussions et/ou de réunions. 
+                Nous offrons également des formations et des conseils, toujours pour 
+                vous aider à atteindre vos objectifs. <br/> Avec Rintio, tout devient plus 
+                simple.... 
+                </p>
               <div class="mt-4">
                 <g-link to="/a-propos">
                   <button

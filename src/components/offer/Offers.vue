@@ -196,7 +196,7 @@
       </div>
 
       <!-- (Big) Data & Analytics -->
-      <div class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1">
+      <!-- <div class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1">
         <div class="shadow-lg bg-center bg-cover bg-no-repeat bg-bigdata h-full">
           <div class="w-full overflow-hidden">
             <div class="w-full h-64"></div>
@@ -227,7 +227,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!--   Développement & Intégration d’applications -->
       <div class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1">
@@ -337,7 +337,7 @@
       </div>
 
       <!-- Intelligence Artificielle -->
-      <div class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1">
+      <!-- <div class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1">
         <div class="shadow-lg bg-center bg-cover bg-no-repeat bg-cloud h-full">
           <div class="w-full overflow-hidden">
             <div class="w-full h-64"></div>
@@ -369,7 +369,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Conseil -->
       <div class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1">
