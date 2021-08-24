@@ -1,0 +1,80 @@
+---
+title: "Confirmer votre abonnement"
+preheader: "Veuillez confirmer votre abonnement pour commencer à recevoir nos dernières nouvelles"
+bodyClass: bg-gray-100
+---
+
+<extends src="src/layouts/main.html">
+  <block name="template">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="bg-gray-100">
+          <table class="w-600 sm:w-full">
+            <tr>
+              <td class="p-48 sm:py-32 sm:px-24 text-center">
+                <a href="https://rintio.com">
+                  <img src="images/logo.png" width="100" alt="Rintio">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class="sm:px-24">
+                <table class="w-full">
+                  <tr>
+                    <td class="bg-white text-gray-800 text-base text-left p-48 sm:px-24 leading-24 rounded">
+                      <p>Bonjour,</p>
+                      <p class="text-2xl sm:leading-32 text-primary font-semibold m-0 mb-24">Vous y êtes presque!!!
+                      </p>
+                      <p class="m-0 mb-24">Finalisez votre adhésion à la communauté RINTIO en cliquant sur le lien
+                        ci-dessous:</p>
+                      <!-- <div class="leading-full">
+                        <span
+                          class="mj-opt-in-button mj-w-btn mockup-content paint-area cursor-pointer inline-block py-16 px-24 rounded text-base font-semibold text-center no-underline text-white bg-secondary hover:bg-hoverSecondary">
+                          <data id="start-link"></data>
+                          <span class="mj-opt-in-button-content paint-area paint-area--text" contenteditable="true"
+                            style="mso-text-raise: 16px;">Je confirme &rarr;</span>
+                          <data id="end-link"></data>
+                        </span>
+                      </div> -->
+                    <div style="padding-bottom: 15px; text-align: center;">
+                      <data id="start-link"></data>
+                      <div class="mj-opt-in-button mj-w-btn mockup-content paint-area"
+                        style="font-family: Montserrat, sans-serif; font-size: 13px; padding: 0 25px; color: white; background-color: #134a7f; text-align: center; display: inline-block; border-radius: 3px;">
+                        <div style="display: table; height: 45px; width: 100%;">
+                          <div style="display: table-cell; vertical-align: middle;">
+                            <div class="mj-opt-in-button-content paint-area paint-area--text" contenteditable="true"
+                              style="font-family: Montserrat, sans-serif; display: inline-block; vertical-align: middle;">
+                              <b class="medium-b">CLIQUEZ ICI POUR CONFIRMER</b>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <data id="end-link"></data>
+                    </div>
+                    <p class="m-0 my-24">Si le bouton ne fonctionne pas, veuillez copier/coller l'URL suivante dans
+                      votre navigateur : [URL]</p>
+                    <table class="w-full">
+                      <tr>
+                        <td class="py-32">
+                          <div class="bg-gray-200 h-px leading-px">&zwnj;</div>
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="m-0 mb-16">Si vous n'avez pas demandé à vous abonner à cette liste ou que vous avez
+                      peut-être changé d'avis, ignorez simplement cet email et vous ne serez pas abonné.</p>
+                    <p class="m-0 mb-16">Merci, <br>l’équipe <a href="https://rintio.com/"
+                        class="text-blue-500">Rintio</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-20"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+  </block>
+</extends>
