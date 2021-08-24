@@ -152,7 +152,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../variables.scss";
 .bg-homeslider-1 {
-  background-image: url("./../../../static/images/home/slider/rinttio-1.webp");
+  background-image: url("./../../../static/images/home/slider/work.webp");
 }
 
 .bg-homeslider-2 {
