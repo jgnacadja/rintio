@@ -139,7 +139,7 @@ export default {
   components: { VueperSlides, VueperSlide },
   data: () => ({
   settings: {
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: true,
     touchable: false,
     fixedHeight: true,
