@@ -270,3 +270,15 @@ button.slick-next:before {
   color: $red-rintio !important;
   opacity: 0.95 !important;
 }
+
+.vueperslides__bullet .default {
+  background-color: #A1A7B3 !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.vueperslides__bullet--active .default {
+  background-color: $red-rintio !important;
+}
