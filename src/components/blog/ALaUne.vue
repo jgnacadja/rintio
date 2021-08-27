@@ -31,7 +31,7 @@
           <div
             class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
           >
-            <div class="col-start-1 row-start-2 md:row-start-1 px-4">
+            <div class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4">
               <h2
                 class="
                   text-lg

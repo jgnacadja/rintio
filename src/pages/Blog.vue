@@ -96,6 +96,7 @@ query {
           id
           title
         }
+        
         date
         coverImage
         metaDescription
@@ -132,8 +133,10 @@ query {
           id
           title
         }
+        type
         date
         coverImage
+        metaDescription
       }
     }
   }

@@ -22,7 +22,7 @@
           <span v-if="type === 'event'">Evènements</span>
         </h3>
       </div>
-    
+
       <div v-if="type === 'post'">
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
@@ -151,173 +151,49 @@
       </div>
       <div v-if="type === 'event'">
         <VueSlickCarousel v-bind="settings" ref="carouselevent">
-          <div class="md:mx-2 w-full container"
+          <div
+            class="md:mx-2 w-full container"
             v-for="edge in allevents"
             :key="edge.node.id"
           >
-            <g-link :to="edge.node.path">
-              <div
-                class="
-                  shadow-md
-                  group
-                  container
-                  max-w-sm
-                  bg-center bg-cover bg-no-repeat
-                  h-72
-                  w-11/12
-                  relative
-                "
-               :style="{
-                  'background-image': 'url(' + edge.node.coverImage + ')'
-                  
-                }"
-              >
-                <div class="w-full bg-transparent">
-                  <div
-                    class="
-                      w-full
-                      px-4
-                      pb-4
-                      pt-2
-                      absolute
-                      bottom-2
-                      lg:-bottom-6
-                      h-24
-                      md:h-24
-                      lg:h-32
-                      xl:h-24
-                    "
-                  >
-                    <div
-                      class="
-                        font-bold
-                        tracking-wider
-                        leading-relaxed
-                        text-lg
-                        font-roboto
-                        text-primary
-                      "
-                    >
-                      {{ edge.node.title }}
-                    </div>
-
-                    <div
-                      class="
-                        tracking-tight
-                        leading-normal
-                        font-roboto
-                        text-sm
-                        mt-2
-                      "
-                    >
-                      <p
-                        class="
-                          font-light
-                          text-base
-                          text-ellipsis--6
-                          md:text-ellipsis--2
-                        "
-                      >
-                        {{ edge.node.date }}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </g-link>
             <div
               class="
                 shadow-md
                 group
                 container
                 max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
+                bg-center bg-cover bg-no-repeat
                 w-11/12
+                relative
               "
             >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                      mt-2
-                    "
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full"
-            v-for="edge in allevents"
-            :key="edge.node.id"
-          >
-            <g-link :to="edge.node.path">
-              <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-              :style="{
-                  'background-image': 'url(' + edge.node.coverImage + ')'
-                  
-                }"
-              >
+              <g-link :to="edge.node.path">
                 <div class="w-full overflow-hidden">
-                  <div class="w-full h-48"></div>
+                  <div
+                    class="
+                      absolute
+                      inset-0
+                      bg-gradient
+                      from-black
+                      to-black
+                      opacity-25
+                    "
+                  ></div>
+                  <div
+                    class="border-b-2 py-2 text-center font-semibold opacity-90"
+                    v-bind:style="[ edge.node.type === 'blog' ? {backgroundImage: 'url(' + edge.node.coverImage + ')'} : null]"
+                    v-bind:class="{
+                      'text-primary': edge.node.type !== 'blog',
+                      'text-white': edge.node.type === 'blog',
+                    }"
+                  >
+                    <div class="text-9xl">
+                      {{ edge.node.date | getDay }}
+                    </div>
+                    <div class="text-xl capitalize">
+                      {{ edge.node.date | getMonth }}
+                    </div>
+                  </div>
                   <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                     <div
                       class="
@@ -326,534 +202,34 @@
                         tracking-wider
                         leading-relaxed
                         font-roboto
+                        my-2
                       "
                     >
-                      Hackathon Douala
+                      {{ edge.node.title }}
+                    </div>
+
+                    <div
+                      class="tracking-tight leading-relaxed font-roboto text-xs"
+                    >
+                      <p
+                        class="
+                          text-gray-600
+                          font-light
+                          text-base
+                          text-ellipsis--2
+                          my-2
+                        "
+                      >
+                        {{ edge.node.metaDescription }}
+                      </p>
                     </div>
                     <div
-                      class="
-                        tracking-wider
-                        leading-relaxed
-                        font-roboto
-                        text-xs
-                        mt-2
-                      "
-                    >
-                      <span class="flex items-start text-sm">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          after-appear=""
-                          alt="Cotonou"
-                          title="Cotonou localisation"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                        {{ minute }}
-                      </span>
-                    </div>
-                    <div
-                      class="
-                        text-black
-                        tracking-wider
-                        leading-relaxed
-                        font-roboto
-                        text-xs
-                      "
-                    >
-                      En ligne
-                    </div>
+                      class="tracking-tight leading-normal font-roboto text-sm"
+                    ></div>
                   </div>
                 </div>
-              </div>
-            </g-link>   
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                      mt-2
-                    "
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                      mt-2
-                    "
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                      mt-2
-                    "
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="tracking-wider leading-relaxed font-roboto text-xs"
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="tracking-wider leading-relaxed font-roboto text-xs"
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="tracking-wider leading-relaxed font-roboto text-xs"
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:mx-2 w-full">
-            <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-white bg-center bg-cover bg-no-repeat
-                bg-offshoring_2
-                w-11/12
-              "
-            >
-              <div class="w-full overflow-hidden">
-                <div class="w-full h-48"></div>
-                <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                  <div
-                    class="
-                      text-primary
-                      font-bold
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                    "
-                  >
-                    Hackathon Douala
-                  </div>
-                  <div
-                    class="tracking-wider leading-relaxed font-roboto text-xs"
-                  >
-                    <span class="flex items-start text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        after-appear=""
-                        alt="Cotonou"
-                        title="Cotonou localisation"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {{ days }}/{{ months }}/{{ years }} | {{ hour }}H
-                      {{ minute }}
-                    </span>
-                  </div>
-                  <div
-                    class="
-                      text-black
-                      tracking-wider
-                      leading-relaxed
-                      font-roboto
-                      text-xs
-                    "
-                  >
-                    En ligne
-                  </div>
-                </div>
-              </div>
+                
+              </g-link>
             </div>
           </div>
         </VueSlickCarousel>
@@ -905,6 +281,7 @@
 
 <script>
 import moment from "moment";
+import "moment/locale/fr";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -1039,12 +416,21 @@ export default {
       this.$refs.carouselevent.prev();
     },
   },
-
   filters: {
     // Filter definitions
     FormatDate(value) {
       if (value) {
         return moment(String(value)).format("MM/DD/YYYY");
+      }
+    },
+    getDay(value) {
+      if (value) {
+        return moment(String(value)).format("DD");
+      }
+    },
+    getMonth(value) {
+      if (value) {
+        return moment(String(value)).format("MMMM");
       }
     },
   },
