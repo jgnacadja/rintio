@@ -4,7 +4,7 @@ published: true
 categories: Offres
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-26
-coverImage: /img/articles/ID2GLBDTYq_4x.png
+coverImage: /img/articles/ID2GLBDTYq_4x.webp
 descriptionUp: • Strategie Data & IA
 descriptionDown: • Strategie de transformation numériques.
 

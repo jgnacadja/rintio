@@ -4,7 +4,7 @@ published: true
 categories: Datalab
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-31
-coverImage: /img/articles/ID700226d13b56ab5f2f0330a17a7e.png
+coverImage: /img/articles/ID700226d13b56ab5f2f0330a17a7e.webp
 button: Profiter de l'offre
 path:
 ---

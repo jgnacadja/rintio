@@ -4,7 +4,7 @@ published: true
 categories: Stories
 tags: ["frontend", "design", "scrum"]
 date: 2020-07-28
-coverImage: /img/articles/programmers_concept_with_flat_.png
+coverImage: /img/articles/programmers_concept_with_flat_.webp
 metaDescription: Parce qu’elles interconnectent les systèmes dans un monde de plus en plus ouvert et décloisonné, les APIs, ces interfaces...
 ---
 

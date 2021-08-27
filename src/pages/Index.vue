@@ -59,7 +59,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content:
+            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
         },
         {
           key: "keywords",
@@ -71,6 +72,3 @@ export default {
   },
 };
 </script>
-
-<style
-</style>

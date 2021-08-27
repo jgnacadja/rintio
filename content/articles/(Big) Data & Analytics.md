@@ -4,7 +4,7 @@ published: true
 categories: Offres
 keywords: []
 date: 2020-08-30
-coverImage: /img/articles/Fotolia_257957753_Subscription.png
+coverImage: /images/home/offer/bigdata.webp
 metaDescription: Captez, nettoyer, stockez, diffusez et exploitez vos données
 tags: ["frontend", "design", "code style"]
 subDescription:

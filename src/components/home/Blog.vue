@@ -1,24 +1,23 @@
 <template>
-  <div class="items-center w-full justify-center py-6 md:py-24">
+  <div class="items-center justify-center w-full py-6 md:py-24">
     <div class="text-center">
-      <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
+      <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
         Nos publications
       </h3>
     </div>
 
     <div class="text-center">
-      <h2 class="my-3 text-xl md:text-5xl font-extrabold text-primary">
+      <h2 class="my-3 text-xl font-extrabold md:text-5xl text-primary">
         Rintio<span class="text-secondary"> blog</span>
       </h2>
-      <h4 class="lg:w-1/2 mx-auto py-4">Articles à la une</h4>
+      <div class="py-4 ">Articles à la une</div>
     </div>
 
     <div
-      class="lg:flex container mx-auto md:px-16 space-x-0 md:space-x-6 w-full"
+      class="grid gap-4 px-2  md:grid-cols-6 xl:grid-cols-2 md:grid-flow-row xl:grid-flow-rows xl:px-24"
     >
-      <!-- main post -->
       <div
-        class="mb-4 lg:mb-0 p-4 lg:p-0 w-full lg:w-1/2  relative block bg-white h-full shadow-sm"
+        class="h-full col-span-3 row-span-2 bg-white shadow-sm  xl:col-span-1 xl:row-span-2"
         v-for="edge in $static.post.edges"
         :key="edge.node.id"
       >
@@ -29,88 +28,102 @@
             :src="edge.node.coverImage"
             class="object-cover w-full h-64 mb-0"
           />
-          <!-- <span
-            class="
-              relative
-              text-white
-              bg-secondary
-              p-4
-              text-sm
-              hidden
-              md:block
-              ml-4
-              -mt-7
-              capitalize
-              w-24
-              text-center
-            "
-          >
-            {{ edge.node.categories.title }}
-          </span> -->
+
           <h5
-            class="text-gray-800 font-bold mt-2 mb-2 leading-tight text-xl mx-4"
+            class="mx-4 mt-2 mb-2 text-xl font-bold leading-tight text-gray-800"
           >
             {{ edge.node.title }}
           </h5>
-          <p class="text-primary md:h-11 text-xs space-x-8 mx-4">
-            <span>{{ edge.node.date | FormatDate}}</span>
-            <span class="float-right">Publié par : Rintio</span>
+          <p class="mx-4 space-x-8 text-xs text-primary">
+            <span>{{ edge.node.date | FormatDate }}</span>
+             <span class="flex float-right pt-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-4 sm:hidden"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                  <span class="hidden sm:flex"> Publié par : </span>
+                  Rintio
+                </span>
+            
           </p>
-          <p class=" text-gray-600 text-justify font-light mb-4 mx-4">
+          <p class="mx-4 mb-4 font-light text-justify text-gray-600">
             {{ edge.node.metaDescription }}
           </p>
-          <div class="flex space-x-8 mx-4 mb-1"></div>
-        </g-link> 
+        </g-link>
       </div>
-
-      <!-- sub-main posts -->
-      <div class="   w-full lg:w-1/2   ">
-        <!-- post 1 -->
-        <div
-          class="w-full bg-white  h-48 md:h-auto   flex flex-row md:flex-row mb-10"
-          v-for="edge in $static.otherPost.edges"
-          :key="edge.node.id"
-        >
-       
-          <div class="w-2/5 h-full">
+      <div
+        class="col-span-3 row-span-1 bg-white shadow-md xl:col-span-1 xl:row-span-1"
+        v-for="edge in $static.otherPost.edges"
+        :key="edge.node.id"
+      >
+        <div class="flex flex-row ">
+          <div class="w-2/5 h-48 md:h-64 lg:h-60 xl:h-56 2xl:h-48">
             <g-link :to="edge.node.path">
               <g-image
                 alt="iot"
                 title="scrum"
                 :src="edge.node.coverImage"
-                class="lg:block md:h-52 m-4 md:m-0 w-full"
+                class="object-cover w-full h-full "
               />
             </g-link>
           </div>
-          <div class="bg-white px-4 w-3/5 h-full shadow-sm mb:pb-1" >
+          <div
+            class="w-3/5 px-4 mt-4 "
+          >
             <g-link :to="edge.node.path">
-              <h5 class="text-left md:mt-0 text-gray-800 font-semibold mb-2 text-lg md:text-xl ">
+              <h5
+                class="mb-2 text-lg font-semibold text-left text-gray-800  md:text-xl"
+              >
                 {{ edge.node.title }}
               </h5>
-              <p class=" h-px text-primary text-xs mt-2 md:mt-4  h-8 space-x-8">
+              <p class="mt-2 text-xs  text-primary md:mt-4">
                 <span>{{ edge.node.date | FormatDate }}</span>
-                <span class="float-right">
-                Publié par : Rintio
+                <span class="flex float-right pt-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-4 sm:hidden"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                  <span class="hidden sm:flex"> Publié par : </span>
+                  Rintio
                 </span>
               </p>
               <p
-                class="  md:h-32 block font-light pt-0 text-justify text-xs md:text-sm text-gray-600 text-ellipsis--2 " 
+                class="w-full text-xs font-light text-justify text-gray-600  md:text-sm text-ellipsis--2"
               >
                 {{ edge.node.metaDescription }}
               </p>
-              <div class="flex space-x-8"></div>
+              
             </g-link>
           </div>
         </div>
       </div>
     </div>
-    <div class="md:flex container mx-auto md:px-16 w-full">
+
+    <div class="w-full px-2 py-4 mx-auto md:flex xl:px-24">
       <g-link to="/blog" class="ml-auto">
         <button
           href="#"
-          class="flex ml-auto mr-8 md:ml-0 md:mr-0 md:text-lg font-medium hover:text-secondary focus:outline-none"
+          class="flex ml-auto font-medium  md:text-lg hover:text-secondary focus:outline-none"
         >
-          Voir plus de publications <span class="pl-2 pt-1"><Arrow /></span>
+          Voir plus de publications <span class="pt-1 pl-2"><Arrow /></span>
         </button>
       </g-link>
     </div>
@@ -173,17 +186,12 @@ query {
 
 <script>
 import Arrow from "~/assets/images/icons/arrow.svg";
-import Like from "~/assets/images/icons/like.svg";
-import Comment from "~/assets/images/icons/comment.svg";
-import Share from "~/assets/images/icons/share.svg";
+
 import moment from "moment";
 
 export default {
   components: {
     Arrow,
-    Like,
-    Comment,
-    Share,
   },
   filters: {
     // Filter definitions
@@ -196,9 +204,9 @@ export default {
 };
 </script>
 <style scoped>
-.text-ellipsis--2{
-  text-overflow:ellipsis;
-  overflow:hidden;
+.text-ellipsis--2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
   display: -webkit-box !important;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
