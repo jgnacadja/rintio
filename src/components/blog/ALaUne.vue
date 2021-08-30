@@ -3,7 +3,7 @@
     class="container w-full mx-auto mt-4 md:mt-24 md:px-20 space-x-0 md:flex"
   >
     <div class="w-full">
-      <div class="w-full my-6 mx-24">
+      <div class="w-full my-6 mx-24 3xl:mx-52 4xl:mx-96">
         <h2
           class="
             px-1
@@ -22,7 +22,7 @@
         </h2>
       </div>
 
-      <div class="mx-24">
+      <div class="mx-24 3xl:mx-52 4xl:mx-96">
         <VueSlickCarousel
           v-bind="settings"
           ref="carouselref"
