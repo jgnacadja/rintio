@@ -26,11 +26,7 @@
       <div v-if="type === 'post'">
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
-          <div
-            class="md:mx-2 w-full"
-            v-for="edge in posts"
-            :key="edge.node.id"
-          >
+          <div class="md:mx-2 w-full" v-for="edge in posts" :key="edge.node.id">
             <div
               class="
                 shadow-md
@@ -97,9 +93,8 @@
                           text-base
                           text-ellipsis--2
                         "
-                      >
-                        {{ edge.node.metaDescription }}
-                      </p>
+                        v-html="richtextToHTML(edge.node.metaDescription)"
+                      ></p>
                     </div>
                   </div>
                 </div>
@@ -181,7 +176,14 @@
                   ></div>
                   <div
                     class="border-b-2 py-2 text-center font-semibold opacity-90"
-                    v-bind:style="[ edge.node.type === 'blog' ? {backgroundImage: 'url(' + edge.node.coverImage.file.url + ')'} : null]"
+                    v-bind:style="[
+                      edge.node.type === 'blog'
+                        ? {
+                            backgroundImage:
+                              'url(' + edge.node.coverImage.file.url + ')',
+                          }
+                        : null,
+                    ]"
                     v-bind:class="{
                       'text-primary': edge.node.type !== 'blog',
                       'text-white': edge.node.type === 'blog',
@@ -219,16 +221,14 @@
                           text-ellipsis--2
                           my-2
                         "
-                      >
-                        {{ edge.node.metaDescription }}
-                      </p>
+                        v-html="richtextToHTML(edge.node.metaDescription)"
+                      ></p>
                     </div>
                     <div
                       class="tracking-tight leading-normal font-roboto text-sm"
                     ></div>
                   </div>
                 </div>
-                
               </g-link>
             </div>
           </div>
@@ -287,6 +287,7 @@ import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   props: {
@@ -408,6 +409,9 @@ export default {
     },
     showPrevEvent() {
       this.$refs.carouselevent.prev();
+    },
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
     },
   },
   filters: {
