@@ -28,7 +28,7 @@
           ref="carouselref"
           class="border rounded shadow-sm bg-white"
         >
-          <div v-for="edge in allposts" :key="edge.node.id">
+          <div v-for="edge in featuredPost" :key="edge.node.id">
             <div
               class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
             >
@@ -63,7 +63,7 @@
                 >
                   <div class="ml-1">
                     <img
-                      :src="edge.node.coverImage"
+                      :src="edge.node.coverImage.file.url"
                       alt=""
                       class="
                         rounded-full
@@ -77,7 +77,7 @@
                   </div>
 
                   <div class="flex flex-col px-4">
-                    <p class="text-primary text-base font-medium">Rintio</p>
+                    <p class="text-primary text-base font-medium">{{edge.node.author}}</p>
                     <p class="text-gray-400 -mt-6">
                       {{ edge.node.date | FormatDate }}
                     </p>
@@ -91,7 +91,7 @@
                 <div class="w-full grid grid-cols-1 grid-rows-2 gap-2">
                   <div class="relative col-span-3 row-span-2 md:col-span-2">
                     <img
-                      :src="edge.node.coverImage"
+                      :src="edge.node.coverImage.file.url"
                       alt=""
                       class="
                         absolute
@@ -166,7 +166,7 @@ import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
 
 export default {
   props: {
-    allposts: {
+    featuredPost: {
       type: Array,
       default() {
         return [];
