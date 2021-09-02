@@ -65,10 +65,9 @@ module.exports = {
   },
 
   templates: {
-    BlogPost: "/blog/article/:title",
     //Category: "/category/:title",
     //Tag: "/tag/:title",
-    //ContentfulPost: "/article/:title",
+    ContentfulPost: "/blog/article/:title",
     //ContentfulCategory: "/category/:title",
     //ContentfulTag: "/tag/:title",
   },

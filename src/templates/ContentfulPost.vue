@@ -8,14 +8,14 @@
         ></div>
         <g-image
           alt="iot"
-          :src="$page.post.coverImage"
+          :src="$page.post.coverImage.file.url"
           class="absolute top-0 left-0 z-0 object-cover w-full h-full"
         />
 
         <div class="absolute z-20 w-full h-full p-4 pt-10 text-center md:pt-28">
           <span
             class="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-gray-200 bg-secondary md:mb-10"
-            >{{ $page.post.categories.title }}</span
+            >{{ $page.post.categories[0].title }}</span
           >
           <h2 class="text-4xl font-semibold leading-tight text-gray-100">
             {{ $page.post.title }}
@@ -56,10 +56,7 @@
                 </button>
                 <div class="px-1 text-sm text-left text-gray-800 md:px-0">
                   <div>
-                    <span v-if="!$page.post.author">Par Rintio</span>
-                    <span v-if="$page.post.author"
-                      >Par {{ $page.post.author }}</span
-                    >
+                    Par {{ $page.post.author }}
                   </div>
                   <div class="font-bold text-primary">
                     {{ $page.post.date }}
@@ -77,7 +74,7 @@
         <vue-markdown>{{ $page.post.content }}</vue-markdown>
       </div>
 
-      <div
+            <div
         class="max-w-screen-xl px-4 mx-auto mt-4 text-lg leading-relaxed text-gray-700 md:flex lg:px-0"
       >
         <div class="flex items-center py-2">
@@ -87,14 +84,14 @@
             <Tag />
           </button>
 
-          <div>
+          <!-- <div>
             <span
               v-for="edge in $page.tags.edges"
               :key="edge.node.id"
               class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize"
               >{{ edge.node.title }}
             </span>
-          </div>
+          </div> -->
         </div>
 
         <div class="flex items-center p-2 ml-auto">
@@ -141,20 +138,21 @@
       <div class="block max-w-screen-xl mx-auto space-x-0 lg:flex lg:space-x-6">
         <div
           class="w-full p-4 bg-white rounded shadow-md md:w-1/2 lg:w-1/3 lg:p-0"
-          v-for="edge in $page.onlinePost.edges"
+          v-for="edge in relatedPosts.slice(0, 3)"
           :key="edge.node.id"
         >
           <g-image
-            alt="iot"
-            :src="edge.node.coverImage"
+            :alt="edge.node.coverImage.title"
+            :src="edge.node.coverImage.file.url"
             class="w-full h-64 rounded"
           />
           <h2 class="px-4 mb-px text-lg font-bold text-gray-800">
             {{ edge.node.title }}
           </h2>
-          <p class="h-12 px-4 mb-px text-gray-700">
-            {{ edge.node.metaDescription | truncate }}
-          </p>
+          <p
+            class="h-12 px-4 mb-px text-gray-700"
+            v-html="richtextToHTML(edge.node.metaDescription)"
+          ></p>
 
           <g-link
             :to="edge.node.path"
@@ -179,7 +177,7 @@
         </div>
       </div>
       <!-- end popular posts -->
-            <div
+      <div
         class="flex items-center justify-center max-w-screen-xl px-4 mx-auto mt-8 mb-4 md:hidden lg:px-0"
       >
         <g-link
@@ -195,63 +193,56 @@
 
 <page-query>
 query query($path:String) {
-    post: blogPost(path:$path) {
+    post: contentfulPost(path:$path) {
     id
     title
     path
-    published
+    author
     categories {
       id
       title
-    }
-
-    tags {
-      id
-      title
+      path
     }
     date (format: "DD MMMM YYYY", locale: "fr")
-    coverImage
+    coverImage {
+      file {
+        url
+      }
+    }
     metaDescription
-    subDescription
-    descriptionUp
-    descriptionDown
     content
   }
 
-  tags: allTag {
-    edges {
-      node{
-        id
-        title
-      }
-    }
-  }
-
-
-  onlinePost : allBlogPost(
-    perPage: 3
-    page: 1
-    filter: { path: { nin: [$path] } }
-    limit: 3
-    order: DESC
-  ) @paginate {
-    edges {
-      node {
-        id
-        title
-        path
-        date
-        categories {
-          id
-          title
+  relatedPosts: contentfulCategory(path: "blog") {
+    id
+    title
+    path
+    belongsTo(
+      perPage: 4
+      page: 1
+      order: DESC) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            author
+            categories {
+              id
+              title
+              path
+            }
+            date
+            coverImage {
+              title
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
         }
-        date
-        coverImage
-        metaDescription
-        subDescription
-        descriptionUp
-        descriptionDown
-        content
       }
     }
   }
@@ -263,7 +254,6 @@ import VueMarkdown from "vue-markdown";
 
 import PostSeo from "../mixins/SEO";
 
-
 import User from "~/assets/images/icons/user.svg";
 import Calendar from "~/assets/images/icons/calendar.svg";
 import Tag from "~/assets/images/icons/tag.svg";
@@ -271,6 +261,8 @@ import Facebook from "~/assets/images/icons/facebook.svg";
 
 import Linkedin from "~/assets/images/icons/linkedin.svg";
 import Twitter from "~/assets/images/icons/twitter.svg";
+
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   mixins: [PostSeo],
@@ -291,22 +283,41 @@ export default {
       path: "",
       fullPath: "",
       tags: "",
+      allrelatedPosts: [],
+      relatedPosts: [],
     };
   },
   mounted() {
-    this.path = this.$router.currentRoute.path.split("/")[1];
+    this.path = this.$router.currentRoute.path.slice("/")[1];
     this.fullPath = this.$router.currentRoute.path;
-  },
-  created() {
-    this.$page.post.tags.forEach((tag) => {
+
+    /* this.$page.post.tags.forEach((tag) => {
       this.tags !== ""
         ? (this.tags = `${this.tags},${tag.title}`)
         : (this.tags = `${tag.title}`);
-    });
+    }); */
   },
-  filters: {
-    truncate(value) {
-      return value.substr(0, 50) + "...";
+  created() {
+    this.allrelatedPosts = this.$page.relatedPosts.belongsTo.edges;
+    this.updateRelatedPosts();
+  },
+  watch: {
+    $route() {
+      this.updateRelatedPosts();
+    },
+  },
+  methods: {
+    richtextToHTML(content) {
+      return documentToHtmlString(content).substr(0, 82) + "...";
+    },
+    updateRelatedPosts() {
+      this.relatedPosts = this.allrelatedPosts;
+      let currentPath = this.$router.currentRoute.path;
+
+      this.relatedPosts = this.allrelatedPosts;
+      this.relatedPosts = this.relatedPosts.filter((edge) => {
+        return edge.node.path !== currentPath;
+      });
     },
   },
 };
