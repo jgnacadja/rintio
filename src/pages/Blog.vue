@@ -99,6 +99,7 @@ query {
             id
             title
             path
+            type
             categories {
               id
               title
