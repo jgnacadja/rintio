@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <vueper-slides :autoplay="settings.autoplay" :pause-on-hover="settings.pauseOnHover" fade :touchable="settings.touchable" :fixed-height="settings.fixedHeight" :arrows="settings.arrows">
+    <vueper-slides class="no-shadow" :autoplay="settings.autoplay" :pause-on-hover="settings.pauseOnHover" fade :touchable="settings.touchable" :fixed-height="settings.fixedHeight" :arrows="settings.arrows">
       <vueper-slide>
         <template v-slot:content>
           <div
@@ -139,7 +139,7 @@ export default {
   components: { VueperSlides, VueperSlide },
   data: () => ({
   settings: {
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: true,
     touchable: false,
     fixedHeight: true,
