@@ -6,7 +6,8 @@
         <div
           class="absolute bottom-0 left-0 z-10 w-full h-full bg-gradient-to-b from-transparent to-black opacity-70"
         ></div>
-        <g-image
+        <g-image 
+          v-if="$page.post.coverImage"
           alt="iot"
           :src="$page.post.coverImage.file.url"
           class="absolute top-0 left-0 z-0 object-cover w-full h-full"
@@ -218,7 +219,7 @@ query query($path:String) {
     title
     path
     belongsTo(
-      perPage: 4
+      perPage: 10
       page: 1
       order: DESC) {
       edges {
