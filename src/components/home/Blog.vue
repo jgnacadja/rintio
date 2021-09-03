@@ -14,7 +14,7 @@
     </div>
 
     <div
-      class="grid gap-4 px-2  md:grid-cols-6 xl:grid-cols-2 md:grid-flow-row xl:grid-flow-rows xl:px-24"
+      class="grid gap-4 px-2 md:grid-cols-6 xl:grid-cols-2 md:grid-flow-row xl:grid-flow-rows xl:px-24"
     >
       <div
         class="h-full col-span-3 row-span-2 bg-white shadow-sm  xl:col-span-1 xl:row-span-2"
