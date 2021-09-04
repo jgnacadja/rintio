@@ -1,7 +1,7 @@
 const nodeExternals = require("webpack-node-externals");
 
 const tailwindcss = require("tailwindcss");
-//const contentful = require("./plugins/plugin.contentful");
+const contentful = require("./plugins/plugin.contentful");
 const robot = require("./plugins/plugin.robot");
 const sitemap = require("./plugins/plugin.sitemap");
 const sourceFilesystem = require("./plugins/plugin.sourceFilesystem");
@@ -29,6 +29,7 @@ module.exports = {
     },
   },
   plugins: [
+    contentful,
     googleAnalytics,
     googleTM,
     robot,
@@ -64,10 +65,9 @@ module.exports = {
   },
 
   templates: {
-    BlogPost: "/blog/article/:title",
     //Category: "/category/:title",
     //Tag: "/tag/:title",
-    //ContentfulPost: "/article/:title",
+    ContentfulPost: "/blog/article/:title",
     //ContentfulCategory: "/category/:title",
     //ContentfulTag: "/tag/:title",
   },

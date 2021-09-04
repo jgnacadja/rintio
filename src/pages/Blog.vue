@@ -5,138 +5,114 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <ALaUne :allposts="$page.onlinePost.edges" />
+      <ALaUne
+        v-if="$page.featuredPost"
+        :featuredPost="$page.featuredPost.belongsTo.edges"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Carrousel :alloffers="$page.allOffer.edges" :type="'offer'" />
+      <Carrousel
+        v-if="$page.events"
+        :events="$page.events.belongsTo.edges"
+        :type="'event'"
+      />
     </LazyHydrate>
-
+    
     <LazyHydrate when-visible>
-      <Carrousel :allevents="$page.AllEventpost.edges" :type="'event'" />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <Carrousel :allposts="$page.allPosts.edges" :type="'post'" />
+      <Carrousel
+        v-if="$page.posts"
+        :posts="$page.posts.belongsTo.edges"
+        :type="'post'"
+      />
     </LazyHydrate>
   </Layout>
 </template>
 
 <page-query>
 query {
-  posts: allBlogPost {
-    edges {
-      node {
-        id
-        title
-        path
-        categories {
-          id
-          title
+  featuredPost: contentfulCategory(path: "blog") {
+    id
+    title
+    path
+    belongsTo(order: DESC, limit: 3) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            author
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
         }
-        tags {
-          id
-          title
-        }
-        date
-        metaDescription
-        coverImage
-        tags {
-          id
-          title
-        }
-      }
-    }
-  }
-  tags: allTag {
-    edges {
-      node {
-        id
-        title
-      }
-    }
-  }
-  category: allCategory {
-    edges {
-      node {
-        id
-        title
       }
     }
   }
 
-  onlinePost: allBlogPost(
-    filter: { categories: { in: "Blog" } }
-    limit: 3
-    order: DESC
-  ) {
-    edges {
-      node {
-        id
-        title
-        path
-        categories {
-          id
-          title
+  posts: contentfulCategory(path: "blog") {
+    id
+    title
+    path
+    belongsTo(order: DESC) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
         }
-        date
-        metaDescription
-        coverImage
       }
     }
   }
 
-  allPosts: allBlogPost(filter: { categories: { in: "Blog" } }, order: DESC) {
-    edges {
-      node {
-        id
-        title
-        path
-        categories {
-          id
-          title
+  events: contentfulCategory(path: "evenements") {
+    id
+    title
+    path
+    belongsTo(order: DESC) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            type
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
         }
-        
-        date
-        coverImage
-        metaDescription
-      }
-    }
-  }
-
-  allOffer: allBlogPost(filter: { categories: { in: "Offres" } }, order: DESC) {
-    edges {
-      node {
-        id
-        title
-        path
-        categories {
-          id
-          title
-        }
-        date
-        coverImage
-        metaDescription
-      }
-    }
-  }
-    AllEventpost: allBlogPost(
-    filter: { categories: { in: "Evènements" } }
-    order: DESC
-  ) {
-    edges {
-      node {
-        id
-        title
-        path
-        categories {
-          id
-          title
-        }
-        type
-        date
-        coverImage
-        metaDescription
       }
     }
   }

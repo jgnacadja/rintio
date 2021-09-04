@@ -18,7 +18,7 @@
     </div>
 
     <LazyHydrate when-visible>
-      <Offers />
+      <Offers :offer="$page.offer.belongsTo.edges" :offers="$page.offers.belongsTo.edges" />
     </LazyHydrate>
     
 
@@ -96,6 +96,70 @@
     <div></div>
   </Layout>
 </template>
+
+<page-query>
+query {
+    offer: contentfulCategory(path: "offres") {
+    id
+    title
+    path
+    belongsTo(order: ASC, limit: 1) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            type
+            excerpt
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
+        }
+      }
+    }
+  }
+
+  offers: contentfulCategory(path: "offres") {
+    id
+    title
+    path
+    belongsTo(order: ASC, skip: 1) {
+      edges {
+        node {
+          ... on ContentfulPost {
+            id
+            title
+            path
+            type
+            excerpt
+            categories {
+              id
+              title
+            }
+            date
+            coverImage {
+              file {
+                url
+              }
+            }
+            metaDescription
+          }
+        }
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";

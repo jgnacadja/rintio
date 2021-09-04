@@ -28,11 +28,20 @@
           ref="carouselref"
           class="border rounded shadow-sm bg-white"
         >
-          <div v-for="edge in allposts" :key="edge.node.id">
+          <div v-for="edge in featuredPost" :key="edge.node.id">
             <div
               class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
             >
-              <div class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4">
+              <div
+                class="
+                  col-start-1
+                  row-start-2
+                  mt-72
+                  md:mt-0
+                  md:row-start-1
+                  px-4
+                "
+              >
                 <h2
                   class="
                     text-lg
@@ -47,9 +56,10 @@
                 >
                   {{ edge.node.title }}
                 </h2>
-                <p class="py-3 text-justify">
-                  {{ edge.node.metaDescription }}
-                </p>
+                <p
+                  class="py-3 text-justify"
+                  v-html="richtextToHTML(edge.node.metaDescription)"
+                ></p>
                 <div
                   class="
                     flex
@@ -63,7 +73,7 @@
                 >
                   <div class="ml-1">
                     <img
-                      :src="edge.node.coverImage"
+                      :src="edge.node.coverImage.file.url"
                       alt=""
                       class="
                         rounded-full
@@ -77,7 +87,9 @@
                   </div>
 
                   <div class="flex flex-col px-4">
-                    <p class="text-primary text-base font-medium">Rintio</p>
+                    <p class="text-primary text-base font-medium">
+                      {{ edge.node.author }}
+                    </p>
                     <p class="text-gray-400 -mt-6">
                       {{ edge.node.date | FormatDate }}
                     </p>
@@ -86,12 +98,18 @@
               </div>
 
               <div
-                class="col-start-1 row-start-1 flex md:col-start-2 md:row-span-3"
+                class="
+                  col-start-1
+                  row-start-1
+                  flex
+                  md:col-start-2
+                  md:row-span-3
+                "
               >
                 <div class="w-full grid grid-cols-1 grid-rows-2 gap-2">
                   <div class="relative col-span-3 row-span-2 md:col-span-2">
                     <img
-                      :src="edge.node.coverImage"
+                      :src="edge.node.coverImage.file.url"
                       alt=""
                       class="
                         absolute
@@ -163,10 +181,11 @@ import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   props: {
-    allposts: {
+    featuredPost: {
       type: Array,
       default() {
         return [];
@@ -198,6 +217,9 @@ export default {
     },
     showPrev() {
       this.$refs.carouselref.prev();
+    },
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
     },
   },
   filters: {

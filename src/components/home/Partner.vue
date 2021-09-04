@@ -33,12 +33,9 @@
           <span class="text-secondary">confiance</span>
         </h2>
 
-        <p class="hidden md:block my-3 font-light text- xl">
-          Il serait long et fastidieux de présenter la 
-          <span class="font-light"
-            > liste exhaustive de nos
-          clients.</span
-          > Mais voici quelques exemples de collaborations qui illustrent
+        <p class="hidden md:block my-3 font-light">
+          Il serait long et fastidieux de présenter la liste exhaustive de nos
+          clients. Mais voici quelques exemples de collaborations qui illustrent
           une partie de notre savoir-faire.
         </p>
       </div>

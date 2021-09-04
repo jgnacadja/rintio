@@ -26,11 +26,7 @@
       <div v-if="type === 'post'">
         <VueSlickCarousel v-bind="settings" ref="carouselblog">
           <!--first slide-card-->
-          <div
-            class="md:mx-2 w-full"
-            v-for="edge in allposts"
-            :key="edge.node.id"
-          >
+          <div class="md:mx-2 w-full" v-for="edge in posts" :key="edge.node.id">
             <div
               class="
                 shadow-md
@@ -46,7 +42,7 @@
                   <g-image
                     alt="Scrum"
                     title="Africa TechUp Tour"
-                    :src="edge.node.coverImage"
+                    :src="edge.node.coverImage.file.url"
                     class="object-cover w-full h-48 mb-0"
                   />
                   <div class="w-full relative px-4 pb-4 pt-2 bg-white">
@@ -76,7 +72,7 @@
                         "
                         data-v-27823496=""
                       >
-                        {{ edge.node.categories.title }}
+                        {{ edge.node.categories[0].title }}
                       </span>
                       {{ edge.node.title }}
                     </div>
@@ -97,9 +93,8 @@
                           text-base
                           text-ellipsis--2
                         "
-                      >
-                        {{ edge.node.metaDescription }}
-                      </p>
+                        v-html="richtextToHTML(edge.node.metaDescription)"
+                      ></p>
                     </div>
                   </div>
                 </div>
@@ -153,7 +148,7 @@
         <VueSlickCarousel v-bind="settings" ref="carouselevent">
           <div
             class="md:mx-2 w-full container"
-            v-for="edge in allevents"
+            v-for="edge in events"
             :key="edge.node.id"
           >
             <div
@@ -181,7 +176,14 @@
                   ></div>
                   <div
                     class="border-b-2 py-2 text-center font-semibold opacity-90"
-                    v-bind:style="[ edge.node.type === 'blog' ? {backgroundImage: 'url(' + edge.node.coverImage + ')'} : null]"
+                    v-bind:style="[
+                      edge.node.type === 'blog'
+                        ? {
+                            backgroundImage:
+                              'url(' + edge.node.coverImage.file.url + ')',
+                          }
+                        : null,
+                    ]"
                     v-bind:class="{
                       'text-primary': edge.node.type !== 'blog',
                       'text-white': edge.node.type === 'blog',
@@ -219,16 +221,14 @@
                           text-ellipsis--2
                           my-2
                         "
-                      >
-                        {{ edge.node.metaDescription }}
-                      </p>
+                        v-html="richtextToHTML(edge.node.metaDescription)"
+                      ></p>
                     </div>
                     <div
                       class="tracking-tight leading-normal font-roboto text-sm"
                     ></div>
                   </div>
                 </div>
-                
               </g-link>
             </div>
           </div>
@@ -287,22 +287,17 @@ import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import ArrowLeft from "~/assets/images/icons/blog-arrow-left.svg";
 import ArrowRight from "~/assets/images/icons/blog-arrow-right.svg";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   props: {
-    allposts: {
+    posts: {
       type: Array,
       default() {
         return [];
       },
     },
-    alloffers: {
-      type: Array,
-      default() {
-        return [];
-      },
-    },
-    allevents: {
+    events: {
       type: Array,
       default() {
         return [];
@@ -414,6 +409,9 @@ export default {
     },
     showPrevEvent() {
       this.$refs.carouselevent.prev();
+    },
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
     },
   },
   filters: {
