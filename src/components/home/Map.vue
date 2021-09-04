@@ -352,7 +352,7 @@ export default {
   methods: {
     getTime: function () {
       var now = new Date();
-      var hour = now.getHours();
+      var hour =now.getHours();
       var minute = now.getMinutes();
       var second = now.getSeconds();
       if (hour.toString().length == 1) {
@@ -368,6 +368,8 @@ export default {
       this.hour = hour;
       this.hourFr = Number(hour) + 1;
       this.hourCi = Number(hour) - 1;
+      
+      if(this.hourCi<0) this.hourCi= 24 + this.hourCi;
 
       if (this.hour.toString().length == 1) this.hour = "0" + this.hour;
 
