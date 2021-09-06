@@ -132,7 +132,6 @@
 
 <static-query>
 query {
-  
   post : allBlogPost(
     perPage: 1
     page: 1
