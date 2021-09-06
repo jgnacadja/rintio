@@ -174,7 +174,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.page.name,
+      title: this.$page.page.seo.name,
       meta: [
         {
           key: "description",
