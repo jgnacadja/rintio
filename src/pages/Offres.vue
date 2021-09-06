@@ -220,9 +220,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.bg-offer {
-  background-image: url("./../../static/images/bg-offer-2.webp");
-}
-</style>
