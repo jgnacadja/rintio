@@ -267,7 +267,7 @@ button.slick-next:before {
 }
 
 .vueperslides__bullet .default {
-  background-color: #A1A7B3 !important;
+  background-color: #a1a7b3 !important;
   border: none !important;
   box-shadow: none !important;
   width: 20px !important;
@@ -276,4 +276,13 @@ button.slick-next:before {
 
 .vueperslides__bullet--active .default {
   background-color: $red-rintio !important;
+}
+
+.text-ellipsis--2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }

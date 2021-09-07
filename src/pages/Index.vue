@@ -1,11 +1,12 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
-      <Homeslider />
+      <Homeslider :slides="$page.page.sections[0].columns" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
       <About
+        :title="$page.page.sections[1].name"
         :swipper="$page.page.sections[1].columns[0]"
         :content="$page.page.sections[1].columns[1]"
         :button="$page.page.sections[1].columns[2]"
@@ -13,11 +14,19 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Offer />
+      <Offer
+        :title="$page.page.sections[2].name"
+        :cover="$page.page.sections[2].columns[0]"
+        :content="$page.page.sections[2].columns[1]"
+        :button="$page.page.sections[2].columns[2]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Story />
+      <Story
+        :content="$page.page.sections[3].columns[0]"
+        :stories="$page.page.sections[3].columns[1].columns"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
@@ -25,11 +34,17 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Blog />
+      <Blog
+        :title="$page.page.sections[5].name"
+        :content="$page.page.sections[5].columns[0]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Map />
+      <Map
+        :cover="$page.page.sections[6].columns[0]"
+        :content="$page.page.sections[6].columns[1]"
+      />
     </LazyHydrate>
   </Layout>
 </template>
@@ -102,6 +117,24 @@ query {
               title
               text
             }
+            ... on ContentfulPost {
+              id
+              title
+              seoTitle
+              path
+              excerpt
+              categories {
+                id
+                title
+              }
+              date
+              coverImage {
+                file {
+                  url
+                }
+              }
+              metaDescription
+            }
           }
         }
         ... on ContentfulComponentButton {
@@ -137,7 +170,7 @@ export default {
     Blog,
     Map,
   },
- metaInfo() {
+  metaInfo() {
     return {
       title: this.$page.page.seo.name,
       meta: [

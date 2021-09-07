@@ -187,7 +187,7 @@
     <div class="w-full md:w-1/2 mb-8 md:mb-0 md:mt-0">
       <div class="mx-4 md:mx-0">
         <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
-          Qui sommes-nous ?
+          {{ title }}
         </h3>
         <!-- Title Dot -->
         <div class="-mt-3">
@@ -237,6 +237,12 @@ export default {
       type: Object,
       default() {
         return {};
+      },
+    },
+    title: {
+      type: String,
+      default() {
+        return "";
       },
     },
     content: {

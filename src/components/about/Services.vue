@@ -85,14 +85,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.text-ellipsis--2 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-}
-</style>
