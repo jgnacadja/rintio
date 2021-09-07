@@ -23,7 +23,7 @@
     <LazyHydrate when-visible>
       <Team
         :content="$page.page.sections[2].columns[0]"
-        :teams="$page.page.sections[2].columns.slice(1)"
+        :team="$page.page.sections[2].columns.slice(1)"
       />
     </LazyHydrate>
 
