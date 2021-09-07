@@ -25,7 +25,10 @@
           ></span>
         </div>
         <div>
-          <p class="text-sm font-bold">Technologies utilisées</p>
+          <p
+            class="text-sm font-bold"
+            v-html="richtextToHTML(content[0].text)"
+          ></p>
         </div>
       </div>
       <div class="w-1/2 text-center md:w-auto">
@@ -42,7 +45,12 @@
             class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
           ></span>
         </div>
-        <div><p class="text-sm font-bold">Projets réalisés</p></div>
+        <div>
+          <p
+            class="text-sm font-bold"
+            v-html="richtextToHTML(content[1].text)"
+          ></p>
+        </div>
       </div>
       <div class="w-1/2 text-center md:w-auto">
         <p id="customer" class="text-5xl font-bold md:text-5xl xl:text-8xl">
@@ -58,7 +66,10 @@
             class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
           ></span>
         </div>
-        <p class="text-sm font-bold">Pays Internationals</p>
+        <p
+          class="text-sm font-bold"
+          v-html="richtextToHTML(content[2].text)"
+        ></p>
       </div>
       <div class="w-1/2 text-center md:w-auto xl:w-auto">
         <p id="experience" class="text-5xl font-bold md:text-5xl xl:text-8xl">
@@ -74,14 +85,29 @@
             class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
           ></span>
         </div>
-        <div><p class="text-sm font-bold">Membres d'équipe</p></div>
+        <div>
+          <p
+            class="text-sm font-bold"
+            v-html="richtextToHTML(content[3].text)"
+          ></p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
 export default {
+  props: {
+    content: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
   methods: {
     animateValue: function (obj, start, end, duration) {
       let startTimestamp = null;
@@ -105,11 +131,14 @@ export default {
       const experience = document.getElementById("experience");
 
       if (entry.isIntersecting) {
-        this.animateValue(customer, 0, 50, 5000);
-        this.animateValue(project, 0, 30, 5000);
-        this.animateValue(member, 0, 5, 5000);
-        this.animateValue(experience, 0, 50, 5000);
+        this.animateValue(customer, 0, this.content[0].title, 5000);
+        this.animateValue(project, 0, this.content[1].title, 5000);
+        this.animateValue(member, 0, this.content[2].title, 5000);
+        this.animateValue(experience, 0, this.content[3].title, 5000);
       }
+    },
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
     },
   },
 };
