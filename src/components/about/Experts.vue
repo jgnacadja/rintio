@@ -64,7 +64,6 @@
 </template>
 
 <script>
-import experts from "~/assets/experts.json";
 import VueSlickCarousel from "vue-slick-carousel";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
@@ -86,7 +85,6 @@ export default {
   components: { VueSlickCarousel },
   data() {
     return {
-      list: experts.list,
       currentPage: 1,
       perPage: 8,
       totalItems: 1,
@@ -159,18 +157,7 @@ export default {
       },
     };
   },
-  mounted() {
-    this.list = experts.list;
-    this.totalItems = this.list.length;
-    this.updateList(this.currentPage);
-  },
   methods: {
-    updateList(currentPage) {
-      this.currentList = this.list.slice(
-        (currentPage - 1) * this.perPage,
-        currentPage * this.perPage
-      );
-    },
     richtextToHTML(content) {
       return documentToHtmlString(content);
     },
