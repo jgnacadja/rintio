@@ -5,7 +5,11 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <About />
+      <About
+        :swipper="$page.page.sections[1].columns[0]"
+        :content="$page.page.sections[1].columns[1]"
+        :button="$page.page.sections[1].columns[2]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
@@ -29,6 +33,88 @@
     </LazyHydrate>
   </Layout>
 </template>
+
+<page-query>
+query {
+  page: contentfulPage(path: "Acceuil") {
+    path
+    seo {
+      id
+      title
+      date
+      name
+      description
+      keywords
+      no_index
+      no_follow
+    }
+    sections {
+      id
+      title
+      date
+      name
+      columns {
+        ... on ContentfulComponentImage {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
+        }
+        ... on ContentfulComponentHero {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
+          text
+          ctaText
+          ctaLink
+        }
+        ... on ContentfulComponentText {
+          id
+          title
+          text
+        }
+        ... on ContentfulComponentSection {
+          id
+          title
+          name
+          columns {
+            ... on ContentfulComponentImage {
+              id
+              title
+              name
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            ... on ContentfulComponentText {
+              id
+              title
+              text
+            }
+          }
+        }
+        ... on ContentfulComponentButton {
+              id
+              title
+              ctaText
+              ctaLink
+            }
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
