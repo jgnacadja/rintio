@@ -141,7 +141,7 @@ export default {
         swipeToSlide: true,
         arrows: false,
         dots: true,
-        dotsClass: "expertdots",
+        dotsClass: "teamdots",
         responsive: [
           {
             breakpoint: 1024,

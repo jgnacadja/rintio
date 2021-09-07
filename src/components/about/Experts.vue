@@ -7,21 +7,16 @@
         <div class="mx-4 text-center md:mx-0">
           <h1
             class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
-          >
-            Nos
-            <span class="text-secondary"> experts</span>
-          </h1>
+            v-html="content.title"
+          ></h1>
 
-          <p class="mx-auto my-3 md:mb-24 md:w-1/2">
-            Rintio est composé d’une équipe professionnelle et dynamique et d’un
-            réseau de partenaires qui n’ont qu’un seul objectif:
-            <span class="font-bold"
-              >donner vie à vos projets en respectant les deadlines.</span
-            >
-          </p>
+          <p
+            class="mx-auto my-3 md:mb-24 md:w-1/2"
+            v-html="richtextToHTML(content.text)"
+          ></p>
           <!---->
           <VueSlickCarousel v-bind="settings">
-            <div class="px-3" v-for="expert in currentList" :key="expert">
+            <div class="px-3" v-for="expert in experts" :key="expert">
               <div
                 class="w-full p-5 mx-auto mb-6 font-light text-gray-800 bg-white border border-gray-200 rounded-lg md:h-44 lg:h-56 xl:h-44 h-52"
               >
@@ -31,14 +26,14 @@
                       class="items-center justify-center w-16 h-16 mx-auto mb-4 overflow-hidden border border-gray-200 rounded-full bg-gray-50"
                     >
                       <g-image
-                        :src="expert.imgUrl"
-                        :alt="expert.imgAlt"
+                        :src="expert.image.file.url"
+                        :alt="expert.image.name"
                       ></g-image>
                     </div>
                     <span class="inline-flex">
                       <a
                         class="flex items-center w-5 h-5 mr-2 text-xs border rounded-full place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
-                        :href="expert.linkedInUrl"
+                        :href="expert.ctaLink"
                         target="_blank"
                       >
                         <em class="relative fab fa-linkedin-in"></em>
@@ -51,11 +46,11 @@
                       {{ expert.name }}
                     </h6>
                     <p
-                      :key="career"
-                      v-for="career in expert.career"
                       class="mb-2 text-xs"
+                      v-for="skill in expert.text.content.slice(0,3)"
+                      :key="skill.content"
                     >
-                      • {{ career }}
+                      {{ skill.content[0].value }}
                     </p>
                   </div>
                 </div>
@@ -71,17 +66,27 @@
 <script>
 import experts from "~/assets/experts.json";
 import VueSlickCarousel from "vue-slick-carousel";
-
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
-  components: {
-    VueSlickCarousel,
-    // TPagination,
+  props: {
+    content: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    experts: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
   },
+  components: { VueSlickCarousel },
   data() {
     return {
       list: experts.list,
-      currentList: experts.list,
       currentPage: 1,
       perPage: 8,
       totalItems: 1,
@@ -104,7 +109,7 @@ export default {
       settings: {
         dots: true,
         autoplay: false,
-        dotsClass: "teamdots",
+        dotsClass: "expertsdots",
         infinite: true,
         speed: 500,
         slidesToShow: 4,
@@ -165,6 +170,9 @@ export default {
         (currentPage - 1) * this.perPage,
         currentPage * this.perPage
       );
+    },
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
     },
   },
 };

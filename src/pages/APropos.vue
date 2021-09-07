@@ -32,7 +32,10 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Experts />
+      <Experts
+        :content="$page.page.sections[4].columns[0]"
+        :experts="$page.page.sections[4].columns.slice(1)"
+      />
     </LazyHydrate>
   </Layout>
 </template>
