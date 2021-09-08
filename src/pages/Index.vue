@@ -30,7 +30,11 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Partner />
+      <Partner
+        :title="$page.page.sections[4].name"
+        :content="$page.page.sections[4].columns[0]"
+        :partners="$page.page.sections[4].columns[1].columns"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>

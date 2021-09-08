@@ -286,3 +286,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+iframe {
+  overflow: hidden;
+}
+</style>
