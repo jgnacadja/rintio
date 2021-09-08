@@ -33,7 +33,7 @@
           class="col-span-3 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1 items-center justify-center mx-auto my-auto"
         >
           <g-image
-            :src="$page.page.sections[1].columns[0].image.file.url"
+            :src="$page.page.sections[1].columns[1].image.file.url"
             class=""
           />
         </div>
@@ -44,21 +44,21 @@
             <div class="mx-4 md:mx-0 lg:pt-6">
               <h2
                 class="my-3 text-2xl md:text-5xl font-extrabold text-primary mx-auto pr-6 mb-4"
-                v-html="$page.page.sections[1].columns[0].title"
+                v-html="$page.page.sections[1].columns[1].title"
               ></h2>
 
               <p
                 class="my-8 font-light text-justify leading-10"
-                v-html="richtextToHTML($page.page.sections[1].columns[0].text)"
+                v-html="richtextToHTML($page.page.sections[1].columns[1].text)"
               ></p>
               <div class="mt-4">
-                <g-link :to="$page.page.sections[1].columns[0].ctaLink">
+                <g-link :to="$page.page.sections[1].columns[1].ctaLink">
                   <button
                     v-if="!about"
                     type="submit"
                     class="px-10 py-4 md:py-6 text-white text-sm bg-secondary rounded-sm font-bold hover:bg-primary focus:outline-none uppercase"
                   >
-                    {{$page.page.sections[1].columns[0].ctaText}}
+                    {{$page.page.sections[1].columns[1].ctaText}}
                   </button>
                 </g-link>
               </div>
@@ -164,6 +164,16 @@ query {
           text
           ctaText
           ctaLink
+        }
+        ... on ContentfulComponentImage {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
         }
         ... on ContentfulComponentText {
           id

@@ -16,6 +16,7 @@
       class="grid gap-4 md:grid-cols-6 xl:grid-cols-4 md:grid-flow-row xl:grid-flow-rows"
     >
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
+      <g-link :to="stories[0].path">
         <div class="w-full h-full bg-white">
           <g-image
             alt="coraq"
@@ -35,6 +36,7 @@
             {{ stories[0].excerpt }}
           </p>
         </div>
+      </g-link>
       </div>
 
       <div
@@ -42,11 +44,12 @@
         v-for="story in stories.slice(1)"
         :key="story.id"
       >
+      <g-link :to="story.path">
         <div class="w-full h-full p-4 bg-white lg:p-0">
           <g-image
             alt="Atut"
             title="Africa TechUp Tour"
-            src="~/assets/images/home/story/atut.webp"
+            :src="story.coverImage.file.url"
             class="object-cover w-full mb-0 h-52"
           />
 
@@ -61,6 +64,7 @@
             {{ story.excerpt }}
           </p>
         </div>
+      </g-link>
       </div>
     </div>
   </div>
