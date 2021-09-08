@@ -82,9 +82,9 @@ export default {
       },
     },
     stories: {
-      type: Object,
+      type: Array,
       default() {
-        return {};
+        return [];
       },
     },
   },

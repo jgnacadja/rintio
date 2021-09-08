@@ -131,9 +131,9 @@ export default {
       },
     },
     partners: {
-      type: Object,
+      type: Array,
       default() {
-        return {};
+        return [];
       },
     },
   },

@@ -6,7 +6,7 @@
 
     <LazyHydrate when-visible>
       <About
-        :title="$page.page.sections[1].name"
+        :title="$page.page.sections[0].name"
         :swipper="$page.page.sections[0].columns[0]"
         :content="$page.page.sections[0].columns[1]"
         :button="$page.page.sections[0].columns[2]"

@@ -4,7 +4,6 @@ const tailwindcss = require("tailwindcss");
 const contentful = require("./plugins/plugin.contentful");
 const robot = require("./plugins/plugin.robot");
 const sitemap = require("./plugins/plugin.sitemap");
-const sourceFilesystem = require("./plugins/plugin.sourceFilesystem");
 const tailwind = require("./plugins/plugin.tailwind");
 const googleAnalytics = require("./plugins/plugin.googleAnalytics");
 const googleTM = require("./plugins/plugin.googleTM");
@@ -34,7 +33,6 @@ module.exports = {
     googleTM,
     robot,
     sitemap,
-    sourceFilesystem,
     tailwind,
   ],
 
@@ -65,8 +63,6 @@ module.exports = {
   },
 
   templates: {
-    //Category: "/category/:title",
-    //Tag: "/tag/:title",
     ContentfulPost: "/blog/article/:title",
     //ContentfulCategory: "/category/:title",
     //ContentfulTag: "/tag/:title",
