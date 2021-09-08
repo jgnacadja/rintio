@@ -42,7 +42,7 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-2 py-4 bg-white"
               >
                 <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm text-center mx-auto"
                   >Cotonou, Bénin
@@ -90,7 +90,7 @@
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
-                class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-4 py-4 bg-white"
+                class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-2 py-4 bg-white"
               >
                 <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto"
                   >Paris, France

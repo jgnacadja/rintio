@@ -2,7 +2,7 @@
   <div>
     <transition name="fade" appear>
       <main class="main-bg">
-        <div class="flex justify-between bg-white">
+        <div class="flex justify-between bg-white shadow-xl">
           <g-link class="z-50" to="/"><Logo class="mx-4 md:mx-20 my-6" /></g-link>
           <Nav />
         </div>
