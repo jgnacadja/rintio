@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <vueper-slides
-      class="no-shadow"
+      class="no-shadow mt-0.5"
       :autoplay="settings.autoplay"
       :pause-on-hover="settings.pauseOnHover"
       fade

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="object-contain w-full px-2 py-2 bg-right bg-no-repeat bg-cover md:bg-contain md:py-32 md:px-20"
+    class=" w-full px-2 py-2 bg-right mt-0.5 bg-no-repeat bg-cover md:py-32 md:px-20 shadow-sm"
     v-bind:style="[
             {
               backgroundImage: 'url(' + content.image.file.url + ')',
