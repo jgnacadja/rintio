@@ -1,26 +1,27 @@
 <template>
-  <div class="bg-map bg-cover items-center w-full justify-center py-6 md:py-24">
+  <div
+    class="bg-cover items-center w-full justify-center py-6 md:py-24"
+    v-bind:style="[
+      {
+        backgroundImage: 'url(' + cover.image.file.url + ')',
+      },
+    ]"
+  >
     <div class="mx-4 md:mx-0 text-center mb-4 md:mb-10">
-      <h2 class="text-2xl md:text-5xl font-extrabold text-primary capitalize">
-        Nos <span class="text-secondary lowercase">implantations</span>
-      </h2>
+      <h2
+        class="text-2xl md:text-5xl font-extrabold text-primary capitalize"
+        v-html="content.title"
+      ></h2>
     </div>
     <div class="text-center">
-      <div class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto font-light">
-        Notre présence dans le monde.
-      </div>
+      <div
+        class="mx-4 md:w-1/2 my-3 text-sm md:mx-auto font-light"
+        v-html="richtextToHTML(content.text)"
+      ></div>
     </div>
 
     <div
-      class="
-        md:flex
-        hidden
-        justify-center
-        items-center
-        w-full
-        md:w-3/4
-        md:mx-auto
-      "
+      class="md:flex hidden justify-center items-center w-full md:w-3/4 md:mx-auto"
     >
       <div class="py-4 mx-4 w-full md:w-1/3">
         <a
@@ -29,26 +30,21 @@
           rel="noopener noreferrer"
         >
           <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-center bg-cover bg-no-repeat bg-map-cotonou
-            "
+            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
                 class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-2 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm text-center mx-auto"
+                <span
+                  class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm text-center mx-auto"
                   >Cotonou, Bénin
                 </span>
 
-                <span class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto">
+                <span
+                  class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -77,26 +73,21 @@
           rel="noopener noreferrer"
         >
           <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-center bg-cover bg-no-repeat bg-map-paris
-            "
+            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
                 class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-2 py-4 bg-white"
               >
-                <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto"
+                <span
+                  class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto"
                   >Paris, France
                 </span>
 
-                <span class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto">
+                <span
+                  class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -121,26 +112,22 @@
 
       <div class="py-4 mx-4 w-full md:w-1/3">
         <div
-          class="
-            shadow-lg
-            group
-            container
-            bg-white
-            max-w-sm
-            mx-auto
-            bg-center bg-cover bg-no-repeat bg-map-abidjan
-          "
+          class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-abidjan"
         >
           <div class="w-full overflow-hidden">
             <div class="w-full h-40"></div>
             <div
               class="w-full relative md:w-auto flex lg:w-auto xl:w-auto md:flex-col lg:flex-row xl:flex-row md:flex-shrink px-8 md:px-2 py-4 bg-white"
             >
-              <span class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto">
+              <span
+                class="tracking-wider leading-relaxed md:text-sm lg:text-xs xl:text-sm xl:text-center mx-auto"
+              >
                 Abidjan, Côte d'Ivoire
               </span>
 
-              <span class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto">
+              <span
+                class="flex items-center xl:justify-center md:text-sm lg:text-xs xl:text-sm mx-auto"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -172,22 +159,15 @@
             rel="noopener noreferrer"
           >
             <div
-              class="
-                shadow-lg
-                group
-                container
-                bg-white
-                max-w-sm
-                mx-auto
-                bg-center bg-cover bg-no-repeat bg-map-cotonou
-              "
+              class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
             >
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
                 <div
-                  class="w-full relative  flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
+                  class="w-full relative flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
                 >
-                  <span class="tracking-wider leading-relaxed text-sm text-center mx-auto"
+                  <span
+                    class="tracking-wider leading-relaxed text-sm text-center mx-auto"
                     >Cotonou, Bénin <br />
                   </span>
 
@@ -223,22 +203,15 @@
             rel="noopener noreferrer"
           >
             <div
-              class="
-                shadow-lg
-                group
-                container
-                bg-white
-                max-w-sm
-                mx-auto
-                bg-center bg-cover bg-no-repeat bg-map-paris
-              "
+              class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
             >
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
                 <div
-                  class="w-full relative  flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
+                  class="w-full relative flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
                 >
-                  <span class="tracking-wider leading-relaxed text-sm text-center mx-auto"
+                  <span
+                    class="tracking-wider leading-relaxed text-sm text-center mx-auto"
                     >Paris, France <br />
                   </span>
 
@@ -268,22 +241,16 @@
         </div>
         <div class="py-4 md:mx-2 w-full h-full">
           <div
-            class="
-              shadow-lg
-              group
-              container
-              bg-white
-              max-w-sm
-              mx-auto
-              bg-center bg-cover bg-no-repeat bg-map-abidjan
-            "
+            class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-abidjan"
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
               <div
                 class="w-full relative flex sm:flex-row md:flex-col px-4 py-4 bg-white"
               >
-                <span class="tracking-tighter leading-relaxed text-sm text-center mx-auto">
+                <span
+                  class="tracking-tighter leading-relaxed text-sm text-center mx-auto"
+                >
                   Abidjan, Côte d'Ivoire <br />
                 </span>
 
@@ -321,8 +288,23 @@ import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
 export default {
-  name: "Slider",
+  props: {
+    cover: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    content: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
   components: { VueSlickCarousel },
   data() {
     return {
@@ -352,7 +334,7 @@ export default {
   methods: {
     getTime: function () {
       var now = new Date();
-      var hour =now.getHours();
+      var hour = now.getHours();
       var minute = now.getMinutes();
       var second = now.getSeconds();
       if (hour.toString().length == 1) {
@@ -368,8 +350,8 @@ export default {
       this.hour = hour;
       this.hourFr = Number(hour) + 1;
       this.hourCi = Number(hour) - 1;
-      
-      if(this.hourCi<0) this.hourCi= 24 + this.hourCi;
+
+      if (this.hourCi < 0) this.hourCi = 24 + this.hourCi;
 
       if (this.hour.toString().length == 1) this.hour = "0" + this.hour;
 
@@ -384,16 +366,15 @@ export default {
       this.minute = minute;
       this.second = second;
     },
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../variables.scss";
-.bg-map {
-  background-image: url("./../../../static/images/home/map.webp");
-}
-
 .bg-map-cotonou {
   background-image: url("./../../../static/images/home/map/cotonou.webp");
 }
