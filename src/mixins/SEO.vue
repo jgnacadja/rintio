@@ -13,7 +13,7 @@ export default {
   metaInfo() {
     const siteUrl = this.$static.metadata.siteUrl;
     const postPath = this.$page.post.path;
-    const image = this.$page.post.coverImage.file.url;
+    const image = this.$page.post.coverImage ? this.$page.post.coverImage.file.url : null;
     const imagePath = (image && `${siteUrl}${image}`) || "";
 
     return {
