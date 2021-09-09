@@ -1,34 +1,157 @@
 <template>
   <Layout>
     <LazyHydrate when-idle>
-      <Homeslider />
+      <Homeslider :slides="$page.page.sections[0].columns" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <About />
+      <About
+        :title="$page.page.sections[1].name"
+        :swipper="$page.page.sections[1].columns[0]"
+        :content="$page.page.sections[1].columns[1]"
+        :button="$page.page.sections[1].columns[2]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Offer />
+      <Offer
+        :title="$page.page.sections[2].name"
+        :cover="$page.page.sections[2].columns[0]"
+        :content="$page.page.sections[2].columns[1]"
+        :button="$page.page.sections[2].columns[2]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Story />
+      <Story
+        :content="$page.page.sections[3].columns[0]"
+        :stories="$page.page.sections[3].columns[1].columns"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Partner />
+      <Partner
+        :title="$page.page.sections[4].name"
+        :content="$page.page.sections[4].columns[0]"
+        :partners="$page.page.sections[4].columns[1].columns"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Blog />
+      <Blog
+        :title="$page.page.sections[5].name"
+        :content="$page.page.sections[5].columns[0]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Map />
+      <Map
+        :cover="$page.page.sections[6].columns[0]"
+        :content="$page.page.sections[6].columns[1]"
+      />
     </LazyHydrate>
   </Layout>
 </template>
+
+<page-query>
+query {
+  page: contentfulPage(path: "Acceuil") {
+    path
+    seo {
+      id
+      title
+      date
+      name
+      description
+      keywords
+      no_index
+      no_follow
+    }
+    sections {
+      id
+      title
+      date
+      name
+      columns {
+        ... on ContentfulComponentImage {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
+        }
+        ... on ContentfulComponentHero {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
+          text
+          ctaText
+          ctaLink
+        }
+        ... on ContentfulComponentText {
+          id
+          title
+          text
+        }
+        ... on ContentfulComponentSection {
+          id
+          title
+          name
+          columns {
+            ... on ContentfulComponentImage {
+              id
+              title
+              name
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            ... on ContentfulComponentText {
+              id
+              title
+              text
+            }
+            ... on ContentfulPost {
+              id
+              title
+              seoTitle
+              path
+              excerpt
+              categories {
+                id
+                title
+              }
+              date
+              coverImage {
+                file {
+                  url
+                }
+              }
+              metaDescription
+            }
+          }
+        }
+        ... on ContentfulComponentButton {
+              id
+              title
+              ctaText
+              ctaLink
+            }
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
@@ -39,7 +162,6 @@ import Story from "~/components/home/Story.vue";
 import Partner from "~/components/home/Partner.vue";
 import Blog from "~/components/home/Blog.vue";
 import Map from "~/components/home/Map.vue";
-import Keywords from "~/assets/keywords.json";
 
 export default {
   components: {
@@ -54,18 +176,17 @@ export default {
   },
   metaInfo() {
     return {
-      title: "We involve for a better life",
+      title: this.$page.page.seo.name,
       meta: [
         {
           key: "description",
           name: "description",
-          content:
-            "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content: this.$page.page.description,
         },
         {
           key: "keywords",
           name: "keywords",
-          content: Keywords.list,
+          content: this.$page.page.seo.keywords,
         },
       ],
     };

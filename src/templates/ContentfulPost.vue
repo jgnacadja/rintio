@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <!-- component -->
-    <div class="mx-auto">
+    <div class="mx-auto bg-white pb-12">
       <div class="relative w-full mx-auto mb-4 md:mb-0" style="height: 24em">
         <div
           class="absolute bottom-0 left-0 z-10 w-full h-full bg-gradient-to-b from-transparent to-black opacity-70"
         ></div>
-        <g-image 
+        <g-image
           v-if="$page.post.coverImage"
           alt="iot"
           :src="$page.post.coverImage.file.url"
@@ -56,9 +56,7 @@
                   <Calendar />
                 </button>
                 <div class="px-1 text-sm text-left text-gray-800 md:px-0">
-                  <div>
-                    Par {{ $page.post.author }}
-                  </div>
+                  <div>Par {{ $page.post.author }}</div>
                   <div class="font-bold text-primary">
                     {{ $page.post.date }}
                   </div>
@@ -75,7 +73,7 @@
         <vue-markdown>{{ $page.post.content }}</vue-markdown>
       </div>
 
-            <div
+      <div
         class="max-w-screen-xl px-4 mx-auto mt-4 text-lg leading-relaxed text-gray-700 md:flex lg:px-0"
       >
         <div class="flex items-center py-2">
@@ -85,14 +83,14 @@
             <Tag />
           </button>
 
-          <!-- <div>
+          <div>
             <span
-              v-for="edge in $page.tags.edges"
-              :key="edge.node.id"
-              class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize"
-              >{{ edge.node.title }}
+              v-for="tag in $page.post.seoTags"
+              :key="tag"
+              class="inline-flex items-center justify-center px-2 py-2 m-1 text-xs capitalize text-primary"
+              >{{ tag }}
             </span>
-          </div> -->
+          </div>
         </div>
 
         <div class="flex items-center p-2 ml-auto">
@@ -131,7 +129,7 @@
         <h2 class="text-base font-bold md:text-3xl">Vous pouvez aussi lire</h2>
         <g-link
           to="/blog"
-          class="hidden px-3 py-1 text-gray-800 bg-gray-200 rounded cursor-pointer md:block hover:bg-secondary hover:text-white"
+          class="hidden px-3 py-2 transition duration-200 text-gray-800 bg-gray-200 rounded cursor-pointer md:block hover:bg-secondary hover:text-white"
         >
           Voir toutes les publications
         </g-link>
@@ -210,6 +208,8 @@ query query($path:String) {
         url
       }
     }
+    seoTitle
+    seoTags
     metaDescription
     content
   }
@@ -268,8 +268,6 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 export default {
   mixins: [PostSeo],
   components: {
-    //LazyHydrate,
-    //Breadcrumb,
     VueMarkdown,
     User,
     Calendar,

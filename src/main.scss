@@ -99,7 +99,7 @@ button.slick-next:before {
   visibility: hidden;
 }
 
-.expertdots {
+.teamdots {
   position: absolute;
   bottom: -25px;
   display: block;
@@ -109,7 +109,7 @@ button.slick-next:before {
   list-style: none;
   text-align: center;
 }
-.expertdots li {
+.teamdots li {
   position: relative;
   display: inline-block;
   width: 20px;
@@ -118,7 +118,7 @@ button.slick-next:before {
   padding: 0;
   cursor: pointer;
 }
-.expertdots li button {
+.teamdots li button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -132,8 +132,7 @@ button.slick-next:before {
   background: transparent;
 }
 
-.expertdots li button:before {
-  font-size: 6px;
+.teamdots li button:before {
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -145,14 +144,13 @@ button.slick-next:before {
   opacity: 0.25;
   color: black;
   -webkit-font-smoothing: antialiased;
-}
-.expertdots li button:before {
   color: #9ca3af !important;
-  font-size: 1rem !important;
+  font-size: 6rem !important;
   margin-top: 1rem !important;
   opacity: 0.95 !important;
 }
-.expertdots li.slick-active button:before {
+
+.teamdots li.slick-active button:before {
   color: $red-rintio !important;
   opacity: 0.95 !important;
 }
@@ -201,20 +199,18 @@ button.slick-next:before {
   opacity: 0.25;
   color: black;
   -webkit-font-smoothing: antialiased;
-  /* margin-top: 200px; */
-}
-.articledots li button:before {
   color: #9ca3af !important;
   font-size: 1rem !important;
   opacity: 0.95 !important;
 }
+
 .articledots li.slick-active button:before {
   color: $red-rintio !important;
   opacity: 0.95 !important;
 }
 
 // scss for components/Blog/Article
-.teamdots {
+.expertsdots {
   position: absolute;
   display: block;
   width: 100%;
@@ -223,7 +219,7 @@ button.slick-next:before {
   text-align: center;
   margin-left: 0 !important;
 }
-.teamdots li {
+.expertsdots li {
   position: relative;
   display: inline-block;
   width: 20px;
@@ -232,7 +228,7 @@ button.slick-next:before {
   padding: 0;
   cursor: pointer;
 }
-.teamdots li button {
+.expertsdots li button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -246,8 +242,7 @@ button.slick-next:before {
   background: transparent;
 }
 
-.teamdots li button:before {
-  font-size: 6px;
+.expertsdots li button:before {
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -261,18 +256,18 @@ button.slick-next:before {
   -webkit-font-smoothing: antialiased;
   /* margin-top: 200px; */
 }
-.teamdots li button:before {
+.expertsdots li button:before {
   color: #9ca3af !important;
-  font-size: 1rem !important;
+  font-size: 6rem !important;
   opacity: 0.95 !important;
 }
-.teamdots li.slick-active button:before {
+.expertsdots li.slick-active button:before {
   color: $red-rintio !important;
   opacity: 0.95 !important;
 }
 
 .vueperslides__bullet .default {
-  background-color: #A1A7B3 !important;
+  background-color: #a1a7b3 !important;
   border: none !important;
   box-shadow: none !important;
   width: 20px !important;
@@ -281,4 +276,13 @@ button.slick-next:before {
 
 .vueperslides__bullet--active .default {
   background-color: $red-rintio !important;
+}
+
+.text-ellipsis--2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }

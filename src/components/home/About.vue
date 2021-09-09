@@ -1,11 +1,11 @@
 <template>
   <div
-    class="bg-offer md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6"
+    class="md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6"
   >
     <div class="w-full md:w-1/2 items-center justify-center mx-auto md:block">
       <div class="relative">
         <svg
-          class="Hero__image-grid anim-hero md:-mt-14 w-5/6 mx-auto md:mx-0"
+          class="Hero__image-grid md:-mt-14 w-5/6 mx-auto md:mx-0"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 590.91 632.66"
         >
@@ -147,7 +147,7 @@
               class="about_hero__swipe-1"
               clip-path="url(#heroclip1)"
               preserveAspectRatio="xMidYMid slice"
-              xlink:href="images/about/hero__swipe-1.jpg"
+              :xlink:href="swipper.columns[0].image.file.url"
               x="0"
               y="51"
               width="490"
@@ -155,7 +155,7 @@
             ></image>
             <image
               clip-path="url(#heroclip2)"
-              xlink:href="images/about/hero__swipe-2.jpg"
+              :xlink:href="swipper.columns[1].image.file.url"
               preserveAspectRatio="xMidYMid slice"
               x="279"
               y="293"
@@ -164,7 +164,7 @@
             ></image>
             <image
               clip-path="url(#heroclip3)"
-              xlink:href="images/about/hero__swipe-3.jpg"
+              :xlink:href="swipper.columns[2].image.file.url"
               preserveAspectRatio="xMidYMid slice"
               x="92"
               y="233"
@@ -173,7 +173,7 @@
             ></image>
             <image
               clip-path="url(#heroclip4)"
-              xlink:href="images/about/hero__swipe-4.jpg"
+              :xlink:href="swipper.columns[3].image.file.url"
               preserveAspectRatio="xMidYMid slice"
               x="181"
               y="404"
@@ -187,7 +187,7 @@
     <div class="w-full md:w-1/2 mb-8 md:mb-0 md:mt-0">
       <div class="mx-4 md:mx-0">
         <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
-          Qui sommes-nous ?
+          {{ title }}
         </h3>
         <!-- Title Dot -->
         <div class="-mt-3">
@@ -202,34 +202,23 @@
       </div>
 
       <div class="mx-4 md:mx-0 pt-6">
-        <h2 class="my-3 text-2xl md:text-5xl font-extrabold text-primary">
-          Entreprise de <br class="hidden md:block" />
-          services du
-          <span class="text-secondary">numérique</span>
-        </h2>
+        <h2
+          class="my-3 text-2xl md:text-5xl font-extrabold text-primary"
+          v-html="content.title"
+        ></h2>
 
-        <p class="my-3 font-light text-justify leading-8">
-          Rintio est une entreprise de services du numérique. Nous sommes
-          spécialisées dans le
-          <span class="font-bold"
-            >développement et l’intégration de solutions informatiques</span
-          >, le <span class="font-bold">traitement de données</span>, les
-          technologies <span class="font-bold">Big Data</span> et l’<span
-            class="font-bold"
-            >Intelligence Artificielle</span
-          >. Nous proposons, entre autres, des prestations en Offshoring (<span
-            class="font-bold"
-            >Coding, Admin Infrastructure & Cloud, DevOps</span
-          >) pour nos clients en afrique et dans le monde.
-        </p>
+        <p
+          class="my-3 font-light text-justify leading-8"
+          v-html="richtextToHTML(content.text)"
+        ></p>
         <div class="mt-4">
-          <g-link to="/a-propos">
+          <g-link :to="button.ctaLink">
             <button
               v-if="!about"
               type="submit"
               class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase"
             >
-              En savoir plus
+              {{ button.ctaText }}
             </button>
           </g-link>
         </div>
@@ -240,19 +229,36 @@
 
 <script>
 import gsap from "gsap";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
-  data() {
-    return {
-      about: "",
-    };
+  props: {
+    swipper: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    title: {
+      type: String,
+      default() {
+        return "";
+      },
+    },
+    content: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    button: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
   },
   mounted() {
-    this.about = this.$router.currentRoute.path.includes("a-propos");
-
-    // eslint-disable-next-line no-unused-vars
-    var HeroGrid = document.querySelector(".anim-hero");
-
     var animationIsOk = window.matchMedia(
       "(prefers-reduced-motion: no-preference)"
     ).matches;
@@ -312,6 +318,11 @@ export default {
           "<"
         );
     }
+  },
+  methods: {
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
+    },
   },
 };
 </script>

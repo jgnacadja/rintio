@@ -1,146 +1,155 @@
 <template>
-  <div>
-    <!---->
+  <div class="justify-center w-full py-6 lg:px-20 md:flex md:py-24">
+    <div class="w-full mx-auto mb-8 md:mb-0">
+      <div class="mx-4 text-center md:mx-0">
+        <h1
+          class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
+          v-html="content.title"
+        ></h1>
 
-    <div class="justify-center w-full py-6 md:px-20 md:flex md:py-24">
-      <div class="w-full mx-auto mb-8 md:mb-0">
-        <div class="mx-4 text-center md:mx-0">
-          <h1
-            class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
-          >
-            Nos
-            <span class="text-secondary"> experts</span>
-          </h1>
-
-          <p class="mx-auto my-3 md:mb-24 md:w-1/2">
-            Rintio est composé d’une équipe professionnelle et dynamique et d’un
-            réseau de partenaires qui n’ont qu’un seul objectif:
-            <span class="font-bold"
-              >donner vie à vos projets en respectant les deadlines.</span
+        <p
+          class="mx-auto my-3 w-ful lg:w-1/2"
+          v-html="richtextToHTML(content.text)"
+        ></p>
+      </div>
+      <div
+        class="hidden pt-6 lg:flex lg:space-x-4 md:mx-0 sm:p-12 lg:px-0 xl:px-24 2xl:px-64 3xl:px-96 lg:p-0 lg:space-y-0 md:space-y-4 lg:mt-12"
+      >
+        <div
+          class="w-full shadow-md md:w-1/2"
+          v-for="leader in team"
+          :key="leader.id"
+        >
+          <div class="h-full bg-white">
+            <g-image
+              class="w-full 4xl:w-full"
+              :src="leader.image.file.url"
+              :alt="leader.image.name"
+            ></g-image>
+            <h2
+              class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary"
+              v-html="leader.name"
+            ></h2>
+            <h3
+              class="px-6 pb-2 uppercase border-b-2 text-secondary border-secondary lg:px-2 lg:text-lg 3xl:text-2xl 2xl:px-4 3xl:px-8"
             >
-          </p>
-          <!---->
-          <VueSlickCarousel v-bind="settings">
-            <div class="px-3" v-for="expert in currentList" :key="expert">
-              <div
-                class="w-full p-5 mx-auto mb-6 font-light text-gray-800 bg-white border border-gray-200 rounded-lg md:h-44 lg:h-56 xl:h-44 h-52"
+              {{ leader.title }}
+            </h3>
+            <p
+              class="px-6 mb-0"
+              v-for="skill in leader.text.content"
+              :key="skill.content"
+            >
+              {{ skill.content[0].value }}
+            </p>
+            <div class="flex px-6 py-4">
+              <a
+                class="flex items-center ml-auto mr-2 text-xs border rounded-full w-7 h-7 place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
+                :href="leader.ctaLink"
+                target="_blank"
+                rel="noopener"
               >
-                <div class="flex flex-row items-center w-full space-x-0">
-                  <div class="w-1/3">
-                    <div
-                      class="items-center justify-center w-16 h-16 mx-auto mb-4 overflow-hidden border border-gray-200 rounded-full bg-gray-50"
-                    >
-                      <g-image
-                        :src="expert.imgUrl"
-                        :alt="expert.imgAlt"
-                      ></g-image>
-                    </div>
-                    <span class="inline-flex">
-                      <a
-                        class="flex items-center w-5 h-5 mr-2 text-xs border rounded-full place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
-                        :href="expert.linkedInUrl"
-                        target="_blank"
-                      >
-                        <em class="relative fab fa-linkedin-in"></em>
-                      </a>
-                    </span>
-                  </div>
+                <em class="relative fab fa-linkedin-in"></em>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                  <div class="flex-grow w-2/3 pl-4 text-left sm:pl-5 lg:pl-4">
-                    <h6 class="mb-4 text-sm font-bold text-gray-600 uppercase">
-                      {{ expert.name }}
-                    </h6>
-                    <p
-                      :key="career"
-                      v-for="career in expert.career"
-                      class="mb-2 text-xs"
-                    >
-                      • {{ career }}
-                    </p>
-                  </div>
-                </div>
+      <div class="w-full p-5">
+        <VueSlickCarousel v-bind="settings" class="space-x-4">
+          <div class="w-full" v-for="leader in team" :key="leader.id">
+            <div class="h-full pb-4 mx-1 bg-white shadow-md">
+              <g-image
+                class="w-full 4xl:w-full"
+                :src="leader.image.file.url"
+                :alt="leader.image.name"
+              ></g-image>
+              <h2
+                class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary"
+                v-html="leader.name"
+              ></h2>
+              <h3
+                class="px-2 pb-2 uppercase border-b-2 text-secondary border-secondary sm:px-6"
+              >
+                {{ leader.title }}
+              </h3>
+              <p
+                class="px-6 mb-0"
+                v-for="skill in leader.text.content"
+                :key="skill.content"
+              >
+                {{ skill.content[0].value }}
+              </p>
+              <div class="flex px-6 py-4">
+                <a
+                  class="flex items-center ml-auto mr-2 text-xs bg-white border-2 rounded-full w-7 h-7 place-content-center border-primary hover:border-none text-primary hover:bg-secondary hover:text-white"
+                  :href="leader.ctaLink"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <em class="relative fab fa-linkedin-in"></em>
+                </a>
               </div>
             </div>
-          </VueSlickCarousel>
-        </div>
+          </div>
+        </VueSlickCarousel>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import experts from "~/assets/experts.json";
 import VueSlickCarousel from "vue-slick-carousel";
-
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+// optional style for arrows & dots
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
-  components: {
-    VueSlickCarousel,
-    // TPagination,
+  props: {
+    content: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    team: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
+  components: { VueSlickCarousel },
+  methods: {
+    richtextToHTML(content) {
+      return documentToHtmlString(content);
+    },
   },
   data() {
     return {
-      list: experts.list,
-      currentList: experts.list,
-      currentPage: 1,
-      perPage: 8,
-      totalItems: 1,
-      classes: {
-        wrapper: "table border-collapse text-center bg-white mx-auto shadow-sm",
-        element:
-          "w-8 h-8 border border-gray-200 table-cell hover:border-blue-100",
-        activeElement:
-          "w-8 h-8 border border-secondary table-cell hover:border-secondry",
-        disabledElement: "w-8 h-8 border border-gray-200 table-cell",
-        ellipsisElement: "w-8 h-8 border border-gray-200 hidden md:table-cell",
-        activeButton:
-          "bg-secondary w-full h-full text-white hover:bg-secondary transition duration-100 ease-in-out focus:outline-none",
-        disabledButton:
-          "opacity-25 w-full h-full cursor-not-allowed transition duration-100 ease-in-out",
-        button:
-          "hover:bg-blue-100 w-full h-full transition duration-100 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50",
-        ellipsis: "",
-      },
       settings: {
-        dots: true,
-        autoplay: false,
-        dotsClass: "teamdots",
+        autoplay: true,
         infinite: true,
+        rows: 1,
+        edgeFriction: 0.35,
+        initialSlide: 1,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        rows: 2,
-        slidesPerRow: 1,
-        initialSlide: 0,
-        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        arrows: false,
+        dots: true,
+        dotsClass: "teamdots",
         responsive: [
-          {
-            breakpoint: 1536,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 4,
-            },
-          },
-          {
-            breakpoint: 1535,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-            },
-          },
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-            },
-          },
-          {
-            breakpoint: 1023,
-            settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
-              initialSlide: 2,
+              infinite: true,
+              dots: true,
             },
           },
           {
@@ -148,24 +157,20 @@ export default {
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
+              initialSlide: 1,
             },
           },
         ],
       },
     };
   },
-  mounted() {
-    this.list = experts.list;
-    this.totalItems = this.list.length;
-    this.updateList(this.currentPage);
-  },
-  methods: {
-    updateList(currentPage) {
-      this.currentList = this.list.slice(
-        (currentPage - 1) * this.perPage,
-        currentPage * this.perPage
-      );
-    },
-  },
 };
 </script>
+
+<style scoped lang="scss">
+@media (min-width: 1024px) {
+  .slick-slider {
+    display: none;
+  }
+}
+</style>
