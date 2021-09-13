@@ -245,7 +245,7 @@
         >
           <div class="h-auto">
             <div class="mb-3 text-red-light">Newsletter</div>
-            <iframe class="mj-w-res-iframe" title="Newsletter" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.mailjet.com/widget/iframe/6ZFB/Kmc" width="100%"></iframe>
+            <iframe class="mj-w-res-iframe" title="Newsletter" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.mailjet.com/widget/iframe/6ZFB/Kvk" width="100%"></iframe>
           </div>
         </div>
       </div>
@@ -286,3 +286,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+iframe {
+  overflow: hidden;
+}
+</style>

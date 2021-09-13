@@ -5,26 +5,123 @@
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <About />
+      <About
+        :title="$page.page.sections[0].name"
+        :swipper="$page.page.sections[0].columns[0]"
+        :content="$page.page.sections[0].columns[1]"
+        :button="$page.page.sections[0].columns[2]"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Services />
+      <Services
+        :title="$page.page.sections[1].name"
+        :cover="$page.page.sections[1].columns[0]"
+        :content="$page.page.sections[1].columns.slice(1)"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Experts />
+      <Team
+        :content="$page.page.sections[2].columns[0]"
+        :team="$page.page.sections[2].columns.slice(1)"
+      />
     </LazyHydrate>
 
     <LazyHydrate when-idle>
-      <Stats />
+      <Stats :content="$page.page.sections[3].columns" />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
-      <Team />
+      <Experts
+        :content="$page.page.sections[4].columns[0]"
+        :experts="$page.page.sections[4].columns.slice(1)"
+      />
     </LazyHydrate>
   </Layout>
 </template>
+
+<page-query>
+query {
+  page: contentfulPage(path: "A propos") {
+    path
+    seo {
+      id
+      title
+      date
+      name
+      description
+      keywords
+      no_index
+      no_follow
+    }
+    sections {
+      id
+      title
+      date
+      name
+      columns {
+        ... on ContentfulComponentImage {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
+        }
+        ... on ContentfulComponentHero {
+          id
+          title
+          name
+          image {
+            file {
+              url
+            }
+          }
+          text
+          ctaText
+          ctaLink
+        }
+        ... on ContentfulComponentText {
+          id
+          title
+          text
+        }
+        ... on ContentfulComponentSection {
+          id
+          title
+          name
+          columns {
+            ... on ContentfulComponentImage {
+              id
+              title
+              name
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            ... on ContentfulComponentText {
+              id
+              title
+              text
+            }
+          }
+        }
+        ... on ContentfulComponentButton {
+              id
+              title
+              ctaText
+              ctaLink
+            }
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import LazyHydrate from "vue-lazy-hydration";
@@ -34,7 +131,6 @@ import Services from "~/components/about/Services.vue";
 import Experts from "~/components/about/Experts.vue";
 import Stats from "~/components/about/Stats.vue";
 import Team from "~/components/about/Team.vue";
-import Keywords from "~/assets/keywords.json";
 
 export default {
   components: {
@@ -48,32 +144,24 @@ export default {
   },
   metaInfo() {
     return {
-      title: "A propos",
+      title: this.$page.page.seo.name,
       meta: [
         {
           key: "description",
           name: "description",
-          content: "Entreprise spécialisée dans la mise en oeuvre de solutions informatiques et en intelligence Artificielle en Afrique et dans le Monde",
+          content: this.$page.page.description,
         },
         {
           key: "keywords",
           name: "keywords",
-          content: Keywords.list,
+          content: this.$page.page.seo.keywords,
         },
       ],
     };
   },
-
   data() {
     return {
       path: "",
-      config: {
-        keywords: ['service','numérique','cloud','Devops','offshoring',
-        'nearingShore','Afrique','informatique','IT','webservice',
-        'Big data','IA','intelligence','Application','python',
-        'cluster','java','E-learning'
-        ],
-      },
     };
   },
   mounted() {

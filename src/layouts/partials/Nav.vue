@@ -53,8 +53,7 @@
         </button>
 
         <div
-          id="home"
-          class="w-full mx-4 mt-2 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+          class="currentColorHome w-full mx-4 mt-2 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
           <div class="h-full pt-4">
             <g-link to="/">
@@ -66,8 +65,7 @@
         </div>
 
         <div
-          id="about"
-          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+          class="currentColorAbout w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
           <div class="h-full pt-4">
             <g-link to="/a-propos">
@@ -79,8 +77,7 @@
         </div>
 
         <div
-          id="offer"
-          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+          class="currentColorOffer w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
           <div class="h-full pt-4">
             <g-link to="/offres">
@@ -92,8 +89,7 @@
         </div>
 
         <div
-          id="blog"
-          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
+          class="currentColorBlog w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
         >
           <div class="h-full pt-4">
             <g-link to="/blog">
@@ -103,10 +99,6 @@
             </g-link>
           </div>
         </div>
-        <div
-          id="blog_1"
-          class="w-full mx-4 text-left transition duration-300 border-b-2 border-transparent hover:border-secondary"
-        ></div>
       </div>
       <div class="absolute flex pl-3 bottom-5">
         <a
@@ -146,8 +138,7 @@
 
     <nav class="hidden h-24 px-10 lg:flex">
       <div
-        id="home"
-        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+        class="currentColorHome w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
           <g-link to="/">
@@ -159,8 +150,7 @@
       </div>
 
       <div
-        id="about"
-        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+        class="currentColorAbout w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
           <g-link to="/a-propos">
@@ -172,8 +162,7 @@
       </div>
 
       <div
-        id="offer"
-        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+        class="currentColorOffer w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
           <g-link to="/offres">
@@ -185,8 +174,7 @@
       </div>
 
       <div
-        id="blog"
-        class="w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
+        class="currentColorBlog w-40 mx-auto text-center transition duration-300 border-b-2 border-transparent hover:border-secondary"
       >
         <div class="h-full pt-10">
           <g-link to="/blog">
@@ -204,7 +192,7 @@ export default {
     //require our external library and load it in window
     // eslint-disable-next-line no-undef
     window.$ = require("jquery");
-    this.setActive(this.$router.currentRoute.path.slice(1));
+    this.setActive(this.$router.currentRoute.path);
   },
   data() {
     return {
@@ -214,47 +202,49 @@ export default {
   methods: {
     setActive: function (route) {
       switch (route) {
-        case "":
+        case "/":
           // eslint-disable-next-line no-undef
-          $("#home").addClass("border-secondary text-secondary");
+          $(".currentColorHome").addClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#about").removeClass("border-secondary text-secondary");
+          $(".currentColorAbout").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
           $("#offer").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#blog").removeClass("border-secondary text-secondary");
+          $(".currentColorBlog").removeClass("border-secondary text-secondary");
 
           break;
-        case "a-propos":
+        case "/a-propos":
           // eslint-disable-next-line no-undef
-          $("#home").removeClass("border-secondary text-secondary");
+          $(".currentColorHome").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#about").addClass("border-secondary text-secondary");
+          $(".currentColorAbout").addClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#offer").removeClass("border-secondary text-secondary");
+          $(".currentColorOffer").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#blog").removeClass("border-secondary text-secondary");
+          $(".currentColorBlog").removeClass("border-secondary text-secondary");
+
           break;
-        case "offres":
+        case "/offres":
           // eslint-disable-next-line no-undef
-          $("#home").removeClass("border-secondary text-secondary");
+          $(".currentColorHome").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#about").removeClass("border-secondary text-secondary");
+          $(".currentColorAbout").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#offer").addClass("border-secondary text-secondary");
+          $(".currentColorOffer").addClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#blog").removeClass("border-secondary text-secondary");
-          // eslint-disable-next-line no-undef
+          $(".currentColorBlog").removeClass("border-secondary text-secondary");
+
           break;
-        case "blog":
+        case "/blog":
           // eslint-disable-next-line no-undef
-          $("#home").removeClass("border-secondary text-secondary");
+          $(".currentColorHome").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#about").removeClass("border-secondary text-secondary");
+          $(".currentColorAbout").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#offer").removeClass("border-secondary text-secondary");
+          $(".currentColorOffer").removeClass("border-secondary text-secondary");
           // eslint-disable-next-line no-undef
-          $("#blog").addClass("border-secondary text-secondary");
+          $(".currentColorBlog").addClass("border-secondary text-secondary");
+          
           break;
       }
     },
