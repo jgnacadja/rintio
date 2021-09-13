@@ -28,6 +28,7 @@
         "node-mailjet": "^3.3.4",
         "typography": "^0.16.21",
         "uuid": "^8.3.2",
+        "v-calendar": "^2.3.2",
         "vue-carousel": "^0.18.0",
         "vue-eslint-parser": "^7.10.0",
         "vue-lazy-hydration": "^2.0.0-beta.4",
