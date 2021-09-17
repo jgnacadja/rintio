@@ -9,7 +9,7 @@
         <div
           v-for="edge in offer"
           :key="edge.node.id"
-          class="w-full relative px-4 bg-center bg-cover bg-no-repeat h-full"
+          class="w-full relative px-4 bg-center bg-cover bg-no-repeat h-80 md:h-full"
           v-bind:style="[
             {
               backgroundImage: 'url(' + edge.node.coverImage.file.url + ')',
