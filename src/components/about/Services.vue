@@ -39,10 +39,10 @@
           <h2 class="py-2 text-primary group-hover:text-white">
             {{ service.columns[2].title }}
           </h2>
-          <p
+          <div
             class="text-justify leading-8 group-hover:text-white text-ellipsis--2"
             v-html="richtextToHTML(service.columns[2].text)"
-          ></p>
+          ></div>
         </div>
       </div>
     </div>

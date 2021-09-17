@@ -25,10 +25,10 @@
           ></span>
         </div>
         <div>
-          <p
+          <div
             class="text-sm font-bold"
             v-html="richtextToHTML(content[0].text)"
-          ></p>
+          ></div>
         </div>
       </div>
       <div class="w-1/2 text-center md:w-auto">
@@ -46,10 +46,10 @@
           ></span>
         </div>
         <div>
-          <p
+          <div
             class="text-sm font-bold"
             v-html="richtextToHTML(content[1].text)"
-          ></p>
+          ></div>
         </div>
       </div>
       <div class="w-1/2 text-center md:w-auto">
@@ -66,10 +66,10 @@
             class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
           ></span>
         </div>
-        <p
+        <div
           class="text-sm font-bold"
           v-html="richtextToHTML(content[2].text)"
-        ></p>
+        ></div>
       </div>
       <div class="w-1/2 text-center md:w-auto xl:w-auto">
         <p id="experience" class="text-5xl font-bold md:text-5xl xl:text-8xl">
@@ -86,10 +86,10 @@
           ></span>
         </div>
         <div>
-          <p
+          <div
             class="text-sm font-bold"
             v-html="richtextToHTML(content[3].text)"
-          ></p>
+          ></div>
         </div>
       </div>
     </div>

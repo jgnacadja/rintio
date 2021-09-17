@@ -9,10 +9,10 @@
         <h1 class="my-3 text-2xl lg:text-5xl font-extrabold text-primary">
           {{$page.page.sections[0].columns[0].title}}
         </h1>
-        <p
+        <div
           class="md:w-2/3 mx-auto py-4 md:px-0"
           v-html="richtextToHTML($page.page.sections[0].columns[0].text.content[0])"
-        ></p>
+        ></div>
       </div>
     </div>
 
@@ -47,10 +47,10 @@
                 v-html="$page.page.sections[1].columns[1].title"
               ></h2>
 
-              <p
+              <div
                 class="my-8 font-light text-justify leading-10"
                 v-html="richtextToHTML($page.page.sections[1].columns[1].text)"
-              ></p>
+              ></div>
               <div class="mt-4">
                 <g-link :to="$page.page.sections[1].columns[1].ctaLink">
                   <button

@@ -29,10 +29,10 @@
                   >
                     {{ edge.node.title }}
                   </h2>
-                  <p
+                  <div
                     class="py-3 text-justify"
                     v-html="richtextToHTML(edge.node.metaDescription)"
-                  ></p>
+                  ></div>
                   <div
                     class="flex items-center text-sm font-medium my-5 md:mt-2 md:mb-4"
                   >

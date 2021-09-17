@@ -7,10 +7,10 @@
           v-html="content.title"
         ></h1>
 
-        <p
+        <div
           class="mx-auto my-3 w-ful lg:w-1/2"
           v-html="richtextToHTML(content.text)"
-        ></p>
+        ></div>
       </div>
       <div
         class="hidden pt-6 lg:flex lg:space-x-4 md:mx-0 sm:p-12 lg:px-0 xl:px-24 2xl:px-64 3xl:px-96 lg:p-0 lg:space-y-0 md:space-y-4 lg:mt-12"

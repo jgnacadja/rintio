@@ -27,10 +27,10 @@
           v-html="content.title"
         ></h2>
 
-        <p
+        <div
           class="hidden md:block my-3 font-light"
           v-html="richtextToHTML(content.text)"
-        ></p>
+        ></div>
       </div>
     </div>
 

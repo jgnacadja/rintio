@@ -10,10 +10,10 @@
             v-html="content.title"
           ></h1>
 
-          <p
+          <div
             class="mx-auto my-3 md:mb-24 md:w-1/2"
             v-html="richtextToHTML(content.text)"
-          ></p>
+          ></div>
           <!---->
           <VueSlickCarousel v-bind="settings">
             <div class="px-3" v-for="expert in experts" :key="expert">
