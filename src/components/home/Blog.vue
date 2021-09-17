@@ -72,10 +72,10 @@
               {{ edge.node.author }}
             </span>
           </p>
-          <p
+          <div
             class="mx-4 mb-4 font-light text-justify text-gray-600"
             v-html="richtextToHTML(edge.node.metaDescription)"
-          ></p>
+          ></div>
         </g-link>
       </div>
       <div
@@ -134,7 +134,7 @@
                   {{ edge.node.author }}
                 </span>
               </p>
-              <p
+              <div
                 class="
                   w-full
                   text-xs
@@ -144,7 +144,7 @@
                   text-ellipsis--2
                 "
                 v-html="richtextToHTML(edge.node.metaDescription)"
-              ></p>
+              ></div>
             </g-link>
           </div>
         </div>

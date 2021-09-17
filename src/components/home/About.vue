@@ -207,10 +207,10 @@
           v-html="content.title"
         ></h2>
 
-        <p
+        <div
           class="my-3 font-light text-justify leading-8"
           v-html="richtextToHTML(content.text)"
-        ></p>
+        ></div>
         <div class="mt-4">
           <g-link :to="button.ctaLink">
             <button

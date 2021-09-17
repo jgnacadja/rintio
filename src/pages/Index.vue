@@ -42,7 +42,7 @@
         :title="$page.page.sections[5].name"
         :content="$page.page.sections[5].columns[0]"
       />
-    </LazyHydrate>
+    </LazyHydrate> 
 
     <LazyHydrate when-visible>
       <Map

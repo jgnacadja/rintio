@@ -30,10 +30,10 @@
               >
                 {{ slide.title }}
               </h1>
-              <p
+              <div
                 class="text-xl 2xl:text-xl 3xl:text-2xl mb-10 leading-8"
                 v-html="richtextToHTML(slide.text)"
-              ></p>
+              ></div>
               <a
                 :href="slide.ctaLink"
                 class="bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold hover:bg-primary uppercase text-xs 2xl:text-lg"

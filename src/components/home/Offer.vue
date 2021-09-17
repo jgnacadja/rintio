@@ -34,7 +34,7 @@
             v-html="content.title"
           ></h2>
 
-          <p class="my-3 font-light" v-html="richtextToHTML(content.text)"></p>
+          <div class="my-3 font-light" v-html="richtextToHTML(content.text)"></div>
           <div class="mt-4 text-center">
             <g-link :to="button.ctaLink">
               <button

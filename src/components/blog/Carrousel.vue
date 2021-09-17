@@ -49,10 +49,10 @@
                     <div
                       class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
                     >
-                      <p
+                      <div
                         class="text-gray-600 font-light text-base text-ellipsis--2"
                         v-html="richtextToHTML(edge.node.metaDescription)"
-                      ></p>
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -124,10 +124,10 @@
                     <div
                       class="tracking-tight leading-relaxed font-roboto text-xs"
                     >
-                      <p
+                      <div
                         class="text-gray-600 font-light text-base text-ellipsis--2 my-2"
                         v-html="richtextToHTML(edge.node.metaDescription)"
-                      ></p>
+                      ></div>
                     </div>
                     <div
                       class="tracking-tight leading-normal font-roboto text-sm"
