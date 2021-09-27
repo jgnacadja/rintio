@@ -9,17 +9,17 @@
           v-html="richtextToHTML(title.text)"
         ></h2>
       </div>
-
-      <div class="mx-24 3xl:mx-52 4xl:mx-96">
+      <div class="3xl:mx-52 4xl:mx-96">
         <VueSlickCarousel
           v-bind="settings"
           ref="carouselref"
           class="border rounded shadow-sm bg-white"
+          @afterChange="currentIndex = $event"
         >
           <div v-for="edge in featuredPost" :key="edge.node.id">
             <g-link :to="edge.node.path">
               <div
-              class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
+                class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
               >
                 <div
                   class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4"
@@ -68,25 +68,25 @@
                     </div>
                   </div>
                 </div>
-              </div>              
+              </div>
             </g-link>
           </div>
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">
-          <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+          <button
+            @click="showPrev"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10"
+            v-bind:class="{'bg-gray-100': currentIndex == 0, 'bg-primary border-primary': currentIndex != 0}"
           >
-            <button @click="showPrev">
-              <ArrowLeft />
-            </button>
-          </div>
-          <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            <ArrowLeft />
+          </button>
+          <button
+            @click="showNext"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10"
+            v-bind:class="{'bg-gray-100': currentIndex == featuredPost.length - 1, 'bg-primary border-primary': currentIndex != featuredPost.length - 1}"
           >
-            <button @click="showNext">
-              <ArrowRight />
-            </button>
-          </div>
+            <ArrowRight />
+          </button>
         </div>
       </div>
     </div>
@@ -134,6 +134,7 @@ export default {
         initialSlide: 0,
         arrows: false,
       },
+      currentIndex: 0,
     };
   },
   methods: {

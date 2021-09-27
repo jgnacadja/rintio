@@ -19,7 +19,11 @@
       </div>
 
       <div v-if="type === 'post'">
-        <VueSlickCarousel v-bind="settings" ref="carouselblog">
+        <VueSlickCarousel
+          v-bind="settings"
+          ref="carouselblog"
+          @afterChange="currentIndex = $event"
+        >
           <!--first slide-card-->
           <div class="md:mx-2 w-full" v-for="edge in posts" :key="edge.node.id">
             <div
@@ -61,24 +65,28 @@
           </div>
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">
-          <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+          <button
+            @click="showPrev"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10"
+            v-bind:class="{'bg-gray-100': (currentIndex == 0 || posts.length < slidesPerBreakpoint), 'bg-primary border-primary': currentIndex != 0}"
           >
-            <button @click="showPrev">
-              <ArrowLeft />
-            </button>
-          </div>
-          <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            <ArrowLeft />
+          </button>
+          <button
+            @click="showNext"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10"
+            v-bind:class="{'bg-gray-100': (currentIndex == posts.length - slidesPerBreakpoint && posts.length < slidesPerBreakpoint), 'bg-primary border-primary': currentIndex != posts.length - slidesPerBreakpoint && posts.length > slidesPerBreakpoint}"
           >
-            <button @click="showNext">
-              <ArrowRight />
-            </button>
-          </div>
+            <ArrowRight />
+          </button>
         </div>
       </div>
       <div v-if="type === 'event'">
-        <VueSlickCarousel v-bind="settings" ref="carouselevent">
+        <VueSlickCarousel
+          v-bind="settings"
+          ref="carouselevent"
+          @afterChange="currentIndexEvent = $event"
+        >
           <div
             class="md:mx-2 w-full container"
             v-for="edge in events"
@@ -139,20 +147,20 @@
           </div>
         </VueSlickCarousel>
         <div class="flex float-right mt-4" style="margin-right: 2rem">
-          <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 mr-2 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+          <button
+            @click="showPrevEvent"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10"
+            v-bind:class="{'bg-gray-100': (currentIndexEvent == 0 || events.length < slidesPerBreakpoint), 'bg-primary border-primary': currentIndexEvent != 0}"
           >
-            <button @click="showPrevEvent">
-              <ArrowLeft />
-            </button>
-          </div>
-          <div
-            class="z-10 bg-primary bg-opacity-10 w-8 h-8 rounded-md border border-primary flex items-center justify-center text-black cursor-pointer"
+            <ArrowLeft />
+          </button>
+          <button
+            @click="showNextEvent"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10"
+            v-bind:class="{'bg-gray-100': (currentIndexEvent == events.length - slidesPerBreakpoint  && events.length < slidesPerBreakpoint), 'bg-primary border-primary': (currentIndexEvent != events.length - slidesPerBreakpoint && events.length > slidesPerBreakpoint)}"
           >
-            <button @click="showNextEvent">
-              <ArrowRight />
-            </button>
-          </div>
+            <ArrowRight />
+          </button>
         </div>
       </div>
     </div>
@@ -281,7 +289,16 @@ export default {
           },
         ],
       },
+      currentIndex: 0,
+      currentIndexEvent: 0,
+      slidesPerBreakpoint: 4
     };
+  },
+    created() {
+    window.addEventListener("resize", this.getSlidesPerBreakpoint);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.getSlidesPerBreakpoint);
   },
   methods: {
     showNext() {
@@ -305,6 +322,20 @@ export default {
     richtextToHTML(content) {
       return documentToHtmlString(content);
     },
+    getSlidesPerBreakpoint() {
+      if (typeof window !== "undefined") {
+        if (window.innerWidth > 1024) {
+          this.slidesPerBreakpoint = 4;
+        } else if (window.innerWidth > 700) {
+          this.slidesPerBreakpoint = 3;
+        } else if (window.innerWidth > 480) {
+          this.slidesPerBreakpoint = 2;
+        } else {
+          this.slidesPerBreakpoint = 1;
+        }
+        console.log(this.slidesPerBreakpoint);
+      }
+    }
   },
   filters: {
     // Filter definitions
