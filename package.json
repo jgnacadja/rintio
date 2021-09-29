@@ -11,9 +11,12 @@
         "markdown:fix": "markdownlint '**/*.md' --ignore node_modules --fix"
     },
     "dependencies": {
+        "@google-analytics/data": "^2.7.0",
         "@gridsome/plugin-google-analytics": "^0.1.2",
         "@gridsome/plugin-sitemap": "^0.4.0",
         "@gridsome/source-contentful": "^0.6.0",
+        "axios": "^0.21.4",
+        "axios-oauth-client": "^1.4.3",
         "babel-runtime": "^6.26.0",
         "emailjs-com": "^3.2.0",
         "eslint-config-prettier": "^8.3.0",

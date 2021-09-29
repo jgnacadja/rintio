@@ -15,6 +15,8 @@ import VueObserveVisibility from "vue-observe-visibility";
 
 import VueTailwind from "vue-tailwind";
 
+import Axios from "axios";
+
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.6,
@@ -23,7 +25,7 @@ const typography = new Typography({
   bodyFontFamily: ["Montserrat", "sans-serif"],
 });
 
-const fontsCss = require('./assets/css/fonts.css')
+const fontsCss = require("./assets/css/fonts.css");
 
 export default function (Vue, { head }) {
   // Add attributes to HTML tag
@@ -59,4 +61,7 @@ export default function (Vue, { head }) {
   Vue.use(VueObserveVisibility);
 
   Vue.use(VueTailwind);
+
+  //http requests via axios
+  Vue.use(Axios);
 }
