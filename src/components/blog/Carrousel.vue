@@ -295,10 +295,14 @@ export default {
     };
   },
     created() {
-    window.addEventListener("resize", this.getSlidesPerBreakpoint);
+    if (typeof window !== "undefined") {
+       window.addEventListener("resize", this.getSlidesPerBreakpoint);
+    }
   },
   destroyed() {
-    window.removeEventListener("resize", this.getSlidesPerBreakpoint);
+    if (typeof window !== "undefined") {
+       window.removeEventListener("resize", this.getSlidesPerBreakpoint);
+    }
   },
   methods: {
     showNext() {
