@@ -20,12 +20,12 @@
           v-html="richtextToHTML(title.text)"
         ></h2>
       </div>
-
-      <div class="mx-24 3xl:mx-52 4xl:mx-96">
+      <div class="3xl:mx-52 4xl:mx-96">
         <VueSlickCarousel
           v-bind="settings"
           ref="carouselref"
           class="border rounded shadow-sm bg-white"
+          @afterChange="currentIndex = $event"
         >
           <div v-for="(edge, index) in featuredPost"
                :key="edge.node.id">
@@ -228,6 +228,7 @@ export default {
         arrows: false,
         currentIndex: 0,
       },
+      currentIndex: 0,
     };
   },
   methods: {

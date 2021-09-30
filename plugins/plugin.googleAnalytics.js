@@ -2,6 +2,6 @@ module.exports = {
   // for analytics purposes
   use: "@gridsome/plugin-google-analytics",
   options: {
-    id: process.env.GOOGLE_ANALYTICS,
+    id: process.env.GRIDSOME_GOOGLE_ANALYTICS,
   },
 };
