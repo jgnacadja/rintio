@@ -18,12 +18,15 @@
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
       <g-link :to="stories[0].path">
         <div class="w-full h-full bg-white">
-          <g-image
-            alt="coraq"
-            title="Coraq Chmp"
-            :src="stories[0].coverImage.file.url"
-            class="object-cover w-full mb-0"
-          />
+          <div class="aspect-w-16 aspect-h-11">
+            <g-image
+              alt="coraq"
+              title="Coraq Chmp"
+              :src="stories[0].coverImage.file.url"
+              class="object-cover w-full mb-0"
+            />
+          </div>
+          
 
           <h3
             class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"

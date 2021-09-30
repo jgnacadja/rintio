@@ -46,5 +46,7 @@ module.exports = {
         translate: ["active", "hover", "group-hover"],
 
     },
-    plugins: [],
+    plugins: [
+        require ( '@tailwindcss/aspect-ratio' ) , 
+    ],
 };
