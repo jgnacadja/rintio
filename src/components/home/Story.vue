@@ -49,12 +49,14 @@
       >
       <g-link :to="story.path">
         <div class="w-full h-full p-4 bg-white lg:p-0">
-          <g-image
-            alt="Atut"
-            title="Africa TechUp Tour"
-            :src="story.coverImage.file.url"
-            class="object-cover w-full mb-0 h-52"
-          />
+          <div class="sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10">
+            <g-image
+              alt="Atut"
+              title="Africa TechUp Tour"
+              :src="story.coverImage.file.url"
+              class="object-cover w-full mb-0 h-52"
+            />
+          </div>
 
           <h3
             class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
