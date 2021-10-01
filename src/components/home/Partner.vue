@@ -81,13 +81,13 @@
       </div>
       <div class="1/3 space-y-4">
         <div
-          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-pink-100 w-24 sm:w-32 md:w-56 lg:w-60 xl:w-full h-24 sm:h-24 md:h-40 lg:h-36 xl:h-52 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-pink-100 aspect-w-10 aspect-h-5 w-24 sm:w-32 md:w-56 lg:w-60 xl:w-full h-24 sm:h-24 md:h-40 lg:h-36 xl:h-52 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <g-image class="mb-0" :src="partners[6].image.file.url" :alt="partners[6].name" />
         </div>
         <div class="md:flex">
           <div
-            class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-blue-100 w-16 sm:w-20 md:w-24 lg:w-24 xl:w-32 h-16 sm:h-16 md:h-24 lg:h-24 xl:h-32 flex items-center justify-center text-xl font-bold shadow-xl"
+            class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-blue-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-24 lg:w-24 xl:w-32 h-16 sm:h-16 md:h-24 lg:h-24 xl:h-32 flex items-center justify-center text-xl font-bold shadow-xl"
           >
             <g-image class="mb-0"
               :src="partners[7].image.file.url"
@@ -95,7 +95,7 @@
             />
           </div>
           <div
-            class="rounded-xl md:rounded-3xl p-2 m-2 xl:ml-auto bg-white text-orange-100 w-16 sm:w-20 md:w-24 lg:w-24 xl:w-32 h-16 sm:h-16 md:h-24 lg:h-24 xl:h-32 flex items-center justify-center text-xl font-bold shadow-xl"
+            class="rounded-xl md:rounded-3xl p-2 m-2 xl:ml-auto bg-white text-orange-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-24 lg:w-24 xl:w-32 h-16 sm:h-16 md:h-24 lg:h-24 xl:h-32 flex items-center justify-center text-xl font-bold shadow-xl"
           >
             <g-image class="mb-0"
               :src="partners[8].image.file.url"
@@ -104,7 +104,7 @@
           </div>
         </div>
         <div
-          class="rounded-xl md:rounded-3xl p-2 m-2 lg:ml-auto bg-white text-teal-100 w-20 sm:w-32 md:w-56 lg:w-52 xl:w-56 h-20 sm:h-32 md:h-56 lg:h-52 xl:h-56 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl p-2 m-2 lg:ml-auto bg-white text-teal-100 aspect-w-10 aspect-h-5 w-20 sm:w-32 md:w-56 lg:w-52 xl:w-56 h-20 sm:h-32 md:h-56 lg:h-52 xl:h-56 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <g-image class="mb-0" :src="partners[9].image.file.url" :alt="partners[9].name" />
         </div>
