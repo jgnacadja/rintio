@@ -44,25 +44,25 @@
           <g-image class="mb-0" :src="partners[0].image.file.url" :alt="partners[0].name" />
         </div>
         <div
-          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-yellow-100 w-20 sm:w-16 md:w-28 lg:w-32 xl:w-40 h-20 sm:h-16 md:h-28 lg:h-32 xl:h-40 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-yellow-100 aspect-w-10 aspect-h-5 w-20 sm:w-16 md:w-28 lg:w-32 xl:w-40 h-20 sm:h-16 md:h-28 lg:h-32 xl:h-40 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <g-image class="mb-0" :src="partners[1].image.file.url" :alt="partners[1].name" />
         </div>
       </div>
       <div class="1/3 space-y-4">
         <div
-          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-indigo-100 w-20 sm:w-28 md:w-44 lg:w-40 xl:w-56 h-20 sm:h-28 md:h-44 lg:h-40 xl:h-56 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-indigo-100 aspect-w-10 aspect-h-5 w-20 sm:w-28 md:w-44 lg:w-40 xl:w-56 h-20 sm:h-28 md:h-44 lg:h-40 xl:h-56 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <g-image class="mb-0" :src="partners[2].image.file.url" :alt="partners[2].name" />
         </div>
         <div
-          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-green-100 w-16 sm:w-24 md:w-40 lg:w-32 xl:w-52 h-16 sm:h-24 md:h-40 lg:h-32 xl:h-52 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl ml-auto p-2 m-2 bg-white text-green-100 aspect-w-10 aspect-h-5 w-16 sm:w-24 md:w-40 lg:w-32 xl:w-52 h-16 sm:h-24 md:h-40 lg:h-32 xl:h-52 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <g-image class="mb-0" :src="partners[3].image.file.url" :alt="partners[3].name" />
         </div>
         <div class="md:flex">
           <div
-            class="rounded-xl md:rounded-3xl ml-auto md:ml-0 lg:ml-auto p-2 m-2 bg-white text-purple-100 w-16 sm:w-20 md:w-20 lg:w-16 xl:w-24 h-16 sm:h-16 md:h-20 lg:h-16 xl:h-24 flex items-center justify-center text-xl font-bold shadow-xl"
+            class="rounded-xl md:rounded-3xl ml-auto md:ml-0 lg:ml-auto p-2 m-2 bg-white text-purple-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-20 lg:w-16 xl:w-24 h-16 sm:h-16 md:h-20 lg:h-16 xl:h-24 flex items-center justify-center text-xl font-bold shadow-xl"
           >
             <g-image class="mb-0"
               :src="partners[4].image.file.url"
@@ -70,7 +70,7 @@
             />
           </div>
           <div
-            class="rounded-xl md:rounded-3xl ml-auto md:ml-0 lg:ml-0 xl:ml-auto p-2 m-2 bg-white text-red-100 w-16 sm:w-20 md:w-20 lg:w-16 xl:w-24 h-16 sm:h-16 md:h-20 lg:h-16 xl:h-24 flex items-center justify-center text-xl font-bold shadow-xl"
+            class="rounded-xl md:rounded-3xl ml-auto md:ml-0 lg:ml-0 xl:ml-auto p-2 m-2 bg-white text-red-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-20 lg:w-16 xl:w-24 h-16 sm:h-16 md:h-20 lg:h-16 xl:h-24 flex items-center justify-center text-xl font-bold shadow-xl"
           >
             <g-image class="mb-0"
               :src="partners[5].image.file.url"
