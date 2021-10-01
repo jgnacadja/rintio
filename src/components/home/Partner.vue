@@ -39,7 +39,7 @@
     >
       <div class="1/3 space-y-4">
         <div
-          class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-gray-100 w-24 sm:w-28 md:w-48 lg:w-48 xl:w-60 h-24 sm:h-28 md:h-48 lg:h-48 xl:h-60 flex items-center justify-center text-xl font-bold shadow-xl"
+          class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-gray-100 aspect-w-10 aspect-h-5 w-24 sm:w-28 md:w-48 lg:w-48 xl:w-60 h-24 sm:h-28 md:h-48 lg:h-48 xl:h-60 flex items-center justify-center text-xl font-bold shadow-xl"
         >
           <g-image class="mb-0" :src="partners[0].image.file.url" :alt="partners[0].name" />
         </div>
