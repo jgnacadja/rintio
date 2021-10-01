@@ -95,7 +95,15 @@
         <div class="flex flex-row h-full">
           <div class="w-2/5 h-48 md:h-full">
             <g-link :to="edge.node.path">
-              <div class="sm:aspect-w-16 sm:aspect-h-10 md:aspect-w-14 md:aspect-h-16 xl:aspect-w-16 xl:aspect-h-16">
+              <div
+               class="
+               aspect-w-12 aspect-h-16 
+               sm:aspect-w-16 sm:aspect-h-10 
+               md:aspect-w-14 md:aspect-h-16 
+               xl:aspect-w-10 xl:aspect-h-10 
+               2xl:aspect-w-16 2xl:aspect-h-10 
+               3xl:aspect-w-16 3xl:aspect-h-10
+               ">
                 <g-image
                   alt="iot"
                   title="scrum"
