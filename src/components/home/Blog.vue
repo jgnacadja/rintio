@@ -40,7 +40,7 @@
         :key="edge.node.id"
       >
         <g-link :to="edge.node.path">
-          <div class="sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8">
+          <div class="aspect-w-7 aspect-h-8 xs:aspect-w-16 xs:aspect-h-7 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8">
             <g-image
               alt="iot"
               title="scrum"

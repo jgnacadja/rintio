@@ -49,7 +49,7 @@
       >
       <g-link :to="story.path">
         <div class="w-full h-full p-4 bg-white lg:p-0">
-          <div class="sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10">
+          <div class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10">
             <g-image
               alt="Atut"
               title="Africa TechUp Tour"
