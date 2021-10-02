@@ -337,7 +337,7 @@ export default {
     };
   },
   methods: {
-    sendEmail: function(e) {
+    sendEmail: (e) => {
       $this = this;
       $this.result = null;
       $this.color = null;
