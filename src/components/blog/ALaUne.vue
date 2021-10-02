@@ -177,9 +177,9 @@
                 cursor-pointer
               "
               v-bind:class="{
-                'bg-gray-100': currentIndexEvent == events.length - 1,
+                'bg-gray-100': currentIndexEvent == featuredPost.length - 1,
                 'bg-primary border-primary':
-                  currentIndexEvent != events.length - 1,
+                  currentIndexEvent != featuredPost.length - 1,
               }"
             >
               <ArrowRight />

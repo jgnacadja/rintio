@@ -338,9 +338,9 @@ export default {
   },
   methods: {
     sendEmail: (e) => {
-      $this = this;
-      $this.result = null;
-      $this.color = null;
+      let $this = this;
+      $this.data.result = null;
+      $this.data.color = null;
 
       emailjs
         .sendForm(
