@@ -318,6 +318,7 @@
 <script>
 import dayjs from "dayjs";
 import "dayjs/locale/fr";
+dayjs.locale("fr");
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -441,9 +442,6 @@ export default {
       currentIndexEvent: 0,
       slidesPerBreakpoint: 4,
     };
-  },
-  mounted() {
-    dayjs.locale("fr");
   },
   created() {
     if (typeof window !== "undefined") {
