@@ -27,9 +27,7 @@
           class="border rounded shadow-sm bg-white"
           @afterChange="currentIndex = $event"
         >
-          <div v-for="(edge, index) in featuredPost" :key="edge.node.id">
-            {{ index }}
-            {{ num_index++ }}
+          <div v-for="edge in featuredPost" :key="edge.node.id">
             <g-link :to="edge.node.path">
               <div
                 class="
@@ -142,18 +140,22 @@
             <div
               class="
                 z-10
-                bg-primary bg-opacity-10
+                bg-opacity-10
                 w-8
                 h-8
                 mr-2
                 rounded-md
-                border border-primary
+                border
                 flex
                 items-center
                 justify-center
                 text-black
                 cursor-pointer
               "
+              v-bind:class="{
+                'bg-gray-100': currentIndexEvent == 0,
+                'bg-primary border-primary': currentIndexEvent != 0,
+              }"
             >
               <ArrowLeft />
             </div>
@@ -163,17 +165,22 @@
             <div
               class="
                 z-10
-                bg-primary bg-opacity-10
+                bg-opacity-10
                 w-8
                 h-8
                 rounded-md
-                border border-primary
+                border
                 flex
                 items-center
                 justify-center
                 text-black
                 cursor-pointer
               "
+              v-bind:class="{
+                'bg-gray-100': currentIndexEvent == events.length - 1,
+                'bg-primary border-primary':
+                  currentIndexEvent != events.length - 1,
+              }"
             >
               <ArrowRight />
             </div>
@@ -233,7 +240,6 @@ export default {
   methods: {
     showNext() {
       this.$refs.carouselref.next();
-      console.log(this.settings.initialSlide);
     },
     showPrev() {
       this.$refs.carouselref.prev();
