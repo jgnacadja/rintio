@@ -27,10 +27,9 @@
           class="border rounded shadow-sm bg-white"
           @afterChange="currentIndex = $event"
         >
-          <div v-for="(edge, index) in featuredPost"
-               :key="edge.node.id">
-          {{index}}
-          {{num_index++}}
+          <div v-for="(edge, index) in featuredPost" :key="edge.node.id">
+            {{ index }}
+            {{ num_index++ }}
             <g-link :to="edge.node.path">
               <div
                 class="
@@ -100,7 +99,7 @@
                         {{ edge.node.author }}
                       </p>
                       <p class="text-gray-400 -mt-6">
-                        {{ edge.node.date | FormatDate }}
+                        {{ edge.node.date | formatDate }}
                       </p>
                     </div>
                   </div>
@@ -155,8 +154,8 @@
                 text-black
                 cursor-pointer
               "
-            >          
-                <ArrowLeft />
+            >
+              <ArrowLeft />
             </div>
           </button>
 
@@ -176,7 +175,7 @@
                 cursor-pointer
               "
             >
-                <ArrowRight />
+              <ArrowRight />
             </div>
           </button>
         </div>
@@ -186,7 +185,7 @@
 </template>
 
 <script>
-import moment from "moment";
+import dayjs from "dayjs";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -239,16 +238,16 @@ export default {
     showPrev() {
       this.$refs.carouselref.prev();
     },
-    
+
     richtextToHTML(content) {
       return documentToHtmlString(content);
     },
   },
   filters: {
     // Filter definitions
-    FormatDate(value) {
+    formatDate(value) {
       if (value) {
-        return moment(String(value)).format("MM/DD/YYYY");
+        return dayjs(String(value)).format("MM/DD/YYYY");
       }
     },
   },
