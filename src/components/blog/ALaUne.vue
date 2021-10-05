@@ -153,8 +153,8 @@
                 cursor-pointer
               "
               v-bind:class="{
-                'bg-gray-100': currentIndexEvent == 0,
-                'bg-primary border-primary': currentIndexEvent != 0,
+                'bg-gray-100': currentIndex == 0,
+                'bg-primary border-primary': currentIndex != 0,
               }"
             >
               <ArrowLeft />
@@ -177,9 +177,9 @@
                 cursor-pointer
               "
               v-bind:class="{
-                'bg-gray-100': currentIndexEvent == featuredPost.length - 1,
+                'bg-gray-100': currentIndex == featuredPost.length - 1,
                 'bg-primary border-primary':
-                  currentIndexEvent != featuredPost.length - 1,
+                  currentIndex != featuredPost.length - 1,
               }"
             >
               <ArrowRight />
@@ -235,6 +235,7 @@ export default {
         currentIndex: 0,
       },
       currentIndex: 0,
+      currentIndexEvent: 0,
     };
   },
   methods: {

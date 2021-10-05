@@ -33,6 +33,23 @@
               v-html="edge.node.excerpt"
             ></div>
           </div>
+          <div class="flex float-right">
+            <div class="absolute bottom-6">
+              <g-link :to="blog">
+                <button
+                  class="
+                    font-medium
+                    md:text-lg
+                    hover:text-white
+                    focus:outline-none
+                    -mx-8
+                  "
+                >
+                  <span class="hidden sm:flex" style="color: white"><Arrow /></span>
+                </button>
+              </g-link>
+            </div>
+        </div>
         </div>
       </div>
 
@@ -78,6 +95,7 @@
 
 <script>
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import Arrow from "~/assets/images/icons/arrow.svg";
 
 export default {
   props: {
@@ -94,6 +112,11 @@ export default {
       },
     },
   },
+
+  components:{
+    Arrow,
+  },
+
   methods: {
     richtextToHTML(content) {
       return documentToHtmlString(content);
