@@ -29,8 +29,6 @@
         >
           <div v-for="(edge, index) in featuredPost"
                :key="edge.node.id">
-          {{index}}
-          {{num_index++}}
             <g-link :to="edge.node.path">
               <div
                 class="
@@ -224,7 +222,7 @@ export default {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 1,
+        initialSlide: 0,
         arrows: false,
         currentIndex: 0,
       },
