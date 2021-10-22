@@ -48,7 +48,7 @@
                     md:text-lg
                     hover:text-white
                     focus:outline-none
-                    -mx-8
+                    -mx-6
                   "
                 >
                   <span class="hidden sm:flex" style="color: white"><Arrow /></span>
