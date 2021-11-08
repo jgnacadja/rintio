@@ -44,7 +44,11 @@ module.exports = {
         borderStyle: ['hover'],
         animation: ["responsive", "motion-safe", "motion-reduce", "hover"],
         translate: ["active", "hover", "group-hover"],
+        aspectRatio: ['responsive', 'hover']
+
 
     },
-    plugins: [],
+    plugins: [
+        require ( '@tailwindcss/aspect-ratio' ) , 
+    ],
 };

@@ -20,15 +20,14 @@
           v-html="richtextToHTML(title.text)"
         ></h2>
       </div>
-
-      <div class="mx-24 3xl:mx-52 4xl:mx-96">
+      <div class="3xl:mx-52 4xl:mx-96">
         <VueSlickCarousel
           v-bind="settings"
           ref="carouselref"
           class="border rounded shadow-sm bg-white"
+          @afterChange="currentIndex = $event"
         >
-          <div v-for="(edge, index) in featuredPost"
-               :key="edge.node.id">
+          <div v-for="edge in featuredPost" :key="edge.node.id">
             <g-link :to="edge.node.path">
               <div
                 class="
@@ -65,7 +64,7 @@
                   </h2>
                   <div
                     class="py-3 text-justify"
-                    v-html="richtextToHTML(edge.node.metaDescription)"
+                    v-html="richtextToHTML(edge.node.metaDescription)"jhkijhih
                   ></div>
                   <div
                     class="
@@ -98,7 +97,7 @@
                         {{ edge.node.author }}
                       </p>
                       <p class="text-gray-400 -mt-6">
-                        {{ edge.node.date | FormatDate }}
+                        {{ edge.node.date | formatDate }}
                       </p>
                     </div>
                   </div>
@@ -141,20 +140,24 @@
             <div
               class="
                 z-10
-                bg-primary bg-opacity-10
+                bg-opacity-10
                 w-8
                 h-8
                 mr-2
                 rounded-md
-                border border-primary
+                border
                 flex
                 items-center
                 justify-center
                 text-black
                 cursor-pointer
               "
-            >          
-                <ArrowLeft />
+              v-bind:class="{
+                'bg-gray-100': currentIndex == 0,
+                'bg-primary border-primary': currentIndex != 0,
+              }"
+            >
+              <ArrowLeft />
             </div>
           </button>
 
@@ -162,19 +165,24 @@
             <div
               class="
                 z-10
-                bg-primary bg-opacity-10
+                bg-opacity-10
                 w-8
                 h-8
                 rounded-md
-                border border-primary
+                border
                 flex
                 items-center
                 justify-center
                 text-black
                 cursor-pointer
               "
+              v-bind:class="{
+                'bg-gray-100': currentIndex == featuredPost.length - 1,
+                'bg-primary border-primary':
+                  currentIndex != featuredPost.length - 1,
+              }"
             >
-                <ArrowRight />
+              <ArrowRight />
             </div>
           </button>
         </div>
@@ -184,7 +192,7 @@
 </template>
 
 <script>
-import moment from "moment";
+import dayjs from "dayjs";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -226,26 +234,27 @@ export default {
         arrows: false,
         currentIndex: 0,
       },
+      currentIndex: 0,
+      currentIndexEvent: 0,
     };
   },
   methods: {
     showNext() {
       this.$refs.carouselref.next();
-      console.log(this.settings.initialSlide);
     },
     showPrev() {
       this.$refs.carouselref.prev();
     },
-    
+
     richtextToHTML(content) {
       return documentToHtmlString(content);
     },
   },
   filters: {
     // Filter definitions
-    FormatDate(value) {
+    formatDate(value) {
       if (value) {
-        return moment(String(value)).format("MM/DD/YYYY");
+        return dayjs(String(value)).format("MM/DD/YYYY");
       }
     },
   },

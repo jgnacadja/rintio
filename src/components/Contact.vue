@@ -1,10 +1,25 @@
 <template>
   <div class="w-full px-4 justify-evenly md:px-0 md:text-left">
     <div
-      class="md:grid gap-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:grid-flow-row xl:grid-flow-rows"
+      class="
+        md:grid
+        gap-2
+        md:grid-cols-2
+        lg:grid-cols-2
+        xl:grid-cols-2
+        lg:grid-flow-row
+        xl:grid-flow-rows
+      "
     >
       <div
-        class="col-span-2 sm:col-span-1 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1"
+        class="
+          col-span-2
+          sm:col-span-1
+          md:col-span-1
+          lg:row-span-1
+          xl:col-span-1
+          xl:row-span-1
+        "
       >
         <div class="sm:px-8 lg:px-10">
           <div>
@@ -20,17 +35,37 @@
                       class="inline-block w-20 h-2 rounded-full bg-secondary"
                     ></span>
                     <span
-                      class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"
+                      class="
+                        inline-block
+                        w-2
+                        h-2
+                        ml-2
+                        rounded-full
+                        bg-secondary
+                      "
                     ></span>
                     <span
-                      class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"
+                      class="
+                        inline-block
+                        w-2
+                        h-2
+                        ml-2
+                        rounded-full
+                        bg-secondary
+                      "
                     ></span>
                   </div>
                 </div>
 
                 <div class="pt-6 mx-4 md:mx-0">
                   <h2
-                    class="my-3 text-2xl font-extrabold md:text-5xl text-primary"
+                    class="
+                      my-3
+                      text-2xl
+                      font-extrabold
+                      md:text-5xl
+                      text-primary
+                    "
                   >
                     Besoin d'échanger sur
                     <span class="text-secondary">votre besoin ?</span>
@@ -44,7 +79,19 @@
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
                       <button
-                        class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary max-w-max bg-opacity-10"
+                        class="
+                          flex
+                          items-center
+                          w-12
+                          h-12
+                          p-3
+                          uppercase
+                          rounded-full
+                          pointer-events-none
+                          bg-secondary
+                          max-w-max
+                          bg-opacity-10
+                        "
                       >
                         <Phone />
                       </button>
@@ -77,7 +124,20 @@
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
                       <button
-                        class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary text-secondary max-w-max bg-opacity-10"
+                        class="
+                          flex
+                          items-center
+                          w-12
+                          h-12
+                          p-3
+                          uppercase
+                          rounded-full
+                          pointer-events-none
+                          bg-secondary
+                          text-secondary
+                          max-w-max
+                          bg-opacity-10
+                        "
                       >
                         <Mail />
                       </button>
@@ -100,14 +160,31 @@
       </div>
 
       <div
-        class="col-span-2 md:col-span-1 lg:row-span-1 xl:col-span-1 xl:row-span-1 bg-sky-800"
+        class="
+          col-span-2
+          md:col-span-1
+          lg:row-span-1
+          xl:col-span-1
+          xl:row-span-1
+          bg-sky-800
+        "
       >
         <div class="sm:px-8 lg:px-5">
           <!-- Contact Form -->
           <div class="items-center">
             <div class="mx-auto">
               <div
-                class="max-w-lg min-h-0 p-5 mx-auto my-10 bg-white rounded-sm shadow-md md:shadow-xl"
+                class="
+                  max-w-lg
+                  min-h-0
+                  p-5
+                  mx-auto
+                  my-10
+                  bg-white
+                  rounded-sm
+                  shadow-md
+                  md:shadow-xl
+                "
               >
                 <div class="mx-4 md:m-7">
                   <h2
@@ -126,7 +203,17 @@
                         id="name"
                         placeholder="Nom complet"
                         requiredmethods
-                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        class="
+                          w-full
+                          px-3
+                          py-2
+                          placeholder-gray-300
+                          border border-gray-300
+                          rounded-sm
+                          focus:outline-none
+                          focus:ring focus:ring-indigo-100
+                          focus:border-indigo-300
+                        "
                       />
                     </div>
                     <div class="mb-6">
@@ -137,7 +224,17 @@
                         id="email"
                         placeholder="Email"
                         required
-                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        class="
+                          w-full
+                          px-3
+                          py-2
+                          placeholder-gray-300
+                          border border-gray-300
+                          rounded-sm
+                          focus:outline-none
+                          focus:ring focus:ring-indigo-100
+                          focus:border-indigo-300
+                        "
                       />
                     </div>
                     <div class="mb-6">
@@ -148,7 +245,17 @@
                         id="object"
                         placeholder="Objet"
                         required
-                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        class="
+                          w-full
+                          px-3
+                          py-2
+                          placeholder-gray-300
+                          border border-gray-300
+                          rounded-sm
+                          focus:outline-none
+                          focus:ring focus:ring-indigo-100
+                          focus:border-indigo-300
+                        "
                       />
                     </div>
                     <div class="mb-6">
@@ -158,19 +265,47 @@
                         name="message"
                         id="message"
                         placeholder="Message"
-                        class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        class="
+                          w-full
+                          px-3
+                          py-2
+                          placeholder-gray-300
+                          border border-gray-300
+                          rounded-sm
+                          focus:outline-none
+                          focus:ring focus:ring-indigo-100
+                          focus:border-indigo-300
+                        "
                         required
                       ></textarea>
                     </div>
                     <div class="mb-6">
                       <button
                         type="submit"
-                        class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none"
+                        class="
+                          w-full
+                          px-3
+                          py-2
+                          text-base text-white
+                          rounded-sm
+                          md:py-4
+                          md:text-xl
+                          bg-secondary
+                          focus:bg-secondary
+                          focus:outline-none
+                        "
                       >
                         Envoyer
                       </button>
                     </div>
-                    <p class="text-base text-center" id="result"></p>
+                    <p
+                      class="text-base text-center"
+                      id="result"
+                      :class="color"
+                      v-if="result"
+                    >
+                      {{ result }}
+                    </p>
                   </form>
                 </div>
               </div>
@@ -187,7 +322,6 @@ import Phone from "~/assets/images/icons/phone.svg";
 import Mail from "~/assets/images/icons/envelope.svg";
 import emailjs from "emailjs-com";
 export default {
-  name: "ContactUs",
   components: {
     Phone,
     Mail,
@@ -198,31 +332,16 @@ export default {
       email: null,
       object: null,
       message: null,
+      result: null,
+      color: null,
     };
   },
-  // methods: {
-  //   sendEmail(e) {
-  //     try {
-  //       emailjs.sendForm('service_kcg1fpl', 'template_q2ewdb3', e.target, 'user_Y2KIJGmvuqmYVVqo9JBO8',
-  //       {
-  //         name: this.name,
-  //         email: this.email,
-  //         object: this.object,
-  //         message: this.message
-  //       })
-  //     // document.getElementById("popup").style.display="block"
-  //     } catch(error) {
-  //         console.log({error})
-  //     }
-  //     // Reset form field
-  //     this.name = ''
-  //     this.email = ''
-  //     this.object = ''
-  //     this.message = ''
-  //   },
-  // }
   methods: {
     sendEmail: (e) => {
+      let $this = this;
+      $this.data.result = null;
+      $this.data.color = null;
+
       emailjs
         .sendForm(
           "service_kcg1fpl",
@@ -231,28 +350,23 @@ export default {
           "user_Y2KIJGmvuqmYVVqo9JBO8"
         )
         .then(
-          (result) => {
-            console.log("SUCCESS!", result.status, result.text);
-            document.getElementById("result").innerHTML =
-              "<span style='color:green'>Votre message a été envoyé.</span>";
-            // innerHTML="Votre message a été envoyé.";
+          () => {
+            $this.result = "Votre message a été envoyé";
+            $this.color = "text-green-500";
             // Reset form field
-            document.getElementById("form").reset();
-            // document.forms["form"]["name"].value="";
-            // document.forms["form"]["email"].value="";
-            // document.forms["form"]["object"].value="";
-            // document.forms["form"]["message"].value="";
-            // this.name = ''
-            // this.email = ''
-            // this.object = ''
-            // this.message = ''
+            $this.resetForm();
           },
-          (error) => {
-            console.log("FAILED...", error);
-            document.getElementById("result").innerHTML =
-              "<span style='color:red'>Problème de connection, vérifiez votre connexion.</span>";
+          () => {
+            $this.result = "Une erreur est survenue, veuillez réessayer";
+            $this.color = "text-red-500";
           }
         );
+    },
+    resetForm() {
+      this.name = null;
+      this.email = null;
+      this.object = null;
+      this.message = null;
     },
   },
 };
