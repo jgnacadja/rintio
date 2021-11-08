@@ -52,7 +52,7 @@
                     md:text-lg
                     hover:text-white 
                     focus:outline-none
-                    -mx-6
+                    -mx-8
                   "
                 >
                   <span class="hidden sm:flex" style="color: white"><Arrow /></span>
@@ -66,9 +66,9 @@
       <div
         v-for="edge in offers"
         :key="edge.node.id"
-        @mouseover="mouseState = edge.node.id"
-        @mouseleave="mouseState = null"
         class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1"
+        @mouseover="state = edge.node.id"
+        @mouseleave="state = null"
       >
           <div
             class="shadow-lg bg-center bg-cover bg-no-repeat h-full"
@@ -103,10 +103,9 @@
                 
                 <div class="flex float-right">
                   <div class="absolute bottom-6"
-                    v-if="mouseState === edge.node.id"
-                    v-show="state"
                   >
-                    <g-link :to="edge.node.path">
+       
+                    <g-link :to="edge.node.path" v-if="state === edge.node.id">
                       <button
                         class="
                           rounded-full
@@ -119,7 +118,7 @@
                           md:text-lg
                           hover:text-white
                           focus:outline-none
-                          -mx-8
+                          -mx-10
                         "
                       >
                         <span class="hidden sm:flex" style="color: white"><Arrow /></span>
