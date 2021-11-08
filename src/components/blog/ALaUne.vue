@@ -64,7 +64,7 @@
                   </h2>
                   <div
                     class="py-3 text-justify"
-                    v-html="richtextToHTML(edge.node.metaDescription)"
+                    v-html="richtextToHTML(edge.node.metaDescription)"jhkijhih
                   ></div>
                   <div
                     class="
