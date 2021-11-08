@@ -9,6 +9,8 @@
         <div
           v-for="edge in offer"
           :key="edge.node.id"
+          @mouseover="mouseOver"
+          @mouseleave="mouseLeave"
           class="w-full relative px-4 bg-center bg-cover bg-no-repeat h-80 md:h-full"
           v-bind:style="[
             {
@@ -34,7 +36,9 @@
             ></div>
           </div>
           <div class="flex float-right">
-            <div class="absolute bottom-6">
+            <div class="absolute bottom-6"
+              v-show="active"
+            >
               <g-link :to="edge.node.path">
                 <button
                   class="
@@ -46,7 +50,7 @@
                     p-2
                     font-medium
                     md:text-lg
-                    hover:text-white
+                    hover:text-white 
                     focus:outline-none
                     -mx-6
                   "
@@ -62,6 +66,8 @@
       <div
         v-for="edge in offers"
         :key="edge.node.id"
+        @mouseover="mouseState = edge.node.id"
+        @mouseleave="mouseState = null"
         class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1"
       >
           <div
@@ -96,7 +102,10 @@
                 
                 
                 <div class="flex float-right">
-                  <div class="absolute bottom-6">
+                  <div class="absolute bottom-6"
+                    v-if="mouseState === edge.node.id"
+                    v-show="state"
+                  >
                     <g-link :to="edge.node.path">
                       <button
                         class="
@@ -277,7 +286,25 @@ export default {
     Arrow,
   },
 
+  data() {
+    return{
+      active: false,
+      state: false
+    }
+  },
+
   methods: {
+    mouseOver: function(){
+      this.active = true; 
+    },
+     mouseLeave: function(){
+      this.active = false; 
+    },
+
+    mouseState: function(){
+      this.state = true; 
+    },
+
     richtextToHTML(content) {
       return documentToHtmlString(content);
     },

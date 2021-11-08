@@ -59,7 +59,7 @@
         "node-sass": "^6.0.1",
         "postcss": "^8",
         "raw-loader": "^4.0.2",
-        "sass-loader": "^12",
+        "sass-loader": "^10",
         "svg-to-vue-component": "^0.3.8",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16",
         "webpack-node-externals": "^3.0.0"
