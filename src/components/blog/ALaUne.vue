@@ -230,7 +230,7 @@ export default {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 1,
+        initialSlide: 0,
         arrows: false,
         currentIndex: 0,
       },
