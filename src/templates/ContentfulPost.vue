@@ -4,7 +4,18 @@
     <div class="mx-auto bg-white pb-12">
       <div class="relative w-full mx-auto mb-4 md:mb-0" style="height: 24em">
         <div
-          class="absolute bottom-0 left-0 z-10 w-full h-full bg-gradient-to-b from-transparent to-black opacity-70"
+          class="
+            absolute
+            bottom-0
+            left-0
+            z-10
+            w-full
+            h-full
+            bg-gradient-to-b
+            from-transparent
+            to-black
+            opacity-70
+          "
         ></div>
         <g-image
           v-if="$page.post.coverImage"
@@ -15,7 +26,18 @@
 
         <div class="absolute z-20 w-full h-full p-4 pt-10 text-center md:pt-28">
           <span
-            class="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-gray-200 bg-secondary md:mb-10"
+            class="
+              inline-flex
+              items-center
+              justify-center
+              px-4
+              py-1
+              mx-auto
+              mb-4
+              text-gray-200
+              bg-secondary
+              md:mb-10
+            "
             >{{ $page.post.categories[0].title }}</span
           >
           <h2 class="text-4xl font-semibold leading-tight text-gray-100">
@@ -244,6 +266,7 @@ query query($path:String) {
               }
             }
             metaDescription
+            views
           }
         }
       }
@@ -286,6 +309,7 @@ export default {
       tags: "",
       allrelatedPosts: [],
       relatedPosts: [],
+      views: 0,
     };
   },
   mounted() {
@@ -300,7 +324,9 @@ export default {
   },
   created() {
     this.allrelatedPosts = this.$page.relatedPosts.belongsTo.edges;
-    this.updateRelatedPosts();
+    this.views = (this.$page.post.views !== null && this.$page.post.views) || 0;
+    //this.fetchContentfulEntry();
+    this.getPageViewsReportFromGoogleAnalytics();
   },
   watch: {
     $route() {
@@ -318,6 +344,74 @@ export default {
       this.relatedPosts = this.allrelatedPosts;
       this.relatedPosts = this.relatedPosts.filter((edge) => {
         return edge.node.path !== currentPath;
+      });
+    },
+    fetchContentfulEntry() {
+      var axios = require("axios");
+
+      var headers = {
+        Authorization: `Bearer ${process.env.GRIDSOME_CONTENTFUL_API_KEY}`,
+      };
+
+      axios
+        .get(
+          `https://api.contentful.com/spaces/${process.env.GRIDSOME_CONTENTFUL_SPACE_ID}/environments/master/entries/${this.$page.post.id}`,
+          {
+            headers: headers,
+          }
+        )
+        .then((response) => {
+          this.updateContentfulEntryViews(response.data.sys.version);
+        });
+    },
+    updateContentfulEntryViews(sysVersion) {
+      var axios = require("axios");
+
+      var headers = {
+        Authorization: `Bearer ${process.env.GRIDSOME_CONTENTFUL_API_KEY}`,
+        "X-Contentful-Version": sysVersion,
+      };
+
+      axios
+        .put(
+          `https://api.contentful.com/spaces/${process.env.GRIDSOME_CONTENTFUL_SPACE_ID}/environments/master/entries/${this.$page.post.id}`,
+          {
+            fields: {
+              views: {
+                "en-US": this.postVersion + 1,
+              },
+            },
+          },
+          {
+            headers: headers,
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        });
+    },
+    async getPageViewsReportFromGoogleAnalytics() {
+
+      const axios = require('axios');
+      const oauth = require('axios-oauth-client');
+      const getAuthorizationCode = oauth.client(axios.create(), {
+        url: 'https://accounts.google.com/o/oauth2/v2/auth',
+        grant_type: 'authorization_code',
+        client_id: '221869739290-lb6esmqfdlgh9s09nsenkjggi158b89b.apps.googleusercontent.com',
+        client_secret: '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',
+        scope: 'https://www.googleapis.com/auth/analytics.readonly',
+      });
+
+const auth = await getAuthorizationCode(); // => { "access_token": "...", "expires_in": 900, ... }
+
+      var headers = {
+        "Authorization": "Bearer 4/0AX4XfWimNbrsB0x5Uk_2KN2cYEKOgfEX2lzYIz_EaCYbeBJRSYFgtlRHCnC3UuUCj6Iksw",
+      };
+
+      axios.get(`https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${process.env.GRIDSOME_GOOGLE_ANALYTICS}&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==${this.$static.metadata.siteUrl}${this.fullPath}&start-date=30daysAgo&end-date=yesterday&max-results=1`, {
+        headers: headers
+      }).then(response => {
+        this.views = response.data.rows[0]["ga:pageviews"];
       });
     },
   },

@@ -18,12 +18,15 @@
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
       <g-link :to="stories[0].path">
         <div class="w-full h-full bg-white">
-          <g-image
-            alt="coraq"
-            title="Coraq Chmp"
-            :src="stories[0].coverImage.file.url"
-            class="object-cover w-full mb-0"
-          />
+          <div class="aspect-w-16 aspect-h-11">
+            <g-image
+              alt="coraq"
+              title="Coraq Chmp"
+              :src="stories[0].coverImage.file.url"
+              class="object-cover w-full mb-0"
+            />
+          </div>
+          
 
           <h3
             class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
@@ -46,12 +49,14 @@
       >
       <g-link :to="story.path">
         <div class="w-full h-full p-4 bg-white lg:p-0">
-          <g-image
-            alt="Atut"
-            title="Africa TechUp Tour"
-            :src="story.coverImage.file.url"
-            class="object-cover w-full mb-0 h-52"
-          />
+          <div class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10">
+            <g-image
+              alt="Atut"
+              title="Africa TechUp Tour"
+              :src="story.coverImage.file.url"
+              class="object-cover w-full mb-0 h-52"
+            />
+          </div>
 
           <h3
             class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"

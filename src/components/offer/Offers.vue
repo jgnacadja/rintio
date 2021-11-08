@@ -47,7 +47,7 @@
                     justify-center
                     items-center
                     bg-primary
-                    p-2
+                    md:p-2
                     font-medium
                     md:text-lg
                     hover:text-white 
@@ -55,7 +55,7 @@
                     -mx-8
                   "
                 >
-                  <span class="hidden sm:flex" style="color: white"><Arrow /></span>
+                  <span style="color: white"><Arrow /></span>
                 </button>
               </g-link>
             </div>
@@ -104,7 +104,6 @@
                 <div class="flex float-right">
                   <div class="absolute bottom-6"
                   >
-       
                     <g-link :to="edge.node.path" v-if="state === edge.node.id">
                       <button
                         class="
@@ -113,15 +112,15 @@
                           justify-center
                           items-center
                           bg-primary
-                          p-2
+                          p-2 
                           font-medium
                           md:text-lg
                           hover:text-white
                           focus:outline-none
-                          -mx-10
+                          -mx-12
                         "
                       >
-                        <span class="hidden sm:flex" style="color: white"><Arrow /></span>
+                        <span style="color: white"><Arrow /></span>
                       </button>
                     </g-link>
                   </div>
