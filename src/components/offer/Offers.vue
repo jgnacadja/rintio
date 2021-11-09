@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-6 lg:px-8 xl:px-18 2xl:px-16">
+  <div class="md:container mx-4 md:mx-auto md:px-6 lg:px-8 xl:px-18 2xl:px-16">
     <div
       class="grid md:grid-cols-9 lg:grid-cols-4 gap-4 md:grid-flow-row lg:grid-flow-rows"
     >
@@ -48,12 +48,12 @@
                     justify-center
                     items-center
                     bg-primary
-                    md:p-2
+                    p-1 md:p-2
                     font-medium
                     md:text-lg
                     hover:text-white 
                     focus:outline-none
-                    -mx-8
+                    -mx-6 md:-mx-8
                     animation
                   "
                 >
@@ -115,12 +115,12 @@
                           justify-center
                           items-center
                           bg-primary
-                          p-2 
+                          p-1 md:p-2 
                           font-medium
                           md:text-lg
                           hover:text-white
                           focus:outline-none
-                          -mx-12
+                          -mx-8 md:-mx-12
                         "
                       >
                         <span style="color: white"><Arrow /></span>
