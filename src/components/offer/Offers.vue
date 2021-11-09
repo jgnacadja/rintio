@@ -36,11 +36,12 @@
             ></div>
           </div>
           <div class="flex float-right">
-            <div class="absolute bottom-6"
-              v-show="active"
+            <div class="absolute animation bottom-6"
+            v-show="active"
             >
               <g-link :to="edge.node.path">
                 <button
+                
                   class="
                     rounded-full
                     flex
@@ -53,6 +54,7 @@
                     hover:text-white 
                     focus:outline-none
                     -mx-8
+                    animation
                   "
                 >
                   <span style="color: white"><Arrow /></span>
@@ -107,6 +109,7 @@
                     <g-link :to="edge.node.path" v-if="state === edge.node.id">
                       <button
                         class="
+                          animation
                           rounded-full
                           flex
                           justify-center
@@ -309,3 +312,29 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+  .animation{
+    animation-name: example;
+    animation-duration: 1.5s;
+  }
+  
+
+  @keyframes example {
+    from  {
+      opacity : 0;
+      margin-bottom: -25px;
+    }
+    to    {
+      margin-bottom: 0px;
+      opacity : 1
+    }
+  }
+</style>
+
+
+
+
+
+  
+  
