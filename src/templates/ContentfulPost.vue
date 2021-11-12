@@ -46,10 +46,10 @@
         </div>
       </div>
 
-      <div class="mx-20">
+      <div class="mx-2 md:mx-20">
         <div class="w-full py-6 mx-auto text-gray-800 capitalize font-roboto">
           <div
-            class="items-center justify-between max-w-screen-xl mx-auto space-x-1 text-gray-800 md:flex"
+            class="items-center justify-between max-w-screen-xl mx-auto space-x-1 text-gray-800 flex"
           >
             <div class="">
               <g-link class="hover:text-primary" to="/"> Acceuil </g-link>
@@ -59,7 +59,7 @@
             <div
               class="max-w-screen-xl px-4 mx-auto text-lg leading-relaxed text-gray-700 md:flex lg:px-0"
             >
-              <div class="flex items-center py-2 space-x-16">
+              <div class="flex items-center py-2 space-x-4 md:space-x-16">
                 <div class="flex space-x-4">
                   <button
                     class="flex items-center w-10 h-10 p-3 uppercase rounded-full pointer-events-none bg-secondary max-w-max bg-opacity-10"
@@ -97,7 +97,7 @@
         </div>
 
         <div
-          class="max-w-screen-xl px-4 mx-auto mt-4 text-lg leading-relaxed text-gray-700 md:flex lg:px-0"
+          class="max-w-screen-xl px-4 mx-auto mt-4 text-lg leading-relaxed text-gray-700 flex lg:px-0"
         >
           <div class="flex items-center py-2">
             <button
@@ -152,7 +152,7 @@
           <h2 class="text-base font-bold md:text-3xl">Vous pouvez aussi lire</h2>
           <g-link
             to="/blog"
-            class="hidden px-3 py-2 transition duration-200 text-gray-800 bg-gray-200 rounded cursor-pointer md:block hover:bg-secondary hover:text-white"
+            class="hidden md:block px-3 py-2 transition duration-200 text-gray-800 bg-gray-200 rounded cursor-pointer hover:bg-secondary hover:text-white"
           >
             Voir toutes les publications
           </g-link>
