@@ -3,7 +3,7 @@
     class="container w-full mx-auto mt-4 md:mt-24 md:px-20 space-x-0 md:flex"
   >
     <div class="w-full">
-      <div class="w-full my-6 mx-24 3xl:mx-52 4xl:mx-96">
+      <div class="my-6 mx-24 3xl:mx-52 4xl:mx-96">
         <h2
           class="
             px-1
@@ -20,7 +20,7 @@
           v-html="richtextToHTML(title.text)"
         ></h2>
       </div>
-      <div class="3xl:mx-52 4xl:mx-96">
+      <div class="-mx-2 md:mx-auto 3xl:mx-52 4xl:mx-96">
         <VueSlickCarousel
           v-bind="settings"
           ref="carouselref"
@@ -35,14 +35,14 @@
                   md:grid-cols-2
                   md:px-8
                   md:gap-x-8
-                  md:py-4
+                  py-0 md:py-2
                 "
               >
                 <div
                   class="
                     col-start-1
                     row-start-2
-                    mt-72
+                    mt-48
                     md:mt-0
                     md:row-start-1
                     px-4
@@ -55,7 +55,7 @@
                       text-left
                       font-bold
                       text-secondary text-opacity-70
-                      py-3
+                      pt-3
                       mt-24
                       md:mt-0
                     "
@@ -63,8 +63,8 @@
                     {{ edge.node.title }}
                   </h2>
                   <div
-                    class="py-3 text-justify"
-                    v-html="richtextToHTML(edge.node.metaDescription)"jhkijhih
+                    class="md:py-3 text-justify"
+                    v-html="richtextToHTML(edge.node.metaDescription)"
                   ></div>
                   <div
                     class="
@@ -72,7 +72,7 @@
                       items-center
                       text-sm
                       font-medium
-                      my-5
+                      md:my-5
                       md:mt-2
                       md:mb-4
                     "
@@ -122,7 +122,7 @@
                           inset-0
                           w-full
                           md:h-full
-                          h-96
+                          h-72
                           object-cover
                           bg-gray-100
                           md:rounded-lg
