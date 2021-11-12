@@ -42,7 +42,7 @@
                   class="
                     col-start-1
                     row-start-2
-                    mt-72
+                    mt-48
                     md:mt-0
                     md:row-start-1
                     px-4
@@ -64,7 +64,7 @@
                   </h2>
                   <div
                     class="md:py-3 text-justify"
-                    v-html="richtextToHTML(edge.node.metaDescription)"jhkijhih
+                    v-html="richtextToHTML(edge.node.metaDescription)"
                   ></div>
                   <div
                     class="
@@ -122,7 +122,7 @@
                           inset-0
                           w-full
                           md:h-full
-                          h-96
+                          h-72
                           object-cover
                           bg-gray-100
                           md:rounded-lg
