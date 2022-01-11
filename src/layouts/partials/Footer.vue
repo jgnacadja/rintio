@@ -51,14 +51,14 @@
         </div>
 
         <!-- Col-2 -->
-        <div
+        <!-- <div
           class="hidden w-full p-8 -my-5 md:block sm:p-4 md:p4 lg:p-8 sm:w-3/12 lg:w-3/12 md:m-5"
         >
-          <!-- Col Title -->
+       
           <div class="mb-6 font-extrabold text-white uppercase font-roboto">
             Produits
           </div>
-          <!-- Title Dot -->
+       
           <div class="-mt-8">
             <span
               class="inline-block w-20 h-2 rounded-full bg-secondary"
@@ -71,7 +71,6 @@
             ></span>
           </div>
 
-          <!-- Links -->
           <a
             href="https://coraq.formation.chmp.org"
             class="block w-full my-3 font-medium text-white duration-300 hover:text-gray-200"
@@ -90,7 +89,7 @@
           >
             &bull; Duniya Data
           </a>
-        </div>
+        </div> -->
 
         <!-- Col-3 -->
         <div

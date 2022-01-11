@@ -21,23 +21,23 @@
       />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <!-- <LazyHydrate when-visible>
       <Team
         :content="$page.page.sections[2].columns[0]"
         :team="$page.page.sections[2].columns.slice(1)"
       />
-    </LazyHydrate>
+    </LazyHydrate> -->
 
     <LazyHydrate when-idle>
       <Stats :content="$page.page.sections[3].columns" />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <!-- <LazyHydrate when-visible>
       <Experts
         :content="$page.page.sections[4].columns[0]"
         :experts="$page.page.sections[4].columns.slice(1)"
       />
-    </LazyHydrate>
+    </LazyHydrate> -->
   </Layout>
 </template>
 

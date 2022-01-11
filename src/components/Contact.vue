@@ -101,7 +101,7 @@
                         <a
                           class="hover:text-secondary"
                           href="tel:+33 6 25 18 40 11"
-                          >+33 6 25 18 40 11</a
+                          >+33 6 27 54 50 21</a
                         >
                       </div>
                       <div>
