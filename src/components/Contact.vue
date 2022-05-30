@@ -342,7 +342,7 @@ export default {
       $this.data.result = null;
       $this.data.color = null;
 
-      emailjs
+      /* emailjs
         .sendForm(
           "service_kcg1fpl",
           "template_q2ewdb3",
@@ -360,7 +360,9 @@ export default {
             $this.result = "Une erreur est survenue, veuillez réessayer";
             $this.color = "text-red-500";
           }
-        );
+        ); */
+      $this.result = "Une erreur est survenue, veuillez réessayer plus tard";
+      $this.color = "text-red-500";
     },
     resetForm() {
       this.name = null;
