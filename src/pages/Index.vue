@@ -29,13 +29,13 @@
       />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <!-- <LazyHydrate when-visible>
       <Partner
         :title="$page.page.sections[4].name"
         :content="$page.page.sections[4].columns[0]"
         :partners="$page.page.sections[4].columns[1].columns"
       />
-    </LazyHydrate>
+    </LazyHydrate> -->
 
     <LazyHydrate when-visible>
       <Blog
@@ -159,7 +159,6 @@ import Homeslider from "~/components/home/Homeslider.vue";
 import About from "~/components/home/About.vue";
 import Offer from "~/components/home/Offer.vue";
 import Story from "~/components/home/Story.vue";
-import Partner from "~/components/home/Partner.vue";
 import Blog from "~/components/home/Blog.vue";
 import Map from "~/components/home/Map.vue";
 
@@ -170,7 +169,6 @@ export default {
     About,
     Offer,
     Story,
-    Partner,
     Blog,
     Map,
   },

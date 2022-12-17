@@ -214,7 +214,6 @@
         <div class="mt-4">
           <g-link :to="button.ctaLink">
             <button
-              v-if="!about"
               type="submit"
               class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase"
             >

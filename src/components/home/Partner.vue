@@ -133,7 +133,40 @@ export default {
     partners: {
       type: Array,
       default() {
-        return [];
+        return [
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          },
+          {
+            image :{file : {url:''}},
+            name:''
+          }
+        ];
       },
     },
   },

@@ -412,6 +412,8 @@ import Linkedin from "~/assets/images/icons/linkedin.svg";
 import Twitter from "~/assets/images/icons/twitter.svg";
 
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import axios from 'axios';
+import oauth from 'axios-oauth-client';
 
 export default {
   mixins: [PostSeo],
@@ -433,22 +435,24 @@ export default {
       allrelatedPosts: [],
       relatedPosts: [],
       views: 0,
+      google: process.env.GRIDSOME_GOOGLE_ANALYTICS || ''
     };
   },
   mounted() {
     this.path = this.$router.currentRoute.path.slice("/")[1];
     this.fullPath = this.$router.currentRoute.path;
-
-    /* this.$page.post.tags.forEach((tag) => {
-      this.tags !== ""
-        ? (this.tags = `${this.tags},${tag.title}`)
-        : (this.tags = `${tag.title}`);
-    }); */
+  },
+  computed: {
+    siteUrl() {
+      return  this.$static.metadata.siteUrl || '';
+    },
+    contentfulSpace(){
+      return process.env.GRIDSOME_CONTENTFUL_SPACE_ID || ''
+    }
   },
   created() {
     this.allrelatedPosts = this.$page.relatedPosts.belongsTo.edges;
     this.views = (this.$page.post.views !== null && this.$page.post.views) || 0;
-    //this.fetchContentfulEntry();
     this.getPageViewsReportFromGoogleAnalytics();
   },
   watch: {
@@ -478,7 +482,7 @@ export default {
 
       axios
         .get(
-          `https://api.contentful.com/spaces/${process.env.GRIDSOME_CONTENTFUL_SPACE_ID}/environments/master/entries/${this.$page.post.id}`,
+          `https://api.contentful.com/spaces/${this.contentfulSpace}/environments/master/entries/${this.$page.post.id}`,
           {
             headers: headers,
           }
@@ -497,7 +501,7 @@ export default {
 
       axios
         .put(
-          `https://api.contentful.com/spaces/${process.env.GRIDSOME_CONTENTFUL_SPACE_ID}/environments/master/entries/${this.$page.post.id}`,
+          `https://api.contentful.com/spaces/${this.contentfulSpace}/environments/master/entries/${this.$page.post.id}`,
           {
             fields: {
               views: {
@@ -515,8 +519,6 @@ export default {
     },
     async getPageViewsReportFromGoogleAnalytics() {
 
-      const axios = require('axios');
-      const oauth = require('axios-oauth-client');
       const getAuthorizationCode = oauth.client(axios.create(), {
         url: 'https://accounts.google.com/o/oauth2/v2/auth',
         grant_type: 'authorization_code',
@@ -525,13 +527,14 @@ export default {
         scope: 'https://www.googleapis.com/auth/analytics.readonly',
       });
 
-const auth = await getAuthorizationCode(); // => { "access_token": "...", "expires_in": 900, ... }
+      await getAuthorizationCode(); // => { "access_token": "...", "expires_in": 900, ... }
 
       var headers = {
         "Authorization": "Bearer 4/0AX4XfWimNbrsB0x5Uk_2KN2cYEKOgfEX2lzYIz_EaCYbeBJRSYFgtlRHCnC3UuUCj6Iksw",
       };
 
-      axios.get(`https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${process.env.GRIDSOME_GOOGLE_ANALYTICS}&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==${this.$static.metadata.siteUrl}${this.fullPath}&start-date=30daysAgo&end-date=yesterday&max-results=1`, {
+      axios.get(`https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${this.google}&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==${this.siteUrl}${this.fullPath}&start-date=30daysAgo&end-date=yesterday&max-results=1`, 
+      {
         headers: headers
       }).then(response => {
         this.views = response.data.rows[0]["ga:pageviews"];
