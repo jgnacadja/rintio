@@ -101,7 +101,7 @@
         :key="edge.node.id"
       >
         <div class="flex flex-row h-full">
-          <div class="w-2/5 h-48 md:h-full">
+          <div class="w-2/5 h-full">
             <g-link :to="edge.node.path">
               <div
                 class="
