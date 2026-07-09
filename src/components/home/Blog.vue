@@ -15,43 +15,22 @@
     </div>
 
     <div
-      class="
-        grid
-        gap-4
-        px-2
-        md:grid-cols-6
-        xl:grid-cols-2
-        md:grid-flow-row
-        xl:grid-flow-rows
-        xl:px-24
-      "
+      class="grid gap-4 px-2 md:grid-cols-6 xl:grid-cols-2 md:grid-flow-row xl:grid-flow-rows xl:px-24"
     >
       <div
-        class="
-          h-full
-          col-span-3
-          row-span-2
-          bg-white
-          shadow-sm
-          xl:col-span-1
-          xl:row-span-2
-        "
+        class="h-full col-span-3 row-span-2 bg-white shadow-sm xl:col-span-1 xl:row-span-2"
         v-for="edge in $static.featuredPost.belongsTo.edges"
         :key="edge.node.id"
       >
         <g-link :to="edge.node.path">
           <div
-            class="
-              aspect-w-7 aspect-h-8
-              xs:aspect-w-16 xs:aspect-h-7
-              sm:aspect-w-16 sm:aspect-h-6
-              md:aspect-w-16 md:aspect-h-8
-              xl:aspect-w-16 xl:aspect-h-8
-            "
+            class="aspect-w-7 aspect-h-8 xs:aspect-w-16 xs:aspect-h-7 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8"
           >
             <g-image
-              alt="iot"
-              title="scrum"
+              :alt="`${edge.node.title} - Article de blog sur Scrum, DevOps, Data Science et technologies innovantes pour développeurs`"
+                :title="edge.node.title"
+                width="464"    
+              height="203"
               :src="edge.node.coverImage.file.url"
               class="object-cover w-full h-64 mb-0"
             />
@@ -89,14 +68,7 @@
         </g-link>
       </div>
       <div
-        class="
-          col-span-3
-          row-span-1
-          bg-white
-          shadow-sm
-          xl:col-span-1
-          xl:row-span-1
-        "
+        class="col-span-3 row-span-1 bg-white shadow-sm xl:col-span-1 xl:row-span-1"
         v-for="edge in $static.posts.belongsTo.edges"
         :key="edge.node.id"
       >
@@ -104,18 +76,13 @@
           <div class="w-2/5 h-48 md:h-full">
             <g-link :to="edge.node.path">
               <div
-                class="
-                  aspect-w-12 aspect-h-16
-                  sm:aspect-w-16 sm:aspect-h-10
-                  md:aspect-w-14 md:aspect-h-16
-                  xl:aspect-w-10 xl:aspect-h-10
-                  2xl:aspect-w-16 2xl:aspect-h-10
-                  3xl:aspect-w-16 3xl:aspect-h-10
-                "
+                class="aspect-w-12 aspect-h-16 sm:aspect-w-16 sm:aspect-h-10 md:aspect-w-14 md:aspect-h-16 xl:aspect-w-10 xl:aspect-h-10 2xl:aspect-w-16 2xl:aspect-h-10 3xl:aspect-w-16 3xl:aspect-h-10"
               >
                 <g-image
-                  alt="iot"
-                  title="scrum"
+                :alt="`${edge.node.title} - Article de blog sur la Data Science, IA et transformation numérique pour professionnels IT`"
+                  :title="edge.node.title"
+                  width="200"   
+                 height="267"
                   :src="edge.node.coverImage.file.url"
                   class="object-cover w-full h-full"
                 />
@@ -125,13 +92,7 @@
           <div class="w-3/5 px-4 mt-4">
             <g-link :to="edge.node.path">
               <h5
-                class="
-                  mb-2
-                  text-lg
-                  font-semibold
-                  text-left text-gray-800
-                  md:text-xl
-                "
+                class="mb-2 text-lg font-semibold text-left text-gray-800 md:text-xl"
               >
                 {{ edge.node.title }}
               </h5>
@@ -156,14 +117,7 @@
                 </span>
               </p>
               <div
-                class="
-                  w-full
-                  text-xs
-                  font-light
-                  text-justify text-gray-600
-                  md:text-sm
-                  text-ellipsis--2
-                "
+                class="w-full text-xs font-light text-justify text-gray-600 md:text-sm text-ellipsis--2"
                 v-html="richtextToHTML(edge.node.metaDescription)"
               ></div>
             </g-link>
@@ -176,14 +130,7 @@
       <g-link to="/blog" class="ml-auto">
         <button
           href="#"
-          class="
-            flex
-            ml-auto
-            font-medium
-            md:text-lg
-            hover:text-secondary
-            focus:outline-none
-          "
+          class="flex ml-auto font-medium md:text-lg hover:text-secondary focus:outline-none"
         >
           Voir plus de publications <span class="pt-1 pl-2"><Arrow /></span>
         </button>

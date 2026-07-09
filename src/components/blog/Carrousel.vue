@@ -5,18 +5,7 @@
     <div class="w-full">
       <div class="w-full my-6">
         <h3
-          class="
-            px-3
-            md:text-md
-            md:mx-auto
-            mt-20
-            md:-mt-16
-            lg:-mt-16
-            xl:-mt-12
-            2xl:-mt-12
-            text-primary
-            font-bold
-          "
+          class="px-3 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold"
         >
           <span
             v-if="type === 'post'"
@@ -38,48 +27,24 @@
           <!--first slide-card-->
           <div class="md:mx-2 w-full" v-for="edge in posts" :key="edge.node.id">
             <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-center bg-cover bg-no-repeat
-                w-11/12
-              "
+              class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12"
             >
               <g-link :to="edge.node.path">
                 <div class="w-full overflow-hidden">
                   <g-image
-                    alt="Scrum"
-                    title="Africa TechUp Tour"
+                    :alt="`${edge.node.title} - Article de blog sur les technologies innovantes, DevOps, Data Science et IA`"
+                    :title="edge.node.title"
                     :src="edge.node.coverImage.file.url"
                     class="object-cover w-full h-48 mb-0"
+                    width="400"
+                    height="300"
                   />
                   <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                     <div
-                      class="
-                        text-primary
-                        font-bold
-                        tracking-wider
-                        leading-relaxed
-                        font-roboto
-                      "
+                      class="text-primary font-bold tracking-wider leading-relaxed font-roboto"
                     >
                       <span
-                        class="
-                          relative
-                          hidden
-                          w-20
-                          font-light
-                          h-9
-                          p-2
-                          ml-0
-                          text-sm text-center text-white
-                          capitalize
-                          bg-secondary
-                          md:block
-                          -mt-7
-                        "
+                        class="relative hidden w-20 font-light h-9 p-2 ml-0 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
                         data-v-27823496=""
                       >
                         {{ edge.node.categories[0].title }}
@@ -88,21 +53,10 @@
                     </div>
 
                     <div
-                      class="
-                        tracking-tight
-                        leading-relaxed
-                        font-roboto
-                        text-xs
-                        mt-2
-                      "
+                      class="tracking-tight leading-relaxed font-roboto text-xs mt-2"
                     >
                       <div
-                        class="
-                          text-gray-600
-                          font-light
-                          text-base
-                          text-ellipsis--2
-                        "
+                        class="text-gray-600 font-light text-base text-ellipsis--2"
                         v-html="richtextToHTML(edge.node.metaDescription)"
                       ></div>
                     </div>
@@ -115,20 +69,7 @@
         <div class="flex float-right mt-4" style="margin-right: 2rem">
           <button
             @click="showPrev"
-            class="
-              flex
-              items-center
-              justify-center
-              text-black
-              cursor-pointer
-              z-10
-              w-8
-              h-8
-              mr-2
-              rounded-md
-              border
-              bg-opacity-10
-            "
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10"
             v-bind:class="{
               'bg-gray-100':
                 currentIndex == 0 || posts.length < slidesPerBreakpoint,
@@ -139,19 +80,7 @@
           </button>
           <button
             @click="showNext"
-            class="
-              flex
-              items-center
-              justify-center
-              text-black
-              cursor-pointer
-              z-10
-              w-8
-              h-8
-              rounded-md
-              border
-              bg-opacity-10
-            "
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10"
             v-bind:class="{
               'bg-gray-100':
                 currentIndex == posts.length - slidesPerBreakpoint &&
@@ -177,27 +106,12 @@
             :key="edge.node.id"
           >
             <div
-              class="
-                shadow-md
-                group
-                container
-                max-w-sm
-                bg-center bg-cover bg-no-repeat
-                w-11/12
-                relative
-              "
+              class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 relative"
             >
               <g-link :to="edge.node.path">
                 <div class="w-full overflow-hidden">
                   <div
-                    class="
-                      absolute
-                      inset-0
-                      bg-gradient
-                      from-black
-                      to-black
-                      opacity-25
-                    "
+                    class="absolute inset-0 bg-gradient from-black to-black opacity-25"
                   ></div>
                   <div
                     class="border-b-2 py-2 text-center font-semibold opacity-90"
@@ -223,14 +137,7 @@
                   </div>
                   <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                     <div
-                      class="
-                        text-primary
-                        font-bold
-                        tracking-wider
-                        leading-relaxed
-                        font-roboto
-                        my-2
-                      "
+                      class="text-primary font-bold tracking-wider leading-relaxed font-roboto my-2"
                     >
                       {{ edge.node.title }}
                     </div>
@@ -239,13 +146,7 @@
                       class="tracking-tight leading-relaxed font-roboto text-xs"
                     >
                       <div
-                        class="
-                          text-gray-600
-                          font-light
-                          text-base
-                          text-ellipsis--2
-                          my-2
-                        "
+                        class="text-gray-600 font-light text-base text-ellipsis--2 my-2"
                         v-html="richtextToHTML(edge.node.metaDescription)"
                       ></div>
                     </div>
@@ -261,20 +162,7 @@
         <div class="flex float-right mt-4" style="margin-right: 2rem">
           <button
             @click="showPrevEvent"
-            class="
-              flex
-              items-center
-              justify-center
-              text-black
-              cursor-pointer
-              z-10
-              w-8
-              h-8
-              mr-2
-              rounded-md
-              border
-              bg-opacity-10
-            "
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10"
             v-bind:class="{
               'bg-gray-100':
                 currentIndexEvent == 0 || events.length < slidesPerBreakpoint,
@@ -285,19 +173,7 @@
           </button>
           <button
             @click="showNextEvent"
-            class="
-              flex
-              items-center
-              justify-center
-              text-black
-              cursor-pointer
-              z-10
-              w-8
-              h-8
-              rounded-md
-              border
-              bg-opacity-10
-            "
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10"
             v-bind:class="{
               'bg-gray-100':
                 currentIndexEvent == events.length - slidesPerBreakpoint &&

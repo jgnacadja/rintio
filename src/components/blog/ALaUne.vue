@@ -5,18 +5,7 @@
     <div class="w-full">
       <div class="w-full my-6 mx-24 3xl:mx-52 4xl:mx-96">
         <h2
-          class="
-            px-1
-            md:text-md
-            md:mx-auto
-            mt-20
-            md:-mt-16
-            lg:-mt-16
-            xl:-mt-12
-            2xl:-mt-12
-            text-primary
-            font-bold
-          "
+          class="px-1 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold"
           v-html="richtextToHTML(title.text)"
         ></h2>
       </div>
@@ -30,65 +19,33 @@
           <div v-for="edge in featuredPost" :key="edge.node.id">
             <g-link :to="edge.node.path">
               <div
-                class="
-                  grid grid-cols-1
-                  md:grid-cols-2
-                  md:px-8
-                  md:gap-x-8
-                  md:py-4
-                "
+                class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4"
               >
                 <div
-                  class="
-                    col-start-1
-                    row-start-2
-                    mt-72
-                    md:mt-0
-                    md:row-start-1
-                    px-4
-                  "
+                  class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4"
                 >
                   <h2
-                    class="
-                      text-lg
-                      md:text-2xl
-                      text-left
-                      font-bold
-                      text-secondary text-opacity-70
-                      py-3
-                      mt-24
-                      md:mt-0
-                    "
+                    class="text-lg md:text-2xl text-left font-bold text-secondary text-opacity-70 py-3 mt-24 md:mt-0"
                   >
                     {{ edge.node.title }}
                   </h2>
                   <div
                     class="py-3 text-justify"
-                    v-html="richtextToHTML(edge.node.metaDescription)"jhkijhih
+                    v-html="richtextToHTML(edge.node.metaDescription)"
                   ></div>
                   <div
-                    class="
-                      flex
-                      items-center
-                      text-sm
-                      font-medium
-                      my-5
-                      md:mt-2
-                      md:mb-4
-                    "
+                    class="flex items-center text-sm font-medium my-5 md:mt-2 md:mb-4"
                   >
                     <div class="ml-1">
                       <img
                         :src="edge.node.coverImage.file.url"
-                        alt=""
-                        class="
-                          rounded-full
-                          inset-0
-                          w-12
-                          h-12
-                          object-cover
-                          bg-gray-100
+                        :alt="
+                          edge.node.title +
+                          ' - Image de couverture de l\'article principal du blog'
                         "
+                        class="rounded-full inset-0 w-12 h-12 object-cover bg-gray-100"
+                        width="48"
+                        height="48"
                       />
                     </div>
 
@@ -104,29 +61,19 @@
                 </div>
 
                 <div
-                  class="
-                    col-start-1
-                    row-start-1
-                    flex
-                    md:col-start-2
-                    md:row-span-3
-                  "
+                  class="col-start-1 row-start-1 flex md:col-start-2 md:row-span-3"
                 >
                   <div class="w-full grid grid-cols-1 grid-rows-2 gap-2">
                     <div class="relative col-span-3 row-span-2 md:col-span-2">
                       <img
                         :src="edge.node.coverImage.file.url"
-                        alt=""
-                        class="
-                          absolute
-                          inset-0
-                          w-full
-                          md:h-full
-                          h-96
-                          object-cover
-                          bg-gray-100
-                          md:rounded-lg
+                        :alt="
+                          edge.node.title +
+                          ' - Article principal de blog sur les technologies innovantes et pratiques DevOps'
                         "
+                        class="absolute inset-0 w-full md:h-full h-96 object-cover bg-gray-100 md:rounded-lg"
+                        width="600"
+                        height="400"
                       />
                     </div>
                   </div>
@@ -138,20 +85,7 @@
         <div class="flex float-right mt-4" style="margin-right: 2rem">
           <button @click="showPrev">
             <div
-              class="
-                z-10
-                bg-opacity-10
-                w-8
-                h-8
-                mr-2
-                rounded-md
-                border
-                flex
-                items-center
-                justify-center
-                text-black
-                cursor-pointer
-              "
+              class="z-10 bg-opacity-10 w-8 h-8 mr-2 rounded-md border flex items-center justify-center text-black cursor-pointer"
               v-bind:class="{
                 'bg-gray-100': currentIndex == 0,
                 'bg-primary border-primary': currentIndex != 0,
@@ -163,19 +97,7 @@
 
           <button @click="showNext">
             <div
-              class="
-                z-10
-                bg-opacity-10
-                w-8
-                h-8
-                rounded-md
-                border
-                flex
-                items-center
-                justify-center
-                text-black
-                cursor-pointer
-              "
+              class="z-10 bg-opacity-10 w-8 h-8 rounded-md border flex items-center justify-center text-black cursor-pointer"
               v-bind:class="{
                 'bg-gray-100': currentIndex == featuredPost.length - 1,
                 'bg-primary border-primary':

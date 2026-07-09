@@ -28,6 +28,8 @@
                       <g-image
                         :src="expert.image.file.url"
                         :alt="expert.image.name"
+                        width="64"
+                        height="64"
                       ></g-image>
                     </div>
                     <span class="inline-flex">
@@ -47,7 +49,7 @@
                     </h6>
                     <p
                       class="mb-2 text-xs"
-                      v-for="skill in expert.text.content.slice(0,3)"
+                      v-for="skill in expert.text.content.slice(0, 3)"
                       :key="skill.content"
                     >
                       {{ skill.content[0].value }}

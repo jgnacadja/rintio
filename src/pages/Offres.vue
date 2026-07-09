@@ -7,11 +7,13 @@
     <div class="items-center w-full justify-center py-6">
       <div class="text-center mx-4 sm:mx-4 lg:mx-32 xl:mx-64">
         <h1 class="my-3 text-2xl lg:text-5xl font-extrabold text-primary">
-          {{$page.page.sections[0].columns[0].title}}
+          {{ $page.page.sections[0].columns[0].title }}
         </h1>
         <div
           class="md:w-2/3 mx-auto py-4 md:px-0"
-          v-html="richtextToHTML($page.page.sections[0].columns[0].text.content[0])"
+          v-html="
+            richtextToHTML($page.page.sections[0].columns[0].text.content[0])
+          "
         ></div>
       </div>
     </div>
@@ -34,7 +36,13 @@
         >
           <g-image
             :src="$page.page.sections[1].columns[1].image.file.url"
+            :alt="
+              $page.page.sections[1].columns[1].title +
+              ' - Illustration de nos offres de service IT'
+            "
             class=""
+            width="500"
+            height="400"
           />
         </div>
         <div
@@ -58,7 +66,7 @@
                     type="submit"
                     class="px-10 py-4 md:py-6 text-white text-sm bg-secondary rounded-sm font-bold hover:bg-primary focus:outline-none uppercase"
                   >
-                    {{$page.page.sections[1].columns[1].ctaText}}
+                    {{ $page.page.sections[1].columns[1].ctaText }}
                   </button>
                 </g-link>
               </div>
@@ -224,9 +232,9 @@ export default {
     this.path = this.$router.currentRoute.path.slice(1).replace("-", " ");
   },
   methods: {
-        richtextToHTML(content) {
+    richtextToHTML(content) {
       return documentToHtmlString(content);
     },
-  }
+  },
 };
 </script>

@@ -16,30 +16,33 @@
       class="grid gap-4 md:grid-cols-6 xl:grid-cols-4 md:grid-flow-row xl:grid-flow-rows"
     >
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
-      <g-link :to="stories[0].path">
-        <div class="w-full h-full bg-white">
-          <div class="aspect-w-16 aspect-h-11">
-            <g-image
-              alt="coraq"
-              title="Coraq Chmp"
-              :src="stories[0].coverImage.file.url"
-              class="object-cover w-full mb-0"
-            />
-          </div>
-          
+        <g-link :to="stories[0].path">
+          <div class="w-full h-full bg-white">
+            <div class="aspect-w-16 aspect-h-11">
+              <g-image
+               :alt="`${stories[0].title} - Cas d'étude technical IT, laboratoire d'innovation et analyse de données avancées`"
+                :title="stories[0].seoTitle"
+                :src="stories[0].coverImage.file.url"
+                class="object-cover w-full mb-0"
+                width="576"
+                height="396"
+              />
+            </div>
 
-          <h3
-            class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
-          >
-            {{ stories[0].seoTitle }}
-          </h3>
-          <p
-            class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
-          >
-            {{ stories[0].excerpt }}
-          </p>
-        </div>
-      </g-link>
+            <h3
+              class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
+            >
+              {{ stories[0].seoTitle }}
+            </h3>
+            <p
+              class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
+            >
+              {{ stories[0].excerpt }}Gros plan d'un professionnel en
+              laboratoire médical symbolisant la précision de l'analyse de
+              données et le test d'algorithmes complexes
+            </p>
+          </div>
+        </g-link>
       </div>
 
       <div
@@ -47,29 +50,33 @@
         v-for="story in stories.slice(1)"
         :key="story.id"
       >
-      <g-link :to="story.path">
-        <div class="w-full h-full p-4 bg-white lg:p-0">
-          <div class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10">
-            <g-image
-              alt="Atut"
-              title="Africa TechUp Tour"
-              :src="story.coverImage.file.url"
-              class="object-cover w-full mb-0 h-52"
-            />
-          </div>
+        <g-link :to="story.path">
+          <div class="w-full h-full p-4 bg-white lg:p-0">
+            <div
+              class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10"
+            >
+              <g-image
+                :alt="`${story.title} - Cas de succès et retour d'expérience professionnel en transformation numérique et DevOps`"
+                :title="story.title"
+                :src="story.coverImage.file.url"
+                class="object-cover w-full mb-0 h-52"
+                width="512"
+                height="416"
+              />
+            </div>
 
-          <h3
-            class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
-          >
-            {{ story.title }}
-          </h3>
-          <p
-            class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10 text-ellipsis--2"
-          >
-            {{ story.excerpt }}
-          </p>
-        </div>
-      </g-link>
+            <h3
+              class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
+            >
+              {{ story.title }}
+            </h3>
+            <p
+              class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10 text-ellipsis--2"
+            >
+              {{ story.excerpt }}
+            </p>
+          </div>
+        </g-link>
       </div>
     </div>
   </div>

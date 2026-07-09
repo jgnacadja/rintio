@@ -28,12 +28,18 @@
             v-if="state !== service.id"
             class="w-16 md:w-16 xl:w-18 mx-auto"
             :src="service.columns[0].image.file.url"
+            :alt="service.columns[2].title + ' - Icône de service '"
+            width="72"
+            height="72"
           />
 
           <g-image
             v-if="state === service.id"
             class="w-16 md:w-16 xl:w-18 mx-auto"
             :src="service.columns[1].image.file.url"
+            :alt="service.columns[2].title + ' - Icône de service actif'"
+            width="72"
+            height="72"
           />
 
           <h2 class="py-2 text-primary group-hover:text-white">

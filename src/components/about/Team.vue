@@ -25,6 +25,8 @@
               class="w-full 4xl:w-full"
               :src="leader.image.file.url"
               :alt="leader.image.name"
+              width="400"
+              height="533"
             ></g-image>
             <h2
               class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary"
@@ -64,6 +66,8 @@
                 class="w-full 4xl:w-full"
                 :src="leader.image.file.url"
                 :alt="leader.image.name"
+                width="300"
+                height="400"
               ></g-image>
               <h2
                 class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary"

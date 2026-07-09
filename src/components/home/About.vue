@@ -8,6 +8,7 @@
           class="Hero__image-grid md:-mt-14 w-5/6 mx-auto md:mx-0"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 590.91 632.66"
+          
         >
           <defs>
             <clipPath id="heroclip1">
@@ -148,6 +149,8 @@
               clip-path="url(#heroclip1)"
               preserveAspectRatio="xMidYMid slice"
               :xlink:href="swipper.columns[0].image.file.url"
+              alt="jeunes experts en technologies connectées développant des applications mobiles 
+              et des solutions cloud sur mesure pour le web."
               x="0"
               y="51"
               width="490"
@@ -159,6 +162,8 @@
               preserveAspectRatio="xMidYMid slice"
               x="279"
               y="293"
+              alt="nos developpeurs et experts en applications web partagent leurs idées 
+              et analysent des documents techniques lors d'un projet de développement."
               width="294"
               height="270"
             ></image>
@@ -168,6 +173,8 @@
               preserveAspectRatio="xMidYMid slice"
               x="92"
               y="233"
+              alt=" Illustration d'un cerveau en circuits imprimés lumineux symbolisant l'intégration de l'intelligence artificielle 
+              et du machine learning dans nos applications web"
               width="176"
               height="164"
             ></image>
@@ -175,6 +182,8 @@
               clip-path="url(#heroclip4)"
               :xlink:href="swipper.columns[3].image.file.url"
               preserveAspectRatio="xMidYMid slice"
+              alt="Poignée de main chaleureuse entre un client et 
+              un chef de projet devant des écrans de contrôle pour valider la livraison d'un logiciel web."
               x="181"
               y="404"
               width="78"
