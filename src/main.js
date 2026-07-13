@@ -63,5 +63,5 @@ export default function (Vue, { head }) {
   Vue.use(VueTailwind);
 
   //http requests via axios
-  Vue.use(Axios);
+  Vue.prototype.$axios = Axios;
 }

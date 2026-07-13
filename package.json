@@ -1,6 +1,9 @@
 {
     "name": "rintio-menu",
     "private": true,
+    "engine": {
+        "node": ">=20.0.0"
+    },
     "scripts": {
         "build": "gridsome build",
         "develop": "gridsome develop",
@@ -62,7 +65,7 @@
         "gridsome-plugin-tailwindcss": "^4.1.1",
         "js-yaml": "^4.1.0",
         "markdownlint-cli": "0.31.1",
-        "node-sass": "^6.0.1",
+        "sass": "^1.50.0",
         "postcss": "^8",
         "raw-loader": "^4.0.2",
         "sass-loader": "^10",

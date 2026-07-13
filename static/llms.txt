@@ -1,0 +1,26 @@
+# Rintio
+
+> Entreprise de services du numérique spécialisée en Data et Intelligence Artificielle (Big Data, Data Science, Data Engineering, Cloud, DevOps), avec des équipes à Paris, Cotonou et Abidjan.
+
+Rintio accompagne les entreprises et institutions dans leur transformation data : définition de stratégie data, gouvernance, valorisation des données, DataScience et IA prédictive. L'entreprise propose également des prestations d'offshoring/nearshoring en développement (Python, Java, PHP, React, Angular), administration cloud (AWS, Azure, Google Cloud, IBM Cloud, OVH), migration cloud et DevOps, pour des clients en Europe, en Afrique et en Amérique du Nord. Fondée en 2017.
+
+## Sitemap
+https://www.rintio.com/sitemap.xml
+
+## Offres
+- [Nos offres](https://www.rintio.com/offres): Panorama des prestations Data, Cloud et Offshoring proposées par Rintio.
+- [Offshoring développement](https://www.rintio.com/offres): Mise à disposition de développeurs ou d'équipes complètes (Python, Java, PHP, React, Angular, API, Big Data).
+- [Offshoring Cloud & Infrastructure](https://www.rintio.com/offres): Administration cloud, migration cloud et DevOps.
+
+## Entreprise
+- [À propos](https://www.rintio.com/a-propos): Présentation de Rintio, ses expertises (Big Data, IA, API, microservices, DataViz, DevOps) et sa vision.
+- [Accueil](https://www.rintio.com/): Page d'accueil, offres, actualités et implantations (Paris, Cotonou, Abidjan).
+
+## Contenus & initiatives
+- [Blog Rintio](https://www.rintio.com/blog): Articles sur la Data, l'IA, le DevOps et les méthodes agiles.
+- [Africa TechUp Tour](http://africatechuptour.com/): Programme de formation et de partage de connaissances en Data/IA porté par Rintio en Afrique.
+- [Coraq Lab / CHMP](https://coraq.formation.chmp.org): Plateforme e-learning développée par Rintio avec CHMP et Initiative 5%.
+
+## Optional
+- [iDermato (Google Play)](https://play.google.com/store/apps/details?id=com.rintio.idermato&hl=fr&gl=US): Application d'IA au service des dermatologues et généralistes pour le diagnostic d'affections cutanées sur peaux noires.
+- Contact: contact@rintio.com
