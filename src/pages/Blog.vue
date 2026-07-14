@@ -179,7 +179,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.page.description,
+          content:
+            "Blog Rintio : articles sur la Data, DevOps et innovation digitale en Afrique. Retrouvez les insights des experts. Africa TechUp Tour.",
         },
         {
           key: "keywords",

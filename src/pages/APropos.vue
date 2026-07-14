@@ -149,7 +149,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.page.description,
+          content:
+            "Rintio : 10 ans d'expertise en Afrique de l'Ouest. Cabinet basé à Cotonou, Bénin. Innovation, transformation digitale et excellence Africa TechUp Tour.",
         },
         {
           key: "keywords",

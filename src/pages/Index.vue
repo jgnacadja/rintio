@@ -42,7 +42,7 @@
         :title="$page.page.sections[5].name"
         :content="$page.page.sections[5].columns[0]"
       />
-    </LazyHydrate> 
+    </LazyHydrate>
 
     <LazyHydrate when-visible>
       <Map
@@ -179,7 +179,8 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.page.description,
+          content:
+            "Découvrez Rintio, cabinet de conseil en Bénin. Expertise Data, DevOps et transformation digitale en Afrique de l'Ouest. Contactez-nous.",
         },
         {
           key: "keywords",
