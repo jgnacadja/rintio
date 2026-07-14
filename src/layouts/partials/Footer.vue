@@ -14,40 +14,40 @@
           </div>
 
           <p class="mt-6 mb-4">Suivez nous sur :</p>
-            <div class="flex">
-              <a
-                class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
-                href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
-                target="_blank"
-                rel="noopener"
-              >
-                <em class="fab fa-facebook-f"></em>
-              </a>
-              <a
-                class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
-                href="https://www.linkedin.com/company/rintio/"
-                target="_blank"
-                rel="noopener"
-              >
-                <em class="relative fab fa-linkedin-in"></em>
-              </a>
-              <a
-                class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-                rel="noopener"
-              >
-                <em class="relative fab fa-twitter"></em>
-              </a>
-              <a
-                class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
-                href="https://twitter.com/RintioGroup/"
-                target="_blank"
-                rel="noopener"
-              >
-                <em class="relative fab fa-instagram"></em>
-              </a>
-            </div>
+          <div class="flex">
+            <a
+              class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
+              href="https://web.facebook.com/RintioGroup/?_rdc=1&_rdr"
+              target="_blank"
+              rel="noopener"
+            >
+              <em class="fab fa-facebook-f"></em>
+            </a>
+            <a
+              class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
+              href="https://www.linkedin.com/company/rintio/"
+              target="_blank"
+              rel="noopener"
+            >
+              <em class="relative fab fa-linkedin-in"></em>
+            </a>
+            <a
+              class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
+              href="https://twitter.com/RintioGroup/"
+              target="_blank"
+              rel="noopener"
+            >
+              <em class="relative fab fa-twitter"></em>
+            </a>
+            <a
+              class="flex items-center w-5 h-5 mr-2 text-xs bg-white rounded-full place-content-center text-primary"
+              href="https://twitter.com/RintioGroup/"
+              target="_blank"
+              rel="noopener"
+            >
+              <em class="relative fab fa-instagram"></em>
+            </a>
+          </div>
         </div>
 
         <!-- Col-2 -->
@@ -244,7 +244,16 @@
         >
           <div class="h-auto">
             <div class="mb-3 text-red-light">Newsletter</div>
-            <iframe class="mj-w-res-iframe" title="Newsletter" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.mailjet.com/widget/iframe/6ZFB/Kvk" width="100%"></iframe>
+            <iframe
+              class="mj-w-res-iframe"
+              title="Newsletter"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://app.mailjet.com/widget/iframe/6ZFB/Kvk"
+              width="100%"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -252,7 +261,7 @@
       <!-- Copyright Bar -->
       <div class="bg-secondary">
         <div class="px-3 py-4 m-auto font-bold text-center text-white">
-          Rintio 2019 © Tous droits réservés
+          Rintio {{ currentYear }} © Tous droits réservés
         </div>
       </div>
     </footer>
@@ -269,6 +278,7 @@ import Logo from "./Logo";
 import Contact from "~/components/Contact.vue";
 import Send from "~/assets/images/icons/send.svg";
 import ChevronUp from "~/assets/images/icons/chevronup.svg";
+const date = new Date();
 
 export default {
   components: {
@@ -282,6 +292,11 @@ export default {
       openProducts: false,
       openLinks: false,
     };
+  },
+  computed: {
+    currentYear() {
+      return date.getFullYear();
+    },
   },
 };
 </script>
