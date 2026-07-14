@@ -174,7 +174,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.page.seo.name,
+      title: "Solutions Data & IA Expert au Bénin | Tech",
       meta: [
         {
           key: "description",

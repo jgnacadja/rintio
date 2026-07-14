@@ -200,7 +200,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.page.seo.name,
+      title: "Services Data, DevOps, IA au Bénin - Consulting",
       meta: [
         {
           key: "description",

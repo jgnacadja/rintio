@@ -174,7 +174,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.page.seo.name,
+      title: "Blog Bénin: Data, IA, DevOps & Transformation",
       meta: [
         {
           key: "description",

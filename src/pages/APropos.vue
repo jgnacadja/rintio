@@ -144,7 +144,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.page.seo.name,
+      title: "10 ans Expertise Data, IA, DevOps Bénin - ATUT",
       meta: [
         {
           key: "description",
