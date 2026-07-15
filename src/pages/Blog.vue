@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <h1 class="sr-only">Blog Rintio — Actualités Tech, Data & Innovation en Afrique</h1>
     <LazyHydrate when-idle>
       <Breadcrumb :content="this.$page.page.sections[0].columns[0]" />
     </LazyHydrate>

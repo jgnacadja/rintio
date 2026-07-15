@@ -5,10 +5,10 @@
     <div class="justify-center w-full py-6 md:px-20 md:flex md:py-24">
       <div class="w-full mx-auto mb-8 md:mb-0">
         <div class="mx-4 text-center md:mx-0">
-          <h1
+          <h2
             class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
             v-html="content.title"
-          ></h1>
+          ></h2>
 
           <div
             class="mx-auto my-3 md:mb-24 md:w-1/2"

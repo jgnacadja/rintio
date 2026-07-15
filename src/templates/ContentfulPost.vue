@@ -19,9 +19,11 @@
         ></div>
         <g-image
           v-if="$page.post.coverImage"
-          alt="iot"
+          :alt="$page.post.title + ' - ' + $page.post.metaDescription"
           :src="$page.post.coverImage.file.url"
           class="absolute top-0 left-0 z-0 object-cover w-full h-full"
+          width="1200"
+          height="576"
         />
 
         <div class="absolute z-20 w-full h-full p-4 pt-10 text-center md:pt-28">
@@ -40,9 +42,9 @@
             "
             >{{ $page.post.categories[0].title }}</span
           >
-          <h2 class="text-4xl font-semibold leading-tight text-gray-100">
+          <h1 class="text-4xl font-semibold leading-tight text-gray-100">
             {{ $page.post.title }}
-          </h2>
+          </h1>
         </div>
       </div>
 
@@ -271,6 +273,8 @@
             :alt="edge.node.coverImage.title"
             :src="edge.node.coverImage.file.url"
             class="w-full h-64 rounded"
+            width="400"
+            height="256"
           />
           <h2 class="px-4 mb-px text-lg font-bold text-gray-800">
             {{ edge.node.title }}
@@ -411,6 +415,7 @@ import Facebook from "~/assets/images/icons/facebook.svg";
 import Linkedin from "~/assets/images/icons/linkedin.svg";
 import Twitter from "~/assets/images/icons/twitter.svg";
 
+
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import axios from 'axios';
 import oauth from 'axios-oauth-client';
@@ -435,7 +440,7 @@ export default {
       allrelatedPosts: [],
       relatedPosts: [],
       views: 0,
-      google: process.env.GRIDSOME_GOOGLE_ANALYTICS || ''
+      google: process.env.GRIDSOME_GOOGLE_ANALYTICS || '',
     };
   },
   mounted() {
@@ -522,15 +527,15 @@ export default {
       const getAuthorizationCode = oauth.client(axios.create(), {
         url: 'https://accounts.google.com/o/oauth2/v2/auth',
         grant_type: 'authorization_code',
-        client_id: '221869739290-lb6esmqfdlgh9s09nsenkjggi158b89b.apps.googleusercontent.com',
-        client_secret: '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',
+        client_id: process.env.GRIDSOME_GOOGLE_CLIENT_ID || '',
+        client_secret: process.env.GRIDSOME_GOOGLE_CLIENT_SECRET || '',
         scope: 'https://www.googleapis.com/auth/analytics.readonly',
       });
 
       await getAuthorizationCode(); // => { "access_token": "...", "expires_in": 900, ... }
 
       var headers = {
-        "Authorization": "Bearer 4/0AX4XfWimNbrsB0x5Uk_2KN2cYEKOgfEX2lzYIz_EaCYbeBJRSYFgtlRHCnC3UuUCj6Iksw",
+        "Authorization": `Bearer ${process.env.GRIDSOME_GOOGLE_ACCESS_TOKEN || ''}`,
       };
 
       axios.get(`https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${this.google}&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==${this.siteUrl}${this.fullPath}&start-date=30daysAgo&end-date=yesterday&max-results=1`, 

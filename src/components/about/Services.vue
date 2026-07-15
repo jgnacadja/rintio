@@ -9,10 +9,10 @@
   >
     <div class="w-full mx-auto mb-8 md:mb-0">
       <div class="mx-4 md:mx-0 text-center">
-        <h1
+        <h2
           class="pb-8 text-xl md:text-5xl font-extrabold capitalize text-primary"
           v-html="title"
-        ></h1>
+        ></h2>
       </div>
       <div
         class="grid grid-flow-col grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-6 md:grid-rows-3 lg:grid-rows-2 gap-4 mx-4 md:mx-0"

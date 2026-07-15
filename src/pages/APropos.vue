@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <h1 class="sr-only">Rintio — Entreprise technologique africaine : Data, IA & Transformation numérique au Bénin</h1>
     <LazyHydrate when-idle>
       <Breadcrumb :path="path" />
     </LazyHydrate>
