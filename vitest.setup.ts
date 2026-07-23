@@ -40,14 +40,14 @@ vi.stubGlobal('definePageMeta', vi.fn())
 vi.stubGlobal('useNuxtApp', () => ({
   $t: (key: string) => key,
   $tp: (key: string) => key,
-  $i18n: { locale: 'en' }
+  $i18n: { locale: 'fr' }
 }))
 vi.stubGlobal(
   'useI18n',
   vi.fn().mockImplementation(() => ({
     t: (key: string) => key,
     locale: {
-      value: 'en'
+      value: 'fr'
     }
   }))
 )

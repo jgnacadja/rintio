@@ -14,8 +14,7 @@ export default defineConfig({
       '**/coverage/**',
       '**/cypress/**',
       '**/playwright/**',
-      'e2e/**',
-      './composables/pageMeta.ts'
+      'e2e/**'
     ],
     reporters: ['default', 'github-actions', 'vitest-sonar-reporter'],
     outputFile: {
