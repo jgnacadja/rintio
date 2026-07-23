@@ -1,0 +1,34 @@
+# Get the current branch name
+current_branch=$(git symbolic-ref --short HEAD)
+
+# Extract ticket code only if branch matches the pattern <type>/treepi-<id>
+ticket_code=""
+if echo "$current_branch" | grep -E '^(feat|fix|docs|style|refactor|perf|test|chore|ci|build|revert)/treepi-[a-zA-Z0-9]+' > /dev/null; then
+  ticket_code=$(echo "$current_branch" | sed -E 's#^[^/]*/treepi-([a-zA-Z0-9]+).*#\1#')
+fi
+
+# Read the commit message
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+# Allow CI bot commits to pass without validation
+if echo "$commit_msg" | grep -E "^\[ci:bot:commit\]" > /dev/null; then
+  echo "✅ CI bot commit detected, bypassing commit message validation"
+  exit 0
+fi
+
+# If the commit message does not contain CLIENT#, add it with the ticket code or 000000
+if ! echo "$commit_msg" | grep -q "CLIENT#"; then
+  type_part=$(echo "$commit_msg" | sed -E 's/^([^:]+):.*/\1/')
+  subject_part=$(echo "$commit_msg" | sed -E 's/^[^:]+: *//')
+  if [ -n "$ticket_code" ]; then
+    code_to_add="$ticket_code"
+  else
+    code_to_add="000000"
+  fi
+  new_commit_msg="$type_part: [CLIENT#$code_to_add] $subject_part"
+  echo "$new_commit_msg" > "$commit_msg_file"
+  echo "✅ Added ticket code to commit message: $new_commit_msg"
+fi
+
+npx commitlint --edit $1

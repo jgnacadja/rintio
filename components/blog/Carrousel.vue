@@ -1,0 +1,305 @@
+<template>
+  <div class="container w-full mx-auto mt-4 md:mt-24 md:px-20 space-x-0 md:flex">
+    <div class="w-full">
+      <!-- Titre de la section -->
+      <div class="w-full my-6">
+        <h3
+          class="px-3 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold"
+        >
+          <span
+            v-if="type === 'post' && postsSectionTitle?.text"
+            v-html="richtextToHTML(postsSectionTitle.text)"
+          ></span>
+          <span
+            v-if="type === 'event' && eventsSectionTitle?.text"
+            v-html="richtextToHTML(eventsSectionTitle.text)"
+          ></span>
+        </h3>
+      </div>
+
+      <!-- CAROUSEL POSTS -->
+      <div v-if="type === 'post'">
+        <div ref="emblaPostRef" class="overflow-hidden w-full">
+          <div class="flex -ml-4">
+            <div
+              v-for="edge in posts"
+              :key="edge.node.id"
+              class="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]"
+            >
+              <div class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto">
+                <NuxtLink :to="edge.node.path">
+                  <div class="w-full overflow-hidden">
+                    <img
+                      alt="Scrum"
+                      title="Africa TechUp Tour"
+                      :src="edge.node.coverImage?.file?.url"
+                      class="object-cover w-full h-48 mb-0"
+                    />
+                    <div class="w-full relative px-4 pb-4 pt-2 bg-white">
+                      <div class="text-primary font-bold tracking-wider leading-relaxed font-roboto">
+                        <span
+                          v-if="edge.node.categories?.[0]"
+                          class="relative hidden w-20 font-light h-9 p-2 ml-0 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
+                        >
+                          {{ edge.node.categories[0].title }}
+                        </span>
+                        {{ edge.node.title }}
+                      </div>
+
+                      <div class="tracking-tight leading-relaxed font-roboto text-xs mt-2">
+                        <div
+                          class="text-gray-600 font-light text-base text-ellipsis--2"
+                          v-html="richtextToHTML(edge.node.metaDescription)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boutons de contrôle -->
+        <div class="flex float-right mt-4 mr-8">
+          <button
+            @click="showPrevPost"
+            :disabled="!canScrollPrevPost"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10 transition-colors"
+            :class="{
+              'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollPrevPost,
+              'bg-primary border-primary': canScrollPrevPost
+            }"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+          </button>
+          <button
+            @click="showNextPost"
+            :disabled="!canScrollNextPost"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10 transition-colors"
+            :class="{
+              'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollNextPost,
+              'bg-primary border-primary': canScrollNextPost
+            }"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- CAROUSEL ÉVÉNEMENTS -->
+      <div v-if="type === 'event'">
+        <div ref="emblaEventRef" class="overflow-hidden w-full">
+          <div class="flex -ml-4">
+            <div
+              v-for="edge in events"
+              :key="edge.node.id"
+              class="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]"
+            >
+              <div class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto relative">
+                <NuxtLink :to="edge.node.path">
+                  <div class="w-full overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-black to-black opacity-25"></div>
+                    <div
+                      class="border-b-2 py-2 text-center font-semibold opacity-90 bg-cover bg-center"
+                      :style="edge.node.type === 'blog' && edge.node.coverImage?.file?.url ? { backgroundImage: `url(${edge.node.coverImage.file.url})` } : {}"
+                      :class="{
+                        'text-primary': edge.node.type !== 'blog',
+                        'text-white': edge.node.type === 'blog'
+                      }"
+                    >
+                      <div class="text-9xl">
+                        {{ getDay(edge.node.date) }}
+                      </div>
+                      <div class="text-xl capitalize">
+                        {{ getMonth(edge.node.date) }}
+                      </div>
+                    </div>
+                    <div class="w-full relative px-4 pb-4 pt-2 bg-white">
+                      <div class="text-primary font-bold tracking-wider leading-relaxed font-roboto my-2">
+                        {{ edge.node.title }}
+                      </div>
+
+                      <div class="tracking-tight leading-relaxed font-roboto text-xs">
+                        <div
+                          class="text-gray-600 font-light text-base text-ellipsis--2 my-2"
+                          v-html="richtextToHTML(edge.node.metaDescription)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boutons de contrôle -->
+        <div class="flex float-right mt-4 mr-8">
+          <button
+            @click="showPrevEvent"
+            :disabled="!canScrollPrevEvent"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10 transition-colors"
+            :class="{
+              'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollPrevEvent,
+              'bg-primary border-primary': canScrollPrevEvent
+            }"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+          </button>
+          <button
+            @click="showNextEvent"
+            :disabled="!canScrollNextEvent"
+            class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10 transition-colors"
+            :class="{
+              'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollNextEvent,
+              'bg-primary border-primary': canScrollNextEvent
+            }"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import emblaCarouselVue from 'embla-carousel-vue'
+import { useEventListener } from '@vueuse/core'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import type { Document } from '@contentful/rich-text-types'
+import dayjs from 'dayjs'
+import 'dayjs/locale/fr'
+
+dayjs.locale('fr')
+
+// 1. Interfaces & Props
+interface ContentfulMedia {
+  file: {
+    url: string
+  }
+}
+
+interface ItemNode {
+  id: string
+  title: string
+  path: string
+  date?: string
+  type?: string
+  metaDescription?: Document | string
+  coverImage?: ContentfulMedia
+  categories?: Array<{ id: string; title: string }>
+}
+
+interface EdgeItem {
+  node: ItemNode
+}
+
+interface Props {
+  postsSectionTitle?: { text?: Document | string }
+  posts?: EdgeItem[]
+  eventsSectionTitle?: { text?: Document | string }
+  events?: EdgeItem[]
+  type?: 'post' | 'event' | string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  postsSectionTitle: () => ({}),
+  posts: () => [],
+  eventsSectionTitle: () => ({}),
+  events: () => [],
+  type: ''
+})
+
+// 2. Configuration d'Embla Carousel
+const emblaOptions = { loop: false, align: 'start' as const }
+const [emblaPostRef, emblaPostApi] = emblaCarouselVue(emblaOptions)
+const [emblaEventRef, emblaEventApi] = emblaCarouselVue(emblaOptions)
+
+// État de navigation (Prev / Next)
+const canScrollPrevPost = ref(false)
+const canScrollNextPost = ref(false)
+const canScrollPrevEvent = ref(false)
+const canScrollNextEvent = ref(false)
+
+const updatePostScrollState = () => {
+  if (!emblaPostApi.value) return
+  canScrollPrevPost.value = emblaPostApi.value.canScrollPrev()
+  canScrollNextPost.value = emblaPostApi.value.canScrollNext()
+}
+
+const updateEventScrollState = () => {
+  if (!emblaEventApi.value) return
+  canScrollPrevEvent.value = emblaEventApi.value.canScrollPrev()
+  canScrollNextEvent.value = emblaEventApi.value.canScrollNext()
+}
+
+watch(emblaPostApi, (api) => {
+  if (!api) return
+  api.on('select', updatePostScrollState)
+  api.on('reInit', updatePostScrollState)
+  updatePostScrollState()
+})
+
+watch(emblaEventApi, (api) => {
+  if (!api) return
+  api.on('select', updateEventScrollState)
+  api.on('reInit', updateEventScrollState)
+  updateEventScrollState()
+})
+
+// Actions de navigation
+const showPrevPost = () => emblaPostApi.value?.scrollPrev()
+const showNextPost = () => emblaPostApi.value?.scrollNext()
+const showPrevEvent = () => emblaEventApi.value?.scrollPrev()
+const showNextEvent = () => emblaEventApi.value?.scrollNext()
+
+// 3. Adaptabilité des points de rupture via VueUse
+const slidesPerBreakpoint = ref(4)
+
+const updateSlidesPerBreakpoint = () => {
+  if (import.meta.client) {
+    const width = window.innerWidth
+    if (width > 1024) slidesPerBreakpoint.value = 4
+    else if (width > 700) slidesPerBreakpoint.value = 3
+    else if (width > 480) slidesPerBreakpoint.value = 2
+    else slidesPerBreakpoint.value = 1
+  }
+}
+
+useEventListener('resize', updateSlidesPerBreakpoint)
+
+onMounted(() => {
+  updateSlidesPerBreakpoint()
+})
+
+// 4. Utilitaires d'affichage & dates (remplace les filtres Vue 2)
+const getDay = (value?: string) => (value ? dayjs(value).format('DD') : '')
+const getMonth = (value?: string) => (value ? dayjs(value).format('MMMM') : '')
+
+const richtextToHTML = (content?: Document | string) => {
+  if (!content) return ''
+  if (typeof content === 'string') return content
+  return documentToHtmlString(content)
+}
+</script>
+
+<style scoped>
+.text-ellipsis--2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+</style>

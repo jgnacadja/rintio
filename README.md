@@ -19,24 +19,24 @@ Revue
 - [ ] Nav Menu Responsivity
 
 - [x] Layouts
-     - [x] Default
-     - [x] Partials
-          - [x] Footer
-          - [x] Logo
-          - [x] Nav
+  - [x] Default
+  - [x] Partials
+    - [x] Footer
+    - [x] Logo
+    - [x] Nav
 
 - [x] Components
-     - [x] Contact
-     - [x] Breadcrumb
-     - [x] Home Components
-          - [x] About
-          - [x] Blog
-          - [x] Homeslider
-          - [x] Map
-          - [x] Offer
-          - [x] Partner
-          - [x] Story
-              
+  - [x] Contact
+  - [x] Breadcrumb
+  - [x] Home Components
+    - [x] About
+    - [x] Blog
+    - [x] Homeslider
+    - [x] Map
+    - [x] Offer
+    - [x] Partner
+    - [x] Story
+
 > Build by Lohnsonok
 
 # Default starter for Gridsome

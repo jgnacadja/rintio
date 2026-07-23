@@ -1,0 +1,214 @@
+default:
+  timeout: 30 minutes
+  interruptible: true
+  image: node:22-alpine
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
+      when: never
+    - if: '$CI_COMMIT_BRANCH'
+
+.mr_rules:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+
+.mr_rules_with_changes:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - 'src/**/*.{js,ts,vue}'
+        - '*.{js,ts}'
+
+stages:
+  - dependencies
+  - analyze
+  - test
+  - quality
+  - release
+
+cache: &global_cache
+  key:
+    files:
+      - yarn.lock
+  untracked: true
+  paths:
+    - node_modules/
+  policy: pull-push
+
+.e2e_base:
+  variables:
+    CI: 'true'
+  interruptible: true
+
+install:
+  stage: dependencies
+  cache:
+    <<: *global_cache
+  script:
+    - yarn install --frozen-lockfile --ignore-engines
+  allow_failure: false
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH'
+
+lint:
+  stage: analyze
+  extends: .mr_rules_with_changes
+  cache:
+    <<: *global_cache
+    policy: pull
+  script:
+    - yarn lint --debug
+  allow_failure: false
+  needs: ['install']
+
+format:
+  stage: analyze
+  extends: .mr_rules_with_changes
+  cache:
+    <<: *global_cache
+    policy: pull
+  script:
+    - yarn format
+  allow_failure: false
+  needs: ['install']
+
+units:
+  stage: test
+  extends: .mr_rules
+  cache:
+    <<: *global_cache
+    policy: pull
+  script:
+    - |
+      if [ -n "${CI_NODE_INDEX}" ] && [ -n "${CI_NODE_TOTAL}" ]; then
+        yarn test --shard ${CI_NODE_INDEX}/${CI_NODE_TOTAL}
+      else
+        yarn test
+      fi
+  allow_failure: false
+  needs:
+    - job: lint
+      optional: true
+    - job: format
+      optional: true
+  artifacts:
+    untracked: false
+    when: on_success
+    access: all
+    expire_in: '30 days'
+    paths:
+      - coverage/lcov.info
+      - coverage/sonar-report.xml
+      - coverage/lcov-report
+
+e2e:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.50.1-jammy
+  extends:
+    - .mr_rules
+    - .e2e_base
+  cache:
+    <<: *global_cache
+    policy: pull
+  before_script:
+    - yarn playwright install
+  script:
+    - yarn test:e2e
+  needs:
+    - job: install
+  artifacts:
+    paths:
+      - 'playwright-report/'
+      - 'test-results/'
+    when: always
+    expire_in: '7 days'
+
+committer:
+  stage: test
+  cache:
+    <<: *global_cache
+    policy: pull
+  variables:
+    GIT_STRATEGY: fetch
+    GIT_SUBMODULE_STRATEGY: recursive
+  resource_group: $CI_COMMIT_REF_NAME
+  before_script:
+    - git config --global user.email "cibot@gitlab.com"
+    - git config --global user.name "CI_BOT"
+  script:
+    - echo ci commitment
+  after_script:
+    - git add .
+    - HUSKY=0 git commit -m "[ci:bot:commit] E2E update snapshot"
+    - git push https://oauth2:${PROJECT_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git   HEAD:${CI_COMMIT_REF_NAME}
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: manual
+
+e2e:update:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.50.1-jammy
+  extends:
+    - committer
+    - .e2e_base
+  cache:
+    <<: *global_cache
+    policy: pull
+  before_script:
+    - !reference [committer, before_script]
+    - yarn playwright install
+  script:
+    - yarn test:e2e --update-snapshots
+  after_script:
+    - !reference [committer, after_script]
+    - echo snapshot updated
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: manual
+  needs:
+    - job: install
+  artifacts:
+    paths:
+      - 'playwright-report/'
+      - 'test-results/'
+    when: always
+    expire_in: '7 days'
+  allow_failure: false
+
+control:
+  stage: quality
+  extends: .mr_rules
+  image: sonarsource/sonar-scanner-cli:11.1
+  interruptible: true
+  variables:
+    SONAR_USER_HOME: '${CI_PROJECT_DIR}/.sonar'
+    GIT_DEPTH: 0
+  cache:
+    key: 'sonar-cache-${CI_COMMIT_REF_SLUG}'
+    paths:
+      - .sonar/cache
+  script:
+    - sonar-scanner -X -Dsonar.branch.name="${CI_COMMIT_REF_NAME}"
+  needs:
+    - job: units
+      artifacts: true
+  allow_failure: false
+
+publish:
+  stage: release
+  cache:
+    <<: *global_cache
+    policy: pull
+  script:
+    - apk update
+    - apk add git
+    - echo ${GITLAB_TOKEN}
+    - HUSKY=0 yarn semantic-release --debug
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  needs:
+    - job: install
+  allow_failure: false

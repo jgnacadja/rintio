@@ -1,0 +1,14 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": ["vitest/globals", "node"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    }
+  }
+}

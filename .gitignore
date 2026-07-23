@@ -1,18 +1,48 @@
-*.log
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
 .cache
-.DS_Store
-src/.temp
-node_modules
 dist
-#.env
-#.env.*
-.now
-.history
-.vscode
+
+# Node dependencies
+node_modules
+.yarn
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
 .idea
 
-package-lock.json
-yarn.lock
-
-.vercel
+# Local env files
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.dist
+coverage
 .scannerwork
+
+#end to End 
+/test-results/
+/playwright-report/**
+/blob-report/
+/playwright/.cache/
+/playwright/.auth
+/e2e/**/*win32.png
+e2e/screenshoots
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+## CI/tools
+.ci
+.sonarlint
+
+vitest.config.ts.timestamp-*
+.history
