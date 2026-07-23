@@ -30,7 +30,6 @@
     "@nuxtjs/i18n": "^9.5.6",
     "@nuxtjs/robots": "^5.0.0",
     "@nuxtjs/seo": "^3.2.2",
-    "@stefanobartoletti/nuxt-social-share": "^1.2.1",
     "@tailwindcss/typography": "^0.5.16",
     "@vercel/analytics": "^2.0.1",
     "contentful": "^11.12.7",

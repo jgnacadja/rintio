@@ -77,7 +77,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxt/scripts',
-    '@stefanobartoletti/nuxt-social-share',
     '@nuxtjs/i18n'
   ],
   i18n: {

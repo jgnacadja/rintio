@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Acceuil",
+    "about": "A propos",
+    "offers": "Nos offres",
+    "blog": "Blog"
+  },
+  "footer": {
+    "useful_links": "Liens utiles",
+    "newsletter": "Newsletter",
+    "follow_us": "Suivez nous sur :",
+    "copyright": "Rintio 2019 © Tous droits réservés"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Besoin d'échanger sur votre besoin ?",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer"
+  },
+  "breadcrumb": {
+    "home": "Acceuil"
+  },
+  "blog": {
+    "featured": "À la une",
+    "related": "Vous pouvez aussi lire",
+    "events": "Événements",
+    "posts": "Articles"
+  },
+  "error": {
+    "404_title": "Page non trouvée (404)",
+    "404_message": "La page que vous recherchez a peut-être été déplacée ou n'existe plus.",
+    "back_home": "Retour à l'accueil"
+  }
+}
