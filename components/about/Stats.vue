@@ -4,31 +4,20 @@
     v-observe-visibility="{
       callback: animate,
       once: true,
-      throttle: 300,
+      throttle: 300
     }"
   >
-    <div
-      class="flex flex-wrap mx-auto mb-8 md:flex-nowrap md:mb-0 md:space-x-24"
-    >
+    <div class="flex flex-wrap mx-auto mb-8 md:flex-nowrap md:mb-0 md:space-x-24">
       <div class="w-1/2 text-center md:w-auto xl:w-auto">
-        <p id="customer" class="text-5xl font-bold md:text-5xl xl:text-8xl">
-          0
-        </p>
+        <p id="customer" class="text-5xl font-bold md:text-5xl xl:text-8xl">0</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
         </div>
         <div>
-          <div
-            class="text-sm font-bold"
-            v-html="richtextToHTML(content[0].text)"
-          ></div>
+          <div class="text-sm font-bold" v-html="richtextToHTML(content[0].text)"></div>
         </div>
       </div>
       <div class="w-1/2 text-center md:w-auto">
@@ -38,18 +27,11 @@
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
         </div>
         <div>
-          <div
-            class="text-sm font-bold"
-            v-html="richtextToHTML(content[1].text)"
-          ></div>
+          <div class="text-sm font-bold" v-html="richtextToHTML(content[1].text)"></div>
         </div>
       </div>
       <div class="w-1/2 text-center md:w-auto">
@@ -59,37 +41,21 @@
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
         </div>
-        <div
-          class="text-sm font-bold"
-          v-html="richtextToHTML(content[2].text)"
-        ></div>
+        <div class="text-sm font-bold" v-html="richtextToHTML(content[2].text)"></div>
       </div>
       <div class="w-1/2 text-center md:w-auto xl:w-auto">
-        <p id="experience" class="text-5xl font-bold md:text-5xl xl:text-8xl">
-          0
-        </p>
+        <p id="experience" class="text-5xl font-bold md:text-5xl xl:text-8xl">0</p>
         <!-- Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-colorblind"></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"
-          ></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
+          <span class="inline-block w-2 h-2 ml-2 rounded-full bg-colorblind"></span>
         </div>
         <div>
-          <div
-            class="text-sm font-bold"
-            v-html="richtextToHTML(content[3].text)"
-          ></div>
+          <div class="text-sm font-bold" v-html="richtextToHTML(content[3].text)"></div>
         </div>
       </div>
     </div>
@@ -97,49 +63,49 @@
 </template>
 
 <script>
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     content: {
       type: Array,
       default() {
-        return [];
-      },
-    },
+        return []
+      }
+    }
   },
   methods: {
     animateValue: function (obj, start, end, duration) {
-      let startTimestamp = null;
+      let startTimestamp = null
       const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        if (!startTimestamp) startTimestamp = timestamp
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1)
         obj.innerHTML =
           Math.floor(progress * (end - start) + start) < 10
             ? `0${Math.floor(progress * (end - start) + start)}`
-            : Math.floor(progress * (end - start) + start);
+            : Math.floor(progress * (end - start) + start)
         if (progress < 1) {
-          window.requestAnimationFrame(step);
+          window.requestAnimationFrame(step)
         }
-      };
-      window.requestAnimationFrame(step);
+      }
+      window.requestAnimationFrame(step)
     },
     animate: function (isVisble, entry) {
-      const customer = document.getElementById("customer");
-      const project = document.getElementById("project");
-      const member = document.getElementById("member");
-      const experience = document.getElementById("experience");
+      const customer = document.getElementById('customer')
+      const project = document.getElementById('project')
+      const member = document.getElementById('member')
+      const experience = document.getElementById('experience')
 
       if (entry.isIntersecting) {
-        this.animateValue(customer, 0, this.content[0].title, 5000);
-        this.animateValue(project, 0, this.content[1].title, 5000);
-        this.animateValue(member, 0, this.content[2].title, 5000);
-        this.animateValue(experience, 0, this.content[3].title, 5000);
+        this.animateValue(customer, 0, this.content[0].title, 5000)
+        this.animateValue(project, 0, this.content[1].title, 5000)
+        this.animateValue(member, 0, this.content[2].title, 5000)
+        this.animateValue(experience, 0, this.content[3].title, 5000)
       }
     },
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-};
+      return documentToHtmlString(content)
+    }
+  }
+}
 </script>

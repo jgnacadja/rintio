@@ -3,8 +3,8 @@
     class="md:px-20 md:flex w-full justify-center py-6 md:py-24"
     v-bind:style="[
       {
-        backgroundImage: 'url(' + cover.image.file.url + ')',
-      },
+        backgroundImage: 'url(' + cover.image.file.url + ')'
+      }
     ]"
   >
     <div class="w-full mx-auto mb-8 md:mb-0">
@@ -50,38 +50,38 @@
 </template>
 
 <script>
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     title: {
       type: String,
       default() {
-        return "";
-      },
+        return ''
+      }
     },
     cover: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     content: {
       type: Array,
       default() {
-        return [];
-      },
-    },
+        return []
+      }
+    }
   },
   data() {
     return {
-      state: false,
-    };
+      state: false
+    }
   },
   methods: {
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-};
+      return documentToHtmlString(content)
+    }
+  }
+}
 </script>

@@ -10,10 +10,7 @@
             v-html="content.title"
           ></h1>
 
-          <div
-            class="mx-auto my-3 md:mb-24 md:w-1/2"
-            v-html="richtextToHTML(content.text)"
-          ></div>
+          <div class="mx-auto my-3 md:mb-24 md:w-1/2" v-html="richtextToHTML(content.text)"></div>
           <!---->
           <VueSlickCarousel v-bind="settings">
             <div class="px-3" v-for="expert in experts" :key="expert">
@@ -25,10 +22,7 @@
                     <div
                       class="items-center justify-center w-16 h-16 mx-auto mb-4 overflow-hidden border border-gray-200 rounded-full bg-gray-50"
                     >
-                      <NuxtImg
-                        :src="expert.image.file.url"
-                        :alt="expert.image.name"
-                      ></NuxtImg>
+                      <NuxtImg :src="expert.image.file.url" :alt="expert.image.name"></NuxtImg>
                     </div>
                     <span class="inline-flex">
                       <a
@@ -47,7 +41,7 @@
                     </h6>
                     <p
                       class="mb-2 text-xs"
-                      v-for="skill in expert.text.content.slice(0,3)"
+                      v-for="skill in expert.text.content.slice(0, 3)"
                       :key="skill.content"
                     >
                       {{ skill.content[0].value }}
@@ -64,23 +58,23 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import VueSlickCarousel from 'vue-slick-carousel'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     content: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     experts: {
       type: Array,
       default() {
-        return [];
-      },
-    },
+        return []
+      }
+    }
   },
   components: { VueSlickCarousel },
   data() {
@@ -89,25 +83,23 @@ export default {
       perPage: 8,
       totalItems: 1,
       classes: {
-        wrapper: "table border-collapse text-center bg-white mx-auto shadow-sm",
-        element:
-          "w-8 h-8 border border-gray-200 table-cell hover:border-blue-100",
-        activeElement:
-          "w-8 h-8 border border-secondary table-cell hover:border-secondry",
-        disabledElement: "w-8 h-8 border border-gray-200 table-cell",
-        ellipsisElement: "w-8 h-8 border border-gray-200 hidden md:table-cell",
+        wrapper: 'table border-collapse text-center bg-white mx-auto shadow-sm',
+        element: 'w-8 h-8 border border-gray-200 table-cell hover:border-blue-100',
+        activeElement: 'w-8 h-8 border border-secondary table-cell hover:border-secondry',
+        disabledElement: 'w-8 h-8 border border-gray-200 table-cell',
+        ellipsisElement: 'w-8 h-8 border border-gray-200 hidden md:table-cell',
         activeButton:
-          "bg-secondary w-full h-full text-white hover:bg-secondary transition duration-100 ease-in-out focus:outline-none",
+          'bg-secondary w-full h-full text-white hover:bg-secondary transition duration-100 ease-in-out focus:outline-none',
         disabledButton:
-          "opacity-25 w-full h-full cursor-not-allowed transition duration-100 ease-in-out",
+          'opacity-25 w-full h-full cursor-not-allowed transition duration-100 ease-in-out',
         button:
-          "hover:bg-blue-100 w-full h-full transition duration-100 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50",
-        ellipsis: "",
+          'hover:bg-blue-100 w-full h-full transition duration-100 ease-in-out focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50',
+        ellipsis: ''
       },
       settings: {
         dots: true,
         autoplay: false,
-        dotsClass: "expertsdots",
+        dotsClass: 'expertsdots',
         infinite: true,
         speed: 500,
         slidesToShow: 4,
@@ -121,46 +113,46 @@ export default {
             breakpoint: 1536,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 4,
-            },
+              slidesToScroll: 4
+            }
           },
           {
             breakpoint: 1535,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-            },
+              slidesToScroll: 3
+            }
           },
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-            },
+              slidesToScroll: 3
+            }
           },
           {
             breakpoint: 1023,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
-              initialSlide: 2,
-            },
+              initialSlide: 2
+            }
           },
           {
             breakpoint: 640,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      },
-    };
+              slidesToScroll: 1
+            }
+          }
+        ]
+      }
+    }
   },
   methods: {
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-};
+      return documentToHtmlString(content)
+    }
+  }
+}
 </script>

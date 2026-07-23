@@ -7,19 +7,12 @@
           v-html="content.title"
         ></h1>
 
-        <div
-          class="mx-auto my-3 w-ful lg:w-1/2"
-          v-html="richtextToHTML(content.text)"
-        ></div>
+        <div class="mx-auto my-3 w-ful lg:w-1/2" v-html="richtextToHTML(content.text)"></div>
       </div>
       <div
         class="hidden pt-6 lg:flex lg:space-x-4 md:mx-0 sm:p-12 lg:px-0 xl:px-24 2xl:px-64 3xl:px-96 lg:p-0 lg:space-y-0 md:space-y-4 lg:mt-12"
       >
-        <div
-          class="w-full shadow-md md:w-1/2"
-          v-for="leader in team"
-          :key="leader.id"
-        >
+        <div class="w-full shadow-md md:w-1/2" v-for="leader in team" :key="leader.id">
           <div class="h-full bg-white">
             <g-image
               class="w-full 4xl:w-full"
@@ -35,11 +28,7 @@
             >
               {{ leader.title }}
             </h3>
-            <p
-              class="px-6 mb-0"
-              v-for="skill in leader.text.content"
-              :key="skill.content"
-            >
+            <p class="px-6 mb-0" v-for="skill in leader.text.content" :key="skill.content">
               {{ skill.content[0].value }}
             </p>
             <div class="flex px-6 py-4">
@@ -69,16 +58,10 @@
                 class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary"
                 v-html="leader.name"
               ></h2>
-              <h3
-                class="px-2 pb-2 uppercase border-b-2 text-secondary border-secondary sm:px-6"
-              >
+              <h3 class="px-2 pb-2 uppercase border-b-2 text-secondary border-secondary sm:px-6">
                 {{ leader.title }}
               </h3>
-              <p
-                class="px-6 mb-0"
-                v-for="skill in leader.text.content"
-                :key="skill.content"
-              >
+              <p class="px-6 mb-0" v-for="skill in leader.text.content" :key="skill.content">
                 {{ skill.content[0].value }}
               </p>
               <div class="flex px-6 py-4">
@@ -100,32 +83,32 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     content: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     team: {
       type: Array,
       default() {
-        return [];
-      },
-    },
+        return []
+      }
+    }
   },
   components: { VueSlickCarousel },
   methods: {
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
+      return documentToHtmlString(content)
+    }
   },
   data() {
     return {
@@ -141,7 +124,7 @@ export default {
         swipeToSlide: true,
         arrows: false,
         dots: true,
-        dotsClass: "teamdots",
+        dotsClass: 'teamdots',
         responsive: [
           {
             breakpoint: 1024,
@@ -149,22 +132,22 @@ export default {
               slidesToShow: 2,
               slidesToScroll: 2,
               infinite: true,
-              dots: true,
-            },
+              dots: true
+            }
           },
           {
             breakpoint: 640,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              initialSlide: 1,
-            },
-          },
-        ],
-      },
-    };
-  },
-};
+              initialSlide: 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

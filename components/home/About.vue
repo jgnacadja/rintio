@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6"
-  >
+  <div class="md:px-16 md:flex w-full justify-center py-6 md:py-24 md:space-x-6">
     <div class="w-full md:w-1/2 items-center justify-center mx-auto md:block">
       <div class="relative">
         <svg
@@ -192,12 +190,8 @@
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-          ></span>
+          <span class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"></span>
+          <span class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"></span>
         </div>
       </div>
 
@@ -219,7 +213,7 @@
             >
               {{ button.ctaText }}
             </button>
-          </Nuxtlink>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -227,101 +221,99 @@
 </template>
 
 <script>
-import gsap from "gsap";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import gsap from 'gsap'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     swipper: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     title: {
       type: String,
       default() {
-        return "";
-      },
+        return ''
+      }
     },
     content: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     button: {
       type: Object,
       default() {
-        return {};
-      },
-    },
+        return {}
+      }
+    }
   },
   mounted() {
-    var animationIsOk = window.matchMedia(
-      "(prefers-reduced-motion: no-preference)"
-    ).matches;
+    var animationIsOk = window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
     if (animationIsOk) {
       var tl = gsap.timeline({
         delay: 1.7,
         defaults: {
-          transformOrigin: "right center",
-          ease: "expo.in",
+          transformOrigin: 'right center',
+          ease: 'expo.in',
           duration: 1.2,
           stagger: {
             each: 0.5,
-            from: "start",
-          },
-        },
-      });
-      tl.set(".fouc--hero", {
-        opacity: 1,
+            from: 'start'
+          }
+        }
       })
-        .from(".hero__swipe-1", {
+      tl.set('.fouc--hero', {
+        opacity: 1
+      })
+        .from('.hero__swipe-1', {
           scaleX: 0,
-          duration: 1.5,
+          duration: 1.5
         })
         .from(
-          ".hero__swipe-2",
+          '.hero__swipe-2',
           {
             scaleX: 0,
-            duration: 0.6,
+            duration: 0.6
           },
-          "<"
+          '<'
         )
         .from(
-          ".hero__swipe-3",
+          '.hero__swipe-3',
           {
-            scaleX: 0,
+            scaleX: 0
           },
-          "<"
+          '<'
         )
         .from(
-          ".hero__swipe-4",
+          '.hero__swipe-4',
           {
             scaleX: 0,
+            duration: 0.4
+          },
+          '<'
+        )
+        .from(
+          '.hero__circle',
+          {
             duration: 0.4,
-          },
-          "<"
-        )
-        .from(
-          ".hero__circle",
-          {
-            duration: 0.4,
-            transformOrigin: "center",
+            transformOrigin: 'center',
             opacity: 0,
             scale: 0.8,
-            ease: "sine.out",
+            ease: 'sine.out'
           },
-          "<"
-        );
+          '<'
+        )
     }
   },
   methods: {
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-};
+      return documentToHtmlString(content)
+    }
+  }
+}
 </script>

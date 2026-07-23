@@ -3,9 +3,7 @@
     class="md:px-16 md:flex w-full justify-center flex-wrap py-6 md:py-24 text-black"
     style="background: #e8e8e8"
   >
-    <div
-      class="w-full md:w-full lg:w-1/4 text-center md:text-center lg:text-left"
-    >
+    <div class="w-full md:w-full lg:w-1/4 text-center md:text-center lg:text-left">
       <div class="mx-4 md:mx-0">
         <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
           {{ title }}
@@ -13,24 +11,14 @@
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-          ></span>
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"
-          ></span>
+          <span class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"></span>
+          <span class="inline-block w-2 h-2 rounded-full bg-secondary ml-2"></span>
         </div>
       </div>
       <div class="mx-4 md:mx-0 pt-6">
-        <h2
-          class="text-2xl md:text-5xl text-primary font-extrabold"
-          v-html="content.title"
-        ></h2>
+        <h2 class="text-2xl md:text-5xl text-primary font-extrabold" v-html="content.title"></h2>
 
-        <div
-          class="hidden md:block my-3 font-light"
-          v-html="richtextToHTML(content.text)"
-        ></div>
+        <div class="hidden md:block my-3 font-light" v-html="richtextToHTML(content.text)"></div>
       </div>
     </div>
 
@@ -64,18 +52,12 @@
           <div
             class="rounded-xl md:rounded-3xl ml-auto md:ml-0 lg:ml-auto p-2 m-2 bg-white text-purple-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-20 lg:w-16 xl:w-24 h-16 sm:h-16 md:h-20 lg:h-16 xl:h-24 flex items-center justify-center text-xl font-bold shadow-xl"
           >
-            <g-image class="mb-0"
-              :src="partners[4].image.file.url"
-              :alt="partners[4].name"
-            />
+            <g-image class="mb-0" :src="partners[4].image.file.url" :alt="partners[4].name" />
           </div>
           <div
             class="rounded-xl md:rounded-3xl ml-auto md:ml-0 lg:ml-0 xl:ml-auto p-2 m-2 bg-white text-red-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-20 lg:w-16 xl:w-24 h-16 sm:h-16 md:h-20 lg:h-16 xl:h-24 flex items-center justify-center text-xl font-bold shadow-xl"
           >
-            <g-image class="mb-0"
-              :src="partners[5].image.file.url"
-              :alt="partners[5].name"
-            />
+            <g-image class="mb-0" :src="partners[5].image.file.url" :alt="partners[5].name" />
           </div>
         </div>
       </div>
@@ -89,18 +71,12 @@
           <div
             class="rounded-xl md:rounded-3xl p-2 m-2 bg-white text-blue-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-24 lg:w-24 xl:w-32 h-16 sm:h-16 md:h-24 lg:h-24 xl:h-32 flex items-center justify-center text-xl font-bold shadow-xl"
           >
-            <g-image class="mb-0"
-              :src="partners[7].image.file.url"
-              :alt="partners[7].name"
-            />
+            <g-image class="mb-0" :src="partners[7].image.file.url" :alt="partners[7].name" />
           </div>
           <div
             class="rounded-xl md:rounded-3xl p-2 m-2 xl:ml-auto bg-white text-orange-100 aspect-w-10 aspect-h-5 w-16 sm:w-20 md:w-24 lg:w-24 xl:w-32 h-16 sm:h-16 md:h-24 lg:h-24 xl:h-32 flex items-center justify-center text-xl font-bold shadow-xl"
           >
-            <g-image class="mb-0"
-              :src="partners[8].image.file.url"
-              :alt="partners[8].name"
-            />
+            <g-image class="mb-0" :src="partners[8].image.file.url" :alt="partners[8].name" />
           </div>
         </div>
         <div
@@ -114,66 +90,66 @@
 </template>
 
 <script>
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     title: {
       type: String,
       default() {
-        return "";
-      },
+        return ''
+      }
     },
     content: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     partners: {
       type: Array,
       default() {
         return [
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           },
           {
-            image :{file : {url:''}},
-            name:''
+            image: { file: { url: '' } },
+            name: ''
           }
-        ];
-      },
-    },
+        ]
+      }
+    }
   },
   methods: {
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-};
+      return documentToHtmlString(content)
+    }
+  }
+}
 </script>

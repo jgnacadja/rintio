@@ -5,7 +5,11 @@
         {{ error?.statusCode || 404 }}
       </h1>
       <p class="text-xl mb-8">
-        {{ error?.statusCode === 404 ? $t('error.404_message') : error?.statusMessage || $t('error.404_message') }}
+        {{
+          error?.statusCode === 404
+            ? $t('error.404_message')
+            : error?.statusMessage || $t('error.404_message')
+        }}
       </p>
       <NuxtLink
         to="/"

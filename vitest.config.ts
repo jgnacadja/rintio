@@ -21,6 +21,7 @@ export default defineConfig({
       'vitest-sonar-reporter': 'coverage/sonar-report.xml'
     },
     watch: false,
+    passWithNoTests: true,
     coverage: {
       enabled: true,
       provider: 'v8',

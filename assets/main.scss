@@ -1,13 +1,12 @@
 @charset "utf-8";
 
 // Import any variables we want to use to customize the project
-@import "variables.scss";
-
+@import 'variables.scss';
 
 // Import Tailwind
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 button.slick-prev:before,
 button.slick-next:before {
@@ -81,7 +80,7 @@ button.slick-next:before {
   left: 0;
   width: 20px;
   height: 20px;
-  content: "•";
+  content: '•';
   text-align: center;
   opacity: 0.25;
   color: black;
@@ -140,7 +139,7 @@ button.slick-next:before {
   left: 0;
   width: 20px;
   height: 20px;
-  content: "•";
+  content: '•';
   text-align: center;
   opacity: 0.25;
   color: black;
@@ -195,7 +194,7 @@ button.slick-next:before {
   left: 0;
   width: 20px;
   height: 20px;
-  content: "•";
+  content: '•';
   text-align: center;
   opacity: 0.25;
   color: black;
@@ -250,7 +249,7 @@ button.slick-next:before {
   left: 0;
   width: 20px;
   height: 20px;
-  content: "•";
+  content: '•';
   text-align: center;
   opacity: 0.25;
   color: black;

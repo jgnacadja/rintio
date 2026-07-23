@@ -10,14 +10,16 @@
       <div
         class="bg-cover h-full bg-center text-black py-2 md:py-32 px-2 md:px-20 object-fill flex items-center"
         :style="{
-          backgroundImage: slide.fields?.image?.fields?.file?.url 
-            ? `url(https:${slide.fields.image.fields.file.url})` 
-            : slide.image?.file?.url 
-              ? `url(${slide.image.file.url})` 
+          backgroundImage: slide.fields?.image?.fields?.file?.url
+            ? `url(https:${slide.fields.image.fields.file.url})`
+            : slide.image?.file?.url
+              ? `url(${slide.image.file.url})`
               : ''
         }"
       >
-        <div class="md:w-5/12 bg-white/85 backdrop-blur-sm p-8 rounded-lg md:bg-transparent md:backdrop-blur-none md:p-0">
+        <div
+          class="md:w-5/12 bg-white/85 backdrop-blur-sm p-8 rounded-lg md:bg-transparent md:backdrop-blur-none md:p-0"
+        >
           <h3
             class="font-bold text-sm 2xl:text-lg 3xl:text-3xl uppercase text-secondary font-roboto"
           >
