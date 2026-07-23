@@ -52,7 +52,6 @@ export default defineEventHandler(async (event) => {
       hasMore: skip + limit < response.total
     }
   } catch (error: any) {
-    console.error('Contentful API Error:', error)
     throw createError({
       statusCode: 500,
       statusMessage: 'Failed to fetch posts from Contentful'

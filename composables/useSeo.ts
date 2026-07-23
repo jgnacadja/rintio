@@ -1,3 +1,5 @@
+import type { ContentfulPost } from '~/types/contentful'
+
 export function useSeo(post: ContentfulPost, siteUrl: string) {
   const imagePath = post.coverImage ? `${siteUrl}${post.coverImage.file.url}` : ''
   useHead({

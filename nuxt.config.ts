@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import { defineOrganization } from 'nuxt-schema-org/schema'
+import { resolve } from 'node:path'
 
 const enableTrack = !!process.env.ENABLE_TRACK && process.env.ENABLE_TRACK === 'true'
 const analyticId = process.env.ANALYTIC_ID
@@ -146,6 +147,11 @@ export default defineNuxtConfig({
   },
   css: ['@fortawesome/fontawesome-free/css/all.css', '~/assets/main.scss'],
   vite: {
+    resolve: {
+      alias: {
+        'vue-slick-carousel': resolve(__dirname, './stubs/vue-slick-carousel')
+      }
+    },
     css: {
       preprocessorOptions: {
         scss: {

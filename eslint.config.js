@@ -81,7 +81,12 @@ export default [
           extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.vue']
         }
       },
-      'import/core-modules': ['#imports']
+      'import/core-modules': [
+        '#imports',
+        'vue-slick-carousel',
+        'vue-slick-carousel/dist/vue-slick-carousel.css',
+        'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+      ]
     },
     rules: {
       ...rules,
@@ -108,6 +113,8 @@ export default [
         useHead: 'readonly',
         useSeoMeta: 'readonly',
         useRuntimeConfig: 'readonly',
+        useContentful: 'readonly',
+        useSeo: 'readonly',
         navigateTo: 'readonly',
         useRoute: 'readonly',
         createError: 'readonly',
@@ -161,6 +168,7 @@ export default [
       'dist/**',
       'coverage/**',
       'app.vue',
+      'public/**',
       'playwright-report/',
       'vitest.config.ts.timestamp-*'
     ]

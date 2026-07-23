@@ -13,15 +13,13 @@
         class="my-3 text-xl font-extrabold md:text-5xl text-primary"
         v-html="content.title"
       ></h2>
-      <div
-        v-if="content.text"
-        class="py-4"
-        v-html="richtextToHTML(content.text)"
-      ></div>
+      <div v-if="content.text" class="py-4" v-html="richtextToHTML(content.text)"></div>
     </div>
 
     <!-- Grille d'articles -->
-    <div class="grid gap-4 px-2 md:grid-cols-6 xl:grid-cols-2 md:grid-flow-row xl:grid-flow-rows xl:px-24">
+    <div
+      class="grid gap-4 px-2 md:grid-cols-6 xl:grid-cols-2 md:grid-flow-row xl:grid-flow-rows xl:px-24"
+    >
       <!-- Article à la une (Grand format) -->
       <div
         v-for="edge in featuredPosts"
@@ -29,7 +27,9 @@
         class="h-full col-span-3 row-span-2 bg-white shadow-sm xl:col-span-1 xl:row-span-2"
       >
         <NuxtLink :to="edge.node.path">
-          <div class="aspect-w-7 aspect-h-8 xs:aspect-w-16 xs:aspect-h-7 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8">
+          <div
+            class="aspect-w-7 aspect-h-8 xs:aspect-w-16 xs:aspect-h-7 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8"
+          >
             <img
               v-if="edge.node.coverImage?.file?.url"
               :src="edge.node.coverImage.file.url"
@@ -79,7 +79,9 @@
         <div class="flex flex-row h-full">
           <div class="w-2/5 h-48 md:h-full">
             <NuxtLink :to="edge.node.path">
-              <div class="aspect-w-12 aspect-h-16 sm:aspect-w-16 sm:aspect-h-10 md:aspect-w-14 md:aspect-h-16 xl:aspect-w-10 xl:aspect-h-10 2xl:aspect-w-16 2xl:aspect-h-10 3xl:aspect-w-16 3xl:aspect-h-10">
+              <div
+                class="aspect-w-12 aspect-h-16 sm:aspect-w-16 sm:aspect-h-10 md:aspect-w-14 md:aspect-h-16 xl:aspect-w-10 xl:aspect-h-10 2xl:aspect-w-16 2xl:aspect-h-10 3xl:aspect-w-16 3xl:aspect-h-10"
+              >
                 <img
                   v-if="edge.node.coverImage?.file?.url"
                   :src="edge.node.coverImage.file.url"
@@ -130,11 +132,17 @@
     <!-- Lien vers le blog -->
     <div class="w-full px-2 py-4 mx-auto md:flex xl:px-24">
       <NuxtLink to="/blog" class="ml-auto">
-        <button class="flex ml-auto font-medium md:text-lg hover:text-secondary focus:outline-none items-center">
+        <button
+          class="flex ml-auto font-medium md:text-lg hover:text-secondary focus:outline-none items-center"
+        >
           Voir plus de publications
           <span class="pl-2">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
             </svg>
           </span>
         </button>
@@ -190,7 +198,7 @@ interface Props {
   }
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   title: '',
   content: () => ({})
 })

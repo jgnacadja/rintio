@@ -3,8 +3,8 @@
     class="bg-cover items-center w-full justify-center py-6 md:py-24"
     v-bind:style="[
       {
-        backgroundImage: 'url(' + cover.image.file.url + ')',
-      },
+        backgroundImage: 'url(' + cover.image.file.url + ')'
+      }
     ]"
   >
     <div class="mx-4 md:mx-0 text-center mb-4 md:mb-10">
@@ -20,15 +20,9 @@
       ></div>
     </div>
 
-    <div
-      class="md:flex hidden justify-center items-center w-full md:w-3/4 md:mx-auto"
-    >
+    <div class="md:flex hidden justify-center items-center w-full md:w-3/4 md:mx-auto">
       <div class="py-4 mx-4 w-full md:w-1/3">
-        <a
-          href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://goo.gl/maps/vBBTTGEydxDGfaXz7" target="_blank" rel="noopener noreferrer">
           <div
             class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
           >
@@ -67,11 +61,7 @@
         </a>
       </div>
       <div class="py-4 mx-4 w-full md:w-1/3">
-        <a
-          href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA" target="_blank" rel="noopener noreferrer">
           <div
             class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
           >
@@ -153,21 +143,14 @@
     <div class="w-full p-4 md:hidden">
       <VueSlickCarousel v-bind="settings">
         <div class="py-4 md:mx-2 w-full h-full">
-          <a
-            href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://goo.gl/maps/vBBTTGEydxDGfaXz7" target="_blank" rel="noopener noreferrer">
             <div
               class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
             >
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
-                <div
-                  class="w-full relative flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
-                >
-                  <span
-                    class="tracking-wider leading-relaxed text-sm text-center mx-auto"
+                <div class="w-full relative flex sm:flex-row md:flex-shrink px-4 py-4 bg-white">
+                  <span class="tracking-wider leading-relaxed text-sm text-center mx-auto"
                     >Cotonou, Bénin <br />
                   </span>
 
@@ -197,21 +180,14 @@
           </a>
         </div>
         <div class="py-4 md:mx-2 w-full h-full">
-          <a
-            href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA" target="_blank" rel="noopener noreferrer">
             <div
               class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
             >
               <div class="w-full overflow-hidden">
                 <div class="w-full h-40"></div>
-                <div
-                  class="w-full relative flex sm:flex-row md:flex-shrink px-4 py-4 bg-white"
-                >
-                  <span
-                    class="tracking-wider leading-relaxed text-sm text-center mx-auto"
+                <div class="w-full relative flex sm:flex-row md:flex-shrink px-4 py-4 bg-white">
+                  <span class="tracking-wider leading-relaxed text-sm text-center mx-auto"
                     >Paris, France <br />
                   </span>
 
@@ -245,12 +221,8 @@
           >
             <div class="w-full overflow-hidden">
               <div class="w-full h-40"></div>
-              <div
-                class="w-full relative flex sm:flex-row md:flex-col px-4 py-4 bg-white"
-              >
-                <span
-                  class="tracking-tighter leading-relaxed text-sm text-center mx-auto"
-                >
+              <div class="w-full relative flex sm:flex-row md:flex-col px-4 py-4 bg-white">
+                <span class="tracking-tighter leading-relaxed text-sm text-center mx-auto">
                   Abidjan, Côte d'Ivoire <br />
                 </span>
 
@@ -283,36 +255,36 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 export default {
   props: {
     cover: {
       type: Object,
       default() {
-        return {};
-      },
+        return {}
+      }
     },
     content: {
       type: Object,
       default() {
-        return {};
-      },
-    },
+        return {}
+      }
+    }
   },
   components: { VueSlickCarousel },
   data() {
     return {
-      hourFr: "",
-      hourCi: "",
-      hour: "",
-      minute: "",
-      second: "",
+      hourFr: '',
+      hourCi: '',
+      hour: '',
+      minute: '',
+      second: '',
       settings: {
         autoplay: false,
         infinite: true,
@@ -324,67 +296,67 @@ export default {
         swipeToSlide: true,
         arrows: false,
         dots: true,
-        dotsClass: "mappdots",
-      },
-    };
+        dotsClass: 'mappdots'
+      }
+    }
   },
   created() {
-    setInterval(this.getTime, 1000);
+    setInterval(this.getTime, 1000)
   },
   methods: {
     getTime: function () {
-      var now = new Date();
-      var hour = now.getHours();
-      var minute = now.getMinutes();
-      var second = now.getSeconds();
+      var now = new Date()
+      var hour = now.getHours()
+      var minute = now.getMinutes()
+      var second = now.getSeconds()
       if (hour.toString().length == 1) {
-        hour = "0" + hour;
+        hour = '0' + hour
       }
       if (minute.toString().length == 1) {
-        minute = "0" + minute;
+        minute = '0' + minute
       }
       if (second.toString().length == 1) {
-        second = "0" + second;
+        second = '0' + second
       }
 
-      this.hour = hour;
-      this.hourFr = Number(hour) + 1;
-      this.hourCi = Number(hour) - 1;
+      this.hour = hour
+      this.hourFr = Number(hour) + 1
+      this.hourCi = Number(hour) - 1
 
-      if (this.hourCi < 0) this.hourCi = 24 + this.hourCi;
+      if (this.hourCi < 0) this.hourCi = 24 + this.hourCi
 
-      if (this.hour.toString().length == 1) this.hour = "0" + this.hour;
+      if (this.hour.toString().length == 1) this.hour = '0' + this.hour
 
-      if (this.hourFr.toString().length == 1) this.hourFr = "0" + this.hourFr;
+      if (this.hourFr.toString().length == 1) this.hourFr = '0' + this.hourFr
 
-      if (this.hourCi.toString().length == 1) this.hourCi = "0" + this.hourCi;
+      if (this.hourCi.toString().length == 1) this.hourCi = '0' + this.hourCi
 
-      if (minute.toString().length == 1) minute = "0" + minute;
+      if (minute.toString().length == 1) minute = '0' + minute
 
-      if (second.toString().length == 1) second = "0" + second;
+      if (second.toString().length == 1) second = '0' + second
 
-      this.minute = minute;
-      this.second = second;
+      this.minute = minute
+      this.second = second
     },
     richtextToHTML(content) {
-      return documentToHtmlString(content);
-    },
-  },
-};
+      return documentToHtmlString(content)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-@import "../../variables.scss";
+@import '~/assets/variables.scss';
 .bg-map-cotonou {
-  background-image: url("./../../../static/images/home/map/cotonou.webp");
+  background-image: url('./../../../static/images/home/map/cotonou.webp');
 }
 
 .bg-map-paris {
-  background-image: url("./../../../static/images/home/map/paris.webp");
+  background-image: url('./../../../static/images/home/map/paris.webp');
 }
 
 .bg-map-abidjan {
-  background-image: url("./../../../static/images/home/map/abidjan.webp");
+  background-image: url('./../../../static/images/home/map/abidjan.webp');
 }
 
 @media (min-width: 768px) {

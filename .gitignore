@@ -46,3 +46,4 @@ e2e/screenshoots
 
 vitest.config.ts.timestamp-*
 .history
+.nuxtrc

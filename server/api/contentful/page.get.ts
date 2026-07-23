@@ -58,7 +58,6 @@ export default defineEventHandler(async (event) => {
       throw error
     }
 
-    console.error('Contentful API Error:', error)
     throw createError({
       statusCode: 500,
       statusMessage: 'Failed to fetch page from Contentful'

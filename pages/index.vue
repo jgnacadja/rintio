@@ -16,6 +16,8 @@
       :cover="page.sections[2].columns?.[0]"
       :content="page.sections[2].columns?.[1]"
       :button="page.sections[2].columns?.[2]"
+      :featured-offer="featuredOffer"
+      :offers="offersList"
     />
 
     <LazyHomeStory
@@ -39,12 +41,20 @@
 </template>
 
 <script setup lang="ts">
-import type { ContentfulPage, ContentfulComponentSection } from '~/types/contentful'
+import type { ContentfulPage, ContentfulComponentSection, ContentfulPost } from '~/types/contentful'
 
-const { data: page, error } = await useFetch<ContentfulPage>('/api/contentful/page', {
+const { data: page } = await useFetch<ContentfulPage>('/api/contentful/page', {
   key: 'page-accueil',
   query: { path: 'Acceuil' }
 })
+
+const { data: offers } = await useFetch<ContentfulPost[]>('/api/contentful/posts', {
+  key: 'home-offers',
+  query: { category: 'offres', limit: '3' }
+})
+
+const featuredOffer = computed(() => offers.value?.[0])
+const offersList = computed(() => offers.value?.slice(1) || [])
 
 // 2. SEO & Méta-données
 useSeoMeta({

@@ -172,10 +172,9 @@ export default {
     }
   },
   methods: {
-    sendEmail: (e) => {
-      let $this = this
-      $this.data.result = null
-      $this.data.color = null
+    sendEmail(_e) {
+      this.result = null
+      this.color = null
 
       /* emailjs
         .sendForm(
@@ -186,18 +185,18 @@ export default {
         )
         .then(
           () => {
-            $this.result = "Votre message a été envoyé";
-            $this.color = "text-green-500";
+            this.result = "Votre message a été envoyé";
+            this.color = "text-green-500";
             // Reset form field
-            $this.resetForm();
+            this.resetForm();
           },
           () => {
-            $this.result = "Une erreur est survenue, veuillez réessayer";
-            $this.color = "text-red-500";
+            this.result = "Une erreur est survenue, veuillez réessayer";
+            this.color = "text-red-500";
           }
         ); */
-      $this.result = 'Une erreur est survenue, veuillez réessayer plus tard'
-      $this.color = 'text-red-500'
+      this.result = 'Une erreur est survenue, veuillez réessayer plus tard'
+      this.color = 'text-red-500'
     },
     resetForm() {
       this.name = null

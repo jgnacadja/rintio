@@ -51,7 +51,6 @@ export default defineEventHandler(async (event) => {
       total: relatedPosts.length
     }
   } catch (error: any) {
-    console.error('Contentful API Error:', error)
     throw createError({
       statusCode: 500,
       statusMessage: 'Failed to fetch related posts from Contentful'
