@@ -4,11 +4,11 @@
     <div class="hidden lg:flex justify-between items-center h-24 px-10">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center">
-        <NuxtImg src="/images/rintio-logo.svg" alt="Rintio.com" title="Rintio" class="w-44" />
+        <NuxtImg src="/images/rintio.svg" alt="Rintio.com" title="Rintio" class="w-44" />
       </NuxtLink>
 
       <!-- Desktop Navigation -->
-      <nav class="flex gap-0">
+      <nav class="flex gap-0" aria-label="Navigation principale">
         <NuxtLink
           v-for="item in navItems"
           :key="item.path"
@@ -29,7 +29,7 @@
     <div class="lg:hidden flex justify-between items-center p-3">
       <!-- Logo Mobile -->
       <NuxtLink to="/" class="flex items-center">
-        <NuxtImg src="/images/rintio-logo-small.svg" alt="Rintio.com" title="Rintio" class="w-32" />
+        <NuxtImg src="/images/rintio.svg" alt="Rintio.com" title="Rintio" class="w-32" />
       </NuxtLink>
 
       <!-- Mobile Menu Button -->
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <nav class="space-y-2 mt-6 mx-4">
+        <nav class="space-y-2 mt-6 mx-4" aria-label="Navigation mobile">
           <NuxtLink
             v-for="item in navItems"
             :key="item.path"

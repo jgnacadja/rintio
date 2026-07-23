@@ -8,6 +8,6 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: 'Rintio - %s'
+  titleTemplate: '%s'
 })
 </script>

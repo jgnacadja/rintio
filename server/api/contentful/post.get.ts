@@ -1,3 +1,6 @@
+import { useContentful } from '~/utils/useContentful'
+import { buildLookupMaps, resolveLink, resolveAssetFile } from '~/utils/contentfulResolver'
+
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
   const path = query.path as string
@@ -28,19 +31,23 @@ export default defineEventHandler(async (event) => {
     }
 
     const post = response.items[0]
-    const coverImage = post.fields.coverImage?.fields?.file?.url
-    const content = post.fields.content // Richtext ou markdown
+    const maps = buildLookupMaps(response.includes || {})
+    const coverImage = resolveAssetFile(resolveLink(post.fields.coverImage, maps))
+    const categories = (post.fields.categories || [])
+      .map((cat: any) => resolveLink(cat, maps))
+      .filter(Boolean)
+      .map((cat: any) => cat.fields?.title)
+      .filter(Boolean)
 
-    // Formater la réponse
     return {
       id: post.sys.id,
       title: post.fields.title,
       path: post.fields.path,
       author: post.fields.author,
-      categories: post.fields.categories || [],
+      categories,
       date: post.fields.date,
-      coverImage: coverImage,
-      content: content,
+      coverImage,
+      content: post.fields.content,
       excerpt: post.fields.excerpt,
       metaDescription: post.fields.metaDescription,
       seo: {

@@ -48,13 +48,16 @@ const { data: page } = await useFetch<ContentfulPage>('/api/contentful/page', {
   query: { path: 'Acceuil' }
 })
 
-const { data: offers } = await useFetch<ContentfulPost[]>('/api/contentful/posts', {
-  key: 'home-offers',
-  query: { category: 'offres', limit: '3' }
-})
+const { data: offersResponse } = await useFetch<{ items: ContentfulPost[] }>(
+  '/api/contentful/posts',
+  {
+    key: 'home-offers',
+    query: { category: 'offres', limit: '3' }
+  }
+)
 
-const featuredOffer = computed(() => offers.value?.[0])
-const offersList = computed(() => offers.value?.slice(1) || [])
+const featuredOffer = computed(() => offersResponse.value?.items?.[0])
+const offersList = computed(() => offersResponse.value?.items?.slice(1) || [])
 
 // 2. SEO & Méta-données
 useSeoMeta({

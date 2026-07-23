@@ -1,14 +1,26 @@
+import { useContentful } from '~/utils/useContentful'
+import { buildLookupMaps, resolveLink, resolveAssetFile } from '~/utils/contentfulResolver'
+
+type CategorySlug = 'offres' | 'blog' | 'evenements'
+
+const categoryTitleMap: Record<CategorySlug, string> = {
+  offres: 'Offres',
+  blog: 'Blog',
+  evenements: 'Evènements'
+}
+
+const validCategories: CategorySlug[] = ['blog', 'evenements', 'offres']
+
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
 
-  // Query params avec valeurs par défaut
-  const category = (query.category as string) || 'blog'
+  const category = validCategories.includes(query.category as CategorySlug)
+    ? (query.category as CategorySlug)
+    : 'blog'
   const order = (query.order as string) || '-fields.date'
-  const limit = Math.min(parseInt(query.limit as string) || 10, 100)
-  const skip = Math.max(parseInt(query.skip as string) || 0, 0)
+  const limit = Math.min(Number.parseInt(query.limit as string) || 10, 100)
+  const skip = Math.max(Number.parseInt(query.skip as string) || 0, 0)
 
-  // Validation de la catégorie
-  const validCategories = ['blog', 'evenements', 'offres']
   if (!validCategories.includes(category)) {
     throw createError({
       statusCode: 400,
@@ -19,26 +31,48 @@ export default defineEventHandler(async (event) => {
   try {
     const { fetchEntries } = useContentful()
 
-    const response = await fetchEntries({
-      content_type: 'post',
-      'fields.category': category,
-      order: order,
-      limit: limit.toString(),
-      skip: skip.toString()
+    // Récupérer l'ID de la catégorie
+    const categoryResponse = await fetchEntries({
+      content_type: 'category',
+      'fields.title': categoryTitleMap[category],
+      limit: '1'
     })
 
-    // Mapper les posts
+    const categoryId = categoryResponse.items?.[0]?.sys?.id
+    if (!categoryId) {
+      throw createError({
+        statusCode: 404,
+        statusMessage: `Category "${category}" not found`
+      })
+    }
+
+    const response = await fetchEntries({
+      content_type: 'post',
+      'fields.categories.sys.id': categoryId,
+      order: order,
+      limit: limit.toString(),
+      skip: skip.toString(),
+      include: '2'
+    })
+
+    const maps = buildLookupMaps(response.includes || {})
+
     const posts = response.items.map((post: any) => {
-      const coverImage = post.fields.coverImage?.fields?.file?.url
+      const coverImage = resolveAssetFile(resolveLink(post.fields.coverImage, maps))
+      const categories = (post.fields.categories || [])
+        .map((cat: any) => resolveLink(cat, maps))
+        .filter(Boolean)
+        .map((cat: any) => cat.fields?.title)
+        .filter(Boolean)
 
       return {
         id: post.sys.id,
         title: post.fields.title,
         path: post.fields.path,
         author: post.fields.author,
-        categories: post.fields.categories || [category],
+        categories: categories.length ? categories : [categoryTitleMap[category]],
         date: post.fields.date,
-        coverImage: coverImage,
+        coverImage,
         excerpt: post.fields.excerpt,
         metaDescription: post.fields.metaDescription
       }
@@ -47,11 +81,14 @@ export default defineEventHandler(async (event) => {
     return {
       items: posts,
       total: response.total,
-      skip: skip,
-      limit: limit,
+      skip,
+      limit,
       hasMore: skip + limit < response.total
     }
   } catch (error: any) {
+    if (error.statusCode) {
+      throw error
+    }
     throw createError({
       statusCode: 500,
       statusMessage: 'Failed to fetch posts from Contentful'

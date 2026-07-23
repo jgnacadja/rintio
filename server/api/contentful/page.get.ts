@@ -1,44 +1,12 @@
 import { useContentful } from '~/utils/useContentful'
+import {
+  buildLookupMaps,
+  resolveLink,
+  resolveAssetFile,
+  type LinkMaps
+} from '~/utils/contentfulResolver'
 
-function buildLookupMaps(includes: any) {
-  const entryMap = new Map<string, any>()
-  const assetMap = new Map<string, any>()
-
-  for (const entry of includes?.Entry || []) {
-    entryMap.set(entry.sys.id, entry)
-  }
-  for (const asset of includes?.Asset || []) {
-    assetMap.set(asset.sys.id, asset)
-  }
-
-  return { entryMap, assetMap }
-}
-
-function resolveLink(link: any, maps: { entryMap: Map<string, any>; assetMap: Map<string, any> }) {
-  if (!link?.sys) return null
-  const { linkType, id } = link.sys
-  if (linkType === 'Entry') return maps.entryMap.get(id) || null
-  if (linkType === 'Asset') return maps.assetMap.get(id) || null
-  return null
-}
-
-function resolveAssetFile(asset: any) {
-  if (!asset) return undefined
-  return {
-    file: {
-      url: asset.fields?.file?.url,
-      fileName: asset.fields?.file?.fileName,
-      contentType: asset.fields?.file?.contentType
-    },
-    title: asset.fields?.title,
-    description: asset.fields?.description
-  }
-}
-
-function transformSection(
-  section: any,
-  maps: { entryMap: Map<string, any>; assetMap: Map<string, any> }
-): any {
+function transformSection(section: any, maps: LinkMaps): any {
   if (!section) return null
   const type = section.sys.contentType?.sys?.id
   const fields = { ...section.fields }

@@ -20,28 +20,10 @@
       :content="page.sections[1].columns?.slice(1)"
     />
 
-    <!-- Section 2 : Team (Commentée) -->
-    <!--
-    <LazyAboutTeam
-      v-if="page.sections[2]"
-      :content="page.sections[2].columns?.[0]"
-      :team="page.sections[2].columns?.slice(1)"
-    />
-    -->
-
     <!-- Section 3 : Stats -->
     <ClientOnly v-if="page.sections[3]">
       <LazyAboutStats :content="page.sections[3].columns" />
     </ClientOnly>
-
-    <!-- Section 4 : Experts (Commentée) -->
-    <!--
-    <LazyAboutExperts
-      v-if="page.sections[4]"
-      :content="page.sections[4].columns?.[0]"
-      :experts="page.sections[4].columns?.slice(1)"
-    />
-    -->
   </main>
 </template>
 

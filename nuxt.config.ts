@@ -17,7 +17,8 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Rintio — We involve for a better life',
+      titleTemplate: '%s',
+      title: 'Rintio',
       htmlAttrs: {
         lang: 'fr'
       },
@@ -64,7 +65,7 @@ export default defineNuxtConfig({
         }
       ],
       script: [{ src: '/crisp.js', body: true }],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     },
     layoutTransition: { name: 'fade', mode: 'out-in' }
   },
