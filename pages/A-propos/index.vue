@@ -30,7 +30,9 @@
     -->
 
     <!-- Section 3 : Stats -->
-    <LazyAboutStats v-if="page.sections[3]" :content="page.sections[3].columns" />
+    <ClientOnly v-if="page.sections[3]">
+      <LazyAboutStats :content="page.sections[3].columns" />
+    </ClientOnly>
 
     <!-- Section 4 : Experts (Commentée) -->
     <!--
