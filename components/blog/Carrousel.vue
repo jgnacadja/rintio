@@ -9,11 +9,11 @@
           <span
             v-if="type === 'post' && postsSectionTitle?.text"
             v-html="richtextToHTML(postsSectionTitle.text)"
-          ></span>
+          />
           <span
             v-if="type === 'event' && eventsSectionTitle?.text"
             v-html="richtextToHTML(eventsSectionTitle.text)"
-          ></span>
+          />
         </h3>
       </div>
 
@@ -22,35 +22,38 @@
         <div ref="emblaPostRef" class="overflow-hidden w-full">
           <div class="flex -ml-4">
             <div
-              v-for="edge in posts"
-              :key="edge.node.id"
+              v-for="post in posts"
+              :key="post.id"
               class="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]"
             >
-              <div class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto">
-                <NuxtLink :to="edge.node.path">
+              <div
+                class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto"
+              >
+                <NuxtLink :to="post.path">
                   <div class="w-full overflow-hidden">
                     <img
-                      alt="Scrum"
-                      title="Africa TechUp Tour"
-                      :src="edge.node.coverImage?.file?.url"
+                      :src="post.coverImage?.file?.url"
+                      :alt="post.title"
                       class="object-cover w-full h-48 mb-0"
                     />
                     <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                      <div class="text-primary font-bold tracking-wider leading-relaxed font-roboto">
+                      <div
+                        class="text-primary font-bold tracking-wider leading-relaxed font-roboto"
+                      >
                         <span
-                          v-if="edge.node.categories?.[0]"
+                          v-if="post.categories?.[0]"
                           class="relative hidden w-20 font-light h-9 p-2 ml-0 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
                         >
-                          {{ edge.node.categories[0].title }}
+                          {{ post.categories[0].title }}
                         </span>
-                        {{ edge.node.title }}
+                        {{ post.title }}
                       </div>
 
                       <div class="tracking-tight leading-relaxed font-roboto text-xs mt-2">
                         <div
                           class="text-gray-600 font-light text-base text-ellipsis--2"
-                          v-html="richtextToHTML(edge.node.metaDescription)"
-                        ></div>
+                          v-html="richtextToHTML(post.metaDescription)"
+                        />
                       </div>
                     </div>
                   </div>
@@ -96,39 +99,47 @@
         <div ref="emblaEventRef" class="overflow-hidden w-full">
           <div class="flex -ml-4">
             <div
-              v-for="edge in events"
-              :key="edge.node.id"
+              v-for="event in events"
+              :key="event.id"
               class="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]"
             >
-              <div class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto relative">
-                <NuxtLink :to="edge.node.path">
+              <div
+                class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto relative"
+              >
+                <NuxtLink :to="event.path">
                   <div class="w-full overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-black to-black opacity-25"></div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-black to-black opacity-25" />
                     <div
                       class="border-b-2 py-2 text-center font-semibold opacity-90 bg-cover bg-center"
-                      :style="edge.node.type === 'blog' && edge.node.coverImage?.file?.url ? { backgroundImage: `url(${edge.node.coverImage.file.url})` } : {}"
+                      :style="
+                        event.type === 'blog' && event.coverImage?.file?.url
+                          ? { backgroundImage: `url(${event.coverImage.file.url})` }
+                          : {}
+                      "
                       :class="{
-                        'text-primary': edge.node.type !== 'blog',
-                        'text-white': edge.node.type === 'blog'
+                        'text-primary': event.type !== 'blog',
+                        'text-white': event.type === 'blog'
                       }"
                     >
                       <div class="text-9xl">
-                        {{ getDay(edge.node.date) }}
+                        {{ getDay(event.date) }}
                       </div>
                       <div class="text-xl capitalize">
-                        {{ getMonth(edge.node.date) }}
+                        {{ getMonth(event.date) }}
                       </div>
                     </div>
                     <div class="w-full relative px-4 pb-4 pt-2 bg-white">
-                      <div class="text-primary font-bold tracking-wider leading-relaxed font-roboto my-2">
-                        {{ edge.node.title }}
+                      <div
+                        class="text-primary font-bold tracking-wider leading-relaxed font-roboto my-2"
+                      >
+                        {{ event.title }}
                       </div>
 
                       <div class="tracking-tight leading-relaxed font-roboto text-xs">
                         <div
                           class="text-gray-600 font-light text-base text-ellipsis--2 my-2"
-                          v-html="richtextToHTML(edge.node.metaDescription)"
-                        ></div>
+                          v-html="richtextToHTML(event.metaDescription)"
+                        />
                       </div>
                     </div>
                   </div>
@@ -177,42 +188,22 @@ import emblaCarouselVue from 'embla-carousel-vue'
 import { useEventListener } from '@vueuse/core'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import type { Document } from '@contentful/rich-text-types'
+import type { ContentfulPost } from '~/types/contentful'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 
 dayjs.locale('fr')
 
-// 1. Interfaces & Props
-interface ContentfulMedia {
-  file: {
-    url: string
-  }
-}
-
-interface ItemNode {
-  id: string
-  title: string
-  path: string
-  date?: string
-  type?: string
-  metaDescription?: Document | string
-  coverImage?: ContentfulMedia
-  categories?: Array<{ id: string; title: string }>
-}
-
-interface EdgeItem {
-  node: ItemNode
-}
-
+// 1. Props
 interface Props {
   postsSectionTitle?: { text?: Document | string }
-  posts?: EdgeItem[]
+  posts?: ContentfulPost[]
   eventsSectionTitle?: { text?: Document | string }
-  events?: EdgeItem[]
+  events?: ContentfulPost[]
   type?: 'post' | 'event' | string
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   postsSectionTitle: () => ({}),
   posts: () => [],
   eventsSectionTitle: () => ({}),

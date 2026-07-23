@@ -4,10 +4,7 @@
 
     <!-- Section titre + description -->
     <section v-if="page.sections[0]" class="container mx-auto px-4 py-12">
-      <h1
-        v-if="page.sections[0].columns?.[0]?.title"
-        class="text-4xl font-bold text-primary mb-6"
-      >
+      <h1 v-if="page.sections[0].columns?.[0]?.title" class="text-4xl font-bold text-primary mb-6">
         {{ page.sections[0].columns[0].title }}
       </h1>
       <div
@@ -18,30 +15,7 @@
     </section>
 
     <!-- Liste des offres -->
-    <section class="container mx-auto px-4 pb-16">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <NuxtLink
-          v-for="offer in offers"
-          :key="offer.id"
-          :to="offer.path"
-          class="block bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-        >
-          <NuxtImg
-            v-if="offer.coverImage?.file?.url"
-            :src="offer.coverImage.file.url"
-            :alt="offer.title"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-primary mb-2">{{ offer.title }}</h3>
-            <div
-              class="text-gray-600 text-sm line-clamp-3"
-              v-html="richtextToHTML(offer.metaDescription)"
-            />
-          </div>
-        </NuxtLink>
-      </div>
-    </section>
+    <LazyOfferOffers v-if="offers?.length" :featured-offer="featuredOffer" :offers="offersList" />
   </main>
 </template>
 
@@ -66,6 +40,9 @@ const { data: offers } = await useAsyncData<ContentfulPost[]>('offres-list', () 
     (res: any) => res.items
   )
 )
+
+const featuredOffer = computed(() => offers.value?.[0])
+const offersList = computed(() => (offers.value ? offers.value.slice(1) : []))
 
 useSeoMeta({
   title: () => page.value?.seo?.title || 'Nos offres',

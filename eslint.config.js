@@ -109,6 +109,8 @@ export default [
         useSeoMeta: 'readonly',
         useRuntimeConfig: 'readonly',
         navigateTo: 'readonly',
+        useRoute: 'readonly',
+        createError: 'readonly',
         $fetch: 'readonly',
         defineEventHandler: 'readonly',
         getQuery: 'readonly',

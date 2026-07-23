@@ -7,49 +7,45 @@
           v-if="title?.text"
           class="px-1 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold"
           v-html="richtextToHTML(title.text)"
-        ></h2>
+        />
       </div>
 
-      <div class="3xl:mx-52 4xl:mx-96">
+      <div v-if="featuredPosts?.length" class="3xl:mx-52 4xl:mx-96">
         <!-- Carrousel Embla -->
         <div ref="emblaRef" class="overflow-hidden border rounded shadow-sm bg-white w-full">
           <div class="flex">
-            <div
-              v-for="edge in featuredPost"
-              :key="edge.node.id"
-              class="flex-[0_0_100%] min-w-0"
-            >
-              <NuxtLink :to="edge.node.path" class="block">
+            <div v-for="post in featuredPosts" :key="post.id" class="flex-[0_0_100%] min-w-0">
+              <NuxtLink :to="post.path" class="block">
                 <div class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4">
                   <!-- Colonne gauche : Contenu texte & Auteur -->
                   <div class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4">
                     <h2
                       class="text-lg md:text-2xl text-left font-bold text-secondary text-opacity-70 py-3 mt-24 md:mt-0"
                     >
-                      {{ edge.node.title }}
+                      {{ post.title }}
                     </h2>
-                    
+
                     <div
                       class="py-3 text-justify text-gray-700"
-                      v-html="richtextToHTML(edge.node.metaDescription)"
-                    ></div>
+                      v-html="richtextToHTML(post.metaDescription)"
+                    />
 
                     <!-- Bloc Auteur & Date -->
                     <div class="flex items-center text-sm font-medium my-5 md:mt-2 md:mb-4">
-                      <div class="ml-1" v-if="edge.node.coverImage?.file?.url">
+                      <div v-if="post.coverImage?.file?.url" class="ml-1">
                         <img
-                          :src="edge.node.coverImage.file.url"
-                          alt="Avatar auteur"
+                          :src="post.coverImage.file.url"
+                          :alt="post.title"
                           class="rounded-full w-12 h-12 object-cover bg-gray-100"
                         />
                       </div>
 
                       <div class="flex flex-col px-4">
                         <p class="text-primary text-base font-medium">
-                          {{ edge.node.author }}
+                          {{ post.author }}
                         </p>
                         <p class="text-gray-400 text-xs">
-                          {{ formatDate(edge.node.date) }}
+                          {{ formatDate(post.date) }}
                         </p>
                       </div>
                     </div>
@@ -60,9 +56,9 @@
                     <div class="w-full grid grid-cols-1 grid-rows-2 gap-2">
                       <div class="relative col-span-3 row-span-2 md:col-span-2">
                         <img
-                          v-if="edge.node.coverImage?.file?.url"
-                          :src="edge.node.coverImage.file.url"
-                          :alt="edge.node.title"
+                          v-if="post.coverImage?.file?.url"
+                          :src="post.coverImage.file.url"
+                          :alt="post.title"
                           class="absolute inset-0 w-full md:h-full h-96 object-cover bg-gray-100 md:rounded-lg"
                         />
                       </div>
@@ -76,11 +72,7 @@
 
         <!-- Boutons de contrôle -->
         <div class="flex float-right mt-4 mr-8">
-          <button
-            @click="showPrev"
-            :disabled="!canScrollPrev"
-            aria-label="Article précédent"
-          >
+          <button @click="showPrev" :disabled="!canScrollPrev" aria-label="Article précédent">
             <div
               class="z-10 bg-opacity-10 w-8 h-8 mr-2 rounded-md border flex items-center justify-center text-black transition-colors"
               :class="{
@@ -94,11 +86,7 @@
             </div>
           </button>
 
-          <button
-            @click="showNext"
-            :disabled="!canScrollNext"
-            aria-label="Article suivant"
-          >
+          <button @click="showNext" :disabled="!canScrollNext" aria-label="Article suivant">
             <div
               class="z-10 bg-opacity-10 w-8 h-8 rounded-md border flex items-center justify-center text-black transition-colors"
               :class="{
@@ -121,37 +109,18 @@
 import emblaCarouselVue from 'embla-carousel-vue'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import type { Document } from '@contentful/rich-text-types'
+import type { ContentfulPost } from '~/types/contentful'
 import dayjs from 'dayjs'
 
-// 1. Interfaces & Props
-interface ContentfulMedia {
-  file: {
-    url: string
-  }
-}
-
-interface PostNode {
-  id: string
-  title: string
-  path: string
-  author?: string
-  date?: string
-  metaDescription?: Document | string
-  coverImage?: ContentfulMedia
-}
-
-interface FeaturedPostEdge {
-  node: PostNode
-}
-
+// 1. Props
 interface Props {
   title?: { text?: Document | string }
-  featuredPost?: FeaturedPostEdge[]
+  featuredPosts?: ContentfulPost[]
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   title: () => ({}),
-  featuredPost: () => []
+  featuredPosts: () => []
 })
 
 // 2. Configuration Embla Carousel (1 slide à la fois)
@@ -181,7 +150,7 @@ const showPrev = () => emblaApi.value?.scrollPrev()
 const showNext = () => emblaApi.value?.scrollNext()
 
 // 3. Utilitaires (Date & Richtext)
-const formatDate = (value?: string) => (value ? dayjs(value).format('MM/DD/YYYY') : '')
+const formatDate = (value?: string) => (value ? dayjs(value).format('DD/MM/YYYY') : '')
 
 const richtextToHTML = (content?: Document | string) => {
   if (!content) return ''
