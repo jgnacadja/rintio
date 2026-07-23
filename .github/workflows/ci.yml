@@ -2,9 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, develop, 'vue-3-migration', 'release/*']
   pull_request:
-    branches: [main, develop]
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
