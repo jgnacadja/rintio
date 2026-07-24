@@ -5,9 +5,9 @@
   >
     <div class="w-full md:w-full lg:w-1/4 text-center md:text-center lg:text-left">
       <div class="mx-4 md:mx-0">
-        <h3 class="mb-3 text-sm text-primary font-semibold uppercase">
+        <p class="mb-3 text-sm text-primary font-semibold uppercase">
           {{ title }}
-        </h3>
+        </p>
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>

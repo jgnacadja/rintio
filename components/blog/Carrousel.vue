@@ -3,8 +3,8 @@
     <div class="w-full">
       <!-- Titre de la section -->
       <div class="w-full my-6">
-        <h3
-          class="px-3 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold"
+        <h2
+          class="px-3 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold font-montserrat"
         >
           <span
             v-if="type === 'post' && postsSectionTitle?.text"
@@ -14,7 +14,7 @@
             v-if="type === 'event' && eventsSectionTitle?.text"
             v-html="richtextToHTML(eventsSectionTitle.text)"
           />
-        </h3>
+        </h2>
       </div>
 
       <!-- CAROUSEL POSTS -->
@@ -70,26 +70,28 @@
           <button
             @click="showPrevPost"
             :disabled="!canScrollPrevPost"
+            aria-label="Article précédent"
             class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10 transition-colors"
             :class="{
               'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollPrevPost,
               'bg-primary border-primary': canScrollPrevPost
             }"
           >
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
             </svg>
           </button>
           <button
             @click="showNextPost"
             :disabled="!canScrollNextPost"
+            aria-label="Article suivant"
             class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10 transition-colors"
             :class="{
               'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollNextPost,
               'bg-primary border-primary': canScrollNextPost
             }"
           >
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
             </svg>
           </button>
@@ -156,26 +158,28 @@
           <button
             @click="showPrevEvent"
             :disabled="!canScrollPrevEvent"
+            aria-label="Événement précédent"
             class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 mr-2 rounded-md border bg-opacity-10 transition-colors"
             :class="{
               'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollPrevEvent,
               'bg-primary border-primary': canScrollPrevEvent
             }"
           >
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
             </svg>
           </button>
           <button
             @click="showNextEvent"
             :disabled="!canScrollNextEvent"
+            aria-label="Événement suivant"
             class="flex items-center justify-center text-black cursor-pointer z-10 w-8 h-8 rounded-md border bg-opacity-10 transition-colors"
             :class="{
               'bg-gray-100 opacity-50 cursor-not-allowed': !canScrollNextEvent,
               'bg-primary border-primary': canScrollNextEvent
             }"
           >
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
             </svg>
           </button>

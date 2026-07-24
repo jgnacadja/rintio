@@ -11,6 +11,11 @@
 <script setup>
 import { useHead } from '#app'
 const { data: metadata } = await useFetch('/api/metadata')
+
+const route = useRoute()
+const siteConfig = useSiteConfig()
+const canonicalUrl = computed(() => `${siteConfig.url}${route.path}`)
+
 useHead({
   meta: [
     {
@@ -35,13 +40,13 @@ useHead({
     },
     {
       property: 'og:url',
-      content: metadata.value?.siteUrl || 'https://rintio.com'
+      content: canonicalUrl
     }
   ],
   link: [
     {
       rel: 'canonical',
-      href: metadata.value?.siteUrl
+      href: canonicalUrl
     }
   ]
 })

@@ -10,6 +10,7 @@
       :swipper="page.sections[0].columns?.[0]"
       :content="page.sections[0].columns?.[1]"
       :button="page.sections[0].columns?.[2]"
+      title-tag="h1"
     />
 
     <!-- Section 1 : Services -->

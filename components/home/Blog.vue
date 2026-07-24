@@ -2,9 +2,9 @@
   <div class="items-center justify-center w-full py-6 md:py-24">
     <!-- En-tête -->
     <div v-if="title" class="text-center">
-      <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
+      <p class="mb-3 text-sm font-semibold uppercase text-primary">
         {{ title }}
-      </h3>
+      </p>
     </div>
 
     <div class="text-center">
@@ -41,9 +41,9 @@
             />
           </div>
 
-          <h5 class="mx-4 mt-2 mb-2 text-xl font-bold leading-tight text-gray-800">
+          <h3 class="mx-4 mt-2 mb-2 text-xl font-bold leading-tight text-gray-800">
             {{ edge.node.title }}
-          </h5>
+          </h3>
 
           <p class="mx-4 space-x-8 text-xs text-primary">
             <span>{{ formatDate(edge.node.date) }}</span>
@@ -53,6 +53,7 @@
                 class="w-5 h-4 sm:hidden"
                 viewBox="0 0 20 20"
                 fill="currentColor"
+                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -99,9 +100,9 @@
 
           <div class="w-3/5 px-4 mt-4">
             <NuxtLink :to="`/blog/article/${edge.node.path}`">
-              <h5 class="mb-2 text-lg font-semibold text-left text-gray-800 md:text-xl">
+              <h3 class="mb-2 text-lg font-semibold text-left text-gray-800 md:text-xl">
                 {{ edge.node.title }}
-              </h5>
+              </h3>
 
               <p class="mt-2 text-xs text-primary md:mt-4">
                 <span>{{ formatDate(edge.node.date) }}</span>
@@ -111,6 +112,7 @@
                     class="w-5 h-4 sm:hidden"
                     viewBox="0 0 20 20"
                     fill="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       fill-rule="evenodd"
@@ -141,7 +143,7 @@
         >
           Voir plus de publications
           <span class="pl-2">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true">
               <path
                 fill-rule="evenodd"
                 d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"

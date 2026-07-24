@@ -5,10 +5,10 @@
     <div class="justify-center w-full py-6 md:px-20 md:flex md:py-24">
       <div class="w-full mx-auto mb-8 md:mb-0">
         <div class="mx-4 text-center md:mx-0">
-          <h1
+          <h2
             class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
             v-html="content.title"
-          ></h1>
+          ></h2>
 
           <div class="mx-auto my-3 md:mb-24 md:w-1/2" v-html="richtextToHTML(content.text)"></div>
           <!---->
@@ -34,16 +34,18 @@
                         class="flex items-center w-5 h-5 mr-2 text-xs border rounded-full place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
                         :href="expert.ctaLink"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        :aria-label="`LinkedIn de ${expert.name} (nouvel onglet)`"
                       >
-                        <em class="relative fab fa-linkedin-in"></em>
+                        <em class="relative fab fa-linkedin-in" aria-hidden="true"></em>
                       </a>
                     </span>
                   </div>
 
                   <div class="flex-grow w-2/3 pl-4 text-left sm:pl-5 lg:pl-4">
-                    <h6 class="mb-4 text-sm font-bold text-gray-600 uppercase">
+                    <h3 class="mb-4 text-sm font-bold text-gray-600 uppercase">
                       {{ expert.name }}
-                    </h6>
+                    </h3>
                     <p
                       class="mb-2 text-xs"
                       v-for="skill in expert.text.content.slice(0, 3)"

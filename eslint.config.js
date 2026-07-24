@@ -113,6 +113,7 @@ export default [
         useHead: 'readonly',
         useSeoMeta: 'readonly',
         useRuntimeConfig: 'readonly',
+        useSiteConfig: 'readonly',
         useContentful: 'readonly',
         useSeo: 'readonly',
         navigateTo: 'readonly',

@@ -4,9 +4,8 @@
       <!-- Titre de la section -->
       <div class="w-full my-6 mx-24 3xl:mx-52 4xl:mx-96">
         <h2
-          v-if="title?.text"
           class="px-1 md:text-md md:mx-auto mt-20 md:-mt-16 lg:-mt-16 xl:-mt-12 2xl:-mt-12 text-primary font-bold"
-          v-html="richtextToHTML(title.text)"
+          v-html="title?.text ? richtextToHTML(title.text) : 'Articles à la une'"
         />
       </div>
 
@@ -19,11 +18,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4">
                   <!-- Colonne gauche : Contenu texte & Auteur -->
                   <div class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4">
-                    <h2
-                      class="text-lg md:text-2xl text-left font-bold text-secondary text-opacity-70 py-3 mt-24 md:mt-0"
+                    <h3
+                      class="text-lg md:text-2xl text-left font-bold font-roboto text-secondary text-opacity-70 py-3 mt-24 md:mt-0"
                     >
                       {{ post.title }}
-                    </h2>
+                    </h3>
 
                     <div
                       class="py-3 text-justify text-gray-700"
@@ -84,7 +83,7 @@
                 'bg-primary border-primary cursor-pointer': canScrollPrev
               }"
             >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
               </svg>
             </div>
@@ -98,7 +97,7 @@
                 'bg-primary border-primary cursor-pointer': canScrollNext
               }"
             >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
               </svg>
             </div>

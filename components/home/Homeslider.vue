@@ -1,11 +1,16 @@
 <template>
-  <div class="relative overflow-hidden w-full height bg-black">
+  <div
+    class="relative overflow-hidden w-full height bg-black"
+    role="region"
+    aria-label="Carrousel principal"
+  >
     <!-- Slides -->
     <div
       v-for="(slide, index) in slides"
       :key="slide.sys?.id || index"
       class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
       :class="index === activeIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'"
+      :aria-hidden="index !== activeIndex"
     >
       <div
         class="bg-cover h-full bg-center text-black py-2 md:py-32 px-2 md:px-20 object-fill flex items-center"
@@ -20,16 +25,17 @@
         <div
           class="md:w-5/12 bg-white/85 backdrop-blur-sm p-8 rounded-lg md:bg-transparent md:backdrop-blur-none md:p-0"
         >
-          <h3
+          <p
             class="font-bold text-sm 2xl:text-lg 3xl:text-3xl uppercase text-secondary font-roboto"
           >
             {{ slide.fields?.name || slide.name }}
-          </h3>
-          <h1
+          </p>
+          <component
+            :is="index === activeIndex ? 'h1' : 'div'"
             class="text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl font-extrabold text-primary font-roboto mt-2 mb-4"
           >
             {{ slide.fields?.title || slide.title }}
-          </h1>
+          </component>
           <div
             class="text-lg md:text-xl 2xl:text-xl 3xl:text-2xl mb-10 leading-8 text-gray-800 md:text-black"
             v-html="richtextToHTML(slide.fields?.text || slide.text)"

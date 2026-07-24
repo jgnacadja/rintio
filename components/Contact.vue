@@ -9,7 +9,7 @@
             <div class="mx-auto">
               <div class="max-w-lg mx-auto my-10">
                 <div class="pt-6 mx-4 md:mx-0">
-                  <h3 class="my-3 text-sm font-semibold uppercase text-primary">Contactez-nous</h3>
+                  <p class="my-3 text-sm font-semibold uppercase text-primary">Contactez-nous</p>
                   <!-- Title Dot -->
                   <div class="-mt-3">
                     <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
@@ -31,11 +31,13 @@
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
                       <button
+                        tabindex="-1"
+                        aria-hidden="true"
                         class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary max-w-max bg-opacity-10"
                       >
                         <NuxtImg
                           src="/images/icons/phone.svg"
-                          alt="Téléphone"
+                          alt=""
                           class="w-5 h-5"
                           width="50"
                           height="40"
@@ -64,11 +66,13 @@
                   <div class="flex items-center p-4">
                     <div class="w-2/12 text-center">
                       <button
+                        tabindex="-1"
+                        aria-hidden="true"
                         class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary text-secondary max-w-max bg-opacity-10"
                       >
                         <NuxtImg
                           src="/images/icons/envelope.svg"
-                          alt="Envelope"
+                          alt=""
                           class="w-5 h-5"
                           width="50"
                           height="32"
@@ -107,17 +111,19 @@
                 <div class="mx-4 md:m-7">
                   <form id="form" name="form" @submit.prevent="sendEmail">
                     <div class="mb-6">
+                      <label for="name" class="sr-only">Nom complet</label>
                       <input
                         type="text"
                         v-model="name"
                         name="name"
                         id="name"
                         placeholder="Nom complet"
-                        requiredmethods
+                        required
                         class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
                       />
                     </div>
                     <div class="mb-6">
+                      <label for="email" class="sr-only">Email</label>
                       <input
                         type="email"
                         v-model="email"
@@ -129,6 +135,7 @@
                       />
                     </div>
                     <div class="mb-6">
+                      <label for="object" class="sr-only">Objet</label>
                       <input
                         type="text"
                         v-model="object"
@@ -140,6 +147,7 @@
                       />
                     </div>
                     <div class="mb-6">
+                      <label for="message" class="sr-only">Message</label>
                       <textarea
                         rows="5"
                         v-model="message"

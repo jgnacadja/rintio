@@ -188,9 +188,9 @@
     </div>
     <div class="w-full md:w-1/2 mb-8 md:mb-0 md:mt-0">
       <div class="mx-4 md:mx-0">
-        <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
+        <p class="mb-3 text-sm font-semibold uppercase text-primary">
           {{ title }}
-        </h3>
+        </p>
         <!-- Title Dot -->
         <div class="-mt-3">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
@@ -200,7 +200,13 @@
       </div>
 
       <div class="mx-4 md:mx-0 pt-6">
+        <h1
+          v-if="titleTag === 'h1'"
+          class="my-3 text-2xl md:text-5xl font-extrabold text-primary"
+          v-html="content.title"
+        ></h1>
         <h2
+          v-else
           class="my-3 text-2xl md:text-5xl font-extrabold text-primary"
           v-html="content.title"
         ></h2>
@@ -253,6 +259,10 @@ export default {
       default() {
         return {}
       }
+    },
+    titleTag: {
+      type: String,
+      default: 'h2'
     }
   },
   mounted() {

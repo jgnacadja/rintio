@@ -22,7 +22,12 @@
 
     <div class="md:flex hidden justify-center items-center w-full md:w-3/4 md:mx-auto">
       <div class="py-4 mx-4 w-full md:w-1/3">
-        <a href="https://goo.gl/maps/vBBTTGEydxDGfaXz7" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Localiser Rintio à Cotonou, Bénin sur Google Maps (nouvel onglet)"
+        >
           <div
             class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
           >
@@ -45,6 +50,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       stroke-linecap="round"
@@ -61,7 +67,12 @@
         </a>
       </div>
       <div class="py-4 mx-4 w-full md:w-1/3">
-        <a href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Localiser Rintio à Paris, France sur Google Maps (nouvel onglet)"
+        >
           <div
             class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
           >
@@ -84,6 +95,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       stroke-linecap="round"
@@ -124,6 +136,7 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     stroke-linecap="round"
@@ -143,7 +156,12 @@
     <div class="w-full p-4 md:hidden">
       <VueSlickCarousel v-bind="settings">
         <div class="py-4 md:mx-2 w-full h-full">
-          <a href="https://goo.gl/maps/vBBTTGEydxDGfaXz7" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Localiser Rintio à Cotonou, Bénin sur Google Maps (nouvel onglet)"
+          >
             <div
               class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
             >
@@ -161,9 +179,7 @@
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      after-appear=""
-                      alt="Cotonou"
-                      title="Cotonou localisation"
+                      aria-hidden="true"
                     >
                       <path
                         stroke-linecap="round"
@@ -180,7 +196,12 @@
           </a>
         </div>
         <div class="py-4 md:mx-2 w-full h-full">
-          <a href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Localiser Rintio à Paris, France sur Google Maps (nouvel onglet)"
+          >
             <div
               class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
             >
@@ -198,8 +219,7 @@
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      alt="Paris"
-                      title="Paris localisation"
+                      aria-hidden="true"
                     >
                       <path
                         stroke-linecap="round"
@@ -233,8 +253,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    alt="Abidjan"
-                    title="Abidjan localisation"
+                    aria-hidden="true"
                   >
                     <path
                       stroke-linecap="round"

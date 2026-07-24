@@ -24,12 +24,12 @@
             v-for="link in socialLinks"
             :key="link.href"
             :href="link.href"
-            :aria-label="link.label"
+            :aria-label="`${link.label} (nouvel onglet)`"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center justify-center w-5 h-5 text-xs bg-white rounded-full text-primary hover:bg-secondary hover:text-white transition"
           >
-            <i :class="`fab fa-${link.icon}`"></i>
+            <i :class="`fab fa-${link.icon}`" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -58,7 +58,8 @@
       <div class="w-full px-5 py-2 md:hidden">
         <button
           type="button"
-          aria-expanded="openProducts"
+          :aria-expanded="openProducts"
+          aria-controls="footer-products-panel"
           class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none font-roboto"
           @click="openProducts = !openProducts"
         >
@@ -70,6 +71,7 @@
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -81,7 +83,7 @@
         </button>
 
         <Transition name="accordion">
-          <div v-if="openProducts" class="pt-2 pb-2">
+          <div v-if="openProducts" id="footer-products-panel" class="pt-2 pb-2">
             <NuxtLink
               v-for="product in products"
               :key="product.href"
@@ -98,7 +100,8 @@
       <div class="w-full px-5 py-2 md:hidden">
         <button
           type="button"
-          aria-expanded="openLinks"
+          :aria-expanded="openLinks"
+          aria-controls="footer-links-panel"
           class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none font-roboto"
           @click="openLinks = !openLinks"
         >
@@ -110,6 +113,7 @@
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -121,7 +125,7 @@
         </button>
 
         <Transition name="accordion">
-          <div v-if="openLinks" class="pt-2 pb-2">
+          <div v-if="openLinks" id="footer-links-panel" class="pt-2 pb-2">
             <NuxtLink
               v-for="link in usefulLinks"
               :key="link.href"

@@ -51,6 +51,8 @@
         @click="openMenu = !openMenu"
         class="flex items-center p-3 text-gray-600"
         aria-label="Ouvrir le menu"
+        :aria-expanded="openMenu"
+        aria-controls="mobile-menu-panel"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +60,7 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path
             stroke-linecap="round"
@@ -73,6 +76,7 @@
     <Transition name="slide">
       <div
         v-if="openMenu"
+        id="mobile-menu-panel"
         class="fixed inset-y-0 right-0 z-40 w-full h-full overflow-y-auto bg-white lg:hidden"
       >
         <!-- Close Button -->
@@ -81,6 +85,8 @@
             @click="openMenu = !openMenu"
             class="flex items-center text-gray-600"
             aria-label="Fermer le menu"
+            :aria-expanded="openMenu"
+            aria-controls="mobile-menu-panel"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -88,6 +94,7 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -123,12 +130,12 @@
             v-for="link in socialLinks"
             :key="link.href"
             :href="link.href"
-            :aria-label="link.label"
+            :aria-label="`${link.label} (nouvel onglet)`"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center justify-center w-10 h-10 text-lg text-gray-600 bg-white border border-gray-600 rounded-full hover:bg-secondary hover:text-white hover:border-secondary transition"
           >
-            <i :class="`fab fa-${link.icon}`"></i>
+            <i :class="`fab fa-${link.icon}`" aria-hidden="true"></i>
           </a>
         </div>
       </div>

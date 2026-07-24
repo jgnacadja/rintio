@@ -2,10 +2,10 @@
   <div class="justify-center w-full py-6 lg:px-20 md:flex md:py-24">
     <div class="w-full mx-auto mb-8 md:mb-0">
       <div class="mx-4 text-center md:mx-0">
-        <h1
+        <h2
           class="pb-8 text-xl font-extrabold capitalize md:text-5xl text-primary"
           v-html="content.title"
-        ></h1>
+        ></h2>
 
         <div class="mx-auto my-3 w-ful lg:w-1/2" v-html="richtextToHTML(content.text)"></div>
       </div>
@@ -21,15 +21,15 @@
               width="400"
               height="500"
             />
-            <h2
-              class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary"
-              v-html="leader.name"
-            ></h2>
             <h3
+              class="px-6 mt-10 mb-2 font-normal font-roboto lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary"
+              v-html="leader.name"
+            ></h3>
+            <p
               class="px-6 pb-2 uppercase border-b-2 text-secondary border-secondary lg:px-2 lg:text-lg 3xl:text-2xl 2xl:px-4 3xl:px-8"
             >
               {{ leader.title }}
-            </h3>
+            </p>
             <p class="px-6 mb-0" v-for="skill in leader.text.content" :key="skill.content">
               {{ skill.content[0].value }}
             </p>
@@ -38,9 +38,10 @@
                 class="flex items-center ml-auto mr-2 text-xs border rounded-full w-7 h-7 place-content-center hover:border-none text-primary hover:bg-secondary hover:text-white"
                 :href="leader.ctaLink"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
+                :aria-label="`LinkedIn de ${leader.name} (nouvel onglet)`"
               >
-                <em class="relative fab fa-linkedin-in"></em>
+                <em class="relative fab fa-linkedin-in" aria-hidden="true"></em>
               </a>
             </div>
           </div>
@@ -51,18 +52,20 @@
         <VueSlickCarousel v-bind="settings" class="space-x-4">
           <div class="w-full" v-for="leader in team" :key="leader.id">
             <div class="h-full pb-4 mx-1 bg-white shadow-md">
-              <g-image
+              <img
                 class="w-full 4xl:w-full"
                 :src="leader.image.file.url"
                 :alt="leader.image.name"
-              ></g-image>
-              <h2
-                class="px-2 mt-0 mb-2 text-xl font-normal sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary"
+                width="400"
+                height="500"
+              />
+              <h3
+                class="px-2 mt-0 mb-2 text-xl font-normal font-roboto sm:px-6 xs:text-2xl sm:text-4xl md:text-5xl text-primary"
                 v-html="leader.name"
-              ></h2>
-              <h3 class="px-2 pb-2 uppercase border-b-2 text-secondary border-secondary sm:px-6">
+              ></h3>
+              <p class="px-2 pb-2 uppercase border-b-2 text-secondary border-secondary sm:px-6">
                 {{ leader.title }}
-              </h3>
+              </p>
               <p class="px-6 mb-0" v-for="skill in leader.text.content" :key="skill.content">
                 {{ skill.content[0].value }}
               </p>
@@ -71,9 +74,10 @@
                   class="flex items-center ml-auto mr-2 text-xs bg-white border-2 rounded-full w-7 h-7 place-content-center border-primary hover:border-none text-primary hover:bg-secondary hover:text-white"
                   :href="leader.ctaLink"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  :aria-label="`LinkedIn de ${leader.name} (nouvel onglet)`"
                 >
-                  <em class="relative fab fa-linkedin-in"></em>
+                  <em class="relative fab fa-linkedin-in" aria-hidden="true"></em>
                 </a>
               </div>
             </div>

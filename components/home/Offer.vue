@@ -8,9 +8,9 @@
     >
       <div>
         <div>
-          <h3 class="mb-3 text-sm font-semibold uppercase text-primary">
+          <p class="mb-3 text-sm font-semibold uppercase text-primary">
             {{ title }}
-          </h3>
+          </p>
           <div class="-mt-3">
             <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
             <span class="inline-block w-2 h-2 ml-2 rounded-full bg-secondary"></span>
