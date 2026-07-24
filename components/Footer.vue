@@ -7,9 +7,16 @@
     >
       <!-- Col-1: Logo + Social Links -->
       <div class="w-full p-5 sm:px-10 lg:px-20 lg:w-3/12">
-        <div class="w-10">
-          <NuxtImg src="/images/rintio-logo.svg" alt="Rintio" title="Rintio" class="w-10" />
-        </div>
+        <NuxtLink to="/" class="inline-block w-44">
+          <NuxtImg
+            src="/images/rintio-logo.svg"
+            alt="Rintio"
+            title="Rintio"
+            class="w-44"
+            width="273"
+            height="74"
+          />
+        </NuxtLink>
 
         <p class="mt-6 mb-4">Suivez nous sur :</p>
         <div class="flex gap-2">
@@ -205,7 +212,7 @@ const products = [
 
 const usefulLinks = [
   {
-    href: '#',
+    href: '/blog/article/rintio-data-lab',
     label: 'Rintio Data Lab'
   },
   {
@@ -217,7 +224,7 @@ const usefulLinks = [
     label: 'Nos engagements'
   },
   {
-    href: '#',
+    href: '/blog/article/africa-techup-tour-atut',
     label: 'Africa Tech Up Tour'
   }
 ]

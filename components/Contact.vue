@@ -33,7 +33,13 @@
                       <button
                         class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary max-w-max bg-opacity-10"
                       >
-                        <NuxtImg src="/images/icons/phone.svg" alt="Téléphone" class="w-5 h-5" />
+                        <NuxtImg
+                          src="/images/icons/phone.svg"
+                          alt="Téléphone"
+                          class="w-5 h-5"
+                          width="50"
+                          height="40"
+                        />
                       </button>
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
@@ -60,7 +66,13 @@
                       <button
                         class="flex items-center w-12 h-12 p-3 uppercase rounded-full pointer-events-none bg-secondary text-secondary max-w-max bg-opacity-10"
                       >
-                        <NuxtImg src="/images/icons/envelope.svg" alt="Envelope" class="w-5 h-5" />
+                        <NuxtImg
+                          src="/images/icons/envelope.svg"
+                          alt="Envelope"
+                          class="w-5 h-5"
+                          width="50"
+                          height="32"
+                        />
                       </button>
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
@@ -84,6 +96,7 @@
           <div class="items-center">
             <div class="mx-auto">
               <div
+                id="formulaire"
                 class="max-w-lg min-h-0 p-5 mx-auto my-10 bg-white rounded-sm shadow-md md:shadow-xl"
               >
                 <div class="mx-4 md:m-7">
@@ -160,7 +173,13 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser'
+
 export default {
+  setup() {
+    const config = useRuntimeConfig()
+    return { config }
+  },
   data() {
     return {
       name: null,
@@ -172,31 +191,28 @@ export default {
     }
   },
   methods: {
-    sendEmail(_e) {
+    sendEmail(e) {
       this.result = null
       this.color = null
 
-      /* emailjs
+      emailjs
         .sendForm(
-          "service_kcg1fpl",
-          "template_q2ewdb3",
+          this.config.public.emailjsServiceId,
+          this.config.public.emailjsTemplateId,
           e.target,
-          "user_Y2KIJGmvuqmYVVqo9JBO8"
+          this.config.public.emailjsUserId
         )
         .then(
           () => {
-            this.result = "Votre message a été envoyé";
-            this.color = "text-green-500";
-            // Reset form field
-            this.resetForm();
+            this.result = 'Votre message a été envoyé'
+            this.color = 'text-green-500'
+            this.resetForm()
           },
           () => {
-            this.result = "Une erreur est survenue, veuillez réessayer";
-            this.color = "text-red-500";
+            this.result = 'Une erreur est survenue, veuillez réessayer'
+            this.color = 'text-red-500'
           }
-        ); */
-      this.result = 'Une erreur est survenue, veuillez réessayer plus tard'
-      this.color = 'text-red-500'
+        )
     },
     resetForm() {
       this.name = null

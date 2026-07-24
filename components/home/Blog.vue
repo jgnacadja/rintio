@@ -26,16 +26,18 @@
         :key="edge.node.id"
         class="h-full col-span-3 row-span-2 bg-white shadow-sm xl:col-span-1 xl:row-span-2"
       >
-        <NuxtLink :to="edge.node.path">
+        <NuxtLink :to="`/blog/article/${edge.node.path}`">
           <div
             class="aspect-w-7 aspect-h-8 xs:aspect-w-16 xs:aspect-h-7 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8"
           >
             <img
               v-if="edge.node.coverImage?.file?.url"
               :src="edge.node.coverImage.file.url"
-              alt="Cover Image"
+              :alt="edge.node.title"
               class="object-cover w-full h-64 mb-0"
               loading="lazy"
+              width="640"
+              height="360"
             />
           </div>
 
@@ -78,23 +80,25 @@
       >
         <div class="flex flex-row h-full">
           <div class="w-2/5 h-48 md:h-full">
-            <NuxtLink :to="edge.node.path">
+            <NuxtLink :to="`/blog/article/${edge.node.path}`">
               <div
                 class="aspect-w-12 aspect-h-16 sm:aspect-w-16 sm:aspect-h-10 md:aspect-w-14 md:aspect-h-16 xl:aspect-w-10 xl:aspect-h-10 2xl:aspect-w-16 2xl:aspect-h-10 3xl:aspect-w-16 3xl:aspect-h-10"
               >
                 <img
                   v-if="edge.node.coverImage?.file?.url"
                   :src="edge.node.coverImage.file.url"
-                  alt="Cover Image"
+                  :alt="edge.node.title"
                   class="object-cover w-full h-full"
                   loading="lazy"
+                  width="320"
+                  height="240"
                 />
               </div>
             </NuxtLink>
           </div>
 
           <div class="w-3/5 px-4 mt-4">
-            <NuxtLink :to="edge.node.path">
+            <NuxtLink :to="`/blog/article/${edge.node.path}`">
               <h5 class="mb-2 text-lg font-semibold text-left text-gray-800 md:text-xl">
                 {{ edge.node.title }}
               </h5>
@@ -173,23 +177,6 @@ interface PostNode {
   metaDescription?: Document | string
 }
 
-interface PostEdge {
-  node: PostNode
-}
-
-interface GraphQLCategoryResponse {
-  featuredPost?: {
-    belongsTo?: {
-      edges?: PostEdge[]
-    }
-  }
-  posts?: {
-    belongsTo?: {
-      edges?: PostEdge[]
-    }
-  }
-}
-
 interface Props {
   title?: string
   content?: {
@@ -203,46 +190,18 @@ withDefaults(defineProps<Props>(), {
   content: () => ({})
 })
 
-// 2. Récupération des données avec useAsyncData (remplace <static-query>)
-const { data: blogData } = await useAsyncData('home-blog-preview', async () => {
-  const query = `
-    query {
-      featuredPost: contentfulCategory(path: "blog") {
-        belongsTo(order: DESC, limit: 1) {
-          edges {
-            node {
-              ... on ContentfulPost {
-                id title path author date metaDescription
-                coverImage { file { url } }
-              }
-            }
-          }
-        }
-      }
-      posts: contentfulCategory(path: "blog") {
-        belongsTo(order: DESC, skip: 1, limit: 2) {
-          edges {
-            node {
-              ... on ContentfulPost {
-                id title path author date metaDescription
-                coverImage { file { url } }
-              }
-            }
-          }
-        }
-      }
-    }
-  `
-
-  // Adaptez l'appel $fetch vers votre client/endpoint GraphQL Contentful
-  return await $fetch<GraphQLCategoryResponse>('/api/graphql', {
-    method: 'POST',
-    body: { query }
-  })
+// 2. Récupération des données via l'API REST Contentful (aperçu blog : 1 article à la une + 2 récents)
+const { data: blogPosts } = await useFetch<{ items: PostNode[] }>('/api/contentful/posts', {
+  key: 'home-blog-preview',
+  query: { category: 'blog', limit: '3' }
 })
 
-const featuredPosts = computed(() => blogData.value?.featuredPost?.belongsTo?.edges ?? [])
-const recentPosts = computed(() => blogData.value?.posts?.belongsTo?.edges ?? [])
+const featuredPosts = computed(() =>
+  (blogPosts.value?.items ?? []).slice(0, 1).map((node) => ({ node }))
+)
+const recentPosts = computed(() =>
+  (blogPosts.value?.items ?? []).slice(1).map((node) => ({ node }))
+)
 
 // 3. Utilitaires
 const formatDate = (value?: string) => (value ? dayjs(value).format('MM/DD/YYYY') : '')

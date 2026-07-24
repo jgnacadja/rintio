@@ -348,15 +348,15 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/variables.scss';
 .bg-map-cotonou {
-  background-image: url('./../../../static/images/home/map/cotonou.webp');
+  background-image: url('/images/home/map/cotonou.webp');
 }
 
 .bg-map-paris {
-  background-image: url('./../../../static/images/home/map/paris.webp');
+  background-image: url('/images/home/map/paris.webp');
 }
 
 .bg-map-abidjan {
-  background-image: url('./../../../static/images/home/map/abidjan.webp');
+  background-image: url('/images/home/map/abidjan.webp');
 }
 
 @media (min-width: 768px) {

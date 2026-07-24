@@ -22,7 +22,12 @@
                     <div
                       class="items-center justify-center w-16 h-16 mx-auto mb-4 overflow-hidden border border-gray-200 rounded-full bg-gray-50"
                     >
-                      <NuxtImg :src="expert.image.file.url" :alt="expert.image.name"></NuxtImg>
+                      <img
+                        :src="expert.image.file.url"
+                        :alt="expert.image.name"
+                        width="64"
+                        height="64"
+                      />
                     </div>
                     <span class="inline-flex">
                       <a

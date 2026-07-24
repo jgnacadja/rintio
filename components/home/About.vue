@@ -150,6 +150,7 @@
               y="51"
               width="490"
               height="223"
+              aria-hidden="true"
             ></image>
             <image
               clip-path="url(#heroclip2)"
@@ -159,6 +160,7 @@
               y="293"
               width="294"
               height="270"
+              aria-hidden="true"
             ></image>
             <image
               clip-path="url(#heroclip3)"
@@ -168,6 +170,7 @@
               y="233"
               width="176"
               height="164"
+              aria-hidden="true"
             ></image>
             <image
               clip-path="url(#heroclip4)"
@@ -177,6 +180,7 @@
               y="404"
               width="78"
               height="76"
+              aria-hidden="true"
             ></image>
           </g>
         </svg>

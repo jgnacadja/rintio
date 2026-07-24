@@ -4,7 +4,10 @@
 
     <!-- Section titre + description -->
     <section v-if="page.sections[0]" class="container mx-auto px-4 py-12">
-      <h1 v-if="page.sections[0].columns?.[0]?.title" class="text-4xl font-bold text-primary mb-6">
+      <h1
+        v-if="page.sections[0].columns?.[0]?.title"
+        class="text-5xl font-extrabold text-primary mb-6"
+      >
         {{ page.sections[0].columns[0].title }}
       </h1>
       <div

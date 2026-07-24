@@ -120,6 +120,7 @@ export default [
         createError: 'readonly',
         $fetch: 'readonly',
         defineEventHandler: 'readonly',
+        defineSitemapEventHandler: 'readonly',
         getQuery: 'readonly',
         // Vue auto-imports
         ref: 'readonly',

@@ -119,7 +119,9 @@ export default defineNuxtConfig({
     sitemap: 'https://rintio.com/sitemap.xml'
   },
   sitemap: {
-    defaults: { changefreq: 'monthly', priority: 0.5 }
+    defaults: { changefreq: 'monthly', priority: 0.5 },
+    sources: ['/api/__sitemap__/urls'],
+    autoI18n: false
   },
   build: {
     transpile: ['@fortawesome/vue-fontawesome']
@@ -211,10 +213,11 @@ export default defineNuxtConfig({
     mailjetApiKey: process.env.MAILJET_API_KEY,
     mailjetApiSecret: process.env.MAILJET_API_SECRET,
     mailjetListId: Number(process.env.MAILJET_LIST_ID) || 42219,
-    emailjsServiceId: process.env.EMAILJS_SERVICE_ID,
-    emailjsTemplateId: process.env.EMAILJS_TEMPLATE_ID,
-    emailjsUserId: process.env.EMAILJS_USER_ID,
     gtmId: process.env.GTM_ID || 'GTM-M83MD4M',
-    public: {}
+    public: {
+      emailjsServiceId: process.env.EMAILJS_SERVICE_ID,
+      emailjsTemplateId: process.env.EMAILJS_TEMPLATE_ID,
+      emailjsUserId: process.env.EMAILJS_USER_ID
+    }
   }
 })

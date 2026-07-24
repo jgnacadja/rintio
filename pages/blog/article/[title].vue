@@ -84,14 +84,16 @@
         <NuxtLink
           v-for="item in related"
           :key="item.id"
-          :to="item.path"
+          :to="`/blog/article/${item.path}`"
           class="block bg-white shadow hover:shadow-lg transition"
         >
-          <NuxtImg
+          <img
             v-if="item.coverImage?.file?.url"
             :src="item.coverImage.file.url"
             :alt="item.title"
             class="w-full h-40 object-cover"
+            width="320"
+            height="160"
           />
           <div class="p-4">
             <h3 class="font-bold text-primary">{{ item.title }}</h3>

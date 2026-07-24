@@ -14,11 +14,13 @@
       >
         <div class="w-full shadow-md md:w-1/2" v-for="leader in team" :key="leader.id">
           <div class="h-full bg-white">
-            <g-image
+            <img
               class="w-full 4xl:w-full"
               :src="leader.image.file.url"
               :alt="leader.image.name"
-            ></g-image>
+              width="400"
+              height="500"
+            />
             <h2
               class="px-6 mt-10 mb-2 font-normal lg:mt-0 lg:px-2 lg:text-2xl 3xl:text-4xl 2xl:px-4 3xl:px-8 text-primary"
               v-html="leader.name"

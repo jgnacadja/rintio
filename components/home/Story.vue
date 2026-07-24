@@ -6,14 +6,16 @@
     </div>
     <div class="grid gap-4 md:grid-cols-6 xl:grid-cols-4 md:grid-flow-row xl:grid-flow-rows">
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
-        <NuxtLink :to="stories[0].path">
+        <NuxtLink :to="`/blog/article/${stories[0].path}`">
           <div class="w-full h-full bg-white">
             <div class="aspect-w-16 aspect-h-11">
-              <g-image
+              <img
                 alt="coraq"
                 title="Coraq Chmp"
                 :src="stories[0].coverImage.file.url"
                 class="object-cover w-full mb-0"
+                width="640"
+                height="440"
               />
             </div>
 
@@ -36,16 +38,18 @@
         v-for="story in stories.slice(1)"
         :key="story.id"
       >
-        <NuxtLink :to="story.path">
+        <NuxtLink :to="`/blog/article/${story.path}`">
           <div class="w-full h-full p-4 bg-white lg:p-0">
             <div
               class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10"
             >
-              <g-image
+              <img
                 alt="Atut"
                 title="Africa TechUp Tour"
                 :src="story.coverImage.file.url"
                 class="object-cover w-full mb-0 h-52"
+                width="640"
+                height="400"
               />
             </div>
 

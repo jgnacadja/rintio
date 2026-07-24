@@ -4,7 +4,14 @@
     <div class="hidden lg:flex justify-between items-center h-24 px-10">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center">
-        <NuxtImg src="/images/rintio.svg" alt="Rintio.com" title="Rintio" class="w-44" />
+        <NuxtImg
+          src="/images/rintio.svg"
+          alt="Rintio.com"
+          title="Rintio"
+          class="w-44"
+          width="179"
+          height="48"
+        />
       </NuxtLink>
 
       <!-- Desktop Navigation -->
@@ -29,7 +36,14 @@
     <div class="lg:hidden flex justify-between items-center p-3">
       <!-- Logo Mobile -->
       <NuxtLink to="/" class="flex items-center">
-        <NuxtImg src="/images/rintio.svg" alt="Rintio.com" title="Rintio" class="w-32" />
+        <NuxtImg
+          src="/images/rintio.svg"
+          alt="Rintio.com"
+          title="Rintio"
+          class="w-32"
+          width="179"
+          height="48"
+        />
       </NuxtLink>
 
       <!-- Mobile Menu Button -->

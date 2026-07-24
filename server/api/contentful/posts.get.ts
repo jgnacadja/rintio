@@ -1,15 +1,28 @@
 import { useContentful } from '~/utils/useContentful'
 import { buildLookupMaps, resolveLink, resolveAssetFile } from '~/utils/contentfulResolver'
 
-type CategorySlug = 'offres' | 'blog' | 'evenements'
+type CategorySlug =
+  'offres' | 'blog' | 'evenements' | 'stories' | 'story' | 'datalab' | 'offres-france'
 
 const categoryTitleMap: Record<CategorySlug, string> = {
   offres: 'Offres',
   blog: 'Blog',
-  evenements: 'Evènements'
+  evenements: 'Evènements',
+  stories: 'Stories',
+  story: 'Story',
+  datalab: 'Datalab',
+  'offres-france': 'Offres France'
 }
 
-const validCategories: CategorySlug[] = ['blog', 'evenements', 'offres']
+const validCategories: CategorySlug[] = [
+  'blog',
+  'evenements',
+  'offres',
+  'stories',
+  'story',
+  'datalab',
+  'offres-france'
+]
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)

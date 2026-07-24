@@ -29,12 +29,14 @@
               <div
                 class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto"
               >
-                <NuxtLink :to="post.path">
+                <NuxtLink :to="`/blog/article/${post.path}`">
                   <div class="w-full overflow-hidden">
                     <img
                       :src="post.coverImage?.file?.url"
                       :alt="post.title"
                       class="object-cover w-full h-48 mb-0"
+                      width="384"
+                      height="192"
                     />
                     <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                       <div
@@ -106,7 +108,7 @@
               <div
                 class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto relative"
               >
-                <NuxtLink :to="event.path">
+                <NuxtLink :to="`/blog/article/${event.path}`">
                   <div class="w-full overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-b from-black to-black opacity-25" />
                     <div

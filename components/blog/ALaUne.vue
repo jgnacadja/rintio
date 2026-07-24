@@ -15,7 +15,7 @@
         <div ref="emblaRef" class="overflow-hidden border rounded shadow-sm bg-white w-full">
           <div class="flex">
             <div v-for="post in featuredPosts" :key="post.id" class="flex-[0_0_100%] min-w-0">
-              <NuxtLink :to="post.path" class="block">
+              <NuxtLink :to="`/blog/article/${post.path}`" class="block">
                 <div class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4">
                   <!-- Colonne gauche : Contenu texte & Auteur -->
                   <div class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4">
@@ -37,6 +37,8 @@
                           :src="post.coverImage.file.url"
                           :alt="post.title"
                           class="rounded-full w-12 h-12 object-cover bg-gray-100"
+                          width="48"
+                          height="48"
                         />
                       </div>
 
@@ -60,6 +62,8 @@
                           :src="post.coverImage.file.url"
                           :alt="post.title"
                           class="absolute inset-0 w-full md:h-full h-96 object-cover bg-gray-100 md:rounded-lg"
+                          width="640"
+                          height="384"
                         />
                       </div>
                     </div>
