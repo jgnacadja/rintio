@@ -172,11 +172,6 @@ const socialLinks = [
     href: 'https://twitter.com/RintioGroup/',
     icon: 'twitter',
     label: 'Twitter Rintio'
-  },
-  {
-    href: 'https://www.instagram.com/RintioGroup/',
-    icon: 'instagram',
-    label: 'Instagram Rintio'
   }
 ]
 </script>
