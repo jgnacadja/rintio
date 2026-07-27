@@ -60,7 +60,7 @@
           type="button"
           :aria-expanded="openProducts"
           aria-controls="footer-products-panel"
-          class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none font-roboto"
+          class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none focus:ring-2 focus:ring-white font-roboto"
           @click="openProducts = !openProducts"
         >
           <span class="text-xl">Produits</span>
@@ -102,7 +102,7 @@
           type="button"
           :aria-expanded="openLinks"
           aria-controls="footer-links-panel"
-          class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none font-roboto"
+          class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none focus:ring-2 focus:ring-white font-roboto"
           @click="openLinks = !openLinks"
         >
           <span class="text-xl">Liens utiles</span>

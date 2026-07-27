@@ -151,7 +151,7 @@ const route = useRoute()
 const openMenu = ref(false)
 
 const navItems = [
-  { path: '/', label: 'Acceuil' },
+  { path: '/', label: 'Accueil' },
   { path: '/a-propos', label: 'A propos' },
   { path: '/offres', label: 'Nos offres' },
   { path: '/blog', label: 'Blog' }

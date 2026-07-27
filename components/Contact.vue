@@ -161,7 +161,7 @@
                     <div class="mb-6">
                       <button
                         type="submit"
-                        class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none"
+                        class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                       >
                         Envoyer
                       </button>

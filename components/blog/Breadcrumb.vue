@@ -10,7 +10,7 @@
     <div class="md:w-5/12">
       <h2 class="flex text-2xl font-extrabold md:text-5xl text-secondary">Blog</h2>
       <p class="text-sm font-light">
-        Acceuil |
+        Accueil |
         <span class="font-bold text-primary"> Blog </span>
       </p>
     </div>

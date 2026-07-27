@@ -219,7 +219,7 @@
           <NuxtLink :to="button.ctaLink">
             <button
               type="submit"
-              class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none uppercase"
+              class="px-6 py-2 md:py-4 text-white text-sm bg-secondary rounded-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary uppercase"
             >
               {{ button.ctaText }}
             </button>

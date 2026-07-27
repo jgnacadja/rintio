@@ -11,7 +11,12 @@
 
       <div v-if="featuredPosts?.length" class="3xl:mx-52 4xl:mx-96">
         <!-- Carrousel Embla -->
-        <div ref="emblaRef" class="overflow-hidden border rounded shadow-sm bg-white w-full">
+        <div
+          ref="emblaRef"
+          class="overflow-hidden border rounded shadow-sm bg-white w-full"
+          role="region"
+          aria-label="Carrousel des articles à la une"
+        >
           <div class="flex">
             <div v-for="post in featuredPosts" :key="post.id" class="flex-[0_0_100%] min-w-0">
               <NuxtLink :to="`/blog/article/${post.path}`" class="block">

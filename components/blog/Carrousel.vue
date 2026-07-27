@@ -19,7 +19,12 @@
 
       <!-- CAROUSEL POSTS -->
       <div v-if="type === 'post'">
-        <div ref="emblaPostRef" class="overflow-hidden w-full">
+        <div
+          ref="emblaPostRef"
+          class="overflow-hidden w-full"
+          role="region"
+          aria-label="Carrousel des articles"
+        >
           <div class="flex -ml-4">
             <div
               v-for="post in posts"
@@ -100,7 +105,12 @@
 
       <!-- CAROUSEL ÉVÉNEMENTS -->
       <div v-if="type === 'event'">
-        <div ref="emblaEventRef" class="overflow-hidden w-full">
+        <div
+          ref="emblaEventRef"
+          class="overflow-hidden w-full"
+          role="region"
+          aria-label="Carrousel des événements"
+        >
           <div class="flex -ml-4">
             <div
               v-for="event in events"

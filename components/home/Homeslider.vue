@@ -51,7 +51,9 @@
     </div>
 
     <!-- Indicators / Bullets -->
-    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+    <div
+      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-3"
+    >
       <button
         v-for="(_, index) in slides"
         :key="index"
@@ -59,7 +61,25 @@
         class="w-3 h-3 rounded-full transition-all duration-300"
         :class="index === activeIndex ? 'bg-primary scale-125' : 'bg-white/50 hover:bg-white'"
         :aria-label="`Slide ${index + 1}`"
+        :aria-current="index === activeIndex"
       />
+      <button
+        v-if="slides.length > 1"
+        @click="togglePause"
+        class="flex items-center justify-center w-6 h-6 ml-2 text-white rounded-full bg-white/20 hover:bg-white/40 transition-colors"
+        :aria-label="
+          isPaused
+            ? 'Reprendre le défilement automatique'
+            : 'Mettre en pause le défilement automatique'
+        "
+      >
+        <svg v-if="isPaused" class="w-3 h-3 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M6 4l12 6-12 6V4z" />
+        </svg>
+        <svg v-else class="w-3 h-3 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M6 4h3v12H6V4zm5 0h3v12h-3V4z" />
+        </svg>
+      </button>
     </div>
   </div>
 </template>
@@ -78,13 +98,16 @@ const props = defineProps({
 const activeIndex = ref(0)
 let timer: any = null
 
+const prefersReducedMotion = ref(false)
+const isPaused = ref(false)
+
 const richtextToHTML = (content: any) => {
   if (!content) return ''
   return documentToHtmlString(content)
 }
 
 const startAutoplay = () => {
-  if (props.slides.length <= 1) return
+  if (props.slides.length <= 1 || prefersReducedMotion.value || isPaused.value) return
   timer = setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % props.slides.length
   }, 6000)
@@ -97,7 +120,18 @@ const stopAutoplay = () => {
   }
 }
 
+const togglePause = () => {
+  isPaused.value = !isPaused.value
+  if (isPaused.value) {
+    stopAutoplay()
+  } else {
+    startAutoplay()
+  }
+}
+
 onMounted(() => {
+  prefersReducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  isPaused.value = prefersReducedMotion.value
   startAutoplay()
 })
 

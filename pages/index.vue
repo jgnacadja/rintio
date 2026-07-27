@@ -45,7 +45,7 @@ import type { ContentfulPage, ContentfulComponentSection, ContentfulPost } from 
 
 const { data: page } = await useFetch<ContentfulPage>('/api/contentful/page', {
   key: 'page-accueil',
-  query: { path: 'Acceuil' }
+  query: { path: 'Accueil' }
 })
 
 const { data: offersResponse } = await useFetch<{ items: ContentfulPost[] }>(
@@ -61,7 +61,7 @@ const offersList = computed(() => offersResponse.value?.items?.slice(1) || [])
 
 // 2. SEO & Méta-données
 useSeoMeta({
-  title: () => page.value?.seo?.title || 'Acceuil',
+  title: () => page.value?.seo?.title || 'Accueil',
   description: () => page.value?.seo?.description || '',
   keywords: () =>
     Array.isArray(page.value?.seo?.keywords)

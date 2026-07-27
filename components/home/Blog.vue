@@ -139,7 +139,7 @@
     <div class="w-full px-2 py-4 mx-auto md:flex xl:px-24">
       <NuxtLink to="/blog" class="ml-auto">
         <button
-          class="flex ml-auto font-medium md:text-lg hover:text-secondary focus:outline-none items-center"
+          class="flex ml-auto font-medium md:text-lg hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-sm items-center"
         >
           Voir plus de publications
           <span class="pl-2">

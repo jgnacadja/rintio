@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const validPaths = ['Acceuil', 'Acceuil France', 'Blog', 'A propos', 'Offres']
+  const validPaths = ['Accueil', 'Accueil France', 'Blog', 'A propos', 'Offres']
   if (!validPaths.includes(path)) {
     throw createError({
       statusCode: 400,

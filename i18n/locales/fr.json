@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Acceuil",
+    "home": "Accueil",
     "about": "A propos",
     "offers": "Nos offres",
     "blog": "Blog"
@@ -21,7 +21,7 @@
     "send": "Envoyer"
   },
   "breadcrumb": {
-    "home": "Acceuil"
+    "home": "Accueil"
   },
   "blog": {
     "featured": "À la une",

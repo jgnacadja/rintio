@@ -31,5 +31,5 @@ withDefaults(defineProps<Props>(), {
 })
 
 // Variable directement accessible dans le template
-const home = 'Acceuil'
+const home = 'Accueil'
 </script>
