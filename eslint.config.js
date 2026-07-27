@@ -123,6 +123,7 @@ export default [
         defineEventHandler: 'readonly',
         defineSitemapEventHandler: 'readonly',
         getQuery: 'readonly',
+        readBody: 'readonly',
         // Vue auto-imports
         ref: 'readonly',
         computed: 'readonly',

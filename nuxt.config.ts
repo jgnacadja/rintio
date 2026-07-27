@@ -213,11 +213,8 @@ export default defineNuxtConfig({
     mailjetApiKey: process.env.MAILJET_API_KEY,
     mailjetApiSecret: process.env.MAILJET_API_SECRET,
     mailjetListId: Number(process.env.MAILJET_LIST_ID) || 42219,
+    brevoApiKey: process.env.BREVO_API_KEY,
     gtmId: process.env.GTM_ID || 'GTM-M83MD4M',
-    public: {
-      emailjsServiceId: process.env.EMAILJS_SERVICE_ID,
-      emailjsTemplateId: process.env.EMAILJS_TEMPLATE_ID,
-      emailjsUserId: process.env.EMAILJS_USER_ID
-    }
+    public: {}
   }
 })

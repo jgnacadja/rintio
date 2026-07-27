@@ -46,7 +46,7 @@
                     </div>
                     <div class="w-10/12 px-4 md:px-0">
                       <div>
-                        <a class="hover:text-secondary" href="tel:+33 6 25 18 40 11"
+                        <a class="hover:text-secondary" href="tel:+33 6 27 54 50 21"
                           >+33 6 27 54 50 21</a
                         >
                       </div>
@@ -56,7 +56,7 @@
                         >
                       </div>
                       <div>
-                        <a class="hover:text-secondary" href="tel:+229 97 11 94 79"
+                        <a class="hover:text-secondary" href="tel:+229 97 10 49 64"
                           >+229 97 10 49 64</a
                         >
                       </div>
@@ -181,13 +181,7 @@
 </template>
 
 <script>
-import emailjs from '@emailjs/browser'
-
 export default {
-  setup() {
-    const config = useRuntimeConfig()
-    return { config }
-  },
   data() {
     return {
       name: null,
@@ -199,28 +193,27 @@ export default {
     }
   },
   methods: {
-    sendEmail(e) {
+    async sendEmail() {
       this.result = null
       this.color = null
 
-      emailjs
-        .sendForm(
-          this.config.public.emailjsServiceId,
-          this.config.public.emailjsTemplateId,
-          e.target,
-          this.config.public.emailjsUserId
-        )
-        .then(
-          () => {
-            this.result = 'Votre message a été envoyé'
-            this.color = 'text-green-500'
-            this.resetForm()
-          },
-          () => {
-            this.result = 'Une erreur est survenue, veuillez réessayer'
-            this.color = 'text-red-500'
+      try {
+        await $fetch('/api/contact', {
+          method: 'POST',
+          body: {
+            name: this.name,
+            email: this.email,
+            object: this.object,
+            message: this.message
           }
-        )
+        })
+        this.result = 'Votre message a été envoyé'
+        this.color = 'text-green-500'
+        this.resetForm()
+      } catch (error) {
+        this.result = 'Une erreur est survenue, veuillez réessayer'
+        this.color = 'text-red-500'
+      }
     },
     resetForm() {
       this.name = null
