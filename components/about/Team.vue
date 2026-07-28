@@ -39,7 +39,7 @@
                 :href="leader.ctaLink"
                 target="_blank"
                 rel="noopener noreferrer"
-                :aria-label="`LinkedIn de ${leader.name} (nouvel onglet)`"
+                :aria-label="`LinkedIn de ${leader.name}`"
               >
                 <em class="relative fab fa-linkedin-in" aria-hidden="true"></em>
               </a>
@@ -75,7 +75,7 @@
                   :href="leader.ctaLink"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :aria-label="`LinkedIn de ${leader.name} (nouvel onglet)`"
+                  :aria-label="`LinkedIn de ${leader.name}`"
                 >
                   <em class="relative fab fa-linkedin-in" aria-hidden="true"></em>
                 </a>

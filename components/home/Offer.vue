@@ -44,7 +44,7 @@
       class="w-full h-full col-span-6 row-span-2 md:col-span-2 md:row-span-2 lg:col-span-1 lg:row-span-2"
     >
       <NuxtLink
-        :to="`/blog/article/${featuredOffer.path}`"
+        :to="toPostLink(featuredOffer.path)"
         class="block relative bg-center bg-no-repeat bg-cover shadow-lg group h-80 md:h-full"
         :style="{ backgroundImage: `url(${featuredOffer.coverImage?.file?.url})` }"
       >
@@ -74,7 +74,7 @@
       class="w-full h-full col-span-6 row-span-2 md:col-span-2 md:row-span-1 lg:col-span-1 lg:row-span-1"
     >
       <NuxtLink
-        :to="`/blog/article/${offer.path}`"
+        :to="toPostLink(offer.path)"
         class="block bg-white bg-center bg-no-repeat bg-cover shadow-lg group"
         :style="{ backgroundImage: `url(${offer.coverImage?.file?.url})` }"
       >

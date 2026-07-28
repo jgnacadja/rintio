@@ -116,6 +116,8 @@ export default [
         useSiteConfig: 'readonly',
         useContentful: 'readonly',
         useSeo: 'readonly',
+        useBrevo: 'readonly',
+        toPostLink: 'readonly',
         navigateTo: 'readonly',
         useRoute: 'readonly',
         createError: 'readonly',

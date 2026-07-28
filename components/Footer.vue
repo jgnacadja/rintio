@@ -24,7 +24,7 @@
             v-for="link in socialLinks"
             :key="link.href"
             :href="link.href"
-            :aria-label="`${link.label} (nouvel onglet)`"
+            :aria-label="`${link.label}`"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center justify-center w-5 h-5 text-xs bg-white rounded-full text-primary hover:bg-secondary hover:text-white transition"

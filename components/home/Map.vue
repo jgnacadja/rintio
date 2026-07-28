@@ -26,7 +26,7 @@
           href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Localiser Rintio à Cotonou, Bénin sur Google Maps (nouvel onglet)"
+          aria-label="Localiser Rintio à Cotonou, Bénin sur Google Maps"
         >
           <div
             class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
@@ -71,7 +71,7 @@
           href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Localiser Rintio à Paris, France sur Google Maps (nouvel onglet)"
+          aria-label="Localiser Rintio à Paris, France sur Google Maps"
         >
           <div
             class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"
@@ -160,7 +160,7 @@
             href="https://goo.gl/maps/vBBTTGEydxDGfaXz7"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Localiser Rintio à Cotonou, Bénin sur Google Maps (nouvel onglet)"
+            aria-label="Localiser Rintio à Cotonou, Bénin sur Google Maps"
           >
             <div
               class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-cotonou"
@@ -200,7 +200,7 @@
             href="https://goo.gl/maps/dtQk9dyzfcHwkpfLA"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Localiser Rintio à Paris, France sur Google Maps (nouvel onglet)"
+            aria-label="Localiser Rintio à Paris, France sur Google Maps"
           >
             <div
               class="shadow-lg group container bg-white max-w-sm mx-auto bg-center bg-cover bg-no-repeat bg-map-paris"

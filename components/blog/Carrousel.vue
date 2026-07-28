@@ -34,7 +34,7 @@
               <div
                 class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto"
               >
-                <NuxtLink :to="`/blog/article/${post.path}`">
+                <NuxtLink :to="toPostLink(post.path)">
                   <div class="w-full overflow-hidden">
                     <img
                       :src="post.coverImage?.file?.url"
@@ -120,7 +120,7 @@
               <div
                 class="shadow-md group container max-w-sm bg-center bg-cover bg-no-repeat w-11/12 mx-auto relative"
               >
-                <NuxtLink :to="`/blog/article/${event.path}`">
+                <NuxtLink :to="toPostLink(event.path)">
                   <div class="w-full overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-b from-black to-black opacity-25" />
                     <div

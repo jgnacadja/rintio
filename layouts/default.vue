@@ -14,7 +14,8 @@ const { data: metadata } = await useFetch('/api/metadata')
 
 const route = useRoute()
 const siteConfig = useSiteConfig()
-const canonicalUrl = computed(() => `${siteConfig.url}${route.path}`)
+const baseUrl = (siteConfig.url || '').replace(/\/$/, '')
+const canonicalUrl = computed(() => `${baseUrl}${route.path}`)
 
 useHead({
   meta: [

@@ -31,8 +31,8 @@
         >
           <img
             class="mb-0"
-            :src="partners[0].image.file.url"
-            :alt="partners[0].name"
+            :src="partners[0]?.image?.file?.url"
+            :alt="partners[0]?.name"
             width="240"
             height="240"
           />
@@ -42,8 +42,8 @@
         >
           <img
             class="mb-0"
-            :src="partners[1].image.file.url"
-            :alt="partners[1].name"
+            :src="partners[1]?.image?.file?.url"
+            :alt="partners[1]?.name"
             width="160"
             height="160"
           />
@@ -55,8 +55,8 @@
         >
           <img
             class="mb-0"
-            :src="partners[2].image.file.url"
-            :alt="partners[2].name"
+            :src="partners[2]?.image?.file?.url"
+            :alt="partners[2]?.name"
             width="224"
             height="224"
           />
@@ -66,8 +66,8 @@
         >
           <img
             class="mb-0"
-            :src="partners[3].image.file.url"
-            :alt="partners[3].name"
+            :src="partners[3]?.image?.file?.url"
+            :alt="partners[3]?.name"
             width="208"
             height="208"
           />
@@ -78,8 +78,8 @@
           >
             <img
               class="mb-0"
-              :src="partners[4].image.file.url"
-              :alt="partners[4].name"
+              :src="partners[4]?.image?.file?.url"
+              :alt="partners[4]?.name"
               width="96"
               height="96"
             />
@@ -89,8 +89,8 @@
           >
             <img
               class="mb-0"
-              :src="partners[5].image.file.url"
-              :alt="partners[5].name"
+              :src="partners[5]?.image?.file?.url"
+              :alt="partners[5]?.name"
               width="96"
               height="96"
             />
@@ -103,8 +103,8 @@
         >
           <img
             class="mb-0"
-            :src="partners[6].image.file.url"
-            :alt="partners[6].name"
+            :src="partners[6]?.image?.file?.url"
+            :alt="partners[6]?.name"
             width="240"
             height="144"
           />
@@ -115,8 +115,8 @@
           >
             <img
               class="mb-0"
-              :src="partners[7].image.file.url"
-              :alt="partners[7].name"
+              :src="partners[7]?.image?.file?.url"
+              :alt="partners[7]?.name"
               width="128"
               height="128"
             />
@@ -126,8 +126,8 @@
           >
             <img
               class="mb-0"
-              :src="partners[8].image.file.url"
-              :alt="partners[8].name"
+              :src="partners[8]?.image?.file?.url"
+              :alt="partners[8]?.name"
               width="128"
               height="128"
             />
@@ -138,8 +138,8 @@
         >
           <img
             class="mb-0"
-            :src="partners[9].image.file.url"
-            :alt="partners[9].name"
+            :src="partners[9]?.image?.file?.url"
+            :alt="partners[9]?.name"
             width="224"
             height="224"
           />

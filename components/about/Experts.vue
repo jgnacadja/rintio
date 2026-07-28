@@ -35,7 +35,7 @@
                         :href="expert.ctaLink"
                         target="_blank"
                         rel="noopener noreferrer"
-                        :aria-label="`LinkedIn de ${expert.name} (nouvel onglet)`"
+                        :aria-label="`LinkedIn de ${expert.name}`"
                       >
                         <em class="relative fab fa-linkedin-in" aria-hidden="true"></em>
                       </a>

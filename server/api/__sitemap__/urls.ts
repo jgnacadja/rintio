@@ -1,4 +1,5 @@
 import { useContentful } from '~/utils/useContentful'
+import { toPostLink } from '~/utils/postLink'
 
 export default defineSitemapEventHandler(async () => {
   const { fetchEntries } = useContentful()
@@ -11,7 +12,7 @@ export default defineSitemapEventHandler(async () => {
   return (response.items || [])
     .filter((post: any) => post.fields?.path)
     .map((post: any) => ({
-      loc: `/blog/article/${post.fields.path}`,
+      loc: toPostLink(post.fields.path),
       lastmod: post.sys?.updatedAt
     }))
 })

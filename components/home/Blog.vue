@@ -26,7 +26,7 @@
         :key="edge.node.id"
         class="h-full col-span-3 row-span-2 bg-white shadow-sm xl:col-span-1 xl:row-span-2"
       >
-        <NuxtLink :to="`/blog/article/${edge.node.path}`">
+        <NuxtLink :to="toPostLink(edge.node.path)">
           <div
             class="aspect-w-7 aspect-h-8 xs:aspect-w-16 xs:aspect-h-7 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-8"
           >
@@ -81,7 +81,7 @@
       >
         <div class="flex flex-row h-full">
           <div class="w-2/5 h-48 md:h-full">
-            <NuxtLink :to="`/blog/article/${edge.node.path}`">
+            <NuxtLink :to="toPostLink(edge.node.path)">
               <div
                 class="aspect-w-12 aspect-h-16 sm:aspect-w-16 sm:aspect-h-10 md:aspect-w-14 md:aspect-h-16 xl:aspect-w-10 xl:aspect-h-10 2xl:aspect-w-16 2xl:aspect-h-10 3xl:aspect-w-16 3xl:aspect-h-10"
               >
@@ -99,7 +99,7 @@
           </div>
 
           <div class="w-3/5 px-4 mt-4">
-            <NuxtLink :to="`/blog/article/${edge.node.path}`">
+            <NuxtLink :to="toPostLink(edge.node.path)">
               <h3 class="mb-2 text-lg font-semibold text-left text-gray-800 md:text-xl">
                 {{ edge.node.title }}
               </h3>

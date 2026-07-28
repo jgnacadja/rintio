@@ -130,7 +130,7 @@
             v-for="link in socialLinks"
             :key="link.href"
             :href="link.href"
-            :aria-label="`${link.label} (nouvel onglet)`"
+            :aria-label="`${link.label}`"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center justify-center w-10 h-10 text-lg text-gray-600 bg-white border border-gray-600 rounded-full hover:bg-secondary hover:text-white hover:border-secondary transition"

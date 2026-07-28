@@ -7,7 +7,7 @@
         class="row-span-6 col-span-3 md:col-span-6 lg:col-span-2 lg:row-span-2"
       >
         <NuxtLink
-          :to="`/blog/article/${featuredOffer.path}`"
+          :to="toPostLink(featuredOffer.path)"
           class="block w-full relative px-4 bg-center bg-cover bg-no-repeat h-80 md:h-full"
           :style="{ backgroundImage: `url(${featuredOffer.coverImage?.file?.url})` }"
         >
@@ -49,7 +49,7 @@
         class="col-span-3 md:row-span-3 lg:col-span-1 lg:row-span-1"
       >
         <NuxtLink
-          :to="`/blog/article/${offer.path}`"
+          :to="toPostLink(offer.path)"
           class="block shadow-lg bg-center bg-cover bg-no-repeat h-full"
           :style="{ backgroundImage: `url(${offer.coverImage?.file?.url})` }"
         >

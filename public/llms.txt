@@ -40,6 +40,6 @@ Société Générale, Expertise France, CiviTime, Studely, Econocom, CHMP, iDerm
 - [Africa TechUp Tour](http://africatechuptour.com/): Programme de formation et de partage de connaissances en Data/IA porté par Rintio en Afrique.
 - [Coraq Lab / CHMP](https://coraq.formation.chmp.org): Plateforme e-learning développée par Rintio avec CHMP et Initiative 5%, financée par Expertise France.
 
-## Optional
+## facultatif
 - [iDermato (Google Play)](https://play.google.com/store/apps/details?id=com.rintio.idermato&hl=fr&gl=US): Application d'IA au service des dermatologues et généralistes pour le diagnostic d'affections cutanées sur peaux noires.
 - Contact: contact@rintio.com

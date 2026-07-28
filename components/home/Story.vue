@@ -6,7 +6,7 @@
     </div>
     <div class="grid gap-4 md:grid-cols-6 xl:grid-cols-4 md:grid-flow-row xl:grid-flow-rows">
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
-        <NuxtLink :to="`/blog/article/${stories[0].path}`">
+        <NuxtLink :to="toPostLink(stories[0].path)">
           <div class="w-full h-full bg-white">
             <div class="aspect-w-16 aspect-h-11">
               <img
@@ -38,7 +38,7 @@
         v-for="story in stories.slice(1)"
         :key="story.id"
       >
-        <NuxtLink :to="`/blog/article/${story.path}`">
+        <NuxtLink :to="toPostLink(story.path)">
           <div class="w-full h-full p-4 bg-white lg:p-0">
             <div
               class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10"

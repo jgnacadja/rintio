@@ -19,7 +19,7 @@
         >
           <div class="flex">
             <div v-for="post in featuredPosts" :key="post.id" class="flex-[0_0_100%] min-w-0">
-              <NuxtLink :to="`/blog/article/${post.path}`" class="block">
+              <NuxtLink :to="toPostLink(post.path)" class="block">
                 <div class="grid grid-cols-1 md:grid-cols-2 md:px-8 md:gap-x-8 md:py-4">
                   <!-- Colonne gauche : Contenu texte & Auteur -->
                   <div class="col-start-1 row-start-2 mt-72 md:mt-0 md:row-start-1 px-4">

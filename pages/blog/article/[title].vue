@@ -54,7 +54,7 @@
           :href="linkedinUrl"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Partager sur LinkedIn (nouvel onglet)"
+          aria-label="Partager sur LinkedIn"
           class="px-4 py-2 bg-primary text-white text-sm hover:bg-secondary transition"
         >
           LinkedIn
@@ -63,7 +63,7 @@
           :href="twitterUrl"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Partager sur Twitter (nouvel onglet)"
+          aria-label="Partager sur Twitter"
           class="px-4 py-2 bg-primary text-white text-sm hover:bg-secondary transition"
         >
           Twitter
@@ -72,7 +72,7 @@
           :href="facebookUrl"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Partager sur Facebook (nouvel onglet)"
+          aria-label="Partager sur Facebook"
           class="px-4 py-2 bg-primary text-white text-sm hover:bg-secondary transition"
         >
           Facebook
@@ -87,7 +87,7 @@
         <NuxtLink
           v-for="item in related"
           :key="item.id"
-          :to="`/blog/article/${item.path}`"
+          :to="toPostLink(item.path)"
           class="block bg-white shadow hover:shadow-lg transition"
         >
           <img
@@ -117,7 +117,7 @@ const route = useRoute()
 const siteUrl = 'https://rintio.com'
 
 const postPath = computed(() => String(route.params.title))
-const fullPath = computed(() => `${siteUrl}/blog/article/${postPath.value}`)
+const fullPath = computed(() => `${siteUrl}${toPostLink(postPath.value)}`)
 const breadcrumbPath = computed(() => 'blog')
 
 const formatDate = (date: string) => dayjs(date).format('DD/MM/YYYY')

@@ -198,7 +198,21 @@ export default defineNuxtConfig({
     identity: defineOrganization({
       name: 'Rintio',
       url: 'https://rintio.com',
-      logo: 'https://rintio.com/logo.png'
+      logo: 'https://rintio.com/images/rintio.svg',
+      description:
+        "Rintio est une entreprise technologique qui fournit des services numériques et de conseils, et accompagne l'innovation et la transformation digitale des entreprises par la Data, l'IA, le DevOps et l'offshoring basé au Bénin.",
+      email: 'contact@rintio.com',
+      foundingDate: '2017',
+      sameAs: [
+        'https://web.facebook.com/RintioGroup/',
+        'https://www.linkedin.com/company/rintio/',
+        'https://twitter.com/RintioGroup/'
+      ],
+      address: [
+        { addressLocality: 'Cotonou', addressCountry: 'BJ' },
+        { addressLocality: 'Paris', addressCountry: 'FR' },
+        { addressLocality: 'Abidjan', addressCountry: 'CI' }
+      ]
     })
   },
   sourcemap: {
@@ -214,6 +228,7 @@ export default defineNuxtConfig({
     mailjetApiSecret: process.env.MAILJET_API_SECRET,
     mailjetListId: Number(process.env.MAILJET_LIST_ID) || 42219,
     brevoApiKey: process.env.BREVO_API_KEY,
+    brevoSenderEmail: process.env.BREVO_SENDER_EMAIL || 'contact@rintio.com',
     gtmId: process.env.GTM_ID || 'GTM-M83MD4M',
     public: {}
   }
