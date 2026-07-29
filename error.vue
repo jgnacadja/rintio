@@ -7,15 +7,15 @@
       <p class="text-xl mb-8">
         {{
           error?.statusCode === 404
-            ? $t('error.404_message')
-            : error?.statusMessage || $t('error.404_message')
+            ? $t('error.message')
+            : error?.statusMessage || $t('error.message')
         }}
       </p>
       <NuxtLink
         to="/"
         class="inline-block bg-secondary py-4 px-8 font-bold uppercase hover:bg-white hover:text-primary transition-colors"
       >
-        {{ $t('error.back_home') }}
+        {{ $t('error.backHome') }}
       </NuxtLink>
     </div>
   </div>
