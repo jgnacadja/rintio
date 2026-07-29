@@ -224,11 +224,9 @@ export default defineNuxtConfig({
     contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     contentfulHost: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
     contentfulManagementToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
-    mailjetApiKey: process.env.MAILJET_API_KEY,
-    mailjetApiSecret: process.env.MAILJET_API_SECRET,
-    mailjetListId: Number(process.env.MAILJET_LIST_ID) || 42219,
     brevoApiKey: process.env.BREVO_API_KEY,
     brevoSenderEmail: process.env.BREVO_SENDER_EMAIL || 'contact@rintio.com',
+    brevoListId: Number(process.env.BREVO_LIST_ID) || 14,
     gtmId: process.env.GTM_ID || 'GTM-M83MD4M',
     public: {}
   }

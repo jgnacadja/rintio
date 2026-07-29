@@ -6,10 +6,11 @@
     "blog": "Blog"
   },
   "footer": {
-    "useful_links": "Liens utiles",
+    "usefulLinks": "Liens utiles",
+    "products": "Produits",
     "newsletter": "Newsletter",
-    "follow_us": "Suivez nous sur :",
-    "copyright": "Rintio 2019 © Tous droits réservés"
+    "followUs": "Suivez nous sur :",
+    "copyright": "Rintio {year} © Tous droits réservés"
   },
   "contact": {
     "title": "Contactez-nous",
@@ -33,5 +34,15 @@
     "404_title": "Page non trouvée (404)",
     "404_message": "La page que vous recherchez a peut-être été déplacée ou n'existe plus.",
     "back_home": "Retour à l'accueil"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "consent": "J'accepte de recevoir la newsletter de Rintio et que mon email soit utilisé à cette fin.",
+    "subscribe": "S'inscrire",
+    "subscribed": "Merci pour votre inscription ! Vous recevrez bientôt nos actualités.",
+    "error": "Une erreur est survenue, veuillez réessayer."
   }
 }

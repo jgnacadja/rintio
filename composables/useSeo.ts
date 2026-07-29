@@ -6,7 +6,7 @@ export function useSeo(post: ContentfulPost, siteUrl: string) {
     title: post.title,
     meta: [
       { name: 'description', content: post.metaDescription },
-      { property: 'og:url', content: `${siteUrl}${post.path}` },
+      { property: 'og:url', content: `${siteUrl}${toPostLink(post.path)}` },
       { property: 'og:title', content: post.title },
       { property: 'og:type', content: 'article' },
       { property: 'og:description', content: post.metaDescription },

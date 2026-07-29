@@ -1,8 +1,9 @@
 <template>
   <div
-    class="relative overflow-hidden w-full height bg-black"
+    class="relative overflow-hidden w-full height bg-black cursor-pointer"
     role="region"
     aria-label="Carrousel principal"
+    @click="togglePause"
   >
     <!-- Slides -->
     <div
@@ -43,6 +44,7 @@
           <NuxtLink
             :to="slide.fields?.ctaLink || slide.ctaLink"
             class="inline-block bg-secondary py-4 px-8 2xl:py-6 2xl:px-12 text-white font-bold hover:bg-primary uppercase text-xs 2xl:text-lg transition-colors duration-300"
+            @click.stop
           >
             {{ slide.fields?.ctaText || slide.ctaText }}
           </NuxtLink>
@@ -53,33 +55,21 @@
     <!-- Indicators / Bullets -->
     <div
       class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-3"
+      @click.stop
     >
       <button
         v-for="(_, index) in slides"
         :key="index"
         @click="activeIndex = index"
-        class="w-3 h-3 rounded-full transition-all duration-300"
-        :class="index === activeIndex ? 'bg-primary scale-125' : 'bg-white/50 hover:bg-white'"
+        class="w-4 h-4 rounded-full transition-all duration-300"
+        :class="
+          index === activeIndex
+            ? 'bg-secondary scale-125'
+            : 'bg-gray-rintio hover:bg-gray-rintio/80'
+        "
         :aria-label="`Slide ${index + 1}`"
         :aria-current="index === activeIndex"
       />
-      <button
-        v-if="slides.length > 1"
-        @click="togglePause"
-        class="flex items-center justify-center w-6 h-6 ml-2 text-white rounded-full bg-white/20 hover:bg-white/40 transition-colors"
-        :aria-label="
-          isPaused
-            ? 'Reprendre le défilement automatique'
-            : 'Mettre en pause le défilement automatique'
-        "
-      >
-        <svg v-if="isPaused" class="w-3 h-3 fill-current" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M6 4l12 6-12 6V4z" />
-        </svg>
-        <svg v-else class="w-3 h-3 fill-current" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M6 4h3v12H6V4zm5 0h3v12h-3V4z" />
-        </svg>
-      </button>
     </div>
   </div>
 </template>

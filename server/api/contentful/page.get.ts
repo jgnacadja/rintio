@@ -1,4 +1,3 @@
-import { useContentful } from '~/utils/useContentful'
 import {
   buildLookupMaps,
   resolveLink,

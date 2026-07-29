@@ -120,6 +120,7 @@ export default [
         toPostLink: 'readonly',
         navigateTo: 'readonly',
         useRoute: 'readonly',
+        useI18n: 'readonly',
         createError: 'readonly',
         $fetch: 'readonly',
         defineEventHandler: 'readonly',

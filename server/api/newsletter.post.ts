@@ -1,14 +1,13 @@
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const name = body?.name?.trim() as string
   const email = body?.email?.trim() as string
-  const object = body?.object?.trim() as string
-  const message = body?.message?.trim() as string
+  const firstName = body?.firstName?.trim() as string
+  const lastName = body?.lastName?.trim() as string
 
-  if (!name || !email || !object || !message) {
+  if (!email || !firstName || !lastName) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Les champs name, email, object et message sont requis'
+      statusMessage: 'Les champs email, firstName et lastName sont requis'
     })
   }
 
@@ -20,17 +19,17 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const { sendContactEmail } = useBrevo()
+  const { subscribeToNewsletter } = useBrevo()
 
   try {
-    await sendContactEmail({ name, email, object, message })
+    await subscribeToNewsletter({ email, firstName, lastName })
 
     return { success: true }
   } catch (error: any) {
     throw createError({
       statusCode: error?.statusCode || error?.status || 502,
       statusMessage:
-        error?.body?.message || error?.message || "Échec de l'envoi de l'email via Brevo"
+        error?.body?.message || error?.message || "Échec de l'inscription à la newsletter"
     })
   }
 })

@@ -1,5 +1,7 @@
+import typography from '@tailwindcss/typography'
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './components/**/*.{vue,js,ts}',
     './layouts/**/*.{vue,js,ts}',
@@ -19,18 +21,21 @@ module.exports = {
         primary: '#014A7F',
         secondary: '#FF0C0B',
         danger: '#e3342f',
-        colorblind: '#FFD80B'
+        colorblind: '#FFD80B',
+        'gray-rintio': '#A1A7B3'
       },
       backgroundColor: {
         primary: '#014A7F',
         secondary: '#FF0C0B',
         danger: '#e3342f',
-        colorblind: '#FFD80B'
+        colorblind: '#FFD80B',
+        'gray-rintio': '#A1A7B3'
       },
       borderColor: {
         primary: '#014A7F',
         secondary: '#FF0C0B',
-        danger: '#e3342f'
+        danger: '#e3342f',
+        'gray-rintio': '#A1A7B3'
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'], // body
@@ -38,5 +43,5 @@ module.exports = {
       }
     }
   },
-  plugins: ['@tailwindcss/typography']
+  plugins: [typography]
 }

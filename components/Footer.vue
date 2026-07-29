@@ -18,7 +18,7 @@
           />
         </NuxtLink>
 
-        <p class="mt-6 mb-4">Suivez nous sur :</p>
+        <p class="mt-6 mb-4">{{ $t('footer.followUs') }}</p>
         <div class="flex gap-2">
           <a
             v-for="link in socialLinks"
@@ -36,7 +36,9 @@
 
       <!-- Col-2: Liens Utiles (Desktop) -->
       <div class="hidden w-full p-8 -my-5 md:block sm:p-4 md:p-4 lg:p-8 sm:w-3/12 lg:w-3/12 md:m-5">
-        <div class="mb-6 font-extrabold text-white uppercase font-roboto">Liens utiles</div>
+        <div class="mb-6 font-extrabold text-white uppercase font-roboto">
+          {{ $t('footer.usefulLinks') }}
+        </div>
 
         <div class="-mt-8">
           <span class="inline-block w-20 h-2 rounded-full bg-secondary"></span>
@@ -63,7 +65,7 @@
           class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none focus:ring-2 focus:ring-white font-roboto"
           @click="openProducts = !openProducts"
         >
-          <span class="text-xl">Produits</span>
+          <span class="text-xl">{{ $t('footer.products') }}</span>
           <svg
             :class="openProducts ? 'transform rotate-180' : ''"
             class="w-5 h-5 transition-transform"
@@ -105,7 +107,7 @@
           class="flex items-center justify-between w-full py-2 text-sm font-extrabold text-left text-white border-b border-white focus:outline-none focus:ring-2 focus:ring-white font-roboto"
           @click="openLinks = !openLinks"
         >
-          <span class="text-xl">Liens utiles</span>
+          <span class="text-xl">{{ $t('footer.usefulLinks') }}</span>
           <svg
             :class="openLinks ? 'transform rotate-180' : ''"
             class="w-5 h-5 transition-transform"
@@ -143,17 +145,59 @@
         class="w-full px-4 py-8 pr-4 -my-5 2xl:px-8 2xl:pr-16 md:px-2 sm:w-4/12 xl:w-3/12 lg:m-5"
       >
         <div class="h-auto">
-          <div class="mb-3 text-red-light">Newsletter</div>
-          <iframe
-            class="mj-w-res-iframe"
-            title="Newsletter Rintio"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="https://app.mailjet.com/widget/iframe/6ZFB/Kvk"
-            width="100%"
-          ></iframe>
+          <div class="mb-3 text-white">{{ $t('footer.newsletter') }}</div>
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <form class="space-y-3" @submit.prevent="handleNewsletterSubmit">
+              <label for="newsletter-firstname" class="sr-only">{{
+                $t('newsletter.firstName')
+              }}</label>
+              <input
+                id="newsletter-firstname"
+                v-model="newsletterFirstName"
+                type="text"
+                required
+                :placeholder="$t('newsletter.firstName')"
+                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
+              />
+              <label for="newsletter-lastname" class="sr-only">{{
+                $t('newsletter.lastName')
+              }}</label>
+              <input
+                id="newsletter-lastname"
+                v-model="newsletterLastName"
+                type="text"
+                required
+                :placeholder="$t('newsletter.lastName')"
+                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
+              />
+              <label for="newsletter-email" class="sr-only">{{ $t('newsletter.email') }}</label>
+              <input
+                id="newsletter-email"
+                v-model="newsletterEmail"
+                type="email"
+                required
+                :placeholder="$t('newsletter.email')"
+                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
+              />
+              <label class="flex items-start gap-2 text-xs text-gray-600">
+                <input v-model="newsletterConsent" type="checkbox" required class="mt-0.5" />
+                <span>{{ $t('newsletter.consent') }}</span>
+              </label>
+              <button
+                type="submit"
+                :disabled="newsletterStatus === 'loading'"
+                class="w-full px-4 py-2 text-sm font-semibold text-white transition rounded-sm bg-primary hover:bg-secondary disabled:opacity-50"
+              >
+                {{ newsletterStatus === 'loading' ? 'Envoi...' : $t('newsletter.subscribe') }}
+              </button>
+              <p v-if="newsletterStatus === 'success'" class="text-xs text-green-600">
+                {{ $t('newsletter.subscribed') }}
+              </p>
+              <p v-if="newsletterStatus === 'error'" class="text-xs text-red-600">
+                {{ newsletterError }}
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -161,7 +205,7 @@
     <!-- Copyright Bar -->
     <div class="bg-secondary">
       <div class="px-3 py-4 m-auto font-bold text-center text-white">
-        Rintio {{ currentYear }} © Tous droits réservés
+        {{ $t('footer.copyright', { year: currentYear }) }}
       </div>
     </div>
   </footer>
@@ -171,10 +215,43 @@
 import { ref, computed } from 'vue'
 import Contact from '~/components/Contact.vue'
 
+const { t } = useI18n()
+
 const openProducts = ref(false)
 const openLinks = ref(false)
 
 const currentYear = computed(() => new Date().getFullYear())
+
+const newsletterFirstName = ref('')
+const newsletterLastName = ref('')
+const newsletterEmail = ref('')
+const newsletterConsent = ref(false)
+const newsletterStatus = ref('idle')
+const newsletterError = ref('')
+
+const handleNewsletterSubmit = async () => {
+  newsletterStatus.value = 'loading'
+  newsletterError.value = ''
+
+  try {
+    await $fetch('/api/newsletter', {
+      method: 'POST',
+      body: {
+        firstName: newsletterFirstName.value,
+        lastName: newsletterLastName.value,
+        email: newsletterEmail.value
+      }
+    })
+    newsletterStatus.value = 'success'
+    newsletterFirstName.value = ''
+    newsletterLastName.value = ''
+    newsletterEmail.value = ''
+    newsletterConsent.value = false
+  } catch (error) {
+    newsletterStatus.value = 'error'
+    newsletterError.value = error?.data?.statusMessage || t('newsletter.error')
+  }
+}
 
 const socialLinks = [
   {
@@ -230,10 +307,6 @@ const usefulLinks = [
 </script>
 
 <style scoped>
-iframe {
-  overflow: hidden;
-}
-
 .accordion-enter-active,
 .accordion-leave-active {
   transition: all 0.2s ease;

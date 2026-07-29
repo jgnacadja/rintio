@@ -15,20 +15,22 @@
       </NuxtLink>
 
       <!-- Desktop Navigation -->
-      <nav class="flex gap-0" aria-label="Navigation principale">
-        <NuxtLink
+      <nav class="flex gap-0 h-full" aria-label="Navigation principale">
+        <div
           v-for="item in navItems"
           :key="item.path"
-          :to="item.path"
           :class="[
-            'w-40 text-center py-10 font-bold uppercase font-openSans',
-            'border-b-2 border-transparent transition duration-300',
-            'hover:border-secondary',
-            route.path === item.path && 'border-secondary text-secondary'
+            'w-40 text-center transition duration-300',
+            'border-b-2 hover:border-secondary',
+            route.path === item.path ? 'border-secondary text-secondary' : 'border-transparent'
           ]"
         >
-          {{ item.label }}
-        </NuxtLink>
+          <div class="h-full pt-10">
+            <NuxtLink :to="item.path" class="font-bold uppercase font-openSans">
+              {{ item.label }}
+            </NuxtLink>
+          </div>
+        </div>
       </nav>
     </div>
 
@@ -114,9 +116,9 @@
             :to="item.path"
             :class="[
               'block w-full text-left py-4 font-bold uppercase font-openSans',
-              'border-b-2 border-transparent transition duration-300',
+              'border-b-2 transition duration-300',
               'hover:border-secondary',
-              route.path === item.path && 'border-secondary text-secondary'
+              route.path === item.path ? 'border-secondary text-secondary' : 'border-transparent'
             ]"
             @click="openMenu = false"
           >

@@ -1,5 +1,9 @@
-import { useContentful } from '~/utils/useContentful'
-import { buildLookupMaps, resolveLink, resolveAssetFile } from '~/utils/contentfulResolver'
+import {
+  buildLookupMaps,
+  resolveLink,
+  resolveAssetFile,
+  richTextToPlainText
+} from '~/utils/contentfulResolver'
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
@@ -49,7 +53,7 @@ export default defineEventHandler(async (event) => {
       coverImage,
       content: post.fields.content,
       excerpt: post.fields.excerpt,
-      metaDescription: post.fields.metaDescription,
+      metaDescription: richTextToPlainText(post.fields.metaDescription),
       seo: {
         title: post.fields.seoTitle || post.fields.title,
         tags: post.fields.seoTags || [],

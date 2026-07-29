@@ -25,6 +25,20 @@ export function resolveLink(link: any, maps: LinkMaps): any {
   return null
 }
 
+export function richTextToPlainText(document: any): string {
+  if (!document) return ''
+  if (typeof document === 'string') return document
+
+  const walk = (node: any): string => {
+    if (!node) return ''
+    if (node.nodeType === 'text') return node.value || ''
+    if (Array.isArray(node.content)) return node.content.map(walk).join('')
+    return ''
+  }
+
+  return walk(document).trim()
+}
+
 export function resolveAssetFile(asset: any):
   | {
       file: { url: string; fileName?: string; contentType?: string }

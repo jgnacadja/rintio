@@ -1,4 +1,3 @@
-import { useContentful } from '~/utils/useContentful'
 import { toPostLink } from '~/utils/postLink'
 
 export default defineSitemapEventHandler(async () => {
