@@ -17,7 +17,7 @@ export function useBrevo() {
   const config = useRuntimeConfig()
   const apiKey = config.brevoApiKey as string
   const senderEmail = (config.brevoSenderEmail as string) || 'contact@rintio.com'
-  const listId = Number(config.brevoListId)
+  const listId = Number(config.brevoListId) || 14
 
   const sendContactEmail = async (data: ContactEmailData) => {
     if (!apiKey) {

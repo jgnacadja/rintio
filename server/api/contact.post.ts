@@ -1,4 +1,6 @@
 export default defineEventHandler(async (event) => {
+  enforceRateLimit(event, { key: 'contact', max: 5, windowMs: 10 * 60 * 1000 })
+
   const body = await readBody(event)
   const name = body?.name?.trim() as string
   const email = body?.email?.trim() as string

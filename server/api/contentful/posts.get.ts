@@ -1,4 +1,9 @@
-import { buildLookupMaps, resolveLink, resolveAssetFile } from '~/utils/contentfulResolver'
+import {
+  buildLookupMaps,
+  resolveLink,
+  resolveAssetFile,
+  richTextToPlainText
+} from '~/utils/contentfulResolver'
 
 type CategorySlug =
   'offres' | 'blog' | 'evenements' | 'stories' | 'story' | 'datalab' | 'offres-france'
@@ -32,13 +37,6 @@ export default defineEventHandler(async (event) => {
   const order = (query.order as string) || '-fields.date'
   const limit = Math.min(Number.parseInt(query.limit as string) || 10, 100)
   const skip = Math.max(Number.parseInt(query.skip as string) || 0, 0)
-
-  if (!validCategories.includes(category)) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: `Category must be one of: ${validCategories.join(', ')}`
-    })
-  }
 
   try {
     const { fetchEntries } = useContentful()
@@ -86,7 +84,7 @@ export default defineEventHandler(async (event) => {
         date: post.fields.date,
         coverImage,
         excerpt: post.fields.excerpt,
-        metaDescription: post.fields.metaDescription
+        metaDescription: richTextToPlainText(post.fields.metaDescription)
       }
     })
 

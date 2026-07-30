@@ -161,9 +161,10 @@
                     <div class="mb-6">
                       <button
                         type="submit"
-                        class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                        :disabled="status === 'loading'"
+                        class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50"
                       >
-                        Envoyer
+                        {{ status === 'loading' ? 'Envoi...' : 'Envoyer' }}
                       </button>
                     </div>
                     <p class="text-base text-center" id="result" :class="color" v-if="result">
@@ -180,47 +181,49 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      name: null,
-      email: null,
-      object: null,
-      message: null,
-      result: null,
-      color: null
-    }
-  },
-  methods: {
-    async sendEmail() {
-      this.result = null
-      this.color = null
+<script setup>
+import { ref } from 'vue'
 
-      try {
-        await $fetch('/api/contact', {
-          method: 'POST',
-          body: {
-            name: this.name,
-            email: this.email,
-            object: this.object,
-            message: this.message
-          }
-        })
-        this.result = 'Votre message a été envoyé'
-        this.color = 'text-green-500'
-        this.resetForm()
-      } catch (error) {
-        this.result = 'Une erreur est survenue, veuillez réessayer'
-        this.color = 'text-red-500'
+const name = ref(null)
+const email = ref(null)
+const object = ref(null)
+const message = ref(null)
+const result = ref(null)
+const color = ref(null)
+const status = ref('idle')
+
+const resetForm = () => {
+  name.value = null
+  email.value = null
+  object.value = null
+  message.value = null
+}
+
+const sendEmail = async () => {
+  if (status.value === 'loading') return
+
+  status.value = 'loading'
+  result.value = null
+  color.value = null
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: name.value,
+        email: email.value,
+        object: object.value,
+        message: message.value
       }
-    },
-    resetForm() {
-      this.name = null
-      this.email = null
-      this.object = null
-      this.message = null
-    }
+    })
+    result.value = 'Votre message a été envoyé'
+    color.value = 'text-green-500'
+    status.value = 'success'
+    resetForm()
+  } catch (error) {
+    result.value = 'Une erreur est survenue, veuillez réessayer'
+    color.value = 'text-red-500'
+    status.value = 'error'
   }
 }
 </script>

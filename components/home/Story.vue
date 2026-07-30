@@ -6,13 +6,13 @@
     </div>
     <div class="grid gap-4 md:grid-cols-6 xl:grid-cols-4 md:grid-flow-row xl:grid-flow-rows">
       <div class="col-span-3 row-span-6 xl:col-span-2 xl:row-span-2 shadow-sm">
-        <NuxtLink :to="toPostLink(stories[0].path)">
+        <NuxtLink :to="toPostLink(stories[0]?.path)">
           <div class="w-full h-full bg-white">
             <div class="aspect-w-16 aspect-h-11">
               <img
                 alt="coraq"
                 title="Coraq Chmp"
-                :src="stories[0].coverImage.file.url"
+                :src="stories[0]?.coverImage?.file?.url"
                 class="object-cover w-full mb-0"
                 width="640"
                 height="440"
@@ -22,12 +22,12 @@
             <h3
               class="mx-4 my-4 text-xl font-bold leading-tight text-primary 4xl:text-4xl 4xl:leading-10"
             >
-              {{ stories[0].seoTitle }}
+              {{ stories[0]?.title }}
             </h3>
             <p
               class="mx-4 mb-4 text-base font-light text-justify text-gray-600 4xl:text-2xl 4xl:leading-10"
             >
-              {{ stories[0].excerpt }}
+              {{ stories[0]?.excerpt }}
             </p>
           </div>
         </NuxtLink>
@@ -38,7 +38,7 @@
         v-for="story in stories.slice(1)"
         :key="story.id"
       >
-        <NuxtLink :to="toPostLink(story.path)">
+        <NuxtLink :to="toPostLink(story?.path)">
           <div class="w-full h-full p-4 bg-white lg:p-0">
             <div
               class="aspect-w-16 aspect-h-14 xs:aspect-w-16 xs:aspect-h-12 sm:aspect-w-16 sm:aspect-h-6 md:aspect-w-16 md:aspect-h-8 xl:aspect-w-16 xl:aspect-h-10"
@@ -46,7 +46,7 @@
               <img
                 alt="Atut"
                 title="Africa TechUp Tour"
-                :src="story.coverImage.file.url"
+                :src="story?.coverImage?.file?.url"
                 class="object-cover w-full mb-0 h-52"
                 width="640"
                 height="400"

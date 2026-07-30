@@ -1,4 +1,9 @@
-import { buildLookupMaps, resolveLink, resolveAssetFile } from '~/utils/contentfulResolver'
+import {
+  buildLookupMaps,
+  resolveLink,
+  resolveAssetFile,
+  richTextToPlainText
+} from '~/utils/contentfulResolver'
 
 type CategorySlug = 'offres' | 'blog' | 'evenements'
 
@@ -63,7 +68,7 @@ export default defineEventHandler(async (event) => {
           title: post.fields.title,
           path: post.fields.path,
           coverImage,
-          metaDescription: post.fields.metaDescription
+          metaDescription: richTextToPlainText(post.fields.metaDescription)
         }
       })
 

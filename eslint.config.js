@@ -127,6 +127,8 @@ export default [
         defineSitemapEventHandler: 'readonly',
         getQuery: 'readonly',
         readBody: 'readonly',
+        getRequestIP: 'readonly',
+        enforceRateLimit: 'readonly',
         // Vue auto-imports
         ref: 'readonly',
         computed: 'readonly',
