@@ -296,7 +296,7 @@ const usefulLinks = [
     label: 'Rintio Innovative Factory'
   },
   {
-    href: '#',
+    href: '/a-propos',
     label: 'Nos engagements'
   },
   {
