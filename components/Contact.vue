@@ -114,7 +114,7 @@
                       <label for="name" class="sr-only">Nom complet</label>
                       <input
                         type="text"
-                        v-model="name"
+                        v-model="form.name"
                         name="name"
                         id="name"
                         placeholder="Nom complet"
@@ -126,7 +126,7 @@
                       <label for="email" class="sr-only">Email</label>
                       <input
                         type="email"
-                        v-model="email"
+                        v-model="form.email"
                         name="email"
                         id="email"
                         placeholder="Email"
@@ -138,7 +138,7 @@
                       <label for="object" class="sr-only">Objet</label>
                       <input
                         type="text"
-                        v-model="object"
+                        v-model="form.object"
                         name="object"
                         id="object"
                         placeholder="Objet"
@@ -150,7 +150,7 @@
                       <label for="message" class="sr-only">Message</label>
                       <textarea
                         rows="5"
-                        v-model="message"
+                        v-model="form.message"
                         name="message"
                         id="message"
                         placeholder="Message"
@@ -184,19 +184,23 @@
 <script setup>
 import { ref } from 'vue'
 
-const name = ref(null)
-const email = ref(null)
-const object = ref(null)
-const message = ref(null)
+const form = ref({
+  name: null,
+  email: null,
+  object: null,
+  message: null
+})
 const result = ref(null)
 const color = ref(null)
 const status = ref('idle')
 
 const resetForm = () => {
-  name.value = null
-  email.value = null
-  object.value = null
-  message.value = null
+  form.value = {
+    name: null,
+    email: null,
+    object: null,
+    message: null
+  }
 }
 
 const sendEmail = async () => {
@@ -209,12 +213,7 @@ const sendEmail = async () => {
   try {
     await $fetch('/api/contact', {
       method: 'POST',
-      body: {
-        name: name.value,
-        email: email.value,
-        object: object.value,
-        message: message.value
-      }
+      body: form.value
     })
     result.value = 'Votre message a été envoyé'
     color.value = 'text-green-500'

@@ -4,7 +4,7 @@
 
     <!-- Section titre / description (section 0) -->
     <section v-if="page.sections[0]" class="container mx-auto px-4 py-12">
-      <h1 class="text-4xl font-bold text-primary mb-6">Blog</h1>
+      <h1 class="text-4xl font-bold text-primary mb-6">{{ $t('blog.title') }}</h1>
       <div
         v-if="page.sections[0].columns?.[0]?.text"
         class="text-lg text-gray-700"

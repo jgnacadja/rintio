@@ -153,7 +153,7 @@
               }}</label>
               <input
                 id="newsletter-firstname"
-                v-model="newsletterFirstName"
+                v-model="newsletterForm.firstName"
                 type="text"
                 required
                 :placeholder="$t('newsletter.firstName')"
@@ -164,7 +164,7 @@
               }}</label>
               <input
                 id="newsletter-lastname"
-                v-model="newsletterLastName"
+                v-model="newsletterForm.lastName"
                 type="text"
                 required
                 :placeholder="$t('newsletter.lastName')"
@@ -173,14 +173,14 @@
               <label for="newsletter-email" class="sr-only">{{ $t('newsletter.email') }}</label>
               <input
                 id="newsletter-email"
-                v-model="newsletterEmail"
+                v-model="newsletterForm.email"
                 type="email"
                 required
                 :placeholder="$t('newsletter.email')"
                 class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
               />
               <label class="flex items-start gap-2 text-xs text-gray-600">
-                <input v-model="newsletterConsent" type="checkbox" required class="mt-0.5" />
+                <input v-model="newsletterForm.consent" type="checkbox" required class="mt-0.5" />
                 <span>{{ $t('newsletter.consent') }}</span>
               </label>
               <button
@@ -222,10 +222,12 @@ const openLinks = ref(false)
 
 const currentYear = computed(() => new Date().getFullYear())
 
-const newsletterFirstName = ref('')
-const newsletterLastName = ref('')
-const newsletterEmail = ref('')
-const newsletterConsent = ref(false)
+const newsletterForm = ref({
+  firstName: '',
+  lastName: '',
+  email: '',
+  consent: false
+})
 const newsletterStatus = ref('idle')
 const newsletterError = ref('')
 
@@ -237,16 +239,18 @@ const handleNewsletterSubmit = async () => {
     await $fetch('/api/newsletter', {
       method: 'POST',
       body: {
-        firstName: newsletterFirstName.value,
-        lastName: newsletterLastName.value,
-        email: newsletterEmail.value
+        firstName: newsletterForm.value.firstName,
+        lastName: newsletterForm.value.lastName,
+        email: newsletterForm.value.email
       }
     })
     newsletterStatus.value = 'success'
-    newsletterFirstName.value = ''
-    newsletterLastName.value = ''
-    newsletterEmail.value = ''
-    newsletterConsent.value = false
+    newsletterForm.value = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      consent: false
+    }
   } catch (error) {
     newsletterStatus.value = 'error'
     newsletterError.value = error?.data?.statusMessage || t('newsletter.error')
