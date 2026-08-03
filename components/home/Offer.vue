@@ -60,7 +60,7 @@
 
           <div
             v-if="featuredOffer.excerpt"
-            class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between -mt-5 space-x-4"
+            class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between space-x-4"
             v-html="featuredOffer.excerpt"
           />
         </div>
@@ -92,8 +92,7 @@
 
             <div
               v-if="offer.excerpt"
-              class="text-xs leading-relaxed tracking-wider text-white"
-              :class="{ '-mt-5': offer.metaDescription }"
+              class="text-xs leading-relaxed tracking-wider text-white flex flex-row justify-between"
               v-html="offer.excerpt"
             />
           </div>

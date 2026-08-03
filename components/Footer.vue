@@ -185,16 +185,17 @@
               </label>
               <button
                 type="submit"
-                :disabled="newsletterStatus === 'loading'"
+                :disabled="isLoading"
                 class="w-full px-4 py-2 text-sm font-semibold text-white transition rounded-sm bg-primary hover:bg-secondary disabled:opacity-50"
               >
-                {{ newsletterStatus === 'loading' ? 'Envoi...' : $t('newsletter.subscribe') }}
+                {{ isLoading ? 'Envoi...' : $t('newsletter.subscribe') }}
               </button>
-              <p v-if="newsletterStatus === 'success'" class="text-xs text-green-600">
-                {{ $t('newsletter.subscribed') }}
-              </p>
-              <p v-if="newsletterStatus === 'error'" class="text-xs text-red-600">
-                {{ newsletterError }}
+              <p
+                v-if="newsletterMessage.text"
+                class="text-xs"
+                :class="newsletterMessage.type === 'error' ? 'text-red-600' : 'text-green-600'"
+              >
+                {{ newsletterMessage.text }}
               </p>
             </form>
           </div>
@@ -228,12 +229,14 @@ const newsletterForm = ref({
   email: '',
   consent: false
 })
-const newsletterStatus = ref('idle')
-const newsletterError = ref('')
+const newsletterMessage = ref({ text: null, type: null })
+const isLoading = ref(false)
 
 const handleNewsletterSubmit = async () => {
-  newsletterStatus.value = 'loading'
-  newsletterError.value = ''
+  if (isLoading.value) return
+
+  isLoading.value = true
+  newsletterMessage.value = { text: null, type: null }
 
   try {
     await $fetch('/api/newsletter', {
@@ -244,7 +247,7 @@ const handleNewsletterSubmit = async () => {
         email: newsletterForm.value.email
       }
     })
-    newsletterStatus.value = 'success'
+    newsletterMessage.value = { text: t('newsletter.subscribed'), type: 'success' }
     newsletterForm.value = {
       firstName: '',
       lastName: '',
@@ -252,8 +255,12 @@ const handleNewsletterSubmit = async () => {
       consent: false
     }
   } catch (error) {
-    newsletterStatus.value = 'error'
-    newsletterError.value = error?.data?.statusMessage || t('newsletter.error')
+    newsletterMessage.value = {
+      text: error?.data?.statusMessage || t('newsletter.error'),
+      type: 'error'
+    }
+  } finally {
+    isLoading.value = false
   }
 }
 

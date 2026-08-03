@@ -45,20 +45,20 @@
                     />
                     <div class="w-full relative px-4 pb-4 pt-2 bg-white">
                       <div
-                        class="text-primary font-bold tracking-wider leading-relaxed font-roboto"
+                        class="min-h-[4.5rem] text-primary font-bold tracking-wider leading-relaxed font-roboto"
                       >
                         <span
                           v-if="post.categories?.[0]"
-                          class="relative hidden w-20 font-light h-9 p-2 ml-0 text-sm text-center text-white capitalize bg-secondary md:block -mt-7"
+                          class="relative hidden whitespace-nowrap px-2 py-1 font-light text-sm text-center text-white capitalize bg-secondary md:inline-block -mt-7"
                         >
-                          {{ post.categories[0].title }}
+                          {{ post.categories[0] }}
                         </span>
                         {{ post.title }}
                       </div>
 
                       <div class="tracking-tight leading-relaxed font-roboto text-xs mt-2">
                         <div
-                          class="text-gray-600 font-light text-base text-ellipsis--2"
+                          class="min-h-[3rem] text-gray-600 font-light text-base text-ellipsis--2"
                           v-html="richtextToHTML(post.metaDescription)"
                         />
                       </div>

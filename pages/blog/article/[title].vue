@@ -11,8 +11,8 @@
       <div class="absolute inset-0 bg-primary/60" />
       <div class="relative container mx-auto px-4 h-full flex items-center">
         <div class="text-white max-w-3xl">
-          <p v-if="post.categories?.[0]?.title" class="text-secondary font-bold uppercase mb-2">
-            {{ post.categories[0].title }}
+          <p v-if="post.categories?.[0]" class="text-secondary font-bold uppercase mb-2">
+            {{ post.categories[0] }}
           </p>
           <h1 class="text-4xl md:text-5xl font-bold">{{ post.title }}</h1>
         </div>

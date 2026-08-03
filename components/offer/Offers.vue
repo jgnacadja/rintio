@@ -23,20 +23,25 @@
 
             <div
               v-if="featuredOffer.excerpt"
-              class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between -mt-5"
+              class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between"
               v-html="featuredOffer.excerpt"
             />
           </div>
           <div class="flex float-right">
             <div class="absolute bottom-6">
-              <span
-                class="rounded-full flex justify-center items-center bg-primary p-2 font-medium md:text-lg text-white -mx-8"
+              <button
+                class="rounded-full flex justify-center items-center bg-primary p-2 font-medium md:text-lg hover:text-white focus:outline-none -mx-8"
                 aria-label="Voir l'offre"
               >
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                </svg>
-              </span>
+                <span class="hidden sm:flex" style="color: white">
+                  <svg width="24" height="24" viewBox="0 0 47 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M46.06 13.06a1.5 1.5 0 000-2.12l-9.545-9.547a1.5 1.5 0 10-2.122 2.122L42.88 12l-8.486 8.485a1.5 1.5 0 102.122 2.122l9.546-9.546zM0 13.5h45v-3H0v3z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+              </button>
             </div>
           </div>
         </NuxtLink>
@@ -53,9 +58,9 @@
           class="block shadow-lg bg-center bg-cover bg-no-repeat h-full"
           :style="{ backgroundImage: `url(${offer.coverImage?.file?.url})` }"
         >
-          <div class="w-full overflow-hidden">
+          <div class="w-full h-full overflow-hidden flex flex-col">
             <div class="w-full h-64"></div>
-            <div class="w-full relative px-2 pb-4">
+            <div class="w-full relative flex-1 px-2 pb-4">
               <div class="px-8 pl-0">
                 <div class="text-white font-extrabold tracking-wider leading-relaxed font-roboto">
                   {{ offer.title }}
@@ -68,22 +73,32 @@
 
                 <div
                   v-if="offer.excerpt"
-                  class="text-white tracking-wider leading-relaxed font-roboto text-xs"
-                  :class="{ '-mt-5': offer.metaDescription }"
+                  class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between"
                   v-html="offer.excerpt"
                 />
               </div>
 
               <div class="flex float-right">
                 <div class="absolute bottom-6">
-                  <span
-                    class="rounded-full flex justify-center items-center bg-primary p-2 font-medium md:text-lg text-white -mx-8"
+                  <button
+                    class="rounded-full flex justify-center items-center bg-primary p-2 font-medium md:text-lg hover:text-white focus:outline-none -mx-8"
                     aria-label="Voir l'offre"
                   >
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                    </svg>
-                  </span>
+                    <span class="hidden sm:flex" style="color: white">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 47 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M46.06 13.06a1.5 1.5 0 000-2.12l-9.545-9.547a1.5 1.5 0 10-2.122 2.122L42.88 12l-8.486 8.485a1.5 1.5 0 102.122 2.122l9.546-9.546zM0 13.5h45v-3H0v3z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>

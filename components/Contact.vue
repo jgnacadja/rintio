@@ -37,7 +37,7 @@
                       >
                         <NuxtImg
                           src="/images/icons/phone.svg"
-                          alt=""
+                          alt="phone icon"
                           class="w-5 h-5"
                           width="50"
                           height="40"
@@ -72,7 +72,7 @@
                       >
                         <NuxtImg
                           src="/images/icons/envelope.svg"
-                          alt=""
+                          alt="mail icon"
                           class="w-5 h-5"
                           width="50"
                           height="32"
@@ -161,14 +161,19 @@
                     <div class="mb-6">
                       <button
                         type="submit"
-                        :disabled="status === 'loading'"
+                        :disabled="isLoading"
                         class="w-full px-3 py-2 text-base text-white rounded-sm md:py-4 md:text-xl bg-secondary focus:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50"
                       >
-                        {{ status === 'loading' ? 'Envoi...' : 'Envoyer' }}
+                        {{ isLoading ? 'Envoi...' : 'Envoyer' }}
                       </button>
                     </div>
-                    <p class="text-base text-center" id="result" :class="color" v-if="result">
-                      {{ result }}
+                    <p
+                      class="text-base text-center"
+                      id="result"
+                      :class="message.type === 'error' ? 'text-red-500' : 'text-green-500'"
+                      v-if="message.text"
+                    >
+                      {{ message.text }}
                     </p>
                   </form>
                 </div>
@@ -190,9 +195,8 @@ const form = ref({
   object: null,
   message: null
 })
-const result = ref(null)
-const color = ref(null)
-const status = ref('idle')
+const message = ref({ text: null, type: null })
+const isLoading = ref(false)
 
 const resetForm = () => {
   form.value = {
@@ -204,25 +208,22 @@ const resetForm = () => {
 }
 
 const sendEmail = async () => {
-  if (status.value === 'loading') return
+  if (isLoading.value) return
 
-  status.value = 'loading'
-  result.value = null
-  color.value = null
+  isLoading.value = true
+  message.value = { text: null, type: null }
 
   try {
     await $fetch('/api/contact', {
       method: 'POST',
       body: form.value
     })
-    result.value = 'Votre message a été envoyé'
-    color.value = 'text-green-500'
-    status.value = 'success'
+    message.value = { text: 'Votre message a été envoyé', type: 'success' }
     resetForm()
   } catch (error) {
-    result.value = 'Une erreur est survenue, veuillez réessayer'
-    color.value = 'text-red-500'
-    status.value = 'error'
+    message.value = { text: 'Une erreur est survenue, veuillez réessayer', type: 'error' }
+  } finally {
+    isLoading.value = false
   }
 }
 </script>

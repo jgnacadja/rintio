@@ -4,9 +4,11 @@
 
     <!-- Section titre / description (section 0) -->
     <section v-if="page.sections[0]" class="container mx-auto px-4 py-12">
-      <h1 class="text-4xl font-bold text-primary mb-6">{{ $t('blog.title') }}</h1>
+      <h1 class="text-4xl font-bold text-primary mb-6">
+        {{ page.sections[0].columns?.[0]?.title || 'Blog' }}
+      </h1>
       <div
-        v-if="page.sections[0].columns?.[0]?.text"
+        v-if="page.sections[0].columns?.[0]?.text?.content?.length"
         class="text-lg text-gray-700"
         v-html="richtextToHTML(page.sections[0].columns[0].text)"
       />
@@ -69,20 +71,20 @@ const featuredPosts = computed(() => allBlogPosts.value?.slice(0, 3) || [])
 const posts = computed(() => allBlogPosts.value?.slice(3) || [])
 
 const featuredSectionTitle = computed(() =>
-  page.value?.sections?.[1]?.columns?.[1]?.text
-    ? { text: page.value.sections[1].columns[1].text }
+  page.value?.sections?.[2]?.columns?.[1]?.text
+    ? { text: page.value.sections[2].columns[1].text }
     : undefined
 )
 
 const eventsSectionTitle = computed(() =>
-  page.value?.sections?.[2]?.columns?.[0]?.text
-    ? { text: page.value.sections[2].columns[0].text }
+  page.value?.sections?.[3]?.columns?.[0]?.text
+    ? { text: page.value.sections[3].columns[0].text }
     : undefined
 )
 
 const postsSectionTitle = computed(() =>
-  page.value?.sections?.[3]?.columns?.[0]?.text
-    ? { text: page.value.sections[3].columns[0].text }
+  page.value?.sections?.[4]?.columns?.[0]?.text
+    ? { text: page.value.sections[4].columns[0].text }
     : undefined
 )
 
