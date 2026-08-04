@@ -2,11 +2,13 @@ import type { ContentfulPost } from '~/types/contentful'
 
 export function useSeo(post: ContentfulPost, siteUrl: string) {
   const imagePath = post.coverImage ? `${siteUrl}${post.coverImage.file.url}` : ''
+  const canonicalUrl = `${siteUrl}${toPostLink(post.path)}`
   useHead({
     title: post.title,
+    link: [{ rel: 'canonical', href: canonicalUrl }],
     meta: [
       { name: 'description', content: post.metaDescription },
-      { property: 'og:url', content: `${siteUrl}${toPostLink(post.path)}` },
+      { property: 'og:url', content: canonicalUrl },
       { property: 'og:title', content: post.title },
       { property: 'og:type', content: 'article' },
       { property: 'og:description', content: post.metaDescription },

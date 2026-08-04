@@ -185,6 +185,9 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     routeRules: {
+      '/blog/article/africa-tech-up-tour-atut': {
+        redirect: { to: '/blog/article/africa-techup-tour-atut', statusCode: 301 }
+      },
       '/images/**': {
         headers: { 'cache-control': 'public, max-age=31536000, immutable' }
       },
