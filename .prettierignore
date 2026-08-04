@@ -1,0 +1,9 @@
+**/*.{png,jpg,jpeg,gif,svg,ico,webp}
+public
+mocks
+playwright-report
+test-results
+blob-report
+playwright/*
+CHANGELOG.md
+vitest.config.ts.timestamp-*
