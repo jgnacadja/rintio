@@ -1,7 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import { defineOrganization } from 'nuxt-schema-org/schema'
 import { resolve } from 'node:path'
-import { legacyRedirects } from './config/redirects'
 
 const enableTrack = !!process.env.ENABLE_TRACK && process.env.ENABLE_TRACK === 'true'
 const analyticId = process.env.ANALYTIC_ID
@@ -186,9 +185,6 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     routeRules: {
-      ...Object.fromEntries(
-        legacyRedirects.map(({ from, to }) => [from, { redirect: { to, statusCode: 301 } }])
-      ),
       '/images/**': {
         headers: { 'cache-control': 'public, max-age=31536000, immutable' }
       },
