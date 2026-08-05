@@ -3,7 +3,7 @@ import type { ContentfulPost } from '~/types/contentful'
 export function useSeo(post: ContentfulPost, siteUrl: string) {
   const imagePath = post.coverImage ? `${siteUrl}${post.coverImage.file.url}` : ''
   const canonicalUrl = `${siteUrl}${toPostLink(post.path)}`
-  const seoTitle = post.seo?.title || post.title
+  const seoTitle = post.seo?.title ?? post.title
   useHead({
     title: seoTitle,
     link: [{ rel: 'canonical', href: canonicalUrl }],
