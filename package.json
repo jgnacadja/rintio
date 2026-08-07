@@ -41,7 +41,7 @@
     "embla-carousel-vue": "^8.6.0",
     "gsap": "^3.15.0",
     "marked": "^14.1.4",
-    "nuxt": "3.21.9",
+    "nuxt": "3.21.10",
     "vue": "latest",
     "vue-router": "latest"
   },
