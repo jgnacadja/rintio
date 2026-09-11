@@ -64,7 +64,6 @@ export default defineNuxtConfig({
           content: 'https://rintio.com'
         }
       ],
-      script: [{ src: '/crisp.js', body: true }],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     },
     layoutTransition: { name: 'fade', mode: 'out-in' }
@@ -223,10 +222,10 @@ export default defineNuxtConfig({
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
     contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     contentfulHost: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
+    contentfulEnvironment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
     contentfulManagementToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
     brevoApiKey: process.env.BREVO_API_KEY,
     brevoSenderEmail: process.env.BREVO_SENDER_EMAIL || 'contact@rintio.com',
-    brevoListId: Number(process.env.BREVO_LIST_ID) || 14,
     gtmId: process.env.GTM_ID || 'GTM-M83MD4M',
     public: {}
   }
