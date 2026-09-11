@@ -21,6 +21,14 @@
       :content="page.sections[1].columns?.slice(1)"
     />
 
+    <!-- Section 5 : About Us (new) -->
+    <LazyAboutUs
+      v-if="page.sections[5]"
+      :title="page.sections[5].name"
+      :cover="page.sections[5].columns?.[0]"
+      :content="page.sections[5].columns?.slice(1)"
+    />
+
     <!-- Section 3 : Stats -->
     <ClientOnly v-if="page.sections[3]">
       <LazyAboutStats :content="page.sections[3].columns" />

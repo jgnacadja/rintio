@@ -8,7 +8,6 @@
   "footer": {
     "usefulLinks": "Liens utiles",
     "products": "Produits",
-    "newsletter": "Newsletter",
     "followUs": "Suivez nous sur :",
     "copyright": "Rintio {year} © Tous droits réservés"
   },
@@ -34,15 +33,5 @@
     "notFound": "Page non trouvée (404)",
     "message": "La page que vous recherchez a peut-être été déplacée ou n'existe plus.",
     "backHome": "Retour à l'accueil"
-  },
-  "newsletter": {
-    "title": "Newsletter",
-    "firstName": "Prénom",
-    "lastName": "Nom",
-    "email": "Email",
-    "consent": "J'accepte de recevoir la newsletter de Rintio et que mon email soit utilisé à cette fin.",
-    "subscribe": "S'inscrire",
-    "subscribed": "Merci pour votre inscription ! Vous recevrez bientôt nos actualités.",
-    "error": "Une erreur est survenue, veuillez réessayer."
   }
 }

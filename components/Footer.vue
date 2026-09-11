@@ -139,68 +139,6 @@
           </div>
         </Transition>
       </div>
-
-      <!-- Col-3: Newsletter -->
-      <div
-        class="w-full px-4 py-8 pr-4 -my-5 2xl:px-8 2xl:pr-16 md:px-2 sm:w-4/12 xl:w-3/12 lg:m-5"
-      >
-        <div class="h-auto">
-          <div class="mb-3 text-white">{{ $t('footer.newsletter') }}</div>
-          <div class="p-4 bg-white rounded-lg shadow-md">
-            <form class="space-y-3" @submit.prevent="handleNewsletterSubmit">
-              <label for="newsletter-firstname" class="sr-only">{{
-                $t('newsletter.firstName')
-              }}</label>
-              <input
-                id="newsletter-firstname"
-                v-model="newsletterForm.firstName"
-                type="text"
-                required
-                :placeholder="$t('newsletter.firstName')"
-                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
-              />
-              <label for="newsletter-lastname" class="sr-only">{{
-                $t('newsletter.lastName')
-              }}</label>
-              <input
-                id="newsletter-lastname"
-                v-model="newsletterForm.lastName"
-                type="text"
-                required
-                :placeholder="$t('newsletter.lastName')"
-                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
-              />
-              <label for="newsletter-email" class="sr-only">{{ $t('newsletter.email') }}</label>
-              <input
-                id="newsletter-email"
-                v-model="newsletterForm.email"
-                type="email"
-                required
-                :placeholder="$t('newsletter.email')"
-                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-sm text-primary placeholder-gray-400 focus:outline-none focus:ring focus:ring-primary/20 focus:border-primary"
-              />
-              <label class="flex items-start gap-2 text-xs text-gray-600">
-                <input v-model="newsletterForm.consent" type="checkbox" required class="mt-0.5" />
-                <span>{{ $t('newsletter.consent') }}</span>
-              </label>
-              <button
-                type="submit"
-                :disabled="isLoading"
-                class="w-full px-4 py-2 text-sm font-semibold text-white transition rounded-sm bg-primary hover:bg-secondary disabled:opacity-50"
-              >
-                {{ isLoading ? 'Envoi...' : $t('newsletter.subscribe') }}
-              </button>
-              <p
-                v-if="newsletterMessage.text"
-                class="text-xs"
-                :class="newsletterMessage.type === 'error' ? 'text-red-600' : 'text-green-600'"
-              >
-                {{ newsletterMessage.text }}
-              </p>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Copyright Bar -->
@@ -216,53 +154,10 @@
 import { ref, computed } from 'vue'
 import Contact from '~/components/Contact.vue'
 
-const { t } = useI18n()
-
 const openProducts = ref(false)
 const openLinks = ref(false)
 
 const currentYear = computed(() => new Date().getFullYear())
-
-const newsletterForm = ref({
-  firstName: '',
-  lastName: '',
-  email: '',
-  consent: false
-})
-const newsletterMessage = ref({ text: null, type: null })
-const isLoading = ref(false)
-
-const handleNewsletterSubmit = async () => {
-  if (isLoading.value) return
-
-  isLoading.value = true
-  newsletterMessage.value = { text: null, type: null }
-
-  try {
-    await $fetch('/api/newsletter', {
-      method: 'POST',
-      body: {
-        firstName: newsletterForm.value.firstName,
-        lastName: newsletterForm.value.lastName,
-        email: newsletterForm.value.email
-      }
-    })
-    newsletterMessage.value = { text: t('newsletter.subscribed'), type: 'success' }
-    newsletterForm.value = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      consent: false
-    }
-  } catch (error) {
-    newsletterMessage.value = {
-      text: error?.data?.statusMessage || t('newsletter.error'),
-      type: 'error'
-    }
-  } finally {
-    isLoading.value = false
-  }
-}
 
 const socialLinks = [
   {
@@ -299,20 +194,28 @@ const products = [
 
 const usefulLinks = [
   {
-    href: '/blog/article/rintio-data-lab',
-    label: 'Rintio Data Lab'
+    href: '/a-propos',
+    label: 'À propos'
+  },
+  {
+    href: '/offres',
+    label: 'Nos offres'
   },
   {
     href: '#',
-    label: 'Rintio Innovative Factory'
-  },
-  {
-    href: '/a-propos',
-    label: 'Nos engagements'
+    label: 'Nos réalisations'
   },
   {
     href: '/blog/article/africa-techup-tour-atut',
-    label: 'Africa Tech Up Tour'
+    label: 'Africa TechUp Tour'
+  },
+  {
+    href: '/blog',
+    label: 'Blog'
+  },
+  {
+    href: '#formulaire',
+    label: 'Contact'
   }
 ]
 </script>

@@ -17,11 +17,6 @@
             </div>
 
             <div
-              class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-              v-html="richtextToHTML(featuredOffer.metaDescription)"
-            />
-
-            <div
               v-if="featuredOffer.excerpt"
               class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between"
               v-html="featuredOffer.excerpt"
@@ -67,11 +62,6 @@
                 </div>
 
                 <div
-                  class="text-white font-bold tracking-wider leading-relaxed font-roboto text-xs"
-                  v-html="richtextToHTML(offer.metaDescription)"
-                />
-
-                <div
                   v-if="offer.excerpt"
                   class="text-white tracking-wider leading-relaxed font-roboto text-xs flex flex-row justify-between"
                   v-html="offer.excerpt"
@@ -110,7 +100,6 @@
 </template>
 
 <script setup lang="ts">
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import type { ContentfulPost } from '~/types/contentful'
 
 interface Props {
@@ -122,10 +111,4 @@ withDefaults(defineProps<Props>(), {
   featuredOffer: undefined,
   offers: () => []
 })
-
-const richtextToHTML = (content?: any) => {
-  if (!content) return ''
-  if (typeof content === 'string') return content
-  return documentToHtmlString(content)
-}
 </script>
