@@ -14,15 +14,18 @@
           v-html="title"
         ></h2>
       </div>
-      <div
-        class="grid grid-flow-col grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-6 md:grid-rows-3 lg:grid-rows-2 gap-4 mx-4 md:mx-0"
-      >
-        <div
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 md:mx-0">
+        <button
           v-for="service in content"
           :key="service.id"
-          class="bg-white text-center py-4 px-6 cursor-pointer group hover:bg-primary"
+          type="button"
+          class="block w-full bg-white text-center py-4 px-6 cursor-pointer group hover:bg-primary"
+          :aria-expanded="expandedIds.includes(service.id)"
           @mouseover="state = service.id"
           @mouseleave="state = null"
+          @focus="state = service.id"
+          @blur="state = null"
+          @click="toggleExpanded(service.id)"
         >
           <img
             v-if="state !== service.id"
@@ -46,10 +49,11 @@
             {{ service.columns[2].title }}
           </h3>
           <div
-            class="text-justify leading-8 group-hover:text-white text-ellipsis--2"
+            class="text-justify leading-8 group-hover:text-white"
+            :class="{ 'text-ellipsis--2': !expandedIds.includes(service.id) }"
             v-html="richtextToHTML(service.columns[2].text)"
           ></div>
-        </div>
+        </button>
       </div>
     </div>
   </div>
@@ -81,12 +85,21 @@ export default {
   },
   data() {
     return {
-      state: false
+      state: false,
+      expandedIds: []
     }
   },
   methods: {
     richtextToHTML(content) {
       return documentToHtmlString(content)
+    },
+    toggleExpanded(id) {
+      const index = this.expandedIds.indexOf(id)
+      if (index === -1) {
+        this.expandedIds.push(id)
+      } else {
+        this.expandedIds.splice(index, 1)
+      }
     }
   }
 }

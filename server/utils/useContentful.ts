@@ -3,7 +3,7 @@ export function useContentful() {
   const fetchEntries = async (query: Record<string, string>): Promise<any> => {
     const params = new URLSearchParams({ access_token: config.contentfulAccessToken, ...query })
     return await $fetch(
-      `https://${config.contentfulHost}/spaces/${config.contentfulSpaceId}/environments/master/entries?${params}`
+      `https://${config.contentfulHost}/spaces/${config.contentfulSpaceId}/environments/${config.contentfulEnvironment}/entries?${params}`
     )
   }
   return { fetchEntries }
