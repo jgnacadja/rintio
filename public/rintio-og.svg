@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>RINTIO</title>
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Arcs décoratifs -->
+  <circle cx="455" cy="170" r="565" fill="none" stroke="#E3262D" stroke-width="90"/>
+  <circle cx="455" cy="170" r="688" fill="none" stroke="#174A80" stroke-width="105"/>
+
+  <!-- Logo RINTIO (lettres vectorisées, aucune police requise) -->
+  <g transform="translate(340 255)" fill="#0A4A82">
+    <!-- R -->
+    <path fill-rule="evenodd" d="M0 0H55C80 0 92 16 92 35C92 52 82 63 66 67L94 120H60L36 70H30V120H0Z M30 24V47H54C62 47 66 42 66 35.5C66 29 62 24 54 24Z"/>
+    <!-- I -->
+    <rect x="106" y="0" width="30" height="120"/>
+    <!-- N -->
+    <path d="M148 0H178L210 70V0H238V120H208L176 50V120H148Z"/>
+    <!-- T -->
+    <path d="M248 0H344V26H311V120H281V26H248Z"/>
+    <!-- I -->
+    <rect x="354" y="0" width="30" height="120"/>
+    <!-- O : anneau bleu + cercle rouge intérieur -->
+    <circle cx="452" cy="60" r="50" fill="none" stroke="#0A4A82" stroke-width="20"/>
+    <circle cx="455" cy="61" r="34" fill="none" stroke="#E3262D" stroke-width="7"/>
+  </g>
+</svg>

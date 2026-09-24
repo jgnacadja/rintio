@@ -9,11 +9,15 @@ const isDev = !!process.env.NODE_ENV && process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
   site: {
-    url: 'https://rintio.com',
+    // En production Vercel, on force le domaine canonique.
+    // Ailleurs (previews, dev local), on laisse nuxt-site-config détecter
+    // automatiquement l'URL réelle (VERCEL_URL, origine de la requête, etc.)
+    // pour que og:image/twitter:image pointent vers un fichier qui existe vraiment.
+    url: process.env.VERCEL_ENV === 'production' ? 'https://rintio.com' : undefined,
     name: 'Rintio',
     defaultLocale: 'fr',
     description: 'We involve for a better life',
-    image: 'https://rintio.com/logo.png'
+    image: '/logo.png'
   },
   app: {
     head: {
@@ -62,18 +66,6 @@ export default defineNuxtConfig({
         {
           property: 'og:url',
           content: 'https://rintio.com'
-        },
-        {
-          property: 'og:image',
-          content: 'https://rintio.com/logo.png'
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary_large_image'
-        },
-        {
-          name: 'twitter:image',
-          content: 'https://rintio.com/logo.png'
         }
       ],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
