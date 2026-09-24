@@ -9,11 +9,15 @@ const isDev = !!process.env.NODE_ENV && process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
   site: {
-    url: 'https://rintio.com',
+    // En production Vercel, on force le domaine canonique.
+    // Ailleurs (previews, dev local), on laisse nuxt-site-config détecter
+    // automatiquement l'URL réelle (VERCEL_URL, origine de la requête, etc.)
+    // pour que og:image/twitter:image pointent vers un fichier qui existe vraiment.
+    url: process.env.VERCEL_ENV === 'production' ? 'https://rintio.com' : undefined,
     name: 'Rintio',
     defaultLocale: 'fr',
     description: 'We involve for a better life',
-    image: 'https://rintio.com/logo.png'
+    image: '/logo.png'
   },
   app: {
     head: {
@@ -64,7 +68,6 @@ export default defineNuxtConfig({
           content: 'https://rintio.com'
         }
       ],
-      script: [{ src: '/crisp.js', body: true }],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     },
     layoutTransition: { name: 'fade', mode: 'out-in' }
@@ -223,10 +226,10 @@ export default defineNuxtConfig({
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
     contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     contentfulHost: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
+    contentfulEnvironment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
     contentfulManagementToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
     brevoApiKey: process.env.BREVO_API_KEY,
     brevoSenderEmail: process.env.BREVO_SENDER_EMAIL || 'contact@rintio.com',
-    brevoListId: Number(process.env.BREVO_LIST_ID) || 14,
     gtmId: process.env.GTM_ID || 'GTM-M83MD4M',
     public: {}
   }
